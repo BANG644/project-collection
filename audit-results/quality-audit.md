@@ -1,10 +1,10 @@
 # Project Collection 调研报告质量审计
 
 - 扫描文件数：145
-- Critical：42
+- Critical：37
 - High：5
 - Medium：7
-- Low：91
+- Low：96
 
 ## 判定维度
 
@@ -17,11 +17,6 @@
 
 | 严重级别 | 分数 | 文件 | 行数 | 最长行 | 英文占比 | 核心章节 | 原因 |
 |---|---:|---|---:|---:|---:|---:|---|
-| critical | 123 | `full-analysis/GLips-Figma-Context-MCP-全方位深度调研.md` | 422 | 5015 | 0.927 | 8 | 存在超长行 max_line_len=5015<br>英文占比过高 english_ratio=0.93<br>含原始抓取/JSON/截断残留 34 处<br>模板化/浅层占位句过多 7 处 |
-| critical | 117 | `full-analysis/sybil-solutions-codex-shim-全方位深度调研.md` | 421 | 3208 | 0.937 | 8 | 存在超长行 max_line_len=3208<br>英文占比过高 english_ratio=0.94<br>含原始抓取/JSON/截断残留 37 处<br>模板化/浅层占位句过多 9 处 |
-| critical | 113 | `full-analysis/NoopApp-noop-全方位深度调研.md` | 216 | 31147 | 0.981 | 8 | 存在超长行 max_line_len=31147<br>英文占比过高 english_ratio=0.98<br>含原始抓取/JSON/截断残留 146 处<br>模板化/浅层占位句过多 7 处 |
-| critical | 113 | `full-analysis/evershopcommerce-evershop-全方位深度调研.md` | 407 | 4906 | 0.933 | 8 | 存在超长行 max_line_len=4906<br>英文占比过高 english_ratio=0.93<br>含原始抓取/JSON/截断残留 32 处<br>模板化/浅层占位句过多 7 处 |
-| critical | 113 | `full-analysis/greensock-GSAP-全方位深度调研.md` | 361 | 4378 | 0.941 | 8 | 存在超长行 max_line_len=4378<br>英文占比过高 english_ratio=0.94<br>含原始抓取/JSON/截断残留 63 处<br>模板化/浅层占位句过多 7 处 |
 | critical | 113 | `full-analysis/anthropics_skills - 全方位深度调研.md` | 104 | 3658 | 0.870 | 8 | 存在超长行 max_line_len=3658<br>英文占比过高 english_ratio=0.87<br>含原始抓取/JSON/截断残留 14 处<br>模板化/浅层占位句过多 7 处 |
 | critical | 110 | `full-analysis/abhigyanpatwari_GitNexus - 全....md` | 142 | 10288 | 0.939 | 8 | 存在超长行 max_line_len=10288<br>英文占比过高 english_ratio=0.94<br>含原始抓取/JSON/截断残留 30 处<br>模板化/浅层占位句过多 6 处 |
 | critical | 110 | `full-analysis/kageroumado-phosphene-全方位深度调研.md` | 194 | 10128 | 0.922 | 8 | 存在超长行 max_line_len=10128<br>英文占比过高 english_ratio=0.92<br>含原始抓取/JSON/截断残留 22 处<br>模板化/浅层占位句过多 6 处 |
