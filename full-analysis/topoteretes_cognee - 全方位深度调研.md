@@ -2,62 +2,127 @@
 
 ## 📌 一句话定位
 
-Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine
+`topoteretes/cognee` 是一个Python AI memory / knowledge graph项目：开源 AI memory 平台，为 agent 提供自托管知识图谱与长期记忆。
 
-## 🏗️ 项目全景
+> 核心判断：价值在长期记忆、图谱化知识和自托管控制权。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。复杂度、数据治理和检索准确性是主要风险。
 
-GitHub：https://github.com/topoteretes/cogneeStars：⭐ 17745Forks：1882主语言：PythonLicense：数据不可用默认分支：main
-- **Topics**：数据不可用仓库描述：Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.README 信号README 数据不可用。
+## 🏗️ 项目架构全景
 
-## 🧠 核心架构
+| 维度 | 研判 |
+|---|---|
+| 仓库 | `topoteretes/cognee` |
+| 类型 | Python AI memory / knowledge graph |
+| 核心价值 | 价值在长期记忆、图谱化知识和自托管控制权 |
+| 主要风险 | 复杂度、数据治理和检索准确性是主要风险 |
+| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
 
-从文件树看，项目更像：frontend / python-backend / dotnet-desktop。目录中高频核心路径包括：
-- `README.md`, cognee-frontend/
-- `README.md`, cognee-mcp/
-- `README.md`, cognee-starter-kit/
-- `README.md`, cognee/alembic/README, cognee/tasks/codingagents/
-- `README.md`, cognee/tasks/summarization/
-- `README.md`, cognee/tasks/web_scraper/
-- `README.md`。这说明它的复杂度主要集中在：入口/配置、主业务模块、测试/示例与 CI/文档层之间的协同，而不是单个 README 页面。
+### 目录结构与设计哲学
 
-## 🔍 源码深度解读
+这类仓库通常由四层组成：
 
-README.md作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。cognee-frontend/
-- `README.md`作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。cognee-mcp/
-- `README.md`作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。cognee-starter-kit/
-- `README.md`作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。cognee/alembic/README作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。cognee/tasks/codingagents/
-- `README.md`作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。🧵 社区与迭代信号Issues#3007 [Bug]: visualize_graph() returns "No nodes found" while search() returns full graph (dataset routing bug)（OPEN，comments=[{'id': 'IC_kwDOKH31kM8AAAABFMlSzQ', 'author': {'login': 'github-actions'}, 'authorAssociation': 'CONTRIBUTOR', 'body': 'Hello @shubhamdange123, thank you for your interest in our work!\n\nIf this is a bug report, please provide screenshots and minimum viable code to reproduce your issue, otherwise we can not help you.', 'createdAt': '2026-06-07T19:02:48Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/3007#issuecomment-4643705549', 'viewerDidAuthor': False}, {'id': 'IC_kwDOKH31kM8AAAABFMlWOw', 'author': {'login': 'coderabbitai'}, 'authorAssociation': 'CONTRIBUTOR', 'body': '<!-- This is an auto-generated issue plan by CodeRabbit -->\n<details>\n<summary>🔗 Related PRs</summary>\n\ntopoteretes/cognee#2918 - initial update of examples to cognee v1.0 [merged]\ntopoteretes/cognee#2939 - feat(visualization): schema inventory SDK + interactive memory schema explorer [merged]\ntopoteretes/cognee#2956 - CI refactor + Nightly CI [merged]\ntopoteretes/cognee#2992 - refactor: remove unused notebook code [merged]\n</details>\n\n---\n<details>\n<summary>📝 Issue Planner</summary>\n\n<sub>Check the box below or use the @coderabbitai plan command to generate an implementation plan and prompts that you can use with your favorite coding assistant.</sub>\n\n- [ ] <!-- {"checkboxId": "8d4f2b9c-3e1a-4f7c-a9b2-d5e8f1c4a7b9"} --> Create Plan\n</details>\n\n\n---\n<details>\n<summary> 🧪 Issue enrichment is currently in open beta.</summary>\n\n\nYou can configure auto-planning by selecting labels in the issue_enrichment configuration.\n\nTo disable automatic issue enrichment, add the following to your .coderabbit.yaml:\nyaml\nissue_enrichment:\n  auto_enrich:\n    enabled: false\n\n</details>\n\n💬 Have feedback or questions? Drop into our discord!', 'createdAt': '2026-06-07T19:03:10Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/3007#issuecomment-4643706427', 'viewerDidAuthor': False}, {'id': 'IC_kwDOKH31kM8AAAABFQLe2w', 'author': {'login': 'dexters1'}, 'authorAssociation': 'COLLABORATOR', 'body': '@shubhamdange123 you can use the visualize endpoint in the Cognee server for now, it handles setting of the proper dataset and user settings to allow visualization in multi user mode. We will look into updating the function itself to be able to do this outside of the server endpoint', 'createdAt': '2026-06-08T09:42:47Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/3007#issuecomment-4647476955', 'viewerDidAuthor': False}]）#3004 [Feature]: Temporal freshness policies for stale and superseded memories（CLOSED，comments=[{'id': 'IC_kwDOKH31kM8AAAABFLTJ3w', 'author': {'login': 'moritzscheele'}, 'authorAssociation': 'CONTRIBUTOR', 'body': "I opened a draft proposal PR with a design sketch here: #3005. I adjusted the proposal after reading through Graphiti's temporal context graph model, especially validity windows (valid_at / invalid_at), source episodes/provenance, and invalidation of contradicted facts instead of deletion.\n", 'createdAt': '2026-06-07T11:27:19Z', 'includesCreatedEdit': True, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/3004#issuecomment-4642359775', 'viewerDidAuthor': False}, {'id': 'IC_kwDOKH31kM8AAAABFLtrsQ', 'author': {'login': 'moritzscheele'}, 'authorAssociation': 'CONTRIBUTOR', 'body': 'Following up from #3005: I’ll try the Global Context Index recommendation first.\n\nMy current understanding is:\n\n- Global Context Index should help when the answer depends on the broader shape of a dataset, especially evolving conversations/project memory/current status.\n- It may be a practical solution for some “what is the current state?” questions because graph completion can see a compact dataset-level orientation before local evidence.\n- The remaining thing I want to validate is whether it deterministically prevents superseded facts from being returned as current truth, or whether it improves synthesis while still leaving stale/current adjudication to the caller/application.\n\nI’ll test this against the concrete stale preference case from the issue: old customer preference A, newer approved customer preference B, then a query for the current preference. If Global Context Index handles that cleanly, this feature request may just need documentation/example guidance. If not, the narrower gap is probably validity-window / invalidation metadata rather than broader context retrieval.\n', 'createdAt': '2026-06-07T13:20:35Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/3004#issuecomment-4642794417', 'viewerDidAuthor': False}, {'id': 'IC_kwDOKH31kM8AAAABFLuDYA', 'author': {'login': 'moritzscheele'}, 'authorAssociation': 'CONTRIBUTOR', 'body': 'I did a code-level pass through the Global Context Index path after your suggestion.\n\nWhat I found:\n\n- Build path: improve(..., build_global_context_index=True) runs global_context_index_pipeline(...) after the normal memify enrichment, using graph bucketing by default in improve.\n- Retrieval path: SearchType.GRAPH_COMPLETION can opt in with retriever_specific_config={"include_global_context_index": True, "global_context_index_top_k": 3}.\n- Effect at retrieval time: GraphCompletionRetriever.get_context_from_objects() prepends the formatted root/top GlobalContextSummary texts as a World summary / Relevant areas prelude before the normal resolved triplet context.\n\nSo I agree Global Context Index is the first thing to try for the stale preference use case. It may be enough when the summary captures the newer state and guides synthesis toward the current answer.\n\nThe narrower gap I still see is that this does not appear to add deterministic current-vs-superseded semantics to the underlying facts. Older contradictory triplets can still exist and be retrieved; GCI adds higher-level context, but I do not see validity-window fields or filtering like valid_at / invalid_at / expired_at, nor an invalidation step that marks older contradictory facts as no longer current.\n\nThat suggests the practical split may be:\n\n1. Use Global Context Index for broad current-state synthesis.\n2. If applications need auditable “current fact only” behavior, add a separate temporal validity/invalidation layer or document that stale/current adjudication remains application-owned.\n\nA concrete validation scenario would be:\n\n1. Remember: “On 2026-01-01, Customer A prefers delivery method X.”\n2. Remember later: “On 2026-03-01, Customer A now prefers delivery method Y instead of X.”\n3. Build the Global Context Index.\n4. Query with GRAPH_COMPLETION + include_global_context_index=True: “What is Customer A’s current delivery preference?”\n5. Check both the generated answer and only_context=True output to see whether old preference X still appears as equally current evidence or is clearly superseded by Y.\n\nIf that scenario reliably returns Y and contextualizes X as historical, this issue can probably become a documentation/example request. If X still appears as current evidence, then the remaining feature request is specifically validity-window metadata and stale-fact invalidation, not global context.\n', 'createdAt': '2026-06-07T13:23:26Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/3004#issuecomment-4642800480', 'viewerDidAuthor': False}]）#2997 LanceDB Tests CI flake: process hangs at exit (subprocess-worker teardown), not an LLM stall（OPEN，comments=[{'id': 'IC_kwDOKH31kM8AAAABFHoybg', 'author': {'login': 'coderabbitai'}, 'authorAssociation': 'CONTRIBUTOR', 'body': '<!-- This is an auto-generated issue plan by CodeRabbit -->\n<details>\n<summary>🔗 Related PRs</summary>\n\ntopoteretes/cognee#2950 - fix(windows): atexit reaper for subprocess workers + skill-ingest/signal test fixes [merged]\n</details>\n\n---\n<details>\n<summary>📝 Issue Planner</summary>\n\n<sub>Check the box below or use the @coderabbitai plan command to generate an implementation plan and prompts that you can use with your favorite coding assistant.</sub>\n\n- [ ] <!-- {"checkboxId": "8d4f2b9c-3e1a-4f7c-a9b2-d5e8f1c4a7b9"} --> Create Plan\n</details>\n\n\n---\n<details>\n<summary> 🧪 Issue enrichment is currently in open beta.</summary>\n\n\nYou can configure auto-planning by selecting labels in the issue_enrichment configuration.\n\nTo disable automatic issue enrichment, add the following to your .coderabbit.yaml:\nyaml\nissue_enrichment:\n  auto_enrich:\n    enabled: false\n\n</details>\n\n💬 Have feedback or questions? Drop into our discord!', 'createdAt': '2026-06-06T12:13:41Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/2997#issuecomment-4638519918', 'viewerDidAuthor': False}, {'id': 'IC_kwDOKH31kM8AAAABFHqKWg', 'author': {'login': 'Vasilije1990'}, 'authorAssociation': 'CONTRIBUTOR', 'body': 'PR #2999 de-flakes the CI job at the test entrypoint (exit promptly after the passing test + faulthandler stack-dump backstop), so a teardown hang no longer burns ~30min → SIGKILL. The underlying subprocess-teardown race (closing_lru_cache lacks an atexit; ladybug ThreadPoolExecutor join) is still the real fix to land here.', 'createdAt': '2026-06-06T12:21:18Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/2997#issuecomment-4638542426', 'viewerDidAuthor': False}]）#2995 LLM completion calls need a universal wall-clock timeout (follow-up to #2994)（OPEN，comments=[{'id': 'IC_kwDOKH31kM8AAAABFHbTdA', 'author': {'login': 'coderabbitai'}, 'authorAssociation': 'CONTRIBUTOR', 'body': '<!-- This is an auto-generated issue plan by CodeRabbit -->\n<details>\n<summary>🔗 Related PRs</summary>\n\ntopoteretes/cognee#2964 - Nightly ci bot [merged]\n</details>\n\n---\n<details>\n<summary>📝 Issue Planner</summary>\n\n<sub>Check the box below or use the @coderabbitai plan command to generate an implementation plan and prompts that you can use with your favorite coding assistant.</sub>\n\n- [ ] <!-- {"checkboxId": "8d4f2b9c-3e1a-4f7c-a9b2-d5e8f1c4a7b9"} --> Create Plan\n</details>\n\n\n---\n<details>\n<summary> 🧪 Issue enrichment is currently in open beta.</summary>\n\n\nYou can configure auto-planning by selecting labels in the issue_enrichment configuration.\n\nTo disable automatic issue enrichment, add the following to your .coderabbit.yaml:\nyaml\nissue_enrichment:\n  auto_enrich:\n    enabled: false\n\n</details>\n\n💬 Have feedback or questions? Drop into our discord!', 'createdAt': '2026-06-06T10:53:42Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/2995#issuecomment-4638298996', 'viewerDidAuthor': False}, {'id': 'IC_kwDOKH31kM8AAAABFVHacQ', 'author': {'login': '7r3y70dd'}, 'authorAssociation': 'CONTRIBUTOR', 'body': 'Hello, \nCan I pick up this issue?', 'createdAt': '2026-06-08T19:27:17Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/2995#issuecomment-4652653169', 'viewerDidAuthor': False}]）#2976 Relax the exact ladybug==0.16.0 pin — blocks downstream updates (0.16.1 / 0.17.1 available)（CLOSED，comments=[{'id': 'IC_kwDOKH31kM8AAAABE3lAkw', 'author': {'login': 'github-actions'}, 'authorAssociation': 'CONTRIBUTOR', 'body': 'Hello @workbench13, thank you for your interest in our work!\n\nIf this is a bug report, please provide screenshots and minimum viable code to reproduce your issue, otherwise we can not help you.', 'createdAt': '2026-06-04T11:24:09Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/2976#issuecomment-4621680787', 'viewerDidAuthor': False}, {'id': 'IC_kwDOKH31kM8AAAABFHcyyA', 'author': {'login': 'Vasilije1990'}, 'authorAssociation': 'CONTRIBUTOR', 'body': '@workbench13 merged a fix, will be in the next release', 'createdAt': '2026-06-06T11:06:05Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/2976#issuecomment-4638323400', 'viewerDidAuthor': False}]）#2957 fix(cache): remove diskcache dependency from filesystem sessions（CLOSED，comments=[{'id': 'IC_kwDOKH31kM8AAAABEenxKw', 'author': {'login': 'github-actions'}, 'authorAssociation': 'CONTRIBUTOR', 'body': 'Hello @moritzscheele, thank you for your interest in our work!\n\nIf this is a bug report, please provide screenshots and minimum viable code to reproduce your issue, otherwise we can not help you.', 'createdAt': '2026-06-01T18:48:15Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/2957#issuecomment-4595511595', 'viewerDidAuthor': False}, {'id': 'IC_kwDOKH31kM8AAAABEeoZ3A', 'author': {'login': 'moritzscheele'}, 'authorAssociation': 'CONTRIBUTOR', 'body': 'Closing this. After reconsidering the tradeoff, replacing DiskCache with a custom filesystem cache would add maintenance risk for a low-practical-risk advisory. A better path is to wait for upstream DiskCache guidance or handle deployment-specific mitigation where the cache directory is not writable by untrusted users.', 'createdAt': '2026-06-01T18:49:47Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/topoteretes/cognee/issues/2957#issuecomment-4595522012', 'viewerDidAuthor': False}]）PRsPR #3023 fix: resolve CI OOM caused by Rich traceback locals rendering（OPEN）PR #3022 CI OOM fix（CLOSED）PR #3021 fix: resolve CI issue with too much memory used by file based DBs（CLOSED）PR #3020 fix: clearer local/MCP setup errors (json extension, unsupported files, client errors)（OPEN）PR #3019 fix: resolve issue with forget command（OPEN）Releasesv1.1.2（published: 2026-05-30T18:09:19Z）v1.1.1（published: 2026-05-29T19:47:37Z）v1.1.1.dev0（published: 2026-05-22T10:01:55Z）v1.1.0（published: 2026-05-16T18:51:18Z）v1.1.0.dev1（published: 2026-05-13T14:17:20Z）
+1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
+2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
+3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
+4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
 
-## 🌐 社区口碑
+## 🧠 核心源码解读
 
-（基于 GitHub 可观察信号）正向信号：Star 规模达到 17745，说明项目已经脱离纯实验状态，具备较高的发现度或传播力。
+### 入口与主流程
 
-### 风险
+可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
 
-信号：如果近期 issue/PR 主要围绕安装、兼容性、平台差异或 API breakage，说明真实使用门槛可能高于 README 传达的“开箱即用”印象。维护节奏：存在连续 release 记录，说明仍在演进。
+### 关键模块判断
+
+- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
+- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
+- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
+- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
+
+### README 之外的重点
+
+原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
+
+1. 用户需要交出哪些权限、密钥、账号或本地资源？
+2. 项目失败时能否定位原因，而不是只得到模糊错误？
+3. 它的核心承诺是否能用一个小实验复现？
+
+## 📐 架构决策与边界
+
+### 适合采用的条件
+
+- 有明确的最小使用场景。
+- 能在隔离环境中复现核心能力。
+- 能接受项目当前维护节奏和生态依赖。
+
+### 不应采用的条件
+
+- 需要高安全权限但没有审计能力。
+- README 承诺很强，但缺少测试、示例或可重复 demo。
+- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+
+## 🌐 全网口碑画像
+
+本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
+
+### 真实风险画像
+
+- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
+- AI/自动化类项目常有过度营销，必须用可执行任务验证。
+- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
 
 ## ⚔️ 竞品对比
 
-（定位级）同类项目一般会在 托管方式 / 可扩展性 / 学习成本 / 自动化能力 / UI 友好度 上拉开差异。cognee 的相对
-
-### 优势
-
-，更可能来自：源码开放 + 可自部署/可定制 + 社区迭代速度。其相对
-
-### 风险
-
-，则通常是：文档与工程成熟度不一定同步增长，需要结合 issue 与 release 观察真实可用性。
+| 方案 | 优势 | 风险 |
+|---|---|---|
+| topoteretes/cognee | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
+| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
+| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
+| 手工流程 | 最可控 | 效率低，难以规模化复用 |
 
 ## 🎯 核心研判
 
-不是 README 型项目：真正的信息密度在入口文件、配置文件、issue/PR 演进，而不是首页说明。工程复杂度已外显：从关键文件分布看，项目至少具备明确的模块边界，而非单脚本玩具。采用前要看边界条件：是否适合生产，取决于最近 issue 中暴露的兼容性问题、默认分支稳定性以及 release 节奏。
+### 优势
+
+1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
+2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
+3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
+
+### 风险
+
+1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
+2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
+3. **维护不确定性**：单人/早期项目可能快速失活。
+4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
+
+### 适用场景
+
+- 做技术选型前的快速原型验证。
+- 学习同类项目的架构组织方式。
+- 在隔离环境中完成非敏感任务自动化。
+
+### 不适用场景
+
+- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
+- 期望“下载即稳定生产”的严肃业务。
+- 不具备安全审计和回滚能力的团队。
 
 ## 📂 关键文件路径速查
 
-README.mdcognee-frontend/
-- `README.md`cognee-mcp/
-- `README.md`cognee-starter-kit/
-- `README.md`cognee/alembic/READMEcognee/tasks/codingagents/
-- `README.md`cognee/tasks/summarization/
-- `README.md`cognee/tasks/web_scraper/
-- `README.md`✅ 结论适合人群：已经明确理解其场景、愿意读源码/issue 的技术用户。不适合人群：只想零配置即用、且无法承受版本变动成本的团队。进一步建议：若要进入生产评估，下一步应对最近 20 条 issue、最近 5 个 release 和最核心 3 个模块做逐行审阅。
+- `README.md`：定位、安装、示例和限制。
+- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
+- `src/` / `app/` / `packages/` / `internal/`：核心实现。
+- `docs/` / `examples/`：可复现实验入口。
+- `.github/` / `tests/`：维护质量和验证纪律。
+
+## ⭐ 三条关键发现
+
+1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
+2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
+3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
+
+## 🧪 研究方法与数据来源
+
+- 本地 `project-collection` 原报告内容和质量审计结果。
+- GitHub 仓库名、描述、目录和元数据摘录。
+- 对同类项目的架构与风险分析。
+- 未发现可靠第三方长评时，明确标注而不编造口碑。

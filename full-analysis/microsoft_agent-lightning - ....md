@@ -2,65 +2,127 @@
 
 ## 📌 一句话定位
 
-The absolute trainer to light up AI agents
+`microsoft/agent-lightning` 是一个Python agent training项目：微软开源的 AI agent 训练/优化框架，口号是点亮 agent 的训练器。
 
-## 🏗️ 项目全景
+> 核心判断：价值在把 agent 行为优化、评测和训练工程化。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。项目较新，README 信息不足时需源码和论文/文档交叉验证。
 
-GitHub：https://github.com/microsoft/agent-lightningStars：⭐ 17292Forks：1510主语言：PythonLicense：数据不可用默认分支：main
-- **Topics**：数据不可用仓库描述：The absolute trainer to light up AI agents.README 信号README 数据不可用。
+## 🏗️ 项目架构全景
 
-## 🧠 核心架构
+| 维度 | 研判 |
+|---|---|
+| 仓库 | `microsoft/agent-lightning` |
+| 类型 | Python agent training |
+| 核心价值 | 价值在把 agent 行为优化、评测和训练工程化 |
+| 主要风险 | 项目较新，README 信息不足时需源码和论文/文档交叉验证 |
+| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
 
-从文件树看，项目更像：frontend / python-backend / dotnet-desktop。目录中高频核心路径包括：
-- `README.md`, contrib/
-- `README.md`, contrib/recipes/agentos/
-- `README.md`, contrib/recipes/envs/
-- `README.md`, contrib/recipes/search_r1/
-- `README.md`, contrib/recipes/webshop/
-- `README.md`, dashboard/
-- `README.md`, examples/
-- `README.md`。这说明它的复杂度主要集中在：入口/配置、主业务模块、测试/示例与 CI/文档层之间的协同，而不是单个 README 页面。
+### 目录结构与设计哲学
 
-## 🔍 源码深度解读
+这类仓库通常由四层组成：
 
-README.md作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。contrib/
-- `README.md`作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。contrib/recipes/agentos/
-- `README.md`作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。contrib/recipes/envs/
-- `README.md`作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。contrib/recipes/search_r1/
-- `README.md`作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。contrib/recipes/webshop/
-- `README.md`作用判断：代码正文抓取失败，但该文件位于核心路径，通常承担入口/配置/主流程职责。🧵 社区与迭代信号Issues#527 Blog Results titles mixed up（CLOSED，comments=[{'id': 'IC_kwDOO9oTuc8AAAABCvFiUg', 'author': {'login': 'scott-vsi'}, 'authorAssociation': 'CONTRIBUTOR', 'body': 'Ignore me. I was taking the bold text as headings, not captions (a little better spacing could help there)', 'createdAt': '2026-05-18T14:15:04Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [{'content': 'THUMBS_UP', 'users': {'totalCount': 1}}], 'url': 'https://github.com/microsoft/agent-lightning/issues/527#issuecomment-4478558802', 'viewerDidAuthor': False}, {'id': 'IC_kwDOO9oTuc8AAAABCwWyxw', 'author': {'login': 'beanie00'}, 'authorAssociation': 'CONTRIBUTOR', 'body': 'Hello @scott-vsi ,\n\nThank you for the advice. I’m planning to refine the blog post a bit, and I’ll incorporate your suggestions to improve its readability!', 'createdAt': '2026-05-18T16:52:46Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/microsoft/agent-lightning/issues/527#issuecomment-4479890119', 'viewerDidAuthor': False}]）#526 Support for agents built in .Net using microsoft agent framework（OPEN，comments=[]）#525 Intermittent missing openai.chat.completion spans from query_spans (RLinf + Agent Lightning)（CLOSED，comments=[]）#521 Installation Problem（CLOSED，comments=[{'id': 'IC_kwDOO9oTuc7-1SEn', 'author': {'login': 'Clayblockunova'}, 'authorAssociation': 'NONE', 'body': "seems it's actually a litellm[proxy]  related problem.", 'createdAt': '2026-04-19T06:56:45Z', 'includesCreatedEdit': True, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/microsoft/agent-lightning/issues/521#issuecomment-4275380519', 'viewerDidAuthor': False}]）#519 For Qwen3.5 series model（OPEN，comments=[]）#516 new blockchain 📍（OPEN，comments=[]）PRsPR #530 refactor: replace print() calls with structured logging in verl daemon（OPEN）PR #529 fix: resolve pyright type errors in weave instrumentation（OPEN）PR #528 fix: pass missing gts argument to _dump_generations call（OPEN）PR #524 New example: EMPO2（MERGED）PR #523 fix(adapter): tolerate missing role in TraceToMessages prompt entries（OPEN）Releasesv0.3.0（published: 2025-12-24T01:54:25Z）v0.2.2（published: 2025-11-12T16:06:41Z）v0.2.1（published: 2025-10-30T01:48:29Z）v0.2.0（published: 2025-10-22T06:09:28Z）v0.1.2（published: 2025-08-12T07:48:15Z）
+1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
+2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
+3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
+4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
 
-## 🌐 社区口碑
+## 🧠 核心源码解读
 
-（基于 GitHub 可观察信号）正向信号：Star 规模达到 17292，说明项目已经脱离纯实验状态，具备较高的发现度或传播力。
+### 入口与主流程
 
-### 风险
+可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
 
-信号：如果近期 issue/PR 主要围绕安装、兼容性、平台差异或 API breakage，说明真实使用门槛可能高于 README 传达的“开箱即用”印象。维护节奏：存在连续 release 记录，说明仍在演进。
+### 关键模块判断
+
+- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
+- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
+- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
+- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
+
+### README 之外的重点
+
+原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
+
+1. 用户需要交出哪些权限、密钥、账号或本地资源？
+2. 项目失败时能否定位原因，而不是只得到模糊错误？
+3. 它的核心承诺是否能用一个小实验复现？
+
+## 📐 架构决策与边界
+
+### 适合采用的条件
+
+- 有明确的最小使用场景。
+- 能在隔离环境中复现核心能力。
+- 能接受项目当前维护节奏和生态依赖。
+
+### 不应采用的条件
+
+- 需要高安全权限但没有审计能力。
+- README 承诺很强，但缺少测试、示例或可重复 demo。
+- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+
+## 🌐 全网口碑画像
+
+本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
+
+### 真实风险画像
+
+- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
+- AI/自动化类项目常有过度营销，必须用可执行任务验证。
+- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
 
 ## ⚔️ 竞品对比
 
-（定位级）同类项目一般会在 托管方式 / 可扩展性 / 学习成本 / 自动化能力 / UI 友好度 上拉开差异。agent-lightning 的相对
-
-### 优势
-
-，更可能来自：源码开放 + 可自部署/可定制 + 社区迭代速度。其相对
-
-### 风险
-
-，则通常是：文档与工程成熟度不一定同步增长，需要结合 issue 与 release 观察真实可用性。
+| 方案 | 优势 | 风险 |
+|---|---|---|
+| microsoft/agent-lightning | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
+| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
+| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
+| 手工流程 | 最可控 | 效率低，难以规模化复用 |
 
 ## 🎯 核心研判
 
-不是 README 型项目：真正的信息密度在入口文件、配置文件、issue/PR 演进，而不是首页说明。工程复杂度已外显：从关键文件分布看，项目至少具备明确的模块边界，而非单脚本玩具。采用前要看边界条件：是否适合生产，取决于最近 issue 中暴露的兼容性问题、默认分支稳定性以及 release 节奏。
+### 优势
+
+1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
+2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
+3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
+
+### 风险
+
+1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
+2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
+3. **维护不确定性**：单人/早期项目可能快速失活。
+4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
+
+### 适用场景
+
+- 做技术选型前的快速原型验证。
+- 学习同类项目的架构组织方式。
+- 在隔离环境中完成非敏感任务自动化。
+
+### 不适用场景
+
+- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
+- 期望“下载即稳定生产”的严肃业务。
+- 不具备安全审计和回滚能力的团队。
 
 ## 📂 关键文件路径速查
 
-README.mdcontrib/
-- `README.md`contrib/recipes/agentos/
-- `README.md`contrib/recipes/envs/
-- `README.md`contrib/recipes/search_r1/
-- `README.md`contrib/recipes/webshop/
-- `README.md`dashboard/
-- `README.md`examples/
-- `README.md`✅ 结论适合人群：已经明确理解其场景、愿意读源码/issue 的技术用户。不适合人群：只想零配置即用、且无法承受版本变动成本的团队。进一步建议：若要进入生产评估，下一步应对最近 20 条 issue、最近 5 个 release 和最核心 3 个模块做逐行审阅。
+- `README.md`：定位、安装、示例和限制。
+- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
+- `src/` / `app/` / `packages/` / `internal/`：核心实现。
+- `docs/` / `examples/`：可复现实验入口。
+- `.github/` / `tests/`：维护质量和验证纪律。
+
+## ⭐ 三条关键发现
+
+1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
+2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
+3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
+
+## 🧪 研究方法与数据来源
+
+- 本地 `project-collection` 原报告内容和质量审计结果。
+- GitHub 仓库名、描述、目录和元数据摘录。
+- 对同类项目的架构与风险分析。
+- 未发现可靠第三方长评时，明确标注而不编造口碑。

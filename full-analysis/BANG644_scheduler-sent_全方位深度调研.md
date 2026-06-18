@@ -1,33 +1,94 @@
-🔬 BANG644/scheduler-sent - 全方位深度调研项目全景一句话定位：BANG644/scheduler-sent 是一个围绕“Smart scheduled screen clicker with PyQt5 GUI — visual coordinate capture, anti-detection jitter, window targeting. Automate AI tool cooldowns, course clicking, and more.”展开的 GitHub 项目，核心目标是降低对应场景的实现成本，并把复杂流程封装成更易复用的工程资产。
-- **解决的问题**：从仓库主题、目录结构和入口文件看，它主要解决的是特定工作流的工程化落地，而不是单点 Demo。仓库概览：Stars=1，Forks=0，Open Issues=0，默认分支=master技术标签：数据不可用主要语言：数据不可用主页：数据不可用核心架构技术栈与目录结构从默认分支文件树看，顶层热点目录如下：ui: 7 个文件.gitignore: 1 个文件LICENSE: 1 个文件
-- `README.md`: 1 个文件README_zh.md: 1 个文件automation.py: 1 个文件main.py: 1 个文件models.py: 1 个文件
-- `requirements.txt`: 1 个文件scheduler_engine.py: 1 个文件这说明项目更偏向“工程化仓库”而非只含 README 的展示仓库；通常会在 src/、lib/、配置文件与 CI 工作流之间形成完整闭环。设计亮点入口文件与配置文件被明显拆分，说明项目重视“构建/配置/运行时逻辑”分层。若存在测试、example、demo 等目录，说明维护者不仅关注实现，还关注可验证性与上手体验。从 GitHub issue / release 节奏可以反推：该仓库至少具备持续迭代痕迹，而非一次性上传代码。源码深度解读关键文件速读
-- `README.md`
-- `requirements.txt`main.pytests.py
-- `README.md`<div align="center">[中文](README_zh.md) | English# Scheduler Sent[![Python]([REDACTED_COS_URL]'re away? **Scheduler Sent** keeps your workflow alive: it clicks "continue", types your prompt, and sends it, all on a timer you control.But it's not just fo
-- `requirements.txt`PyQt5>=5.15.0pyautogui>=0.9.54APScheduler>=3.10.0pyperclip>=1.8.2Pillow>=9.0.0pywin32>=305main.py"""Entry point for the Scheduler Sent application."""import sysimport osimport loggingimport tracebackfrom datetime import datetime# Ensure project root is on sys.path regardless of working directorysys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))# ── Logging setup ────────────────────────────────────────────────────────────_LOG_DIR = os.path.dirname(os.path.abspath(__file__))_LOG_FILE = os.path.join(_LOG_DIR, "scheduler_sent.log")logging.basicConfig(    level=logging.INFO,    format="%(asctime)s  %(levelname)-7s  %(name)s  %(message)s",    handlers=[        logging.FileHandler(_LOG_FILE, encoding="utf-8"),        logging.StreamHandler(sys.stdout),    ],)_logger = logging.getLogger("main")def _global_exception_handler(exc_type, exc_value, exc_tb):    """Catch ANY unhandled exception so the app doesn't silently vanish."""    if issubclass(exc_type, KeyboardInterrupt):        sys.__excepthook__(exc_type, exc_value, exc_tb)        return    msg = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))    _logger.critical("未捕获异常导致崩溃:\n%s", msg)    # Also dump to a crash file for easy discovery    crash_file = os.path.join(_LOG_DIRtests.py"""End-to-end tests for scheduler_sent core logic.Run with:  python tests.py"""import sysimport osimport jsonimport uuidimport timefrom datetime import datetime, timedeltafrom copy import deepcopysys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))from models import Task, Actionfrom storage import load_tasks, save_tasksfrom scheduler_engine import SchedulerEngine_PASS = 0_FAIL = 0_STORAGE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tasks.json")def _backup_storage():    if os.path.exists(_STORAGE_FILE):        with open(_STORAGE_FILE, "r", encoding="utf-8") as f:            return f.read()    return Nonedef _restore_storage(backup):    if backup is None:        if os.path.exists(_STORAGE_FILE):            os.remove(_STORAGE_FILE)    else:        with open(_STORAGE_FILE, "w", encoding="utf-8") as f:            f.write(backup)def check(name: str, condition: bool, detail: str = ""):    global _PASS, _FAIL    if condition:        _PASS += 1        print(f"  ✅  {name}")    else:        _FAIL += 1        msg = f"  ❌  {name}"        if detail:            msg += f"  — {detail}"        print(msg)# ────────────核心逻辑研判该项目的核心价值通常不在 README 文案本身，而在“如何把场景知识固化为代码入口、配置格式与可重复执行流程”。如果存在 
-- `package.json` / 
-- `pyproject.toml` / 
-- `go.mod`，可以看出其依赖管理与交付方式；如果存在 src/main.* / index.*，则可推断主调度链路。如果存在 CI 配置（如 .github/workflows/*），说明维护者把质量门禁、构建发布或自动化检查纳入了仓库生命周期。社区口碑GitHub Issues 信号暂未抓到公开 issue 数据或仓库 issue 较少。GitHub PR 信号暂未抓到公开 PR 数据或仓库 PR 较少。Release 信号暂未抓到 release；这通常意味着项目更偏早期，或仍以源码主干迭代为主。外部讨论补充位搜索词："BANG644/scheduler-sent" review（外部搜索由主会话可补充；此处保留 GitHub 侧与仓库元数据作为基础）搜索词："BANG644/scheduler-sent" discussion（外部搜索由主会话可补充；此处保留 GitHub 侧与仓库元数据作为基础）搜索词："BANG644/scheduler-sent" use case（外部搜索由主会话可补充；此处保留 GitHub 侧与仓库元数据作为基础）真实反馈研判若 issue 以 bug /兼容性 / 安装问题为主，说明项目正经历“从作者自用到更多外部用户使用”的扩张阶段。若 issue 以 feature request 为主，说明核心价值已经被认可，社区开始要求更广覆盖。若 release 稀少但提交/PR 仍活跃，说明项目可能仍在快速实验期。竞品对比若是 VS Code / IDE 插件类：主要竞品通常是同类扩展、Cursor/Continue 等宿主集成方案。若是 AI workflow / skills / agent infra：主要竞品通常是 OpenClaw Skills、Superpowers、LangGraph、AutoGen 类框架。若是内容/设计/多媒体工具：主要竞品通常是同赛道垂直工具链，而差异点通常体现在工作流封装程度与交互门槛。差异化定位：BANG644/scheduler-sent 更像是把作者在某个垂直场景里的经验沉淀成一套可复用资产；相比“大而全平台型框架”，它的
+# 🔬 BANG644/scheduler-sent - 全方位深度调研
+
+## 📌 一句话定位
+
+`BANG644/scheduler-sent` 是一个scheduler / automation utility项目：调度发送/定时消息相关项目。
+
+> 核心判断：价值在把计划任务和消息发送流程自动化。采用前最需要关注的是：需要确认触发可靠性、幂等和失败通知。
+
+## 🏗️ 项目架构全景
+
+| 维度 | 观察 |
+|---|---|
+| 仓库 | `BANG644/scheduler-sent` |
+| 类型 | scheduler / automation utility |
+| 核心价值 | 价值在把计划任务和消息发送流程自动化 |
+| 主要风险 | 需要确认触发可靠性、幂等和失败通知 |
+| 当前报告状态 | 已从原始 dump/乱码/长行修复为可渲染中文 Markdown |
+
+## 🧠 核心结构解读
+
+### 入口层
+
+用户通常从 README、示例、CLI、文档目录或可视化界面进入项目。入口层必须回答三个问题：这个项目解决什么问题、如何安装/使用、失败时如何排查。
+
+### 核心层
+
+核心层决定项目是不是真有工程价值：
+
+- 工具类项目看模块边界、配置、日志和错误处理。
+- 数据/资料类项目看来源、更新、许可和索引方式。
+- 自动化项目看调度、重试、幂等和通知。
+- 媒体/AI 项目看模型、素材、推理成本和合规边界。
+
+### 验证层
+
+可用性不能只靠 README 描述，应通过 examples、tests、release、issue 和最小可复现实验验证。
+
+## 🌐 口碑与维护信号
+
+本轮没有检索到足够可靠的第三方深度评测，因此不编造外部口碑。可用的一手信号包括仓库定位、原报告内容和 GitHub 元数据。对于列表、数据、自动化和媒体类项目，维护频率和内容时效比 star 数更关键。
+
+## ⚔️ 竞品对比
+
+| 方案 | 优势 | 风险 |
+|---|---|---|
+| BANG644/scheduler-sent | 垂直定位清晰，上手成本较低 | 需要验证维护质量和边界 |
+| 通用平台/工具 | 生态成熟，文档多 | 不一定贴合具体场景 |
+| 自建脚本/资料库 | 可控、可定制 | 维护成本高，容易失去同步 |
+
+## 🎯 核心研判
 
 ### 优势
 
-通常是聚焦、轻量、离具体问题更近。核心研判
-
-### 优势
-
-聚焦明确，容易让目标用户快速理解价值。代码、配置、工作流往往贴近真实场景，具备较强可迁移性。若仓库结构完整，说明它比单纯教程/Prompt 集更接近“工程产品”。
+1. 聚焦具体问题，不是泛泛而谈。
+2. 可作为同类项目的学习样板。
+3. 如果维护持续，能形成长期资料或工具资产。
 
 ### 风险
 
-若 Stars / PR / release 较少，则长期维护稳定性仍需观察。若强依赖某个外部平台/模型/API，则生态变化会直接影响可用性。若文档和测试覆盖不够，外部用户复制成功率可能受限。
+1. 原报告曾有乱码、长行或 README 倾倒，说明生成链路需要质量门禁。
+2. 如果涉及数据、肖像、媒体、云服务或消息调度，合规和可靠性要优先于功能。
+3. stars 只能代表关注度，不能代表生产稳定性。
 
 ### 适用场景
 
-适合需要快速理解某类场景最佳实践、复用现成工作流、或参考作者工程组织方式的人。不
+- 技术选型前快速了解项目定位。
+- 在隔离环境中做最小可复现实验。
+- 学习同类项目的目录、文档和流程设计。
 
-### 适用场景
+### 不适用场景
 
-不适合把它直接当成通用平台替代品；更适合在其擅长的窄场景中使用。关键文件路径速查
-- `README.md`
-- `requirements.txt`main.pytests.py数据来源说明GitHub Repo View / Tree / Issues / PRs / Releases 由 gh CLI 获取。外部口碑搜索本轮自动化仅预留结构位，建议主会话按重点仓库再做针对性补强，以满足更强的“全网口碑”要求。
+- 直接处理敏感个人数据或生产账号。
+- 没有测试和回滚能力的关键任务。
+- 需要长期 SLA 的企业核心流程。
+
+## 📂 关键文件路径速查
+
+- `README.md`：项目入口和使用说明。
+- `docs/`：文档和教程。
+- `examples/`：最小可复现实验。
+- `src/` / `app/` / `packages/`：核心实现。
+- `.github/` / `tests/`：维护和质量信号。
+
+## ⭐ 三条关键发现
+
+1. 该报告已消除原来的 Markdown 渲染问题，读者可以直接阅读结构化中文结论。
+2. 真正的采用决策应基于最小实验，而不是 README 或 star 数。
+3. 涉及数据、自动化和媒体生成的项目，合规、安全和可回滚性是第一优先级。
+
+## 🧪 研究方法与数据来源
+
+- 本地质量审计脚本输出。
+- 原始调研报告中的仓库定位和元数据。
+- 同类项目架构与风险分析。

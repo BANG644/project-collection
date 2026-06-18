@@ -2,142 +2,127 @@
 
 ## 📌 一句话定位
 
-A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience
+`clash-verge-rev/clash-verge-rev` 是一个Tauri proxy GUI项目：基于 Tauri 的跨平台代理 GUI 客户端，面向 Windows/macOS/Linux。
 
-## 🏗️ 项目全景
+> 核心判断：价值在现代桌面体验与 Mihomo/Clash 配置管理。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。网络代理工具需注意合规、订阅安全和系统权限。
 
-仓库：clash-verge-rev/clash-verge-rev
-- **解决的问题**：该项目试图把 README 中描述的能力产品化/脚本化，降低特定任务的搭建或执行门槛。
-- **基础指标**：Stars=124433 / Forks=9059 / 默认分支=dev
-- **Topics**：clash, clash-meta, clash-verge, linux, mac, tauri-app, windows, mihomo
-- **Homepage**：https://www.clashverge.dev
+## 🏗️ 项目架构全景
 
-## 🧠 核心架构
+| 维度 | 研判 |
+|---|---|
+| 仓库 | `clash-verge-rev/clash-verge-rev` |
+| 类型 | Tauri proxy GUI |
+| 核心价值 | 价值在现代桌面体验与 Mihomo/Clash 配置管理 |
+| 主要风险 | 网络代理工具需注意合规、订阅安全和系统权限 |
+| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
 
-目录结构判断
-- **顶层目录分布（递归树抽样汇总）**：src(383), src-tauri(150), crates(30), .github(23), scripts(17), docs(10), .husky(2), scripts-workflow(2), .cargo(1), .clippy.toml(1)
-- **关键文件候选**：
-- `package.json`, pnpm-workspace.yaml, tsconfig.json, 
-- `Cargo.toml`, 
-- `README.md`, 
-- `CONTRIBUTING.md`, crates/clash-verge-draft/bench/benche_me.rs, crates/clash-verge-draft/src/lib.rs, crates/clash-verge-draft/
-- `tests/test_me.rs,` crates/clash-verge-i18n/src/lib.rs, crates/clash-verge-limiter/src/lib.rs, crates/clash-verge-logging/src/lib.rs设计亮点研判
-- 存在 Node/前端或工具链入口，依赖与脚本编排主要由 
-- `package.json` 驱动。
-- 项目显式提供测试目录，说明作者至少为关键行为建立了可回归验证。
-- 仓库包含 .github 自动化配置，通常代表 CI 或 issue 模板已被纳入工程流程。
+### 目录结构与设计哲学
 
-## 🔍 源码深度解读
+这类仓库通常由四层组成：
 
-README / 说明文档要点<h1 align="center">
-  <img src="./src-tauri/icons/icon.png" alt="Clash" width="128" />
-  
+1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
+2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
+3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
+4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
 
-  Continuation of <a href="https://github.com/zzzgydi/clash-verge">Clash Verge</a>
-  
+## 🧠 核心源码解读
 
-</h1><h3 align="center">
-A Clash Meta GUI based on <a href="https://github.com/tauri-apps/tauri">Tauri</a>.
-</h3><p align="center">
-  Languages:
-  <a href="./
-- `README.md`">简体中文</a> ·
-  <a href="./docs/README_en.md">English</a> ·
-  <a href="./docs/README_es.md">Español</a> ·
-  <a href="./docs/README_ru.md">Русский</a> ·
-  <a href="./docs/README_ja.md">日本語</a> ·
-  <a href="./docs/README_ko.md">한국어</a> ·
-  <a href="./docs/README_fa.md">فارسی</a>
-</p>PreviewDarkLightInstall请到发布页面下载对应的安装包：Release pageGo to the Release page to download the corresponding installation packageSupports Windows (x64/x86), Linux (x64/arm64) and macOS 11+ (intel/apple).我应当怎样选择发行版版本特征链接Stable正式版，高可靠性，适合日常使用。ReleaseAlpha(废弃)测试发布流程。AlphaAutoBuild滚动更新版，适合测试反馈，可能存在缺陷。AutoBuild安装说明和常见问题，请到 文档页 查看TG 频道: @clash_verge_revPromotion🤖 GPTKefu —— 与 Crisp 深度整合的 AI 智能客服平台🧠 深度理解完整对话上下文 + 图片识别，自动给出专业、精准的回复，告别机械式客服。♾️ 不限回答数量，无额度焦虑，区别于其他按条计费的 AI 客服产品。💬 售前咨询...[truncated]
+### 入口与主流程
 
-### 关键文件精读
+可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
 
-package.json{  "name": "clash-verge",  "version": "2.5.2",  "license": "GPL-3.0-only",  "scripts": {    "prepare": "husky || true",    "dev": "cross-env RUST_BACKTRACE=full tauri dev -f verge-dev",    "dev:diff": "cross-env RUST_BACKTRACE=full tauri dev -f verge-dev",    "dev:trace": "cross-env RUST_BACKTRACE=full RUSTFLAGS=\"--cfg tokio_unstable\" tauri dev -f verge-dev tokio-trace",    "dev:tauri": "cross-env RUST_BACKTRACE=full tauri dev -f tauri-dev",    "build": "cross-env NODE_OPTIONS='--max-old-space-size=4096' tauri build",    "build:fast": "cross-env NODE_OPTIONS='--max-old-space-size=4096' tauri build -- --profile fast-release",    "tauri": "tauri",    "web:dev": "vite",    "web:build": "tsc --noEmit && vite build",    "web:serve": "vite preview",    "prebuild": "node scripts/prebuild.mjs",    "updater": "node scripts/updater.mjs",    "updater-fixed-webview2": "node scrip...[truncated]pnpm-workspace.yamlallowBuilds:  "@parcel/watcher": true  core-js: true  es5-ext: true  meta-json-schema: true  unrs-resolver: trueminimumReleaseAgeExclude:  - dayjs@1.11.21tsconfig.json{  "compilerOptions": {    "target": "ESNext",    "lib": ["DOM", "ESNext"],    "allowJs": false,    "skipLibCheck": true,    "strict": true,    "module": "ESNext",    "moduleResolution": "Bundler",    "resolveJsonModule": true,    "isolatedModules": true,    "noEmit": true,    "jsx": "react-jsx",    "paths": {      "@/*": ["./src/*"],      "@root/*": ["./*"]    },    "types": ["vite/client", "vite-plugin-svgr/client"]  },  "include": ["./src"]}
-- `Cargo.toml`[workspace]members = [  "src-tauri",  "crates/clash-verge-draft",  "crates/clash-verge-logging",  "crates/clash-verge-signal",  "crates/tauri-plugin-clash-verge-sysinfo",  "crates/clash-verge-i18n",  "crates/clash-verge-limiter",]resolver = "2"[profile.release]panic = "unwind"codegen-units = 1lto = "thin"opt-level = 3debug = 1strip = "none"overflow-checks = falsesplit-debuginfo = "unpacked"rpath = false[profile.dev]incremental = truecodegen-units = 64opt-level = 0debug = truestrip = "none"overflow-checks = truelto = falserpath = false[profile.fast-release]inherits = "release"codegen-units = 64incremental = truelto = falseopt-level = 0debug = truestrip = false[profile.debug-release]inherits = "fast-release"codegen-units = 1split-debuginfo = "unpacked"[workspace.dependencies]clash-verge-draft = { path = "crates/clash-verge-draft" }clash-verg...[truncated]
-- `README.md`<h1 align="center">  <img src="./src-tauri/icons/icon.png" alt="Clash" width="128" />  <br />  Continuation of <a href="https://github.com/zzzgydi/clash-verge">Clash Verge</a>  <br /></h1><h3 align="center">A Clash Meta GUI based on <a href="https://github.com/tauri-apps/tauri">Tauri</a>.</h3><p align="center">  Languages:  <a href="./
-- `README.md`">简体中文</a> ·  <a href="./docs/README_en.md">English</a> ·  <a href="./docs/README_es.md">Español</a> ·  <a href="./docs/README_ru.md">Русский</a> ·  <a href="./docs/README_ja.md">日本語</a> ·  <a href="./docs/README_ko.md">한국어</a> ·  <a href="./docs/README_fa.md">فارسی</a></p>## Preview| Dark                             | Light                             || -------------------------------- | --------------------------------- || ![预览](./docs/preview_dark.png) | ![预览](./docs/preview_light.png) |## Install请到发布页面下载对应的安装包：[Releas...[truncated]
-- `CONTRIBUTING.md`# CONTRIBUTINGThank you for your interest in contributing to **Clash Verge Rev**! This guide provides instructions to help you set up your development environment and start contributing effectively.## Internationalization (i18n)We welcome translations and improvements to existing locales. For details on contributing translations, please see [CONTRIBUTING_i18n.md](docs/CONTRIBUTING_i18n.md).## Development SetupBefore contributing, you need to set up your development environment. Follow the steps below carefully.### Prerequisites1. **Install Rust and Node.js**     Our project requires both Rust and Node.js. Follow the official installation instructions [here](https://tauri.app/start/prerequisites/).### Windows Users> [!NOTE]  > **Windows ARM users must also install [LLVM](https://github.com/llvm/llvm-project/releases) (including clang) and set the corresponding environm...[truncated]
+### 关键模块判断
 
-### 关键逻辑总结
+- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
+- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
+- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
+- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
 
-从关键文件组合看，项目更像是围绕单一目标组织的任务流水线/工具链，而不是超重平台。
-- 入口文件决定外部交互界面（CLI / API / UI），配置文件决定运行时依赖，测试文件则暴露作者真正关心的行为边界。
-- 如果用户只读 README，通常只能知道“能做什么”；而从目录与入口文件能看出“怎么做、扩展点在哪、维护成本高不高”。
+### README 之外的重点
 
-## 🌐 社区口碑
+原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
 
-### GitHub Issues 抽样
+1. 用户需要交出哪些权限、密钥、账号或本地资源？
+2. 项目失败时能否定位原因，而不是只得到模糊错误？
+3. 它的核心承诺是否能用一个小实验复现？
 
-#7258 [OPEN] [BUG] 为什么我订阅链接导入后没有生成节点？（comments=[{'id': 'IC_kwDOKwVKzM8AAAABFhDfag', 'author': {'login': 'wonfen'}, 'authorAssociation': 'MEMBER', 'body': '信息太少，无从判断。', 'createdAt': '2026-06-09T23:59:18Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/clash-verge-rev/clash-verge-rev/issues/7258#issuecomment-4665171818', 'viewerDidAuthor': False}] labels=bug）
-- #7256 [OPEN] [BUG] macOS 27 托盘兼容性问题（comments=[{'id': 'IC_kwDOKwVKzM8AAAABFhXy-g', 'author': {'login': 'fangkyi03'}, 'authorAssociation': 'NONE', 'body': '还有就是在菜单点击开启代理 点一下正常 在点一下 直接闪退', 'createdAt': '2026-06-10T01:01:16Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/clash-verge-rev/clash-verge-rev/issues/7256#issuecomment-4665504506', 'viewerDidAuthor': False}] labels=bug,macOS,tray）
-- #7255 [OPEN] [BUG] 模板硬编码 ipv6: true 导致 TUN 模式下无法访问 Google/Gemini（comments=[{'id': 'IC_kwDOKwVKzM8AAAABFbWAWw', 'author': {'login': 'ritaprieto900'}, 'authorAssociation': 'NONE', 'body': '## 根因定位\n\n经过完整排查，问题链路如下：\n\n### 症状\nTUN 模式下 gemini.google.com 超时（其他外网正常，IPv4 DNS 正常）\n\n### 根因链\n1. src-tauri/src/config/clash.rs:72 — 模板函数硬编码 map.insert("ipv6".into(), true.into())\n2. 这导致每次生成 config.yaml 时 ipv6: true 被写入\n3. Mihomo 内核 config/config.go 的 parseTun() 根据 general.IPv6 决定是否给 wintun 虚拟网卡分配 IPv6 地址\n4. ipv6: true → TUN 获得 fdfe:dcba:9876::2 作为 IPv6 DNS 服务器及 fdfe:dcba:9876::1/126 地址\n5. Chrome/Edge 优先通过 IPv6 DNS 解析 → 向 fdfe:dcba:9876::2 发 DNS 查询 → 该地址无 DNS 服务监听 → 超时\n6. Google/Gemini 域名恰好在 fallback 列表中，受 IPv6 DNS 影响尤为明显\n\n### 已验证的临时修复（证明根因正确）\n- curl -X PATCH :9097/configs -d \'{"ipv6":false,"tun":{"inet6-address":[]}}\' → Gemini 立即恢复\n- 手动改 config.yaml 中 ipv6: true → ipv6: false 并重启内核 → 问题消失（但 Clash Verge Rev 重启时会覆写）\n\n### 建议修复\nclash.rs 模板中将 ipv6 默认值改为 false，或提供 GUI 选项让用户选择是否启用 IPv6。绝大多数代理用户不需要 TUN 层面的 IPv6。\n\n### 环境\n- Windows 11 24H2\n- Clash Verge Rev v2.4.4\n- Mihomo 内核 v1.19.25\n', 'createdAt': '2026-06-09T11:15:53Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/clash-verge-rev/clash-verge-rev/issues/7255#issuecomment-4659183707', 'viewerDidAuthor': False}, {'id': 'IC_kwDOKwVKzM8AAAABFdP0Rw', 'author': {'login': 'Dragon1573'}, 'authorAssociation': 'COLLABORATOR', 'body': '我们在 GUI 的「Settings > Clash Setting > IPv6」提供了全局统一开关，此开关作为「最高控制」注入最终的 Runtime Config ，如果你持续遇到 IPv6 问题，可以考虑在这里把它关掉。\n\n<img width="1375" height="727" alt="Image" src="https://github.com/user-attachments/assets/037db026-93d8-4359-9bf5-fcb00563e2ce" />\n\n-----\n\n我也在使用 Windows TUN + Service Mode ，在 Microsoft Edge 中使用 Google Gemini Web ，在 PowerShell 中使用 GCP Vertex AI (已改名 Agent Platform API) 登录 Gemini CLI ，均未遇到无法使用的情况。\n\n请检查你的 CVR 内 DNS 设置，我的物理网络为 IPv4/IPv6 双栈动态公网地址，节点仅支持 IPv4 ，不会出现你所说开启 ipv6: true 后用不了 Google/Gemini 的现象。', 'createdAt': '2026-06-09T15:11:05Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/clash-verge-rev/clash-verge-rev/issues/7255#issuecomment-4661179463', 'viewerDidAuthor': False}] labels=无）
-- #7254 [CLOSED] [Feature] 希望能够打包一个Android版本的（comments=[{'id': 'IC_kwDOKwVKzM8AAAABFbahkw', 'author': {'login': 'Dragon1573'}, 'authorAssociation': 'COLLABORATOR', 'body': '> [!IMPORTANT]\n> \n> Close as not planned: Spam', 'createdAt': '2026-06-09T11:26:51Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/clash-verge-rev/clash-verge-rev/issues/7254#issuecomment-4659257747', 'viewerDidAuthor': False}] labels=Invalid）
-- #7251 [OPEN] [BUG] 日志的自动滚动偶尔会失效（comments=[{'id': 'IC_kwDOKwVKzM8AAAABFdFKow', 'author': {'login': 'Dragon1573'}, 'authorAssociation': 'COLLABORATOR', 'body': '能给个录屏么？我自己 Fork Build 的版本暂时没有观察到这样的问题。\n\nhttps://github.com/user-attachments/assets/2e002784-b130-4364-b731-f16587276305\n\nlog\nSystem Name: Windows\nSystem Version: Windows 11 Pro for Workstations\nSystem kernel Version: 26200\nSystem Arch: x86_64\nVerge Version: 2.5.2+daily.0609.6a0cc21\nRunning Mode: Service\nIs Admin: false\n\n\n😞 Premier Pro 修视频真麻烦', 'createdAt': '2026-06-09T14:51:29Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/clash-verge-rev/clash-verge-rev/issues/7251#issuecomment-4661004963', 'viewerDidAuthor': False}] labels=bug）
-- #7250 [OPEN] [BUG] 关闭软件后 不会自动清除系统设置中的代理导致国内网站打不开（comments=[{'id': 'IC_kwDOKwVKzM8AAAABFX1VDw', 'author': {'login': 'matriox1003'}, 'authorAssociation': 'NONE', 'body': '> 自己去internet选项里面把嗲里关了就好了 所有clash 软件的 系统代理 都有这个bug\n\n问题是win 11 就没这个问题', 'createdAt': '2026-06-09T02:39:07Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/clash-verge-rev/clash-verge-rev/issues/7250#issuecomment-4655502607', 'viewerDidAuthor': False}, {'id': 'IC_kwDOKwVKzM8AAAABFX1exA', 'author': {'login': 'matriox1003'}, 'authorAssociation': 'NONE', 'body': '> 自己去internet选项里面把嗲里关了就好了 所有clash 软件的 系统代理 都有这个bug\n\n这肯定是可以解决的，代码里写下就行了', 'createdAt': '2026-06-09T02:39:42Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [{'content': 'THUMBS_UP', 'users': {'totalCount': 1}}], 'url': 'https://github.com/clash-verge-rev/clash-verge-rev/issues/7250#issuecomment-4655505092', 'viewerDidAuthor': False}, {'id': 'IC_kwDOKwVKzM8AAAABFY2Keg', 'author': {'login': 'cena001plus'}, 'authorAssociation': 'NONE', 'body': 'mac系统下最近有这个问题，当退出clash verge 后，手动退出，依然无法联网，只有重新启用clash verge 才行, 我记得一个月都是正常的，最近这个问题就出现了。\nv2.4.7+autobuild.0303.1de48ca', 'createdAt': '2026-06-09T05:55:13Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/clash-verge-rev/clash-verge-rev/issues/7250#issuecomment-4656564858', 'viewerDidAuthor': False}] labels=bug,Windows,backend）
+## 📐 架构决策与边界
 
-### Pull Requests 抽样
+### 适合采用的条件
 
-PR 
-- #7260 [OPEN] chore(deps): update cargo dependencies to 1.12.4PR 
-- #7259 [OPEN] feat: supports in-app online update for LinuxPR 
-- #7257 [OPEN] fix(webdav): resolve upload and download failuresPR 
-- #7253 [OPEN] fix: crash on malformed ss:// URI with invalid v2ray-plugin dataPR 
-- #7252 [OPEN] fix: improve type safety and remove redundant type casts
+- 有明确的最小使用场景。
+- 能在隔离环境中复现核心能力。
+- 能接受项目当前维护节奏和生态依赖。
 
-### Releases 抽样
+### 不应采用的条件
 
-v2.5.1（published=2026-05-20T07:01:22Z latest=True）
-- v2.5.0（published=2026-05-19T05:57:46Z latest=False）
-- v2.5.0-rc（published=2026-05-06T14:04:08Z latest=False）
-- v2.4.7（published=2026-03-21T16:16:55Z latest=False）autobuild（published=2025-11-10T11:05:52Z latest=False）
+- 需要高安全权限但没有审计能力。
+- README 承诺很强，但缺少测试、示例或可重复 demo。
+- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
 
-### 真实反馈与维护信号研判
+## 🌐 全网口碑画像
 
-抽样 issue 中 open/closed 约为 7/1，可作为维护者响应速度的弱信号。近期 PR 抽样里可见已合并项 0 个，说明项目并非完全冻结。存在 release 记录，说明作者有版本化交付意识。若外部搜索链路不可用，本报告明确以 GitHub issue/PR/release 作为一手社区反馈源，不用二手转载冒充口碑数据。
-- 高频问题通常比 README 更能暴露真实落地难点：安装、兼容性、性能边界、文档歧义、平台限制。
+本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
+
+### 真实风险画像
+
+- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
+- AI/自动化类项目常有过度营销，必须用可执行任务验证。
+- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
 
 ## ⚔️ 竞品对比
 
-维度clash-verge-rev竞品/替代定位面向仓库作者设定的具体场景，通常更垂直Clash for Windows / sing-box GUI / v2rayN 往往更通用或生态更大学习曲线依赖其内部脚本/配置约定通用方案学习成本更高，但生态更成熟差异化仓库通常以“快上手、场景专用、意见化实现”为卖点通用方案强调可扩展、稳定性、跨场景能力
-
-### 风险
-
-作者驱动、文档深度可能不足、接口稳定性不确定大项目更稳定，但改造成本更高
+| 方案 | 优势 | 风险 |
+|---|---|---|
+| clash-verge-rev/clash-verge-rev | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
+| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
+| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
+| 手工流程 | 最可控 | 效率低，难以规模化复用 |
 
 ## 🎯 核心研判
 
 ### 优势
 
-对目标问题有强意见化实现，落地路径通常比“从零搭建通用栈”更短。如果核心文件少而清晰，二次阅读和定制成本较低。GitHub 原生 issue / release / PR 能直接帮助判断项目是否仍在演进。
+1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
+2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
+3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
 
 ### 风险
 
-若 stars、forks、release 或 PR 活跃度偏低，意味着长期维护能力要谨慎评估。如果关键逻辑过于集中在单文件脚本中，后续扩展会受到可维护性约束。若缺少测试/CI/配置 schema，生产环境采用前应先做自测和边界验证。
+1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
+2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
+3. **维护不确定性**：单人/早期项目可能快速失活。
+4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
 
 ### 适用场景
 
-需要快速验证该仓库所解决的问题是否值得投入。团队愿意接受一定的作者意见化设计，以换取更快交付。适合作为参考实现、内部 PoC、垂直任务工具，而非默认直接替代成熟平台。不
+- 做技术选型前的快速原型验证。
+- 学习同类项目的架构组织方式。
+- 在隔离环境中完成非敏感任务自动化。
 
-### 适用场景
+### 不适用场景
 
-对 SLA、兼容矩阵、长期 LTS 有强要求的核心生产系统。需要极高社区冗余、插件生态或企业级支持的场景。
+- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
+- 期望“下载即稳定生产”的严肃业务。
+- 不具备安全审计和回滚能力的团队。
 
 ## 📂 关键文件路径速查
 
-package.jsonpnpm-workspace.yamltsconfig.json
-- `Cargo.toml`
-- `README.md`
-- `CONTRIBUTING.md`crates/clash-verge-draft/bench/benche_me.rscrates/clash-verge-draft/src/lib.rscrates/clash-verge-draft/
-- `tests/test_me.rscrates/clash-verge-i18n/src/lib.rscrates/clash-verge-limiter/src/lib.rscrates/clash-verge-logging/src/lib.rs`
+- `README.md`：定位、安装、示例和限制。
+- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
+- `src/` / `app/` / `packages/` / `internal/`：核心实现。
+- `docs/` / `examples/`：可复现实验入口。
+- `.github/` / `tests/`：维护质量和验证纪律。
 
 ## ⭐ 三条关键发现
 
-代码入口/骨架集中在：
-- `package.json`, pnpm-workspace.yaml, tsconfig.json, 
-- `Cargo.toml`, 
-- `README.md`近期开源反馈以 issue 为主，典型议题包括：[BUG] 为什么我订阅链接导入后没有生成节点？；[BUG] macOS 27 托盘兼容性问题发布节奏可从最新 release 观察：v2.5.1
+1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
+2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
+3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
 
 ## 🧪 研究方法与数据来源
 
-GitHub Repo API / README / 默认分支递归文件树关键源码文件抽样精读Issues / PRs / Releases 社区活动抽样说明：
-- 若外部搜索数据不可用，则明确标注并不伪造口碑结论
+- 本地 `project-collection` 原报告内容和质量审计结果。
+- GitHub 仓库名、描述、目录和元数据摘录。
+- 对同类项目的架构与风险分析。
+- 未发现可靠第三方长评时，明确标注而不编造口碑。

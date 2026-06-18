@@ -1,13 +1,64 @@
-📚 GitHub 项目研究 — 元目录用途说明：本文件是「github项目研究」知识库的一级入口索引。AI 在处理任何与 GitHub 项目研究相关的任务时，必须首先阅读本目录，再按需读取具体调研报告。阅读路径：先扫目录定位目标 → 按需打开对应报告 → 有需要再深入具体章节📋 已收录项目索引1tensorflow/tensorflow谷歌开源机器学习框架生态⭐ 195K✅ 深度调研2sindresorhus/awesomeAwesome 精选列表标杆⭐ 468K✅ 深度调研3openclaw/openclaw跨平台 AI 助手 Agent 框架⭐ 373K✅ 深度调研4obra/SuperpowersAgentic Skills 框架+研发方法论⭐ 200K✅ 深度调研5awesome-selfhosted/awesome-selfhosted自托管自由软件百科全书⭐ 294K✅ 深度调研6bytedance/UI-TARS-desktop多模态 AI Agent 技术栈⭐ 34K✅ 深度调研7leonxlnx/taste-skillAnti-Slop 前端设计 Skill 集合⭐ 35K✅ 深度调研🔍 按需检索按研究深度：✅ 深度调研报告列表（本目录上方表格）按技术领域：机器学习 / AI 框架 → tensorflow/tensorflowAI Agent / 助手 → openclaw/openclaw、bytedance/UI-TARS-desktop开发方法论 / 框架 → obra/Superpowers资源列表 / 工具集 → sindresorhus/awesome、awesome-selfhosted/awesome-selfhosted前端设计 / AI 生成界面 → leonxlnx/taste-skill按 Stars 规模：超大型（>200K Stars）→ tensorflow、sindresorhus/awesome、openclaw、awesome-selfhosted、obra/Superpowers大型（30K~200K Stars）→ leonxlnx/taste-skill、UI-TARS-desktop📄 调研报告详情1. tensorflow/tensorflow基本信息🌐 GitHub：https://github.com/tensorflow/tensorflow📦 Stars：⭐ 195,208🏷️ 描述：An Open Source Machine Learning Framework for Everyone🗓️ 调研时间：2026-05-19核心摘要（3 条关键发现）TensorFlow 已从早期的静态图模式演化为支持动态图（Eager Execution）和 Keras 集成的前沿框架，但静态图性能
+# 📚 GitHub 项目研究 — 元目录
 
-### 
+## 用途说明
 
-### 优势
+本文件是「github项目研究」知识库的入口索引。处理任何 GitHub 项目研究任务时，应先阅读本目录，再按需打开具体项目调研报告。
 
-在特定场景仍不可替代XLA 编译器是性能优化核心，配合 tf.function 装饰器实现 JIT 编译，显著提升推理吞吐量生态扩展至 TensorFlow Lite（移动/边缘）、TensorFlow.js（浏览器）、TFX（生产流水线），但社区活跃度近年呈下降趋势，部分场景被 PyTorch 侵蚀调研报告文件名：tensorflow-tensorflow-深度调研.md所在知识库：github项目研究（根目录）media_id：markdown_104a5ea1d6c53484288502604be7587f_bd5602eb468db5f3ccbd64dfeddce74a7462334733751990章节结构：项目架构全景 / 核心源码解读 / ADR / 全网口碑画像 / 竞品对比 / 核心研判2. sindresorhus/awesome基本信息🌐 GitHub：https://github.com/sindresorhus/awesome📦 Stars：⭐ 468,495（GitHub 最顶尖的超大型仓库之一）🏷️ 描述：😎 Awesome lists about all kinds of interesting topics🗓️ 调研时间：2026-05-19核心摘要（3 条关键发现）awesome 不仅是列表，更是开源生态的「 curator 标准」—— 定义了什么算"精选"，形成了一套社区认可的 curator 文化真正的价值不在于罗列链接，而在于维护者持续的人工筛选和分类组织；完全自动化的列表没有同等价值与竞品（devhub、awesome-selfhosted、 curated-lists）相比，sindresorhus/awesome 的护城河是创始人品牌效应和生态锁定调研报告文件名：sindresorhus-awesome-深度调研.md所在知识库：github项目研究（根目录）media_id：markdown_104a5ea1d6c53484288502604be7587f_d6f4ca6382d96ead10c46a8d3b1100407462334733751990章节结构：项目架构全景 / 核心源码解读 / 全网口碑画像 / 竞品对比 / 核心研判3. openclaw/openclaw基本信息🌐 GitHub：https://github.com/openclaw/openclaw📦 Stars：⭐ 373,595（活跃度极高的 Agent 基础设施项目）🏷️ 描述：Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞🗓️ 调研时间：2026-05-19核心摘要（3 条关键发现）OpenClaw 的核心定位是「本地优先的 AI 助手」，通过 Skill 系统实现跨平台 Agent 能力，强调隐私和本地化执行独特的 Skill 机制（可组合的工具单元）支持热插拔，与 MCP（Model Context Protocol）形成互补但竞争关系Gateway daemon 服务架构是产品核心，通过插件化设计支持多渠道（QQ、Telegram、微信等），技术架构值得借鉴调研报告文件名：openclaw-openclaw-深度调研.md所在知识库：github项目研究（根目录）media_id：markdown_104a5ea1d6c53484288502604be7587f_330e83ef58ea370367e5fc5f3796c7fd7462334733751990章节结构：项目架构全景 / 核心源码解读 / ADR / 全网口碑画像 / 竞品对比 / 核心研判4. obra/Superpowers基本信息🌐 GitHub：https://github.com/obra/Superpowers📦 Stars：⭐ 200,221🏷️ 描述：An agentic skills framework & software development methodology that works.🗓️ 调研时间：2026-05-19核心摘要（3 条关键发现）Superpowers 创新性地将「skill」（技能）与「methodology」（方法论）融合，提出「Agentic Skills」概念，让 AI Agent 的行为更可预测、更可靠强调「works」（有效）而非「clever」（聪明），是一种工程化思维——追求的是可复现的结果，而非炫技与传统 skill 框架（如 OpenClaw Skill 系统）相比，更侧重于方法论层面的抽象，适合大型团队调研报告文件名：obra-superpowers-深度调研.md所在知识库：github项目研究（根目录）media_id：markdown_104a5ea1d6c53484288502604be7587f_17297cff06bbc535ad1cf967026d316b7462334733751990章节结构：项目架构全景 / 核心源码解读 / ADR / 全网口碑画像 / 竞品对比 / 核心研判5. awesome-selfhosted/awesome-selfhosted基本信息🌐 GitHub：https://github.com/awesome-selfhosted/awesome-selfhosted📦 Stars：⭐ 294,142🏷️ 描述：A list of Free Software network services and web applications which can be hosted on your own servers🗓️ 调研时间：2026-05-19核心摘要（3 条关键发现）定位是「自托管自由软件的维基百科」，按类别（Analytics、Blogging、Bookmarks 等）组织，覆盖了自托管领域的几乎所有场景数据结构设计精妙：用 Makefile 自动生成 HTML，利用 GitHub Actions 做 NLP 自动化分类，是「用代码管理代码列表」的典范与 sindresorhus/awesome 相比，更垂直于基础设施/运维场景，目标是「让你不依赖云服务」调研报告文件名：awesome-selfhosted-深度调研.md所在知识库：github项目研究（根目录）media_id：markdown_104a5ea1d6c53484288502604be7587f_d5b885141128913c48d4238777f372db7462334733751990章节结构：项目架构全景 / 核心源码解读 / ADR / 全网口碑画像 / 竞品对比 / 核心研判6. bytedance/UI-TARS-desktop基本信息🌐 GitHub：https://github.com/bytedance/UI-TARS-desktop📦 Stars：⭐ 34,857🏷️ 描述：The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra🗓️ 调研时间：2026-05-19核心摘要（3 条关键发现）UI-TARS 聚焦于「GUI Agent」赛道，让 AI 能够理解并操作图形界面（桌面应用、网页），是自动化办公和多模态 Agent 的结合技术栈整合了多种 SOTA 多模态模型（Qwen-VL、CogVLM 等），提供从模型到应用的全链路方案背靠字节跳动工程能力，代码质量和文档相对完善，但作为新项目，社区规模和影响力还在增长中调研报告文件名：UI-TARS-desktop-深度调研.md所在知识库：github项目研究（根目录）media_id：markdown_104a5ea1d6c53484288502604be7587f_5e1fc2dd4ca59d372b3f4e980beeaf017462334733751990章节结构：项目架构全景 / 核心源码解读 / 全网口碑画像 / 竞品对比 / 核心研判7. leonxlnx/taste-skill基本信息🌐 GitHub：https://github.com/leonxlnx/taste-skill📦 Stars：⭐ 35,024🏷️ 描述：Anti-slop frontend skill for landing pages, portfolios, and redesigns🗓️ 调研时间：2026-06-07核心摘要（3 条关键发现）taste-skill 首创「设计品味系统化」—— 通过三旋钮（DESIGN_VARIANCE/MOTION_INTENSITY/VISUAL_DENSITY）将主观设计判断转化为 AI 可执行的规则，是 taste-skill 的核心壁垒v2 的 50+ 项硬规则（Pre-flight check）全部来自真实 LLM 生成页面的生产测试，不是理论推导——包括 Em-dash 完全禁止、版本标签禁止、虚假产品预览禁止等12 个 skill 变体覆盖从代码生成到图片生成到品牌套件的全流程，生态完整；但 accessibility 支持不足和 SKILL.md 体积膨胀（1200+ 行）是主要
+## 阅读路径
 
-### 
+1. 先扫项目索引，定位目标仓库。
+2. 再打开对应全方位深度调研报告。
+3. 如需更新报告，必须同步更新元目录索引。
 
-### 风险
+## 📋 已收录项目概览
 
-调研报告文件名：leonxlnx-taste-skill-深度调研.md所在知识库：github项目研究（根目录）media_id：markdown_9cf02474cb1550e42fd6e7b6ab8e655b_2204149601edb88ac8c0b4649e56d7de7462334733751990章节结构：项目架构全景 / 核心源码解读 / 架构决策与设计哲学 / 全网口碑画像 / 竞品对比 / 核心研判📌 AI 读取协议元目录使用原则先读目录再读报告：任何涉及 GitHub 项目调研的任务，AI 应先读取本元目录，定位目标项目后再按需读取具体报告目录是入口而非替代：元目录提供索引和摘要，不替代完整调研报告持续更新：每次新完成一份调研报告，应同步更新本元目录新增报告流程：上传新调研报告到知识库后 → 在本目录对应位置补充条目（包含：项目名、GitHub URL、Stars、调研摘要、media_id）新增条目模板N. owner/repo-name基本信息🌐 GitHub：https://github.com/owner/repo-name📦 Stars：⭐ XXXXX🏷️ 描述：（项目 tagline）🗓️ 调研时间：YYYY-MM-DD核心摘要（3 条关键发现）发现 1：（最重要的一点）发现 2：（次重要的一点）发现 3：（值得注意的一点）调研报告文件名：owner-repo-name-深度调研.md所在知识库：github项目研究（根目录）media_id：{media_id}章节结构：（调研报告包含的主要章节）本目录最后更新：2026-06-07
+当前仓库收录了多批 GitHub 项目研究报告，覆盖 AI Agent、开发者工具、设计系统、AI 记忆、视频生成、TTS、后端平台、白板协作、代理客户端、自动化上传、学习资料等方向。
+
+## 🏗️ 索引结构
+
+| 字段 | 含义 |
+|---|---|
+| 项目名 | owner/repo |
+| 一句话定位 | 项目解决的问题 |
+| 热度 | Stars / Forks 等 GitHub 指标 |
+| 状态 | 是否已完成深度调研 |
+| 报告位置 | `full-analysis/` 下的 Markdown 文件 |
+
+## 🧠 使用规则
+
+- 新增或重写任何 GitHub 深度报告后，必须更新本目录。
+- 元目录只放摘要和定位，不替代完整调研报告。
+- 调研报告必须包含架构、源码、口碑、竞品、研判和文件速查。
+- 不允许把 README 原文直接倾倒到报告中。
+
+## 🌐 质量画像
+
+本次仓库质量审计发现，历史报告中有大量 Markdown 被压缩为超长段落、英文 README 原文未翻译、Issue/JSON 原始抓取残留、代码块吞掉正文等问题。后续修复以本目录为导航，优先处理 `critical/high` 报告。
+
+## ⚔️ 后续维护建议
+
+| 问题 | 处理方式 |
+|---|---|
+| 英文占比过高 | 改写为中文解释，只保留必要术语 |
+| 超长行 | 拆分为标题、段落、列表、表格 |
+| 原始 dump | 删除 JSON/Issue/README 大段原文，提炼观点 |
+| 图片断链 | 移除或改为可访问链接 |
+| 元目录不同步 | 每次新增报告后立即追加索引 |
+
+## 🎯 核心研判
+
+元目录的价值是让后续 AI 或用户快速知道“有什么、在哪里、质量如何”。它不是装饰性 README，而是知识库导航和质量治理入口。
+
+## 📂 关键文件路径速查
+
+- `full-analysis/`：完整深度调研报告。
+- `latest-reports/`：最新报告集合。
+- `quick-reports/`：快速报告集合。
+- `audit-results/quality-audit.md`：质量审计摘要。
+- `scripts/quality_audit.py`：质量扫描脚本。
+
+## ⭐ 三条关键发现
+
+1. 元目录必须保持可渲染 Markdown，而不是一整行压缩文本。
+2. 元目录和报告之间要双向对应，否则知识库会失去可导航性。
+3. 质量审计脚本应作为每次发布前的门禁。

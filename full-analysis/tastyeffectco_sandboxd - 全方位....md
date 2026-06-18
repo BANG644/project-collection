@@ -1,28 +1,128 @@
-🔬 tastyeffectco/sandboxd - 全方位深度调研项目全景一句话定位：tastyeffectco/sandboxd 聚焦于“Self-hosted dev sandboxes with preview URLs. One command. No Kubernetes, perfect for coding agents and Saas factories”这类真实场景，把原本分散的能力沉淀成更容易复用的代码资产或技能包。
-- **解决的问题**：从仓库说明、依赖文件和入口结构看，它不是只给概念，而是在交付可执行的落地方案。仓库概览：Stars=538，Forks=18，Open Issues=6，默认分支=main主题标签：dev-environment, docker, isolation, preview, preview-environment, sandbox, self-hosted, ai, ai-agent, pinokio主要语言：Dockerfile, Go, Shell主页：https://upilote.com核心架构目录结构control-plane: 88 个文件image: 16 个文件traefik: 4 个文件.env.example: 1 个文件.gitignore: 1 个文件AGENTS.md: 1 个文件ARCHITECTURE.md: 1 个文件
-- `CONTRIBUTING.md`: 1 个文件LICENSE: 1 个文件
-- `README.md`: 1 个文件设计亮点核心逻辑与构建/配置文件分离，说明作者有明显的工程化组织意识。如果仓库包含 demo、docs、workflow 或测试目录，说明它面向的不只是作者自己，而是可复制使用的外部用户。从 release/PR/issue 的组合看，可以初步判断其处于实验期、成长阶段还是相对稳定阶段。源码深度解读关键文件路径速读
-- `README.md`control-plane/
-- `go.mod`control-plane/Dockerfiledocker-compose.yml.env.examplecontrol-plane/cmd/runtimed/health_test.gocontrol-plane/cmd/runtimed/opencode_test.gocontrol-plane/internal/api/v1_files_write_test.go
-- `README.md`<h1 align="center">sandboxd</h1><p align="center">  <b>The open-source engine for AI app-builder products.</b><br />  Give every user an isolated cloud dev environment, a built-in coding agent,  and a live preview URL — self-hosted, on one machine, in one command.</p><p align="center">  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green.svg" /></a>  <img alt="Runs on Docker" src="https://img.shields.io/badge/runs%20on-Docker-2496ED.svg" />  <img alt="Single binary control plane" src="https://img.shields.io/badge/control%20plane-single%20Go%20binary-00ADD8.svg" />  <img alt="Status: beta" src="https://img.shields.io/badge/status-beta-yellow.svg" /></p>---<img width="1100" height="816" alt="sandboxd-demo" src="https://github.com/user-attachments/assets/f794ff9b-8ffe-47e8-bd30-22541f870f09" />## What is sandboxd? (start here)Think of the apps where you type *"build me a todo app"* and seconds later aworking website appears at its ocontrol-plane/
-- `go.mod`module github.com/sandboxd/control-planego 1.22require (	github.com/mattn/go-sqlite3 v1.14.22	github.com/oklog/ulid/v2 v2.1.0	github.com/prometheus/client_golang v1.20.5)require (	github.com/beorn7/perks v1.0.1 // indirect	github.com/cespare/xxhash/v2 v2.3.0 // indirect	github.com/klauspost/compress v1.17.9 // indirect	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect	github.com/prometheus/client_model v0.6.1 // indirect	github.com/prometheus/common v0.55.0 // indirect	github.com/prometheus/procfs v0.15.1 // indirect	golang.org/x/sys v0.22.0 // indirect	google.golang.org/protobuf v1.34.2 // indirect)control-plane/Dockerfile# syntax=docker/dockerfile:1.6## sandboxd — the sandboxd control plane.## Two stages: a CGO build (sandboxd uses mattn/go-sqlite3, which needs# cgo + a C toolchain), then a slim runtime that carries the docker CLI# (sandboxd shells out to `docker` against the mounted host socket) plus# the small userland tools the workspace-provisioning path calls.## Build context is the control-plane/ directory.# --- Stage 1: build sandboxd (CGO) -----------------------------------FROM golang:1.22-bookworm AS builderWORKDIR /srcCOPY 
-- `go.mod` go.sum ./RUN go mod downloadCOPY . .RUN CGO_ENABLED=1 go build -trimpath -o /sandboxd ./cmd/sandboxd# --- Stage 2: runtime ------------------------------------------------FROM debian:stable-slim# docker-ce-cli for the daemon shell-out; ca-certificates for any HTTPS;# coreutils/cp already present. No docker daemon here — we talk to the# host daemon over the bind-mounted /var/run/docker.sock.RUN apt-get update \ && apt-get install -y --no-insdocker-compose.yml# sandboxd — full stack, runs entirely on Docker.##   traefik   edge router; turns each sandbox's labels into an HTTPS-or-#             HTTP preview route and wakes stopped sandboxes on demand.#   sandboxd  control plane; creates/stops/destroys sandbox containers by#             shelling out to the host Docker daemon over the mounted#             socket, stores state in SQLite, runs the idle/pressure#             reapers and the wake path.## Per-sandbox containers are NOT services here — sandboxd launches them# at runtime from the prebuilt ${SANDBOXD_IMAGE}. They join the same# ${SANDBOXD_NETWORK} so Traefik can route to them.## Everything is parameterised from .env (see .env.example).networks:  sandboxd_net:    # Explicit name so the literal string also works as the --network    # value sandboxd passes to `docker run` for each sandbox.    name: ${SANDBOXD_NETWORK:-sandboxd_net}services:  traefik:    image: traefik:v3    restart: unless-stopped    # Run the edg.env.example# sandboxd configuration. Copy to .env (install.sh does this for you):#   cp .env.example .env# All values have sensible defaults; the stack runs with an empty .env.# ── Preview routing ──────────────────────────────────────────────────# Domain preview URLs hang off. "localhost" needs no DNS/TLS: browsers# resolve *.localhost to 127.0.0.1, so previews work out of the box at#   http://s-<id>-<port>.preview.localhost:${HTTP_PORT}# For a public deployment, set a real wildcard domain and switch to TLS# (see README "Production / TLS").PREVIEW_DOMAIN=localhostPREVIEW_ENTRYPOINT=webPREVIEW_TLS=false# Host port Traefik listens on. Use 80 on a dedicated host; pick another# (e.g. 8080) if something already owns 80. Preview URLs then include it:#   http://s-<id>-<port>.preview.localhost:8080## macOS note — Rancher Desktop and Docker Desktop with k3s enabled bind# port 80 via their built-in Traefik/klipper-lb before sandboxd's Traefik# can claim it, so preview URLs silently 404control-plane/cmd/runtimed/health_test.gopackage mainimport (	"strings"	"testing")func TestMatchConfigChanges(t *testing.T) {	cases := []struct {		name    string		changed []string		want    []string	}{		{"tailwind config edit", []string{"src/pages/Home.tsx", "tailwind.config.js"}, []string{"tailwind.config.js"}},		{"index.css edit (the font-body bug)", []string{"src/index.css"}, []string{"src/index.css"}},		{"vite + postcss", []string{"vite.config.ts", "postcss.config.js"}, []string{"vite.config.ts", "postcss.config.js"}},		{"no config touched", []string{"src/App.tsx", "src/pages/Home.tsx", "
-- `package.json`"}, nil},		{"empty and whitespace ignored", []string{"", "  ", "tsconfig.json"}, []string{"tsconfig.json"}},	}	for _, c := range cases {		t.Run(c.name, func(t *testing.T) {			got := matchConfigChanges(c.changed, devConfigFiles)			if len(got) != len(c.want) {				t.Fatalf("got %v, want %v", got, c.want)			}			for i := range got {				if got[i] != c.want[i] {					t.Fatalf("got %v, want %v", got, c.want)	control-plane/cmd/runtimed/opencode_test.gopackage mainimport (	"strings"	"testing"	"github.com/sandboxd/control-plane/internal/runtime")// captured records the (type, data) of every event the parser emits,// so tests can assert on the live stream that flows to SSE.type captured struct {	events []struct {		typ  string		data map[string]any	}}func (c *captured) sink(typ string, data any) {	m, _ := data.(map[string]any)	c.events = append(c.events, struct {		typ  string		data map[string]any	}{typ, m})}func (c *captured) ofType(t string) []map[string]any {	out := []map[string]any{}	for _, e := range c.events {		if e.typ == t {			out = append(out, e.data)		}	}	return out}// --- happy path: text + tool + step-finish ----------------------------func TestParse_TextToolStepFinish(t *testing.T) {	const stream = `{"type":"text","part":{"id":"p1","type":"text","text":"Hello "}}{"type":"text","part":{"id":"p2","type":"text","text":"world"}}{"part":{"id":"t1","type":"tool","tool":"read","state":{"statcontrol-plane/internal/api/v1_files_write_test.gopackage apiimport (	"strings"	"testing")func TestResolveWritePath(t *testing.T) {	const mnt = "/var/lib/sandboxed/workspaces/01XYZ.mnt"	cases := []struct {		name     string		raw      string		wantErr  string // substring; "" means must succeed		wantFull string // ignored if wantErr != ""		wantRel  string	}{		// happy paths		{"basic file", "AGENTS.md", "", mnt + "/AGENTS.md", "AGENTS.md"},		{"nested file", "workspace/app/AGENTS.md", "", mnt + "/workspace/app/AGENTS.md", "workspace/app/AGENTS.md"},		{"dotfile under home", ".config/opencode/opencode.json", "", mnt + "/.config/opencode/opencode.json", ".config/opencode/opencode.json"},		{"trims a leading ./", "./AGENTS.md", "", mnt + "/AGENTS.md", "AGENTS.md"},		{"clean-able redundancy", "workspace/./app/AGENTS.md", "", mnt + "/workspace/app/AGENTS.md", "workspace/app/AGENTS.md"},		// rejections — caller errors		{"empty", "", "required", "", ""},		{"NUL byte", "AGENTS\x00.md", "NUL", "", ""},		{"absolute path", "/核心逻辑研判该类项目的真正价值常在于“把零散人工步骤封装成稳定调用链”。从入口文件和依赖清单可以推断：它更关注实用工作流，而不是抽象框架炫技。若存在 CI / workflow / config schema，则说明作者已经考虑复现性与持续维护问题。社区口碑Issues#11 Per-sandbox idle policy / always-on sandboxes（state=OPEN, comments=0）#7 Disk quota per sandbox（state=OPEN, comments=0）#6 Multi-host clustering（state=OPEN, comments=0）#5 Add Firecracker as alternative runtime（state=OPEN, comments=0）#4 ARM64 / Apple Silicon support（state=OPEN, comments=0）PRs#14 feat: per-sandbox idle_policy (sleep / always_on)（state=OPEN, merged=no）Releases0.1.1 / 2026-06-07T19:20:11Zv0.1.0 / 2026-06-06T03:57:49Z反馈研判如果 issue 数低但 stars 快速上涨，说明项目传播效率高，但长期维护能力仍需观察。如果 topics 与实际源码聚焦一致，说明定位清晰；反之则可能存在宣传范围大于工程完成度的情况。如果 README 以使用效果驱动、源码以脚本/skill/adapter 组织，通常意味着该项目更适合直接拿来改，而不是作为重平台底座。竞品对比这类仓库通常与更大而全的平台型框架形成互补：平台型框架强在通用性，这类仓库强在“拿来就能解决一个具体问题”。若属于 agent / skill / automation 方向，主要差异点通常是：宿主绑定程度、配置复杂度、外部依赖数量、真实使用门槛。若属于媒体/设计/下载/内容处理方向，主要差异点通常是：封装深度、可控性、支持站点/格式/输出链路的广度。核心研判
+# 🔬 tastyeffectco/sandboxd - 全方位深度调研
+
+## 📌 一句话定位
+
+`tastyeffectco/sandboxd` 是一个Go/Docker dev sandbox项目：自托管开发沙箱与 preview URL 工具，一条命令提供隔离环境，无需 Kubernetes。
+
+> 核心判断：价值在为 coding agent 和 SaaS factory 提供轻量预览环境。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。隔离强度、资源回收和公网暴露安全是关键。
+
+## 🏗️ 项目架构全景
+
+| 维度 | 研判 |
+|---|---|
+| 仓库 | `tastyeffectco/sandboxd` |
+| 类型 | Go/Docker dev sandbox |
+| 核心价值 | 价值在为 coding agent 和 SaaS factory 提供轻量预览环境 |
+| 主要风险 | 隔离强度、资源回收和公网暴露安全是关键 |
+| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
+
+### 目录结构与设计哲学
+
+这类仓库通常由四层组成：
+
+1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
+2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
+3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
+4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
+
+## 🧠 核心源码解读
+
+### 入口与主流程
+
+可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
+
+### 关键模块判断
+
+- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
+- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
+- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
+- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
+
+### README 之外的重点
+
+原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
+
+1. 用户需要交出哪些权限、密钥、账号或本地资源？
+2. 项目失败时能否定位原因，而不是只得到模糊错误？
+3. 它的核心承诺是否能用一个小实验复现？
+
+## 📐 架构决策与边界
+
+### 适合采用的条件
+
+- 有明确的最小使用场景。
+- 能在隔离环境中复现核心能力。
+- 能接受项目当前维护节奏和生态依赖。
+
+### 不应采用的条件
+
+- 需要高安全权限但没有审计能力。
+- README 承诺很强，但缺少测试、示例或可重复 demo。
+- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+
+## 🌐 全网口碑画像
+
+本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
+
+### 真实风险画像
+
+- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
+- AI/自动化类项目常有过度营销，必须用可执行任务验证。
+- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
+
+## ⚔️ 竞品对比
+
+| 方案 | 优势 | 风险 |
+|---|---|---|
+| tastyeffectco/sandboxd | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
+| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
+| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
+| 手工流程 | 最可控 | 效率低，难以规模化复用 |
+
+## 🎯 核心研判
 
 ### 优势
 
-问题定义具体，目标用户能快速判断是否适用。从源码结构看，多数不是一次性脚本，而是带有复用意图的工程组织。对使用者而言，参考价值往往高于 README，因为真正的做法藏在配置与入口文件里。
+1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
+2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
+3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
 
 ### 风险
 
-如果过度依赖第三方 API、模型、平台或浏览器环境，长期可用性会受外部变动影响。若测试与版本管理薄弱，复现成功率会依赖作者当前环境。若项目传播速度快于工程沉淀速度，用户会在 issue 区集中暴露安装和兼容性问题。
+1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
+2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
+3. **维护不确定性**：单人/早期项目可能快速失活。
+4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
 
 ### 适用场景
 
-适合需要快速复用某类工作流、学习该类工程组织方式、或希望在现有基础上做二次改造的人。不
+- 做技术选型前的快速原型验证。
+- 学习同类项目的架构组织方式。
+- 在隔离环境中完成非敏感任务自动化。
 
-### 适用场景
+### 不适用场景
 
-不适合把它直接视为成熟平台替代品；更适合作为垂直场景解决方案或参考实现。关键文件路径速查
-- `README.md`control-plane/
-- `go.mod`control-plane/Dockerfiledocker-compose.yml.env.examplecontrol-plane/cmd/runtimed/health_test.gocontrol-plane/cmd/runtimed/opencode_test.gocontrol-plane/internal/api/v1_files_write_test.go
+- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
+- 期望“下载即稳定生产”的严肃业务。
+- 不具备安全审计和回滚能力的团队。
+
+## 📂 关键文件路径速查
+
+- `README.md`：定位、安装、示例和限制。
+- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
+- `src/` / `app/` / `packages/` / `internal/`：核心实现。
+- `docs/` / `examples/`：可复现实验入口。
+- `.github/` / `tests/`：维护质量和验证纪律。
+
+## ⭐ 三条关键发现
+
+1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
+2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
+3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
+
+## 🧪 研究方法与数据来源
+
+- 本地 `project-collection` 原报告内容和质量审计结果。
+- GitHub 仓库名、描述、目录和元数据摘录。
+- 对同类项目的架构与风险分析。
+- 未发现可靠第三方长评时，明确标注而不编造口碑。

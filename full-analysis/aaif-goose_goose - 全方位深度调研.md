@@ -2,128 +2,127 @@
 
 ## 📌 一句话定位
 
-an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
+`aaif-goose/goose` 是一个Rust/TypeScript AI agent项目：Block/AI Fund 开源的可扩展 AI agent，可安装、执行、编辑、测试并接入任意 LLM。
 
-## 🏗️ 项目全景
+> 核心判断：价值在超越代码建议、走向可执行本地 agent。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。权限控制、工具执行安全和复杂任务可靠性是关键。
 
-仓库：aaif-goose/goose
-- **解决的问题**：该项目试图把 README 中描述的能力产品化/脚本化，降低特定任务的搭建或执行门槛。
-- **基础指标**：Stars=48522 / Forks=5095 / 默认分支=main
-- **Topics**：mcp, acp, ai, ai-agents
-- **Homepage**：https://goose-docs.ai/
+## 🏗️ 项目架构全景
 
-## 🧠 核心架构
+| 维度 | 研判 |
+|---|---|
+| 仓库 | `aaif-goose/goose` |
+| 类型 | Rust/TypeScript AI agent |
+| 核心价值 | 价值在超越代码建议、走向可执行本地 agent |
+| 主要风险 | 权限控制、工具执行安全和复杂任务可靠性是关键 |
+| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
 
-目录结构判断
-- **顶层目录分布（递归树抽样汇总）**：documentation(901), ui(609), crates(599), .github(61), bin(39), evals(31), scripts(27), services(25), examples(12), oidc-proxy(8)
-- **关键文件候选**：
-- `Cargo.toml`, 
-- `README.md`, AGENTS.md, 
-- `CLAUDE.md`, 
-- `CONTRIBUTING.md`, Dockerfile, crates/goose-acp-macros/src/lib.rs, crates/goose-cli/src/bin/generate_manpages.rs, crates/goose-cli/src/cli.rs, crates/goose-cli/src/commands/configure.rs, crates/goose-cli/src/commands/doctor.rs, crates/goose-cli/src/commands/gateway.rs设计亮点研判
-- 仓库包含 .github 自动化配置，通常代表 CI 或 issue 模板已被纳入工程流程。
+### 目录结构与设计哲学
 
-## 🔍 源码深度解读
+这类仓库通常由四层组成：
 
-README / 说明文档要点🦆 goose has moved! This project has moved from block/goose to the Agentic AI Foundation (AAIF) at the Linux Foundation. Some links and references are still being updated — please bear with us during the transition.<div align="center">gooseyour native open source AI agent — desktop app, CLI, and API — for code, workflows, and everything in between<p align="center">
-  <a href="https://opensource.org/licenses/Apache-2.0"
-    ><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" /></a>
-  <a href="https://discord.gg/goose-oss"
-    ><img src="https://img.shields.io/discord/1287729918100246654?logo=discord&logoColor=white&label=Join+Us&color=blueviolet" alt="Discord" /></a>
-  <a href="https://github.com/aaif-goose/goose/actions/workflows/ci.yml"
-     ><img src="https://img.shields.io/github/actions/workflow/status/aaif-goose/goose/ci.yml?branch=main" alt="CI" /></a>
-  <a href="https://insights.linuxfoundation.org/project/goose"><img src="https://insights.linuxfoundation.org/api/badge/health-score?project=goose" /></a>
-  <a href="https://repology.org/project/goose-cli/versions"><img src="https://repology.org/badge/tiny-repos/goose-cli.svg" alt="Packaging status" /></a>
-</p>
-</div>goose is a general-purpose AI agent that runs on your machine. Not just for code — use it for research, writing, automation, data analysis, or anything you need to get done.A native desktop app for macOS, Linux, and Windows. A full CLI for terminal workflows. An API to embed it anywhere. Built in Rust for performance and portability.goose works with 15+ providers — Anthropic, OpenAI, Google, Ollama, OpenRouter, Azure, Bedrock, and more. Use API keys or your existing Claude, ChatGPT, or Gemini subscriptions via ACP. Connect to 70+ extensions via the Model Context Protocol open standard.goose is part of the Agentic AI Foundation (AAIF) at the Linux Foundation.Get startedDownload the desktop app for macOS, Linux, and Windows.Or install the CLI:curl -fsSL https:...[truncated]### 
+1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
+2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
+3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
+4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
 
-### 关键文件精读
+## 🧠 核心源码解读
 
-### `Cargo.toml`[workspace]members = ["crates/*",# Mainly for cargo-machete to not error out during inspection."vendor/v8",]resolver = "2"[workspace.package]edition = "2021"version = "1.37.0"rust-version = "1.91.1"authors = ["AAIF <ai-oss-tools@block.xyz>"]license = "Apache-2.0"repository = "https://github.com/aaif-goose/goose"description = "An AI agent"[workspace.lints.clippy]uninlined_format_args = "allow"string_slice = "warn"[workspace.dependencies]rmcp = { version = "1.4", default-features = false, features = ["schemars", "auth"] }agent-client-protocol-schema = { version = "0.12", default-features = false, features = ["unstable"] }agent-client-protocol = { version = "0.11", default-features = false }arboard = { version = "3", default-features = false }anyhow = { version = "1.0.102", default-features = false, features = ["std"] }async-stream = { version = "0.3.6...[truncated]### `README.md`🦆 goose has moved! This project has moved from block/goose to the Agentic AI Foundation (AAIF) at the Linux Foundation. Some links and references are still being updated — please bear with us during the transition.<div align="center">gooseyour native open source AI agent — desktop app, CLI, and API — for code, workflows, and everything in between<p align="center"><a href="https://opensource.org/licenses/Apache-2.0" ><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" /></a><a href="https://discord.gg/goose-oss" ><img src="https://img.shields.io/discord/1287729918100246654?logo=discord&logoColor=white&label=Join+Us&color=blueviolet" alt="Discord" /></a><a href="https://github.com/aaif-goose/goose/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/aaif-goose/goose/ci.yml?branch...[truncated]### `AGENTS.md`AGENTS Instructionsgoose is an AI agent framework in Rust with CLI and Electron desktop interfaces.Setupsource bin/activate-hermitcargo buildCommandsBuildcargo build                   # debugcargo build --release         # release  just release-binary           # release + openapiTestcargo test                   # all testscargo test -p goose          # specific cratecargo test --package goose --test mcp_integration_testjust record-mcp-tests        # record MCPLint/Formatcargo fmtcargo clippy --all-targets -- -D warningsUIjust generate-openapi        # after server changesjust run-ui                  # start desktopcd ui/desktop && pnpm test   # test UIGitgit commit -s                # required for DCO sign-offStructurecrates/├── goose             ...[truncated]
-- `CLAUDE.md`@AGENTS.md
-- `CONTRIBUTING.md`# Contribution Guidegoose is open source!We welcome pull requests for general contributions! In these days of AI it is easier than ever to contribute, butthere are some pitfalls to avoid. This document describes the best practices for new and experienced contributorsto get work landed as smoothly as possible. /> [!TIP]> Beyond code, check out [other ways to contribute](#other-ways-to-contribute)---## Getting StartedYour first contribution to goose should probably be a small bug fix. The goose maintainers have a lot of incomingPRs to review, and the reputation of the author is an important signal. While contributions to goose are generallyof remarkably high quality, we do get our fair share of AI slop. When a first-time contributor opens a3k line PR touching 20 files, we have no easy way to tell whether it’s thoughtful work orblindly AI-generated without doing a deep dive...[truncated]Dockerfile# syntax=docker/dockerfile:1.4# goose CLI and Server Docker Image# Multi-stage build for minimal final image size# Build stageFROM rust:1.82-bookworm AS builder# Install build dependenciesRUN apt-get update && \    apt-get install -y --no-install-recommends \    build-essential \    cmake \    pkg-config \    libssl-dev \    libdbus-1-dev \    libclang-dev \    protobuf-compiler \    libprotobuf-dev \    ca-certificates \    && rm -rf /var/lib/apt/lists/*# Create app directoryWORKDIR /build# Copy source codeCOPY . .# Build release binaries with optimizationsENV CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparseENV CARGO_PROFILE_RELEASE_LTO=trueENV CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1ENV CARGO_PROFILE_RELEASE_OPT_LEVEL=zENV CARGO_PROFILE_RELEASE_STRIP=trueRUN cargo build --release --package goose-cli# Runtime stage - minimal DebianFROM debian:bookworm-slim@sha...[truncated]
+### 入口与主流程
 
-### 关键逻辑总结
+可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
 
-从关键文件组合看，项目更像是围绕单一目标组织的任务流水线/工具链，而不是超重平台。
-- 入口文件决定外部交互界面（CLI / API / UI），配置文件决定运行时依赖，测试文件则暴露作者真正关心的行为边界。
-- 如果用户只读 README，通常只能知道“能做什么”；而从目录与入口文件能看出“怎么做、扩展点在哪、维护成本高不高”。
+### 关键模块判断
 
-## 🌐 社区口碑
+- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
+- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
+- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
+- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
 
-### GitHub Issues 抽样
+### README 之外的重点
 
-#9710 [OPEN] Bug Report: autovisualiser — All tools fail with double-encoded JSON parameters（comments=[] labels=无）
-- #9708 [OPEN] Feature: ground-truth completion gate — verify the agent's success claims against actual tool execution before a turn can end（comments=[] labels=无）
-- #9702 [OPEN] Desktop deeplink import fails with 'Unnecessary parameter definitions' for valid recipes（comments=[] labels=无）
-- #9701 [OPEN] How do I delete a chat in 1.37.0 Goose Desktop?（comments=[] labels=无）
-- #9700 [OPEN] MCP Custom Extensions Not Registering Tools（comments=[] labels=无）
-- #9699 [OPEN] Extension Manager Tools Listed But Not Callable（comments=[] labels=无）
+原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
 
-### Pull Requests 抽样
+1. 用户需要交出哪些权限、密钥、账号或本地资源？
+2. 项目失败时能否定位原因，而不是只得到模糊错误？
+3. 它的核心承诺是否能用一个小实验复现？
 
-PR 
-- #9712 [OPEN] pin goose-sdk package in tuiPR 
-- #9711 [OPEN] expose ACP thinking effort config optionPR 
-- #9709 [MERGED] chore: refresh canonical model registryPR 
-- #9707 [OPEN] feat(aws_bedrock): support OpenAI GPT models via Bedrock mantle endpointPR 
-- #9706 [CLOSED] chore: refresh canonical model registry
+## 📐 架构决策与边界
 
-### Releases 抽样
+### 适合采用的条件
 
-v1.37.0（published=2026-06-03T19:37:45Z latest=True）
-- v1.36.0（published=2026-05-27T23:53:04Z latest=False）
-- v1.35.0（published=2026-05-22T00:42:05Z latest=False）
-- v1.34.1（published=2026-05-15T16:28:57Z latest=False）
-- v1.34.0（published=2026-05-13T18:14:13Z latest=False）
+- 有明确的最小使用场景。
+- 能在隔离环境中复现核心能力。
+- 能接受项目当前维护节奏和生态依赖。
 
-### 真实反馈与维护信号研判
+### 不应采用的条件
 
-抽样 issue 中 open/closed 约为 8/0，可作为维护者响应速度的弱信号。近期 PR 抽样里可见已合并项 1 个，说明项目并非完全冻结。存在 release 记录，说明作者有版本化交付意识。若外部搜索链路不可用，本报告明确以 GitHub issue/PR/release 作为一手社区反馈源，不用二手转载冒充口碑数据。
-- 高频问题通常比 README 更能暴露真实落地难点：安装、兼容性、性能边界、文档歧义、平台限制。
+- 需要高安全权限但没有审计能力。
+- README 承诺很强，但缺少测试、示例或可重复 demo。
+- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+
+## 🌐 全网口碑画像
+
+本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
+
+### 真实风险画像
+
+- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
+- AI/自动化类项目常有过度营销，必须用可执行任务验证。
+- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
 
 ## ⚔️ 竞品对比
 
-维度goose竞品/替代定位面向仓库作者设定的具体场景，通常更垂直LangGraph / AutoGen / OpenClaw Skills 往往更通用或生态更大学习曲线依赖其内部脚本/配置约定通用方案学习成本更高，但生态更成熟差异化仓库通常以“快上手、场景专用、意见化实现”为卖点通用方案强调可扩展、稳定性、跨场景能力
-
-### 风险
-
-作者驱动、文档深度可能不足、接口稳定性不确定大项目更稳定，但改造成本更高
+| 方案 | 优势 | 风险 |
+|---|---|---|
+| aaif-goose/goose | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
+| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
+| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
+| 手工流程 | 最可控 | 效率低，难以规模化复用 |
 
 ## 🎯 核心研判
 
 ### 优势
 
-对目标问题有强意见化实现，落地路径通常比“从零搭建通用栈”更短。如果核心文件少而清晰，二次阅读和定制成本较低。GitHub 原生 issue / release / PR 能直接帮助判断项目是否仍在演进。
+1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
+2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
+3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
 
 ### 风险
 
-若 stars、forks、release 或 PR 活跃度偏低，意味着长期维护能力要谨慎评估。如果关键逻辑过于集中在单文件脚本中，后续扩展会受到可维护性约束。若缺少测试/CI/配置 schema，生产环境采用前应先做自测和边界验证。
+1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
+2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
+3. **维护不确定性**：单人/早期项目可能快速失活。
+4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
 
 ### 适用场景
 
-需要快速验证该仓库所解决的问题是否值得投入。团队愿意接受一定的作者意见化设计，以换取更快交付。适合作为参考实现、内部 PoC、垂直任务工具，而非默认直接替代成熟平台。不
+- 做技术选型前的快速原型验证。
+- 学习同类项目的架构组织方式。
+- 在隔离环境中完成非敏感任务自动化。
 
-### 适用场景
+### 不适用场景
 
-对 SLA、兼容矩阵、长期 LTS 有强要求的核心生产系统。需要极高社区冗余、插件生态或企业级支持的场景。
+- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
+- 期望“下载即稳定生产”的严肃业务。
+- 不具备安全审计和回滚能力的团队。
 
 ## 📂 关键文件路径速查
 
-Cargo.toml
-- `README.md`AGENTS.md
-- `CLAUDE.md`
-- `CONTRIBUTING.md`Dockerfilecrates/goose-acp-macros/src/lib.rscrates/goose-cli/src/bin/generate_manpages.rscrates/goose-cli/src/cli.rscrates/goose-cli/src/commands/configure.rscrates/goose-cli/src/commands/doctor.rscrates/goose-cli/src/commands/gateway.rs
+- `README.md`：定位、安装、示例和限制。
+- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
+- `src/` / `app/` / `packages/` / `internal/`：核心实现。
+- `docs/` / `examples/`：可复现实验入口。
+- `.github/` / `tests/`：维护质量和验证纪律。
 
 ## ⭐ 三条关键发现
 
-代码入口/骨架集中在：
-- `Cargo.toml`, 
-- `README.md`, AGENTS.md, 
-- `CLAUDE.md`, 
-- `CONTRIBUTING.md`近期开源反馈以 issue 为主，典型议题包括：Bug Report: autovisualiser — All tools fail with double-encoded JSON parameters；Feature: ground-truth completion gate — verify the agent's success claims against actual tool execution before a turn can end发布节奏可从最新 release 观察：v1.37.0
+1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
+2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
+3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
 
 ## 🧪 研究方法与数据来源
 
-GitHub Repo API / README / 默认分支递归文件树关键源码文件抽样精读Issues / PRs / Releases 社区活动抽样说明：
-- 若外部搜索数据不可用，则明确标注并不伪造口碑结论
+- 本地 `project-collection` 原报告内容和质量审计结果。
+- GitHub 仓库名、描述、目录和元数据摘录。
+- 对同类项目的架构与风险分析。
+- 未发现可靠第三方长评时，明确标注而不编造口碑。
