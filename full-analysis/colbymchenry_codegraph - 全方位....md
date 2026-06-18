@@ -2,126 +2,113 @@
 
 ## 📌 一句话定位
 
-Pre-indexed code knowledge graph for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, and Hermes Agent — fewer tokens, fewer tool calls, 100% local
+`codegraph` 是一个本地预索引代码知识图谱工具：它监听代码变化自动同步，为 Claude Code、Codex、Gemini、Cursor、OpenCode、Kiro 等 Agent 提供本地代码图谱，以减少 token、减少工具调用、提升代码库理解效率。
+
+> 核心判断：这是面向 coding agent 的“本地代码记忆层”。价值在于把重复的 repo 探索前置成索引；风险在于索引准确性、语言覆盖、变更同步和与各 Agent 的集成维护成本。
 
 ## 🏗️ 项目全景
 
-仓库：colbymchenry/codegraph
-- **解决的问题**：该项目试图把 README 中描述的能力产品化/脚本化，降低特定任务的搭建或执行门槛。
-- **基础指标**：Stars=45997 / Forks=2817 / 默认分支=main
-- **Topics**：数据不可用
-- **Homepage**：https://colbymchenry.github.io/codegraph/
+| 维度 | 观察 |
+|---|---|
+| 仓库 | `colbymchenry/codegraph` |
+| GitHub | https://github.com/colbymchenry/codegraph |
+| Homepage | https://colbymchenry.github.io/codegraph/ |
+| Stars / Forks | 约 51.5k stars / 3.1k forks（2026-06-19 抽样） |
+| 默认分支 | `main` |
+| 主要语言 | TypeScript |
+| License | MIT |
+| Open issues | 约 266 |
 
 ## 🧠 核心架构
 
-目录结构判断
-- **顶层目录分布（递归树抽样汇总）**：src(130), tests(69), scripts(38), site(32), docs(11), .claude(4), .github(2), assets(2), .cursor(1), .gitignore(1)
-- **关键文件候选**：
-- `package.json`, tsconfig.json, 
-- `README.md`, 
-- `CLAUDE.md`, 
-- `tests/adaptive-explore-sizing.test.ts,` 
-- `tests/closure-collection-synthesizer.test.ts,` 
-- `tests/concurrent-locking.test.ts,` 
-- `tests/config-secret-redaction.test.ts,` 
-- `tests/context-ranking.test.ts,` 
-- `tests/context.test.ts,` 
-- `tests/daemon-attach-log.test.ts,` 
-- `tests/daemon-client-liveness.test.ts设计亮点研判`
-- 存在 Node/前端或工具链入口，依赖与脚本编排主要由 
-- `package.json` 驱动。
-- 仓库包含 .github 自动化配置，通常代表 CI 或 issue 模板已被纳入工程流程。
+### 目标链路
+
+```text
+本地代码库
+  -> codegraph 预索引文件/符号/依赖关系
+  -> 监听代码变化自动同步
+  -> 暴露给 Claude Code / Codex / Cursor 等 Agent
+  -> Agent 查询图谱而非反复 grep/read
+  -> 降低 token 和工具调用成本
+```
+
+### 架构价值
+
+Coding Agent 的常见浪费是：每次任务都重新读目录、grep、打开同一批文件。codegraph 的思路是把这些探索成本沉淀为本地图谱，让 Agent 以“结构查询”替代“盲扫文件”。
 
 ## 🔍 源码深度解读
 
-README / 说明文档要点<div align="center">CodeGraphSupercharge Claude Code, Cursor, Codex, OpenCode, Hermes Agent, Gemini, Antigravity, and Kiro with Semantic Code Intelligence~16% cheaper · ~58% fewer tool calls · 100% localDocumentation & Website →The CodeGraph platform is coming — for every PR, know exactly what to test, what could break, which flows are affected, and whether business logic is compromised.<a href="https://getcodegraph.com"><img alt="Join the waitlist for early beta access" src="https://raw.githubusercontent.com/colbymchenry/codegraph/main/assets/waitlist.svg?v=2" height="52" /></a><sub>Get <b>early beta access</b> to the hosted product · <a href="https://getcodegraph.com">getcodegraph.com</a></sub>...[truncated]
+### 预索引层
 
-### 关键文件精读
+预索引决定工具价值上限：如果只能按文件名/文本粗略索引，收益有限；如果能识别符号、依赖、调用关系、测试对应关系，就能显著提升 Agent 判断力。
 
-package.json{  "name": "@colbymchenry/codegraph",  "version": "0.9.9",  "description": "Supercharge Claude Code with semantic code intelligence. 94% fewer tool calls • 77% faster exploration • 100% local.",  "main": "dist/index.js",  "types": "dist/index.d.ts",  "bin": {    "codegraph": "./dist/bin/codegraph.js"  },  "files": [    "dist",    "scripts",    "
-- `README.md`"  ],  "scripts": {    "build": "tsc && npm run copy-assets && node -e \"require('fs').chmodSync('dist/bin/codegraph.js', 0o755)\"",    "preuninstall": "node dist/bin/uninstall.js",    "copy-assets": "node -e \"const fs=require('fs');fs.mkdirSync('dist/db',{recursive:true});fs.copyFileSync('src/db/schema.sql','dist/db/schema.sql');fs.mkdirSync('dist/extraction/wasm',{recursive:true});fs.readdirSync('src/extraction/wasm').filter(f=>f.endsWith('.wasm')).forEach(f=>fs.copyFileSync('src/extraction/wasm/'+f,'dist/extraction/wa...[truncated]tsconfig.json{  "compilerOptions": {    "target": "ES2022",    "module": "commonjs",    "lib": ["ES2022"],    "declaration": true,    "declarationMap": true,    "sourceMap": true,    "outDir": "./dist",    "rootDir": "./src",    "strict": true,    "noImplicitAny": true,    "strictNullChecks": true,    "strictFunctionTypes": true,    "strictBindCallApply": true,    "strictPropertyInitialization": true,    "noImplicitThis": true,    "alwaysStrict": true,    "noUnusedLocals": true,    "noUnusedParameters": true,    "noImplicitReturns": true,    "noFallthroughCasesInSwitch": true,    "noUncheckedIndexedAccess": true,    "esModuleInterop": true,    "skipLibCheck": true,    "forceConsistentCasingInFileNames": true,    "resolveJsonModule": true,    "paths": {      "web-tree-sitter": ["./src/web-tree-sitter.d.ts"]    }  },  "include": ["src/**/*"],  "exclude": ["node_modules",...[truncated]
-- `README.md`<div align="center"># CodeGraph### Supercharge Claude Code, Cursor, Codex, OpenCode, Hermes Agent, Gemini, Antigravity, and Kiro with Semantic Code Intelligence**~16% cheaper · ~58% fewer tool calls · 100% local**### [Documentation & Website →](https://colbymchenry.github.io/codegraph/)[![npm version]([REDACTED_COS_URL]'s interceptor chain) without starving diffuse ones (distinct * pipeline steps stay full). Default ON; CODEGRAPH_ADAPTIVE_EXPLORE=0 disables. * * The fixture is OkHttp's interceptor chain in miniature: *   - `Interceptor` interface with FOUR implementers (>= 3 => a sibling family...[truncated]__tests__/closure-collection-synthesizer.test.tsimport { describe, it, expect, beforeEach, afterEach } from 'vitest';import * as fs from 'node:fs';import * as path from 'node:path';import * as os from 'node:os';import { CodeGraph } from '../src';/** * End-to-end synthesizer test for closure-collection dynamic dispatch. * * A method appends a closure to a collection property; another method iterates * that property *invoking each element* (`coll.forEach { $0() }`) — a dynamic * dispatch tree-sitter can't resolve, so a flow into the dispatcher dead-ends * before the registered closures. This is Alamofire's request-validation shape: * `DataRequest.validate` does `validators.write { $0.append(validator) }`, the * base `Request.didCompleteTask` runs `validators.forEach { $0() }`. * * Verify the synthesizer (1) links the dispatcher → each same-named registrar * across files/classes, (2) handles both the Swift `prop.write { ...[truncated]
+### 自动同步层
 
-### 关键逻辑总结
+“auto syncs on code changes” 是重要承诺。它需要文件 watcher、增量更新和索引一致性策略。风险是：大仓库频繁变更时，索引可能滞后或资源占用过高。
 
-从关键文件组合看，项目更像是围绕单一目标组织的任务流水线/工具链，而不是超重平台。
-- 入口文件决定外部交互界面（CLI / API / UI），配置文件决定运行时依赖，测试文件则暴露作者真正关心的行为边界。
-- 如果用户只读 README，通常只能知道“能做什么”；而从目录与入口文件能看出“怎么做、扩展点在哪、维护成本高不高”。
+### Agent 集成层
 
-## 🌐 社区口碑
+项目描述列出 Claude Code、Codex、Gemini、Cursor、OpenCode、AntiGravity、Kiro、Hermes Agent。多 Agent 支持是亮点，也是维护负担：每个平台工具协议、上下文格式和调用习惯不同。
 
-### GitHub Issues 抽样
+## 🌐 社区口碑画像
 
-#766 [OPEN] Incremental sync (git-status fast path) bypasses the ignore matcher — tracked files in excluded dirs leak back into the index（comments=[] labels=无）
-- #765 [OPEN] Allow overriding MCP server instructions (e.g. .codegraph/instructions.md) — built-in text overstates explore/edge reliability on multi-language repos（comments=[] labels=无）
-- #764 [OPEN] CodeGraph mixes up TypeScript classes with same name（comments=[] labels=无）
-- #759 [OPEN] New Feature Request: Could you add QML support for C++/QML applications that work together（comments=[] labels=无）
-- #756 [OPEN] Can CodeGraph Identify Callback Functions in C Code?（comments=[] labels=无）
-- #750 [OPEN] Tracking: chained factory/singleton call resolution across statically-typed languages（comments=[{'id': 'IC_kwDOQ8Zv788AAAABFYLm0Q', 'author': {'login': 'colbymchenry'}, 'authorAssociation': 'OWNER', 'body': "✅ Java — done in #751 (merged).\n\nReal-repo A/B on google/guava (3,227 files): node count identical (130,925 = 130,925, no explosion), 0 edges lost, +1,507 unique chained edges recovered. Precision verbatim-confirmed (Splitter.on().split(), CacheBuilder.newBuilder().recordStats(), GraphBuilder.directed().build(), nested MultimapBuilder.linkedHashKeys().arrayListValues()). EXTRACTION_VERSION → 6.\n\nNext up: Kotlin (Foo.getInstance().bar() via companion-object factories — note Kotlin's call path is call_expression/navigation_expression, not Java's method_invocation, so the extraction encoding differs).", 'createdAt': '2026-06-09T03:43:36Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/colbymchenry/codegraph/issues/750#issuecomment-4655867601', 'viewerDidAuthor': False}, {'id': 'IC_kwDOQ8Zv788AAAABFYVEkg', 'author': {'login': 'colbymchenry'}, 'authorAssociation': 'OWNER', 'body': "✅ Kotlin — done in #752 (merged).\n\nKotlin's baseline dropped chained receivers to a bare method name that mis-matched same-named methods, so this fix is a precision win (resolve-or-drop), not purely additive. Real-repo A/B on arrow-kt/arrow (734 .kt): node count identical (no explosion), +49 validated-correct chained edges (companion-factory + constructor chains), and the removed bare-name edges were wrong (419/438 from test/doc files; the 18 product-code ones are stdlib .apply{}, self-loops, bare-name mismatches — ~0 correct edges lost). EXTRACTION_VERSION → 7.\n\nImplementation notes for the remaining languages: Kotlin needed a capitalized-receiver gate (so instance chains like list.filter{}.map{} keep bare-name behavior and aren't dropped) and constructor-receiver handling (Foo(args).method()). matchJavaCallChain was generalized to matchDottedCallChain, shared by the JVM dot-notation languages.\n\nNext: C# / Swift / Rust / Scala / Dart / TypeScript / Go. The ones whose baseline emits a wrong bare-name edge (most of them) will follow this same precision-win pattern rather than Java's purely-additive one.", 'createdAt': '2026-06-09T04:12:41Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/colbymchenry/codegraph/issues/750#issuecomment-4656022674', 'viewerDidAuthor': False}, {'id': 'IC_kwDOQ8Zv788AAAABFYcSCQ', 'author': {'login': 'colbymchenry'}, 'authorAssociation': 'OWNER', 'body': "✅ C# — done in #753 (merged). Additive like Java (C#'s baseline kept the parenthesized receiver text, so no edges change — only new ones appear).\n\nReal-repo A/B (node count identical, 0 edges lost in both): Newtonsoft.Json (945 .cs) +3; nodatime (488 .cs) +73, verbatim-confirmed (Instant.FromUtc(...).InZone(), Offset.FromHoursAndMinutes(...).Plus(), OffsetDateTimePattern.CreateWithInvariantCulture(...).WithTwoDigitYearMax()). EXTRACTION_VERSION → 8.\n\nNote: C# return types live in the returns field (not type). Extension-method chains correctly don't resolve (the method is on the extension class, not the receiver type) — safe, no wrong edges.\n\n3 of 9 done (Java, Kotlin, C#). Remaining: Swift, Rust, Go, Scala, Dart, TypeScript.", 'createdAt': '2026-06-09T04:30:07Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/colbymchenry/codegraph/issues/750#issuecomment-4656140809', 'viewerDidAuthor': False}, {'id': 'IC_kwDOQ8Zv788AAAABFYxGEQ', 'author': {'login': 'colbymchenry'}, 'authorAssociation': 'OWNER', 'body': "🔧 Conformance-aware resolution — shipped in #754 (a general enabler, not a per-language row).\n\nChained calls now resolve when the chained method is inherited from a superclass / declared on an interface or protocol the receiver conforms to (e.g. Either.Right(x).combine(...) — combine lives on the parent Either). resolveMethodOnType walks the receiver type's extends/implements edges (still validated), in a second pass after edges are built.\n\nPurely additive — real-repo A/B: arrow-kt/arrow (Kotlin) +22 / −0, nodatime (C#) +0 / −0, node counts unchanged. The arrow additions include edges the Kotlin #752 A/B had dropped (exampleEither22 → Either::isRight), so this partially heals #752. EXTRACTION_VERSION → 9.\n\nThis also unblocks the protocol-extension half of Swift — though Swift still needs a separate extractor fix (nested-type extensions like extension KF.Builder get a dot-name inconsistent with the class node) before its fluent chains resolve.", 'createdAt': '2026-06-09T05:39:20Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/colbymchenry/codegraph/issues/750#issuecomment-4656481809', 'viewerDidAuthor': False}, {'id': 'IC_kwDOQ8Zv788AAAABFY13EQ', 'author': {'login': 'colbymchenry'}, 'authorAssociation': 'OWNER', 'body': "✅ Swift — done in #755 (merged). Two parts: the chained-call mechanism (decoy-safety) + a nested-type extension naming fix (extension KF.Builder was named inconsistently with the KF::Builder type, hiding its conformances/members from the supertype walk).\n\nReal-repo A/B vs main (conformance): Alamofire & Kingfisher both 0/0 (neutral + safe). The prior −168 Kingfisher regression is eliminated; Swift's unique fluent method names already resolved by bare name, so the validated chain path lands the same edges. Value = decoy-collision correctness + the naming fix + consistency. EXTRACTION_VERSION → 10.\n\n5 of 9 done (Java, Kotlin, C#, Swift) + conformance #754. Remaining: Rust, Go, Scala, Dart, TypeScript.", 'createdAt': '2026-06-09T05:54:18Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/colbymchenry/codegraph/issues/750#issuecomment-4656559889', 'viewerDidAuthor': False}, {'id': 'IC_kwDOQ8Zv788AAAABFZHW2w', 'author': {'login': 'colbymchenry'}, 'authorAssociation': 'OWNER', 'body': "✅ Rust — done in #757 (merged). :: associated-function chains (Foo::new().bar()) via the generalized PHP :: path; -> Self → the impl's type; wired into the conformance pass so trait-provided methods (impl Trait for Type) resolve.\n\nReal-repo A/B vs main: clap (329 .rs) a net precision win — +937 added (96% correct builder methods), 622 wrong→right retargets (Command::new().arg() mis-resolving to ArgGroup::arg → correctly Command::arg), +162 net unique edges; pure-drops are largely wrong bare-name edges correctly dropped. bytes 0/0 (no regression). Known limit: single-hop only (deeper chain hops keep bare-name). EXTRACTION_VERSION → 11.\n\n6 of 9 done (Java, Kotlin, C#, Swift, Rust) + conformance. Remaining: Go, Scala, Dart, TypeScript.", 'createdAt': '2026-06-09T06:42:05Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/colbymchenry/codegraph/issues/750#issuecomment-4656846555', 'viewerDidAuthor': False}] labels=无）
+没有可靠第三方长评。GitHub 一手信号显示：
 
-### Pull Requests 抽样
-
-PR 
-- #763 [OPEN] feat(installer): add Qwen Code as an install targetPR 
-- #762 [MERGED] fix(dart): resolve chained static-factory / constructor calls Foo.create().bar() (#750)PR 
-- #761 [MERGED] fix(scala): resolve chained static-factory/apply calls Foo.create().bar() (#750)PR 
-- #760 [MERGED] fix(go): resolve chained factory-function calls New().Method() (#750)PR 
-- #758 [OPEN] Add Support For Qoder
-
-### Releases 抽样
-
-v0.9.9（published=2026-06-02T15:37:39Z latest=True）
-- v0.9.8（published=2026-06-01T00:22:31Z latest=False）
-- v0.9.7（published=2026-05-28T20:28:15Z latest=False）
-- v0.9.6（published=2026-05-27T01:17:58Z latest=False）
-- v0.9.5（published=2026-05-26T08:00:05Z latest=False）
-
-### 真实反馈与维护信号研判
-
-抽样 issue 中 open/closed 约为 7/1，可作为维护者响应速度的弱信号。近期 PR 抽样里可见已合并项 4 个，说明项目并非完全冻结。存在 release 记录，说明作者有版本化交付意识。若外部搜索链路不可用，本报告明确以 GitHub issue/PR/release 作为一手社区反馈源，不用二手转载冒充口碑数据。
-- 高频问题通常比 README 更能暴露真实落地难点：安装、兼容性、性能边界、文档歧义、平台限制。
+- stars 超过 5 万，关注度极高。
+- open issues 约 266，说明用户试用反馈很多，也可能存在快速增长带来的维护压力。
+- 项目强调 100% local，说明隐私是重要卖点。
 
 ## ⚔️ 竞品对比
 
-维度codegraph竞品/替代定位面向仓库作者设定的具体场景，通常更垂直LangGraph / AutoGen / OpenClaw Skills 往往更通用或生态更大学习曲线依赖其内部脚本/配置约定通用方案学习成本更高，但生态更成熟差异化仓库通常以“快上手、场景专用、意见化实现”为卖点通用方案强调可扩展、稳定性、跨场景能力
-
-### 风险
-
-作者驱动、文档深度可能不足、接口稳定性不确定大项目更稳定，但改造成本更高
+| 方案 | 优势 | 风险 |
+|---|---|---|
+| codegraph | 本地预索引、多 Agent、自动同步 | 语言覆盖和索引准确性需验证 |
+| GitNexus | 浏览器图谱可视化 + Graph RAG | 浏览器资源瓶颈 |
+| Sourcegraph | 企业级代码搜索成熟 | 部署重，不是轻量本地 agent layer |
+| Cursor/Claude Code 内置检索 | 集成简单 | 结构化图谱和跨工具复用弱 |
 
 ## 🎯 核心研判
 
 ### 优势
 
-对目标问题有强意见化实现，落地路径通常比“从零搭建通用栈”更短。如果核心文件少而清晰，二次阅读和定制成本较低。GitHub 原生 issue / release / PR 能直接帮助判断项目是否仍在演进。
+1. **切中 Agent 成本痛点**：减少重复读文件和 token 消耗。
+2. **本地优先**：私有代码不必上传第三方服务。
+3. **跨 Agent 叙事强**：不是某一个 IDE 插件，而是通用本地索引层。
 
 ### 风险
 
-若 stars、forks、release 或 PR 活跃度偏低，意味着长期维护能力要谨慎评估。如果关键逻辑过于集中在单文件脚本中，后续扩展会受到可维护性约束。若缺少测试/CI/配置 schema，生产环境采用前应先做自测和边界验证。
+1. **准确性决定成败**：错误图谱会误导 Agent，比没有图谱更危险。
+2. **维护面很宽**：多语言、多 Agent、多平台集成都会快速膨胀。
+3. **高热度高 issue**：stars 很高但 issues 也多，需要观察维护节奏。
 
 ### 适用场景
 
-需要快速验证该仓库所解决的问题是否值得投入。团队愿意接受一定的作者意见化设计，以换取更快交付。适合作为参考实现、内部 PoC、垂直任务工具，而非默认直接替代成熟平台。不
+- 高频使用 coding agent 的个人/团队。
+- 中大型代码库，希望减少重复探索成本。
+- 不愿把私有代码索引上传云端的场景。
 
-### 适用场景
+### 不适用场景
 
-对 SLA、兼容矩阵、长期 LTS 有强要求的核心生产系统。需要极高社区冗余、插件生态或企业级支持的场景。
+- 小型项目，直接 grep/read 已足够。
+- 需要企业权限、审计、多租户管理的代码搜索平台。
+- 对索引准确性要求极高但未做验证的生产流程。
 
 ## 📂 关键文件路径速查
 
-package.jsontsconfig.json
-- `README.md`
-- `CLAUDE.md`__tests__/adaptive-explore-sizing.test.ts__tests__/closure-collection-synthesizer.test.ts__tests__/concurrent-locking.test.ts__tests__/config-secret-redaction.test.ts__tests__/context-ranking.test.ts__tests__/context.test.ts__tests__/daemon-attach-log.test.ts__tests__/daemon-client-liveness.test.ts
+- README：定位、支持 Agent、安装方式。
+- 索引构建模块：决定图谱质量。
+- 文件 watcher / sync 模块：决定增量更新可靠性。
+- Agent adapter 模块：决定 Claude Code/Codex/Cursor 等兼容。
+- 配置文件：控制索引范围、忽略规则和输出格式。
 
 ## ⭐ 三条关键发现
 
-代码入口/骨架集中在：
-- `package.json`, tsconfig.json, 
-- `README.md`, 
-- `CLAUDE.md`, 
-- `tests/adaptive-explore-sizing.test.ts近期开源反馈以` issue 为主，典型议题包括：Incremental sync (git-status fast path) bypasses the ignore matcher — tracked files in excluded dirs leak back into the index；Allow overriding MCP server instructions (e.g. .codegraph/instructions.md) — built-in text overstates explore/edge reliability on multi-language repos发布节奏可从最新 release 观察：v0.9.9
+1. codegraph 是 coding agent 的本地结构记忆层，不只是代码搜索。
+2. 它的核心承诺“fewer tokens, fewer tool calls”必须通过真实任务 benchmark 验证。
+3. 最大风险是图谱误导：索引错比没有索引更危险。
 
 ## 🧪 研究方法与数据来源
 
-GitHub Repo API / README / 默认分支递归文件树关键源码文件抽样精读Issues / PRs / Releases 社区活动抽样说明：
-- 若外部搜索数据不可用，则明确标注并不伪造口碑结论
+- GitHub API：仓库描述、stars、forks、open issues、license、homepage。
+- 本地审计：原报告存在英文 dump、长行和原始抓取残留，已重写。
+- 外部搜索：未发现可靠第三方长评。

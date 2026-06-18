@@ -1,10 +1,10 @@
 # Project Collection 调研报告质量审计
 
 - 扫描文件数：145
-- Critical：37
+- Critical：32
 - High：5
 - Medium：7
-- Low：96
+- Low：101
 
 ## 判定维度
 
@@ -17,11 +17,6 @@
 
 | 严重级别 | 分数 | 文件 | 行数 | 最长行 | 英文占比 | 核心章节 | 原因 |
 |---|---:|---|---:|---:|---:|---:|---|
-| critical | 113 | `full-analysis/anthropics_skills - 全方位深度调研.md` | 104 | 3658 | 0.870 | 8 | 存在超长行 max_line_len=3658<br>英文占比过高 english_ratio=0.87<br>含原始抓取/JSON/截断残留 14 处<br>模板化/浅层占位句过多 7 处 |
-| critical | 110 | `full-analysis/abhigyanpatwari_GitNexus - 全....md` | 142 | 10288 | 0.939 | 8 | 存在超长行 max_line_len=10288<br>英文占比过高 english_ratio=0.94<br>含原始抓取/JSON/截断残留 30 处<br>模板化/浅层占位句过多 6 处 |
-| critical | 110 | `full-analysis/kageroumado-phosphene-全方位深度调研.md` | 194 | 10128 | 0.922 | 8 | 存在超长行 max_line_len=10128<br>英文占比过高 english_ratio=0.92<br>含原始抓取/JSON/截断残留 22 处<br>模板化/浅层占位句过多 6 处 |
-| critical | 110 | `full-analysis/colbymchenry_codegraph - 全方位....md` | 127 | 7191 | 0.913 | 8 | 存在超长行 max_line_len=7191<br>英文占比过高 english_ratio=0.91<br>含原始抓取/JSON/截断残留 24 处<br>模板化/浅层占位句过多 6 处 |
-| critical | 96 | `full-analysis/hugohe3-ppt-master-全方位深度调研.md` | 234 | 2204 | 0.856 | 8 | 英文占比过高 english_ratio=0.86<br>含原始抓取/JSON/截断残留 38 处<br>模板化/浅层占位句过多 8 处<br>疑似直接搬运 README 英文原文 |
 | critical | 96 | `full-analysis/OthmanAdi-planning-with-files-全方位深度调研.md` | 354 | 2185 | 0.925 | 8 | 英文占比过高 english_ratio=0.93<br>含原始抓取/JSON/截断残留 38 处<br>模板化/浅层占位句过多 8 处<br>疑似直接搬运 README 英文原文 |
 | critical | 94 | `full-analysis/withkynam-vibecode-pro-max-kit-全方位深度调研.md` | 255 | 274 | 0.855 | 8 | 英文占比过高 english_ratio=0.86<br>疑似乱码/错误转码命中 2 次<br>含原始抓取/JSON/截断残留 5 处<br>模板化/浅层占位句过多 6 处 |
 | critical | 93 | `full-analysis/Michaelliv-pi-dynamic-workflows-全方位深度调研.md` | 393 | 990 | 0.881 | 8 | 英文占比过高 english_ratio=0.88<br>含原始抓取/JSON/截断残留 10 处<br>模板化/浅层占位句过多 7 处<br>疑似直接搬运 README 英文原文 |

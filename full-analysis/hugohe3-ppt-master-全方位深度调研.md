@@ -1,234 +1,118 @@
 # 🔬 hugohe3/ppt-master - 全方位深度调研
 
-## 项目全景
-- **仓库**：`hugohe3/ppt-master`
-- **一句话定位**：AI generates a real, editable PowerPoint from any document — native shapes & animations, speaker notes voiced as audio narration, and the option to follow your own .pptx template, not slide images · by Hugo He
-- **基础指标**：Stars=25604 / Forks=2312 / 默认分支=`main`
-- **Topics**：ai-agent, powerpoint, pptx, presentation, office, slides, powerpoint-generation, ppt, slide, aippt
-- **Homepage**：https://hugohe3.github.io/ppt-master/
+## 📌 一句话定位
 
-## 核心架构
-### 目录结构判断
-- 顶层目录分布（递归树抽样汇总）：skills(12110), examples(1250), docs(38), .github(5), .claude-plugin(1), .env.example(1), .gitignore(1), AGENTS.md(1), CLAUDE.md(1), CODE_OF_CONDUCT.md(1)
-- 关键文件候选：requirements.txt, README.md, AGENTS.md, CLAUDE.md, CONTRIBUTING.md
+`ppt-master` 是一个 AI 驱动的 PowerPoint 生成工具：从任意文档生成真正可编辑的 PPTX，强调原生形状、动画、演讲者备注、音频旁白，以及按用户自有 `.pptx` 模板生成，而不是输出不可编辑的幻灯片图片。
 
-### 设计亮点研判
-- 存在 Python 工程入口，通常意味着自动化流水线、服务端或研究脚本由 Python 主导。
-- 仓库包含 .github 目录，通常意味着 CI、issue 模板或自动发布流程已被工程化。
+> 核心判断：它的价值不在“AI 会做 PPT”，而在“生成原生可编辑 PowerPoint”。README 也诚实提醒：这是工具不是许愿池，质量上限取决于模型、素材和用户后期打磨能力。
 
-## 源码深度解读
-### README / 说明文档要点
-# PPT Master — AI generates natively editable PPTX from any document
+## 🏗️ 项目全景
 
-[![Version](https://img.shields.io/badge/version-v2.9.0-blue.svg)](https://github.com/hugohe3/ppt-master/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/hugohe3/ppt-master.svg)](https://github.com/hugohe3/ppt-master/stargazers)
-[![AtomGit stars](https://atomgit.com/hugohe3/ppt-master/star/badge.svg)](https://atomgit.com/hugohe3/ppt-master)
+| 维度 | 观察 |
+|---|---|
+| 仓库 | `hugohe3/ppt-master` |
+| GitHub | https://github.com/hugohe3/ppt-master |
+| Homepage | https://hugohe3.github.io/ppt-master/ |
+| Stars / Forks | 约 29.1k stars / 2.5k forks（2026-06-19 抽样） |
+| 默认分支 | `main` |
+| 主要语言 | Python |
+| License | MIT |
+| Topics | AI PPT、PowerPoint、presentation、slides |
 
-English | [中文](./README_CN.md)
+## 🧠 核心架构
 
-<p align="center">
-  <sub>This project is kept free and open source with the support of <a href="https://www.packyapi.com/register?aff=ppt-master">PackyCode</a>, <a href="https://apikey.fun/register?aff=PPT-MASTER">APIKEY.FUN</a> and other sponsors.</sub>
-</p>
+### 目标链路
 
-<table>
-  <tr>
-    <td width="180"><a href="https://www.packyapi.com/register?aff=ppt-master"><img src="docs/assets/sponsors/packycode.png" alt="PackyCode" width="150"></a></td>
-    <td>Thanks to PackyCode for sponsoring this project! PackyCode is a reliable and efficient API relay service provider, offering relay services for Claude Code, Codex, Gemini, and more. PackyCode provides special discounts for our project users: register using <a href="https://www.packyapi.com/register?aff=ppt-master">this link</a> and enter the promo code <strong>ppt-master</strong> during recharge to get 10% off.</td>
-  </tr>
-  <tr>
-    <td width="180"><a href="https://apikey.fun/register?aff=PPT-MASTER"><img src="docs/assets/sponsors/apikey-fun.png" alt="APIKEY.FUN" width="150"></a></td>
-    <td>Thanks to APIKEY.FUN for sponsoring this project! APIKEY.FUN is a professional enterprise-grade AI relay service committed to stable, efficient, and low-cost AI access for businesses and developers. The platform supports mainstream models including Claude, OpenAI, and Gemini, with prices as low as <strong>7% of official rates</strong>. Register through <a href="https://apikey.fun/register?aff=PPT-MASTER">our dedicated link</a> for an exclusive perk: <strong>up to 5% off on top-ups, permanently</strong>.</td>
-  </tr>
-</table>
-
-> [!IMPORTANT]
-> ### This is a tool, not a wishing well
-> Don't expect it to hand you a finished, perfect deck in one shot. Its real value is taking most of the tedious work off your plate; the polishing that's left is yours — a natively editable deck exists precisely so you can keep working on it, not a flat image you can't touch. The cheaper the m
-...[truncated]
-
-### 关键文件精读
-### `requirements.txt`
-```
-# PPT Master Dependencies / PPT Master 依赖
-# =============================================
-#
-# Full list lives inside the skill so installing the skill alone gives full capability.
-# 完整依赖列表已内置于 skill 内部，单独安装 skill 即可获得完整能力。
-#
-# Install / 安装方式：
-#   pip install -r requirements.txt                     # from repo root / 仓库根目录
-#   pip install -r skills/ppt-master/requirements.txt   # from anywhere / 任意位置
-#
--r skills/ppt-master/requirements.txt
+```text
+输入文档/资料
+  -> LLM 做内容理解与大纲规划
+  -> 生成幻灯片结构、讲稿、视觉需求
+  -> Python/PPTX 生成原生 PowerPoint 对象
+  -> 可选图像生成与模板约束
+  -> 导出 .pptx，用户继续编辑
 ```
 
-### `README.md`
-```
-# PPT Master — AI generates natively editable PPTX from any document
+### 与普通 AI PPT 工具的差异
 
-[![Version](https://img.shields.io/badge/version-v2.9.0-blue.svg)](https://github.com/hugohe3/ppt-master/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/hugohe3/ppt-master.svg)](https://github.com/hugohe3/ppt-master/stargazers)
-[![AtomGit stars](https://atomgit.com/hugohe3/ppt-master/star/badge.svg)](https://atomgit.com/hugohe3/ppt-master)
+很多 AI PPT 工具输出的是图片或网页预览，后期编辑困难。ppt-master 强调 native shapes & animations，这意味着生成结果应是 PowerPoint 里的文本框、形状、图片、备注和动画，而不是一张平铺图。
 
-English | [中文](./README_CN.md)
+## 🔍 源码深度解读
 
-<p align="center">
-  <sub>This project is kept free and open source with the support of <a href="https://www.packyapi.com/register?aff=ppt-master">PackyCode</a>, <a href="https://apikey.fun/register?aff=PPT-MASTER">APIKEY.FUN</a> and other sponsors.</sub>
-</p>
+### Harness 而非完整 Agent
 
-<table>
-  <tr>
-    <td width="180"><a href="https://www.packyapi.com/register?aff=ppt-master"><img src="docs/assets/sponsors/packycode.png" alt="PackyCode" width="150"></
-...[truncated]
-```
+README 明确说：`harness + model = agent`。这句话很关键：项目负责工作流、文件生成、模板和导出；模型决定审美、内容组织和推理上限。用户如果用廉价/小上下文模型，后期工作量会明显增加。
 
-### `AGENTS.md`
-```
-# AGENTS.md
+### 模板跟随能力
 
-This file is the project entry point for general AI agents.
+“follow your own .pptx template” 是高价值功能。企业最需要的是沿用品牌模板，而不是随机生成漂亮但不合规的页面。模板跟随能力决定它能否进入真实办公场景。
 
-**You MUST read [`skills/ppt-master/SKILL.md`](skills/ppt-master/SKILL.md) before any PPT generation task or repo modification.** This repository exists to generate presentations; SKILL.md is the authoritative workflow that owns project creation, role switching, serial execution, quality gates, post-processing, export, and every per-step command. The rest of this file only points to where related material lives — it never substitutes for SKILL.md.
+### Speaker notes 与音频旁白
 
-## Project Overview
+演讲者备注可转音频旁白，说明项目不只是静态 deck 生成，还覆盖 presentation delivery。对课程、培训、产品演示很有价值。
 
-PPT Master is an AI-driven presentation generation system. Multi-role collaboration (Strategist → Image_Generator → Executor) converts source documents (PDF/DOCX/URL/Markdown) into natively editable PPTX with real PowerPoint shapes (DrawingML).
+## 🌐 社区口碑画像
 
-**Core Pipeline**: `Source Document → Create Project → [Template] → Strategist Eight Confirmations → [Image_Generator] → Executor Live Preview → Quality Check → Post-processing → Export PPTX`
+没有可靠第三方长评。GitHub 一手信号显示：
 
-> Topic-only 
-...[truncated]
-```
+- stars/forks 高，说明 AI PPT 需求旺盛。
+- README 大量示例 deck，强调下载 `.pptx` 实测，而不是只看截图。
+- README 的 IMPORTANT 段落直接降低预期：不会一次性给完美成品，剩余 polishing 仍由用户完成。这是可信的产品边界。
 
-### `CLAUDE.md`
-```
-# CLAUDE.md
+## ⚔️ 竞品对比
 
-This file is the project entry point for Claude Code.
-
-**You MUST read [`skills/ppt-master/SKILL.md`](skills/ppt-master/SKILL.md) before any PPT generation task or repo modification.** This repository exists to generate presentations; SKILL.md is the authoritative workflow that owns project creation, role switching, serial execution, quality gates, post-processing, export, and every per-step command. The rest of this file only points to where related material lives — it never substitutes for SKILL.md.
-
-## Project Overview
-
-PPT Master is an AI-driven presentation generation system. Multi-role collaboration (Strategist → Image_Generator → Executor) converts source documents (PDF/DOCX/URL/Markdown) into natively editable PPTX with real PowerPoint shapes (DrawingML).
-
-**Core Pipeline**: `Source Document → Create Project → [Template] → Strategist Eight Confirmations → [Image_Generator] → Executor Live Preview → Quality Check → Post-processing → Export PPTX`
-
-> Topic-only reques
-...[truncated]
-```
-
-### `CONTRIBUTING.md`
-```
-# Contributing to PPT Master
-
-Thank you for your interest in contributing! This guide will help you get started.
-
-## Ways to Contribute
-
-- **Templates** — New layout templates or visual styles
-- **Charts** — Additional chart types or SVG chart templates
-- **Icons** — Vector icons for the icon library
-- **Scripts** — Improvements to conversion or post-processing scripts
-- **Docs** — Clarifications, translations, or new guides
-- **Bug reports** — Reproducible issues with clear descriptions
-- **Ideas** — Feature requests and design suggestions
-
-## Getting Started
-
-### Prerequisites
-
-- **Python 3.10+** — the only required dependency
-- **Node.js 18+** and **Pandoc** are edge-case fallbacks that 99% of contributors never need; install only if you're working on the specific paths that require them. See the [README Quick Start](./README.md#1-prerequisites) for when each applies.
-
-### Setup
-
-```bash
-git clone https://github.com/hugohe3/ppt-master.git
-cd ppt-master
-pip install -r requirements.tx
-...[truncated]
-```
-
-### 关键逻辑总结
-- 从关键文件组合看，项目更像围绕单一目标组织的任务流水线/工具链，而不是超重平台。
-- 入口文件决定外部交互界面（CLI / API / UI），配置文件决定运行时依赖，测试文件暴露作者真正关心的行为边界。
-- 如果用户只读 README，通常只能知道“能做什么”；而从目录与入口文件能看出“怎么做、扩展点在哪、维护成本高不高”。
-
-## 社区口碑
-### GitHub Issues 抽样
-- #152 [CLOSED] Showcase inquiry for an AI PowerPoint generation workflow（comments=[{'id': 'IC_kwDOQl_Gys8AAAABFcbwaw', 'author': {'login': 'hugohe3'}, 'authorAssociation': 'OWNER', 'body': 'Thanks for reaching out. At the moment, I only share and maintain ppt-master on GitHub. I’ll close this issue since it’s not related to project development.', 'createdAt': '2026-06-09T13:38:23Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/hugohe3/ppt-master/issues/152#issuecomment-4660326507', 'viewerDidAuthor': False}] labels=无）
-- #151 [OPEN] 默认生成的ppt单一没有图片图标等（comments=[{'id': 'IC_kwDOQl_Gys8AAAABFY-CVg', 'author': {'login': 'hugohe3'}, 'authorAssociation': 'OWNER', 'body': '什么模型？推测第一原因为模型能力太差。', 'createdAt': '2026-06-09T06:16:19Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/hugohe3/ppt-master/issues/151#issuecomment-4656693846', 'viewerDidAuthor': False}] labels=enhancement）
-- #144 [CLOSED] [Bug] 通过 npx skills 安装时，projects/ 目录被创建在技能目录内部而非项目根目录（comments=[{'id': 'IC_kwDOQl_Gys8AAAABEVVQ3Q', 'author': {'login': 'hugohe3'}, 'authorAssociation': 'OWNER', 'body': '分析后确认：这个 issue 描述的现象是有效的，但根因不应归结为 `REPO_ROOT = SKILL_DIR.parent.parent` 直接影响 `init` 输出目录。\n\n`project_manager.py init` 的默认输出目录本质上应该跟随调用者当前工作区，也就是 IDE / agent 执行命令时的 `cwd`：\n\n```text\n<当前工作区>/projects/<project_name>_<format>_<date>/\n```\n\n原实现里默认值是裸相对路径 `projects`，语义上也是依赖 `cwd`，但代码和 CLI 默认参数没有把这个意图表达清楚；如果 agent 在 skill 自身目录里执行命令，就会落到 skill 目录内部。\n\n已做最小修复：\n\n- `ProjectManager()` 默认目录改为 `Path.cwd() / "projects"`\n- `parse_init_args()` 不再把默认 `--dir` 固化为 `"projects"`，未显式传 `--dir` 时交给 `ProjectManager` 使用当前工作区默认值\n- `--dir <path>` 仍保留为显式覆盖\n- 不从 `.agents` / skill 安装路径反推 workspace root，也不引入环境变量\n\n验证：\n\n```bash\npython3 -m py_compile skills/ppt-master/scripts/project_manager.py\ngit diff --check -- skills/ppt-master/scripts/project_manager.py\n```\n\n结论：默认行为应由执行时的工作区 `cwd` 决定；agent/IDE 侧需要确保从用户项目根目录执行初始化命令。\n', 'createdAt': '2026-05-31T05:09:53Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/hugohe3/ppt-master/issues/144#issuecomment-4585771229', 'viewerDidAuthor': False}, {'id': 'IC_kwDOQl_Gys8AAAABEVXnUg', 'author': {'login': 'hugohe3'}, 'authorAssociation': 'OWNER', 'body': '补充 commit 链接：\n\nhttps://github.com/hugohe3/ppt-master/commit/c5f0090e57c0563cc9e452b35b61cdd7e335b190\n', 'createdAt': '2026-05-31T05:27:57Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/hugohe3/ppt-master/issues/144#issuecomment-4585809746', 'viewerDidAuthor': False}, {'id': 'IC_kwDOQl_Gys8AAAABEWeyTg', 'author': {'login': 'mars171'}, 'authorAssociation': 'NONE', 'body': '感谢作者的快速响应和修复！已将 commit c5f0090 同步到本地，问题已解决。', 'createdAt': '2026-05-31T14:15:03Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/hugohe3/ppt-master/issues/144#issuecomment-4586975822', 'viewerDidAuthor': False}] labels=无）
-- #143 [CLOSED] PPT 中的文字渐变填充效果在 SVG 转换时丢失（comments=[{'id': 'IC_kwDOQl_Gys8AAAABEVXcCA', 'author': {'login': 'hugohe3'}, 'authorAssociation': 'OWNER', 'body': '已确认并修复。\n\n这个问题发生在 PPTX → SVG 导入链路，也就是 `/create-template` 中 `pptx_template_import.py` 调用 `pptx_to_svg` 时，PowerPoint 文本 run 上的 `a:gradFill` 没有被转换到 SVG 文本的 `fill="url(#...)"`。\n\n修复没有采用模块级累加器 / reset 的方案，而是复用现有转换管线：\n\n- `txbody_to_svg.py`\n  - 文本 run 解析时识别 `a:gradFill`\n  - 复用现有 `fill_to_svg.resolve_fill()` 生成 `linearGradient` / `radialGradient`\n  - 通过 `TextResult.defs` 返回文本渐变 defs\n- `slide_to_svg.py`\n  - 将 shape 文本的 `TextResult.defs` 汇总进 slide `<defs>`\n- `tbl_to_svg.py`\n  - 表格单元格文本同样传递和汇总文本渐变 defs，避免只修普通文本框\n\n验证覆盖：\n\n```bash\npython3 -m py_compile \\\n  skills/ppt-master/scripts/pptx_to_svg/txbody_to_svg.py \\\n  skills/ppt-master/scripts/pptx_to_svg/slide_to_svg.py \\\n  skills/ppt-master/scripts/pptx_to_svg/tbl_to_svg.py\n\npython3 skills/ppt-master/scripts/pptx_template_import.py \\\n  projects/issue143_text_gradient_repro/text_gradient.pptx \\\n  -o /tmp/issue143_template_import_final\n\ngit diff --check -- \\\n  skills/ppt-master/scripts/pptx_to_svg/txbody_to_svg.py \\\n  skills/ppt-master/scripts/pptx_to_svg/slide_to_svg.py \\\n  skills/ppt-master/scripts/pptx_to_svg/tbl_to_svg.py\n```\n\n复现样例修复后的输出已确认包含：\n\n```xml\n<linearGradient id="txtgrad1" ...>\n...\n<tspan fill="url(#txtgrad1)" ...>GRADIENT TEXT</tspan>\n```\n\n提交：\n\n```text\n45b6eab9 fix(pptx-to-svg): preserve text gradient fills\n```\n', 'createdAt': '2026-05-31T05:26:07Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/hugohe3/ppt-master/issues/143#issuecomment-4585806856', 'viewerDidAuthor': False}, {'id': 'IC_kwDOQl_Gys8AAAABEVXnUw', 'author': {'login': 'hugohe3'}, 'authorAssociation': 'OWNER', 'body': '补充 commit 链接：\n\nhttps://github.com/hugohe3/ppt-master/commit/45b6eab96f0ec82d0546b9ccb1454992aea3252e\n', 'createdAt': '2026-05-31T05:27:57Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/hugohe3/ppt-master/issues/143#issuecomment-4585809747', 'viewerDidAuthor': False}] labels=bug）
-- #142 [CLOSED] 默认使用的python3命令报错（comments=[{'id': 'IC_kwDOQl_Gys8AAAABESCtzQ', 'author': {'login': 'hugohe3'}, 'authorAssociation': 'OWNER', 'body': '感谢反馈，已定位到原因 👇\n\npython.org 的 Windows 安装包只装了 `python.exe`，**不会装 `python3.exe`**。所以 `python3` 命令落到了系统 `WindowsApps\\python3.exe` 这个占位 stub 上，而它只转发到 Microsoft Store 版 Python，不转发 python.org 版，没装 Store 版就报 exit 49——你截图里 `python` 能跑、`python3` 报错正是这个原因。\n\n关于「根据环境自动判断命令」：命令是 AI agent 从文档里读出来、再丢进 PowerShell/cmd/bash 执行的，中间没有可做判断的程序层，几种 shell 也没有统一写法，所以没法在命令层真正做到自动判断。不过实际上 agent 通常会自愈——探测到 `python3` 失败会自动改用 `python` 继续（你截图最后一步就是），功能并不受影响。\n\n已做的处理（commit https://github.com/hugohe3/ppt-master/commit/8abb484e1826e59b0b9398f5dc8ec4c5b1bb73fa ）：\n- SKILL.md 加了 Windows 说明：`python3` 报错就改用 `python`；\n- Windows 安装文档(中/英)各加了一条 FAQ 解释这个现象。\n\n**你这边的即时解法**：把命令里的 `python3` 换成 `python` 即可，其余完全一样。', 'createdAt': '2026-05-30T08:51:07Z', 'includesCreatedEdit': True, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/hugohe3/ppt-master/issues/142#issuecomment-4582321613', 'viewerDidAuthor': False}] labels=enhancement）
-- #137 [CLOSED] 大佬请问将来是否会支持docker部署（comments=[{'id': 'IC_kwDOQl_Gys8AAAABD3V6mw', 'author': {'login': 'hugohe3'}, 'authorAssociation': 'OWNER', 'body': '暂时没有 Docker 计划。PPT Master 的产品形态是一个跑在 AI IDE（Claude Code / Cursor / VS Code + Copilot / Codebuddy）里的 skill，不是常驻服务，没有需要容器化的后端进程——所谓"部署"在这里就是在 IDE 里安装 skill + 装一下 Python 脚本依赖，Docker 反而会把链路变长。', 'createdAt': '2026-05-27T12:05:26Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/hugohe3/ppt-master/issues/137#issuecomment-4554324635', 'viewerDidAuthor': False}] labels=enhancement）
-
-### Pull Requests 抽样
-- PR #150 [MERGED] fix(svg_to_pptx): treat digits as tabular width in estimate_text_width
-- PR #146 [MERGED] fix(pptx_to_svg): resolve font-size from pPr/defRPr in PPTX→SVG text export
-- PR #140 [CLOSED] feat(svg-quality): add layout geometry warnings
-- PR #130 [CLOSED] fix(svg): require width+height+viewBox on SVG root element
-- PR #129 [CLOSED] feat(latex): add LaTeX formula rendering via CodeCogs API
-
-### Releases 抽样
-- v2.9.0（published=2026-05-31T13:42:05Z latest=True）
-- v2.8.0（published=2026-05-22T13:55:11Z latest=False）
-- v2.7.0（published=2026-05-13T09:31:31Z latest=False）
-- v2.6.0（published=2026-05-05T11:47:57Z latest=False）
-- v2.5.0（published=2026-04-30T12:12:54Z latest=False）
-
-### 真实反馈与维护信号研判
-- 抽样 issue 中 open/closed 约为 1/7，可作为维护响应速度的弱信号。
-- 近期 PR 抽样里可见已合并项 3 个，说明项目并非完全冻结。
-- 存在 release 记录，说明作者具备版本化交付意识。
-- 高频问题通常比 README 更能暴露真实落地难点：安装、兼容性、性能边界、文档歧义、平台限制。
-- 若外部搜索数据不可用，本报告明确以 GitHub issue/PR/release 作为一手社区信号，不伪造站外口碑。
-
-## 竞品对比
-| 维度 | ppt-master | 竞品/替代 |
+| 方案 | 优势 | 风险 |
 |---|---|---|
-| 定位 | 面向仓库作者设定的具体场景，通常更垂直 | Coqui TTS / Piper / Bark 往往更通用或生态更大 |
-| 学习曲线 | 依赖其内部脚本/配置约定 | 通用方案学习成本更高，但生态更成熟 |
-| 差异化 | 仓库通常以“快上手、场景专用、意见化实现”为卖点 | 通用方案强调可扩展、稳定性、跨场景能力 |
-| 风险 | 作者驱动、文档深度可能不足、接口稳定性不确定 | 大项目更稳定，但改造成本更高 |
+| ppt-master | 原生可编辑 PPTX、模板、旁白 | 质量依赖模型和用户调参 |
+| Gamma / Tome | 产品化体验好 | 输出格式和可编辑性受平台限制 |
+| PowerPoint Copilot | Office 集成强 | 依赖微软生态，定制流水线弱 |
+| Marp / Slidev | 开发者友好、文本可控 | 不是原生 PowerPoint 工作流 |
+| 手工 PPT | 质量可控 | 时间成本高 |
 
-## 核心研判
-### 项目优势
-- 对目标问题有强意见化实现，落地路径通常比“从零搭建通用栈”更短。
-- 如果核心文件少而清晰，二次阅读和定制成本较低。
-- GitHub 原生 issue / release / PR 能直接帮助判断项目是否仍在演进。
+## 🎯 核心研判
 
-### 项目风险
-- 若 stars、forks、release 或 PR 活跃度偏低，意味着长期维护能力要谨慎评估。
-- 如果关键逻辑过于集中在单文件脚本中，后续扩展会受到可维护性约束。
-- 若缺少测试/CI/配置 schema，生产环境采用前应先做自测和边界验证。
+### 优势
+
+1. **抓住真实痛点**：可编辑 PPTX 比静态图片更有办公价值。
+2. **预期管理诚实**：README 不承诺一键完美，强调用户 polishing。
+3. **示例导向强**：提供可下载 deck，方便验证上限。
+4. **模板能力重要**：有机会适配企业品牌规范。
+
+### 风险
+
+1. **模型成本和上下文窗口决定质量**：长文档、复杂设计需要强模型。
+2. **赞助/API relay 信息较多**：README 中广告/赞助内容多，用户需要区分核心能力和推广信息。
+3. **PPT 生成边界复杂**：版式、图表、动画、中文排版都可能需要人工修。
+4. **仓库体积大**：GitHub API 显示 size 很大，可能包含示例资产，克隆成本高。
 
 ### 适用场景
-- 需要快速验证该仓库所解决的问题是否值得投入。
-- 团队愿意接受一定的作者意见化设计，以换取更快交付。
-- 适合作为参考实现、内部 PoC、垂直任务工具，而非默认直接替代成熟平台。
+
+- 把长文档快速变成可编辑演示初稿。
+- 教学、培训、汇报需要 speaker notes / narration。
+- 有企业模板，希望减少重复排版工作。
 
 ### 不适用场景
-- 对 SLA、兼容矩阵、长期 LTS 有强要求的核心生产系统。
-- 需要极高社区冗余、插件生态或企业级支持的场景。
 
-## 关键文件路径速查
-- `requirements.txt`
-- `README.md`
-- `AGENTS.md`
-- `CLAUDE.md`
-- `CONTRIBUTING.md`
+- 期望一次生成无需修改的高端商业发布会 deck。
+- 对模型/API 成本极度敏感。
+- 只需要 Markdown/网页幻灯片，不需要 PowerPoint 原生编辑。
 
-## 3 条关键发现
-- 代码入口/骨架集中在：requirements.txt, README.md, AGENTS.md, CLAUDE.md, CONTRIBUTING.md
-- Issue 抽样显示近期关注点包括：Showcase inquiry for an AI PowerPoint generation workflow；默认生成的ppt单一没有图片图标等
-- 版本交付可从最新 release 观察：v2.9.0
+## 📂 关键文件路径速查
 
-## 研究方法与数据来源
-- GitHub Repo API / README / 默认分支递归文件树
-- 关键源码文件抽样精读
-- Issues / PRs / Releases 社区活动抽样
-- 说明：若外部搜索数据不可用，则明确标注并不伪造口碑结论
+- `README.md`：能力边界、示例、重要声明。
+- `README_CN.md`：中文说明。
+- `docs/getting-started.md`：使用入口。
+- `docs/faq.md`：常见问题。
+- `docs/roadmap.md`：路线图。
+- `examples/`：示例 PPTX 与素材。
+
+## ⭐ 三条关键发现
+
+1. ppt-master 的核心护城河是原生可编辑 PPTX，而不是“生成漂亮截图”。
+2. README 的“tool, not wishing well”是最重要的产品边界说明。
+3. 企业价值取决于模板跟随和后期可编辑性，不取决于首屏截图多炫。
+
+## 🧪 研究方法与数据来源
+
+- GitHub API：仓库元数据、stars、forks、topics、license、open issues。
+- README：能力说明、重要声明、示例 deck、模板/旁白能力。
+- 本地审计：原报告英文占比高、README dump 多，已重写为中文分析。

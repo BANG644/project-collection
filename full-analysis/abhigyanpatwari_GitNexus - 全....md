@@ -2,141 +2,115 @@
 
 ## 📌 一句话定位
 
-GitNexus: The Zero-Server Code Intelligence Engine -       GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration
+`GitNexus` 是一个零服务器、浏览器端运行的代码知识图谱与 Graph RAG 工具：用户把 GitHub/GitLab/Azure/local repo 或 ZIP 丢进去，就能在本地生成交互式代码图谱，并通过内置 RAG Agent 辅助理解代码库。
+
+> 核心判断：GitNexus 把“代码库索引 + 知识图谱 + RAG 问答”前移到浏览器端，卖点是隐私和低部署成本；风险在于大仓库性能、浏览器资源限制、代码解析准确性和极高 stars/open issues 的真实性与维护压力。
 
 ## 🏗️ 项目全景
 
-仓库：abhigyanpatwari/GitNexus
-- **解决的问题**：该项目试图把 README 中描述的能力产品化/脚本化，降低特定任务的搭建或执行门槛。
-- **基础指标**：Stars=41811 / Forks=4759 / 默认分支=main
-- **Topics**：数据不可用
-- **Homepage**：https://gitnexus.vercel.app
+| 维度 | 观察 |
+|---|---|
+| 仓库 | `abhigyanpatwari/GitNexus` |
+| GitHub | https://github.com/abhigyanpatwari/GitNexus |
+| Homepage | https://gitnexus.vercel.app |
+| Stars / Forks | 约 42.4k stars / 4.8k forks（2026-06-19 抽样） |
+| 默认分支 | `main` |
+| 主要语言 | TypeScript |
+| Open issues | 约 261 |
+| License | GitHub API 显示 Other / NOASSERTION |
 
 ## 🧠 核心架构
 
-目录结构判断
-- **顶层目录分布（递归树抽样汇总）**：gitnexus(3338), gitnexus-web(126), .github(46), eval(45), gitnexus-shared(40), gitnexus-claude-plugin(21), .claude(16), .devcontainer(10), gitnexus-cursor-integration(9), pr-swarm-review(9)
-- **关键文件候选**：
-- `package.json`, 
-- `README.md`, AGENTS.md, 
-- `CLAUDE.md`, 
-- `CONTRIBUTING.md`设计亮点研判
-- 存在 Node/前端或工具链入口，依赖与脚本编排主要由 
-- `package.json` 驱动。
-- 仓库包含 .github 自动化配置，通常代表 CI 或 issue 模板已被纳入工程流程。
+### 目标链路
+
+```text
+用户导入仓库/ZIP
+  -> 浏览器端解析文件树和代码结构
+  -> 生成代码知识图谱
+  -> 图谱可视化浏览
+  -> Graph RAG Agent 基于图结构回答问题
+```
+
+### 架构含义
+
+“Zero-server” 是这类工具的核心差异：代码不上传服务器，隐私风险降低；同时所有解析、索引、可视化和检索都压到浏览器，性能瓶颈也随之转移到用户本机。
 
 ## 🔍 源码深度解读
 
-README / 说明文档要点GitNexus⚠️ Important Notice: GitNexus has NO official cryptocurrency, token, or coin. Any token/coin using the GitNexus name on Pump.fun or any other platform is not affiliated with, endorsed by, or created by this project or its maintainers. Do not purchase any cryptocurrency claiming association with GitNexus.<div align="center">  <a href="https://trendshift.io/repositories/19809" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/19809" alt="abhigyanpatwari%2FGitNexus | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
-  </a>  <h2>Join the official Discord to discuss ideas, issues etc!</h2>  <a href="https://discord.gg/MgJrmsqr62">
-    <img src="https://img.shields.io/discord/1477255801545429032?color=5865F2&logo=discord&logoColor=white" alt="Discord"/>
-  </a>
-  <a href="https://www.npmjs.com/package/gitnexus">
-    <img src="https://img.shields.io/npm/v/gitnexus.svg" alt="npm version"/>
-  </a>
-  <a href="https://polyformproject.org/licenses/noncommercial/1.0.0/">
-    <img src="https://img.shields.io/badge/License-PolyForm%20Noncommercial-blue.svg" alt="License: PolyForm Noncommercial"/>
-  </a>
-  <a href="https://securityscorecards.dev/viewer/?uri=github.com/abhigyanpatwari/GitNexus">
-    <img src="https://api.securityscorecards.dev/projects/github.com/abhigyanpatwari/GitNexus/badge" alt="OpenSSF Scorecard"/>
-  </a>
-  <a href="https://github.com/abhigyanpatwari/GitNexus/actions/workflows/ci.yml">
-    <img src="https://github.com/abhigyanpatwari/GitNexus/actions/workflows/ci.yml/badge.svg" alt="CI Workflows"/>
-  </a>  <p><strong>Enterprise (SaaS & Self-hosted)</strong> - <a href="https://akonlabs.com">akonlabs.com</a></p></div>Building nervous system for agent context.Indexes any codebase into a knowledge graph — every dependency, call chain, cluster, and execution flow — then exposes it through smart tools so AI agents never miss code.https://github.com/user-attachments/assets/172685ba-8e54-4ea7-9ad1-e31a3398da72Like DeepWiki, but deeper. DeepWiki helps you understand code. GitNexus lets you analyze it — because a knowledge graph tracks every relationship, not just des
-...[truncated]
+### 代码图谱层
 
-### 关键文件精读
+GitNexus 的关键不是普通全文搜索，而是把代码文件、符号、依赖关系、调用关系变成图。图的质量决定 Agent 是否能回答“这个函数被谁调用”“模块边界在哪里”这类问题。
 
-package.json{  "name": "gitnexus-monorepo",  "private": true,  "scripts": {    "prepare": "husky",    "format": "prettier --write .",    "format:check": "prettier --check .",    "lint": "eslint .",    "lint:fix": "eslint --fix .",    "gitnexus:refresh": "gitnexus analyze --embeddings --skills",    "gitnexus:full": "gitnexus analyze --force --embeddings --skills"  },  "devDependencies": {    "@typescript-eslint/eslint-plugin": "^8.57.2",    "@typescript-eslint/parser": "^8.57.2",    "eslint": "^9.39.4",    "eslint-config-prettier": "^10.1.8",    "eslint-plugin-react-hooks": "^7.0.1",    "eslint-plugin-unused-imports": "^4.4.1",    "husky": "^9.1.7",    "lint-staged": "^15.5.0",    "prettier": "^3.8.0",    "prettier-plugin-tailwindcss": "^0.7.0"  },  "lint-staged": {    "*.{ts,tsx}": [      "eslint --fix",      "prettier --write"    ],    "*.{js,jsx,mjs,json,css,yml,yaml}"...[truncated]
-- `README.md`# GitNexus**⚠️ Important Notice:** GitNexus has NO official cryptocurrency, token, or coin. Any token/coin using the GitNexus name on Pump.fun or any other platform is **not affiliated with, endorsed by, or created by** this project or its maintainers. Do not purchase any cryptocurrency claiming association with GitNexus.<div align="center">  <a href="https://trendshift.io/repositories/19809" target="_blank">    <img src="https://trendshift.io/api/badge/repositories/19809" alt="abhigyanpatwari%2FGitNexus | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>  </a>  <h2>Join the official Discord to discuss ideas, issues etc!</h2>  <a href="https://discord.gg/MgJrmsqr62">    <img src="https://img.shields.io/discord/1477255801545429032?color=5865F2&logo=discord&logoColor=white" alt="Discord"/>  </a>  <a href="https://www.npmjs.com/package/gitnexus">    <...[truncated]AGENTS.md<!-- version: 1.7.0 --><!-- Last updated: 2026-04-23 -->Last reviewed: 2026-04-23**Project:** GitNexus · **Environment:** dev · **Maintainer:** repository maintainers (see GitHub)## Scope| Boundary | Rule ||----------|------|| **Reads** | `gitnexus/`, `gitnexus-web/`, `eval/`, plugin packages, `.github/`, `.gitnexus/`, docs. || **Writes** | Only paths required for the change; keep diffs minimal. Update lockfiles when deps change. || **Executes** | `npm`, `npx`, `node` under `gitnexus/` and `gitnexus-web/`; `uv run` for Python under `eval/`; documented CI/dev workflows. || **Off-limits** | Real `.env` / secrets, production credentials, unrelated repos, destructive git ops without confirmation. |## Model Configuration- **Primary:** Use a named model (e.g. Claude Sonnet 4.x). Avoid `Auto` or unversioned `latest` when reproducibility matters.- **Notes:** The GitNexus CLI i...[truncated]
-- `CLAUDE.md`<!-- version: 1.3.0 --><!--  Metadata: version, last reviewed, scope, model policy, reference docs, changelog.  Last updated: 2026-03-22-->Last reviewed: 2026-04-13**Project:** GitNexus · **Environment:** dev · **Maintainer:** repository maintainers (see GitHub)Follow **AGENTS.md** for the canonical rules; this file adds Claude Code–specific deltas. Cursor-specific notes live only in `AGENTS.md`.## ScopeSee the **Scope** table in [AGENTS.md](AGENTS.md) for read/write/execute/off-limits boundaries. Cursor-specific workflow notes also live only in AGENTS.md.## Model Configuration- **Primary:** Pin per **Claude Code** / Anthropic org policy (explicit model id). Do not rely on an unversioned `latest` alias for governed workflows.- **Fallback:** As configured in Claude Code (organization default or user override).- **Notes:** The GitNexus CLI analyzer does not call an LLM....[truncated]
-- `CONTRIBUTING.md`# Contributing to GitNexusHow to propose changes, run checks locally, and open pull requests.## LicenseThis project uses the [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/). By contributing, you agree your contributions are licensed under the same terms unless stated otherwise.## Where to discuss- **Issues & feature ideas:** use [GitHub Issues](https://github.com/abhigyanpatwari/GitNexus/issues) for the upstream repo, or your fork’s tracker if you work from a fork.- **Community:** see the Discord link in the root [
-- `README.md`](
-- `README.md`).## Development setup**Prerequisites:** Node.js — `gitnexus/` requires `>=22.0.0` and `gitnexus-web/` requires `^20.19.0 || >=22.12.0` (enforced via the `engines` field in each package). Use `nvm install` to match the local version.1. Clone the repository.2. **CLI / MCP package:** `cd gitne...[truncated]
+### Graph RAG Agent
 
-### 关键逻辑总结
+Graph RAG 与普通 RAG 的区别在于：检索不只看文本相似度，还可以沿依赖关系、文件邻接、符号引用扩展上下文。这能减少 LLM 盲猜，但前提是图谱构建足够准确。
 
-从关键文件组合看，项目更像是围绕单一目标组织的任务流水线/工具链，而不是超重平台。
-- 入口文件决定外部交互界面（CLI / API / UI），配置文件决定运行时依赖，测试文件则暴露作者真正关心的行为边界。
-- 如果用户只读 README，通常只能知道“能做什么”；而从目录与入口文件能看出“怎么做、扩展点在哪、维护成本高不高”。
+### 浏览器端运行
 
-## 🌐 社区口碑
+浏览器端运行意味着：
 
-### GitHub Issues 抽样
+- 优点：隐私、本地即时试用、无需后端运维。
+- 缺点：大仓库内存、解析速度、IndexedDB/缓存、Worker 并发和跨浏览器差异都会成为瓶颈。
 
-#2130 [OPEN] Cannot find module '../../hooks/claude/resolve-analyze-cmd.cjs' in Docker image v1.6.7 —hooks directory not   copied to runtime stage（comments=[] labels=无）
-- #2129 [OPEN] impact(upstream) drops a resolved direct Function caller that cypher confirms (under-reports blast radius)（comments=[] labels=无）
-- #2119 [CLOSED] MCP server returns only 156 repos instead of 436（comments=[{'id': 'IC_kwDOPXS5wc8AAAABFbej2g', 'author': {'login': 'magyargergo'}, 'authorAssociation': 'COLLABORATOR', 'body': 'Could you please run some additional diagnostics and share the results so we can better understand what is causing this?\n\nIt would also be helpful to know:\n\n* How many results did you expect to see?\n* Which version of GitNexus are you using?\n* What command and configuration did you use?\n\nFor future reports, please complete the issue template and include the relevant version, environment, reproduction steps, and expected versus actual behaviour. This information helps us investigate the root cause more efficiently.', 'createdAt': '2026-06-09T11:36:26Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/abhigyanpatwari/GitNexus/issues/2119#issuecomment-4659323866', 'viewerDidAuthor': False}, {'id': 'IC_kwDOPXS5wc8AAAABFcqDGg', 'author': {'login': 'walnut-tom'}, 'authorAssociation': 'NONE', 'body': 'Due to LLM token truncation or other technical reasons, while the script itself is capable of reading all 437 repositories, the full output is not being displayed properly. Is it possible to implement a pagination feature to resolve this?\n\npython\n# client_simple.py\nimport httpx\nimport uuid\nimport json\n\nsession_id = None\n\ndef parse_sse_response(text):\n    """解析 SSE 格式的响应"""\n    lines = text.strip().split(\'\\n\')\n    for line in lines:\n        if line.startswith(\'data: \'):\n            try:\n                data = line[6:]  # 移除 "data: " 前缀\n                return json.loads(data)\n            except:\n                return None\n    return None\n\ndef send_mcp_request(client: httpx.Client, server_url: str, method: str, params: dict = None, is_notification: bool = False):\n    """发送 MCP 请求"""\n    global session_id\n    \n    headers = {\n        "Accept": "application/json, text/event-stream"\n    }\n    \n    # 如果有会话ID，添加到请求头\n    if session_id:\n        headers["mcp-session-id"] = session_id\n    \n    payload = {\n        "jsonrpc": "2.0",\n        "method": method,\n    }\n    if params:\n        payload["params"] = params\n    \n    # 只有非通知请求才需要 ID\n    if not is_notification:\n        payload["id"] = str(uuid.uuid4())\n    \n    response = client.post(f"{server_url}/api/mcp", json=payload, headers=headers, timeout=10.0)\n    \n    # 如果响应包含新的会话ID，更新全局变量\n    if "mcp-session-id" in response.headers:\n        session_id = response.headers["mcp-session-id"]\n    \n    return response\n\ndef initialize_server(client: httpx.Client, server_url: str):\n    """初始化 MCP 服务器"""\n    print("初始化服务器...")\n    response = send_mcp_request(client, server_url, "initialize", {\n        "protocolVersion": "2024-11-05",\n        "capabilities": {},\n        "clientInfo": {\n            "name": "MCP-Client",\n            "version": "1.0"\n        }\n    })\n    \n    if response.status_code == 200:\n        data = parse_sse_response(response.text)\n        if data and "result" in data:\n            print("初始化成功！")\n            print(f"服务器信息: {data[\'result\'].get(\'serverInfo\', {})}")\n            return True\n    \n    print(f"初始化失败，状态码: {response.status_code}")\n    return False\n\ndef call_mcp_tool(client: httpx.Client, server_url: str, tool_name: str, arguments: dict):\n    """调用 MCP 工具"""\n    print(f"调用工具: {tool_name}")\n    response = send_mcp_request(client, server_url, "tools/call", {\n        "name": tool_name,\n        "arguments": arguments\n    })\n    \n    if response.status_code == 200:\n        data = parse_sse_response(response.text)\n        if data:\n            print("调用成功！")\n            return data\n        else:\n            print(f"响应格式无效: {response.text}")\n            return None\n    else:\n        print(f"请求失败，状态码: {response.status_code}, 内容: {response.text}")\n        return None\n\nif __name__ == "__main__":\n    # 调用本地运行的 MCP HTTP 服务器\n    SERVER_URL = "http://10.1.21.169:4747"\n    \n    # 使用持久连接\n    with httpx.Client() as client:\n        # 先初始化服务器\n        if initialize_server(client, SERVER_URL):\n            # 然后调用工具\n            result = call_mcp_tool(\n                client=client,\n                server_url=SERVER_URL,\n                tool_name="list_repos",\n                arguments={}\n            )\n            \n            # 保存结果到文件\n            if result:\n                print("\\n提取数据...")\n                \n                # 提取内容\n                repos_data = None\n                if isinstance(result, dict) and "result" in result:\n                    if isinstance(result["result"], dict) and "content" in result["result"]:\n                        content = result["result"]["content"]\n                        if isinstance(content, list) and len(content) > 0:\n                            item = content[0]\n                            if isinstance(item, dict) and "text" in item:\n                                text_content = item["text"]\n                                try:\n                                    # 文本字段包含 JSON 字符串，但可能有额外的内容\n                                    # 尝试找到 JSON 的结束位置\n                                    json_end = None\n                                    bracket_count = 0\n                                    in_string = False\n                                    escape_next = False\n                                    \n                                    for i, char in enumerate(text_content):\n                                        if escape_next:\n                                            escape_next = False\n                                            continue\n                                        \n                                        if char == \'\\\\\' and in_string:\n                                            escape_next = True\n                                            continue\n                                        \n                                        if char == \'"\':\n                                            in_string = not in_string\n                                            continue\n                                        \n                                        if not in_string:\n                                            if char == \'[\':\n                                                bracket_count += 1\n                                            elif char == \']\':\n                                                bracket_count -= 1\n                                                if bracket_count == 0:\n                                                    json_end = i + 1\n                                                    break\n                                    \n                                    if json_end:\n                                        json_str = text_content[:json_end]\n                                        repos_data = json.loads(json_str)\n                                        print(f"成功提取 {len(repos_data)} 个仓库")\n                                    else:\n                                        print("未找到 JSON 结束位置")\n                                except Exception as e:\n                                    print(f"解析 JSON 失败: {e}")\n                                    repos_data = text_content\n                \n                if repos_data is None:\n                    repos_data = result\n                    print("使用完整响应")\n                \n                with open("list_repos.json", "w", encoding="utf-8") as f:\n                    if isinstance(repos_data, str):\n                        # 如果是字符串，直接写入\n                        f.write(repos_data)\n                    else:\n                        # 如果是对象或列表，序列化为 JSON\n                        json.dump(repos_data, f, indent=2, ensure_ascii=False)\n                \n                print("✓ 已保存到 list_repos.json")\n\n\n\nbash\npython3 mcp_client.py       \n\noutput:\n\n初始化服务器...\n初始化成功！\n服务器信息: {'name': 'gitnexus', 'version': '1.6.6'}\n调用工具: list_repos\n调用成功！\n\n提取数据...\n成功提取 437 个仓库\n✓ 已保存到 list_repos.json', 'createdAt': '2026-06-09T14:03:03Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/abhigyanpatwari/GitNexus/issues/2119#issuecomment-4660560666', 'viewerDidAuthor': False}] labels=无）
-- #2118 [CLOSED] ERR_MODULE_NOT_FOUND for tree-sitter-swift in official Docker image (v1.6.6) —ESM static import in query.ts   crashes container（comments=[{'id': 'IC_kwDOPXS5wc8AAAABFbEJGg', 'author': {'login': 'magyargergo'}, 'authorAssociation': 'COLLABORATOR', 'body': "@Syakaraka Spot-on root-cause analysis — thank you.\n\nThe import Swift from 'tree-sitter-swift' in swift/query.ts was indeed the crash path in the Docker image. #2101 replaces all three optional grammar static imports (swift/dart/kotlin) with lazy, guarded loads via parser-loader.getLanguageGrammar(), matching the pattern already used in parse-worker.ts and parser-loader.ts.\n\nThis is merged to main and included in v1.6.7-rc.8. The next official Docker tags (akonlabs/gitnexus:1.6.7 / ghcr.io/abhigyanpatwari/gitnexus:1.6.7) will pick it up when we cut stable.\n\nTo verify before stable: npm install gitnexus@rc locally, or pull an RC-tagged image once published. Please let us know if the container starts cleanly for you.", 'createdAt': '2026-06-09T10:34:11Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/abhigyanpatwari/GitNexus/issues/2118#issuecomment-4658891034', 'viewerDidAuthor': False}, {'id': 'IC_kwDOPXS5wc8AAAABFhgWbg', 'author': {'login': 'Syakaraka'}, 'authorAssociation': 'NONE', 'body': " Another Docker image bug in v1.6.7: gitnexus analyze crashes with Cannot find module\n  ▎ '../../hooks/claude/resolve-analyze-cmd.cjs'. The Dockerfile.cli runtime stage copies dist, node_modules,\n  ▎ 
-- `package.json`, scripts, and vendor —but does not copy the hooks directory. resolve-invocation.ts uses\n  ▎ require('../../hooks/claude/resolve-analyze-cmd.cjs') which resolves to\n  ▎ /app/gitnexus/hooks/claude/resolve-analyze-cmd.cjs in the container, a path that doesn't exist.\n  ▎\n  ▎ Fix: add COPY --from=builder --chown=node:node /app/gitnexus/hooks ./gitnexus/hooks to the runtime stage in\n  ▎ Dockerfile.cli.", 'createdAt': '2026-06-10T01:32:54Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/abhigyanpatwari/GitNexus/issues/2118#issuecomment-4665644654', 'viewerDidAuthor': False}] labels=无）
-- #2116 [CLOSED] tree-sitter-c ships only 4/6 native prebuilds (missing linux-arm64, win32-arm64) — toolchain needed on ARM（comments=[] labels=无）
-- #2115 [CLOSED] gitnexus analyze fails on Windows when optional tree-sitter grammars are missing or cannot load（comments=[{'id': 'IC_kwDOPXS5wc8AAAABFaa0Fg', 'author': {'login': 'entishl'}, 'authorAssociation': 'NONE', 'body': "this how I (codex) edited the local files for a hot fix, and it works for me\n~\AppData\Roaming\npm\node_modules\gitnexus\dist\core\ingestion\scope-resolution\pipeline\registry.js\nJavascripts\n/**\n * Per-language `ScopeResolver` registry — the lookup the generic\n * `scopeResolutionPhase` uses to pick the right resolver for each\n * migrated language.\n *\n * Adding a language is two lines: implement a `ScopeResolver` in\n * `languages/<lang>/scope-resolver.ts` and register it here. The\n * phase picks it up automatically — no workflow changes, no\n * per-language pipeline phase file.\n */\nimport { SupportedLanguages } from '../../../../_shared/index.js';\nimport { pythonScopeResolver } from '../../languages/python/scope-resolver.js';\nimport { csharpScopeResolver } from '../../languages/csharp/scope-resolver.js';\nimport { typescriptScopeResolver } from '../../languages/typescript/scope-resolver.js';\nimport { goScopeResolver } from '../../languages/go/scope-resolver.js';\nimport { javaScopeResolver } from '../../languages/java/scope-resolver.js';\nimport { cScopeResolver } from '../../languages/c/scope-resolver.js';\nimport { cppScopeResolver } from '../../languages/cpp/scope-resolver.js';\nimport { phpScopeResolver } from '../../languages/php/scope-resolver.js';\nimport { rustScopeResolver } from '../../languages/rust/scope-resolver.js';\nimport { javascriptScopeResolver } from '../../languages/javascript/scope-resolver.js';\nimport { rubyScopeResolver } from '../../languages/ruby/scope-resolver.js';\nimport { cobolScopeResolver } from '../../languages/cobol/scope-resolver.js';\nimport { vueScopeResolver } from '../../languages/vue/scope-resolver.js';\nimport { createRequire } from 'node:module';\nconst _require = createRequire(import.meta.url);\nconst loadOptionalResolver = async (grammarPackage, modulePath, exportName) => {\n    try {\n        _require(grammarPackage);\n        return (await import(modulePath))[exportName];\n    }\n    catch {\n        return null;\n    }\n};\nlet kotlinScopeResolver = null;\nlet swiftScopeResolver = null;\nlet dartScopeResolver = null;\nkotlinScopeResolver = await loadOptionalResolver('tree-sitter-kotlin', '../../languages/kotlin/scope-resolver.js', 'kotlinScopeResolver');\nswiftScopeResolver = await loadOptionalResolver('tree-sitter-swift', '../../languages/swift/scope-resolver.js', 'swiftScopeResolver');\ndartScopeResolver = await loadOptionalResolver('tree-sitter-dart', '../../languages/dart/scope-resolver.js', 'dartScopeResolver');\n/** Map of `SupportedLanguages` → `ScopeResolver`. The scope-resolution phase\n *  iterates this map directly — every registered resolver runs. This is the\n *  single source of truth for which languages resolve via scope-resolution. */\nexport const SCOPE_RESOLVERS = new Map([\n    [SupportedLanguages.Python, pythonScopeResolver],\n    [SupportedLanguages.CSharp, csharpScopeResolver],\n    [SupportedLanguages.TypeScript, typescriptScopeResolver],\n    [SupportedLanguages.Go, goScopeResolver],\n    [SupportedLanguages.Java, javaScopeResolver],\n    [SupportedLanguages.C, cScopeResolver],\n    [SupportedLanguages.CPlusPlus, cppScopeResolver],\n    [SupportedLanguages.PHP, phpScopeResolver],\n    [SupportedLanguages.Rust, rustScopeResolver],\n    [SupportedLanguages.JavaScript, javascriptScopeResolver],\n    ...(kotlinScopeResolver ? [[SupportedLanguages.Kotlin, kotlinScopeResolver]] : []),\n    [SupportedLanguages.Ruby, rubyScopeResolver],\n    [SupportedLanguages.Cobol, cobolScopeResolver],\n    ...(swiftScopeResolver ? [[SupportedLanguages.Swift, swiftScopeResolver]] : []),\n    ...(dartScopeResolver ? [[SupportedLanguages.Dart, dartScopeResolver]] : []),\n    [SupportedLanguages.Vue, vueScopeResolver],\n]);\n\n\nand edited ~\\AppData\\Roaming\\npm\\node_modules\\gitnexus\\dist\\core\\ingestion\\languages\\index.js\n\nJavascripts\n/**\n * Language Provider Registry — compile-time exhaustive provider table.\n *\n * To add a new language:\n * 1. Add enum member to SupportedLanguages\n * 2. Create `languages/<lang>.ts` exporting a LanguageProvider\n * 3. Add one line to the `providers` table below\n * 4. Run `tsc --noEmit` to verify\n */\nimport { SupportedLanguages, isBladeTemplateFilename } from '../../../_shared/index.js';\nimport { typescriptProvider, javascriptProvider } from './typescript.js';\nimport { pythonProvider } from './python.js';\nimport { javaProvider } from './java.js';\nimport { goProvider } from './go.js';\nimport { rustProvider } from './rust.js';\nimport { csharpProvider } from './csharp.js';\nimport { cProvider, cppProvider } from './c-cpp.js';\nimport { phpProvider } from './php.js';\nimport { rubyProvider } from './ruby.js';\nimport { vueProvider } from './vue.js';\nimport { cobolProvider } from './cobol.js';\nimport { createRequire } from 'node:module';\nconst _require = createRequire(import.meta.url);\nconst loadOptionalProvider = async (grammarPackage, modulePath, exportName) => {\n    try {\n        _require(grammarPackage);\n        return (await import(modulePath))[exportName];\n    }\n    catch {\n        return null;\n    }\n};\nlet kotlinProvider = null;\nlet swiftProvider = null;\nlet dartProvider = null;\nkotlinProvider = await loadOptionalProvider('tree-sitter-kotlin', './kotlin.js', 'kotlinProvider');\nswiftProvider = await loadOptionalProvider('tree-sitter-swift', './swift.js', 'swiftProvider');\ndartProvider = await loadOptionalProvider('tree-sitter-dart', './dart.js', 'dartProvider');\nexport const providers = {\n    [SupportedLanguages.JavaScript]: javascriptProvider,\n    [SupportedLanguages.TypeScript]: typescriptProvider,\n    [SupportedLanguages.Python]: pythonProvider,\n    [SupportedLanguages.Java]: javaProvider,\n    ...(kotlinProvider ? { [SupportedLanguages.Kotlin]: kotlinProvider } : {}),\n    [SupportedLanguages.Go]: goProvider,\n    [SupportedLanguages.Rust]: rustProvider,\n    [SupportedLanguages.CSharp]: csharpProvider,\n    [SupportedLanguages.C]: cProvider,\n    [SupportedLanguages.CPlusPlus]: cppProvider,\n    [SupportedLanguages.PHP]: phpProvider,\n    [SupportedLanguages.Ruby]: rubyProvider,\n    ...(swiftProvider ? { [SupportedLanguages.Swift]: swiftProvider } : {}),\n    ...(dartProvider ? { [SupportedLanguages.Dart]: dartProvider } : {}),\n    [SupportedLanguages.Vue]: vueProvider,\n    [SupportedLanguages.Cobol]: cobolProvider,\n};\n/** Get provider by language enum (always succeeds for SupportedLanguages). */\nexport function getProvider(language) {\n    return providers[language];\n}\n/** Pre-built extension → provider lookup (built once at module load). */\nconst extensionMap = new Map();\nfor (const provider of Object.values(providers)) {\n    for (const ext of provider.extensions) {\n        extensionMap.set(ext, provider);\n    }\n}\n/** Look up a language provider from a file path by extension.\n *  Returns null if the file extension is not recognized. */\nexport function getProviderForFile(filePath) {\n    if (isBladeTemplateFilename(filePath))\n        return null;\n    const lastDot = filePath.lastIndexOf('.');\n    const ext = lastDot >= 0 ? filePath.slice(lastDot).toLowerCase() : '';\n    const basename = filePath.slice(filePath.lastIndexOf('/') + 1);\n    return extensionMap.get(ext) ?? extensionMap.get(basename) ?? null;\n}\n\n", 'createdAt': '2026-06-09T09:08:50Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/abhigyanpatwari/GitNexus/issues/2115#issuecomment-4658213910', 'viewerDidAuthor': False}, {'id': 'IC_kwDOPXS5wc8AAAABFbEIIw', 'author': {'login': 'magyargergo'}, 'authorAssociation': 'COLLABORATOR', 'body': '@entishl Excellent diagnosis and workaround — that lazy-load pattern is exactly what we shipped upstream in #2101.\n\nThe static ESM imports in languages/<lang>/query.ts (swift/dart/kotlin) were pulling optional grammars onto the main thread at module load, crashing analyze when the binding was absent. The fix routes those through parser-loader.getLanguageGrammar() so the grammar is only required at first use inside the worker.\n\nYour local patch to registry.js / index.js should no longer be needed on 1.6.7-rc.x (npm install gitnexus@rc). Missing optional grammars now disable only that language; everything else indexes normally.\n\nWould appreciate confirmation on Windows if you get a chance!', 'createdAt': '2026-06-09T10:34:09Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/abhigyanpatwari/GitNexus/issues/2115#issuecomment-4658890787', 'viewerDidAuthor': False}, {'id': 'IC_kwDOPXS5wc8AAAABFb3akA', 'author': {'login': 'entishl'}, 'authorAssociation': 'NONE', 'body': "> @entishl Excellent diagnosis and workaround — that lazy-load pattern is exactly what we shipped upstream in #2101.\n> \n> The static ESM imports in languages/<lang>/query.ts (swift/dart/kotlin) were pulling optional grammars onto the main thread at module load, crashing analyze when the binding was absent. The fix routes those through parser-loader.getLanguageGrammar() so the grammar is only required at first use inside the worker.\n> \n> Your local patch to registry.js / index.js should no longer be needed on 1.6.7-rc.x (npm install gitnexus@rc). Missing optional grammars now disable only that language; everything else indexes normally.\n> \n> Would appreciate confirmation on Windows if you get a chance!\n\nThanks for the quick response, @magyargergo! \n\nI just tested 1.6.7-rc.x (npm install gitnexus@rc) on my Windows environment after reverting my local patches, and I can confirm it works perfectly now. \nThe upstream fix in #2101 completely solves this issue. Appreciate the awesome work! I'll go ahead and close this issue.", 'createdAt': '2026-06-09T12:32:15Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/abhigyanpatwari/GitNexus/issues/2115#issuecomment-4659731088', 'viewerDidAuthor': False}] labels=bug）
+## 🌐 社区口碑画像
 
-### Pull Requests 抽样
+没有检索到可靠第三方长评，因此不编造外部评价。GitHub 一手信号显示：
 
-PR 
-- #2128 [OPEN] chore(deps)(deps-dev): bump @types/node from 25.9.1 to 25.9.2 in /gitnexusPR 
-- #2127 [OPEN] chore(deps)(deps): bump the tree-sitter-grammars group across 1 directory with 7 updatesPR 
-- #2126 [MERGED] chore: release v1.6.7PR 
-- #2125 [MERGED] chore(vendor): tree-sitter prebuilds (tree-sitter-c,tree-sitter-dart,tree-sitter-proto,tree-sitter-kotlin,tree-sitter-swift)PR 
-- #2124 [OPEN] fix(storage): prevent registry wipe on transient I/O errors
-
-### Releases 抽样
-
-v1.6.7（published=2026-06-09T21:05:55Z latest=True）
-- v1.6.7-rc.13（published=2026-06-09T20:17:22Z latest=False）
-- v1.6.7-rc.12（published=2026-06-09T19:47:41Z latest=False）
-- v1.6.7-rc.11（published=2026-06-09T19:09:56Z latest=False）
-- v1.6.7-rc.10（published=2026-06-09T18:30:12Z latest=False）
-
-### 真实反馈与维护信号研判
-
-抽样 issue 中 open/closed 约为 4/4，可作为维护者响应速度的弱信号。近期 PR 抽样里可见已合并项 3 个，说明项目并非完全冻结。存在 release 记录，说明作者有版本化交付意识。若外部搜索链路不可用，本报告明确以 GitHub issue/PR/release 作为一手社区反馈源，不用二手转载冒充口碑数据。
-- 高频问题通常比 README 更能暴露真实落地难点：安装、兼容性、性能边界、文档歧义、平台限制。
+- stars/forks 极高，但 open issues 约 261，说明用户兴趣强、问题也多。
+- 项目描述覆盖 GitHub/GitLab/Azure/local/ZIP 多来源，野心很大。
+- License 为 Other/NOASSERTION，商业采用前必须人工审查许可证文本。
 
 ## ⚔️ 竞品对比
 
-维度GitNexus竞品/替代定位面向仓库作者设定的具体场景，通常更垂直LangGraph / AutoGen / OpenClaw Skills 往往更通用或生态更大学习曲线依赖其内部脚本/配置约定通用方案学习成本更高，但生态更成熟差异化仓库通常以“快上手、场景专用、意见化实现”为卖点通用方案强调可扩展、稳定性、跨场景能力
-
-### 风险
-
-作者驱动、文档深度可能不足、接口稳定性不确定大项目更稳定，但改造成本更高
+| 方案 | 优势 | 风险 |
+|---|---|---|
+| GitNexus | 浏览器本地、图谱可视化、Graph RAG | 大仓库性能和解析准确性存疑 |
+| Sourcegraph Cody | 成熟企业代码搜索/AI | 服务端/企业部署重，隐私边界不同 |
+| codegraph 类本地索引工具 | 本地、可接多 Agent | 可能缺少浏览器可视化体验 |
+| Cursor / Claude Code 内置检索 | 集成顺滑 | 图谱透明度和可视化弱 |
 
 ## 🎯 核心研判
 
 ### 优势
 
-对目标问题有强意见化实现，落地路径通常比“从零搭建通用栈”更短。如果核心文件少而清晰，二次阅读和定制成本较低。GitHub 原生 issue / release / PR 能直接帮助判断项目是否仍在演进。
+1. **隐私叙事强**：代码留在浏览器，本地生成图谱。
+2. **交互体验直观**：知识图谱比纯文本检索更容易建立架构感。
+3. **覆盖入口广**：GitHub/GitLab/Azure/local/ZIP 降低导入门槛。
 
 ### 风险
 
-若 stars、forks、release 或 PR 活跃度偏低，意味着长期维护能力要谨慎评估。如果关键逻辑过于集中在单文件脚本中，后续扩展会受到可维护性约束。若缺少测试/CI/配置 schema，生产环境采用前应先做自测和边界验证。
+1. **浏览器资源天花板**：大型 monorepo 很容易压垮前端解析和渲染。
+2. **语言解析深度不明**：不同语言的 AST/依赖关系准确性差异很大。
+3. **许可证不清晰**：GitHub API 显示 NOASSERTION，需要确认实际 LICENSE。
+4. **维护压力大**：open issues 较多，说明用户反馈积压明显。
 
 ### 适用场景
 
-需要快速验证该仓库所解决的问题是否值得投入。团队愿意接受一定的作者意见化设计，以换取更快交付。适合作为参考实现、内部 PoC、垂直任务工具，而非默认直接替代成熟平台。不
+- 快速理解中小型代码库。
+- 不想上传私有代码到服务器的个人/团队。
+- 演示代码知识图谱与 Graph RAG 概念。
 
-### 适用场景
+### 不适用场景
 
-对 SLA、兼容矩阵、长期 LTS 有强要求的核心生产系统。需要极高社区冗余、插件生态或企业级支持的场景。
+- 超大型 monorepo 或多语言复杂企业仓库。
+- 需要严肃权限管理、审计和 SLA 的企业代码平台。
+- 商业闭源集成前未确认许可证的场景。
 
 ## 📂 关键文件路径速查
 
-package.json
-- `README.md`AGENTS.md
-- `CLAUDE.md`
-- `CONTRIBUTING.md`
+- `README.md`：产品定位和导入方式。
+- 前端入口/图谱渲染模块：需在后续源码精读中确认具体路径。
+- RAG / graph builder 模块：决定项目真实技术含量。
+- License 文件：商业采用前必须检查。
 
 ## ⭐ 三条关键发现
 
-代码入口/骨架集中在：
-- `package.json`, 
-- `README.md`, AGENTS.md, 
-- `CLAUDE.md`, 
-- `CONTRIBUTING.md`近期开源反馈以 issue 为主，典型议题包括：Cannot find module '../../hooks/claude/resolve-analyze-cmd.cjs' in Docker image v1.6.7 —hooks directory not   copied to runtime stage；impact(upstream) drops a resolved direct Function caller that cypher confirms (under-reports blast radius)发布节奏可从最新 release 观察：v1.6.7
+1. GitNexus 的差异点是浏览器端 Graph RAG，不是简单 repo viewer。
+2. “Zero-server” 同时是隐私优势和性能风险来源。
+3. 极高关注度与 261 open issues 并存，说明项目处于高热度高压力阶段。
 
 ## 🧪 研究方法与数据来源
 
-GitHub Repo API / README / 默认分支递归文件树关键源码文件抽样精读Issues / PRs / Releases 社区活动抽样说明：
-- 若外部搜索数据不可用，则明确标注并不伪造口碑结论
+- GitHub API：仓库描述、stars、forks、open issues、license、homepage。
+- 本地审计：原报告包含英文 dump、长行和原始抓取残留，已重写为中文分析。
+- 外部搜索：未发现可靠第三方长评。
