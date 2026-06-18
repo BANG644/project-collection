@@ -1,10 +1,10 @@
 # Project Collection 调研报告质量审计
 
 - 扫描文件数：145
-- Critical：32
+- Critical：27
 - High：5
 - Medium：7
-- Low：101
+- Low：106
 
 ## 判定维度
 
@@ -17,11 +17,6 @@
 
 | 严重级别 | 分数 | 文件 | 行数 | 最长行 | 英文占比 | 核心章节 | 原因 |
 |---|---:|---|---:|---:|---:|---:|---|
-| critical | 96 | `full-analysis/OthmanAdi-planning-with-files-全方位深度调研.md` | 354 | 2185 | 0.925 | 8 | 英文占比过高 english_ratio=0.93<br>含原始抓取/JSON/截断残留 38 处<br>模板化/浅层占位句过多 8 处<br>疑似直接搬运 README 英文原文 |
-| critical | 94 | `full-analysis/withkynam-vibecode-pro-max-kit-全方位深度调研.md` | 255 | 274 | 0.855 | 8 | 英文占比过高 english_ratio=0.86<br>疑似乱码/错误转码命中 2 次<br>含原始抓取/JSON/截断残留 5 处<br>模板化/浅层占位句过多 6 处 |
-| critical | 93 | `full-analysis/Michaelliv-pi-dynamic-workflows-全方位深度调研.md` | 393 | 990 | 0.881 | 8 | 英文占比过高 english_ratio=0.88<br>含原始抓取/JSON/截断残留 10 处<br>模板化/浅层占位句过多 7 处<br>疑似直接搬运 README 英文原文 |
-| critical | 93 | `full-analysis/jackwener-OpenCLI-全方位深度调研.md` | 347 | 553 | 0.898 | 8 | 英文占比过高 english_ratio=0.90<br>含原始抓取/JSON/截断残留 14 处<br>模板化/浅层占位句过多 7 处<br>疑似直接搬运 README 英文原文 |
-| critical | 91 | `full-analysis/CyC2018_CS-Notes - 全方位深度调研.md` | 115 | 2740 | 0.733 | 8 | 英文占比过高 english_ratio=0.73<br>疑似乱码/错误转码命中 1 次<br>含原始抓取/JSON/截断残留 24 处<br>模板化/浅层占位句过多 6 处 |
 | critical | 91 | `full-analysis/wuji-labs-nopua-全方位深度调研.md` | 165 | 1467 | 0.770 | 8 | 英文占比过高 english_ratio=0.77<br>疑似乱码/错误转码命中 1 次<br>含原始抓取/JSON/截断残留 17 处<br>模板化/浅层占位句过多 6 处 |
 | critical | 89 | `full-analysis/topoteretes_cognee - 全方位深度调研.md` | 63 | 14848 | 0.940 | 8 | 存在超长行 max_line_len=14848<br>英文占比过高 english_ratio=0.94<br>含原始抓取/JSON/截断残留 48 处<br>模板化/浅层占位句过多 3 处 |
 | critical | 89 | `full-analysis/xming521_WeClone - 全方位深度调研.md` | 61 | 3069 | 0.748 | 8 | 存在超长行 max_line_len=3069<br>英文占比过高 english_ratio=0.75<br>含原始抓取/JSON/截断残留 19 处<br>模板化/浅层占位句过多 3 处 |
