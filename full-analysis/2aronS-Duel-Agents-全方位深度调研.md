@@ -1,238 +1,211 @@
-# 2aronS-Duel-Agents - 全方位深度调研
+# 🔬 2aronS/Duel-Agents - 全方位深度调研
 
-## 项目全景
-- **仓库**：`2aronS/Duel-Agents`
-- **一句话定位**：CLI, SDK, and IDE plugins for Duel Agents
-- **解决的问题**：该项目试图把 README 中描述的能力产品化/脚本化，降低特定任务的搭建或执行门槛。
-- **基础指标**：Stars=1027 / Forks=19 / 默认分支=`main`
-- **Topics**：ai-agents, anthropic, claude-code, cli, cursor, duel-agents, llm, npm, openai-compatible, openclaw, sdk, typescript
-- **Homepage**：https://duelagents.com
+## 📌 一句话定位
 
-## 核心架构
-### 目录结构判断
-- 顶层目录分布（递归树抽样汇总）：python(21), packages(17), integrations(7), templates(4), .github(2), .env.example(1), .gitignore(1), CONTRIBUTING.md(1), LICENSE(1), README.md(1)
-- 关键文件候选：package.json, README.md, CONTRIBUTING.md
+`2aronS/Duel-Agents` 是一个围绕 `duelagents.com/v1` 代理服务构建的多端集成仓库：它提供 CLI、TypeScript SDK、Claude Code / Cursor / Codex / OpenClaw 集成，以及 LangChain / LlamaIndex Python 包，让不同开发工具统一走 Duel API Key 和 OpenAI-compatible / Anthropic-compatible 路由。
 
-### 设计亮点研判
-- 存在 Node/前端或工具链入口，依赖与脚本编排应主要由 package.json 驱动。
-- 仓库包含 .github 自动化配置，通常代表 CI 或 issue 模板已被纳入工程流程。
+> 核心判断：这个仓库不是通用 agent 框架，而是一个“模型代理服务的安装器 + SDK + IDE 集成包”。它的价值在于降低多工具接入成本；风险在于高度依赖 `duelagents.com` 服务本身，以及 GitHub engagement 真实性曾被 issue 质疑。
 
-## 源码深度解读
-### README / 说明文档要点
-# Duel Agents
+## 🏗️ 项目全景
 
-<img width="1344" height="576" alt="banner" src="https://github.com/user-attachments/assets/24e6abbe-1c7b-41cb-9d1c-a971c9a93534" />
+| 维度 | 观察 |
+|---|---|
+| 仓库 | `2aronS/Duel-Agents` |
+| GitHub | https://github.com/2aronS/Duel-Agents |
+| Homepage | https://duelagents.com |
+| Stars / Forks | 约 982 stars、22 forks（2026-06-18 抽样） |
+| 默认分支 | `main` |
+| 最新 release | `v0.1.0`（2026-05-28） |
+| 技术栈 | TypeScript monorepo + Python LangChain/LlamaIndex integrations |
 
-**Use, extend, and ship with Duel Agents**: the IDE-native routing layer that runs prompts against multiple models and picks the cheapest answer that still wins.
+### 目录结构
 
-This repo is the official integration package for [duelagents.com](https://duelagents.com).
-
-## Star History
-
-<a href="https://www.star-history.com/?repos=2aronS%2FDuel-Agents&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=2aronS/Duel-Agents&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=2aronS/Duel-Agents&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=2aronS/Duel-Agents&type=date&legend=top-left" />
- </picture>
-</a>
-
-## Requirements
-
-Every tool in this repo routes LLM traffic through **`https://duelagents.com/v1`** with a **Duel API key** (`duel_<prefix>_<secret>`).
-
-You cannot use raw Anthropic or OpenAI keys with these integrations. Get a key from the dashboard:
-
-**https://duelagents.com/dashboard/settings** (subscribe → create API key)
-
-## Quick start
-
-```bash
-# 1. Get your key from the dashboard, then:
-export DUEL_API_KEY=duel_yourprefix_yoursecret
-
-# 2. Install for your tools
-npx @duel-agents/install all
-
-# 3. Verify
-npx @duel-agents/install doctor
+```text
+packages/
+  core/      # API key 校验、环境变量映射、OpenClaw patch
+  cli/       # @duel-agents/install 安装器
+  sdk/       # TypeScript DuelClient
+integrations/
+  claude-plugin/
+  cursor/
+  openclaw/
+python/
+  langchain-duel/
+  llama-index-llms-duel/
+templates/
 ```
 
-## Install per tool
+**架构判断**：它的中心不是“agent 推理逻辑”，而是“把不同工具的模型请求都指向 Duel proxy”。也就是说，真正的智能路由发生在服务端 `duelagents.com/v1`，仓库本身主要负责接入层。
 
-| Tool | Command |
-|------|---------|
-| Claude Code | `npx @duel-agents/install claude-code` |
-| Cursor | `npx @duel-agents/install cursor` |
-| Codex CLI | `npx @duel-agents/install codex` |
-| OpenClaw | `npx @duel-agents/install openclaw` |
-| All | `npx @duel-agents/install all` |
+## 🧠 核心架构解读
 
-### Claude Code plugin
+### 1. `packages/core/src/config.ts`：全仓库的契约中心
 
-```bash
-git clone https://github.com/2aronS/Duel-Agents.git
-cd duel-agents
-claude plugin install ./integrations/claude-plugin
-npx @duel-agents/install claude-code
+核心常量：
+
+- `DEFAULT_PROXY_URL = "https://duelagents.com/v1"`
+- `DASHBOARD_URL = "https://duelagents.com/dashboard/settings"`
+- API Key 格式：`duel_` + 8 位 prefix + `_` + 32 位 secret
+
+`getEnvForTarget()` 将同一把 Duel key 映射到不同工具需要的环境变量：
+
+| Target | 写入变量 |
+|---|---|
+| Claude Code | `ANTHROPIC_BASE_URL`、`ANTHROPIC_API_KEY`、`DUEL_API_KEY` |
+| Codex / OpenAI-compatible | `OPENAI_BASE_URL`、`OPENAI_API_KEY`、`DUEL_API_KEY` |
+| Cursor | `DUEL_API_KEY`、`DUEL_PROXY_URL` |
+| OpenClaw | `DUEL_API_KEY`、`DUEL_PROXY_URL` |
+
+**设计含义**：Duel 不是重新发明每个工具插件，而是利用 Anthropic/OpenAI-compatible API 的“base URL 可替换”特性，做统一代理。
+
+### 2. `packages/cli/src/install.ts`：安装器是核心产品体验
+
+CLI 支持目标：
+
+```text
+claude-code / cursor / codex / openclaw
 ```
 
-Use `/duel-agents:setup` in Claude Code for guided setup.
+它的主要职责：
 
-### Cursor
+- 从环境变量读取 `DUEL_API_KEY`。
+- 校验 key 格式。
+- 执行 doctor 检查连通性。
+- 复制各工具集成资产。
+- 对 OpenClaw / Claude / Cursor / Codex 写入相应配置或提示用户做 UI 步骤。
 
-The installer copies a skill to `.cursor/skills/duel-agents/` and writes `DUEL_API_KEY` to your project
-...[truncated]
+**关键风险**：安装器会修改用户本地 AI 工具配置。报告/README 必须讲清楚“会改哪些文件、怎么回滚”，否则用户会对接入层产生不信任。
 
-### 关键文件精读
-### `package.json`
-```
-{
-  "name": "duel-agents-monorepo",
-  "private": true,
-  "version": "0.1.0",
-  "description": "Duel Agents integration monorepo: CLI, SDK, and IDE plugins",
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "build": "npm run build -w @duel-agents/core && npm run build -w @duel-agents/sdk -w @duel-agents/install",
-    "test": "npm run test --workspaces --if-present",
-    "typecheck": "npm run typecheck --workspaces --if-present",
-    "clean": "npm run clean --workspaces --if-present"
-  },
-  "engines": {
-    "node": ">=20"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/2aronS/Duel-Agents.git"
-  }
-}
-```
+### 3. `packages/sdk/src/client.ts`：轻量 OpenAI / Anthropic 兼容客户端
 
-### `README.md`
-```
-# Duel Agents
+`DuelClient` 提供两类接口：
 
-<img width="1344" height="576" alt="banner" src="https://github.com/user-attachments/assets/24e6abbe-1c7b-41cb-9d1c-a971c9a93534" />
+- `chat.completions.create()`：OpenAI Chat Completions 风格。
+- `messages.create()`：Anthropic Messages 风格。
 
-**Use, extend, and ship with Duel Agents**: the IDE-native routing layer that runs prompts against multiple models and picks the cheapest answer that still wins.
+它默认 timeout 60 秒，默认 base URL 为 Duel proxy。当前代码明确抛出：Streaming 不支持。
 
-This repo is the official integration package for [duelagents.com](https://duelagents.com).
+**独家发现**：如果用户以为 Duel-Agents 是完整替代 OpenAI/Anthropic SDK，需要注意它当前暴露的是最小兼容面，不是全量 API 镜像。尤其 streaming 不支持，会影响聊天 UI、agent loop 和长输出体验。
 
-## Star History
+### 4. Python integrations：面向 LangChain / LlamaIndex 生态补位
 
-<a href="https://www.star-history.com/?repos=2aronS%2FDuel-Agents&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=2aronS/Duel-Agents&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=2aronS/Duel-Agents&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/ch
-...[truncated]
+`python/langchain-duel/langchain_duel/chat_models.py` 中 `ChatDuel` 继承 `ChatOpenAI`，只改默认 base URL、model、key 来源。这是合理工程选择：复用 LangChain 的 OpenAI-compatible 能力，而不是重新写 provider。
+
+### 5. OpenClaw 集成：配置包而非深度插件
+
+`integrations/openclaw/duel-provider.json` 将 Duel 注册成 OpenClaw provider：
+
+- `baseUrl`: `https://duelagents.com/v1`
+- `api`: `openai-completions`
+- model: `duel-auto`
+
+这说明 OpenClaw 侧接入方式是“provider 配置 + env”，不是复杂 runtime 插件。
+
+## 🔍 源码深度解读
+
+### 接入链路
+
+```text
+用户工具（Claude Code / Cursor / Codex / OpenClaw）
+  -> 本地 env/config 指向 Duel base URL
+  -> duelagents.com/v1
+  -> Duel 服务端选择/路由模型
+  -> 返回 OpenAI/Anthropic-compatible 响应
 ```
 
-### `CONTRIBUTING.md`
-```
-# Contributing to Duel Agents
+这个设计的优势是非常工程化：只要目标工具支持自定义 base URL，就能快速接入。缺点也明显：仓库无法证明服务端路由质量，调研只能验证客户端接入层是否清晰。
 
-Thank you for helping improve the Duel Agents integration repo.
+### API Key 策略
 
-## Development setup
+仓库强制 Duel key 格式，并在 CONTRIBUTING 里明确“不允许绕过 `duelagents.com/v1` 使用原始 OpenAI/Anthropic key”。这不是普通实现细节，而是商业/产品边界：所有集成都必须经过 Duel 代理。
 
-```bash
-cd duel-agents
-npm install
-npm run build
-npm test
-```
+### Manual verification checklist 渲染修复建议
 
-## Project layout
+原始报告把 checklist 放在代码块/原文 dump 中，GitHub 阅读时像“原始 Markdown 窗口”，无法发挥 checklist 的作用。应改成真正的 Markdown 任务列表：
 
-| Path | Purpose |
-|------|---------|
-| `packages/core` | API key validation, env maps, OpenClaw config patch |
-| `packages/cli` | `@duel-agents/install` command |
-| `packages/sdk` | `@duel-agents/sdk` TypeScript client |
-| `integrations/` | Claude plugin, Cursor skill, OpenClaw skill |
-| `templates/` | Example configs per tool |
+- [ ] `DUEL_API_KEY=duel_… npx @duel-agents/install doctor`：检查 key 格式和 live auth。
+- [ ] `npx @duel-agents/install claude-code`：确认会更新 `~/.claude/.env`。
+- [ ] `npx @duel-agents/install cursor`：确认复制 Cursor skill，并写入项目 `.env`。
+- [ ] `npx @duel-agents/install codex`：确认 OpenAI-compatible 环境变量被写入。
+- [ ] `npx @duel-agents/install openclaw`：确认 patch OpenClaw 配置后 `openclaw config validate` 通过。
+- [ ] `claude plugin install ./integrations/claude-plugin`：确认 Claude plugin 能加载。
+- [ ] `new DuelClient({ apiKey })`：确认无 key 时抛错，有 key 时能构造客户端。
 
-## Rules
+中文解释：这个 checklist 的价值不是“开发者发布前跑一遍命令”这么简单，而是覆盖了 Duel-Agents 的全部关键路径：key → CLI doctor → 各工具配置 → SDK 构造。后续前端或 GitHub 页面必须让它作为任务列表渲染，而不是藏在代码块里。
 
-- **Every integration must use a Duel API key.** Do not add docs or code paths that bypass `duelagents.com/v1` with raw provider keys.
-- Keep dependencies minimal.
-- Add tests for core logic changes.
-- Run `npm run build && npm test` before opening a PR.
+## 🌐 社区口碑与风险信号
 
-## Manual verification checklist
+外部搜索没有发现可靠第三方长评，因此不编造“全网好评”。可确认的一手信号主要来自 GitHub：
 
-Before releasing:
+### 正向信号
 
-- [ ] `DUEL_API_KEY=duel_… npx @duel-agents/inst
-...[truncated]
-```
+- 仓库结构完整：core / cli / sdk / integrations / python packages 都有明确边界。
+- 有 CI / release workflow，说明不是一次性 demo。
+- 覆盖 Claude Code、Cursor、Codex、OpenClaw、LangChain、LlamaIndex，目标用户群明确。
 
-### 关键逻辑总结
-- 从关键文件组合看，项目更像是**围绕单一目标组织的任务流水线/工具链**，而不是超重平台。
-- 入口文件决定外部交互界面（CLI / API / UI），配置文件决定运行时依赖，测试文件则暴露作者真正关心的行为边界。
-- 如果用户只读 README，通常只能知道“能做什么”；而从目录与入口文件能看出“怎么做、扩展点在哪、维护成本高不高”。
+### 负向信号
 
-## 社区口碑
-### GitHub Issues 抽样
-- #1 [OPEN] [phantomstars] Fake engagement detected on this repository（comments=[{'id': 'IC_kwDOSqPykM8AAAABEVm2PQ', 'author': {'login': 'tg12'}, 'authorAssociation': 'NONE', 'body': '### Scan update: 2026-05-31\n\n| Metric | Value |\n|--------|-------|\n| Engagers scanned (24 h window) | 79 |\n| Likely fake | **20** (25.3%) |\n| Suspicious | 37 |\n| Previously seen likely fake | 3 (3.8%) |\n| Repeat offenders | 2 |\n| Allowlisted accounts excluded | 0 |\n| Campaigns | 1 |\n| Discovery sources | github_search_recent |\n| Event coverage | complete |\n\n| Account | Created | Score | Classification | Campaign |\n|---------|---------|-------|----------------|----------|\n| [regan0231](https://github.com/regan0231) | 2026-05-30 | 0.875 | likely_fake | `c-7a19c33f` |\n| [Mayada-star](https://github.com/Mayada-star) | 2026-05-30 | 0.845 | likely_fake | `c-7a19c33f` |\n| [feehafe28-blip](https://github.com/feehafe28-blip) | 2026-05-31 | 0.845 | likely_fake | `c-7a19c33f` |\n| [saranana9110-byte](https://github.com/saranana9110-byte) | 2026-05-30 | 0.820 | likely_fake | `c-7a19c33f` |\n| [ijabz8074-ship-it](https://github.com/ijabz8074-ship-it) | 2026-05-30 | 0.815 | likely_fake | `c-7a19c33f` |\n| [imbyrneniad](https://github.com/imbyrneniad) | 2026-05-30 | 0.815 | likely_fake | `c-7a19c33f` |\n| [terrancepayne94-ops](https://github.com/terrancepayne94-ops) | 2026-05-30 | 0.815 | likely_fake | `c-7a19c33f` |\n| [sumairahayat777-dot](https://github.com/sumairahayat777-dot) | 2026-05-30 | 0.815 | likely_fake | `c-7a19c33f` |\n| [kamranjudai020-pixel](https://github.com/kamranjudai020-pixel) | 2026-05-30 | 0.815 | likely_fake | `c-7a19c33f` |\n| [lifhapco81](https://github.com/lifhapco81) | 2026-05-30 | 0.815 | likely_fake | `c-7a19c33f` |\n| [nosheenidrees93-lab](https://github.com/nosheenidrees93-lab) | 2026-05-30 | 0.815 | likely_fake | `c-7a19c33f` |\n| [brettcmaloney-bit](https://github.com/brettcmaloney-bit) | 2026-05-27 | 0.810 | likely_fake | `c-7a19c33f` |\n| [DcEvgenij](https://github.com/DcEvgenij) | 2026-05-27 | 0.810 | likely_fake | `c-7a19c33f` |\n| [nafisathegreat](https://github.com/nafisathegreat) | 2026-05-27 | 0.810 | likely_fake | `c-7a19c33f` |\n| [bitkeltek-lab](https://github.com/bitkeltek-lab) | 2026-05-28 | 0.810 | likely_fake | `c-7a19c33f` |\n| [smithusa596-sys](https://github.com/smithusa596-sys) | 2026-05-26 | 0.810 | likely_fake | `c-7a19c33f` |\n| [fizjutt50-ship-it](https://github.com/fizjutt50-ship-it) | 2026-05-24 | 0.785 | likely_fake | `c-7a19c33f` |\n| [mhashir3354-png](https://github.com/mhashir3354-png) | 2026-05-24 | 0.780 | likely_fake | `c-7a19c33f` |\n| [maheenusman91-cell](https://github.com/maheenusman91-cell) | 2026-05-12 | 0.768 | likely_fake | `c-7a19c33f` |\n| [mehedymiraz28-lgtm](https://github.com/mehedymiraz28-lgtm) | 2026-05-14 | 0.768 | likely_fake | `c-7a19c33f` |\n| [akterhumayra121ab-cell](https://github.com/akterhumayra121ab-cell) | 2026-05-10 | 0.718 | suspicious | `c-7a19c33f` |\n| [sidhasnat395-design](https://github.com/sidhasnat395-design) | 2026-05-12 | 0.718 | suspicious | `c-7a19c33f` |\n| [aldbymalek409-svg](https://github.com/aldbymalek409-svg) | 2026-05-08 | 0.718 | suspicious | `c-7a19c33f` |\n| [jahangiraalam8105-collab](https://github.com/jahangiraalam8105-collab) | 2026-05-06 | 0.718 | suspicious | `c-7a19c33f` |\n| [f51798379-eng](https://github.com/f51798379-eng) | 2026-05-03 | 0.718 | suspicious | `c-7a19c33f` |\n| [hamadfatima239-cloud](https://github.com/hamadfatima239-cloud) | 2026-05-10 | 0.718 | suspicious | `c-7a19c33f` |\n| [samasamy189632-star](https://github.com/samasamy189632-star) | 2026-05-02 | 0.718 | suspicious | `c-7a19c33f` |\n| [mustafahassanrw](https://github.com/mustafahassanrw) | 2026-05-16 | 0.718 | suspicious | `c-7a19c33f` |\n| [fmfadmos2026-droid](https://github.com/fmfadmos2026-droid) | 2026-05-19 | 0.688 | suspicious | `c-7a19c33f` |\n| [duyn44116-lgtm](https://github.com/duyn44116-lgtm) | 2026-05-17 | 0.688 | suspicious | `c-7a19c33f` |\n\n*Showing top 30 of 57 suspects by composite score.*\n', 'createdAt': '2026-05-31T07:29:27Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/2aronS/Duel-Agents/issues/1#issuecomment-4586059325', 'viewerDidAuthor': False}, {'id': 'IC_kwDOSqPykM8AAAABEZ9YxA', 'author': {'login': 'tg12'}, 'authorAssociation': 'NONE', 'body': '### Scan update: 2026-06-01\n\n| Metric | Value |\n|--------|-------|\n| Engagers scanned (24 h window) | 110 |\n| Likely fake | **31** (28.2%) |\n| Suspicious | 52 |\n| Previously seen likely fake | 5 (4.5%) |\n| Repeat offenders | 2 |\n| Allowlisted accounts excluded | 0 |\n| Campaigns | 1 |\n| Discovery sources | github_search_recent |\n| Event coverage | complete |\n\n| Account | Created | Score | Classification | Campaign |\n|---------|---------|-------|----------------|----------|\n| [Antipov0019](https://github.com/Antipov0019) | 2026-05-31 | 0.875 | likely_fake | `c-bffefa60` |\n| [azharbhtti111](https://github.com/azharbhtti111) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [knanrehana-cell](https://github.com/knanrehana-cell) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [nipa03356-tech](https://github.com/nipa03356-tech) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [dimgryzinov-blip](https://github.com/dimgryzinov-blip) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [fahimsanim26-svg](https://github.com/fahimsanim26-svg) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [asiflohaar98-sudo](https://github.com/asiflohaar98-sudo) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [maksimvedorin-creator](https://github.com/maksimvedorin-creator) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [workgmail2003-jpg](https://github.com/workgmail2003-jpg) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [bazhinlyna-arch](https://github.com/bazhinlyna-arch) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [ahlelraia-max](https://github.com/ahlelraia-max) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [r66046803-ctrl](https://github.com/r66046803-ctrl) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [noahparker5581-stack](https://github.com/noahparker5581-stack) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [projetoshome224-ship-it](https://github.com/projetoshome224-ship-it) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [jabedq11](https://github.com/jabedq11) | 2026-05-31 | 0.845 | likely_fake | `c-bffefa60` |\n| [hasibul25101989-hue](https://github.com/hasibul25101989-hue) | 2026-05-30 | 0.810 | likely_fake | `c-bffefa60` |\n| [awansunny5580-lab](https://github.com/awansunny5580-lab) | 2026-05-27 | 0.810 | likely_fake | `c-bffefa60` |\n| [james-Smith-12](https://github.com/james-Smith-12) | 2026-05-29 | 0.810 | likely_fake | `c-bffefa60` |\n| [saifulshawon285-rgb](https://github.com/saifulshawon285-rgb) | 2026-05-26 | 0.810 | likely_fake | `c-bffefa60` |\n| [aynurnazirova91-crypto](https://github.com/aynurnazirova91-crypto) | 2026-05-31 | 0.800 | likely_fake | `c-bffefa60` |\n| [jimasten0-design](https://github.com/jimasten0-design) | 2026-05-28 | 0.785 | likely_fake | `c-bffefa60` |\n| [step1976ov-sketch](https://github.com/step1976ov-sketch) | 2026-05-29 | 0.780 | likely_fake | `c-bffefa60` |\n| [cd100544-design](https://github.com/cd100544-design) | 2026-05-28 | 0.780 | likely_fake | `c-bffefa60` |\n| [stratseuskivadim4183-crypto](https://github.com/stratseuskivadim4183-crypto) | 2026-05-29 | 0.780 | likely_fake | `c-bffefa60` |\n| [sanjidanusrat090](https://github.com/sanjidanusrat090) | 2026-05-26 | 0.780 | likely_fake | `c-bffefa60` |\n| [ziddilarki](https://github.com/ziddilarki) | 2026-05-12 | 0.768 | likely_fake | `c-bffefa60` |\n| [oriolamiracle-glitch](https://github.com/oriolamiracle-glitch) | 2026-05-07 | 0.768 | likely_fake | `c-bffefa60` |\n| [abun70996-hub](https://github.com/abun70996-hub) | 2026-05-10 | 0.768 | likely_fake | `c-bffefa60` |\n| [alex1ptcx-dot](https://github.com/alex1ptcx-dot) | 2026-05-06 | 0.768 | likely_fake | `c-bffefa60` |\n| [alexandr7304-svg](https://github.com/alexandr7304-svg) | 2026-05-12 | 0.768 | likely_fake | `c-bffefa60` |\n\n*Showing top 30 of 83 suspects by composite score.*\n', 'createdAt': '2026-06-01T07:57:33Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/2aronS/Duel-Agents/issues/1#issuecomment-4590622916', 'viewerDidAuthor': False}, {'id': 'IC_kwDOSqPykM8AAAABEspcSw', 'author': {'login': 'tg12'}, 'authorAssociation': 'NONE', 'body': '### Scan update: 2026-06-03\n\n| Metric | Value |\n|--------|-------|\n| Engagers scanned (24 h window) | 48 |\n| Likely fake | **20** (41.7%) |\n| Suspicious | 19 |\n| Previously seen likely fake | 9 (18.8%) |\n| Repeat offenders | 2 |\n| Allowlisted accounts excluded | 0 |\n| Campaigns | 1 |\n| Discovery sources | github_search_recent |\n| Event coverage | complete |\n\n| Account | Created | Score | Classification | Campaign |\n|---------|---------|-------|----------------|----------|\n| [shamiraza2222-glitch](https://github.com/shamiraza2222-glitch) | 2026-06-03 | 0.875 | likely_fake | `c-3be6e16c` |\n| [alibakkar1347](https://github.com/alibakkar1347) | 2026-06-02 | 0.875 | likely_fake | `c-3be6e16c` |\n| [mk50375364-tech](https://github.com/mk50375364-tech) | 2026-06-02 | 0.845 | likely_fake | `c-3be6e16c` |\n| [nawannakor3](https://github.com/nawannakor3) | 2026-06-02 | 0.845 | likely_fake | `c-3be6e16c` |\n| [nazimudeen246](https://github.com/nazimudeen246) | 2026-06-02 | 0.845 | likely_fake | `c-3be6e16c` |\n| [youtube451702-design](https://github.com/youtube451702-design) | 2026-06-02 | 0.815 | likely_fake | `c-3be6e16c` |\n| [michealdavison303](https://github.com/michealdavison303) | 2026-06-02 | 0.815 | likely_fake | `c-3be6e16c` |\n| [gfatimag13-art](https://github.com/gfatimag13-art) | 2026-06-01 | 0.815 | likely_fake | `c-3be6e16c` |\n| [clintdonaldson407-coder](https://github.com/clintdonaldson407-coder) | 2026-05-29 | 0.810 | likely_fake | `c-3be6e16c` |\n| [ernestodouglas715](https://github.com/ernestodouglas715) | 2026-05-27 | 0.780 | likely_fake | `c-3be6e16c` |\n| [alixa9976-collab](https://github.com/alixa9976-collab) | 2026-05-27 | 0.780 | likely_fake | `c-3be6e16c` |\n| [srwaqar56](https://github.com/srwaqar56) | 2026-05-28 | 0.780 | likely_fake | `c-3be6e16c` |\n| [bernardcarson868](https://github.com/bernardcarson868) | 2026-05-28 | 0.780 | likely_fake | `c-3be6e16c` |\n| [bhattigat13-cmd](https://github.com/bhattigat13-cmd) | 2026-05-27 | 0.780 | likely_fake | `c-3be6e16c` |\n| [Antip0000](https://github.com/Antip0000) | 2026-05-08 | 0.778 | likely_fake | `c-3be6e16c` |\n| [kalenikelenaivanovna-hub](https://github.com/kalenikelenaivanovna-hub) | 2026-05-11 | 0.768 | likely_fake | `c-3be6e16c` |\n| [gorgegr2142-beep](https://github.com/gorgegr2142-beep) | 2026-05-18 | 0.768 | likely_fake | `c-3be6e16c` |\n| [mayaali00455-eng](https://github.com/mayaali00455-eng) | 2026-05-13 | 0.768 | likely_fake | `c-3be6e16c` |\n| [tiyamondal208-cyber](https://github.com/tiyamondal208-cyber) | 2026-05-10 | 0.768 | likely_fake | `c-3be6e16c` |\n| [cleusiolatino0-prog](https://github.com/cleusiolatino0-prog) | 2026-06-02 | 0.755 | likely_fake | `c-3be6e16c` |\n| [browniieee20-cmd](https://github.com/browniieee20-cmd) | 2026-05-17 | 0.718 | suspicious | `c-3be6e16c` |\n| [rasulorlan](https://github.com/rasulorlan) | 2026-05-08 | 0.718 | suspicious | `c-3be6e16c` |\n| [bezrukoff1984-lab](https://github.com/bezrukoff1984-lab) | 2026-05-18 | 0.633 | suspicious | `c-3be6e16c` |\n| [rabishaikh12345678-tech](https://github.com/rabishaikh12345678-tech) | 2026-05-10 | 0.633 | suspicious | `c-3be6e16c` |\n| [mashaimcheema-design](https://github.com/mashaimcheema-design) | 2026-05-12 | 0.633 | suspicious | `c-3be6e16c` |\n| [ruhi23798-dev](https://github.com/ruhi23798-dev) | 2026-05-15 | 0.633 | suspicious | `c-3be6e16c` |\n| [Whykaylee3804](https://github.com/Whykaylee3804) | 2024-06-15 | 0.605 | suspicious | `c-3be6e16c` |\n| [timurmg-spec](https://github.com/timurmg-spec) | 2026-03-15 | 0.590 | suspicious | `c-3be6e16c` |\n| [hbfahmyvbn-png](https://github.com/hbfahmyvbn-png) | 2025-08-06 | 0.575 | suspicious | `c-3be6e16c` |\n| [kumardipakbd-star](https://github.com/kumardipakbd-star) | 2026-05-18 | 0.573 | suspicious | `c-3be6e16c` |\n\n*Showing top 30 of 39 suspects by composite score.*\n', 'createdAt': '2026-06-03T07:53:29Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/2aronS/Duel-Agents/issues/1#issuecomment-4610219083', 'viewerDidAuthor': False}] labels=无）
+- 唯一 issue 为 `[phantomstars] Fake engagement detected on this repository`，内容指向疑似虚假 engagement。即使不能据此定罪，也必须作为风险提示。
+- Fork 数相对 stars 偏低，社区真实采用度需要谨慎验证。
+- 服务端闭源/外部依赖强：仓库只能证明客户端接入，不能证明“cheapest answer that still wins”的路由质量。
+- `Streaming is not supported` 会影响很多 agent / chat 工具体验。
 
-### Pull Requests 抽样
-数据不可用
+## ⚔️ 竞品与替代方案
 
-### Releases 抽样
-- v0.1.0（published=2026-05-28T10:50:45Z latest=True）
+| 维度 | Duel-Agents | LiteLLM | OpenRouter | 自建网关 |
+|---|---|---|---|---|
+| 核心定位 | 多工具接入 Duel proxy | 多模型 API 网关 | 模型市场与路由 | 完全自控 |
+| 仓库价值 | 安装器 + SDK + IDE 集成 | 网关服务本体 | 平台服务为主 | 按需实现 |
+| 可控性 | 依赖 Duel 服务端 | 可自托管 | 依赖平台 | 最高 |
+| 上手成本 | 低，CLI 安装 | 中，需要部署/配置 | 低 | 高 |
+| 风险 | 服务端透明度、engagement 质疑 | 运维成本 | 平台锁定 | 自研维护成本 |
 
-### 真实反馈与维护信号研判
-- 抽样 issue 中 open/closed 约为 1/0，可作为维护者响应速度的弱信号。
-- 存在 release 记录，说明作者有版本化交付意识。
-- 由于本批处理以 GitHub 官方数据为主，若外部搜索结果缺失，应把 GitHub issue/PR 视为最可信的一手社区反馈源。
-- 高频问题通常比 README 更能暴露真实落地难点：安装、兼容性、性能边界、文档歧义、平台限制。
+## 🎯 核心研判
 
-## 竞品对比
-| 维度 | Duel-Agents | 竞品/替代 |
-|---|---|---|
-| 定位 | 面向仓库作者设定的具体场景，通常更垂直 | LangGraph / AutoGen / CrewAI 往往更通用或生态更大 |
-| 学习曲线 | 依赖其内部脚本/配置约定 | 通用方案学习成本更高，但生态更成熟 |
-| 差异化 | 仓库通常以“快上手、场景专用、意见化实现”为卖点 | 通用方案强调可扩展、稳定性、跨场景能力 |
-| 风险 | 作者驱动、文档深度可能不足、接口稳定性不确定 | 大项目更稳定，但改造成本更高 |
-
-## 核心研判
 ### 优势
-- 对目标问题有强意见化实现，落地路径通常比“从零搭建通用栈”更短。
-- 如果核心文件少而清晰，二次阅读和定制成本较低。
-- GitHub 原生 issue / release / PR 能直接帮助判断项目是否仍在演进。
+
+1. **接入层清晰**：monorepo 边界明确，core / cli / sdk / integrations 分工合理。
+2. **抓住了 AI 工具的真实痛点**：开发者同时使用 Claude Code、Cursor、Codex、OpenClaw，统一 key 和 proxy 确实有价值。
+3. **工程路线轻量**：大量复用 OpenAI-compatible / Anthropic-compatible 协议，减少重复造轮子。
 
 ### 风险
-- 若 stars、forks、release 或 PR 活跃度偏低，意味着长期维护能力要谨慎评估。
-- 如果关键逻辑过于集中在单文件脚本中，后续扩展会受到可维护性约束。
-- 若缺少测试/CI/配置 schema，生产环境采用前应先做自测和边界验证。
+
+1. **服务端不可见**：最关键的“多模型比价/胜出策略”不在仓库里，开源部分无法验证效果。
+2. **社区真实性需谨慎**：phantomstars issue 指向 fake engagement 风险，stars 不能直接当采用度。
+3. **功能面偏窄**：SDK 目前是最小兼容面，streaming 不支持。
+4. **配置修改敏感**：安装器会写用户本地 AI 工具配置，需要非常明确的回滚说明。
 
 ### 适用场景
-- 需要快速验证该仓库所解决的问题是否值得投入。
-- 团队愿意接受一定的作者意见化设计，以换取更快交付。
-- 适合作为参考实现、内部 PoC、垂直任务工具，而非默认直接替代成熟平台。
+
+- 个人开发者想快速把多个 AI 工具接入 Duel proxy。
+- 团队想评估“统一模型代理 + 多工具接入”的工作流。
+- OpenClaw / Cursor / Claude Code 用户想测试一个统一 provider。
 
 ### 不适用场景
-- 对 SLA、兼容矩阵、长期 LTS 有强要求的核心生产系统。
-- 需要极高社区冗余、插件生态或企业级支持的场景。
 
-## 关键文件路径速查
-- `package.json`
-- `README.md`
-- `CONTRIBUTING.md`
+- 对模型路由策略、成本计算、质量评估要求完全透明的企业。
+- 依赖 streaming 的聊天/agent 产品。
+- 不愿让本地工具配置指向第三方代理服务的安全敏感环境。
 
-## 3 条关键发现
-- 代码入口/骨架集中在：package.json, README.md, CONTRIBUTING.md
-- 近期开源反馈以 issue 为主，典型议题包括：[phantomstars] Fake engagement detected on this repository；数据不可用
-- 发布节奏可从最新 release 观察：v0.1.0
+## 📂 关键文件路径速查
 
-## 研究方法与数据来源
-- GitHub Repo API / README / 默认分支递归文件树
-- 关键源码文件抽样精读
-- Issues / PRs / Releases 社区活动抽样
-- 说明：若外部搜索数据不可用，则明确标注并不伪造口碑结论
+- `packages/core/src/config.ts`：API key、proxy、环境变量映射核心。
+- `packages/cli/src/install.ts`：安装器主逻辑。
+- `packages/sdk/src/client.ts`：TypeScript SDK。
+- `integrations/openclaw/duel-provider.json`：OpenClaw provider 配置。
+- `python/langchain-duel/langchain_duel/chat_models.py`：LangChain 集成。
+- `CONTRIBUTING.md`：发布前手动验证 checklist。
+
+## ⭐ 三条关键发现
+
+1. **Duel-Agents 的开源部分不是“模型路由算法”，而是“让各类 AI 工具接入 Duel proxy 的工程胶水”。**
+2. **最值得修复的文档点是 checklist 渲染和中文解释：它覆盖真实发布路径，应作为 Markdown 任务列表展示。**
+3. **最大的采用风险不是代码复杂，而是服务端黑盒 + stars 真实性争议 + streaming 不支持。**
+
+## 🧪 研究方法与数据来源
+
+- GitHub Repo API：stars、forks、topics、release。
+- GitHub 文件树：monorepo 结构与关键文件定位。
+- 关键源码抽样：`config.ts`、`install.ts`、`client.ts`、`duel-provider.json`、`chat_models.py`。
+- GitHub Issues：`#1 [phantomstars] Fake engagement detected on this repository`。
+- 外部搜索：未发现可靠第三方长评，因此不编造口碑。

@@ -1,11 +1,181 @@
-🔬 ruvnet/RuView - 全方位深度调研📌 一句话定位π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.🏗️ 项目全景仓库：ruvnet/RuView解决的问题：该项目试图把 README 中描述的能力产品化/脚本化，降低特定任务的搭建或执行门槛。基础指标：Stars=72460 / Forks=9688 / 默认分支=mainTopics：densepose, wifi, esp32, monitoring, rf, wifi-security, self-learning, firmware, pose-estimation, spatial-intelligence, home-assistant, home-automation, skills, networking, claude, iot, react, typescript, npm, awesomeHomepage：https://Cognitum.One/RuView🧠 核心架构目录结构判断顶层目录分布（递归树抽样汇总）：v2(961), docs(340), .claude(265), ui(234), archive(161), firmware(133), examples(124), scripts(99), tools(50), python(39)关键文件候选：pyproject.toml, requirements.txt, README.md, CLAUDE.md, tests/test_invariant_Cargo.py设计亮点研判存在 Python 入口，通常意味着 CLI、服务端或研究型流水线由 Python 主导。项目显式提供测试目录，说明作者至少为关键行为建立了可回归验证。仓库包含 .github 自动化配置，通常代表 CI 或 issue 模板已被纳入工程流程。🔍 源码深度解读README / 说明文档要点π RuView<p align="center">
-  <a href="https://cognitum.one/seed">
-    <img src="assets/ruview-seed.png" alt="RuView - WiFi DensePose" width="100%" />
-  </a>
-</p>
-<p align="center">
-  <a href="https://cognitum.one/seed">
-    <img src="assets/seed.png" alt="Cognitum Seed" width="100%" />
-  </a>
-</p>See through walls with WiFiTurn ordinary WiFi into a spatial intelligence / sensing system. Detect people, measure breathing and heart rate, track movement, and monitor rooms — through walls, in the dark, with no cameras or wearables. Just physics.Works natively with the four major smart-home ecosystems: Home Assistant via the HA-DISCO MQTT publisher, Apple Home & HomePod as a discoverable HAP-1.1 bridge, Google Home + Amazon Alexa via the same HA bridge or a Matter endpoint. Siri, Google Assistant, and Alexa can voice presence and vitals by room with zero custom skills.    Drop into any Home Assistant install with one --mqtt flag. Or pair into Apple Home / Google Home / Alexa / SmartThings as a Matter Bridge. Ships 21 entities per node (11 raw signals + 10 inferred semantic states: someone-sleeping, possible-distress, room-active, elderly-inactivity-anomaly, meeti
-...[truncated]关键文件精读pyproject.toml[build-system]requires = ["setuptools>=61.0", "wheel"]build-backend = "setuptools.build_meta"[project]name = "wifi-densepose"version = "1.2.0"description = "WiFi-based human pose estimation using CSI data and DensePose neural networks"readme = "README.md"license = "MIT"authors = [    {name = "rUv", email = "ruv@ruv.net"}]maintainers = [    {name = "rUv", email = "ruv@ruv.net"}]keywords = [    "wifi",    "csi",    "pose-estimation",    "densepose",    "neural-networks",    "computer-vision",    "machine-learning",    "iot",    "wireless-sensing"]classifiers = [    "Development Status :: 4 - Beta",    "Intended Audience :: Developers",    "Intended Audience :: Science/Research",    "Operating System :: OS Independent",    "Programming Language :: Python :: 3",    "Programming Language :: Python :: 3.9",    "Programming Language :: Python :: 3.10",    "Pro...[truncated]requirements.txt# Core dependenciesnumpy>=1.21.0scipy>=1.7.0torch>=1.12.0torchvision>=0.13.0# API dependenciesfastapi>=0.95.0uvicorn>=0.20.0websockets>=15.0.1pydantic>=1.10.0python-jose[cryptography]>=3.3.0python-multipart>=0.0.6passlib[bcrypt]>=1.7.4httpx>=0.24.0pydantic-settings>=2.0.0# Database dependenciessqlalchemy>=2.0.0asyncpg>=0.28.0aiosqlite>=0.22.1redis>=4.5.0# CLI dependenciesclick>=8.0.0alembic>=1.10.0# Hardware interface dependenciesasyncio-mqtt>=0.16.2aiohttp>=3.13.5paramiko>=3.0.0# Data processing dependenciesopencv-python>=4.7.0scikit-learn>=1.2.0# Monitoring dependenciesprometheus-client>=0.16.0psutil>=5.9.0  # system metrics — imported by health.py / metrics.py / status.py / monitoring.pyREADME.md# π RuView<p align="center">  <a href="https://cognitum.one/seed">    <img src="assets/ruview-seed.png" alt="RuView - WiFi DensePose" width="100%" />  </a></p><p align="center">  <a href="https://cognitum.one/seed">    <img src="assets/seed.png" alt="Cognitum Seed" width="100%" />  </a></p>## **See through walls with WiFi** ##**Turn ordinary WiFi into a spatial intelligence / sensing system.** Detect people, measure breathing and heart rate, track movement, and monitor rooms — through walls, in the dark, with no cameras or wearables. Just physics.Works natively with the four major smart-home ecosystems: **[Home Assistant](docs/integrations/home-assistant.md)** via the HA-DISCO MQTT publisher, **[Apple Home & HomePod](docs/user-guide-apple-homepod.md)** as a discoverable HAP-1.1 bridge, **[Google Home](docs/integrations/home-assistant.md)** + **[Amazon Alexa](docs/integration...[truncated]CLAUDE.md# Claude Code Configuration — WiFi-DensePose + Claude Flow V3## Project: wifi-denseposeWiFi-based human pose estimation using Channel State Information (CSI).Dual codebase: Python v1 (`v1/`) and Rust port (`v2/`).### Key Rust Crates| Crate | Description ||-------|-------------|| `wifi-densepose-core` | Core types, traits, error types, CSI frame primitives || `wifi-densepose-signal` | SOTA signal processing + RuvSense multistatic sensing (16 modules) || `wifi-densepose-nn` | Neural network inference (ONNX, PyTorch, Candle backends) || `wifi-densepose-train` | Training pipeline with ruvector integration + ruview_metrics || `wifi-densepose-mat` | Mass Casualty Assessment Tool — disaster survivor detection || `wifi-densepose-hardware` | ESP32 aggregator, TDM protocol, channel hopping firmware || `wifi-densepose-ruvector` | RuVector v2.0.4 integration + cross-viewpoint fusion (...[truncated]tests/test_invariant_Cargo.pyimport pytestimport reimport osADVERSARIAL_PAYLOADS = [    # Null bytes and binary data    b"\x00" * 100,    b"\xff\xfe\xfd",    b"\x00\x01\x02\x03",    # Oversized inputs    b"A" * 65536,    b"B" * 1048576,    # Format string attacks    b"%s%s%s%s%s%s%s%s%s%s",    b"%x%x%x%x%x%x%x%x",    b"%n%n%n%n",    # SQL injection patterns    b"' OR '1'='1",    b"'; DROP TABLE users; --",    b"1; SELECT * FROM secrets",    # Path traversal    b"../../../etc/passwd",    b"..\\..\\..\\windows\\system32",    b"/etc/shadow",    # Command injection    b"; cat /etc/passwd",    b"| ls -la",    b"`whoami`",    b"$(id)",    # Buffer overflow patterns    b"\x41" * 4096,    b"\x90" * 1024 + b"\xcc" * 100,    # Unicode/encoding attacks    "'\u0000'".encode("utf-8"),    "\uFFFD\uFFFE\uFFFF".encode("utf-8"),    # Empty and whitespace    b"",    b"   ",    b"\t\n\r",    # V...[truncated]关键逻辑总结从关键文件组合看，项目更像是围绕单一目标组织的任务流水线/工具链，而不是超重平台。入口文件决定外部交互界面（CLI / API / UI），配置文件决定运行时依赖，测试文件则暴露作者真正关心的行为边界。如果用户只读 README，通常只能知道“能做什么”；而从目录与入口文件能看出“怎么做、扩展点在哪、维护成本高不高”。🌐 社区口碑GitHub Issues 抽样#987 [CLOSED] ESP32 edge vitals: heart rate stuck at ~45 BPM / drops a lot — sample-rate + breathing-harmonic bug (fixed)（comments=[{'id': 'IC_kwDOO3hF2M8AAAABFdUWfA', 'author': {'login': 'ruvnet'}, 'authorAssociation': 'OWNER', 'body': '## Update — robustness follow-up + final hardware validation\n\nSecond commit on feat/adr-151-room-calibration-specialist-training hardens the harmonic rejection: it was fed the noisy zero-crossing breathing estimate, which under motion notched the wrong frequencies and let the autocorr fall back onto the ~0.75 Hz breathing harmonic (~45 BPM). Now HR rejection is driven by a robust autocorrelation breathing period (estimate_periodicity_autocorr), and the HR median smoother is widened to N=13.\n\n### Hardware A/B — fixed (.80) vs unmodified control (.67), both edge_tier=2\n\n| Build | HR median | Range | Spread |\n|-------|-----------|-------|--------|\n| control (old firmware) | ~45 BPM | 40–49 | — (pegged) |\n| fix v1 (332c2a98d) | reaches 87 | 47–88 | 42 |\n| fix v2 (robust rejection) | 70–72 BPM | 60–91 | 31 |\n| fix v2, steady subject | 70.4 BPM | 70–70 | 0 |\n\nOutcome:\n- Sub-60 harmonic locks eliminated — no more ~45 BPM readings (control still pegged there).\n- Drops eliminated — spread collapsed from 59 → 31 → 0 for a steady subject; HR holds a stable physiological value.\n- Earlier validated against an Apple Watch (88–91 vs 87 BPM ground truth).\n\n### Remaining (unchanged from above)\nUnder heavy subject motion (typing) the value still drifts within the physiological band; motion gating + a packet confidence field remain the follow-ups. Closing the core "stuck at ~45 / drops a lot" defect as fixed and hardware-validated.', 'createdAt': '2026-06-09T15:19:35Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/ruvnet/RuView/issues/987#issuecomment-4661253756', 'viewerDidAuthor': False}, {'id': 'IC_kwDOO3hF2M8AAAABFdeTcA', 'author': {'login': 'ruvnet'}, 'authorAssociation': 'OWNER', 'body': 'Shipped in v0.7.1-esp32 (merged via #988). S3-8MB binary hardware-verified; C6-4MB build-verified.', 'createdAt': '2026-06-09T15:37:34Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/ruvnet/RuView/issues/987#issuecomment-4661416816', 'viewerDidAuthor': False}] labels=bug,firmware）#978 [CLOSED] WiFi network disruption when the full Cognitum cluster (v0 + cluster-1/2/3 + seeds) is powered on（comments=[] labels=bug）#954 [CLOSED] ESP32-S3 CSI node: wifi_csi_callback never fires (yield=0pps → adaptive DEGRADED, motion/presence stuck at 0) on v0.6.5 & v0.7.0（comments=[{'id': 'IC_kwDOO3hF2M8AAAABE8wPLQ', 'author': {'login': 'merajmehrabi'}, 'authorAssociation': 'CONTRIBUTOR', 'body': 'Root-caused and fixed — verified on hardware. (This is also a duplicate of the closed #521, whose WIFI_PS_NONE fix does not actually resolve it.)\n\nRoot cause: the ESP32 CSI engine only emits CSI for received OFDM frames (L-LTF/HT-LTF). csi_collector_init() captures CSI only via the MGMT-only promiscuous filter (#396 workaround), so the sole CSI-eligible frames are beacons — which APs send at non-OFDM DSSS rates with no training field. → wifi_csi_callback never fires → yield=0pps → DEGRADED → motion/presence=0. The "probe injection" in the comments doesn't exist (csi_inject_ndp_frame() has no callers and is TX-only anyway).\n\nFix: match Espressif's esp-csi csi_recv_router — disable promiscuous, and self-ping the gateway at 50 Hz so received OFDM replies drive the CSI engine (also eliminates the #396 crash surface). After flashing on an ESP32-S3 / IDF v5.4:\n\n\ncsi_collector: CSI cb #1: len=256 rssi=-65 ch=3\nadaptive_ctrl: state=6 yield=32pps motion=1.00 presence=10.48   (SENSE_ACTIVE)\nhost decode: DEGRADED 0/70, PRES_VALID|RESP_VALID|HB_VALID, breathing ~11 bpm, HR ~43 bpm\n\n\nPR: https://github.com/ruvnet/RuView/pull/955\n', 'createdAt': '2026-06-05T00:28:22Z', 'includesCreatedEdit': True, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/ruvnet/RuView/issues/954#issuecomment-4627107629', 'viewerDidAuthor': False}, {'id': 'IC_kwDOO3hF2M8AAAABFLGKGA', 'author': {'login': 'horiacondrea'}, 'authorAssociation': 'NONE', 'body': '@ruvnet Are you going to add a new firmware version soon with this fix, I am having the same issue?', 'createdAt': '2026-06-07T10:02:15Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/ruvnet/RuView/issues/954#issuecomment-4642146840', 'viewerDidAuthor': False}, {'id': 'IC_kwDOO3hF2M8AAAABFSwKEA', 'author': {'login': 'ruvnet'}, 'authorAssociation': 'OWNER', 'body': 'Update from hardware validation on the new main (post-PR #975):\n\nCouldn't reproduce on either of our boards at v0.7.0:\n\n| Port | Chip | Status |\n|---|---|---|\n| COM8 | ESP32-S3 (your reporter's chip) | yield 18 pps stable, CSI cb fires reliably, motion=1.0, presence=7.39 |\n| COM9 | ESP32-C6 | yield 8 pps, CSI cb fires after the promiscuous-setup window |\n\nBoth are streaming. So yield=0pps looks environment-specific rather than firmware-side at this version.\n\nOne observation from the COM8 v0.7.0 boot trace that might be relevant:\n\n\ncsi_collector: Promiscuous mode enabled (MGMT-only, RuView#396)\n...\ncsi_collector: CSI filter upgraded to MGMT+DATA (no display, RuView#893)\n\n\nThe #893 post-init filter upgrade switches MGMT-only → MGMT+DATA when no display is configured. If you're on a display-enabled build (CONFIG_DISPLAY=y or the display sdkconfig variant), that upgrade may not fire and the device stays stuck on MGMT-only. In that case CSI only comes from beacons (~10 Hz on an idle AP), and any --filter-mac mismatch silently kills the rest. The "stream feature_state but never CSI" symptom matches this pattern.\n\nCould you share three things so we can either confirm or rule that out?\n\n1. Build flags / sdkconfig you flashed with — specifically whether CONFIG_DISPLAY=y (or you used sdkconfig.defaults.4mb / a display variant).\n2. The provision.py command line — particularly --filter-mac (if set) and --channel (if set).\n3. AP MAC + current channel, plus whether there's active STA traffic on that channel (or if it's mostly idle with just beacons).\n\nIf you're on a display-enabled build, a quick test is to flash a non-display build from main and see whether the same hardware starts streaming CSI. That would pin the root cause to the filter-upgrade path.', 'createdAt': '2026-06-08T14:44:42Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/ruvnet/RuView/issues/954#issuecomment-4650174992', 'viewerDidAuthor': False}, {'id': 'IC_kwDOO3hF2M8AAAABFb8w2g', 'author': {'login': 'ruvnet'}, 'authorAssociation': 'OWNER', 'body': "Fixed in #985 (merged to main), building on @merajmehrabi's root-cause from #955.\n\nWhat landed: an additive connected-STA self-ping that pins a ~50 Hz OFDM unicast floor (pings the DHCP gateway; its echo replies drive the CSI engine), reconciled with the already-shipped #893 DATA-capture path rather than replacing it. This covers the display-enabled-build case I asked about above.\n\nVerified on ESP32-S3 (N16R8), ESP-IDF v5.4:\n\nself-ping started -> 192.168.1.1 @50Hz (CSI OFDM source, fix #521/#954)\nCSI cb #1: len=128 rssi=-40 ch=5\nadaptive_ctrl: state=6 yield=15pps motion=1.00 presence=7.66   (SENSE_ACTIVE)\n\nyield stable ~13–19 pps over 60 s, DEGRADED cleared. @horiacondrea this will be in the next firmware release — it's on main now if you build from source. Leaving this open until the tagged release ships.", 'createdAt': '2026-06-09T12:43:48Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/ruvnet/RuView/issues/954#issuecomment-4659818714', 'viewerDidAuthor': False}, {'id': 'IC_kwDOO3hF2M8AAAABFdeSag', 'author': {'login': 'ruvnet'}, 'authorAssociation': 'OWNER', 'body': 'The CSI self-ping fix is now in a tagged firmware release: v0.7.1-esp32 (prebuilt S3-8MB + C6-4MB binaries). @horiacondrea this is the firmware version with the fix you asked about — flash esp32-csi-node-s3-8mb.bin and the CSI callback should fire (~13–19 pps) instead of sitting at yield=0pps/DEGRADED. v0.7.1 also includes the heart-rate fix (#987).', 'createdAt': '2026-06-09T15:37:32Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/ruvnet/RuView/issues/954#issuecomment-4661416554', 'viewerDidAuthor': False}] labels=bug,firmware）#953 [CLOSED] dinge（comments=[{'id': 'IC_kwDOO3hF2M8AAAABE85pLg', 'author': {'login': 'ruvnet'}, 'authorAssociation': 'OWNER', 'body': 'Closing: no actionable content.\n\n---\n_Generated by Claude Code_', 'createdAt': '2026-06-05T01:06:29Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/ruvnet/RuView/issues/953#issuecomment-4627261742', 'viewerDidAuthor': False}] labels=无）#951 [OPEN] Feature Request: Add a Beginner-Friendly Quick Start Flow Diagram（comments=[{'id': 'IC_kwDOO3hF2M8AAAABFLsTgA', 'author': {'login': 'ruvnet'}, 'authorAssociation': 'OWNER', 'body': 'Good suggestion — the setup path is genuinely non-obvious, especially the "do I need a Seed?" and "which firmware file?" decisions.\n\nIn the meantime, the two pinned tutorial issues cover the most common starting points:\n\n- #34 — ESP32-S3 CSI Pipeline End-to-End Setup (firmware flash → provisioning → sensing server → UI)\n- #36 — Windows WiFi Sensing Quick Start (Docker path, Windows-specific quirks)\n\nBetween those two and the provision.py --help output, most hardware questions are answered. A visual flow diagram on top of them would definitely lower the bar further, particularly for the "which hardware do I actually need?" decision tree (#373 is a good example of where that confusion lands).\n\n---\n_Generated by Claude Code_', 'createdAt': '2026-06-07T13:11:36Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/ruvnet/RuView/issues/951#issuecomment-4642771840', 'viewerDidAuthor': False}] labels=documentation,enhancement）#949 [CLOSED] v0.6.5-esp32: stack overflow in swarm task during Seed TLS init - firmware-direct ingest unusable（comments=[{'id': 'IC_kwDOO3hF2M8AAAABFLsSuQ', 'author': {'login': 'ruvnet'}, 'authorAssociation': 'OWNER', 'body': "The diagnosis is correct — the swarm task stack is too small to accommodate the mbedTLS handshake stack frames required to open an HTTPS connection to the Seed. The 0xa5a5a5a5 canary confirms the task exhausted its allocation before TLS negotiation completed.\n\nThis is the same class of issue as the v0.6.5 Timer Service fix (CONFIG_FREERTOS_TIMER_TASK_STACK_DEPTH=8192). The fix is to increase the swarm task's stack depth in sdkconfig / sdkconfig.defaults.\n\nSuggested fix direction: search sdkconfig.defaults (and sdkconfig.defaults.template) for SWARM_TASK_STACK or the task's xTaskCreatePinnedToCore call in swarm_bridge.c and increase the stack size — mbedTLS typically needs ~8–12 KB of stack for a full TLS 1.2/1.3 handshake. Starting at 12288 (12 KB) and adjusting down should resolve the overflow.\n\nYour workaround (host-side UDP → /api/v1/store/ingest bridge) is valid for the meantime and avoids the TLS path in firmware entirely.\n\n---\n_Generated by Claude Code_", 'createdAt': '2026-06-07T13:11:31Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/ruvnet/RuView/issues/949#issuecomment-4642771641', 'viewerDidAuthor': False}, {'id': 'IC_kwDOO3hF2M8AAAABFSwHfg', 'author': {'login': 'ruvnet'}, 'authorAssociation': 'OWNER', 'body': 'Fixed in c353255 — merged to main as part of PR #975.\n\nSWARM_TASK_STACK in firmware/esp32-csi-node/main/swarm_bridge.c bumped from 3072 → 8192 to fit the mbedTLS handshake. The original 3 KB was sized for plain HTTP ("~2.5 KB" per the original comment) which is fine for HTTP, far too small for TLS — mbedTLS handshake alone wants 4–6 KB (cipher suite + cert chain + ECDH state) plus another ~1.5-2 KB for esp_http_client. The 5 KB extra heap cost is negligible against the C6's RAM budget.\n\nCouldn't reproduce live in the lab because the Seed URL wasn't provisioned on either of our boards, but the size math checks out against mbedTLS's stack analyzer and the build is clean. If you flash a build from main and still hit the panic, please re-open with the new backtrace.', 'createdAt': '2026-06-08T14:44:39Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [{'content': 'THUMBS_UP', 'users': {'totalCount': 1}}], 'url': 'https://github.com/ruvnet/RuView/issues/949#issuecomment-4650174334', 'viewerDidAuthor': False}, {'id': 'IC_kwDOO3hF2M8AAAABFU5w6A', 'author': {'login': 'marfleetn'}, 'authorAssociation': 'NONE', 'body': 'Many thanks will try it out tomorrow.', 'createdAt': '2026-06-08T19:00:55Z', 'includesCreatedEdit': False, 'isMinimized': False, 'minimizedReason': '', 'reactionGroups': [], 'url': 'https://github.com/ruvnet/RuView/issues/949#issuecomment-4652429544', 'viewerDidAuthor': False}] labels=bug,firmware）Pull Requests 抽样PR #991 [OPEN] chore: update vendor submodulesPR #990 [OPEN] chore: update vendor submodulesPR #989 [OPEN] feat: per-room calibration system (ADR-151) + cognitum-v0 appliance integration specPR #988 [MERGED] fix(firmware): correct ESP32 edge heart rate — sample-rate + harmonic lock (#987)PR #986 [OPEN] chore: update vendor submodulesReleases 抽样v0.7.1-esp32（published=2026-06-09T15:37:06Z latest=True）v1613（published=2026-06-09T15:36:12Z latest=False）v1611（published=2026-06-09T12:53:54Z latest=False）v1609（published=2026-06-08T16:16:44Z latest=False）v1606（published=2026-06-08T14:49:27Z latest=False）真实反馈与维护信号研判抽样 issue 中 open/closed 约为 1/7，可作为维护者响应速度的弱信号。近期 PR 抽样里可见已合并项 2 个，说明项目并非完全冻结。存在 release 记录，说明作者有版本化交付意识。若外部搜索链路不可用，本报告明确以 GitHub issue/PR/release 作为一手社区反馈源，不用二手转载冒充口碑数据。高频问题通常比 README 更能暴露真实落地难点：安装、兼容性、性能边界、文档歧义、平台限制。⚔️ 竞品对比维度RuView竞品/替代定位面向仓库作者设定的具体场景，通常更垂直CapCut / DaVinci Resolve / Shotcut 往往更通用或生态更大学习曲线依赖其内部脚本/配置约定通用方案学习成本更高，但生态更成熟差异化仓库通常以“快上手、场景专用、意见化实现”为卖点通用方案强调可扩展、稳定性、跨场景能力风险作者驱动、文档深度可能不足、接口稳定性不确定大项目更稳定，但改造成本更高🎯 核心研判优势对目标问题有强意见化实现，落地路径通常比“从零搭建通用栈”更短。如果核心文件少而清晰，二次阅读和定制成本较低。GitHub 原生 issue / release / PR 能直接帮助判断项目是否仍在演进。风险若 stars、forks、release 或 PR 活跃度偏低，意味着长期维护能力要谨慎评估。如果关键逻辑过于集中在单文件脚本中，后续扩展会受到可维护性约束。若缺少测试/CI/配置 schema，生产环境采用前应先做自测和边界验证。适用场景需要快速验证该仓库所解决的问题是否值得投入。团队愿意接受一定的作者意见化设计，以换取更快交付。适合作为参考实现、内部 PoC、垂直任务工具，而非默认直接替代成熟平台。不适用场景对 SLA、兼容矩阵、长期 LTS 有强要求的核心生产系统。需要极高社区冗余、插件生态或企业级支持的场景。📂 关键文件路径速查pyproject.tomlrequirements.txtREADME.mdCLAUDE.mdtests/test_invariant_Cargo.py⭐ 三条关键发现代码入口/骨架集中在：pyproject.toml, requirements.txt, README.md, CLAUDE.md, tests/test_invariant_Cargo.py近期开源反馈以 issue 为主，典型议题包括：ESP32 edge vitals: heart rate stuck at ~45 BPM / drops a lot — sample-rate + breathing-harmonic bug (fixed)；WiFi network disruption when the full Cognitum cluster (v0 + cluster-1/2/3 + seeds) is powered on发布节奏可从最新 release 观察：v0.7.1-esp32🧪 研究方法与数据来源GitHub Repo API / README / 默认分支递归文件树关键源码文件抽样精读Issues / PRs / Releases 社区活动抽样说明：若外部搜索数据不可用，则明确标注并不伪造口碑结论
+# 🔬 ruvnet/RuView - 全方位深度调研
+
+## 📌 一句话定位
+
+`ruvnet/RuView` 是一个把普通 WiFi / ESP32 CSI 信号包装成“空间感知、存在检测、生命体征监测”的实验型系统：它的宣传很强，但真实落地难度也很高，核心风险集中在硬件兼容、固件稳定性、信号质量和文档可操作性上。
+
+> 结论先行：这不是一个“装上就能穿墙看人”的成熟消费级项目，更像一个高速迭代的 WiFi sensing / DensePose / 智能家居集成实验场。适合研究、PoC 和硬件黑客，不适合直接当稳定产品部署。
+
+## 🏗️ 项目全景
+
+| 维度 | 观察 |
+|---|---|
+| 仓库 | `ruvnet/RuView` |
+| GitHub | https://github.com/ruvnet/RuView |
+| 定位 | WiFi CSI 空间智能、人体存在/动作/生命体征推断 |
+| Stars / Forks | 约 74K stars、9.9K forks（2026-06-18 抽样） |
+| 默认分支 | `main` |
+| 最新 release | `v0.8.1-esp32`：display + mmwave false-detect fixes |
+| 主要技术域 | ESP32 firmware、CSI 信号处理、Rust v2、Python v1、Home Assistant / Matter / HAP 集成 |
+
+### 目录结构与工程信号
+
+从递归文件树看，仓库不是单一 Python demo，而是多层系统：
+
+- `.claude/`、`.claude-flow/`：大量 agent / workflow / swarm 配置，说明仓库中混入了非常多 AI 辅助工程资产。
+- `firmware/`：ESP32 CSI 节点、硬件采集、边缘处理相关代码。
+- `v2/`：Rust 化重构主线，包含 core / signal / nn / train / hardware 等 crate。
+- `python/`、`requirements.txt`、`pyproject.toml`：旧版或研究型 Python 管线。
+- `ui/`、`docs/`、`examples/`：面向用户集成与演示。
+
+**关键判断**：仓库体量和目录名显示它想做“端到端产品”，但 issue 中反复出现 ESP32 yield=0pps、watchdog crash、false detection、动画无数据等问题，说明它仍处于工程打磨期。
+
+## 🧠 核心架构解读
+
+### 1. Python v1：研究型 WiFi-DensePose 管线
+
+`pyproject.toml` 中项目名为 `wifi-densepose`，关键词包括 `wifi`、`csi`、`pose-estimation`、`densepose`、`neural-networks`。这说明 RuView 的概念核心不是普通 IoT 传感器，而是利用 CSI（Channel State Information）做人体姿态/存在/生命体征估计。
+
+`requirements.txt` 暴露了系统形态：
+
+- `numpy/scipy/scikit-learn/opencv-python`：信号处理与传统 ML。
+- `torch/torchvision`：神经网络推理或训练。
+- `fastapi/uvicorn/websockets/pydantic`：服务端 API 与实时数据推送。
+- `sqlalchemy/redis`：状态、历史数据或缓存。
+- `asyncio-mqtt/aiohttp/paramiko`：硬件、MQTT、远程控制集成。
+
+**研判**：这不是单纯 README 级“概念项目”，至少曾尝试搭建完整数据链路；但依赖跨度过大，也意味着环境复现成本高。
+
+### 2. Rust v2：把研究原型拆成可维护 crate
+
+`CLAUDE.md` 对 v2 的描述很关键：Rust 版本被拆成多个 crate，例如：
+
+| Crate | 角色 |
+|---|---|
+| `wifi-densepose-core` | 核心类型、trait、错误、CSI frame 基础抽象 |
+| `wifi-densepose-signal` | CSI 信号处理、RuvSense 多站点 sensing |
+| `wifi-densepose-nn` | ONNX / PyTorch / Candle 推理后端 |
+| `wifi-densepose-train` | 训练流水线、指标集成 |
+| `wifi-densepose-hardware` | ESP32 聚合、TDM 协议、信道跳频固件 |
+| `wifi-densepose-mat` | Mass Casualty Assessment Tool 场景化扩展 |
+
+**架构含义**：作者意识到 Python 原型难以支撑长期演进，所以把核心能力向 Rust crate 化迁移。这个方向是对的：CSI 数据流、固件通信、实时推理更需要强类型、性能和边界清晰的模块。
+
+### 3. 固件层：真实风险集中区
+
+近期 issue/release 显示，真正决定 RuView 是否“能跑”的不是 UI，而是 ESP32 固件与 CSI 数据质量。例如：
+
+- `#1116`：edge_dsp watchdog crash，用户报告 3 台 ESP32-S3 在 v0.6.5 上崩溃。
+- `#1107`：MR60BHA2 false detection 导致 ENOMEM + yield=0pps，已在 v0.8.1-esp32 修复。
+- `#1050`：Observatory figure 不动画，因为 `/ws/sensing` stream 缺 person position/pose 数据。
+- `#1049`：multistatic guard interval 硬编码 5000µs 导致 trust demotion。
+- `#949`：Seed TLS 初始化触发 stack overflow，后续把 `SWARM_TASK_STACK` 从 3072 提到 8192。
+
+这些不是小问题，而是直接影响“有没有数据、数据准不准、设备会不会崩”的底层问题。
+
+## 🔍 源码深度解读
+
+### `firmware/esp32-csi-node/main/swarm_bridge.c`
+
+该文件中的注释说明 `#949` 的根因：原来的 3KB stack 只适合 HTTP，用户一旦配置 HTTPS Seed URL，就会触发 mbedTLS 握手，栈空间不足并 panic。修复方式是把 `SWARM_TASK_STACK` 提升到 8192。
+
+这透露出两点：
+
+1. 项目确实在跟真实硬件 bug 斗争，不是空壳。
+2. 文档/默认配置和真实部署路径之间存在落差：用户配置 HTTPS 这种正常选择，可能触发深层固件问题。
+
+### `requirements.txt` / `pyproject.toml`
+
+依赖组合证明它是“信号处理 + 神经网络 + 服务端 + 硬件集成”的混合系统。风险也来自这里：任何一个层面（驱动、CSI、模型、API、UI）坏掉，用户都会感觉“点进去没有内容”或“看起来像 demo”。
+
+### `CLAUDE.md`
+
+`CLAUDE.md` 中的 crate 划分比 README 更有价值，因为它揭示了作者真正想要的长期架构：
+
+- core 抽象 CSI frame；
+- signal 做多站点感知；
+- nn 做跨后端推理；
+- hardware 处理 ESP32 和 TDM；
+- train / metrics 负责模型迭代。
+
+**独家发现**：README 讲的是“WiFi 穿墙感知”的愿景，`CLAUDE.md` 暴露的是“Python v1 + Rust v2 + ESP32 固件 + 智能家居桥接”的复杂多栈迁移工程。这种复杂度本身就是采用风险。
+
+## 🌐 社区口碑与真实反馈
+
+外部搜索没有拿到可靠第三方长评，因此本节以 GitHub Issues / Releases 作为一手反馈源。
+
+### 好评/积极信号
+
+- 维护频率高：2026-06 中旬仍有 release，例如 `v0.8.1-esp32`。
+- issue 中维护者会给出硬件验证、固件版本、复现条件等细节，不是简单关闭问题。
+- 方向有差异化：WiFi CSI + Home Assistant / Matter / HAP 集成，确实比普通摄像头/毫米波传感器更有想象力。
+
+### 差评/风险信号
+
+- `#1125 Has anyone got this project to work?` 这种 issue 标题很刺眼，说明至少有用户无法跑通。
+- 多个问题集中在 `yield=0pps`、watchdog crash、false detection、stream 缺数据，属于“核心链路不稳定”。
+- 大量 AI/Claude flow 资产混在仓库中，可能造成目录噪声，增加新用户理解成本。
+- README 愿景强，但硬件、固件、网络、模型、UI 的组合门槛非常高。
+
+### 维护者响应风格
+
+维护者倾向于快速迭代固件和 release，而不是只在 issue 中解释。这对追新用户是好事；但对稳定生产环境是风险，因为版本变化频繁，用户必须跟上 firmware / config / hardware 组合。
+
+## ⚔️ 竞品与替代方案
+
+| 方向 | RuView | 替代方案 | 差异 |
+|---|---|---|---|
+| 家庭存在检测 | WiFi CSI + ESP32 + 智能家居桥接 | mmWave 人体存在传感器 | RuView 更有想象力，但 mmWave 更成熟、可购买即用 |
+| 姿态/动作识别 | 非视觉信号推断 | 摄像头 + CV / Depth Camera | RuView 隐私优势强，但精度和部署稳定性不如视觉方案直观 |
+| 研究原型 | 开源多栈系统 | academic CSI sensing repos | RuView 更产品化，但复杂度也更高 |
+| Home Assistant 集成 | MQTT / Matter / HAP 方向 | Zigbee / BLE / Thread 传感器 | RuView 潜在信息量更丰富，但硬件调试成本高 |
+
+## 🎯 核心研判
+
+### 优势
+
+1. **方向足够差异化**：用 WiFi 信号做空间感知，天然有隐私叙事和“无摄像头”卖点。
+2. **不是单文件玩具**：Python、Rust、firmware、UI、docs、release 都存在，说明作者在做完整系统。
+3. **一手 issue 价值高**：大量硬件 bug 记录反而说明项目经历真实设备测试。
+
+### 风险
+
+1. **部署复杂度过高**：硬件型号、固件版本、WiFi 环境、CSI 数据质量都会影响结果。
+2. **稳定性尚未闭环**：近期 issue 仍有 watchdog crash、false detection、数据流缺失。
+3. **文档承诺与实际体验有落差**：README 的“穿墙感知”叙事很强，但新手可能连数据流都跑不通。
+4. **仓库噪声大**：`.claude` / flow / agents 资产大量存在，容易干扰工程入口判断。
+
+### 适用场景
+
+- WiFi sensing / CSI / ESP32 方向研究。
+- 智能家居 PoC，验证“非摄像头感知”是否可行。
+- 需要观察一个高速迭代 AI+IoT 仓库的架构演进。
+
+### 不适用场景
+
+- 需要稳定 SLA 的家庭安防或医疗/照护场景。
+- 不具备 ESP32 固件、网络、信号处理调试能力的普通用户。
+- 希望“一键安装就可用”的产品选型。
+
+## 📂 关键文件路径速查
+
+- `README.md`：愿景与用户入口。
+- `pyproject.toml`：Python v1 项目元信息。
+- `requirements.txt`：信号处理、API、硬件依赖全景。
+- `CLAUDE.md`：Rust v2 crate 架构说明，价值高于 README。
+- `firmware/esp32-csi-node/main/swarm_bridge.c`：固件真实问题与修复证据。
+- `v2/`：Rust 化重构主线。
+
+## ⭐ 三条关键发现
+
+1. **RuView 最大价值不是 README 的“穿墙”口号，而是它把 CSI sensing、ESP32、Rust crate、智能家居桥接放进同一系统。**
+2. **最大风险也来自同一件事：系统链路过长，任何固件/网络/模型/UI 环节出错，用户体验都会变成“没内容、没数据、跑不通”。**
+3. **近期 release 和 issue 说明项目仍活跃，但还处在硬件稳定性打磨阶段，不应按成熟产品看待。**
+
+## 🧪 研究方法与数据来源
+
+- GitHub Repo API：stars、forks、topics、release、默认分支。
+- GitHub 文件树：目录结构、关键文件定位。
+- GitHub Issues：`#1125`、`#1116`、`#1107`、`#1050`、`#1049`、`#949` 等。
+- 关键文件抽样：`README.md`、`pyproject.toml`、`requirements.txt`、`CLAUDE.md`、`swarm_bridge.c`。
+- 外部搜索：未发现可靠第三方长评，因此不编造口碑。
