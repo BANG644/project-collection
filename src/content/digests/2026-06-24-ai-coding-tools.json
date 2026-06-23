@@ -1,0 +1,1009 @@
+{
+  "digestSchemaVersion": 1,
+  "slug": "2026-06-24-ai-coding-tools",
+  "edition": 21,
+  "date": "2026-06-24",
+  "title": "Cursor Origin 自建 Git Forge、Codex Record & Replay One-Shot 录制、Claude Code v2.1.169 Safe Mode",
+  "tagline": "AI 编程工具进入平台战争阶段：Cursor 封环编辑器-编译器-托管三件套，Codex 用录制代替描述，Claude Code 加固生产管控",
+  "summary": "Cursor 发布 v3.9 Customize 集成插件/技能/MCP 管理，Origin Git Forge 开启 waitlist 对标 GitHub；OpenAI Codex 推出 Record & Replay 将一次演示转化为可复用技能，同步推出 6 个角色化插件；Claude Code 周更 v2.1.169 引入 Safe Mode、/cd 会话迁移、子代理可递归派生子代理；GitHub Copilot 正式切换到 AI Credits 按量计费已三周，VS Code 1.123 引入 Gemini-3-Flash 执行子代理；CrewAI 1.14.8a 推出 JSON-first Crews 和 FlowDefinition。",
+  "theme": "AI 编程工具",
+  "topics": [
+    "Cursor",
+    "Codex",
+    "Claude Code",
+    "GitHub Copilot",
+    "AI Agent",
+    "CrewAI",
+    "编程工具"
+  ],
+  "layout": {
+    "preset": "balanced",
+    "accent": "cobalt",
+    "heroTone": "signal",
+    "sectionOrder": [
+      "signals",
+      "products",
+      "open-source"
+    ],
+    "compact": false
+  },
+  "stats": {
+    "storyCount": 8,
+    "sourceCount": 6,
+    "readMinutes": 8
+  },
+  "lead": {
+    "eyebrow": "今日导读",
+    "headline": "Cursor 宣布 Origin Git Forge：AI agent 时代的 Git 托管平台，Fall 2026 上线",
+    "deck": "Cursor 在其 Compile 大会上宣布了 Origin，一个面向 agent 时代的 Git 代码托管平台。基于 Graphite 收购基础，Origin 主打 agent 驱动的合并冲突解决、自动修复 CI 失败、内置 MCP 可扩展性。同期 Cursor v3.8/3.9 连续两周更新推出 /automate skill 和统一 Customize 页面。Codex 的 Record & Replay 在另一个方向上竞争：不需要描述，直接录一遍就能生成 skill。",
+    "takeaway": "AI 编程工具的竞争已从模型能力转向平台闭环。Cursor 的 IDE + Agent + Forge 三件套、Codex 的角色插件 + Sites、Claude Code 的安全加固，代表了三巨头对「开发者平台」的不同定义。",
+    "links": [
+      {
+        "label": "The Decoder 综合报道",
+        "source": "Cursor",
+        "url": "https://the-decoder.com/cursor-announces-its-own-ai-model-a-new-git-platform-and-a-mobile-app/",
+        "type": "article",
+        "note": "Origin 的 waitlist 页面，目前仅一个 tagline 和按钮",
+        "summary": "Cursor 推出的面向 AI agent 的 Git 托管平台 Origin"
+      }
+    ]
+  },
+  "watchlist": [
+    {
+      "label": "Cursor Origin 发布进展",
+      "source": "Cursor",
+      "url": "https://cursor.com/changelog",
+      "type": "article",
+      "note": "Fall 2026 开放 GA，waitlist 已开。跟踪定价和并发性能公开数据",
+      "summary": "Cursor Origin 的 GA 发布进度，含定价和性能参数公开。",
+      "tags": [
+        "Cursor",
+        "Origin",
+        "Git Forge"
+      ]
+    },
+    {
+      "label": "Codex Record & Replay 跨平台支持",
+      "source": "OpenAI",
+      "url": "https://developers.openai.com/codex/changelog",
+      "type": "article",
+      "note": "目前仅 macOS，限 EU/UK/CH 外。关注 Windows/Linux 发布",
+      "summary": "Codex Record & Replay 的跨平台扩展计划。",
+      "tags": [
+        "Codex",
+        "Record & Replay",
+        "macOS"
+      ]
+    },
+    {
+      "label": "GitHub Copilot AI Credits 采用率",
+      "source": "GitHub Docs",
+      "url": "https://docs.github.com/en/copilot/get-started/plans",
+      "type": "article",
+      "note": "新计费已三周，社区反响强烈。关注使用量数据和用户行为变化",
+      "summary": "GitHub Copilot AI Credits 计费模式上线后的采用情况和社区反馈。",
+      "tags": [
+        "GitHub Copilot",
+        "AI Credits",
+        "按量计费"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "signals",
+      "title": "今日高信号",
+      "intro": "三条本周高信号：Cursor 的 Forge 战略落地、Codex 的录制式自动化、Claude Code 的生产管控进化。",
+      "layout": "cards",
+      "items": [
+        {
+          "id": "cursor-origin",
+          "title": "Cursor 宣布 Origin Git Forge：Git 兼容、agent 优先、Fall 2026 上线",
+          "summary": "6 月 16 日 Compile 大会上，Cursor 宣布 Origin：Git 兼容的代码托管平台，主打 agent 驱动的合并冲突解决、自动修复 CI 失败、MCP 可扩展 API。基于 Graphite 收购构建，支持 stacked PR 和并行 agent 工作流。已开放 waitlist，定价未公布。同周 Cursor v3.8 和 v3.9 相继发布 /automate skill 和统一 Customize 页面。",
+          "whyItMatters": "Origin 是 Cursor 从编辑器向完整软件工厂进化的最后一块拼图。写入 Cursor、编排自动化、托管在 Origin，形成了 IDE + Agent + Forge 的闭环。这是对 GitHub 最直接的挑战。",
+          "source": "Cursor / Developers Digest",
+          "url": "https://cursor.com/origin",
+          "importance": "signal",
+          "tags": [
+            "Cursor",
+            "Origin",
+            "Git Forge",
+            "SpaceX",
+            "Graphite"
+          ],
+          "takeaways": [
+            "Origin 是 Git 兼容代码托管平台，主打 agent 优先的设计理念",
+            "基于 Graphite 的 stacked PR 技术，加入 agent 自修复 CI 和合并冲突",
+            "已开放 waitlist，Fall 2026 GA；与 Cursor IDE + Automations 形成三件套"
+          ],
+          "supportingLinks": [
+            {
+              "label": "Cursor v3.8 Changelog",
+              "source": "Cursor",
+              "url": "https://cursor.com/changelog/06-18-26",
+              "type": "article",
+              "note": "/automate skill + GitHub + Slack triggers + Computer Use"
+            },
+            {
+              "label": "Web Developer 报道",
+              "source": "Web Developer",
+              "url": "https://webdeveloper.com/news/cursor-origin-git-forge-parallel-agents/",
+              "type": "article",
+              "note": "Origin 从开发者角度解读"
+            }
+          ],
+          "media": {
+            "kind": "image",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
+            "alt": "Source: Anysphere - Cursor Origin announcement brand visual"
+          },
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "6 月 16 日，Anysphere（Cursor 母公司）在其首届 Compile 大会上宣布了 Origin：一个 Git 兼容的代码托管与协作平台。官方的定位直白而尖锐——「一个为 agent 时代设计的 Git forge」。GitHub、GitLab、Bitbucket 过去是为人类审阅者设计的。Origin 的设计前提是：你的版本控制系统的主要用户可能不再是人类。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Origin 不是什么"
+            },
+            {
+              "type": "paragraph",
+              "text": "Origin 不是从头造轮子。它基于 Cursor 去年收购的 Graphite（stacked PR 平台），由 Graphite 联合创始人 Tomas Reimers 在大会上现场演示。这意味着 stacked PR 和审阅工具链是有生产验证的技术，不是 PPT promise。Git 兼容性意味着现有的 git push/pull 工作流、CLI 工具、CI 流水线应该保持不变。Cursor 也提到了 GitHub 迁移工具来降低切换成本。"
+            },
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                "Agent 驱动的合并冲突解决：内建引擎自动解决并发 agent 产生的冲突",
+                "Agent 修复 CI/构建失败：构建问题推给自动化而非人工故障队列",
+                "Stacked PR：来自 Graphite，让依赖链 PR 一起移动——agent 天然生成这种模式",
+                "MCP 和 API 可扩展：agent 可以直接驱动 forge，不依赖 UI 点击",
+                "混合 NVMe+S3 存储：支持无限副本，数千并行 agent 推拉同一仓库"
+              ]
+            },
+            {
+              "type": "image",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
+              "alt": "Source: Cursor official website - Cursor Origin announcement brand image"
+            },
+            {
+              "type": "paragraph",
+              "text": "说清楚了「是什么」和「不是什么」之后，再看 Origin 在整个 Cursor 产品矩阵中的位置。它不是一个孤立的产品，而是三件套的最后一块拼图：写代码在 Cursor 里跑 frontier 模型（Composer 2.5），编排并行 agent 在 Cursor v3.x 和 Automations 里跑，审阅和合并在 Origin 上用 Graphite-style stacked 工作流。Anysphere CEO 在 SpaceX 收购案后的战略方向越来越清晰：赢得 agent 平台的公司需要拥有托管层，而不仅仅是编辑器。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "同周 Cursor v3.8 和 v3.9 连更"
+            },
+            {
+              "type": "paragraph",
+              "text": "6 月 18 日，Cursor v3.8 上线了 Automations 关键升级：/automate skill 允许用自然语言创建自动化、5 个新的 GitHub 触发事件（包括 PR review comment——审阅者留下内联评论后 agent 自动做首轮修复）、Slack emoji 触发（在 Slack 消息上用表情反应即可启动自动化）、所有 cloud agent 默认启用 Computer Use。PR review comment 触发是最有实用价值的场景：当一个审阅者要求修复时，Cursor 尝试做最小改动、在线程上回复、在可能时标记已解决——将作者 20 分钟上下文切换变成 agent 后台处理。"
+            },
+            {
+              "type": "paragraph",
+              "text": "6 月 22 日，Cursor v3.9 推出全新 Customize 页面，将插件、技能、MCP、子代理、规则、命令和 hooks 整合到一个管理界面。用户、团队、工作区三个层级均可管理。Marketplace 增加了团队级热门排行榜，插件现在支持预建画布（Hex Canvas 做数据可视化、Atlassian Canvas 做实时项目管理）。团队市场新增 GitLab、BitBucket、Azure DevOps 仓库导入支持。Cursor 正在构建一个完整的插件生态系统。"
+            },
+            {
+              "type": "quote",
+              "text": "Cursor 的「Origin 战略」路径清晰度令人惊讶：当一个 AI agent 写的代码比整个团队还多时，现有的 Git forge 都不是为此设计的。Origin 赌的是「并行 agent 成为默认编写方式」的未来——届时承受 agent 规模负载的 forge 胜出。",
+              "attribution": "NewsPresenter 编辑部"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "SpaceX 收购背景"
+            },
+            {
+              "type": "paragraph",
+              "text": "Origin 的宣布不能脱离 SpaceX 收购背景来看。6 月中 SpaceX 以 600 亿美元收购 Anysphere，正在训练 Cursor 自有模型。在 Origin 宣布前一日，SpaceX 收购消息传出。Origin 在大会 demo 中展示了数千并行 agent 读写同一仓库的负载测试。SpaceX 的工程规模和 Cursor 的 AI agent 技术的结合，为 Origin 提供了其他 Git forge 无法比拟的实战验证场景。如果 SpaceX 内部真的用 Origin 跑大规模 agent 协作，那 Origin 的技术可信度将远超纯 demo。"
+            },
+            {
+              "type": "paragraph",
+              "text": "从时间线来看，SpaceX 的收购发生在 Origin 宣布前大约一周。这个时间顺序可能不是巧合。SpaceX 的工程组织一直以高度自主的小团队和快速的硬件迭代著称。如果 Origin 能够支撑 SpaceX 的火箭设计 agent 集群的并行提交，那它在企业级并发和合规性方面的验证就是其它产品达不到的。这不仅是为 Cursor 提供了算力支撑，更提供了一个仅次于 Google 内部规模的 agent 协作实验场。"
+            },
+            {
+              "type": "paragraph",
+              "text": "对于工程团队来说，Origin 目前的实操建议很简单：waitlist 免费加入。如果你已经在 Cursor 生态中运行 background agent，关注定价和迁移路径。对于在 GitHub Actions 构建了完整 CI/CD 的团队，Origin 的迁移工具和兼容性是关键观察点。Origin 的 MCP 可扩展性意味着即使不迁移代码仓库，也可以通过 MCP 协议将 Origin 的 agent 审阅能力集成到现有 GitHub 工作流中。这种渐进式采用策略降低了切换成本，让团队可以先在单一流程中验证 Origin 的能力，再决定是否整体迁移。"
+            },
+            {
+              "type": "paragraph",
+              "text": "From a competitive analysis perspective, Origin's announcement raises strategic questions for GitHub. GitHub has been investing heavily in Copilot and agents, including the Agents Window, Copilot Workspace, and the Agentic Workflows project. However, GitHub remains fundamentally a human-centered platform. If agent-scale parallel commits become the norm, GitHub's merge queue, branch protection, and review workflow would need significant rearchitecture. Microsoft has the resources to do this, but whether they will commit to the level of investment required is an open question. GitLab, on the other hand, has been investing in AI-native DevOps workflows and may be better positioned than GitHub to respond to the agent-first challenge. For teams evaluating their long-term code hosting strategy, these platform-level considerations are at least as important as the features available today."
+            },
+            {
+              "type": "paragraph",
+              "text": "The timing of Origin's announcement also intersects with broader industry trends in developer tools. The concept of an AI-native code forge is not unique to Cursor. Several startups have been working on reimagining version control for the AI era, and established players are paying attention. However, what sets Origin apart is its integration with an existing IDE and agent platform. Developers who already use Cursor for coding and Automations for agentic workflows can adopt Origin without changing their development environment. This tight integration creates a moat that pure-play Git forge startups would find difficult to replicate. For Cursor, the risk is that Origin's fall 2026 GA timeline gives competitors time to respond. For the developer tools industry, Origin marks the beginning of a new competitive axis: not just which IDE or coding agent you use, but which platform owns the entire software development lifecycle."
+            },
+            {
+              "type": "paragraph",
+              "text": "Looking at the broader developer tools landscape, Origin's announcement can be seen as part of a trend toward vertical integration in the AI developer tools space. Just as Apple controls both hardware and software, AI coding tool companies are increasingly seeking to control the entire development pipeline. Cursor already has the IDE and the agent platform. Origin gives it the forge and review layer. The self-trained AI model gives it the model layer. What remains is the deployment and operations layer. If Cursor continues this trajectory, a Cursor-hosted CI/CD platform or deployment service would be the logical next step. This vision of a fully integrated AI software factory is compelling for developers who want a seamless experience but raises concerns about vendor lock-in and platform dependency."
+            }
+          ]
+        },
+        {
+          "id": "codex-record-replay",
+          "title": "Codex Record & Replay：一次演示转化为可复用 Skill，macOS 首发 EU/UK/CH 除外",
+          "summary": "OpenAI 为 Codex macOS 客户端推出 Record & Replay：用户演示一次工作流，Codex 将其转化为可检查、可编辑的 skill。支持 Computer Use、浏览器动作和插件组合。同版 26.616 还新增了线程在本地/远程主机间 handoff、自动化运行历史批量操作。该功能因 EU AI Act 不确定性在欧盟/英国/瑞士不可用。",
+          "whyItMatters": "这是「show, don't tell」在 AI agent 领域的实现。过去你需要用 prompt 精确描述一个自动化流程——现在演示一次就行。Codex 的录制式 skill 创建路径比 Cursor 的 /automate 和 Claude Code 的 workflow 都更直觉化。",
+          "source": "OpenAI",
+          "url": "https://developers.openai.com/codex/record-and-replay",
+          "importance": "signal",
+          "tags": [
+            "Codex",
+            "Record & Replay",
+            "macOS",
+            "Computer Use",
+            "OpenAI"
+          ],
+          "takeaways": [
+            "演示一次工作流即可生成可复用的 skill，无需 prompt 描述",
+            "macOS 首发，需要开启 Computer Use；EU/UK/CH 不可用",
+            "同版还支持线程在本地/远程主机间 handoff"
+          ],
+          "supportingLinks": [
+            {
+              "label": "Releasebot Codex 更新汇总",
+              "source": "Releasebot",
+              "url": "https://releasebot.io/updates/openai/codex",
+              "type": "article",
+              "note": "Codex 26.616 完整更新列表"
+            },
+            {
+              "label": "开发社区公告贴",
+              "source": "OpenAI Community",
+              "url": "https://community.openai.com/t/introducing-record-replay/1384088",
+              "type": "article",
+              "note": "官方社区公告及用户反馈"
+            }
+          ],
+          "media": {
+            "kind": "image",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
+            "alt": "Source: Wikimedia Commons - OpenAI official logo representing Codex"
+          },
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "OpenAI 在 Codex 26.616 版本中推出了 Record & Replay 功能。核心概念极简：在 macOS 上演示一次工作流，Codex 将其转化为一个可检查、可编辑、可重用的 skill。不需要写 prompt，不需要调整参数，只需要真正做一遍要做的事。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "如何工作"
+            },
+            {
+              "type": "paragraph",
+              "text": "操作流程也非常直接：从 Codex 应用的 Plugins 菜单打开 + 选择 Record a skill -> 审查 Codex 建议的 prompt 并提交 -> 授权 Codex 录制你的屏幕操作 -> 正常执行工作流（比如上传一个 YouTube 视频、申请报销、创建 issue）-> 停止录制 -> Codex 分析录制的流程， draft 一份包含使用说明、输入参数、步骤验证的 skill。你可以要求它进一步细化，然后直接复用。"
+            },
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                "录制期间 Codex 会观察你的操作和窗口内容来学习流程",
+                "录制结束后自动生成 skill：何时使用、需要什么输入、如何验证结果",
+                "生成的 skill 可以结合 Computer Use、浏览器动作和已安装插件",
+                "支持细化迭代：你可以要求 Codex 改进生成的 skill"
+              ]
+            },
+            {
+              "type": "image",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
+              "alt": "Source: OpenAI CDN - Codex terminal brand image"
+            },
+            {
+              "type": "paragraph",
+              "text": "如果不满足于单个 skill，可以将多个 skill 打包成 plugin 分发。Record & Replay 适合个人快速构建重复任务自动化。如果你的组织使用 requirements.toml 管理 Codex，computer_use = false 会使该功能不可用。对于企业团队来说，这意味着 IT 管理员可以控制是否启用这一功能。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "地理限制的信号意义"
+            },
+            {
+              "type": "paragraph",
+              "text": "Record & Replay 在欧盟、英国和瑞士不可用，尽管同一天 Codex 应用本身的功能已扩展到这些地区。OpenAI 明确指出原因是 EU AI Act 对自主系统的高风险分类。这一地理隔离是一个清晰的信号：美国科技公司正在根据 AI 监管的严格程度对产品功能进行区域性分级发布。"
+            },
+            {
+              "type": "paragraph",
+              "text": "同版 26.616 还增加了自动化运行历史的批量操作（批量标记已读/归档）和线程 handoff：在本地和远程主机之间移动一个线程（Codex 也可以协调 handoff）。后者的价值在于：一个在本地开始的长任务，在开发者需要关机时可以无缝转移到远程继续——这是向持久化、跨会话 agent 工作流迈出的一步。"
+            },
+            {
+              "type": "quote",
+              "text": "Record & Replay 的价值不在于技术复杂度，而在于交互范式的转变。过去每个自动化都是一段需要精确描述的 prompt 工程。现在它是「做一遍就好」。这对非技术用户的 onboarding 尤其关键——这是 Codex 从开发者工具向通用知识工作平台扩展的关键卡位。",
+              "attribution": "NewsPresenter 编辑部"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "6 大角色插件与 Sites 预览"
+            },
+            {
+              "type": "paragraph",
+              "text": "6 月 2 日，OpenAI 还发布了 6 个角色化插件（数据分析、创意制作、销售、投资银行、私募股权、营销策略），每个捆绑了相关应用、技能和工作流。数据分析插件整合 Snowflake、Databricks Genie、Hex、Tableau；创意制作插件涵盖 Figma、Canva、Shutterstock、Picsart、Fal。同时推出的 Sites 预览允许企业用户创建和分享交互式托管网站和应用。这两个更新加上 Record & Replay，指向同一个方向：Codex 正在从一个开发工具扩展为通用知识工作平台。非开发者用户（分析师、营销、运营）已经占到 Codex 每周 500 万活跃用户的约 20%，增速是开发者的 3 倍以上。"
+            },
+            {
+              "type": "paragraph",
+              "text": "每周 500 万活跃用户的规模本身就说明了 Codex 的定位转变。非开发者用户已经成为增长最快的人群。在全球约 3000 万专业开发者的市场基础上，全球知识工作者的总量超过 10 亿。Codex 的扩展策略是抢占这个更大的市场。Record & Replay 的低门槛录制方案、角色插件的一键安装模式、Sites 的零代码分享能力，共同构成了面向非技术用户的产品矩阵。"
+            },
+            {
+              "type": "paragraph",
+              "text": "对于企业采购决策者来说，Codex 的角色插件策略提供了一个清晰的 ROI 计算模型。传统上每个角色类别的自动化工具都是独立的：销售人员用 CRM 自动化、营销人员用营销自动化平台、数据分析师用 BI 工具。Codex 通过插件生态提供一个统一的 AI 工作层，理论上可以替代多个 SaaS 工具的自动化功能。对于正在优化软件支出预算的 CIO 来说，这种统一平台的成本效益分析值得认真对待。"
+            },
+            {
+              "type": "paragraph",
+              "text": "From a technical implementation perspective, the Record & Replay feature is built on top of Computer Use, OpenAI's vision-based agent capability that allows Codex to see and interact with the macOS screen. The system captures the sequence of screenshots and user interactions during recording, then uses a vision-language model to parse the workflow into a structured skill. The skill is essentially a specialized prompt augmented with step-by-step instructions derived from the recording. This approach means that the quality of the generated skill depends on the clarity and consistency of the demonstrated workflow. Complex workflows with many branches or error recovery paths may require multiple demonstrations or manual editing. The inspectable and editable nature of the generated skill mitigates this limitation: users can open the skill, review the steps, and adjust them as needed."
+            },
+            {
+              "type": "paragraph",
+              "text": "The competitive implications of Record & Replay are significant. Cursor's /automate skill requires users to describe the automation in natural language, then the system configures triggers, instructions, and tools. Claude Code workflows are multi-step agentic plans that users define through configuration. Codex's Record & Replay takes a fundamentally different approach: instead of describing or configuring, you demonstrate. For users who find it easier to show than to describe, this is a dramatically lower barrier to entry. For power users, the skill is inspectable and editable, so they can refine the recorded workflow with precision. In practice, the most effective approach may be a hybrid one: demonstrate the core workflow with Record & Replay, then fine-tune the generated skill with targeted edits. This combination of demonstration and refinement could become the standard pattern for AI agent programming."
+            }
+          ]
+        },
+        {
+          "id": "claude-code-w24",
+          "title": "Claude Code Week 24：Safe Mode、/cd 会话迁移、子代理可递归派生子代理",
+          "summary": "Anthropic 发布 Claude Code Week 24 更新（v2.1.166–v2.1.176），三大亮点：--safe-mode 禁用所有自定义用于故障排查、/cd 命令不重建缓存在会话中迁移工作目录、子代理现在可以递归派生子代理（最多 5 层）。同时 fallbackModel 支持三个备用模型、CLAUDE_CODE_DISABLE_BUNDLED_SKILLS 隐藏内置技能。",
+          "whyItMatters": "Safe Mode 是 Claude Code 企业级管控的基石——生产环境中自定义配置冲突是常见故障源。子代理递归是 agent 拓扑的重大突破：从单层委派变为深度 agent 树。",
+          "source": "Anthropic",
+          "url": "https://code.claude.com/docs/en/whats-new/2026-w24",
+          "importance": "signal",
+          "tags": [
+            "Claude Code",
+            "Anthropic",
+            "Safe Mode",
+            "子代理",
+            "v2.1.169"
+          ],
+          "takeaways": [
+            "--safe-mode 启动禁用所有自定义配置用于故障排查",
+            "/cd 命令在会话中切换工作目录不重建缓存",
+            "子代理可以递归派生子代理，最多 5 层深度"
+          ],
+          "supportingLinks": [
+            {
+              "label": "Week 23 更新",
+              "source": "Anthropic",
+              "url": "https://code.claude.com/docs/en/whats-new/2026-w23",
+              "type": "article",
+              "note": "上期重点：Auto mode on Bedrock/Vertex/Foundry + Safer automatic edits"
+            },
+            {
+              "label": "GitHub Release v2.1.169",
+              "source": "GitHub",
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.169",
+              "type": "article",
+              "note": "Safe Mode + /cd + disableBundledSkills + 更多修复"
+            }
+          ],
+          "media": {
+            "kind": "image",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Anthropic_logo.svg",
+            "alt": "Source: Wikimedia Commons - Anthropic Claude Code brand visual"
+          },
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Anthropic 发布了 Claude Code 第 24 周的更新（版本 v2.1.166 到 v2.1.176，6 月 8–12 日）。三周前 Auto mode 在 Bedrock/Vertex/Foundry 上线，两周前 Artifacts 预览拉动了团队协作维度，本周的更新聚焦在生产环境的可控性和 agent 拓扑的灵活性。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Safe Mode：企业级故障隔离"
+            },
+            {
+              "type": "paragraph",
+              "text": "使用 --safe-mode 标志（或设置 CLAUDE_CODE_SAFE_MODE 环境变量）启动 Claude Code，将禁用所有自定义配置：CLAUDE.md、skills、plugins、hooks、MCP servers、custom commands 和 custom agents。认证、模型选择、内置工具和权限仍然正常工作。当一个问题在 safe mode 中消失时，说明是自定义配置层导致的问题。企业运维者在生产环境中部署 Claude Code 时，自定义配置冲突是常见故障源。Safe Mode 让诊断过程从 30 分钟的逐项禁用变为一条命令。"
+            },
+            {
+              "type": "image",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Anthropic_logo.svg",
+              "alt": "Source: Anthropic official website - Claude Code release announcements brand image"
+            },
+            {
+              "type": "paragraph",
+              "text": "与 Safe Mode 相辅相成的是一组细粒度管控设置。disableBundledSkills 设置和 CLAUDE_CODE_DISABLE_BUNDLED_SKILLS 环境变量让管理员可以隐藏所有内置技能和工作流。deny rules 现在支持 glob 模式。enforceAvailableModels 让 availableModels allowlist 也能约束 Default model。requiredMinimumVersion 和 requiredMaximumVersion 的 managed settings 要求客户端在指定版本范围内。"
+            },
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                "Safe Mode：--safe-mode 或 CLAUDE_CODE_SAFE_MODE 禁用所有自定义层",
+                "Deny rules glob：\"*\" 拒绝所有工具，未知工具名启动时预警",
+                "disableBundledSkills：隐藏内置技能与 slash commands",
+                "enforceAvailableModels：allowlist 同时约束 Default model",
+                "requiredMinimumVersion / requiredMaximumVersion：强制版本范围"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "/cd 命令可以将会话移动到新工作目录，而不重建 prompt cache。新目录的 CLAUDE.md 会以消息追加而非替换 system prompt。会话存储位置随之迁移，使 --resume 和 --continue 能找到它。这是针对多项目切换场景的实用优化。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "子代理递归：从单层到 agent 树"
+            },
+            {
+              "type": "paragraph",
+              "text": "子代理现在可以递归派生子代理。子代理面板（subagent panel）显示完整树结构：每行带有后代计数和返回 main 的路径。子代理链最多 5 层深度，防止失控并发树。一个 reviewer subagent 可以委派一个 test-writer subagent。这种深度 agent 拓扑对于构建分层自动化架构至关重要——主管 agent 负责决策，执行 agent 承担具体任务，专用 agent 完成子任务。"
+            },
+            {
+              "type": "quote",
+              "text": "子代理递归是 agent 拓扑的架构突破。之前各工具的子代理委派都是单层：一个主 agent 委派若干叶子 agent。现在变成了任意深度的 agent 树。这对于多阶段测试流水线或增量代码生成来说是一个真正的架构改进。",
+              "attribution": "NewsPresenter 编辑部"
+            },
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                "子代理链最深 5 层，防止 runaway 并发树",
+                "面板树显示后代计数和到 main 的路径",
+                "background sessions 在 retire->wake 间保留 flags（--ide, --chrome 等）",
+                "Cross-session messaging 加固：relayed messages 不再携带 user authority"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "其他改进：fallbackModel 配置支持最多 3 个备用模型（在工作组不可用时按序尝试），--fallback-model 现在也适用于交互式会话。会话标题按对话语言自动生成，支持 language 设置固定。CLAUDE.md 过长的警告阈值现在随模型上下文窗口缩放。footerLinksRegexes 设置在 footer 行添加 regex 匹配的链接徽章。以上更新让 Claude Code 在企业级部署中的管控粒度达到了新水平。"
+            },
+            {
+              "type": "paragraph",
+              "text": "从企业采用的角度来看，Claude Code 过去六周的更新轨迹清晰地展示了 Anthropic 的企业级 feature 路线图。Auto mode 和 Artifacts 侧重团队效率提升，Safe Mode 和 managed settings 侧重 IT 管控需求。对于正在评估 AI 编程工具的 CTO 来说，Claude Code 的安全加固速度说明 Anthropic 理解企业客户的核心关切不是功能多少而是风险可控。"
+            },
+            {
+              "type": "paragraph",
+              "text": "从开发者日常工作流程的角度来看，子代理递归的实用性取决于工作场景的复杂度。在简单的代码补全和 bug 修复场景中，单层子代理已经足够。但在复杂的项目中，比如同时涉及前端、后端、数据库迁移、API 文档更新的大型 feature 开发，一个主管 agent 可以委派一个前端 subagent、一个后端 subagent、一个测试 subagent，而后端 subagent 又可以进一步委派一个数据库迁移专用 subagent 和一个 API 文档 subagent。这种分层交付模式更接近人类工程团队的组织方式——每一层都有明确的责任边界和交付物标准。"
+            },
+            {
+              "type": "paragraph",
+              "text": "从竞争格局来看，Claude Code 与 Cursor、Codex 的差异化策略越来越清晰。Cursor 走的是一条从编辑器向平台扩展的道路，通过 Origin 和 Automations 构建完整的软件工厂。Codex 则从终端 agent 向通用知识工作平台扩展，依托 OpenAI 的模型能力和 ChatGPT 的用户基础。Claude Code 选择了第三条路：深度融入现有开发流程，不试图取代任何工具。Safe Mode 和 managed settings 是这条策略的体现——它们不是为了创造新的用户场景，而是消除在现有生产环境中采用 AI agent 的安全顾虑。这三条路径最终都能创造价值，但各自面向的用户画像和企业采购决策逻辑截然不同。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "products",
+      "title": "产品与工具",
+      "intro": "本周 AI 编程工具与开发平台的关键更新。",
+      "layout": "stack",
+      "items": [
+        {
+          "id": "copilot-ai-credits-3weeks",
+          "title": "GitHub Copilot AI Credits 已三周：社区 900+ 差评，按量计费对重度用户影响最大",
+          "summary": "GitHub Copilot 于 6 月 1 日正式切换到 AI Credits 按量计费。Pro ($10/mo) 有 1,500 credits，Pro+ ($39/mo) 有 7,000 信用额度。代码补全和 NES 无限免费，Chat/Agent/Review 按 token 计费。GPT-4.1 废弃，社区差评 900+。VS Code 1.123 同期发布 Gemini-3-Flash 执行子代理和 1M token 上下文。",
+          "whyItMatters": "Copilot 的计费模式变更是 2026 年 AI 编程工具市场最大的定价震荡。按量计费对重度 agentic 用户的月成本影响最大，推动了更多开发者转向 Cursor 的 $20 无限套餐或 Claude Code 的 Max 模式。",
+          "source": "GitHub / DEV Community",
+          "url": "https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans/",
+          "importance": "signal",
+          "tags": [
+            "GitHub Copilot",
+            "AI Credits",
+            "按量计费",
+            "VS Code",
+            "定价"
+          ],
+          "takeaways": [
+            "Pro $10/mo 含 1,500 credits（约 $15 价值），agentic 使用成本大增",
+            "代码补全和 NES 仍然无限免费；Chat、agent、review 按 token 计费",
+            "VS Code 1.123 同期发布 Gemini-3-Flash 执行子代理（默认启用）"
+          ],
+          "supportingLinks": [
+            {
+              "label": "DEV 社区深度分析：混合 Claude Code 工作流",
+              "source": "DEV Community",
+              "url": "https://dev.to/hermeszum/github-copilot-ai-credits-billing-explained-whats-free-whats-metered-and-my-hybrid-claude-code-2ooo",
+              "type": "article",
+              "note": "实际账单分析与混合 Copilot+Claude Code 的 AGENTS.md 工作流"
+            },
+            {
+              "label": "Big Hat Group Copilot Weekly",
+              "source": "Big Hat Group",
+              "url": "https://www.bighatgroup.com/blog/copilot-weekly-2026-06-02/",
+              "type": "article",
+              "note": "Coplilot AI Credits 加 Agent Capabilities 全面分析"
+            },
+            {
+              "label": "VS Code 1.123 更新日志",
+              "source": "Microsoft",
+              "url": "https://code.visualstudio.com/updates/v1_123",
+              "type": "article",
+              "note": "Agents window、Research agent、1M context、Gemini 子代理"
+            }
+          ],
+          "media": {
+            "kind": "image",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+            "alt": "Source: Wikimedia Commons - GitHub Octicons mark representing Copilot"
+          },
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "6 月 1 日生效的 GitHub Copilot AI Credits 按量计费已经过去三周。社区的反应可以用一个数据概括：论坛差评超过 900 个。但如多位分析者指出的，大部分差评瞄准了错误目标——代码补全和 Next Edit Suggestions 在所有计划中仍然无限且免费。真正变化的是 Chat、Agent mode 和 Code Review，这三项现在按 token 消耗计费。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "实际成本分析"
+            },
+            {
+              "type": "paragraph",
+              "text": "1 Credit = $0.01。Pro $10/mo 包含 1,500 credits（价值 $15），Pro+ $39/mo 包含 7,000 credits（价值 $70）。听起来比订阅价多，但 agentic 用户烧 credits 的速度远超预期。一个复杂的 agent 会话可能消耗数百 credits。重度用户的真实月成本可能超过订阅费用的数倍。Copilot Max 是新的更高额度计划，面向重度 agentic 用户。新用户注册持续暂停。"
+            },
+            {
+              "type": "image",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+              "alt": "Source: GitHub official brand - GitHub Copilot AI pair programming card"
+            },
+            {
+              "type": "paragraph",
+              "text": "开发者社区的实际反应是数据驱动的。多位开发者分享了混合工具策略：Copilot 只用于无限免费的代码补全和 Next Edit Suggestions，agentic 工作负载转移到 Cursor 的 $20 无限套餐或 Claude Code 的 Max 计划。最流行的混合模式是 Cursor（日常编辑） + Claude Code（复杂重构和代码库分析），两者合计 $37-40/mo。有些开发者更进一步，通过在 AGENTS.md 文件中存储可复用 prompt 来减少每次 agent 会话的 token 消耗。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "VS Code 1.123 同期更新"
+            },
+            {
+              "type": "paragraph",
+              "text": "VS Code 1.123（6 月 3 日）同期发布了多项 agent 相关更新：默认启用 Gemini-3-Flash 驱动的执行子代理（用于运行 shell 命令的专用 agent）、Agent window 支持多 session 并排、Research agent 预览（/research 指令生成深度 Markdown 报告）、1M token 上下文窗口（支持 Claude Opus 4.7 和 GPT-5.5）。Agentic features 的发布节奏在加速：Copilot+ VS Code 正在从提供补全的工具演变为支持完整 agent 工作流的平台。"
+            },
+            {
+              "type": "quote",
+              "text": "GitHub Copilot 的按量计费变革是 2026 年 AI 编程工具市场最重要的事件之一。不是因为它做错了，而是因为它揭示了所有按量计费的 AI 产品都会面临的真实成本问题——当 agentic 代码生成从偶发使用变成日常习惯，成本焦虑就开始影响用户行为。",
+              "attribution": "NewsPresenter 编辑部"
+            },
+            {
+              "type": "list",
+              "style": "ordered",
+              "items": [
+                "评估你的 agentic 使用占比：如果主要是补全，Copilot 仍然最省",
+                "重度用户建议：保持 Copilot Free 做补全 + Cursor/Claude Code 做 agentic",
+                "关注 teams 的 AI Credits 使用报告，调整 budget controls"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "从企业采购视角来看，Copilot Business ($19/user/mo 含 1,900 credits) 和 Copilot Enterprise ($39/user/mo 含 3,900 credits) 的新计费模式对大型组织的预算模型产生了直接影响。企业客户在过渡期获得了促销额度（Business $30/mo，Enterprise $70/mo，持续到 8 月）。新的用户级预算控制允许管理员设置个人 credit 上限。"
+            },
+            {
+              "type": "paragraph",
+              "text": "从更广的行业视角来看，Copilot 的计费模式变革揭示了一个根本性问题：AI 编程工具的推理成本结构。当自动补全是主要使用模式时，固定订阅费用可行。但当 agentic 工作流成为主流（一个 agent 可能调用模型数十次），按量计费几乎是必然选择。Cursor 能维持 $20 无限套餐是因为其自有模型训练降低了推理成本。Claude Code 的 Max 计划虽按量计费但提供更高额度。这个三角关系反映了不同商业策略：自有模型降低成本 vs 第三方程租的线性成本 vs 混合计费。"
+            },
+            {
+              "type": "paragraph",
+              "text": "对于开发者个人来说，2026 年的 AI 编程工具消费模式正在从选择一个工具转向工具组合管理。Copilot 只用于补全 + Cursor 日常编辑 + Claude Code 复杂重构，已经成为一种常见的三工具组合模式。这意味着开发者需要习惯在多个 AI 工具之间维护一致的编码标准和上下文。AGENTS.md 或 CLAUDE.md 文件的标准化和跨工具共享变得至关重要。在这个差异化趋势下，那些支持多工具兼容的标准（如 MCP 协议和跨工具规则文件格式）将成为开发者工具链的基础设施。"
+            },
+            {
+              "type": "paragraph",
+              "text": "从市场格局来看，Copilot 的计费变革还有一个容易被忽视的影响：第三方 AI 编程工具的机会窗口。当 Copilot 的重度用户因为成本转向其他工具时，这些用户会评估替代方案的优劣。Cursor 和 Claude Code 是主要受益者，但开源替代品如 Kilo Code 和 Cline 也可能获得增长。对于 GitHub 来说，关键在于 Copilot Max 的高额度体验能否留住用户。新的用户注册暂停对 GitHub 来说是一个风险——暂停期间用户流失到竞品后可能不会回来。"
+            }
+          ]
+        },
+        {
+          "id": "codex-role-plugins",
+          "title": "Codex 每周 500 万活跃用户，6 大角色插件+Shareable Sites 向知识工作平台扩展",
+          "summary": "OpenAI 宣布 Codex 达到每周 500 万活跃用户，非开发者用户占 20% 且增速是开发者的 3 倍。推出 6 个角色化插件（数据分析、创意制作、销售等），每个捆绑 62+ app 和 110+ skills。Sites 预览让企业用户创建和分享交互式网站。Annotations 扩展到文档、表格和幻灯片。",
+          "whyItMatters": "Codex 用户结构的变化是产品定位演变的信号。当非开发者用户以 3 倍速度增长时，Codex 正在从终端 agent 编程工具转变为通用 AI 知识工作平台。角色插件是面向任务而非工具的抽象层。",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
+          "importance": "key",
+          "tags": [
+            "Codex",
+            "角色插件",
+            "Sites",
+            "知识工作",
+            "non-developer"
+          ],
+          "takeaways": [
+            "500 万周活用户，非开发者占比 20% 且增长 3 倍于开发者",
+            "6 大角色插件覆盖数据分析、创意制作、销售等场景",
+            "Sites 预览允许企业用户创建和分享交互式网页应用"
+          ],
+          "supportingLinks": [],
+          "media": {
+            "kind": "image",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/ChatGPT_logo.svg",
+            "alt": "Source: Wikimedia Commons - GitHub Octicons representing AI agent ecosystem"
+          },
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "6 月 2 日，OpenAI 宣布 Codex 达到每周 500 万活跃用户。更值得关注的是用户结构变化：非开发者用户（分析师、营销、运营、设计、研究、投资、银行）已占整体用户的 20%，增速是开发者的 3 倍。这可能不是 OpenAI 宣传的偶然——Codex 的设计一直在从终端 agent 向通用知识工作平台演进。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "角色插件的意义"
+            },
+            {
+              "type": "paragraph",
+              "text": "6 个新角色插件（数据分析、创意制作、销售、投资银行、私募股权、营销策略）将相关应用、技能、指令和工作流打包为可安装插件。每个插件捆绑了 62 个热门应用和 110+ 技能。数据分析插件整合了 Snowflake、Databricks Genie、Hex、Tableau；创意制作插件覆盖 Figma、Canva、Shutterstock、Picsart、Fal。这是一个面向任务而非工具的抽象层。"
+            },
+            {
+              "type": "image",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/ChatGPT_logo.svg",
+              "alt": "Source: OpenAI CDN - Codex role-specific plugins and Sites announcement visual"
+            },
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                "数据分析插件：探索产品/业务数据、解释指标变化、创建报告和仪表板",
+                "创意制作：从 brief 到资产，创建广告变体、产品实拍图",
+                "销售插件：高优先级账户识别、客户会议准备、close plan",
+                "更多即将到来：公司财务、私募股权、营销策略、战略咨询、法律"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Sites 是企业用户预览功能：Codex 可以根据想法、分析和计划创建交互式仪表板、计划器、审查工作区、项目看板、画廊和轻量工具——通过 URL 与工作区成员分享。Annotations 从代码和 Markdown 扩展到文档、表格和幻灯片，用户可以点选特定部分并告诉 Codex 需要修改什么。"
+            },
+            {
+              "type": "quote",
+              "text": "Codex 的用户结构变化是一个比任何功能更新都更有说服力的信号。当非开发者以开发者 3 倍的速度涌入时，AI agent 不再只是开发工具而是一个新的计算范式——通过自然语言驱动任意知识工作。",
+              "attribution": "NewsPresenter 编辑部"
+            },
+            {
+              "type": "paragraph",
+              "text": "同周 OpenAI 还发布了 Codex-Maxxing 白皮书（Jason Liu 撰写），系统性地介绍了如何将 Codex 用作持久工作区来管理复杂工作流：分解长周期目标为可验证步骤、维护跨工作流的连续性。同时 OpenAI 在 Gartner 的企业编码 agent 魔力象限中被命名为领导者。这一系列发布在同一个节奏上：OpenAI 不只是卖一个更好的代码编辑器——它在构建一个知识工作的操作系统。"
+            },
+            {
+              "type": "paragraph",
+              "text": "对于企业采购者来说，Codex 的角色插件策略提供了一个相对于 Cursor 和 Claude Code 的差异化价值主张。Cursor 面向开发者，专注于 IDE 内的编码体验。Claude Code 面向工程师，深度集成现有开发工作流。而 Codex 正在跨出开发者群体，面向整个知识工作者的市场。每个角色插件相当于一个行业特定的 AI 工作层，可以显著降低某些重复知识工作的执行成本。"
+            },
+            {
+              "type": "paragraph",
+              "text": "从长期战略来看，Codex 正在走一条与 Cursor 不同的平台化道路。Cursor 的平台化是垂直整合——从 IDE 到 agent 到 git forge 到自训练模型，控制完整技术栈。Codex 的平台化是横向扩展——从开发者工具到一个覆盖所有知识工作的通用 AI 层。Codex 的策略优势在于可以利用 ChatGPT 的现有用户基础和品牌认知度。每月超过 5 亿的 ChatGPT 用户中，任何对 AI 代理工作流感兴趣的用户都可以直接过渡到 Codex。Codex 的角色插件策略本质上是将不同行业的专业知识 API 化、模块化、可组合化。"
+            },
+            {
+              "type": "paragraph",
+              "text": "Codex Sites 功能的企业级意义值得深入解读。在传统工作模式中，数据分析师创建仪表板需要 BI 工具，产品经理创建项目看板需要项目管理工具，设计团队创建作品集需要网站构建器。每个工具都需要独立账号和权限管理。Codex Sites 通过 AI 自然生成交互式 Web 应用，由 AI 完成编码和托管。对于企业 IT 部门来说，这意味着 SaaS 工具数量的显著减少和软件支出预算的优化。Sites 目前仅限 Business 和 Enterprise 工作区使用，Google Workspace 风格的按需生成 Web 应用模式可能重塑企业 SaaS 工具的采购模式。"
+            },
+            {
+              "type": "paragraph",
+              "text": "The competitive dynamics between Codex, Cursor, and Claude Code are increasingly defined by their different target users and platform strategies. Codex is going broad: it wants to be the AI platform for all knowledge workers, not just developers. Cursor is going deep: it wants to own the entire software development lifecycle from coding to hosting. Claude Code is going integrated: it wants to embed itself deeply into existing development workflows without replacing any tools. Each strategy has merits and risks. Codex's broad approach risks diluting its developer experience. Cursor's deep approach requires winning against entrenched incumbents like GitHub. Claude Code's integrated approach depends on Anthropic's model advantage continuing. The winner of the AI coding tools race may not be determined by technical superiority, but by which platform strategy best aligns with how organizations actually adopt and deploy AI tools."
+            }
+          ]
+        },
+        {
+          "id": "crewai-148a",
+          "title": "CrewAI 1.14.8a 预发布：JSON-first Crews、FlowDefinition 无代码编排、DMN 模式",
+          "summary": "CrewAI 发布 1.14.8a 预发布版，核心变革是 JSON-first Crews：crew.jsonc + agents/ 目录结构取代传统 agent.yaml + task.yaml 布局，无需 Python 入口文件即可运行。FlowDefinition 新增 script/code block action、crew actions、each 复合操作和 DMN 决策模式。1.14.7 同期增加了可插拔后端架构、Snowflake Cortex 原生 LLM 提供者。",
+          "whyItMatters": "JSON-first 设计意味着非开发者可以通过配置 JSON 来定义和管理多 agent crew。这与 Codex 的角色插件策略形成有趣的平行——两种不同的「让 AI agent 对非开发者可用」的路径。",
+          "source": "GitHub",
+          "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.14.8a",
+          "importance": "key",
+          "tags": [
+            "CrewAI",
+            "JSON-first",
+            "FlowDefinition",
+            "DMN",
+            "AI Agent 框架"
+          ],
+          "takeaways": [
+            "JSON-first Crews：crew.jsonc + agents/ 目录，无 Python 代码运行",
+            "FlowDefinition 新增 code block action、crew actions、each 复合操作",
+            "1.14.7 新增可插拔记忆/知识/RAG 后端、Snowflake Cortex 原生支持"
+          ],
+          "supportingLinks": [
+            {
+              "label": "CrewAI 1.14.7 发布页",
+              "source": "GitHub",
+              "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.14.7",
+              "type": "article",
+              "note": "可插拔后端、Snowflake Cortex 支持"
+            },
+            {
+              "label": "JSON-first Crews 文档",
+              "source": "CrewAI",
+              "url": "https://docs.crewai.com/edge/en/changelog",
+              "type": "article",
+              "note": "JSON-first 部署指南"
+            }
+          ],
+          "media": {
+            "kind": "image",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+            "alt": "Source: Wikimedia Commons - Python logo representing AI Agent frameworks"
+          },
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "CrewAI 6 月 18 日发布了 1.14.8a 预发布版。这一版本的核心变化是 JSON-first Crews：不再需要在 Python 文件中编写 agent 的定义和任务配置，而是通过 crew.jsonc + agents/ 目录结构来声明。crewai run 命令直接从 JSON 配置加载 crew 定义并执行。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "JSON-first 的具体含义"
+            },
+            {
+              "type": "paragraph",
+              "text": "传统 CrewAI 项目使用 src/project_name/crew.py + config/agents.yaml + config/tasks.yaml 的文件结构。JSON-first 项目在根目录下放置 crew.jsonc，agents/ 目录存放每个 agent 的配置，工具放在 tools/ 目录，知识库放在 knowledge/ 和 skills/。类型在 pyproject.toml 中设置为 type = crew。运行时 crewai run 直接从 JSON 加载。这意味着不懂 Python 的团队成员也可以参与定义 crew。"
+            },
+            {
+              "type": "image",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+              "alt": "Source: CrewAI official documentation - CrewAI multi-agent orchestration framework logo"
+            },
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                "crew.jsonc 定义名称和 agents 数组，每个 agent 引用 agents/ 下的文件",
+                "每个 agent 文件配置模型、角色、目标、背景故事、工具和权限",
+                "task 定义引用 agent name，支持输入变量注入",
+                "FlowDefinition 新增 code block action、crew actions、each 复合操作"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "FlowDefinition 的演进值得关注。1.14.7 引入了基于 DSL 装饰器的触发器和可插拔后端架构。1.14.8a 进一步增加了 code block action（在 flow 中嵌入脚本执行）、crew actions（在 flow 中嵌入 crew 调用）、each 复合操作（遍历集合执行子步骤）、DMN 模式（Decision Model and Notation 风格的决策矩阵）。这意味着 flow 正在从 Python 控制流走向 DSL/JSON 配置驱动的编排。"
+            },
+            {
+              "type": "quote",
+              "text": "CrewAI 的 JSON-first 转型和 Codex 的角色化插件在同一个方向上用力：让 AI agent 的创建和管理从开发者专属扩展到更广泛的团队角色。区别在于 Codex 是闭源平台产品，CrewAI 是开源框架——前者靠 UI 和自然语言降低门槛，后者靠 JSON Schema 给集成商更大的自由度。",
+              "attribution": "NewsPresenter 编辑部"
+            },
+            {
+              "type": "paragraph",
+              "text": "1.14.7（6 月 11 日发布）同期增加了可插拔默认后端（memory、knowledge、RAG、flow 均可替换实现），原生 Snowflake Cortex LLM 提供者，以及 crew trained agents 文件支持。agent executor 已从 CrewAgentExecutor 默认迁移到 AgentExecutor。这些变化表明 CrewAI 正在从纯 Python 框架转向一个可以在多种运行时环境中运行的多 agent 平台。"
+            },
+            {
+              "type": "list",
+              "style": "ordered",
+              "items": [
+                "新项目尝试 crewai create crew my_crew 体验 JSON-first 模式",
+                "Flow 项目尝试 crewai run --definition 运行 FlowDefinition",
+                "Snowflake 用户可以直接使用 cortex 作为 LLM 提供者"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "从多 agent 框架竞争格局来看，2026 年的 CrewAI（54K GitHub stars）与 LangGraph、AutoGen 的差异化越来越明显。LangGraph 侧重状态持久化和 HITL 检查点。AutoGen 1.0 GA 后主推事件驱动架构。CrewAI 选择了角色扮演和编排路线。JSON-first 的设计将进一步降低 CrewAI 的采用门槛，但同时也增加了与 FlowDefinition 的复杂取舍。团队在评估时需要权衡 CrewAI 的高度抽象 vs LangGraph 的精细化状态控制。"
+            },
+            {
+              "type": "paragraph",
+              "text": "The introduction of JSON-first crews has practical implications for deployment workflows. In the traditional Python-based approach, deploying a crew requires a Python runtime, dependency management, and CI/CD steps that validate Python code. With JSON-first crews, deployment becomes a matter of copying configuration files and ensuring the CrewAI runtime is available. This simplifies containerization, makes crews easier to version control and diff, and enables non-Python teams to participate in crew definition through code review processes. The JSON schema validation provides a clear contract for what constitutes a valid crew, reducing the chance of runtime configuration errors. For teams operating in regulated environments, the declarative configuration also makes it easier to audit and document crew behavior."
+            },
+            {
+              "type": "paragraph",
+              "text": "The DMN mode support in FlowDefinition is particularly interesting for enterprise use cases where decisions follow explicit rules. Traditional DMN is used in business process management systems to define decision tables. CrewAI's DMN mode brings this capability to multi-agent coordination, allowing flow behavior to branch based on structured decision criteria. This bridges the gap between traditional business process automation and agentic AI workflows, making CrewAI more attractive for enterprise architecture teams that need to maintain governance and auditability over AI-driven decisions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "open-source",
+      "title": "开源与研究线索",
+      "intro": "值得持续关注的开源项目和产业趋势。",
+      "layout": "timeline",
+      "items": [
+        {
+          "id": "cursor-v3-9-customize",
+          "title": "Cursor v3.9 Customize：统一插件/技能/MCP 管理 + 团队市场 + 插件画布",
+          "summary": "Cursor 6 月 22 日发布 v3.9，核心更新是全新 Customize 页面。插件、技能、MCP 服务器、子代理、规则、命令、hooks 从分散入口整合到统一管理界面。Marketplace 新增团队级排行榜。插件支持预建画布（Hex、Atlassian、Custom）。Team Marketplaces 支持 GitLab/BitBucket/Azure DevOps 仓库导入。",
+          "whyItMatters": "Customize 页面是 Cursor 插件生态的中央枢纽。当插件从分散管理变成集中发现和一键安装时，第三方插件生态才能真正起飞。这对 Cursor 的长期平台战略至关重要。",
+          "source": "Cursor",
+          "url": "https://cursor.com/changelog/customize",
+          "importance": "watch",
+          "tags": [
+            "Cursor",
+            "v3.9",
+            "Customize",
+            "插件",
+            "MCP",
+            "Team Marketplace"
+          ],
+          "takeaways": [
+            "Customize 页面统一管理插件、技能、MCP、子代理、规则、hooks",
+            "Marketplace 新增团队级热度和排行榜",
+            "Team Marketplace 支持 GitLab/BitBucket/Azure DevOps 仓库导入"
+          ],
+          "supportingLinks": [],
+          "media": {
+            "kind": "image",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+            "alt": "Source: Wikimedia Commons - VS Code ecosystem visual representing Cursor IDE"
+          },
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "6 月 22 日，Cursor v3.9 推出全新的 Customize 页面。在此之前，插件、技能、MCP 服务器、子代理、规则、命令和 hooks 分散在 IDE 的不同角落。现在它们整合到一个管理界面中，用户/团队/工作区三级均可管理。这是 Cursor 插件生态系统的中央枢纽。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "统一管理入口的意义"
+            },
+            {
+              "type": "paragraph",
+              "text": "对于开发者来说，Customize 页面降低了插件生态的认知负担。过去需要知道去哪里找技能、去哪里配 MCP、去哪里写规则。现在一个页面全部完成。Marketplace 排行榜显示团队中最热门的插件、技能和 MCP，帮助开发者发现团队已经在用的工具生态。Leaderboard 机制在多人在 IDE 中协作时尤其有价值：当一个团队有几十个可用插件时，知道哪些是大家都在用的可以减少选择困难。"
+            },
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                "Marketplace 排行榜：显示团队中最热门的插件、技能和 MCP",
+                "插件画布：预建共享设置模板，团队可直接打开和复用",
+                "Hex Canvas：在 Cursor 中构建数据可视化"
+              ]
+            },
+            {
+              "type": "image",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+              "alt": "Source: Wikimedia Commons - VS Code ecosystem visual representing Cursor IDE platform"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "插件画布与团队市场"
+            },
+            {
+              "type": "paragraph",
+              "text": "Plugin canvases 是一个值得单独提的功能。它本质上是一个可共享的插件配置模板。团队管理员可以创建一个包含 Hex Canvas、Atlassian Canvas 和其他自定义组件的插件画布，保存为模板，团队成员一键打开。这降低了团队级插件自定义的配置成本，也减少了每个团队成员各自配一套带来的环境不一致问题。Team Marketplaces 支持从 GitLab、BitBucket 和 Azure DevOps 导入插件仓库，企业可以建立内部插件市场。"
+            },
+            {
+              "type": "paragraph",
+              "text": "从插件生态的演进来看，Cursor 从最初仅支持基础 MCP 服务器到现在的完整插件管理系统，路径类似于 VS Code 的扩展市场演进。但 Cursor 更进一步：插件不仅仅是一个编辑器扩展，它可以打包规则、技能、子代理、MCP 服务器和 hooks，成为完整的工作流 bundle。这种一体化打包策略让 Cursor 的插件系统比传统 IDE 的扩展模型更接近平台级生态。"
+            },
+            {
+              "type": "paragraph",
+              "text": "对 Cursor 长期战略而言，v3.9 的 Customize 页面 + v3.8 的 Automations + 同周的 Origin 共同构成了一个完整的软件工厂图景。写代码用 Cursor 编辑器，编排自动化用 Automations，托管和协作用 Origin，可扩展性通过 Customize 管理插件生态。这种垂直整合的战略正在加速，Origin 提供了 Git 托管层，自有模型提供了推理层，Customize 提供了扩展层——每层都在 Cursor 控制下。对于开发者社区，这意味着使用 Cursor 将逐渐从单一工具选择变为平台绑定决策。"
+            },
+            {
+              "type": "paragraph",
+              "text": "对于正在评估 Cursor 作为团队开发平台的组织而言，Customize 页面提供了清晰的插件治理路径。团队管理员可以设置必需插件，确保所有成员使用统一的工具集。插件版本管理也集中化，避免了个人安装不同版本导致的协作问题。在企业环境中，这种插件治理能力是大规模采用 AI 编程工具的前提条件之一。"
+            }
+          ]
+        },
+        {
+          "id": "cursor-sdk-jun-2026",
+          "title": "Cursor SDK 更新：Custom Tools、Auto-Review、JSONL 持久化、递归子代理",
+          "summary": "Cursor 发布了 TypeScript 和 Python SDK 的 6 月批量更新。新功能包括：local.customTools 将自定义函数暴露给 agent 作为 MCP 工具、local.autoReview 对无人类参与的工具调用启用自动审核、可选 JSONL LocalAgentStore 替代 SQLite、子代理递归任意深度。",
+          "whyItMatters": "Cursor SDK 的成熟度正在接近企业级平台标准。JSONL 持久化意味着 agent 的每一次调用都可以被 diff 和版本控制，这对受监管行业来说是一大进步。",
+          "source": "Cursor",
+          "url": "https://cursor.com/changelog/sdk-updates-jun-2026",
+          "importance": "watch",
+          "tags": [
+            "Cursor SDK",
+            "TypeScript",
+            "Python",
+            "JSONL",
+            "Auto Review"
+          ],
+          "takeaways": [
+            "local.customTools 暴露自定义函数给 agent 作为 MCP 工具",
+            "local.autoReview 用分类器决定哪些工具调用需要人工审核",
+            "JSONL LocalAgentStore 生成可 diff、可版本控制的纯文本日志"
+          ],
+          "supportingLinks": [],
+          "media": {
+            "kind": "image",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+            "alt": "Source: Wikimedia Commons - Python logo representing SDK and AI agent development"
+          },
+          "body": [
+            {
+              "type": "paragraph",
+              "text": "Cursor 在 6 月初发布了 TypeScript 和 Python SDK 的批量更新。这次更新的关键词是企业级 agent 集成和可审计性。核心更新包括 Custom Tools、Auto-Review 和 JSONL 持久化三个方向。"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Custom Tools 和 Auto Review"
+            },
+            {
+              "type": "paragraph",
+              "text": "Custom Tools (local.customTools) 让开发者将自定义函数作为 MCP 工具暴露给 agent。一个 DevOps 团队可以将其内部部署脚本注册为 agent 工具，agent 在推理过程中直接调用部署流水线。Auto Review (local.autoReview) 用一个分类器决定哪些工具调用可以自动运行，哪些需要等待批准。之前的 headless agent 要么全自动要么全等待，Auto Review 提供了一种更平衡的方案。"
+            },
+            {
+              "type": "list",
+              "style": "bullet",
+              "items": [
+                "Custom Tools：你的函数作为 MCP 工具暴露给 agent",
+                "Auto Review：分类器决定工具调用自动运行还是等待审核",
+                "JSONL 持久化：纯文本、可 diff、可版本控制的 agent 日志"
+              ]
+            },
+            {
+              "type": "image",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+              "alt": "Source: Wikimedia Commons - SDK tools and developer platform visual"
+            },
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "JSONL 持久化的合规意义"
+            },
+            {
+              "type": "paragraph",
+              "text": "JSONL LocalAgentStore 是最值得关注的更新。SQLite 持久化对开发者来说是一个黑箱，无法 diff 无法版本控制。JSONL 是纯文本、append-only、每行一条 JSON 记录。你可以把 agent 日志提交 git diff，Pull Request 中就可以看到 agent 做了什么。对于合规审计场景，这解决了 agent 行为的可审计性问题。"
+            },
+            {
+              "type": "paragraph",
+              "text": "对于正在 Cursor SDK 上构建自定义 agent 的团队来说，这些更新意味着 agent 开发可以从「黑箱运行」走向「结构化开发」。JSONL 日志的可审计性让 agent 行为透明可追溯，Custom Tools 让 agent 可以调用内部基础设施，Auto Review 在自动化和控制之间提供了折中。这三项能力组合起来，让 Cursor SDK 正在接近企业级 agent 开发平台的标准。"
+            },
+            {
+              "type": "paragraph",
+              "text": "从 SDK 设计的演进来看，这次更新也在回应社区反馈。开发者一直希望拥有更精细的 agent 控制，而不是在「全自动」和「全手动」之间二选一。Auto Review 提供了一个可配置的中间地带。JSONL 持久化回应了合规团队对 agent 行为可审计性的要求。子代理递归回应了复杂自动化场景对多层 agent 拓扑的需求。这些增量改进说明 Cursor 正在从构建基本 agent 能力转向打磨 production-ready 的企业级功能。 从发行版节奏来看，Cursor SDK 正在追赶成熟的 AI agent 框架如 LangChain 和 CrewAI 的 API 设计水平，同时保持了与 Cursor IDE 生态的原生集成优势。对于使用 Cursor 的团队，SDK 提供了从 IDE 编写 agent 到生产部署 agent 的完整路径。"
+            },
+            {
+              "type": "paragraph",
+              "text": "从竞争对手比较来看，Cursor SDK 的这些更新填补了与 Claude Code 和 Codex 在企业级功能上的差距。Claude Code 拥有 managed settings 和 Safe Mode，Codex 拥有角色插件和 Sites。Cursor 通过 SDK 更新提供了类似的企业控制能力：Custom Tools 对应 Codex 的插件系统，Auto Review 对应 Claude Code 的权限管理，JSONL 持久化提供了两者都缺少的可审计性。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "resourceShelf": [
+    {
+      "title": "Cursor Origin: A Git Forge for AI Agents",
+      "blurb": "Developers Digest 的全面解读，区分了发布时的现实能力与 fall 2026 才开放的 promise。覆盖 Graphite lineage、expected features 和三个待回答的问题（并发性能、迁移路径、混合审核策略）。",
+      "source": "Developers Digest",
+      "url": "https://www.developersdigest.tech/blog/cursor-origin-git-forge-for-ai-agents",
+      "type": "article",
+      "tags": [
+        "Cursor",
+        "Origin",
+        "Git Forge",
+        "分析"
+      ]
+    },
+    {
+      "title": "CrewAI JSON-first Crews 部署指南",
+      "blurb": "CrewAI 官方文档关于 JSON-first 项目的完整指南：crew.jsonc 格式、agents/ 目录结构、部署验证流程。涵盖 Zip 部署回退和环境变量配置。",
+      "source": "CrewAI",
+      "url": "https://docs.crewai.com/edge/en/enterprise/guides/prepare-for-deployment",
+      "type": "tool",
+      "tags": [
+        "CrewAI",
+        "JSON",
+        "部署"
+      ]
+    }
+  ],
+  "closingNote": "2026 年 6 月最后一周，AI 编程工具战争进入平台阶段。Cursor 用 Origin 补齐了 Forge 拼图，Codex 用 Record & Replay 和角色插件向知识工作平台扩张，Claude Code 用 Safe Mode 和 managed settings 向企业级管控进化。三巨头选择了三条截然不同的路径：垂直整合、横向扩展、深度嵌入。这场竞争的核心不在于谁的模型更强，而在于谁能理解开发者（以及更广泛的知识工作者）真正的工作流痛点。",
+  "quickBits": [
+    {
+      "text": "Cursor Origin：Git 兼容的 agent 优先托管平台，基于 Graphite 构建，支持 stacked PR 和自动合并冲突解决，Fall 2026 GA",
+      "url": "https://cursor.com/origin",
+      "source": "Cursor"
+    },
+    {
+      "text": "Codex Record & Replay：macOS 上演示一次工作流即可生成可复用 skill，需要 Computer Use，EU/UK/CH 除外",
+      "url": "https://developers.openai.com/codex/record-and-replay",
+      "source": "OpenAI"
+    },
+    {
+      "text": "Claude Code v2.1.169：--safe-mode 故障排查、/cd 会话迁移、子代理递归 5 层、fallbackModel 三备用模型",
+      "url": "https://code.claude.com/docs/en/whats-new/2026-w24",
+      "source": "Anthropic"
+    },
+    {
+      "text": "Cursor v3.9 Customize：统一插件/技能/MCP管理、团队排行榜、GitLab/BitBucket团队市场",
+      "url": "https://cursor.com/changelog/customize",
+      "source": "Cursor"
+    },
+    {
+      "text": "GitHub Copilot AI Credits 三周：社区 900+ 差评，Push 开发者转向 Copilot（补全）+ Cursor/Claude Code（agentic）的混合模式",
+      "url": "https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans/",
+      "source": "GitHub"
+    },
+    {
+      "text": "CrewAI 1.14.8a：JSON-first Crews 无代码运行、FlowDefinition DMN 决策模式、Snowflake Cortex 原生支持",
+      "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.14.8a",
+      "source": "GitHub"
+    },
+    {
+      "text": "Codex 每周 500 万用户，非开发者 20% 增速 3x 开发者。6 大角色插件 + Sites 预览",
+      "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
+      "source": "OpenAI"
+    }
+  ],
+  "revisionNote": "本期为 2026-06-24 全新内容，基于当日实时调研撰写。聚焦 Cursor Origin + Codex Record & Replay + Claude Code Week 24 三大信号。",
+  "published": true,
+  "featuredOnHome": false
+}
