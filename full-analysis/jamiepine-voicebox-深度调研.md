@@ -1,93 +1,119 @@
-# 🎤 jamiepine/voicebox — 开源 AI 语音工作室深度调研
+# 🎤 Voicebox — Open-Source AI Voice Studio
 
-> **调研时间**: 2026-06-24 | **Stars**: 33,057⭐ | **Today +1,042⭐**
-> **语言**: TypeScript | **许可**: MIT
-> **仓库**: https://github.com/jamiepine/voicebox
+> **仓库**: [jamiepine/voicebox](https://github.com/jamiepine/voicebox)
+> **Stars**: 32,132⭐ | **今日新增**: 508⭐
+> **语言**: TypeScript (Tauri/Rust) | **许可证**: AGPL-3.0
+> **官网**: [voicebox.sh](https://voicebox.sh) | **文档**: [docs.voicebox.sh](https://docs.voicebox.sh)
 
----
+## 项目概述
 
-## 项目全景
+Voicebox 是一款**本地优先的 AI 语音工作室**——相当于 ElevenLabs（语音生成）和 WisprFlow（语音输入）的开源合体版。它可以在你的本地机器上完成从**声音克隆**、**语音生成**、**语音听写**到**AI Agent 语音 I/O** 的完整语音工作流。
 
-Voicebox 是一个开源的全栈 AI 语音工作室，提供语音克隆、听写转录、语音合成三大核心能力。项目定位为"AI 语音界 的 Blender"——一个功能完整、自托管、可扩展的一站式语音创作平台。当前 33K+ stars，今日增长 1K+，增长势头强劲。
+核心价值：**本地运行，数据零泄露**。模型、语音数据和录音从不离开你的电脑。
 
-## 核心架构
+## 核心能力
+
+### 七大 TTS 引擎
+
+Voicebox 集成了 7 个 TTS 引擎，支持每个生成动态切换：
+
+| 引擎 | 语言 | 特点 |
+|------|------|------|
+| **Qwen3-TTS** (0.6B/1.7B) | 10 | 高质量多语言克隆，自然语言交付指令（"说慢点"、"耳语"） |
+| **Qwen CustomVoice** | 10 | 9 种预设声音，自然语言控制，无需参考音频 |
+| **LuxTTS** | English | 轻量快速，适合实时场景 |
+| **Chatterbox Multilingual** | 多语言 | 多语言支持，含变体标签 [laugh][sigh][gasp] |
+| **Chatterbox Turbo** | 多语言 | 高性能版，表达性语音控制 |
+| **HumeAI TADA** | English | 情感智能 TTS，情绪感知 |
+| **Kokoro** | 50+ | 50+ 预设声音库，多语言覆盖最广 |
+
+### 功能矩阵
+
+| 功能 | 描述 | 实现方式 |
+|------|------|---------|
+| **声音克隆** | 数秒音频零样本克隆 | Qwen3-TTS / Kokoro |
+| **语音生成** | 23 语言，不限长度 | 自动分块 + 交叉淡入 |
+| **语音听写** | 全局快捷键录入任何文本域 | Whisper STT，全局热键 |
+| **Agent 语音输出** | AI Agent 通过 MCP 说话 | voicebox.speak 工具调用 |
+| **语音个性** | 为声音配置个性描述 + LLM 后处理 | 内置本地 LLM |
+| **后期处理** | 音调/混响/延迟/合唱/压缩/滤波器 | 内置音频 DSP |
+| **故事编辑器** | 多轨时间线编辑 | 对话/播客/叙事场景 |
+| **API 优先** | REST API + MCP Server | 集成自有应用和 Agent |
+
+### 架构设计
 
 ```
-voicebox/
-├── apps/
-│   ├── web/           # Next.js Web 前端
-│   └── mobile/        # 移动端（React Native）
-├── packages/
-│   ├── core/          # 核心语音引擎抽象层
-│   ├── tts/           # 文本转语音模块
-│   ├── stt/           # 语音转文本（听写）
-│   ├── voice-clone/   # 语音克隆模块
-│   └── audio/         # 音频处理工具链
-├── providers/
-│   ├── elevenlabs/    # ElevenLabs 适配器
-│   ├── openai/        # OpenAI TTS/STT 适配器
-│   └── local/         # 本地模型运行（whisper/coqui）
-└── docker/            # Docker 部署配置
+┌─────────────────────────────────────┐
+│        Voicebox Desktop (Tauri)      │
+├──────────────┬──────────────────────┤
+│  Voice Input │  Voice Output         │
+│  (Whisper)   │  (7 TTS Engines)      │
+├──────────────┴──────────────────────┤
+│  Local LLM (降噪/改写/个性)          │
+├─────────────────────────────────────┤
+│  MCP Server │ REST API │ CLI         │
+├─────────────────────────────────────┤
+│  Audio DSP (后处理效果链)            │
+├─────────────────────────────────────┤
+│  Storage: 本地文件系统 (语音数据)      │
+└─────────────────────────────────────┘
 ```
 
-## 源码深度解读
+### 技术栈
 
-### 核心语音引擎 (`packages/core/`)
-- 抽象化语音提供商接口，支持热插拔切换
-- 统一的音频流处理管线：输入→预处理→推理→后处理→输出
-- 支持流式实时处理和批量处理两种模式
-
-### 语音克隆 (`packages/voice-clone/`)
-- 基于少量样本（最短 3 秒音频）快速克隆
-- 支持 ElevenLabs API 和本地 Coqui TTS 模型
-- 声音特征提取→编码→合成→微调全链路
-
-### Web 前端 (`apps/web/`)
-- Next.js 14 + Tailwind CSS
-- 实时波形编辑器（基于 wavesurfer.js）
-- 多轨音频编辑器（支持叠加、混音）
-- 音色库管理面板
-
-## 社区口碑
-
-- **DevOps easy**：一行 Docker 命令即可部署，社区评价极高
-- **质量争议**：语音克隆质量依赖后端提供商，本地模型质量波动较大
-- **功能完整度**：被认为是目前功能最完整的开源语音平台之一
-- **活跃度**：Issues 响应快，PR 合并频繁，社区贡献活跃
+- **前端/桌面**: Tauri (Rust) —— 比 Electron 更轻量、更快速
+- **TTS 引擎**: 7 种开源模型（Qwen, Kokoro, HumeAI 等）
+- **STT 引擎**: Whisper（本地运行）
+- **Agent 集成**: MCP 协议（Model Context Protocol）
+- **后处理**: 内置音频 DSP 效果链
+- **平台支持**: macOS (Apple Silicon/Intel), Windows (CUDA), Linux (AMD ROCm/Intel Arc), Docker
 
 ## 竞品对比
 
-| 特性 | voicebox | Bark | Coqui TTS | ElevenLabs(闭源) |
-|------|----------|------|-----------|-----------------|
-| 语音克隆 | ✅ | ❌ | ✅(有限) | ✅ |
-| 实时合成 | ✅ | ❌ | 有限 | ✅ |
-| 自托管 | ✅ | ✅ | ✅ | ❌ |
-| API 提供商切换 | ✅ | ❌ | ❌ | N/A |
-| Web UI | ✅ | ❌ | 有限 | ✅ |
+| 特性 | Voicebox | ElevenLabs | WisprFlow | Coqui TTS |
+|------|---------|-----------|-----------|----------|
+| 开源 | ✅ | ❌ | ❌ | ✅ (已归档) |
+| 本地运行 | ✅ | ❌ | ❌ | ✅ |
+| 声音克隆 | ✅ | ✅ (收费) | ❌ | ✅ |
+| 语音听写 | ✅ | ❌ | ✅ (55$/月) | ❌ |
+| Agent 语音输出 | ✅ (MCP) | ✅ (API) | ❌ | ❌ |
+| 多引擎 | 7 个 | 1 个 | 1 个 | 1 个 |
+| 隐私保护 | ✅ 完全本地 | ❌ 云端 | ❌ 云端 | ✅ |
+| 平台 | 跨平台 | Web | macOS | Linux |
+| 价格 | 免费 | 订阅 | 订阅 | 免费 |
 
-## 核心研判
+## 独特优势：Agent Voice I/O
 
-**优势**：
-- 功能完整度远超其他开源方案，接近商业产品水准
-- 模块化架构支持多提供商切换，灵活性强
-- Docker 部署体验优秀，降低了自托管门槛
-- MIT 许可，商业友好
+Voicebox 最大的创新在于**将语音 I/O 集成到 AI Agent 生态**：
 
-**风险**：
-- 核心 AI 能力依赖外部 API，本地模型质量有待提升
-- 项目还比较新（2026 年起步），生态尚不成熟
-- 与大厂竞品（ElevenLabs, OpenAI）的差距主要在底层模型
+- **Agent 说话能力**: 一条 `voicebox.speak` 让任何 MCP 感知 Agent 用克隆声音说话
+- **Agent 个性**: 为声音配置自由格式个性描述，Agent 通过 Compose/Rewrite/Respond 模式个性化输出
+- **本地 LLM 后处理**: 内置本地 LLM 对语音输出进行改写、润色和响应式调整
 
-**定位**: 开源语音 AI 的 Swiss Army Knife，适合需要自托管语音能力的中小团队和独立开发者
+这意味着你可以和 Claude Code / Cursor 用自己喜欢的声音对话，而不是冷冰冰的合成音。
 
-## 关键文件速查
+## 使用场景
 
-| 文件路径 | 功能 |
-|----------|------|
-| `packages/core/src/engine.ts` | 语音引擎核心抽象 |
-| `packages/voice-clone/src/cloner.ts` | 语音克隆实现 |
-| `packages/tts/src/synthesizer.ts` | TTS 合成器 |
-| `packages/stt/src/transcriber.ts` | STT 转录器 |
-| `apps/web/src/app/page.tsx` | 主页面入口 |
-| `docker/docker-compose.yml` | Docker 部署配置 |
-| `providers/local/whisper.ts` | 本地 Whisper 集成 |
+1. **内容创作者**: 批量生成多语言配音，播客制作
+2. **AI 开发者**: 为 Agent 系统添加语音交互层
+3. **无障碍场景**: 语音听写替代键盘输入
+4. **教育**: 多语言语言学习，带情感的朗读
+5. **游戏/VR**: 动态角色配音生成
+
+## 平台支持
+
+| 平台 | 状态 | 下载 |
+|------|------|------|
+| macOS Apple Silicon | ✅ | voicebox.sh |
+| macOS Intel | ✅ | voicebox.sh |
+| Windows (CUDA) | ✅ | MSI 安装包 |
+| Linux (AMD/Intel) | 源码构建 | voicebox.sh/linux-install |
+| Docker | ✅ | `docker compose up` |
+
+## 更新动态
+
+Voicebox 近期势头凶猛，32K Stars 且以每天 500+ Stars 高速增长中。社区活跃度高，TTS 引擎和技术栈持续更新。
+
+## 结论
+
+Voicebox 填补了一个重要的空白：**将 ElevenLabs 和 WisprFlow 的语音 I/O 闭环开源化并本地化**。7 个 TTS 引擎 + MCP Agent 集成是差异化亮点，适合既需要语音能力又注重隐私的 AI 开发者。Tauri 框架保证了比 Electron 更流畅的体验，跨平台支持也到位。
