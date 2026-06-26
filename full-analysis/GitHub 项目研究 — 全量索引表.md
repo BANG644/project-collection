@@ -175,14 +175,17 @@
 | 159 | `calesthio/OpenMontage` | 首个开源 Agent-First 视频制作系统，14 供应商+预算管控 | 23,000 | 2026-06-27 | calesthio-OpenMontage-深度调研.md |
 | 160 | `alchaincyf/zhangxuefeng-skill` | 张雪峰认知操作系统——5 模型+8 启发性+表达 DNA | 9,000 | 2026-06-27 | alchaincyf-zhangxuefeng-skill-深度调研.md |
 | 161 | `xbtlin/ai-berkshire` | AI 时代的伯克希尔——4 大师对抗+16 Skill+金融严谨工具 | 3,000 | 2026-06-27 | xbtlin-ai-berkshire-深度调研.md |
+| 162 | `mem0ai/mem0` | AI Agent 记忆层，三层记忆架构+16 LLM+24 向量库+三信号融合检索 | 59,522 | 2026-06-27 | mem0ai-mem0-深度调研.md |
+| 163 | `n8n-io/n8n` | Fair-code 工作流自动化平台，400+集成+Agent SDK+AI 工作流生成器 | 194,179 | 2026-06-27 | n8n-io-n8n-深度调研.md |
+| 164 | `browserbase/stagehand` | AI 浏览器自动化 SDK，A11y Tree+XPath 双索引+ActCache 自愈+4 CUA 客户端 | 23,251 | 2026-06-27 | browserbase-stagehand-深度调研.md |
 
 ---
 
-**统计**：共 161 个项目 | 有描述 79 | 有 Stars 68 | 有日期 105
+**统计**：共 164 个项目 | 有描述 82 | 有 Stars 71 | 有日期 108
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（43）
+### AI Agent / 助手框架（45）
 
 - `2aronS/Duel-Agents` — 2aronS-Duel-Agents-深度调研.md
 - `aaif-goose/goose` — aaif-goose-goose-深度调研.md
@@ -227,6 +230,8 @@
 - `withastro/flue` — withastro-flue-深度调研.md
 - `zai-org/GLM-5` — zai-org-GLM-5-深度调研.md
 - `langgenius/dify` — langgenius-dify-深度调研.md
+- `n8n-io/n8n` — n8n-io-n8n-深度调研.md
+- `browserbase/stagehand` — browserbase-stagehand-深度调研.md
 
 ### LLM / 推理框架（3） 🆕
 
@@ -246,7 +251,7 @@
 - `withkynam/vibecode-pro-max-kit` — withkynam-vibecode-pro-max-kit-深度调研.md
 - `youngyangyang04/leetcode-master` — youngyangyang04-leetcode-master-深度调研.md
 
-### RAG / 知识库 / 记忆（6）
+### RAG / 知识库 / 记忆（7）
 
 - `1Panel-dev/MaxKBStar` — 1Panel-dev-MaxKBStar-深度调研.md
 - `ClaudioDrews/memory-os` — ClaudioDrews-memory-os-深度调研.md
@@ -254,6 +259,7 @@
 - `raiyanyahya/recall` — raiyanyahya-recall-深度调研.md
 - `supermemoryai/supermemory` — supermemoryai-supermemory-深度调研.md
 - `topoteretes/cognee` — topoteretes-cognee-深度调研.md
+- `mem0ai/mem0` — mem0ai-mem0-深度调研.md
 
 ### 开发工具 / CLI（7）
 
