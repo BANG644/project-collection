@@ -1,7 +1,7 @@
 # 📚 GitHub 项目研究 — 全量索引表
 
 > 本文件是 `full-analysis/` 下所有调研报告的全量索引。
-> 生成时间：2026-06-26 | 收录项目：**153** 个
+> 生成时间：2026-06-27 | 收录项目：**156** 个
 
 ## 阅读指引
 
@@ -167,14 +167,17 @@
 | 151 | `zai-org/GLM-5` | 从 Vibe Coding 到 Agentic Engineering 的旗舰模型 | 4,121 | 2026-06-19 | zai-org-GLM-5-深度调研.md |
 | 152 | `zarazhangrui/beautiful-html-templates` | beautiful-html-templates | — | 2026-05-05 | zarazhangrui-beautiful-html-templates-深度调研.md |
 | 153 | `ZhuLinsen/daily_stock_analysis` | LLM 驱动的多市场股票智能分析系统 | 18,500 | — | ZhuLinsen-daily_stock_analysis-深度调研.md |
+| 154 | `ggml-org/llama.cpp` | C/C++ LLM 推理框架，GGML 张量库 + GGUF 格式标准 | 98,000+ | 2026-06-27 | ggml-org-llama.cpp-深度调研.md |
+| 155 | `langgenius/dify` | 生产级 Agentic 工作流 LLM 应用开发平台 | 146,670 | 2026-06-27 | langgenius-dify-深度调研.md |
+| 156 | `ollama/ollama` | "LLM 界的 Docker"，本地一键运行大模型 | 174,941 | 2026-06-27 | ollama-ollama-深度调研.md |
 
 ---
 
-**统计**：共 153 个项目 | 有描述 71 | 有 Stars 60 | 有日期 97
+**统计**：共 156 个项目 | 有描述 74 | 有 Stars 63 | 有日期 100
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（42）
+### AI Agent / 助手框架（43）
 
 - `2aronS/Duel-Agents` — 2aronS-Duel-Agents-深度调研.md
 - `aaif-goose/goose` — aaif-goose-goose-深度调研.md
@@ -218,6 +221,13 @@
 - `VoltAgent/awesome-design-md` — VoltAgent-awesome-design-md-深度调研.md
 - `withastro/flue` — withastro-flue-深度调研.md
 - `zai-org/GLM-5` — zai-org-GLM-5-深度调研.md
+- `langgenius/dify` — langgenius-dify-深度调研.md
+
+### LLM / 推理框架（3） 🆕
+
+- `ggml-org/llama.cpp` — ggml-org-llama.cpp-深度调研.md
+- `ollama/ollama` — ollama-ollama-深度调研.md
+- `jingyaogong/minimind` — jingyaogong-minimind-深度调研.md
 
 ### AI 编码 / Skill 技能（9）
 
@@ -283,7 +293,7 @@
 - `easychen/opc-methodologyStar` — easychen-opc-methodologyStar-深度调研.md
 - `sindresorhus/awesome` — sindresorhus-awesome-深度调研.md
 
-### 其他（68）
+### 其他（67）
 
 - `1Panel-dev/1Panel` — 1Panel-dev-1Panel-深度调研.md
 - `abhigyanpatwari/GitNexus` — abhigyanpatwari-GitNexus-深度调研.md
@@ -311,7 +321,6 @@
 - `heygen-com/hyperframes` — heygen-com-hyperframes-深度调研.md
 - `hugohe3/ppt-master` — hugohe3-ppt-master-深度调研.md
 - `jd-opensource/JoyAI-Echo` — jd-opensource-JoyAI-Echo-深度调研.md
-- `jingyaogong/minimind` — jingyaogong-minimind-深度调研.md
 - `kageroumado/phosphene` — kageroumado-phosphene-深度调研.md
 - `koala73/worldmonitor` — koala73-worldmonitor-深度调研.md
 - `LanRhyme/MicYou` — LanRhyme-MicYou-深度调研.md
