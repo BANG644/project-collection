@@ -1,10 +1,10 @@
 # Project Collection 调研报告质量审计
 
-- 扫描文件数：145
+- 扫描文件数：156
 - Critical：0
 - High：0
-- Medium：0
-- Low：145
+- Medium：2
+- Low：154
 
 ## 判定维度
 
@@ -17,6 +17,8 @@
 
 | 严重级别 | 分数 | 文件 | 行数 | 最长行 | 英文占比 | 核心章节 | 原因 |
 |---|---:|---|---:|---:|---:|---:|---|
+| medium | 42 | `full-analysis/GitHub 项目研究 — 全量索引表.md` | 364 | 193 | 0.835 | 1 | 核心章节缺失 core_section_hits=1<br>英文占比过高 english_ratio=0.83 |
+| medium | 42 | `full-analysis/addyosmani-agent-skills-深度调研.md` | 173 | 141 | 0.625 | 2 | 核心章节缺失 core_section_hits=2<br>英文占比过高 english_ratio=0.63 |
 
 ## 建议修复优先级
 
