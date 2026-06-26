@@ -1,7 +1,7 @@
 # 📚 GitHub 项目研究 — 全量索引表
 
 > 本文件是 `full-analysis/` 下所有调研报告的全量索引。
-> 生成时间：2026-06-27 | 收录项目：**161** 个
+> 生成时间：2026-06-27 | 收录项目：**168** 个
 
 ## 阅读指引
 
@@ -178,14 +178,18 @@
 | 162 | `mem0ai/mem0` | AI Agent 记忆层，三层记忆架构+16 LLM+24 向量库+三信号融合检索 | 59,522 | 2026-06-27 | mem0ai-mem0-深度调研.md |
 | 163 | `n8n-io/n8n` | Fair-code 工作流自动化平台，400+集成+Agent SDK+AI 工作流生成器 | 194,179 | 2026-06-27 | n8n-io-n8n-深度调研.md |
 | 164 | `browserbase/stagehand` | AI 浏览器自动化 SDK，A11y Tree+XPath 双索引+ActCache 自愈+4 CUA 客户端 | 23,251 | 2026-06-27 | browserbase-stagehand-深度调研.md |
+| 165 | `JCodesMore/ai-website-cloner-template` | AI 驱动的网站逆向工程模板，Prompt-as-Code 范式实现截图→提取→组件构建→QA | 21,294 | 2026-06-27 | JCodesMore-ai-website-cloner-template-深度调研.md |
+| 166 | `aws/agent-toolkit-for-aws` | AWS 官方 AI Agent 增强套件，Plugin+Skills+MCP Server 三层架构+40+验证Skills | 1,334 | 2026-06-27 | aws-agent-toolkit-for-aws-深度调研.md |
+| 167 | `mauriceboe/TREK` | 自托管旅行协作规划器，150+MCP工具+NestJS+PWA离线+27 OAuth scope | 7,588 | 2026-06-27 | mauriceboe-TREK-深度调研.md |
+| 168 | `simplex-chat/simplex-chat` | 首个无用户标识符的通讯平台，单向消息队列+双加密+后量子安全 | 12,443 | 2026-06-27 | simplex-chat-simplex-chat-深度调研.md |
 
 ---
 
-**统计**：共 164 个项目 | 有描述 82 | 有 Stars 71 | 有日期 108
+**统计**：共 168 个项目 | 有描述 86 | 有 Stars 75 | 有日期 112
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（45）
+### AI Agent / 助手框架（46）
 
 - `2aronS/Duel-Agents` — 2aronS-Duel-Agents-深度调研.md
 - `aaif-goose/goose` — aaif-goose-goose-深度调研.md
@@ -232,6 +236,7 @@
 - `langgenius/dify` — langgenius-dify-深度调研.md
 - `n8n-io/n8n` — n8n-io-n8n-深度调研.md
 - `browserbase/stagehand` — browserbase-stagehand-深度调研.md
+- `aws/agent-toolkit-for-aws` — aws-agent-toolkit-for-aws-深度调研.md
 
 ### LLM / 推理框架（3） 🆕
 
@@ -239,7 +244,7 @@
 - `ollama/ollama` — ollama-ollama-深度调研.md
 - `jingyaogong/minimind` — jingyaogong-minimind-深度调研.md
 
-### AI 编码 / Skill 技能（9）
+### AI 编码 / Skill 技能（10）
 
 - `anthropics/claude-plugins-official` — anthropics-claude-plugins-official-深度调研.md
 - `centminmod/my-claude-code-setup` — centminmod-my-claude-code-setup-深度调研.md
@@ -250,6 +255,7 @@
 - `sybil-solutions/codex-shim` — sybil-solutions-codex-shim-深度调研.md
 - `withkynam/vibecode-pro-max-kit` — withkynam-vibecode-pro-max-kit-深度调研.md
 - `youngyangyang04/leetcode-master` — youngyangyang04-leetcode-master-深度调研.md
+- `JCodesMore/ai-website-cloner-template` — JCodesMore-ai-website-cloner-template-深度调研.md
 
 ### RAG / 知识库 / 记忆（7）
 
@@ -291,10 +297,11 @@
 - `Open-LLM-VTuber/Open-LLM-VTuber` — Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md
 - `VAST-AI-Research/TripoSplat` — VAST-AI-Research-TripoSplat-深度调研.md
 
-### 安全 / 运维 / 系统工具（2）
+### 安全 / 运维 / 系统工具（3）
 
 - `Raphire/Win11Debloat` — Raphire-Win11Debloat-深度调研.md
 - `ShadowWhisperer/Remove-MS-Edge` — ShadowWhisperer-Remove-MS-Edge-深度调研.md
+- `simplex-chat/simplex-chat` — simplex-chat-simplex-chat-深度调研.md
 
 ### 学习资料 / 方法论（5）
 
@@ -304,7 +311,7 @@
 - `easychen/opc-methodologyStar` — easychen-opc-methodologyStar-深度调研.md
 - `sindresorhus/awesome` — sindresorhus-awesome-深度调研.md
 
-### 其他（67）
+### 其他（68）
 
 - `1Panel-dev/1Panel` — 1Panel-dev-1Panel-深度调研.md
 - `abhigyanpatwari/GitNexus` — abhigyanpatwari-GitNexus-深度调研.md
@@ -373,6 +380,7 @@
 - `xw7872081123/wallpaper-engine-steam` — xw7872081123-wallpaper-engine-steam-深度调研.md
 - `zarazhangrui/beautiful-html-templates` — zarazhangrui-beautiful-html-templates-深度调研.md
 - `ZhuLinsen/daily_stock_analysis` — ZhuLinsen-daily_stock_analysis-深度调研.md
+- `mauriceboe/TREK` — mauriceboe-TREK-深度调研.md
 
 ---
 
