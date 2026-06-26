@@ -1,0 +1,7 @@
+# WorkBuddy agent temp files
+.workbuddy/
+*.tmp
+*.bak
+__pycache__/
+.DS_Store
+Thumbs.db
