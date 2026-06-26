@@ -1,7 +1,7 @@
 # 📚 GitHub 项目研究 — 全量索引表
 
 > 本文件是 `full-analysis/` 下所有调研报告的全量索引。
-> 生成时间：2026-06-27 | 收录项目：**156** 个
+> 生成时间：2026-06-27 | 收录项目：**161** 个
 
 ## 阅读指引
 
@@ -170,10 +170,15 @@
 | 154 | `ggml-org/llama.cpp` | C/C++ LLM 推理框架，GGML 张量库 + GGUF 格式标准 | 98,000+ | 2026-06-27 | ggml-org-llama.cpp-深度调研.md |
 | 155 | `langgenius/dify` | 生产级 Agentic 工作流 LLM 应用开发平台 | 146,670 | 2026-06-27 | langgenius-dify-深度调研.md |
 | 156 | `ollama/ollama` | "LLM 界的 Docker"，本地一键运行大模型 | 174,941 | 2026-06-27 | ollama-ollama-深度调研.md |
+| 157 | `google-labs-code/design.md` | 给 AI Coding Agent 描述视觉设计系统的双层格式规范 | 21,000 | 2026-06-27 | google-labs-code-design.md-深度调研.md |
+| 158 | `opendatalab/MinerU` | 高精度开源 PDF 文档解析引擎，3 后端+109 语言+10+国产 GPU | 70,000 | 2026-06-27 | opendatalab-MinerU-深度调研.md |
+| 159 | `calesthio/OpenMontage` | 首个开源 Agent-First 视频制作系统，14 供应商+预算管控 | 23,000 | 2026-06-27 | calesthio-OpenMontage-深度调研.md |
+| 160 | `alchaincyf/zhangxuefeng-skill` | 张雪峰认知操作系统——5 模型+8 启发性+表达 DNA | 9,000 | 2026-06-27 | alchaincyf-zhangxuefeng-skill-深度调研.md |
+| 161 | `xbtlin/ai-berkshire` | AI 时代的伯克希尔——4 大师对抗+16 Skill+金融严谨工具 | 3,000 | 2026-06-27 | xbtlin-ai-berkshire-深度调研.md |
 
 ---
 
-**统计**：共 156 个项目 | 有描述 74 | 有 Stars 63 | 有日期 100
+**统计**：共 161 个项目 | 有描述 79 | 有 Stars 68 | 有日期 105
 
 ## 🏷️ 按技术领域分类
 
