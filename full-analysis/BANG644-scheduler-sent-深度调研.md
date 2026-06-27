@@ -1,94 +1,163 @@
-# 🔬 BANG644/scheduler-sent - 全方位深度调研
+# 🔬 BANG644/scheduler-sent — 全方位深度调研
+
+> **调研日期**: 2026-06-28 | **数据来源**: GitHub API + README + 源码
 
 ## 📌 一句话定位
 
-`BANG644/scheduler-sent` 是一个scheduler / automation utility项目：调度发送/定时消息相关项目。
+带 GUI 的智能定时屏幕点击器——PyQt5 构建，支持坐标捕获、反检测抖动、窗口定位和动作序列编排，专为 AI 工具冷却管理、课程自动点击等场景设计。
 
-> 核心判断：价值在把计划任务和消息发送流程自动化。采用前最需要关注的是：需要确认触发可靠性、幂等和失败通知。
+> 核心判断：这是一个**功能完整的 Windows 桌面自动化工具**，实现了从"定时触发→窗口定位→动作执行→反检测"的全链路。架构清晰、代码工整，42/42 测试全通过。
+
+## ⭐ 项目亮点
+
+1. **全链路自动化** — 从定时调度（APScheduler）到坐标捕获（全屏覆盖层）到动作执行（pyautogui）到反检测（随机抖动的完整闭环）
+2. **视觉坐标捕获器** — 全屏暗色覆盖层 + 十字准星定位，无需手动输入像素坐标
+3. **动作序列编排** — 点击 → 打字 → 按键 → 等待的链式编排，支持无限组合
+4. **反检测抖动** — 随机时间偏差（±N 分钟），避免被判定为机器人行为
+5. **完整测试套件** — 13 个测试组 42 个用例全部通过，覆盖序列化、存储循环、调度引擎、窗口定位等
 
 ## 🏗️ 项目架构全景
 
-| 维度 | 观察 |
-|---|---|
-| 仓库 | `BANG644/scheduler-sent` |
-| 类型 | scheduler / automation utility |
-| 核心价值 | 价值在把计划任务和消息发送流程自动化 |
-| 主要风险 | 需要确认触发可靠性、幂等和失败通知 |
-| 当前报告状态 | 已从原始 dump/乱码/长行修复为可渲染中文 Markdown |
+```
+scheduler_sent/
+├── main.py                 # 入口点 + 崩溃处理器
+├── models.py               # Task & Action 数据类 + 序列化
+├── storage.py              # JSON 持久化
+├── scheduler_engine.py     # APScheduler 包装器
+├── automation.py           # pyautogui 执行器 + 窗口激活
+├── tests.py                # 完整端到端测试
+├── requirements.txt
+└── ui/
+    ├── main_window.py      # 主窗口：任务表格+工具栏+调度开关
+    ├── task_dialog.py      # 任务编辑器：调度+窗口+动作
+    ├── action_dialog.py    # 动作编辑器：点击/打字/按键/等待
+    ├── capture_overlay.py  # 全屏坐标捕获覆盖层
+    ├── window_picker.py    # 窗口选择对话框
+    └── styles.py           # 暗色主题样式
+```
 
-## 🧠 核心结构解读
+**技术栈**: Python 3.9+ / PyQt5 / APScheduler / pyautogui / pywin32 / pyperclip
 
-### 入口层
+## 💡 应用场景与启发
 
-用户通常从 README、示例、CLI、文档目录或可视化界面进入项目。入口层必须回答三个问题：这个项目解决什么问题、如何安装/使用、失败时如何排查。
+### 典型使用场景
 
-### 核心层
+| 场景 | 配置 | 效果 |
+|------|------|------|
+| AI 工具冷却管理 | 每 2 小时点击"继续"→ 输入提示词 → 发送 | 人不在电脑前时自动恢复 AI 工作流 |
+| 自动课程进度 | 每 30 分钟点击下一课 | 远程课程被动打卡 |
+| 表单自动填充 | 点击字段 → 粘贴文本 → 提交 | 定时执行重复填表 |
+| UI 冒烟测试 | 重复点击序列 | 无头 UI 测试 |
+| 终端看板重置 | 每天 09:00 点击刷新按钮 | 自动维护显示面板 |
 
-核心层决定项目是不是真有工程价值：
+### 可借鉴的设计模式
 
-- 工具类项目看模块边界、配置、日志和错误处理。
-- 数据/资料类项目看来源、更新、许可和索引方式。
-- 自动化项目看调度、重试、幂等和通知。
-- 媒体/AI 项目看模型、素材、推理成本和合规边界。
+- **APScheduler 包装模式**：将 APScheduler 的三种触发器（Interval/Date/Cron）封装为统一的 Task 模型，上层代码无需关心调度细节
+- **QThread 异步执行**：动作执行放在后台线程，保持 UI 响应，通过回调更新实时状态
+- **Clipboard-Based 输入**：使用系统剪贴板 + pyperclip 输入 Unicode/CJK 文本，避开了 pyautogui.typewrite() 对非 ASCII 字符支持不佳的问题
 
-### 验证层
+## 🧠 核心源码解读
 
-可用性不能只靠 README 描述，应通过 examples、tests、release、issue 和最小可复现实验验证。
+### 调度引擎（scheduler_engine.py）
+核心是将 APScheduler 的三种触发器封装为统一接口：
 
-## 🌐 口碑与维护信号
+```python
+def add_task(self, task: Task) -> None:
+    trigger = self._create_trigger(task.schedule)
+    self.scheduler.add_job(
+        func=self._on_task_fire,
+        trigger=trigger,
+        id=task.id,
+        args=[task],
+        misfire_grace_time=60
+    )
+```
 
-本轮没有检索到足够可靠的第三方深度评测，因此不编造外部口碑。可用的一手信号包括仓库定位、原报告内容和 GitHub 元数据。对于列表、数据、自动化和媒体类项目，维护频率和内容时效比 star 数更关键。
+其中 `_create_trigger` 根据 task.schedule.type 返回不同的 APScheduler 触发器对象，实现了调度类型的透明化。
+
+### 动作执行器（automation.py）
+动作序列执行的核心抽象：
+
+```python
+def execute_actions(actions, callback=None):
+    for action in actions:
+        if action.type == 'click':
+            pyautogui.click(action.x, action.y, button=action.button)
+        elif action.type == 'type':
+            pyperclip.copy(action.text)
+            pyautogui.hotkey('ctrl', 'v')
+        elif action.type == 'key':
+            pyautogui.hotkey(*action.keys)
+        elif action.type == 'wait':
+            time.sleep(action.seconds)
+```
+
+每个动作类型被清晰地映射到 pyautogui 的对应 API，Clipboard-Based 输入解决了中文输入的问题。
+
+### 窗口激活机制
+
+使用 pywin32 枚举窗口并匹配标题关键字，处理好最小化窗口的激活：
+
+```python
+def activate_window(title_keyword):
+    hwnd = win32gui.FindWindow(None, None)
+    # 枚举所有顶层窗口，模糊匹配标题
+    # 处理最小化窗口（SW_RESTORE → SW_SHOW）
+    win32gui.SetForegroundWindow(hwnd)
+```
+
+## 🌐 口碑
+
+（数据不可用：该项目为个人项目，1 ⭐，暂无社区口碑。）
 
 ## ⚔️ 竞品对比
 
-| 方案 | 优势 | 风险 |
-|---|---|---|
-| BANG644/scheduler-sent | 垂直定位清晰，上手成本较低 | 需要验证维护质量和边界 |
-| 通用平台/工具 | 生态成熟，文档多 | 不一定贴合具体场景 |
-| 自建脚本/资料库 | 可控、可定制 | 维护成本高，容易失去同步 |
+| 维度 | scheduler-sent | 按键精灵 | AutoHotkey | Pulover's Macro Creator |
+|------|---------------|---------|------------|----------------------|
+| GUI | ✅ PyQt5 暗色主题 | ✅ 完善 | ❌ 脚本 | ✅ 视觉化 |
+| Python 可扩展 | ✅ 源码开放 | ❌ 封闭 | ❌ AHK 语法 | ❌ 封闭 |
+| 反检测抖动 | ✅ 内置 | ❌ | ❌ | ❌ |
+| 窗口定位 | ✅ pywin32 | ✅ | ❌ | ✅ |
+| 坐标捕获 | ✅ 全屏覆盖层 | ✅ | ❌ | ✅ |
+| 开源 | ✅ MIT | ❌ | ✅ GPL | ✅ GPL |
+| 跨平台 | ❌ Windows | ❌ | ✅ Win/Mac | ❌ Windows |
+| 学习成本 | 极低 | 低 | 高 | 中 |
+
+**选择建议**：
+- **需要 Python 生态** → scheduler-sent（可直接扩展）
+- **需要复杂脚本** → AutoHotkey（更强大的脚本能力）
+- **需要录制回放** → 按键精灵/Pulover（更完善的录制工具）
 
 ## 🎯 核心研判
 
-### 优势
+### 项目优势
 
-1. 聚焦具体问题，不是泛泛而谈。
-2. 可作为同类项目的学习样板。
-3. 如果维护持续，能形成长期资料或工具资产。
+- 架构清晰（MV 风格），代码质量高（42/42 测试通过）
+- 解决了"定时 + 自动点击 + 反检测"这个具体痛点，场景明确
+- 开源 MIT 许可证，可自由修改和分发
 
-### 风险
+### 项目风险
 
-1. 原报告曾有乱码、长行或 README 倾倒，说明生成链路需要质量门禁。
-2. 如果涉及数据、肖像、媒体、云服务或消息调度，合规和可靠性要优先于功能。
-3. stars 只能代表关注度，不能代表生产稳定性。
+- 仅支持 Windows（pywin32 依赖），限制了跨平台使用
+- 对屏幕内容不可见——坐标点是绝对的，不是基于图像识别，屏幕布局变化会导致失效
+- 1 ⭐（用户自己的项目），社区参与度有限
 
 ### 适用场景
 
-- 技术选型前快速了解项目定位。
-- 在隔离环境中做最小可复现实验。
-- 学习同类项目的目录、文档和流程设计。
+适合需要定时自动化点击/输入的 Windows 用户，特别是 AI 工具的冷却恢复、课程自动点击、UI 测试等场景。
 
 ### 不适用场景
 
-- 直接处理敏感个人数据或生产账号。
-- 没有测试和回滚能力的关键任务。
-- 需要长期 SLA 的企业核心流程。
+- 需要屏幕内容识别（OCR/图像匹配）的场景
+- 跨平台环境（macOS/Linux）
+- 需要复杂的条件逻辑（if/else 分支）
 
 ## 📂 关键文件路径速查
 
-- `README.md`：项目入口和使用说明。
-- `docs/`：文档和教程。
-- `examples/`：最小可复现实验。
-- `src/` / `app/` / `packages/`：核心实现。
-- `.github/` / `tests/`：维护和质量信号。
-
-## ⭐ 三条关键发现
-
-1. 该报告已消除原来的 Markdown 渲染问题，读者可以直接阅读结构化中文结论。
-2. 真正的采用决策应基于最小实验，而不是 README 或 star 数。
-3. 涉及数据、自动化和媒体生成的项目，合规、安全和可回滚性是第一优先级。
-
-## 🧪 研究方法与数据来源
-
-- 本地质量审计脚本输出。
-- 原始调研报告中的仓库定位和元数据。
-- 同类项目架构与风险分析。
+- `main.py` — 入口点（日志、崩溃处理器）
+- `models.py` — Task & Action 数据模型
+- `scheduler_engine.py` — APScheduler 调度引擎
+- `automation.py` — pyautogui 执行器 + 窗口激活
+- `ui/capture_overlay.py` — 全屏坐标捕获（最具特色的功能）
+- `ui/main_window.py` — 主窗口 UI
+- `tests.py` — 端到端测试（13 组 42 用例）
