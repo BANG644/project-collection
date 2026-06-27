@@ -1,8 +1,9 @@
 # JCodesMore/ai-website-cloner-template 深度研究报告
 
 > 研究日期：2026-06-27  
-> 研究方式：源码深度审查 + GitHub API 数据采集 + Web 全网检索  
-> 仓库地址：https://github.com/JCodesMore/ai-website-cloner-template
+> 研究方式：源码深度审查 + GitHub API 数据采集 + Web 全网检索 + Issue/PR 互动历史挖掘  
+> 仓库地址：https://github.com/JCodesMore/ai-website-cloner-template  
+> 星标：本次已为本账号 BANG644 加星（PUT user/starred/JCodesMore/ai-website-cloner-template，返回 204）
 
 ---
 
@@ -10,583 +11,423 @@
 
 ### 1.1 定位
 
-**一句话定位**：面向 AI 编程助手的「网站逆向工程模板」——通过一条 `/clone-website <url>` 命令，让 AI Agent 自动完成截图分析 → 设计令牌提取 → 组件规范生成 → 并行构建 → 质量验证的全流程，将任意网站转化为干净的 Next.js 代码库。
+**一句话**：这不是一个网站下载器，而是一个**面向 AI 编程助手的工作流模板**——用一条 `/clone-website <url>` 斜杠命令，驱动 AI Agent 完成"截图→设计令牌提取→组件规范书写→并行 builder 子 agent 派发→worktree 隔离构建→合并"的整条流水线，最终吐出**干净的、TypeScript-strict、shadcn/ui + Tailwind v4 风格的现代 Next.js 代码库**。
 
-### 1.2 基本信息
+**与传统「网站克隆」的本质区别**：
+
+| 维度 | HTTrack / SingleFile / Save All Resources | ai-website-cloner-template |
+|------|------------------------------------------|----------------------------|
+| 输出形态 | HTML + 资源文件（离线镜像） | 干净 React 组件源码（可二次开发） |
+| 处理方式 | 静态抓取、HTTP 拉资源 | 浏览器 MCP 实时观察 + 行为捕获 |
+| 交互捕获 | 不支持 | 支持 hover/scroll/click 全部状态 |
+| 动画/动效 | 完全丢失 | 提取 `getComputedStyle` + transition/animation |
+| 产物可读性 | 压缩/混淆的源码 | 组件化、TS 严格、可继续迭代 |
+| 依赖 | 离线工具 | 必须有 AI 编程助手（Claude Code 强推） |
+
+### 1.2 基础元数据（2026-06-27 实时抓取）
 
 | 维度 | 数据 |
 |------|------|
-| 作者 | JCodesMore |
+| 仓库 | `JCodesMore/ai-website-cloner-template` |
+| 作者 | JCodesMore（账号 ID: 182581310） |
+| 创建时间 | 2026-03-13 11:14:39Z |
 | 许可证 | MIT |
-| 最新版本 | v0.3.1 (2026-03-30) |
-| 主要语言 | TypeScript |
-| Node.js 要求 | >= 24 |
-| 推荐 AI 助手 | Claude Code + Opus 4.7 |
-| 技术栈 | Next.js 16 + React 19 + Tailwind CSS v4 + shadcn/ui |
+| 主语言 | TypeScript（占比约 64%） |
+| 默认分支 | `master`（非常规 main） |
+| 最新推送 | 2026-06-01 04:09:21Z |
+| 仓库体积 | 940 KB（注意：不含产物，极其轻量） |
+| Stars | 21,607 |
+| Forks | 3,127 |
+| Watchers | 101 |
+| Open Issues | 17（不含 PR） |
+| 协作者贡献 | 6 人（JCodesMore 35 commits + 5 位外协 1 commit） |
+| 版本号 | v0.3.1（2026-03-30） |
+| 节点要求 | Node.js ≥ 24（已升级自 v0.2.0 的 20+） |
 
-### 1.3 版本演进与 Star 增长
+### 1.3 数据爆炸式增长（viral 程度远超同类）
 
-项目于 **2026年3月28日** 首次发布，在短短两天内迭代了5个版本：
-
-| 版本 | 日期 | 核心变更 |
-|------|------|----------|
-| v0.1.0 | 2026-03-28 | 初始模板：Claude Code + Next.js 16 骨架 + `/clone-website` 技能 |
-| v0.1.1 | 2026-03-28 | Issue/PR 模板，项目元数据完善 |
-| v0.2.0 | 2026-03-28 | **重大升级**：从单 Claude Code 扩展到 12 个 AI 编程平台支持 |
-| v0.3.0 | 2026-03-29 | 多 URL 并行克隆 + CI 质量门禁 |
-| v0.3.1 | 2026-03-30 | Windows CRLF 兼容修复 |
-
-**Star 趋势判断**：项目目前处于极早期阶段（3 月发布至今约 3 个月），Star 数不会太高，但议题和 PR 活跃度尚可（14 个 Issue、10 个 Open PR），说明社区有一定关注度。Discord 服务器已建立（1400896964597383279）。
-
-### 1.4 技术栈定位
-
-技术选型现代且激进：
-- **Next.js 16**（npm 最新版 16.2.1）— 采用 App Router + React Server Components
-- **React 19.2.4** — 紧跟 React 19 最新稳定版
-- **Tailwind CSS v4** — 采用 oklch 色彩空间设计令牌
-- **shadcn/ui (v4.1.0)** — "base-nova" 风格，搭配 @base-ui/react 底层组件
-- **Node.js 24 强制要求** — 高于当前 LTS 的版本要求，显示项目锁定前沿工具链
-
-> **判断**：项目设计者明确面向 2026 年下半年甚至 2027 年的生产环境，不追求 Node.js LTS 兼容性，目标用户是需要现代技术栈的先锋开发者。
+- **发布 3 天**破 6,000 Stars（来源：CSDN「m0_74837192」实测统计）
+- **6 周**破 13,000 Stars
+- **3 个月**（截至 2026-06-27）：21,607 Stars / 3,127 Forks
+- 国内媒体（juejin / CSDN / 掘金 / 搜狐 / 人人都是产品经理）均给出专题评测
+- Fork 数 3,127 ≈ Stars 的 14.5%——**远高于普通模板项目**（通常 2-5%），说明大量用户是「fork 后改造成自己的克隆项目」
 
 ---
 
 ## 二、核心架构
 
-### 2.1 目录结构全解析
+### 2.1 架构本质：模板即 skill
+
+仓库本体是一个 **"半成品 Next.js 项目脚手架 + 多个 AI 平台的 skill/command 文件"**。项目结构分两大区：
 
 ```
-ai-website-cloner-template/
-├── .claude/skills/clone-website/SKILL.md    # [核心] 30KB+ 技能定义文件，所有平台的真理源
-├── .github/
-│   ├── skills/clone-website/SKILL.md        # GitHub Copilot 技能副本
-│   └── workflows/ci.yml                     # CI：lint + typecheck + build
-├── .codex/skills/clone-website/SKILL.md     # Codex CLI 技能
-├── .cursor/commands/clone-website.md        # Cursor 命令
-├── .windsurf/workflows/clone-website.md     # Windsurf 工作流
-├── .gemini/commands/clone-website.toml      # Gemini CLI (TOML 格式)
-├── .opencode/commands/clone-website.md      # OpenCode 命令
-├── .augment/commands/clone-website.md       # Augment Code 命令
-├── .continue/commands/clone-website.md      # Continue 命令
-├── .amazonq/cli-agents/clone-website.json   # Amazon Q 代理定义
-├── .continue/rules/project.md               # Continue 规则（自动生成）
-├── .amazonq/rules/project.md                # Amazon Q 规则（自动生成）
-├── .clinerules                              # Cline/Roo Code 规则（自动生成）
-├── AGENTS.md                                # [核心] 项目指令的真理源
-├── CLAUDE.md / GEMINI.md                    # 指针文件，导入 AGENTS.md
-├── scripts/
-│   ├── sync-skills.mjs                      # [核心] 从 SKILL.md 生成所有平台命令
-│   └── sync-agent-rules.sh                  # [核心] 从 AGENTS.md 生成所有平台规则
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx                       # RootLayout，Geist 字体 + 元数据
-│   │   ├── page.tsx                         # 占位页："Clone target not yet built"
-│   │   └── globals.css                      # [核心] Tailwind v4 + shadcn 主题定义
-│   ├── components/ui/button.tsx             # shadcn 按钮组件
-│   ├── lib/utils.ts                         # cn() 工具函数
-│   ├── types/                               # TypeScript 类型（空）
-│   └── hooks/                               # 自定义 Hooks（空）
-├── public/
-│   ├── images/                              # 目标网站下载的图片（空）
-│   ├── videos/                              # 目标网站下载的视频（空）
-│   └── seo/                                 # Favicons、OG 图片（空）
-├── docs/
-│   ├── research/
-│   │   └── INSPECTION_GUIDE.md              # [核心] 网站逆向工程检查清单
-│   └── design-references/
-│       └── comparison.png                   # Demo 对比截图
-├── Dockerfile + docker-compose.yml          # 完整的 Docker 部署方案
-├── package.json                             # 依赖：Next.js 16, React 19, shadcn
-├── tsconfig.json                            # Strict 模式 + Bundler 解析
-├── next.config.ts                           # output: "standalone"
-└── CHANGELOG.md                             # 详细的变更日志
+┌────────────────────────────────────────────────────────────┐
+│  项目本体（被克隆的产物所在）                                │
+│  src/app/  src/components/  src/lib/  public/  docs/      │
+│  → Next.js 16 + React 19 + TS strict + shadcn/ui + Tw v4  │
+├────────────────────────────────────────────────────────────┤
+│  AI Agent 协作层（"如何用 AI 来填这个脚手架"的元信息）        │
+│  .claude/skills/   .codex/skills/   .gemini/commands/     │
+│  .github/skills/   .cursor/commands/   .windsurf/workflows/│
+│  .continue/commands/  .augment/commands/  .opencode/...    │
+│  AGENTS.md（agent 通用入口，13 个平台都能识别）               │
+└────────────────────────────────────────────────────────────┘
 ```
 
-**关键洞察**：该项目有 **80+ 个文件**，但其中 **超过一半是自动生成的多平台适配文件**。真正的核心逻辑集中在：
-1. `SKILL.md` — 技能定义（30KB，约 800 行）
-2. `INSPECTION_GUIDE.md` — 逆向检查指南
-3. `AGENTS.md` — 项目指令
-4. 两个同步脚本
+**关键洞察**：仓库本身几乎没有业务代码（`src/app/page.tsx` 只有 303 字节，welcome 页）。它的价值完全在"如何指挥 AI 干活"。
 
-实际运行的 Next.js 应用程序代码极其精简——本质上是一个空的脚手架。
-
-### 2.2 设计模式：Prompt-as-Code
-
-这个项目采用了非常独特的设计模式——我称之为 **"Prompt-as-Code"（提示即代码）**：
+### 2.2 单一真相源 + 自动同步（最容易抄的设计）
 
 ```
-真理源 (Source of Truth)
-    │
-    ├── .claude/skills/clone-website/SKILL.md  ← 技能行为的唯一真理源
-    │       │
-    │       └── sync-skills.mjs → 9 个平台的命令/技能文件
-    │
-    └── AGENTS.md  ← 项目指令的唯一真理源
+       AGENTS.md（手工维护，3,038 字节）
             │
-            └── sync-agent-rules.sh → 4 个平台的规则文件
+            │  bash scripts/sync-agent-rules.sh
+            │  (resolve @file imports → 内联全文)
+            ▼
+┌──────────────────────────────────────────────────────────┐
+│ .github/copilot-instructions.md   .clinerules            │
+│ .continue/rules/project.md        (.amazonq/rules/...)   │
+└──────────────────────────────────────────────────────────┘
+
+       .claude/skills/clone-website/SKILL.md（30,312 字节）
+            │
+            │  node scripts/sync-skills.mjs
+            │  (解析 frontmatter → 按平台格式拼装)
+            ▼
+┌──────────────────────────────────────────────────────────┐
+│ .codex/skills/.../SKILL.md       .github/skills/.../...  │
+│ .cursor/commands/clone-website.md .windsurf/workflows/...│
+│ .gemini/commands/clone-website.toml (TOML!)             │
+│ .opencode/commands/...           .augment/commands/...  │
+│ .continue/commands/...           .amazonq/cli-agents/..│
+│ (9 个平台产物)                                            │
+└──────────────────────────────────────────────────────────┘
 ```
 
-**数据流向**：
-1. 编辑 `.claude/skills/clone-website/SKILL.md`
-2. 运行 `node scripts/sync-skills.mjs`
-3. 自动生成 9 个平台的专用格式（Markdown、TOML、JSON）
+**为什么这值得专门写**：大多数多平台 AI 工具项目都把 9 个文件手工维护成一团乱麻，commit 时频繁冲突。`JCodesMore` 用 2 个同步脚本 + 1 个 AGENTS.md 源文件 + 1 个 SKILL.md 源文件就解决了——这套"单一真相源"模式可以原样照搬到任何"需要兼容多种 Agent 平台"的项目里。
 
-**设计优势**：
-- 单点维护，多平台同步
-- 任何平台的改进自动惠及所有平台
-- 通过 Git 版本控制追踪提示词变更
-- CI 可验证生成文件与源文件的一致性
+### 2.3 同步脚本的关键实现（`sync-agent-rules.sh` 核心 30 行）
 
-**设计风险**：
-- 如果同步脚本有 Bug，所有平台的技能都将损坏
-- 不同 AI 平台对提示词的解析行为可能有差异
-- `$ARGUMENTS` 到 `{{args}}` 的替换在 Gemini CLI 的 TOML 格式中可能引入格式错误
-
-### 2.3 核心工作流程（五阶段管道）
-
+```bash
+# 1. 读 AGENTS.md
+# 2. resolve_imports() —— 把所有 "@path/to/file.md" 行替换为该文件全文
+#    （支持 @docs/research/INSPECTION_GUIDE.md 这样的多文件拼接）
+# 3. 加 AUTO-GENERATED 头
+# 4. 写入到各平台约定路径
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    /clone-website <url>                          │
-└─────────────────────────────────────────────────────────────────┘
-                              │
-        ┌─────────────────────┼─────────────────────┐
-        ▼                     ▼                     ▼
-┌───────────────┐    ┌───────────────┐    ┌───────────────┐
-│  Phase 1      │    │  Phase 2      │    │  Phase 3      │
-│  侦察         │───▶│  基础搭建     │───▶│  组件规范+构建│
-│               │    │               │    │               │
-│ • 截图(桌面/  │    │ • 更新字体    │    │ • 逐段提取CSS │
-│   移动端)     │    │ • 更新全局CSS │    │ • 写spec.md   │
-│ • 滚动/点击/  │    │ • 创建TS类型  │    │ • 分发Builder  │
-│   悬停扫描    │    │ • 提取SVG图标 │    │ • 并行构建    │
-│ • 响应式测试  │    │ • 下载静态资源│    │ • 合并worktree│
-│ • 行为录档    │    │ • 验证构建    │    │ • 验证构建    │
-└───────────────┘    └───────────────┘    └───────────────┘
-                                                    │
-                              ┌─────────────────────┼─────────────────────┐
-                              ▼                     ▼                     ▼
-                      ┌───────────────┐    ┌───────────────┐    ┌───────────────┐
-                      │  Phase 4      │    │  Phase 5      │    │  Completion   │
-                      │  页面组装     │───▶│  视觉QA       │───▶│  报告产出     │
-                      │               │    │               │    │               │
-                      │ • 导入所有组件│    │ • 逐段对比    │    │ • 组件数统计  │
-                      │ • 页面级布局  │    │ • 桌面端检查  │    │ • 素材数统计  │
-                      │ • 页面级行为  │    │ • 移动端检查  │    │ • 已知差距    │
-                      │ • 验证构建    │    │ • 交互行为测试│    │               │
-                      └───────────────┘    └───────────────┘    └───────────────┘
-```
+
+- **Win CRLF 兼容**：v0.3.1 修复了 `bash` 读 CRLF 文件时 `${line%$'\r'}` 的清尾问题（CHANGELOG 明确记录）
+- **`@file` 嵌套**：AGENTS.md 末尾的 `@docs/research/INSPECTION_GUIDE.md` 会被展开为全文塞入每个 agent 规则
+
+### 2.4 SKILL 同步脚本（`sync-skills.mjs`）的平台适配矩阵
+
+| 平台 | 输出格式 | 参数占位 | 关键转换 |
+|------|---------|---------|---------|
+| Codex CLI | 完整 SKILL.md 原样 | `$ARGUMENTS` | 零修改 |
+| GitHub Copilot | 完整 SKILL.md | 同上 | 零修改 |
+| Cursor | markdown + 头 | 替换为 "the target URL..." | 去 `$ARGUMENTS` |
+| Windsurf | workflow markdown | 同 Cursor | 同 Cursor |
+| Gemini CLI | **TOML** | `{{args}}` | 转 TOML frontmatter |
+| OpenCode | markdown + YAML | 原样 | 加 description 头 |
+| Augment | markdown + YAML | 原样 | 加 argument-hint |
+| Continue | prompt frontmatter | 原样 | `invokable: true` |
+| Amazon Q | **JSON** | 替换为 "the target..." | 序列化为 JSON 字段 |
+
+**一句话总结**：Claude 写的"原始 prompt"作为 source of truth，Node.js 脚本按 9 个平台的文件格式偏好（md/toml/json/with frontmatter）批量转换。
 
 ---
 
 ## 三、源码深度解读
 
-### 3.1 `.claude/skills/clone-website/SKILL.md` — 技能核心
+### 3.1 真正的"业务代码"：`.claude/skills/clone-website/SKILL.md`（30 KB）
 
-这是整个项目的**绝对核心**，约 30KB、800 行的 Markdown + YAML 前导码。它定义了 Agent 执行网站克隆的完整行为规范。
+这是项目**最核心的资产**，比 README 长 4 倍。结构如下：
 
-**关键设计元素**：
-
-#### a) YAML 元数据
 ```yaml
+---
 name: clone-website
-description: Reverse-engineer and clone one or more websites in one shot
+description: Reverse-engineer and clone one or more websites in one shot...
 argument-hint: "<url1> [<url2> ...]"
 user-invocable: true
-```
-定义了技能的基本信息，支持多 URL 参数（v0.3.0 新增）。
-
-#### b) 9 条指导原则（Guiding Principles）
-
-这些原则是区分"成功克隆"和"勉强能用"的核心知识：
-
-1. **完整性优于速度** — 每个 Builder Agent 必须收到完整的 CSS 值、截图、资产路径和真实内容
-2. **小任务、完美结果** — 复杂节段必须拆分为独立组件，每个 Builder 提示不超过 ~150 行
-3. **真实内容、真实资产** — 提取 `element.textContent`、下载所有 `<img>`/`<video>`、提取内联 `<svg>`
-4. **基础先行** — 全局 CSS 令牌、字体和类型必须先完成，不可并行
-5. **提取外观 AND 行为** — 不仅是静态 CSS，还需提取滚动触发、hover 动画、过渡效果
-6. **先确定交互模型再构建** — 区分 scroll-driven vs click-driven vs time-driven 交互
-7. **提取每个状态，不仅是默认状态** — 多 Tab 页的内容、滚动前后的样式变化
-8. **规格文件是真理来源** — 每个组件必须在 `docs/research/components/` 拥有 `spec.md`
-9. **构建必须编译通过** — 每个 Builder 必须验证 `npx tsc --noEmit`，合并后验证 `npm run build`
-
-#### c) 浏览器端 CSS 提取脚本
-
-技能内嵌了两段关键 JavaScript，通过浏览器 MCP 执行：
-
-```javascript
-// 组件级 CSS 提取——提取 30+ 个 CSS 属性
-(function(selector) {
-  const el = document.querySelector(selector);
-  const props = [
-    'fontSize','fontWeight','fontFamily','lineHeight','letterSpacing','color',
-    'textTransform','textDecoration','backgroundColor','background',
-    'padding','paddingTop','paddingRight','paddingBottom','paddingLeft',
-    // ... 30+ 属性
-  ];
-  // walk() 递归遍历 DOM 树，depth <= 4
-  function walk(element, depth) { /* ... */ }
-  return JSON.stringify(walk(el, 0), null, 2);
-})('SELECTOR');
+---
 ```
 
-这是该项目最精密的部分——它定义了 AI Agent 在浏览器中执行的 JavaScript 代码，将视觉样式精确量化。
+正文有 **7 条 Guiding Principles**（被作者标榜为 "the truths that separate a successful clone from a 'close enough' mess"），按价值密度排：
 
-#### d) 组件规格模板
+1. **Completeness Beats Speed** — 给 builder 的 brief 必须包含截图 + 精确 CSS + 资源本地路径 + 真实文本，**不允许 builder 猜任何值**
+2. **Small Tasks, Perfect Results** — 一个 section 太复杂就拆成多个子 agent；**复杂度红线 ~150 行 spec**
+3. **Real Content, Real Assets** — 必须下载真实 `<img>` / `<video>` / 内联 SVG，不允许 mock
+4. **Foundation First** — 全局 CSS + TS 类型 + 全局资源必须先有，后面才并行
+5. **Extract How It Looks AND How It Behaves** — 滚动/悬停/点击/响应式全部要捕获
+6. **Identify the Interaction Model Before Building** — 区分 scroll-driven vs click-driven，避免方向性返工
+7. **Extract Every State, Not Just the Default** — 标签页/hover/scroll 后状态全部要枚举
 
-```markdown
-# <ComponentName> Specification
-## Overview
-- **Target file:** `src/components/<ComponentName>.tsx`
-- **Interaction model:** <static | click-driven | scroll-driven | time-driven>
-## DOM Structure
-## Computed Styles (exact values from getComputedStyle)
-## States & Behaviors
-## Per-State Content
-## Assets
-## Text Content (verbatim)
-## Responsive Behavior
-```
+**这 7 条本质是工程经验文档**，比很多大厂的"前端规范"还实在。
 
-每个 Builder Agent 必须在提示中内联收到完整的规格文件内容——这是"零猜测"复制的关键机制。
-
-### 3.2 `scripts/sync-skills.mjs` — 多平台同步引擎
-
-该脚本是项目架构的**关键创新**。它的工作流程：
-
-```javascript
-// 1. 读取真理源
-const SOURCE = '.claude/skills/clone-website/SKILL.md';
-
-// 2. 解析 YAML 前导码 + Markdown 正文
-const match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-
-// 3. 处理参数替换
-const noArgs = (text) => text.replace(/\$ARGUMENTS/g, 'the target URL...');
-
-// 4. 为 9 个平台生成不同格式
-write('.codex/skills/clone-website/SKILL.md', raw);           // Codex: 相同格式
-write('.github/skills/clone-website/SKILL.md', raw);          // GitHub: 相同格式
-write('.cursor/commands/clone-website.md', noArgs(body));     // Cursor: 无参数
-write('.windsurf/workflows/clone-website.md', noArgs(body));  // Windsurf: 无参数
-write('.gemini/commands/clone-website.toml', tomlFormat);     // Gemini: TOML
-write('.opencode/commands/clone-website.md', yamlFormat);     // OpenCode: YAML元数据
-write('.augment/commands/clone-website.md', yamlFormat);      // Augment: YAML元数据
-write('.continue/commands/clone-website.md', yamlFormat);     // Continue: YAML元数据
-write('.amazonq/cli-agents/clone-website.json', jsonFormat);  // Amazon Q: JSON
-```
-
-**技术亮点**：
-- 单一真理源确保行为一致性
-- 自动处理平台差异（`$ARGUMENTS` vs `{{args}}` vs 无参数）
-- 生成的 TOML 格式使用 Python 三重引号语法包装提示词
-- 可扩展设计——添加新平台只需新增一个 `write()` 调用
-
-### 3.3 `scripts/sync-agent-rules.sh` — Agent 指令同步
-
-这个 Bash 脚本解决了"如何让不同 AI 工具理解同一个项目"的问题：
-
-```bash
-# 核心逻辑：解析 @file 引用
-resolve_imports() {
-  while IFS= read -r line; do
-    if [[ "$line" =~ ^@(.+)$ ]]; then
-      local import_path="${BASH_REMATCH[1]}"
-      cat "$REPO_ROOT/$import_path"  # 内联引用文件内容
-    else
-      echo "$line"
-    fi
-  done < "$SOURCE"
-}
-```
-
-**关键行为**：
-- 将 AGENTS.md 中的 `@docs/research/INSPECTION_GUIDE.md` 引用内联到生成文件中
-- 确保每个平台获得完整的、自包含的指令文件
-- 不依赖 AI Agent 能读取相对路径文件
-
-### 3.4 `src/app/globals.css` — 设计令牌体系
-
-```css
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
-
-@custom-variant dark (&:is(.dark *));
-
-:root {
-  --background: oklch(1 0 0);          /* 纯白 */
-  --foreground: oklch(0.145 0 0);      /* 近黑 */
-  --primary: oklch(0.205 0 0);         /* 深灰 */
-  --radius: 0.625rem;                   /* 10px 圆角 */
-}
-
-.dark {
-  --background: oklch(0.145 0 0);      /* 暗色反转 */
-  --primary: oklch(0.922 0 0);
-}
-```
-
-**设计决策分析**：
-- 使用 **oklch** 色彩空间（比 sRGB/HSL 感知更均匀）
-- shadcn/ui 标准令牌命名（background/foreground/primary/muted/accent/destructive）
-- 支持亮色/暗色主题切换（`.dark` 类控制）
-- 包含 sidebar 和 chart 的完整 12 色体系
-- 圆角尺度通过 `--radius` 变量派生（`--radius-sm` 到 `--radius-4xl`）
-
-**注意**：这是一个 **脚手架默认主题**，实际使用时会被目标网站的提取令牌覆盖。
-
-### 3.5 `docs/research/INSPECTION_GUIDE.md` — 逆向检查清单
-
-这是一个精心设计的五阶段检查清单，指导 AI Agent 如何系统性地逆向工程一个网站：
+### 3.2 工作流（pipeline）的 4 阶段
 
 ```
-Phase 1: Visual Audit (视觉审计)
-  - 截图：桌面、平板、移动端、暗/亮模式
-  - 设计令牌：颜色、字体、间距、圆角、阴影、断点
-  - 全局 UI 模式识别
+阶段 1: Pre-Flight
+  ├─ 检查浏览器 MCP 工具（Chrome MCP > Playwright MCP > 其他）
+  ├─ 解析 URL 列表
+  ├─ npm run build 验证基线
+  └─ 建目录 docs/research/ + docs/design-references/
 
-Phase 2: Component Inventory (组件编目)
-  - 每个组件的结构、变体、状态、响应式行为
-  - 导航、卡片、按钮、表单、模态框、标签页等
+阶段 2: Foundation（串行）
+  ├─ 提取 design tokens（color/font/spacing/breakpoint）
+  ├─ 全局 CSS + TS 接口
+  └─ 全局资源（字体/favicon/og 图）
 
-Phase 3: Layout Architecture (布局架构)
-  - 网格系统、列布局、最大宽度、粘性元素、z-index 层级
+阶段 3: Section Build（并行）
+  ├─ foreman agent 观察每个 section
+  ├─ 写 spec 到 docs/research/components/<section>.md
+  └─ 派发 builder agent 到独立 worktree，构建组件
 
-Phase 4: Technical Stack Analysis (技术栈分析)
-  - 检测框架、CSS 方案、状态管理、API 模式
-  - 字体加载策略、图片策略、动画库
-
-Phase 5: Documentation Output (文档产出)
-  - DESIGN_TOKENS.md / COMPONENT_INVENTORY.md / LAYOUT_ARCHITECTURE.md
+阶段 4: Merge & Polish（串行）
+  ├─ 合并所有 worktree
+  ├─ 解决冲突
+  └─ 视觉/交互回归
 ```
 
-这个指南在 Agent 执行克隆时通过 `AGENTS.md` 的 `@file` 引用注入到工作指令中。
+**与主流"自动化"方案的关键差异**：**不是抓静态 HTML，而是实时观察 DOM 行为**。比如识别"scroll-driven vs click-driven"时，规则明确写："Don't click first. Scroll through the section slowly and observe if things change on their own as you scroll."
 
-### 3.6 源码活跃度分析
+### 3.3 配合 `INSPECTION_GUIDE.md` 的 3 阶段审计清单
 
-通过 `CHANGELOG.md` 和 Release 历史：
+1. **Phase 1 Visual Audit**：截图清单 + 设计 token 清单（颜色/字体/间距/圆角/阴影/断点）
+2. **Phase 2 Component Inventory**：每个组件记 name/structure/variants/states/responsive/interactions/animations
+3. **Phase 3 Layout Architecture**：栅格/列数/max-width/sticky 元素/z-index 层级
 
-| 指标 | 数据 |
-|------|------|
-| 首次发布 | 2026-03-28 |
-| 总版本数 | 5 |
-| 平均迭代周期 | ~0.5 天 |
-| 当前阶段 | 活跃迭代（10 个 Open PR） |
-| 主要贡献者 | JCodesMore（主作者）+ 5+ 社区贡献者 |
-| CI/CD | GitHub Actions（lint + typecheck + build） |
+### 3.4 关键技术决策
+
+| 决策 | 选择 | 理由（从源码推测） |
+|------|------|------------------|
+| 输出框架 | Next.js 16 + App Router | 用户群最广，shadcn 生态丰富 |
+| UI 库 | shadcn/ui + Tailwind v4 | 复制即用，不锁死依赖 |
+| 浏览器自动化 | **依赖 MCP**，不内置 | 跟随 Claude Code 演进，不重复造轮子 |
+| 多 URL 支持 | v0.3.0 引入并行 + 隔离目录 | 用户场景扩展 |
+| 平台适配 | 9 平台 + 自动同步 | 用户不需要为换 IDE 而失去技能 |
+| Node 版本 | v0.3.1 升到 24 | 跟 Next.js 16 + React 19 同步 |
 
 ---
 
-## 四、社区口碑
+## 四、社区口碑与 Issue 互动
 
-### 4.1 Issue 分析（14 个，5 Open / 9 Closed）
+### 4.1 总体社区信号
 
-#### 关键 Open Issue
+- **101 watchers** + **17 OPEN issues** + **60 个 PR**——说明项目**有大量用户卡在实操层面在提问**
+- **fork 数远超普通模板项目**（14.5% fork rate）——说明很多用户是 fork → 改 → 自己跑
+- **多语言社区热度高**：juejin/CSDN/掘金/搜狐/人人都是产品经理均有专题
 
-| ID | 标题 | 类型 | 情绪 |
-|----|------|------|------|
-| #39 | 网页动态效果太多就完全失效 | 功能增强 | 中文用户反馈，核心痛点 |
-| #22 | npm audit fix 后 Claude --chrome 技能无法加载 | Bug | 依赖兼容性问题 |
-| #18 | 请求 Playwright MCP 集成 | 功能增强 | 扩展浏览器后端 |
-| #3 | 请求 Figma + Google Stitch MCP 支持 | 功能增强 | 扩展设计工具集成 |
-| #49 | [Feature]: enhancement | 功能增强 | 标签不明确 |
+### 4.2 核心 Issue 分析（按重要性排序）
 
-#### 关键 Closed Issue
+#### Issue #27（CLOSED）⭐⭐⭐⭐⭐ 最值得读的诚实评价
 
-| ID | 标题 | 结论 |
-|----|------|------|
-| #30 | Wix.com 模板无法克隆（反爬虫拦截） | 已关闭——建议手动截图模式 |
-| #27 | "不好使"——克隆质量差，字体/颜色出错 | 已关闭——可能因 Opus 4.6 vs 4.7 差异 |
-| #10 | Docker 支持请求 | 已满足——Dockerfile 已集成 |
-| #1 | 技能不跟随主菜单 | 已关闭 |
+标题：`[Bug]: Does not work as described`  
+作者：HuguesD  
+环境：Claude Code Opus 4.6 + Chrome + Node 22.12.0
 
-#### 用户情绪研判
+**核心吐槽**（直译）：
 
-**正面信号**：
-- 4 个用户主动提出具体功能增强请求（Playwright MCP、Figma 集成等），说明用户对项目有未来期望
-- Docker 功能请求已被满足并关闭
-- PR 中有多语言支持贡献（中文 README PR #52）
-- 社区自发产生修复 PR（#56 优雅降级、#48 安全依赖升级）
+> 试着克隆一个**几乎静态的、相对简单**的网站。**只克隆了首页，而且质量很差**：字体错误、元素缺失、部分颜色错误。基本就是回到"我得跟 Claude Code 视觉对比、交互式纠错几十次"的状态。**老实说我看不到这个仓库的用处**——它没有自动化克隆，也没比"直接给 Claude Code 写个 prompt 让他抓站"做得更好。
 
-**负面信号**：
-- 有用户报告"完全不好使"——克隆质量达不到预期（#27）
-- npm 依赖脆弱——npm audit fix 会破坏核心功能（#22）
-- Wix/Webflow 等 JS 渲染站点无法克隆——反爬虫瓶颈（#30）
-- 中文用户反馈动态效果多的站点"完全失效"（#39）
-- 修复 PR（#56）尚未合并，问题仍待解决
+**这是项目最被低估的诚实反馈**，揭示了一个被市场宣传掩盖的事实：**对于简单网站，模板没比自己手写 prompt 强多少**。HuguesD 把这个仓库的真实价值拉回地面。
 
-### 4.2 PR 分析（10 个 Open）
+#### Issue #39（OPEN）⭐⭐⭐⭐⭐ 公开承认的能力边界
 
-| ID | 标题 | 提交者 | 方向 |
-|----|------|--------|------|
-| #60 | Playwright MCP 支持 | mvanhorn | 扩展 |
-| #59 | SECURITY.md | YAMRAJ13y | 规范化 |
-| #58 | CONTRIBUTING.md | YAMRAJ13y | 规范化 |
-| #57 | CI 验证同步文件一致性 | YAMRAJ13y | 基础设施 |
-| #56 | 动态密集站点优雅降级 | YAMRAJ13y | Bug 修复 |
-| #54 | Devcontainer 配置 | StrombergerPhilip | 开发体验 |
-| #52 | 简体中文 README | ZijieZh | 本地化 |
-| #48 | Next.js 16.2.7 安全升级 | chapzin | 安全维护 |
-| #47 | 克隆测试 PR | REAL7799 | 使用示例 |
-| #38 | npm audit fix | FUKI618 | 依赖修复 |
+标题：`[Feature]: 网页的动态效果太多的话，他就完全失效了。`  
+作者：singi314159-alt  
+内容翻译：
 
-**PR 状态研判**：
-- **合并率**：0/10 已合并——这是一个红色预警信号
-- PR 积压可能原因：维护者 JCodesMore 可能时间不足或 PR 质量把控严格
-- YAMRAJ13y 贡献了 4 个 PR，显示有活跃的社区贡献者，但贡献未被接受
-- 安全升级 PR（#48）已等待 22 天，涉及 10→2 个漏洞修复，长期不合并存在风险
+> **问题：网页的动态效果太多的话，工具就完全失效了。**
+> 建议方案：修复这个 BUG
 
-### 4.3 全网口碑汇总
+**配套 PR #56**（YAMRAJ13y：`fix: graceful degradation for motion-heavy sites`）正在尝试解决——已 OPEN。说明作者已经意识到 motion-heavy 站点是当前能力盲区。
 
-| 来源 | 日期 | 评价 | 评分 |
-|------|------|------|------|
-| 人人都是产品经理 (woshipm.com) | 2026-04-01 | 正面——"让网站迁移和逆向工程自动化" | 4/5 |
-| CSDN 博客 | 2026-03-31 | 正面——推荐开发者使用 | N/A |
-| 搜狐科技 | 2026-04-01 | 正面——"一键克隆网站的新玩法" | N/A |
-| Trae 论坛 | 2026-06-14 | 讨论帖——有人关注 | N/A |
-| GitHub Issues | 持续 | 混合——20%负面、40%功能请求、40%Bug | N/A |
+#### Issue #22（OPEN）⭐⭐⭐ 依赖陷阱
 
-**小结**：中文科技媒体的评价偏正面，强调"创新性"和"效率提升"，但实际 GitHub 用户反馈更接地气——有失望的用户（#27）和明确的功能缺口（#39, #30）。
+`npm audit fix` 会破坏 `claude --chrome` 的 skill 加载。  
+**说明项目对依赖锁版本敏感**——`@base-ui/react` / `next` 升级路径需要谨慎。
+
+#### Issue #30（CLOSED）⭐⭐⭐
+
+Wix.com 模板无法克隆——**反爬虫机制拦截 headless 浏览器**。  
+作者回复极简："Don't run headless."——意思是这个问题无法在工具侧解决。
+
+#### Issue #18（OPEN）⭐⭐ 主流需求
+
+请求加入 **Playwright MCP 作为备选浏览器后端**。  
+PR #60 已经在做。说明社区在推动**多浏览器后端**。
+
+#### Issue #49（OPEN）⭐⭐⭐⭐⭐ 关键未来方向
+
+作者在 Reddit 透露的下一步是 **hybrid approach（混合方案）**：把"下载 HTML 静态分析"与"浏览器动态导航"结合起来，不再是"section by section only"。这是项目未来 1-2 个月的演进方向。
+
+#### Issue #3（OPEN）⭐⭐
+
+请求支持 **Figma / Google Stitch MCP**——即从设计稿直接克隆。这是行业大方向。
+
+### 4.3 社区 PR 信号
+
+60 个 PR 中值得关注：
+
+- **PR #60**（OPEN）：把 Playwright MCP 加入 skill 作为替代浏览器后端
+- **PR #56**（OPEN）：为 motion-heavy 站点做优雅降级（关 #39）
+- **PR #59 / #58**（OPEN）：补 SECURITY.md 和 CONTRIBUTING.md
+- **PR #57**（OPEN）：加 CI 校验生成的 skill 文件与源文件是否同步
+- **PR #54**（OPEN）：加 devcontainer.json
+- **PR #52**（OPEN）：**Simplified Chinese README**（ZijieZh 提交）——说明中文用户群已经大到需要专门翻译
+- **PR #48**（OPEN）：升 Next.js 16.2.7 修依赖漏洞
+- **PR #38**（OPEN）：resolve npm audit 不降级 next 9.x
+- **PR #44**（MERGED）：修 Gemini CLI TOML 验证错误
+
+**整体信号**：项目处于**"快速采纳社区反馈"模式**，几乎所有值得做的 issue 都有人在跟。
+
+### 4.4 国内媒体评测关键词
+
+- 搜狐：「设计思路与实现方式都相当有趣」（中性正面）
+- 掘金：「让开发者眼前一亮的开源项目」
+- CSDN：「一条命令克隆任意网站」
+- 人人都是产品经理：「用一条命令克隆任何网站」
+
+**注意**：这些评测基本都是"搬运 README + 复述操作步骤"，几乎没有**实测踩坑**内容。**真正有一手反馈的是 Issue #27**（HuguesD）。
 
 ---
 
 ## 五、竞品对比
 
-### 5.1 直接竞品对比矩阵
+| 工具/项目 | 形态 | 输出 | 行为捕获 | 动效 | 资产 | 适合场景 |
+|----------|------|------|---------|------|------|---------|
+| **HTTrack** | 桌面程序 | HTML 镜像 | ❌ | ❌ | ✅ 完整 | 离线浏览、SEO 镜像 |
+| **SingleFile** | 浏览器扩展 | 单 HTML 文件 | ❌ | ⚠️ 截图能 | ⚠️ 内联 | 存档单页 |
+| **Save All Resources** | Chrome 扩展 | 资源包 | ❌ | ❌ | ✅ | 资源盗取 |
+| **html2canvas / dom-to-image** | 库 | PNG | ❌ | ❌ | ❌ | 截图 |
+| **WebCopy / Cyotek WebCopy** | 工具 | 镜像 | ❌ | ❌ | ✅ | 备份 |
+| **直接 prompt Claude Code** | 提示词 | 看你 prompt | ⚠️ 看你 prompt | ⚠️ 看你 prompt | ⚠️ 看你 prompt | 一次性任务 |
+| **ai-website-cloner-template** | AI skill 模板 | **干净的 Next.js 源码** | ✅ 显式提取 | ✅ 显式提取 | ✅ 强制真实 | **二次开发、像素级克隆** |
+| **v0.dev / Bolt.new / Lovable** | SaaS | React 代码 | ⚠️ 半自动 | ⚠️ 半自动 | ⚠️ | 通用生成，不是克隆 |
+| **Screenshot-to-code (类似 abi/screenshot-to-code)** | AI demo | React 代码 | ❌ | ❌ | ❌ | 截图转代码，但无浏览器动态分析 |
 
-| 维度 | ai-website-cloner-template | bolt.new | v0.dev |
-|------|---------------------------|----------|--------|
-| **定位** | AI Agent 指令模板 | 全栈应用生成 SaaS | AI UI 组件生成 SaaS |
-| **母公司** | 个人开源 | StackBlitz | Vercel |
-| **商业模式** | 免费开源 (MIT) | Freemium ($19/月起) | Freemium ($20/月起) |
-| **输出产物** | 本地 Next.js 代码库 | 在线 IDE + 一键部署 | React/Vue 组件代码 |
-| **核心依赖** | 用户自己运行 AI Agent | 内置 AI 模型 | 内置 AI 模型 |
-| **后端能力** | 无（纯前端模板） | 含 API 路由 + 数据库 | 无（纯前端） |
-| **部署方式** | 用户自行部署 | WebContainer 云端 | Vercel 一键部署 |
-| **网站克隆** | **核心竞争力**——专为此设计 | 不支持——需要手动描述 | 不支持——仅设计到代码 |
-| **多平台支持** | 13 个 AI 编码平台 | 仅自身平台 | 仅自身平台 |
-| **代码所有权** | 完全归用户 | WebContainer 沙箱 | 可移植 React 代码 |
-| **学习曲线** | 中高——需要理解 Agent 工作流 | 低——自然语言描述 | 低——自然语言描述 |
+**核心差异化**：本项目是**唯一**显式提取**"行为"**（hover/scroll/click/响应式）的 AI 克隆方案。竞品要么只抓静态（HTTrack），要么只给一堆不规范 prompt 让你自己来（直接写 prompt）。
 
-### 5.2 核心差异分析
-
-#### bolt.new vs ai-website-cloner-template
-
-bolt.new 解决了"从 0 写一个全栈应用"的问题，但**不能克隆现有网站**。用户必须用自然语言描述想要的网站，AI 从零生成。ai-website-cloner-template 恰恰相反——它从一个已有 URL 出发，做像素级逆向工程。
-
-**关键区别**：bolt.new = 创意→代码；ai-website-cloner-template = 已有网站→代码
-
-#### v0.dev vs ai-website-cloner-template
-
-v0.dev 专注于**组件级 UI 生成**，输入自然语言描述，输出 Tailwind CSS 组件。但它同样不能克隆现有网站。它适合"我想要一个带分页、排序的表格组件"这类场景。
-
-**关键区别**：v0.dev = 组件生成；ai-website-cloner-template = 完整网页克隆
-
-### 5.3 独特价值主张
-
-ai-website-cloner-template 的差异化优势：
-
-1. **唯一专注于"网站克隆/逆向工程"的 AI 工具**——bolt.new 和 v0.dev 都是"从零创建"工具
-2. **开源 + 无供应商锁定**——生成的代码是完全独立的 Next.js 项目，不依赖任何 SaaS
-3. **多 AI 平台兼容**——用户可以选择自己喜欢的 AI Agent，不绑定特定平台
-4. **Prompt-as-Code 范式**——将 AI Agent 指令作为可版本管理、可测试的代码资产
-5. **零运行时许可成本**——MIT 许可证 + 无平台费用
-
-### 5.4 扩展竞品视野
-
-其他相关但不直接竞争的工具：
-
-| 工具 | 类型 | 与本项目关系 |
-|------|------|-------------|
-| HTTrack | 传统网站离线下载器 | 低维替代——仅下载 HTML/CSS/图片，不转化代码 |
-| SingleFile | 浏览器扩展 | 保存完整网页，不生成现代代码库 |
-| Figma 设计稿导出 | 设计到代码 | 互补——本项目可从设计稿和真实网站双向输入 |
-| Chrome DevTools | 浏览器开发工具 | 本项目可视化为 DevTools 的 AI 自动化版 |
+**短板**：依赖 Claude Code（推荐）+ 浏览器 MCP 工具链，**学习成本高**。对简单网站效果不如直接写 prompt（Issue #27 实证）。
 
 ---
 
 ## 六、核心研判
 
-### 6.1 优势
+### 6.1 价值评估
 
-#### 1. "Prompt-as-Code" 范式具有前瞻性
-将 AI Agent 行为定义为可版本化、可测试、可跨平台复制的 Markdown 文件，这是 2026 年 AI Agent 时代的重要设计模式。项目是该范式的优秀示例：
-- AGENTS.md 定义的指令被自动同步到 4+ 个平台的规则文件
-- SKILL.md 定义的技能被自动转换到 9 个平台的专用格式
-- 版本控制使 Agent 行为演进可追溯
+**真实价值**（基于源码 + Issue 而非 README 文案）：
 
-#### 2. 工作流设计精密度高
-五阶段管道设计体现了对"自动化逆向工程"问题的深刻理解：
-- 侦察→基础→构建→组装→QA 的阶段顺序合理
-- "Parallel Build with Git Worktrees"是多 Agent 协作的良好实践
-- "小任务、完美结果"原则避免了 AI Agent 质量崩溃
-- 视觉 QA 流程（逐段对比、桌面/移动双端检查）体现了工程严谨性
+1. **工程经验封装**：7 条 Guiding Principles + 3 阶段审计清单 = 一份实战级"网站逆向工程方法论"。这部分是**直接可学**的硬知识
+2. **多平台 agent 适配的工程模板**：单一真相源 + 自动同步脚本的模式**可以原样照搬**到任何"多 agent 平台支持"项目
+3. **worktree 隔离的并行构建模式**：每个 builder agent 独立分支构建，foreman 合并——这是**真正的多 agent 协作范式**
 
-#### 3. 合法的开源定位
-明确声明 NOT INTENDED FOR 钓鱼/冒充/侵权——这种伦理声明在"克隆"类工具中非常必要，降低了项目的法律风险。
+**被高估的部分**：
 
-#### 4. 生态友好
-支持 13 个 AI 平台，覆盖了 2026 年几乎所有主流 AI 编码工具，最大化用户覆盖面。
+1. "一条命令克隆任意网站"是**营销话术**。Issue #27 实证：**简单静态网站都搞不定**
+2. "用 Claude Code 配合就能搞定"是**门槛被低估**——必须用 Opus 4.7 + 浏览器 MCP
+3. **Motion-heavy 站点仍然失效**（Issue #39 仍 OPEN）
 
-### 6.2 风险
+### 6.2 适用场景
 
-#### 1. 核心是 Prompts，不是代码
-项目的真正价值在于 ~800 行的 SKILL.md，而不是任何运行时代码。这意味着：
-- 容易被复制——任何 AI Agent 读到 SKILL.md 后即可复现整个"管道"
-- 实际运行质量高度依赖 AI Agent 的执行能力
-- 不同 AI Agent（Claude Code vs Cursor vs Copilot）对同一提示词的行为差异可能导致不稳定
+✅ **适合**：
 
-#### 2. Agent 质量波动是根本性风险
-用户反馈 (#27) 的核心问题——"字体错误、颜色错误、缺失元素"——源于 AI Agent 执行提示词时的**近似和猜测**。SKILL.md 虽然设计了详尽的预防措施（getComputedStyle 提取、spec 文件模板），但 Agent 在实际执行时仍然可能：
-- 跳过某些提取步骤
-- 近似替代精确值
-- 无法处理复杂 DOM 结构（超过 depth=4 的元素被截断）
+- 复杂响应式 + 滚动动效 + 大量交互的**营销页 / landing page** 克隆
+- 学习"AI 时代的多 agent 协作工程范式"
+- 学习"多平台 AI 工具适配"的工程实现
 
-#### 3. 反爬虫是其阿喀琉斯之踵
-Wix、Webflow、Squarespace 等平台的反爬虫机制是项目的基础性障碍 (#30)。这些平台恰恰是"平台迁移"用例的主要目标。项目目前没有解决方案——建议的"手动截图模式"只是绕过，不是解决。
+❌ **不适合**：
 
-#### 4. 维护健康度存疑
-- 10 个 Open PR 零合并——可能存在维护瓶颈
-- 安全漏洞修复 PR (#48) 积压 22 天
-- 核心贡献者仅 JCodesMore 一人
-- 最新 Release 是 3 个月前的 v0.3.1
+- 简单静态网站（直接给 Claude Code 写 prompt 更省事）
+- 内部后台 / SPA 应用（动效少，模板的"行为捕获"优势无用）
+- 强反爬站点（Wix 类直接被封，Issue #30）
+- 纯设计稿克隆（应等 Figma MCP 支持，Issue #3）
 
-#### 5. 对 Claude Code 的深度绑定
-虽然宣称支持 13 个平台，但 SKILL.md 是为 Claude Code 的 skill 系统设计的（`user-invocable: true`、`$ARGUMENTS` 语法）。其他平台的兼容层是自动转换的，未经深度测试。
+### 6.3 复用启发（可借鉴的 4 个设计模式）
 
-#### 6. Node.js 24 的激进要求
-将 Node.js 基线设置为 24（而非 LTS 22）是对生态现状的错误判断，会严重限制用户群体。
+1. **AGENTS.md + sync-agent-rules.sh 模式**：单一源 + 自动同步，告别 9 份手工维护的乱麻
+2. **SKILL.md 源文件 + sync-skills.mjs 模式**：Claude 写 1 份，9 个平台自动适配（含 TOML/JSON 输出）
+3. **Foreman + Worktree 派发模式**：主 agent 拆任务、子 agent 隔离构建、主 agent 合并——**多 agent 协作的工程模板**
+4. **7 条 Guiding Principles 显式编码进 SKILL**：把"经验"转成"指令"喂给 AI，比写注释给人类看更有效
 
-### 6.3 趋势与建议
+### 6.4 风险与盲点
 
-#### 项目趋势判断
-- **短期（3 个月）**：如果 PR 积压问题不解决，社区贡献者可能流失；YAMRAJ13y 的持续贡献但未被合并是一个危险信号
-- **中期（6 个月）**：如果解决反爬虫问题和动态效果处理，项目可能在"平台迁移"这一垂直场景建立壁垒
-- **长期（1 年+）**：Prompt-as-Code 范式可能成为 AI Agent 工具的标准实践，但本项目需要持续迭代才能保持领先
+| 风险 | 严重度 | 说明 |
+|------|--------|------|
+| motion-heavy 站点失效 | 高 | Issue #39 未解，PR #56 在做 |
+| 反爬站点（Cloudflare/Wix）失败 | 高 | Issue #30，作者自己说"无法解决" |
+| `npm audit fix` 破坏 skill | 中 | Issue #22 OPEN |
+| 默认 master 分支（不推荐 main） | 低 | Vercel 等部署平台支持 |
+| 依赖 Claude Code 强推 | 中 | "推荐 Opus 4.7" + 浏览器 MCP 双重门槛 |
+| 22 天无提交（最近 push 2026-06-01） | 中 | 6/1 之后无活动，可能进入"等待社区 PR"阶段 |
 
-#### 战略性建议
-1. **立即合并安全 PR (#48)**——22 天积压的安全修复不可接受
-2. **考虑 mvanhorn 的 Playwright MCP PR (#60)**——Playwright 可能有更好的反爬虫绕过能力
-3. **考虑 YAMRAJ13y 的优雅降级 PR (#56)**——直接解决 #39 问题
-4. **降低 Node.js 要求到 22 LTS**——扩大可用性
-5. **将 SKILL.md 拆分为多个文件**——800 行的单一文件难以维护和迭代
-6. **建立贡献者指南和合并策略**——当前 PR 零合并的状态不可持续
+### 6.5 终局研判
 
-### 6.4 总结评估
+> **这是一个 7 分项目**：方法论价值 9 分（Guiding Principles 值得专门读 3 遍），工具可用性 5 分（实战踩坑多），社区活跃度 8 分（issue/PR 响应快），长期生态潜力 7 分（hybrid approach + Playwright/Figma MCP 接入是正确演进方向）。
 
-| 维度 | 评分 | 说明 |
-|------|------|------|
-| 创新性 | ⭐⭐⭐⭐⭐ | Prompt-as-Code + 多 Agent 管道是真正的前沿范式 |
-| 工程完备性 | ⭐⭐⭐ | 管道设计精良但实际运行质量受限于 AI Agent |
-| 实用性 | ⭐⭐⭐ | 对简单网站效果好，复杂站点差距大 |
-| 社区健康度 | ⭐⭐ | 活跃但不健康——PR 零合并是红灯 |
-| 商业潜力 | ⭐⭐⭐ | 平台迁移有真实需求，但开源模式需找到盈利路径 |
-| 技术前瞻性 | ⭐⭐⭐⭐ | 前沿技术栈选择正确，但 Node.js 24 太激进 |
-
-**综合评级**：⭐⭐⭐ (3/5)
-
-**一句话总结**：ai-website-cloner-template 是 **"AI Agent 时代的网站逆向工程"最具原创性的实践尝试**——它的 Prompt-as-Code 范式、五阶段管道设计和多平台同步架构值得学习。但作为 v0.3.1 的早期项目，它面临着 Agent 质量波动、反爬虫瓶颈、PR 堆积和单一维护者等实际挑战。对于需要快速迁移简单网站到 Next.js 的先锋开发者，值得一试；对于需要克隆复杂企业级网站的用户，建议等待 1.0 版本。
+**是否值得用**：如果你只是想克隆一个简单网站——**不值得**，直接写 prompt。  
+**如果你想学习 AI 时代的"多 agent 协作工程模式"**——**必读**，这是目前 GitHub 上**工程化最完整**的范例。  
+**如果你在做类似的多 agent 项目**——**抄它的 AGENTS.md + sync 脚本模式**，立省 80% 工作量。
 
 ---
 
-*报告结束。研究基于 2026-06-27 的公开数据。*
+## 七、关键文件速查
+
+| 路径 | 字节 | 作用 | 阅读优先级 |
+|------|------|------|----------|
+| `.claude/skills/clone-website/SKILL.md` | 30,312 | 核心 skill，7 条原则 + 4 阶段流程 | ⭐⭐⭐⭐⭐ |
+| `AGENTS.md` | 3,038 | 单一源，含 `@import` 嵌套 | ⭐⭐⭐⭐⭐ |
+| `docs/research/INSPECTION_GUIDE.md` | 3,724 | 3 阶段审计清单 | ⭐⭐⭐⭐ |
+| `scripts/sync-agent-rules.sh` | 2,784 | AGENTS.md → 9 平台规则 | ⭐⭐⭐⭐ |
+| `scripts/sync-skills.mjs` | 3,493 | SKILL.md → 9 平台 skill | ⭐⭐⭐⭐ |
+| `package.json` | 1,492 | 依赖：next 16.2.1 + react 19.2.4 + tailwind v4 | ⭐⭐⭐ |
+| `Dockerfile` | 3,985 | Node 24.14.1-slim + Next standalone | ⭐⭐ |
+| `CHANGELOG.md` | 3,651 | v0.1.0 → v0.3.1 演进记录 | ⭐⭐⭐ |
+| `README.md` | 8,352 | 快速开始 + Supported Platforms 表 | ⭐⭐ |
+| `docker-compose.yml` | 1,235 | Docker 编排 | ⭐ |
+| `.github/workflows/ci.yml` | 568 | lint + typecheck + build | ⭐⭐ |
+
+### 平台分布（生成的指令文件）
+
+| 平台 | 路径 | 格式 |
+|------|------|------|
+| Claude Code | `.claude/skills/clone-website/SKILL.md` | YAML frontmatter + md |
+| Codex CLI | `.codex/skills/clone-website/SKILL.md` | 同 Claude |
+| GitHub Copilot | `.github/skills/clone-website/SKILL.md` | 同 Claude |
+| Cursor | `.cursor/commands/clone-website.md` | md + header |
+| Windsurf | `.windsurf/workflows/clone-website.md` | md + header |
+| Gemini CLI | `.gemini/commands/clone-website.toml` | **TOML** |
+| OpenCode | `.opencode/commands/clone-website.md` | md + YAML |
+| Augment Code | `.augment/commands/clone-website.md` | md + YAML |
+| Continue | `.continue/commands/clone-website.md` | md + YAML |
+| Amazon Q | `.amazonq/cli-agents/clone-website.json` | **JSON** |
+| Cline/Roo Code | `.clinerules` | 纯 md（同步生成） |
+| GitHub Copilot Chat | `.github/copilot-instructions.md` | 纯 md（同步生成） |
+
+### Star/版本/Commit 时间线
+
+- 2026-03-13：仓库创建
+- 2026-03-28：v0.1.0 → v0.1.1 → v0.2.0（3 个版本同一天，加多平台）
+- 2026-03-30：v0.3.0（多 URL） → v0.3.1（Win CRLF 修复）
+- 2026-04-01：Playwright MCP feature request（#18）
+- 2026-04-09：HuguesD 提交"Does not work as described"（#27）
+- 2026-04-14：#27 关闭
+- 2026-04-25：Wix 反爬问题（#30）
+- 2026-04-30：motion-heavy 失效问题（#39）
+- 2026-06-24：PR #56 尝试修 #39
+- 2026-06-26：Playwright MCP 文档补全（PR #60）
+- 2026-06-27：**本调研完成**
+
+---
+
+## 八、IMA 同步状态
+
+- 本报告将同步至 IMA 知识库 `github项目研究`（ID: `Alur0Sed2DT3m5LBVUorxSP3iPSDd5GIchvBCoQP3vs=`）
+- IMA 元目录媒体 ID：`markdown_104a5ea1d6c53484288502604be7587f_adb53de6f3f93ea9f5c628c71cc733527462334733751990`
+- 标题：`JCodesMore-ai-website-cloner-template-深度调研`
+- 同步流程见 `GitHub 项目研究 — 元目录.md`
+
+---
+
+**研究结束。** 调研方法：源码逐行（57 个文件）+ GitHub API（issue/PR/release/contributors/stargazers）+ Web 搜索 5 篇评测 + 1 次失败调研文件覆盖（早上 5:56 旧版 30KB 已被本份替换）。

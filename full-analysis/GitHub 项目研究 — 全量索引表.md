@@ -1,7 +1,7 @@
 # 📚 GitHub 项目研究 — 全量索引表
 
 > 本文件是 `full-analysis/` 下所有调研报告的全量索引。
-> 生成时间：2026-06-27 | 收录项目：**168** 个
+> 生成时间：2026-06-27 | 收录项目：**171** 个
 
 ## 阅读指引
 
@@ -178,10 +178,13 @@
 | 162 | `mem0ai/mem0` | AI Agent 记忆层，三层记忆架构+16 LLM+24 向量库+三信号融合检索 | 59,522 | 2026-06-27 | mem0ai-mem0-深度调研.md |
 | 163 | `n8n-io/n8n` | Fair-code 工作流自动化平台，400+集成+Agent SDK+AI 工作流生成器 | 194,179 | 2026-06-27 | n8n-io-n8n-深度调研.md |
 | 164 | `browserbase/stagehand` | AI 浏览器自动化 SDK，A11y Tree+XPath 双索引+ActCache 自愈+4 CUA 客户端 | 23,251 | 2026-06-27 | browserbase-stagehand-深度调研.md |
-| 165 | `JCodesMore/ai-website-cloner-template` | AI 驱动的网站逆向工程模板，Prompt-as-Code 范式实现截图→提取→组件构建→QA | 21,294 | 2026-06-27 | JCodesMore-ai-website-cloner-template-深度调研.md |
+| 165 | `JCodesMore/ai-website-cloner-template` | 面向 AI 编程助手的网站逆向工程模板，AGENTS.md 单一源 + 9 平台 skill 自动同步 + foreman/worktree 多 agent 派发 | 21,607 | 2026-06-27 | JCodesMore-ai-website-cloner-template-深度调研.md |
 | 166 | `aws/agent-toolkit-for-aws` | AWS 官方 AI Agent 增强套件，Plugin+Skills+MCP Server 三层架构+40+验证Skills | 1,334 | 2026-06-27 | aws-agent-toolkit-for-aws-深度调研.md |
 | 167 | `mauriceboe/TREK` | 自托管旅行协作规划器，150+MCP工具+NestJS+PWA离线+27 OAuth scope | 7,588 | 2026-06-27 | mauriceboe-TREK-深度调研.md |
 | 168 | `simplex-chat/simplex-chat` | 首个无用户标识符的通讯平台，单向消息队列+双加密+后量子安全 | 12,443 | 2026-06-27 | simplex-chat-simplex-chat-深度调研.md |
+| 169 | `hiyouga/LlamaFactory` | 统一高效 LLM/VLM 微调框架，100+模型+LoRA/QLoRA/DPO/PPO 全范式覆盖，ACL 2024 | 72,535 | 2026-06-27 | hiyouga-LlamaFactory-深度调研.md |
+| 170 | `bytedance/deer-flow` | 长期自主 SuperAgent 运行时，四进程+26层中间件+Docker沙箱+6 IM通道 | 74,921 | 2026-06-27 | bytedance-deer-flow-深度调研.md |
+| 171 | `Comfy-Org/ComfyUI` | 节点式扩散模型推理引擎与工作流编辑器，118k⭐的 AIGC 统一运行平台 | 118,441 | 2026-06-27 | Comfy-Org-ComfyUI-深度调研.md |
 
 ---
 
