@@ -187,13 +187,16 @@
 | 172 | [`Shubhamsaboo/awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) | 100+ 开箱即用的 AI Agent & RAG 应用模板库，15 品类覆盖全栈 | 115,827 | 2026-06-28 | [Shubhamsaboo-awesome-llm-apps-深度调研.md](Shubhamsaboo-awesome-llm-apps-深度调研.md) |
 | 173 | [`openinterpreter/openinterpreter`](https://github.com/openinterpreter/openinterpreter) | 面向开源模型的轻量级 Rust 编码 Agent，Harness Emulation 核心创新 | 64,146 | 2026-06-28 | [openinterpreter-openinterpreter-深度调研.md](openinterpreter-openinterpreter-深度调研.md) |
 | 174 | [`screenpipe/screenpipe`](https://github.com/screenpipe/screenpipe) | 24/7 本地 AI 屏幕+音频记录引擎，事件驱动架构，YC S26 | 19,515 | 2026-06-28 | [screenpipe-screenpipe-深度调研.md](screenpipe-screenpipe-深度调研.md) |
+| 175 | [`baidu/Unlimited-OCR`](https://github.com/baidu/Unlimited-OCR) | 百度无限次数长程文档 OCR 模型——R-SWA 恒定 KV 缓存，一次解析数十页，OmniDocBench SOTA | 11,031 | 2026-06-28 | [baidu-Unlimited-OCR-深度调研.md](baidu-Unlimited-OCR-深度调研.md) |
+| 176 | [`vercel/eve`](https://github.com/vercel/eve) | Vercel 文件系统优先的持久化 Agent 框架——FS 配置+原生 HITL+多频道抽象，Apache-2.0 Beta | 2,792 | 2026-06-28 | [vercel-eve-深度调研.md](vercel-eve-深度调研.md) |
+| 177 | [`every-app/open-seo`](https://github.com/every-app/open-seo) | Semrush/Ahrefs 开源替代——自托管 SEO 平台+MCP 服务器+7 个 Agent Skills+Pay-as-you-go | 3,337 | 2026-06-28 | [every-app-open-seo-深度调研.md](every-app-open-seo-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（49）
+### AI Agent / 助手框架（50）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -243,6 +246,7 @@
 - [`aws/agent-toolkit-for-aws`](https://github.com/aws/agent-toolkit-for-aws) — [aws-agent-toolkit-for-aws-深度调研.md](aws-agent-toolkit-for-aws-深度调研.md)
 - [`Shubhamsaboo/awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) — [Shubhamsaboo-awesome-llm-apps-深度调研.md](Shubhamsaboo-awesome-llm-apps-深度调研.md)
 - [`openinterpreter/openinterpreter`](https://github.com/openinterpreter/openinterpreter) — [openinterpreter-openinterpreter-深度调研.md](openinterpreter-openinterpreter-深度调研.md)
+- [`vercel/eve`](https://github.com/vercel/eve) — [vercel-eve-深度调研.md](vercel-eve-深度调研.md)
 
 ### LLM / 推理框架（3） 🆕
 
@@ -273,7 +277,7 @@
 - [`topoteretes/cognee`](https://github.com/topoteretes/cognee) — [topoteretes-cognee-深度调研.md](topoteretes-cognee-深度调研.md)
 - [`mem0ai/mem0`](https://github.com/mem0ai/mem0) — [mem0ai-mem0-深度调研.md](mem0ai-mem0-深度调研.md)
 
-### 开发工具 / CLI（7）
+### 开发工具 / CLI（9）
 
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
 - [`GLips/Figma-Context-MCP`](https://github.com/GLips/Figma-Context-MCP) — [GLips-Figma-Context-MCP-深度调研.md](GLips-Figma-Context-MCP-深度调研.md)
@@ -282,6 +286,8 @@
 - [`larksuite/cli`](https://github.com/larksuite/cli) — [larksuite-cli-深度调研.md](larksuite-cli-深度调研.md)
 - [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) — [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md)
 - [`Stirling-Tools/Stirling-PDF`](https://github.com/Stirling-Tools/Stirling-PDF) — [Stirling-Tools-Stirling-PDF-深度调研.md](Stirling-Tools-Stirling-PDF-深度调研.md)
+- [`every-app/open-seo`](https://github.com/every-app/open-seo) — [every-app-open-seo-深度调研.md](every-app-open-seo-深度调研.md)
+- [`baidu/Unlimited-OCR`](https://github.com/baidu/Unlimited-OCR) — [baidu-Unlimited-OCR-深度调研.md](baidu-Unlimited-OCR-深度调研.md)
 
 ### 前端 / 设计 / UI（6）
 
