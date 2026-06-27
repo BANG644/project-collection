@@ -184,13 +184,16 @@
 | 169 | [`hiyouga/LlamaFactory`](https://github.com/hiyouga/LlamaFactory) | 统一高效 LLM/VLM 微调框架，100+模型+LoRA/QLoRA/DPO/PPO 全范式覆盖，ACL 2024 | 72,535 | 2026-06-27 | [hiyouga-LlamaFactory-深度调研.md](hiyouga-LlamaFactory-深度调研.md) |
 | 170 | [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 长期自主 SuperAgent 运行时，四进程+26层中间件+Docker沙箱+6 IM通道 | 74,921 | 2026-06-27 | [bytedance-deer-flow-深度调研.md](bytedance-deer-flow-深度调研.md) |
 | 171 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) | 节点式扩散模型推理引擎与工作流编辑器，118k⭐的 AIGC 统一运行平台 | 118,441 | 2026-06-27 | [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md) |
+| 172 | [`Shubhamsaboo/awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) | 100+ 开箱即用的 AI Agent & RAG 应用模板库，15 品类覆盖全栈 | 115,827 | 2026-06-28 | [Shubhamsaboo-awesome-llm-apps-深度调研.md](Shubhamsaboo-awesome-llm-apps-深度调研.md) |
+| 173 | [`openinterpreter/openinterpreter`](https://github.com/openinterpreter/openinterpreter) | 面向开源模型的轻量级 Rust 编码 Agent，Harness Emulation 核心创新 | 64,146 | 2026-06-28 | [openinterpreter-openinterpreter-深度调研.md](openinterpreter-openinterpreter-深度调研.md) |
+| 174 | [`screenpipe/screenpipe`](https://github.com/screenpipe/screenpipe) | 24/7 本地 AI 屏幕+音频记录引擎，事件驱动架构，YC S26 | 19,515 | 2026-06-28 | [screenpipe-screenpipe-深度调研.md](screenpipe-screenpipe-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（46）
+### AI Agent / 助手框架（49）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -238,6 +241,8 @@
 - [`n8n-io/n8n`](https://github.com/n8n-io/n8n) — [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md)
 - [`browserbase/stagehand`](https://github.com/browserbase/stagehand) — [browserbase-stagehand-深度调研.md](browserbase-stagehand-深度调研.md)
 - [`aws/agent-toolkit-for-aws`](https://github.com/aws/agent-toolkit-for-aws) — [aws-agent-toolkit-for-aws-深度调研.md](aws-agent-toolkit-for-aws-深度调研.md)
+- [`Shubhamsaboo/awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) — [Shubhamsaboo-awesome-llm-apps-深度调研.md](Shubhamsaboo-awesome-llm-apps-深度调研.md)
+- [`openinterpreter/openinterpreter`](https://github.com/openinterpreter/openinterpreter) — [openinterpreter-openinterpreter-深度调研.md](openinterpreter-openinterpreter-深度调研.md)
 
 ### LLM / 推理框架（3） 🆕
 
@@ -382,6 +387,7 @@
 - [`zarazhangrui/beautiful-html-templates`](https://github.com/zarazhangrui/beautiful-html-templates) — [zarazhangrui-beautiful-html-templates-深度调研.md](zarazhangrui-beautiful-html-templates-深度调研.md)
 - [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) — [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md)
 - [`mauriceboe/TREK`](https://github.com/mauriceboe/TREK) — [mauriceboe-TREK-深度调研.md](mauriceboe-TREK-深度调研.md)
+- [`screenpipe/screenpipe`](https://github.com/screenpipe/screenpipe) — [screenpipe-screenpipe-深度调研.md](screenpipe-screenpipe-深度调研.md)
 
 ---
 
