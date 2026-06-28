@@ -85,8 +85,8 @@ github-project-research/
 
 | owner/repo | 报告文件 |
 |------------|----------|
-| [`BANG644/ai-workflow-optimizer`](https://github.com/BANG644/ai-workflow-optimizer) | [BANG644-ai-workflow-optimizer-深度调研.md](BANG644-ai-workflow-optimizer-深度调研.md) |
-| [`BANG644/docx-svg-to-pdf`](https://github.com/BANG644/docx-svg-to-pdf) | [BANG644-docx-svg-to-pdf-深度调研.md](BANG644-docx-svg-to-pdf-深度调研.md) |
+| [`BANG644/ai-workflow-optimizer`](https://github.com/BANG644/ai-workflow-optimizer) | ⚠️ 个人工作台仓库（2⭐），建议忽略 | [BANG644-ai-workflow-optimizer-深度调研.md](BANG644-ai-workflow-optimizer-深度调研.md) |
+| [`BANG644/docx-svg-to-pdf`](https://github.com/BANG644/docx-svg-to-pdf) | ⚠️ 个人工作台仓库（1⭐），建议忽略 | [BANG644-docx-svg-to-pdf-深度调研.md](BANG644-docx-svg-to-pdf-深度调研.md) |
 | [`BANG644/scheduler-sent`](https://github.com/BANG644/scheduler-sent) | [BANG644-scheduler-sent-深度调研.md](BANG644-scheduler-sent-深度调研.md) |
 | [`BluePointLilac/ContextMenuManager`](https://github.com/BluePointLilac/ContextMenuManager) | [BluePointLilac-ContextMenuManager-深度调研.md](BluePointLilac-ContextMenuManager-深度调研.md) |
 | [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) | [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md) |
@@ -338,7 +338,7 @@ github-project-research/
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`xming521/WeClone`](https://github.com/xming521/WeClone) | [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md) |
-| [`xw7872081123/wallpaper-engine-steam`](https://github.com/xw7872081123/wallpaper-engine-steam) | [xw7872081123-wallpaper-engine-steam-深度调研.md](xw7872081123-wallpaper-engine-steam-深度调研.md) |
+| [`xw7872081123/wallpaper-engine-steam`](https://github.com/xw7872081123/wallpaper-engine-steam) | 🚫 疑似虚假仓库，源码与描述完全不符 | [xw7872081123-wallpaper-engine-steam-深度调研.md](xw7872081123-wallpaper-engine-steam-深度调研.md) |
 | [`xbtlin/ai-berkshire`](https://github.com/xbtlin/ai-berkshire) | [xbtlin-ai-berkshire-深度调研.md](xbtlin-ai-berkshire-深度调研.md) |
 
 ### Y（1 个）

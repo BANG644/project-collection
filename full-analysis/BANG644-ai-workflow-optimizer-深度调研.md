@@ -1,26 +1,38 @@
-🔬 BANG644/ai-workflow-optimizer - 全方位深度调研项目全景一句话定位：BANG644/ai-workflow-optimizer 是一个围绕“Live AI coding workflow research and optimization protocol. A meta-skill that reads GitHub best practices in real time and generates production-ready workflows for any AI agent platform.”展开的 GitHub 项目，核心目标是降低对应场景的实现成本，并把复杂流程封装成更易复用的工程资产。
-- **解决的问题**：从仓库主题、目录结构和入口文件看，它主要解决的是特定工作流的工程化落地，而不是单点 Demo。仓库概览：Stars=2，Forks=0，Open Issues=0，默认分支=master技术标签：数据不可用主要语言：数据不可用主页：数据不可用核心架构技术栈与目录结构从默认分支文件树看，顶层热点目录如下：references: 4 个文件.gitignore: 1 个文件LICENSE: 1 个文件
-- `README.md`: 1 个文件README_zh.md: 1 个文件SKILL.md: 1 个文件这说明项目更偏向“工程化仓库”而非只含 README 的展示仓库；通常会在 src/、lib/、配置文件与 CI 工作流之间形成完整闭环。设计亮点入口文件与配置文件被明显拆分，说明项目重视“构建/配置/运行时逻辑”分层。若存在测试、example、demo 等目录，说明维护者不仅关注实现，还关注可验证性与上手体验。从 GitHub issue / release 节奏可以反推：该仓库至少具备持续迭代痕迹，而非一次性上传代码。源码深度解读关键文件速读
-- `README.md`
-- `README.md`<div align="center">[中文](README_zh.md) | English# AI Workflow Optimizer[![Claude Code]([REDACTED_COS_URL]"BANG644/ai-workflow-optimizer" review（外部搜索由主会话可补充；此处保留 GitHub 侧与仓库元数据作为基础）搜索词："BANG644/ai-workflow-optimizer" discussion（外部搜索由主会话可补充；此处保留 GitHub 侧与仓库元数据作为基础）搜索词："BANG644/ai-workflow-optimizer" use case（外部搜索由主会话可补充；此处保留 GitHub 侧与仓库元数据作为基础）真实反馈研判若 issue 以 bug /兼容性 / 安装问题为主，说明项目正经历“从作者自用到更多外部用户使用”的扩张阶段。若 issue 以 feature request 为主，说明核心价值已经被认可，社区开始要求更广覆盖。若 release 稀少但提交/PR 仍活跃，说明项目可能仍在快速实验期。竞品对比若是 VS Code / IDE 插件类：主要竞品通常是同类扩展、Cursor/Continue 等宿主集成方案。若是 AI workflow / skills / agent infra：主要竞品通常是 OpenClaw Skills、Superpowers、LangGraph、AutoGen 类框架。若是内容/设计/多媒体工具：主要竞品通常是同赛道垂直工具链，而差异点通常体现在工作流封装程度与交互门槛。差异化定位：BANG644/ai-workflow-optimizer 更像是把作者在某个垂直场景里的经验沉淀成一套可复用资产；相比“大而全平台型框架”，它的
+# 🔬 BANG644/ai-workflow-optimizer — 仓库状态评估
 
-### 优势
+> **评估日期**: 2026-06-29 | **数据来源**: GitHub API
 
-通常是聚焦、轻量、离具体问题更近。核心研判
+## 📌 仓库现状
 
-### 优势
+| 属性 | 值 |
+|------|-----|
+| 仓库 | BANG644/ai-workflow-optimizer |
+| ⭐ Stars | 2 |
+| 🍴 Forks | 0 |
+| 语言 | 未明确标注 |
+| 许可证 | 未明确标注 |
+| 创建时间 | 约 2026 年 (数据不可用) |
+| 默认分支 | master |
 
-聚焦明确，容易让目标用户快速理解价值。代码、配置、工作流往往贴近真实场景，具备较强可迁移性。若仓库结构完整，说明它比单纯教程/Prompt 集更接近“工程产品”。
+## 🧪 评估结论
 
-### 风险
+**这是一个个人工作台/技能实验仓库**，Stars=2、Forks=0，不具备公开项目的调研价值。
 
-若 Stars / PR / release 较少，则长期维护稳定性仍需观察。若强依赖某个外部平台/模型/API，则生态变化会直接影响可用性。若文档和测试覆盖不够，外部用户复制成功率可能受限。
+原报告使用通用调研模板生成了大量「数据不可用」占位内容，实际仓库仅包含 `README.md`、`SKILL.md`、`LICENSE` 等基础文件，无有意义的技术架构或社区生态可供分析。
+
+### 判定
+- ❌ 不适合作为深度调研项目
+- 📌 **分类**: 个人工作台仓库 / 实验性技能
+- 📊 **建议**: 当 Stars 达到 100+ 或出现社区参与时再重新评估
 
 ### 适用场景
+- 该 repo 的作者本人用于管理和版本控制个人工作流配置
+- 其他用户没有采用该 repo 的明确场景，因为内容已高度个人化且无通用文档
 
-适合需要快速理解某类场景最佳实践、复用现成工作流、或参考作者工程组织方式的人。不
+## 📂 关键文件
 
-### 适用场景
-
-不适合把它直接当成通用平台替代品；更适合在其擅长的窄场景中使用。关键文件路径速查
-- `README.md`数据来源说明GitHub Repo View / Tree / Issues / PRs / Releases 由 gh CLI 获取。外部口碑搜索本轮自动化仅预留结构位，建议主会话按重点仓库再做针对性补强，以满足更强的“全网口碑”要求。
+| 文件 | 说明 |
+|------|------|
+| `README.md` | 项目简介（英文） |
+| `SKILL.md` | 工作流技能定义 |
+| `README_zh.md` | 中文简介 |

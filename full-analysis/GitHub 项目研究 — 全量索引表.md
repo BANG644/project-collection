@@ -33,8 +33,8 @@
 | 18 | [`ArthurBrussee/brush`](https://github.com/ArthurBrussee/brush) | 📋 基本信息 | — | — | [ArthurBrussee-brush-深度调研.md](ArthurBrussee-brush-深度调研.md) |
 | 19 | [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | — | — | — | [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md) |
 | 20 | [`awesome/selfhosted`](https://github.com/awesome/selfhosted) | GitHub Star 第四多的项目（29.4 万⭐）——一个自托管软件的百科全书式索引，覆盖从博客平台到密码管理器的所有可私有部署的网络服务和 Web 应用。 | 293,647 | 2026-05-16 | [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md) |
-| 21 | [`BANG644/ai-workflow-optimizer`](https://github.com/BANG644/ai-workflow-optimizer) | BANG644/ai-workflow-optimizer 是一个围绕“Live AI coding workflow research and optimiz | — | — | [BANG644-ai-workflow-optimizer-深度调研.md](BANG644-ai-workflow-optimizer-深度调研.md) |
-| 22 | [`BANG644/docx-svg-to-pdf`](https://github.com/BANG644/docx-svg-to-pdf) | BANG644/docx-svg-to-pdf 是一个围绕“AI-powered DOCX to PDF converter that preserves SV | — | — | [BANG644-docx-svg-to-pdf-深度调研.md](BANG644-docx-svg-to-pdf-深度调研.md) |
+| 21 | [`BANG644/ai-workflow-optimizer`](https://github.com/BANG644/ai-workflow-optimizer) | ⚠️ 个人工作台仓库（2⭐），通用模板，无实质社区价值 | — | — | [BANG644-ai-workflow-optimizer-深度调研.md](BANG644-ai-workflow-optimizer-深度调研.md) |
+| 22 | [`BANG644/docx-svg-to-pdf`](https://github.com/BANG644/docx-svg-to-pdf) | ⚠️ 个人工作台仓库（1⭐），通用模板，无实质社区价值 | — | — | [BANG644-docx-svg-to-pdf-深度调研.md](BANG644-docx-svg-to-pdf-深度调研.md) |
 | 23 | [`BANG644/scheduler-sent`](https://github.com/BANG644/scheduler-sent) | — | — | — | [BANG644-scheduler-sent-深度调研.md](BANG644-scheduler-sent-深度调研.md) |
 | 24 | [`BluePointLilac/ContextMenuManager`](https://github.com/BluePointLilac/ContextMenuManager) | 一、项目定位 | — | 2026-06-15 | [BluePointLilac-ContextMenuManager-深度调研.md](BluePointLilac-ContextMenuManager-深度调研.md) |
 | 25 | [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) | — | — | 2026-05-19 | [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md) |
@@ -161,7 +161,7 @@
 | 146 | [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) | PaperSpine | — | 2026-05-17 | [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md) |
 | 147 | [`wuji-labs/nopua`](https://github.com/wuji-labs/nopua) | — | — | — | [wuji-labs-nopua-深度调研.md](wuji-labs-nopua-深度调研.md) |
 | 148 | [`xming521/WeClone`](https://github.com/xming521/WeClone) | — | — | — | [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md) |
-| 149 | [`xw7872081123/wallpaper-engine-steam`](https://github.com/xw7872081123/wallpaper-engine-steam) | xw7872081123/wallpaper-engine-steam 聚焦于“Free Wallpaper Engine Steam: download PC | — | 2026-05-18 | [xw7872081123-wallpaper-engine-steam-深度调研.md](xw7872081123-wallpaper-engine-steam-深度调研.md) |
+| 149 | [`xw7872081123/wallpaper-engine-steam`](https://github.com/xw7872081123/wallpaper-engine-steam) | 🚫 疑似虚假/SEO 垃圾仓库（84⭐），源码为儿童算术游戏，与描述完全不符 | — | 2026-05-18 | [xw7872081123-wallpaper-engine-steam-深度调研.md](xw7872081123-wallpaper-engine-steam-深度调研.md) |
 | 150 | [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) | 中文 LeetCode 刷题攻略的标杆项目——《代码随想录》配套仓库，200+ 道经典题目的系统化刷题路线。📖 核心功能系统化刷题路线：按「数组→链表→哈希表→ | 61 | 2026-06-12 | [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md) |
 | 151 | [`zai-org/GLM-5`](https://github.com/zai-org/GLM-5) | 从 Vibe Coding 到 Agentic Engineering 的旗舰模型 | 4,121 | 2026-06-19 | [zai-org-GLM-5-深度调研.md](zai-org-GLM-5-深度调研.md) |
 | 152 | [`zarazhangrui/beautiful-html-templates`](https://github.com/zarazhangrui/beautiful-html-templates) | beautiful-html-templates | — | 2026-05-05 | [zarazhangrui-beautiful-html-templates-深度调研.md](zarazhangrui-beautiful-html-templates-深度调研.md) |
