@@ -56,7 +56,7 @@
 | 41 | [`elder-plinius/CL4R1T4S`](https://github.com/elder-plinius/CL4R1T4S) | — | — | — | [elder-plinius-CL4R1T4S-深度调研.md](elder-plinius-CL4R1T4S-深度调研.md) |
 | 42 | [`evershopcommerce/evershop`](https://github.com/evershopcommerce/evershop) | — | — | 2026-06-19 | [evershopcommerce-evershop-深度调研.md](evershopcommerce-evershop-深度调研.md) |
 | 43 | [`excalidraw/excalidraw`](https://github.com/excalidraw/excalidraw) | — | — | — | [excalidraw-excalidraw-深度调研.md](excalidraw-excalidraw-深度调研.md) |
-| 44 | [`firecrawl/firecrawl`](https://github.com/firecrawl/firecrawl) | FireCrawl — Web Context API for AI Agents | 137,137 | — | [firecrawl-firecrawl-深度调研.md](firecrawl-firecrawl-深度调研.md) |
+| 44 | [`firecrawl/firecrawl`](https://github.com/firecrawl/firecrawl) | Firecrawl — AI Agent 联网网关（search/scrape/interact/parse/monitor 一体） | 140,338 | 2026-06-28 | [firecrawl-firecrawl-深度调研.md](firecrawl-firecrawl-深度调研.md) |
 | 45 | [`Forsy-AI/agent-apprenticeship`](https://github.com/Forsy-AI/agent-apprenticeship) | — | 679 | 2026-06-23 | [Forsy-AI-agent-apprenticeship-深度调研.md](Forsy-AI-agent-apprenticeship-深度调研.md) |
 | 46 | [`garrytan/gbrain`](https://github.com/garrytan/gbrain) | — | 22,854 | 2026-04-05 | [garrytan-gbrain-深度调研.md](garrytan-gbrain-深度调研.md) |
 | 47 | [`garrytan/gstack`](https://github.com/garrytan/gstack) | — | — | — | [garrytan-gstack-深度调研.md](garrytan-gstack-深度调研.md) |
