@@ -95,7 +95,7 @@
 | 80 | [`Michaelliv/pi-dynamic-workflows`](https://github.com/Michaelliv/pi-dynamic-workflows) | — | — | 2026-06-19 | [Michaelliv-pi-dynamic-workflows-深度调研.md](Michaelliv-pi-dynamic-workflows-深度调研.md) |
 | 81 | [`microsoft/agent-lightning`](https://github.com/microsoft/agent-lightning) | — | — | — | [microsoft-agent-lightning-深度调研.md](microsoft-agent-lightning-深度调研.md) |
 | 82 | [`microsoft/graphrag`](https://github.com/microsoft/graphrag) | — | 33,787 | 2026-06-16 | [microsoft-graphrag-深度调研.md](microsoft-graphrag-深度调研.md) |
-| 83 | [`microsoft/markitdown`](https://github.com/microsoft/markitdown) | 将文件和办公文档转换为 Markdown 的 Python 工具。微软官方出品。二、核心分析为什么 152K stars？MarkItDown 回答了 AI A | 152,557 | 2026-06-14 | [microsoft-markitdown-深度调研.md](microsoft-markitdown-深度调研.md) |
+| 83 | [`microsoft/markitdown`](https://github.com/microsoft/markitdown) | AI 生态的"文件标准输入层"——将 PDF/Office/图片等一切文件格式统一转换为 Markdown，LangChain/AutoGen 默认集成 | 161,159 | 2026-06-30 | [microsoft-markitdown-深度调研.md](microsoft-markitdown-深度调研.md) |
 | 84 | [`microsoft/PowerToys`](https://github.com/microsoft/PowerToys) | — | — | — | [microsoft-PowerToys-深度调研.md](microsoft-PowerToys-深度调研.md) |
 | 85 | [`microsoft/SkillOpt`](https://github.com/microsoft/SkillOpt) | — | 585 | 2026-05-08 | [microsoft-SkillOpt-深度调研.md](microsoft-SkillOpt-深度调研.md) |
 | 86 | [`motion-canvas/motion-canvas`](https://github.com/motion-canvas/motion-canvas) | — | 18.6 | 2026-06-10 | [motion-canvas-motion-canvas-深度调研.md](motion-canvas-motion-canvas-深度调研.md) |
@@ -117,7 +117,7 @@
 | 102 | [`OpenCut-app/OpenCut`](https://github.com/OpenCut-app/OpenCut) | — | — | — | [OpenCut-app-OpenCut-深度调研.md](OpenCut-app-OpenCut-深度调研.md) |
 | 103 | [`opencv/opencv`](https://github.com/opencv/opencv) | 开源计算机视觉库。行业标准级项目。二、核心分析OpenCV 5.0.0 (2026-06-06)刚刚发布！这是 OpenCV 诞生 14 年后的第五个主版本。见 | 89,034 | 2026-06-14 | [opencv-opencv-深度调研.md](opencv-opencv-深度调研.md) |
 | 104 | [`OthmanAdi/planning-with-files`](https://github.com/OthmanAdi/planning-with-files) | — | — | 2026-06-19 | [OthmanAdi-planning-with-files-深度调研.md](OthmanAdi-planning-with-files-深度调研.md) |
-| 105 | [`Panniantong/Agent-Reach`](https://github.com/Panniantong/Agent-Reach) | 让你的 AI Agent 看到整个互联网——零 API 费用的 CLI 工具，可读/搜索 Twitter、Reddit、YouTube、GitHub、Bilib | 27,217 | 2026-06-14 | [Panniantong-Agent-Reach-深度调研.md](Panniantong-Agent-Reach-深度调研.md) |
+| 105 | [`Panniantong/Agent-Reach`](https://github.com/Panniantong/Agent-Reach) | 零 API 费用的 AI Agent 互联网能力脚手架——安装即弃架构，支持 Twitter/B站/小红书等 15+ 平台，4 个月 45K ⭐ | 45,550 | 2026-06-30 | [Panniantong-Agent-Reach-深度调研.md](Panniantong-Agent-Reach-深度调研.md) |
 | 106 | [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) | — | — | — | [pbakaus-impeccable-深度调研.md](pbakaus-impeccable-深度调研.md) |
 | 107 | [`pewdiepie-archdaemon/odysseus`](https://github.com/pewdiepie-archdaemon/odysseus) | Odysseus — 自我托管 AI 工作空间 | — | 2026-06-09 | [pewdiepie-archdaemon-odysseus-深度调研.md](pewdiepie-archdaemon-odysseus-深度调研.md) |
 | 108 | [`phuryn/pm-skills`](https://github.com/phuryn/pm-skills) | PM 技能市场——100+ 个 Agent Skills、命令和插件，覆盖从发现到策略、执行、发布、增长的 PM 全流程。二、核心分析PM-Skills 是一个 | 17,514 | 2026-06-14 | [phuryn-pm-skills-深度调研.md](phuryn-pm-skills-深度调研.md) |
@@ -125,7 +125,7 @@
 | 110 | [`qiuqiubuchongle/cloud-chokepoint-atlas`](https://github.com/qiuqiubuchongle/cloud-chokepoint-atlas) | — | — | — | [qiuqiubuchongle-cloud-chokepoint-atlas-深度调研.md](qiuqiubuchongle-cloud-chokepoint-atlas-深度调研.md) |
 | 111 | [`raiyanyahya/recall`](https://github.com/raiyanyahya/recall) | — | 310 | 2026-06-23 | [raiyanyahya-recall-深度调研.md](raiyanyahya-recall-深度调研.md) |
 | 112 | [`Raphire/Win11Debloat`](https://github.com/Raphire/Win11Debloat) | 轻量级 PowerShell 脚本，一键去除 Windows 预装应用、禁用遥测、优化系统体验的开源工具。📖 核心功能详解1. 应用移除（App Removal | 47.4 | 2026-06-13 | [Raphire-Win11Debloat-深度调研.md](Raphire-Win11Debloat-深度调研.md) |
-| 113 | [`refactoringhq/tolaria`](https://github.com/refactoringhq/tolaria) | 管理 Markdown 知识库的桌面应用。二、核心分析什么是 Tolaria？一个桌面端 Markdown 知识库管理器。定位类似于 Obsidian，但在"轻 | 16,046 | 2026-06-14 | [refactoringhq-tolaria-深度调研.md](refactoringhq-tolaria-深度调研.md) |
+| 113 | [`refactoringhq/tolaria`](https://github.com/refactoringhq/tolaria) | Files-first/Git-first 的桌面 Markdown 知识库——vault 即 git 仓库，AI-first but not AI-only，AGENTS.md 原生集成 | 17,431 | 2026-06-30 | [refactoringhq-tolaria-深度调研.md](refactoringhq-tolaria-深度调研.md) |
 | 114 | [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) | — | 49.6 | 2026-06-10 | [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md) |
 | 115 | [`revfactory/harness`](https://github.com/revfactory/harness) | 🔧  — Agent 团队编排元技能框架 | 7,412 | 2026-06-24 | [revfactory-harness-深度调研.md](revfactory-harness-深度调研.md) |
 | 116 | [`rohitg00/agentmemory`](https://github.com/rohitg00/agentmemory) | — | — | 2026-02-25 | [rohitg00-agentmemory-深度调研.md](rohitg00-agentmemory-深度调研.md) |
@@ -144,7 +144,7 @@
 | 129 | [`Stirling-Tools/Stirling-PDF`](https://github.com/Stirling-Tools/Stirling-PDF) | Stirling-PDF — #1 PDF Application on GitHub | 82,799 | — | [Stirling-Tools-Stirling-PDF-深度调研.md](Stirling-Tools-Stirling-PDF-深度调研.md) |
 | 130 | [`supabase/supabase`](https://github.com/supabase/supabase) | — | — | — | [supabase-supabase-深度调研.md](supabase-supabase-深度调研.md) |
 | 131 | [`supermemoryai/supermemory`](https://github.com/supermemoryai/supermemory) | — | — | — | [supermemoryai-supermemory-深度调研.md](supermemoryai-supermemory-深度调研.md) |
-| 132 | [`sveltejs/svelte`](https://github.com/sveltejs/svelte) | "为其他人而生的 Web 开发"——将声明式 UI 编译为高效的 JavaScript。二、核心分析Svelte 的独特定位在 React 主导的前端世界，Sv | 87,213 | 2026-06-14 | [sveltejs-svelte-深度调研.md](sveltejs-svelte-深度调研.md) |
+| 132 | [`sveltejs/svelte`](https://github.com/sveltejs/svelte) | "编译器即框架"的前端革命者——Svelte 5 用 Runes 重新定义响应式系统，无虚拟 DOM、编译时优化、最小化 bundle | 87,585 | 2026-06-30 | [sveltejs-svelte-深度调研.md](sveltejs-svelte-深度调研.md) |
 | 133 | [`sybil-solutions/codex-shim`](https://github.com/sybil-solutions/codex-shim) | — | — | 2026-06-19 | [sybil-solutions-codex-shim-深度调研.md](sybil-solutions-codex-shim-深度调研.md) |
 | 134 | [`tastyeffectco/sandboxd`](https://github.com/tastyeffectco/sandboxd) | — | — | — | [tastyeffectco-sandboxd-深度调研.md](tastyeffectco-sandboxd-深度调研.md) |
 | 135 | [`tensorflow/tensorflow`](https://github.com/tensorflow/tensorflow) | Google 维护的顶级开源机器学习框架（19.5 万⭐）——虽然正被 PyTorch 侵蚀市场份额，但在大规模部署、的生产环境、TPU 生态中仍是无可争议的首 | 195,154 | 2026-05-19 | [tensorflow-tensorflow-深度调研.md](tensorflow-tensorflow-深度调研.md) |
