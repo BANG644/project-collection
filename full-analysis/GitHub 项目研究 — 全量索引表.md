@@ -199,6 +199,9 @@
 | 184 | [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | Hugging Face 官方免费 AI Agent 课程——框架无关教学+smolagents/LangGraph/LlamaIndex 三框架覆盖+认证排行榜 | 29,678 | 2026-06-30 | [huggingface-agents-course-深度调研.md](huggingface-agents-course-深度调研.md) |
 | 185 | [`virattt/dexter`](https://github.com/virattt/dexter) | 金融研究自主 Agent——如 Claude Code 般交互，专为 SEC/财报/市场数据分析优化，支持 WhatsApp+Cron | 27,241 | 2026-06-30 | [virattt-dexter-深度调研.md](virattt-dexter-深度调研.md) |
 | 186 | [`BloopAI/vibe-kanban`](https://github.com/BloopAI/vibe-kanban) | AI 编码 Agent 编排层——看板+Git Worktree 隔离+N 种 Agent 统一调度，让开发者管理 AI 工单而非盯着光标 | 27,211 | 2026-06-30 | [BloopAI-vibe-kanban-深度调研.md](BloopAI-vibe-kanban-深度调研.md) |
+| 187 | [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) | 18 AI 历史名人群组辩论系统——跨 6+LLM 提供商的结构化决策辩论，7 步仪式化协议+防假共识加权投票 | 1,823 | 2026-06-30 | [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md) |
+| 188 | [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) | 中文社区最全 AI 驱动渗透测试工具——目标驱动求解引擎+13 个 LLM Provider+21 渗透 Skill+180 文档 | 1,100 | 2026-06-30 | [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md) |
+| 189 | [`altic-dev/FluidVoice`](https://github.com/altic-dev/FluidVoice) | macOS 最快全本地离线听写应用——8 种语音模型+Fluid Intelligence 本地 AI 增强+命令/写作双模式+brew install | 4,323 | 2026-06-30 | [altic-dev-FluidVoice-深度调研.md](altic-dev-FluidVoice-深度调研.md) |
 
 ---
 
@@ -258,6 +261,7 @@
 - [`vercel/eve`](https://github.com/vercel/eve) — [vercel-eve-深度调研.md](vercel-eve-深度调研.md)
 - [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) — [NousResearch-hermes-agent-深度调研.md](NousResearch-hermes-agent-深度调研.md)
 - [`BloopAI/vibe-kanban`](https://github.com/BloopAI/vibe-kanban) — [BloopAI-vibe-kanban-深度调研.md](BloopAI-vibe-kanban-深度调研.md)
+- [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) — [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md)
 
 ### LLM / 推理框架（4） 🆕
 
@@ -324,11 +328,12 @@
 - [`browser-use/video-use`](https://github.com/browser-use/video-use) — [browser-use-video-use-深度调研.md](browser-use-video-use-深度调研.md)
 - [`3b1b/manim`](https://github.com/3b1b/manim) — [3b1b-manim-深度调研.md](3b1b-manim-深度调研.md)
 
-### 安全 / 运维 / 系统工具（3）
+### 安全 / 运维 / 系统工具（4）
 
 - [`Raphire/Win11Debloat`](https://github.com/Raphire/Win11Debloat) — [Raphire-Win11Debloat-深度调研.md](Raphire-Win11Debloat-深度调研.md)
 - [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) — [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md)
 - [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) — [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md)
+- [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) — [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md)
 
 ### 学习资料 / 方法论（7）
 
@@ -346,6 +351,7 @@
 - [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) — [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md)
 - [`accomplish-ai/coworker`](https://github.com/accomplish-ai/coworker) — [accomplish-ai-coworker-深度调研.md](accomplish-ai-coworker-深度调研.md)
 - [`ace-trump-tech/DeltaForce-OBS-Locker`](https://github.com/ace-trump-tech/DeltaForce-OBS-Locker) — [ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md](ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md)
+- [`altic-dev/FluidVoice`](https://github.com/altic-dev/FluidVoice) — [altic-dev-FluidVoice-深度调研.md](altic-dev-FluidVoice-深度调研.md)
 - [`apple/container`](https://github.com/apple/container) — [apple-container-深度调研.md](apple-container-深度调研.md)
 - [`apple/ml-sharp`](https://github.com/apple/ml-sharp) — [apple-ml-sharp-深度调研.md](apple-ml-sharp-深度调研.md)
 - [`ArthurBrussee/brush`](https://github.com/ArthurBrussee/brush) — [ArthurBrussee-brush-深度调研.md](ArthurBrussee-brush-深度调研.md)
