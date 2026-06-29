@@ -190,6 +190,9 @@
 | 175 | [`baidu/Unlimited-OCR`](https://github.com/baidu/Unlimited-OCR) | 百度无限次数长程文档 OCR 模型——R-SWA 恒定 KV 缓存，一次解析数十页，OmniDocBench SOTA | 11,031 | 2026-06-28 | [baidu-Unlimited-OCR-深度调研.md](baidu-Unlimited-OCR-深度调研.md) |
 | 176 | [`vercel/eve`](https://github.com/vercel/eve) | Vercel 文件系统优先的持久化 Agent 框架——FS 配置+原生 HITL+多频道抽象，Apache-2.0 Beta | 2,792 | 2026-06-28 | [vercel-eve-深度调研.md](vercel-eve-深度调研.md) |
 | 177 | [`every-app/open-seo`](https://github.com/every-app/open-seo) | Semrush/Ahrefs 开源替代——自托管 SEO 平台+MCP 服务器+7 个 Agent Skills+Pay-as-you-go | 3,337 | 2026-06-28 | [every-app-open-seo-深度调研.md](every-app-open-seo-深度调研.md) |
+| 178 | [`browser-use/video-use`](https://github.com/browser-use/video-use) | 对话式 AI 视频编辑——不打开剪辑软件，自然语言告诉 Agent 剪视频，自动完成转录/调色/字幕/动效/自校验 | 10,935 | 2026-06-29 | [browser-use-video-use-深度调研.md](browser-use-video-use-深度调研.md) |
+| 179 | [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) | DeepSeek 开源推测解码全栈代码库——DSpark/DFlash/Eagle3 三算法同仓，60-85% 推理加速 | 2,085 | 2026-06-29 | [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md) |
+| 180 | [`bozhouDev/codex-orange-book`](https://github.com/bozhouDev/codex-orange-book) | Codex 中文社区最全面的非官方实战指南——95页PDF，从安装配置到5个真实案例的全链路手册 | 2,272 | 2026-06-29 | [bozhouDev-codex-orange-book-深度调研.md](bozhouDev-codex-orange-book-深度调研.md) |
 
 ---
 
@@ -248,11 +251,12 @@
 - [`openinterpreter/openinterpreter`](https://github.com/openinterpreter/openinterpreter) — [openinterpreter-openinterpreter-深度调研.md](openinterpreter-openinterpreter-深度调研.md)
 - [`vercel/eve`](https://github.com/vercel/eve) — [vercel-eve-深度调研.md](vercel-eve-深度调研.md)
 
-### LLM / 推理框架（3） 🆕
+### LLM / 推理框架（4） 🆕
 
 - [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) — [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md)
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) — [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md)
+- [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 
 ### AI 编码 / Skill 技能（10）
 
@@ -298,7 +302,7 @@
 - [`JimLiu/baoyu-design`](https://github.com/JimLiu/baoyu-design) — [JimLiu-baoyu-design-深度调研.md](JimLiu-baoyu-design-深度调研.md)
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
 
-### 视频 / 音频 / 多媒体（8）
+### 视频 / 音频 / 多媒体（9）
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
 - [`index-tts/index-tts`](https://github.com/index-tts/index-tts) — [index-tts-index-tts-深度调研.md](index-tts-index-tts-深度调研.md)
@@ -308,6 +312,7 @@
 - [`NVIDIA/cosmos`](https://github.com/NVIDIA/cosmos) — [NVIDIA-cosmos-深度调研.md](NVIDIA-cosmos-深度调研.md)
 - [`Open-LLM-VTuber/Open-LLM-VTuber`](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) — [Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md](Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md)
 - [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) — [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md)
+- [`browser-use/video-use`](https://github.com/browser-use/video-use) — [browser-use-video-use-深度调研.md](browser-use-video-use-深度调研.md)
 
 ### 安全 / 运维 / 系统工具（3）
 
@@ -315,13 +320,14 @@
 - [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) — [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md)
 - [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) — [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md)
 
-### 学习资料 / 方法论（5）
+### 学习资料 / 方法论（6）
 
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
 - [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) — [CyC2018-CS-Notes-深度调研.md](CyC2018-CS-Notes-深度调研.md)
 - [`easychen/opc-methodologyStar`](https://github.com/easychen/opc-methodologyStar) — [easychen-opc-methodologyStar-深度调研.md](easychen-opc-methodologyStar-深度调研.md)
 - [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) — [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md)
+- [`bozhouDev/codex-orange-book`](https://github.com/bozhouDev/codex-orange-book) — [bozhouDev-codex-orange-book-深度调研.md](bozhouDev-codex-orange-book-深度调研.md)
 
 ### 其他（68）
 

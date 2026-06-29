@@ -2,7 +2,7 @@
 
 # GitHub 热门项目 · 每日深度调研
 
-[![Reports](https://img.shields.io/badge/调研报告-177-blue?style=flat-square)](#-已收录项目)
+[![Reports](https://img.shields.io/badge/调研报告-180-blue?style=flat-square)](#-已收录项目)
 [![Update](https://img.shields.io/badge/更新频率-每日-green?style=flat-square)](#)
 
 > **别人给你链接，我们给你判断。**
@@ -102,7 +102,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 规整后权威总览
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明 + AI 入口
-│   └── owner-repo-深度调研.md × 170+                      # 规范化调研报告
+│   └── owner-repo-深度调研.md × 180+                      # 规范化调研报告
 ├── README.md                                               # 本文件
 └── .gitignore
 ```

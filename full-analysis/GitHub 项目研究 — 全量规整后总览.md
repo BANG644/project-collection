@@ -81,7 +81,7 @@ github-project-research/
 | [`alchaincyf/zhangxuefeng-skill`](https://github.com/alchaincyf/zhangxuefeng-skill) | [alchaincyf-zhangxuefeng-skill-深度调研.md](alchaincyf-zhangxuefeng-skill-深度调研.md) |
 | [`aws/agent-toolkit-for-aws`](https://github.com/aws/agent-toolkit-for-aws) | [aws-agent-toolkit-for-aws-深度调研.md](aws-agent-toolkit-for-aws-深度调研.md) |
 
-### B（7 个）
+### B（9 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -89,8 +89,10 @@ github-project-research/
 | [`BANG644/docx-svg-to-pdf`](https://github.com/BANG644/docx-svg-to-pdf) | ⚠️ 个人工作台仓库（1⭐），建议忽略 | [BANG644-docx-svg-to-pdf-深度调研.md](BANG644-docx-svg-to-pdf-深度调研.md) |
 | [`BANG644/scheduler-sent`](https://github.com/BANG644/scheduler-sent) | [BANG644-scheduler-sent-深度调研.md](BANG644-scheduler-sent-深度调研.md) |
 | [`BluePointLilac/ContextMenuManager`](https://github.com/BluePointLilac/ContextMenuManager) | [BluePointLilac-ContextMenuManager-深度调研.md](BluePointLilac-ContextMenuManager-深度调研.md) |
-| [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) | [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md) |
+| [`bozhouDev/codex-orange-book`](https://github.com/bozhouDev/codex-orange-book) | [bozhouDev-codex-orange-book-深度调研.md](bozhouDev-codex-orange-book-深度调研.md) |
 | [`browserbase/stagehand`](https://github.com/browserbase/stagehand) | [browserbase-stagehand-深度调研.md](browserbase-stagehand-深度调研.md) |
+| [`browser-use/video-use`](https://github.com/browser-use/video-use) | [browser-use-video-use-深度调研.md](browser-use-video-use-深度调研.md) |
+| [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) | [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md) |
 | [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | [bytedance-deer-flow-深度调研.md](bytedance-deer-flow-深度调研.md) |
 
 ### C（10 个）
@@ -108,11 +110,12 @@ github-project-research/
 | [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) | [calesthio-OpenMontage-深度调研.md](calesthio-OpenMontage-深度调研.md) |
 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) | [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md) |
 
-### D（5 个）
+### D（6 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`datawhalechina/Agent-Learning-Hub`](https://github.com/datawhalechina/Agent-Learning-Hub) | [datawhalechina-Agent-Learning-Hub-深度调研.md](datawhalechina-Agent-Learning-Hub-深度调研.md) |
+| [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) | [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md) |
 | [`DeusData/codebase-memory-mcp`](https://github.com/DeusData/codebase-memory-mcp) | [DeusData-codebase-memory-mcp-深度调研.md](DeusData-codebase-memory-mcp-深度调研.md) |
 | [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) | [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md) |
 | [`Doorman11991/smallcode`](https://github.com/Doorman11991/smallcode) | [Doorman11991-smallcode-深度调研.md](Doorman11991-smallcode-深度调研.md) |
