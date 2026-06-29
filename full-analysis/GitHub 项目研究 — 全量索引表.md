@@ -193,13 +193,16 @@
 | 178 | [`browser-use/video-use`](https://github.com/browser-use/video-use) | 对话式 AI 视频编辑——不打开剪辑软件，自然语言告诉 Agent 剪视频，自动完成转录/调色/字幕/动效/自校验 | 10,935 | 2026-06-29 | [browser-use-video-use-深度调研.md](browser-use-video-use-深度调研.md) |
 | 179 | [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) | DeepSeek 开源推测解码全栈代码库——DSpark/DFlash/Eagle3 三算法同仓，60-85% 推理加速 | 2,085 | 2026-06-29 | [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md) |
 | 180 | [`bozhouDev/codex-orange-book`](https://github.com/bozhouDev/codex-orange-book) | Codex 中文社区最全面的非官方实战指南——95页PDF，从安装配置到5个真实案例的全链路手册 | 2,272 | 2026-06-29 | [bozhouDev-codex-orange-book-深度调研.md](bozhouDev-codex-orange-book-深度调研.md) |
+| 181 | [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | Nous Research 自我进化型 AI Agent 框架——闭环学习+12消息平台+6部署后端+五层记忆，205k⭐ | 205,068 | 2026-06-29 | [NousResearch-hermes-agent-深度调研.md](NousResearch-hermes-agent-深度调研.md) |
+| 182 | [`anomalyco/opencode`](https://github.com/anomalyco/opencode) | 180k⭐ 开源 AI 编码 Agent——终端 TUI+双 Agent+LSP 自修正+75+模型+权限按命令级别 | 180,267 | 2026-06-29 | [anomalyco-opencode-深度调研.md](anomalyco-opencode-深度调研.md) |
+| 183 | [`3b1b/manim`](https://github.com/3b1b/manim) | 3Blue1Brown 数学动画引擎——声明式 Python API+LaTeX 原生集成+Cairo/OpenGL 双后端，87k⭐ | 87,940 | 2026-06-29 | [3b1b-manim-深度调研.md](3b1b-manim-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（50）
+### AI Agent / 助手框架（51）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -250,6 +253,7 @@
 - [`Shubhamsaboo/awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) — [Shubhamsaboo-awesome-llm-apps-深度调研.md](Shubhamsaboo-awesome-llm-apps-深度调研.md)
 - [`openinterpreter/openinterpreter`](https://github.com/openinterpreter/openinterpreter) — [openinterpreter-openinterpreter-深度调研.md](openinterpreter-openinterpreter-深度调研.md)
 - [`vercel/eve`](https://github.com/vercel/eve) — [vercel-eve-深度调研.md](vercel-eve-深度调研.md)
+- [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) — [NousResearch-hermes-agent-深度调研.md](NousResearch-hermes-agent-深度调研.md)
 
 ### LLM / 推理框架（4） 🆕
 
@@ -258,7 +262,7 @@
 - [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) — [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 
-### AI 编码 / Skill 技能（10）
+### AI 编码 / Skill 技能（11）
 
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
 - [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) — [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md)
@@ -270,6 +274,7 @@
 - [`withkynam/vibecode-pro-max-kit`](https://github.com/withkynam/vibecode-pro-max-kit) — [withkynam-vibecode-pro-max-kit-深度调研.md](withkynam-vibecode-pro-max-kit-深度调研.md)
 - [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) — [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md)
 - [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) — [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md)
+- [`anomalyco/opencode`](https://github.com/anomalyco/opencode) — [anomalyco-opencode-深度调研.md](anomalyco-opencode-深度调研.md)
 
 ### RAG / 知识库 / 记忆（7）
 
@@ -302,7 +307,7 @@
 - [`JimLiu/baoyu-design`](https://github.com/JimLiu/baoyu-design) — [JimLiu-baoyu-design-深度调研.md](JimLiu-baoyu-design-深度调研.md)
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
 
-### 视频 / 音频 / 多媒体（9）
+### 视频 / 音频 / 多媒体（10）
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
 - [`index-tts/index-tts`](https://github.com/index-tts/index-tts) — [index-tts-index-tts-深度调研.md](index-tts-index-tts-深度调研.md)
@@ -313,6 +318,7 @@
 - [`Open-LLM-VTuber/Open-LLM-VTuber`](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) — [Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md](Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md)
 - [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) — [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md)
 - [`browser-use/video-use`](https://github.com/browser-use/video-use) — [browser-use-video-use-深度调研.md](browser-use-video-use-深度调研.md)
+- [`3b1b/manim`](https://github.com/3b1b/manim) — [3b1b-manim-深度调研.md](3b1b-manim-深度调研.md)
 
 ### 安全 / 运维 / 系统工具（3）
 
