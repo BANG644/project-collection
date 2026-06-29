@@ -196,13 +196,16 @@
 | 181 | [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | Nous Research 自我进化型 AI Agent 框架——闭环学习+12消息平台+6部署后端+五层记忆，205k⭐ | 205,068 | 2026-06-29 | [NousResearch-hermes-agent-深度调研.md](NousResearch-hermes-agent-深度调研.md) |
 | 182 | [`anomalyco/opencode`](https://github.com/anomalyco/opencode) | 180k⭐ 开源 AI 编码 Agent——终端 TUI+双 Agent+LSP 自修正+75+模型+权限按命令级别 | 180,267 | 2026-06-29 | [anomalyco-opencode-深度调研.md](anomalyco-opencode-深度调研.md) |
 | 183 | [`3b1b/manim`](https://github.com/3b1b/manim) | 3Blue1Brown 数学动画引擎——声明式 Python API+LaTeX 原生集成+Cairo/OpenGL 双后端，87k⭐ | 87,940 | 2026-06-29 | [3b1b-manim-深度调研.md](3b1b-manim-深度调研.md) |
+| 184 | [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | Hugging Face 官方免费 AI Agent 课程——框架无关教学+smolagents/LangGraph/LlamaIndex 三框架覆盖+认证排行榜 | 29,678 | 2026-06-30 | [huggingface-agents-course-深度调研.md](huggingface-agents-course-深度调研.md) |
+| 185 | [`virattt/dexter`](https://github.com/virattt/dexter) | 金融研究自主 Agent——如 Claude Code 般交互，专为 SEC/财报/市场数据分析优化，支持 WhatsApp+Cron | 27,241 | 2026-06-30 | [virattt-dexter-深度调研.md](virattt-dexter-深度调研.md) |
+| 186 | [`BloopAI/vibe-kanban`](https://github.com/BloopAI/vibe-kanban) | AI 编码 Agent 编排层——看板+Git Worktree 隔离+N 种 Agent 统一调度，让开发者管理 AI 工单而非盯着光标 | 27,211 | 2026-06-30 | [BloopAI-vibe-kanban-深度调研.md](BloopAI-vibe-kanban-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（51）
+### AI Agent / 助手框架（52）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -254,6 +257,7 @@
 - [`openinterpreter/openinterpreter`](https://github.com/openinterpreter/openinterpreter) — [openinterpreter-openinterpreter-深度调研.md](openinterpreter-openinterpreter-深度调研.md)
 - [`vercel/eve`](https://github.com/vercel/eve) — [vercel-eve-深度调研.md](vercel-eve-深度调研.md)
 - [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) — [NousResearch-hermes-agent-深度调研.md](NousResearch-hermes-agent-深度调研.md)
+- [`BloopAI/vibe-kanban`](https://github.com/BloopAI/vibe-kanban) — [BloopAI-vibe-kanban-深度调研.md](BloopAI-vibe-kanban-深度调研.md)
 
 ### LLM / 推理框架（4） 🆕
 
@@ -326,7 +330,7 @@
 - [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) — [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md)
 - [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) — [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md)
 
-### 学习资料 / 方法论（6）
+### 学习资料 / 方法论（7）
 
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
@@ -334,8 +338,9 @@
 - [`easychen/opc-methodologyStar`](https://github.com/easychen/opc-methodologyStar) — [easychen-opc-methodologyStar-深度调研.md](easychen-opc-methodologyStar-深度调研.md)
 - [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) — [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md)
 - [`bozhouDev/codex-orange-book`](https://github.com/bozhouDev/codex-orange-book) — [bozhouDev-codex-orange-book-深度调研.md](bozhouDev-codex-orange-book-深度调研.md)
+- [`huggingface/agents-course`](https://github.com/huggingface/agents-course) — [huggingface-agents-course-深度调研.md](huggingface-agents-course-深度调研.md)
 
-### 其他（68）
+### 其他（69）
 
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
 - [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) — [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md)
@@ -406,6 +411,7 @@
 - [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) — [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md)
 - [`mauriceboe/TREK`](https://github.com/mauriceboe/TREK) — [mauriceboe-TREK-深度调研.md](mauriceboe-TREK-深度调研.md)
 - [`screenpipe/screenpipe`](https://github.com/screenpipe/screenpipe) — [screenpipe-screenpipe-深度调研.md](screenpipe-screenpipe-深度调研.md)
+- [`virattt/dexter`](https://github.com/virattt/dexter) — [virattt-dexter-深度调研.md](virattt-dexter-深度调研.md)
 
 ---
 
