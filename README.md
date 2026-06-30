@@ -2,7 +2,7 @@
 
 # GitHub 热门项目 · 每日深度调研
 
-[![Reports](https://img.shields.io/badge/调研报告-192-blue?style=flat-square)](#-已收录项目)
+[![Reports](https://img.shields.io/badge/调研报告-196-blue?style=flat-square)](#-已收录项目)
 [![Update](https://img.shields.io/badge/更新频率-每日-green?style=flat-square)](#)
 
 > **别人给你链接，我们给你判断。**
@@ -67,15 +67,17 @@ GitHub Trending 每天都在变，但大多数 README 只告诉你「它是什�
 
 | 领域 | 代表项目 |
 |------|---------|
-| 🤖 AI Agent / 助手框架 | [openclaw/openclaw](https://github.com/openclaw/openclaw)、[obra/superpowers](https://github.com/obra/superpowers)、[aaif-goose/goose](https://github.com/aaif-goose/goose)、[bytedance/deer-flow](https://github.com/bytedance/deer-flow) |
+| 🤖 AI Agent / 助手框架 | [openclaw/openclaw](https://github.com/openclaw/openclaw)、[obra/superpowers](https://github.com/obra/superpowers)、[aaif-goose/goose](https://github.com/aaif-goose/goose)、[bytedance/deer-flow](https://github.com/bytedance/deer-flow)、[diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute) |
 | 🔧 AI 编码 / Skill 技能 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)、[anthropics/skills](https://github.com/anthropics/skills)、[mattpocock/skills](https://github.com/mattpocock/skills) |
 | 🧠 RAG / 知识库 / 记忆 | [microsoft/graphrag](https://github.com/microsoft/graphrag)、[1Panel-dev/MaxKBStar](https://github.com/1Panel-dev/MaxKBStar)、[rohitg00/agentmemory](https://github.com/rohitg00/agentmemory)、[supermemoryai/supermemory](https://github.com/supermemoryai/supermemory)、[mem0ai/mem0](https://github.com/mem0ai/mem0) |
 | 🦾 LLM 微调 / 推理 | [hiyouga/LlamaFactory](https://github.com/hiyouga/LlamaFactory)、[jingyaogong/minimind](https://github.com/jingyaogong/minimind)、[ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)、[ollama/ollama](https://github.com/ollama/ollama) |
 | 🛠️ 开发工具 / CLI | [unclecode/crawl4ai](https://github.com/unclecode/crawl4ai)、[jina-ai/reader](https://github.com/jina-ai/reader)、[GLips/Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP) |
 | 🎨 前端 / 设计 / UI | [antvis/Infographic](https://github.com/antvis/Infographic)、[diffusionstudio/lottie](https://github.com/diffusionstudio/lottie)、[excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) |
 | 🎬 视频 / 音频 / 多媒体 | [remotion-dev/remotion](https://github.com/remotion-dev/remotion)、[Open-LLM-VTuber/Open-LLM-VTuber](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber)、[Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI) |
-| 🔒 安全 / 运维 / 系统工具 | [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat)、[ShadowWhisperer/Remove-MS-Edge](https://github.com/ShadowWhisperer/Remove-MS-Edge) |
+| 🔒 安全 / 运维 / 系统工具 | [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat)、[ShadowWhisperer/Remove-MS-Edge](https://github.com/ShadowWhisperer/Remove-MS-Edge)、[usestrix/strix](https://github.com/usestrix/strix) |
+| 👁️ 计算机视觉 / CV | [roboflow/supervision](https://github.com/roboflow/supervision) |
 | 📘 学习资料 / 方法论 | [521xueweihan/HelloGitHub](https://github.com/521xueweihan/HelloGitHub)、[CyC2018/CS-Notes](https://github.com/CyC2018/CS-Notes)、[youngyangyang04/leetcode-master](https://github.com/youngyangyang04/leetcode-master) |
+| 📊 金融 / 量化 | [virattt/dexter](https://github.com/virattt/dexter)、[HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) |
 | 🏗️ 大型开源项目 | [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow)、[opencv/opencv](https://github.com/opencv/opencv)、[supabase/supabase](https://github.com/supabase/supabase)、[sveltejs/svelte](https://github.com/sveltejs/svelte) |
 
 ---

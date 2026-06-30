@@ -205,13 +205,17 @@
 | 190 | [`DietrichGebert/ponytail`](https://github.com/DietrichGebert/ponytail) | 让 AI 编码代理从「写得多=好」变为「写得少=好」的行为改造插件——YAGNI 七步决策阶梯+16 平台+四级强度，减 54% 代码量 | 68,953 | 2026-07-01 | [DietrichGebert-ponytail-深度调研.md](DietrichGebert-ponytail-深度调研.md) |
 | 191 | [`headroomlabs-ai/headroom`](https://github.com/headroomlabs-ai/headroom) | AI Agent 上下文压缩中间层——内容感知结构化压缩+CCR 可逆设计+四种部署形态，减 60-95% Token | 54,583 | 2026-07-01 | [headroomlabs-ai-headroom-深度调研.md](headroomlabs-ai-headroom-深度调研.md) |
 | 192 | [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) | 简历评分 Agent 管线——PDF→分节 JSON→GitHub 交叉验证→公平评分+证据引用，InterviewStreet 开源 | 3,970 | 2026-07-01 | [interviewstreet-hiring-agent-深度调研.md](interviewstreet-hiring-agent-深度调研.md) |
+| 193 | [`roboflow/supervision`](https://github.com/roboflow/supervision) | 计算机视觉工程沉淀工具箱——20+标注器+ByteTrack追踪+区域计数+数据集转换，CV 项目的事实标准胶水层 | 45,863 | 2026-07-01 | [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md) |
+| 194 | [`usestrix/strix`](https://github.com/usestrix/strix) | AI Agent 驱动的渗透测试框架——Agent 图编排+真实 PoC 验证+自动修复，把安全测试从"扫描器报疑似"推进到"每条漏洞都能复现" | 28,023 | 2026-07-01 | [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md) |
+| 195 | [`HKUDS/Vibe-Trading`](https://github.com/HKUDS/Vibe-Trading) | 香港大学数据科学实验室开源——信号→风控→执行三层 AI 交易 Agent，模板方法+策略模式混合，Lookahead 哨兵检测未来数据泄露 | 15,718 | 2026-07-01 | [HKUDS-Vibe-Trading-深度调研.md](HKUDS-Vibe-Trading-深度调研.md) |
+| 196 | [`diegosouzapw/OmniRoute`](https://github.com/diegosouzapw/OmniRoute) | 免费 AI 网关——一条端点覆盖 231 家提供商（50+免费），RTK+Caveman 堆叠压缩 15-95% Token，MCP/A2A 双协议 | 8,397 | 2026-07-01 | [diegosouzapw-OmniRoute-深度调研.md](diegosouzapw-OmniRoute-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（54）
+### AI Agent / 助手框架（55）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -267,6 +271,7 @@
 - [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) — [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md)
 - [`headroomlabs-ai/headroom`](https://github.com/headroomlabs-ai/headroom) — [headroomlabs-ai-headroom-深度调研.md](headroomlabs-ai-headroom-深度调研.md)
 - [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) — [interviewstreet-hiring-agent-深度调研.md](interviewstreet-hiring-agent-深度调研.md)
+- [`diegosouzapw/OmniRoute`](https://github.com/diegosouzapw/OmniRoute) — [diegosouzapw-OmniRoute-深度调研.md](diegosouzapw-OmniRoute-深度调研.md)
 
 ### LLM / 推理框架（4） 🆕
 
@@ -334,12 +339,17 @@
 - [`browser-use/video-use`](https://github.com/browser-use/video-use) — [browser-use-video-use-深度调研.md](browser-use-video-use-深度调研.md)
 - [`3b1b/manim`](https://github.com/3b1b/manim) — [3b1b-manim-深度调研.md](3b1b-manim-深度调研.md)
 
-### 安全 / 运维 / 系统工具（4）
+### 计算机视觉 / CV（1） 🆕
+
+- [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
+
+### 安全 / 运维 / 系统工具（6）
 
 - [`Raphire/Win11Debloat`](https://github.com/Raphire/Win11Debloat) — [Raphire-Win11Debloat-深度调研.md](Raphire-Win11Debloat-深度调研.md)
 - [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) — [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md)
 - [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) — [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md)
 - [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) — [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md)
+- [`usestrix/strix`](https://github.com/usestrix/strix) — [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md)
 
 ### 学习资料 / 方法论（7）
 
@@ -351,7 +361,7 @@
 - [`bozhouDev/codex-orange-book`](https://github.com/bozhouDev/codex-orange-book) — [bozhouDev-codex-orange-book-深度调研.md](bozhouDev-codex-orange-book-深度调研.md)
 - [`huggingface/agents-course`](https://github.com/huggingface/agents-course) — [huggingface-agents-course-深度调研.md](huggingface-agents-course-深度调研.md)
 
-### 其他（69）
+### 其他（70）
 
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
 - [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) — [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md)
@@ -424,6 +434,7 @@
 - [`mauriceboe/TREK`](https://github.com/mauriceboe/TREK) — [mauriceboe-TREK-深度调研.md](mauriceboe-TREK-深度调研.md)
 - [`screenpipe/screenpipe`](https://github.com/screenpipe/screenpipe) — [screenpipe-screenpipe-深度调研.md](screenpipe-screenpipe-深度调研.md)
 - [`virattt/dexter`](https://github.com/virattt/dexter) — [virattt-dexter-深度调研.md](virattt-dexter-深度调研.md)
+- [`HKUDS/Vibe-Trading`](https://github.com/HKUDS/Vibe-Trading) — [HKUDS-Vibe-Trading-深度调研.md](HKUDS-Vibe-Trading-深度调研.md)
 
 ---
 
