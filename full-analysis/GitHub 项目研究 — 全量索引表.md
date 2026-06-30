@@ -28,7 +28,7 @@
 | 13 | [`anthropics/skills`](https://github.com/anthropics/skills) | — | — | 2026-06-19 | [anthropics-skills-深度调研.md](anthropics-skills-深度调研.md) |
 | 14 | [`antvis/Infographic`](https://github.com/antvis/Infographic) | 📋 基本信息 | — | — | [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md) |
 | 15 | [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) | 📋 基本信息 | — | — | [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md) |
-| 16 | [`apple/container`](https://github.com/apple/container) | Apple 官方的 Mac Linux 容器方案——用轻量虚拟机在 Mac 上创建和运行 Linux 容器，针对 Apple Silicon 优化，用 Swif | 35,986 | 2026-06-14 | [apple-container-深度调研.md](apple-container-深度调研.md) |
+| 16 | [`apple/container`](https://github.com/apple/container) | Apple 官方出品的 Mac 原生 Linux 容器方案——用轻量虚拟机在 Apple Silicon Mac 上运行 OCI 容器 | 45,240 | 2026-07-01 | [apple-container-深度调研.md](apple-container-深度调研.md) |
 | 17 | [`apple/ml-sharp`](https://github.com/apple/ml-sharp) | 📋 基本信息 | — | — | [apple-ml-sharp-深度调研.md](apple-ml-sharp-深度调研.md) |
 | 18 | [`ArthurBrussee/brush`](https://github.com/ArthurBrussee/brush) | 📋 基本信息 | — | — | [ArthurBrussee-brush-深度调研.md](ArthurBrussee-brush-深度调研.md) |
 | 19 | [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | — | — | — | [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md) |
@@ -86,7 +86,7 @@
 | 71 | [`LanRhyme/MicYou`](https://github.com/LanRhyme/MicYou) | MicYou | — | 2026-02-10 | [LanRhyme-MicYou-深度调研.md](LanRhyme-MicYou-深度调研.md) |
 | 72 | [`larksuite/cli`](https://github.com/larksuite/cli) | — | — | — | [larksuite-cli-深度调研.md](larksuite-cli-深度调研.md) |
 | 73 | [`Leonxlnx/taste-skill`](https://github.com/Leonxlnx/taste-skill) | 给 AI "好品味"——阻止 AI 生成无聊、空洞、通用的内容。通过一套精心设计的规则集，让 AI 代码的输出更有设计感和个性。项目名 Taste-Skill: | 42,890 | 2026-06-14 | [Leonxlnx-taste-skill-深度调研.md](Leonxlnx-taste-skill-深度调研.md) |
-| 74 | [`lfnovo/open-notebook`](https://github.com/lfnovo/open-notebook) | Google NotebookLM 的开源实现——"更灵活、更强大的 NotebookLM"。二、核心分析为什么要做 Open-Notebook？Google | 29,969 | 2026-06-14 | [lfnovo-open-notebook-深度调研.md](lfnovo-open-notebook-深度调研.md) |
+| 74 | [`lfnovo/open-notebook`](https://github.com/lfnovo/open-notebook) | Google NotebookLM 的开源替代品——支持 18+ AI 提供商、多模态内容处理、智能播客生成、自托管隐私保护 | 34,101 | 2026-07-01 | [lfnovo-open-notebook-深度调研.md](lfnovo-open-notebook-深度调研.md) |
 | 75 | [`liyue-aigc/female-portrait-dataset`](https://github.com/liyue-aigc/female-portrait-dataset) | — | — | — | [liyue-aigc-female-portrait-dataset-深度调研.md](liyue-aigc-female-portrait-dataset-深度调研.md) |
 | 76 | [`lllyasviel/Fooocus`](https://github.com/lllyasviel/Fooocus) | 基于 Stable Diffusion XL 的离线、开源、免费图像生成软件，用户只需关注提示词即可生成高质量图像，无需手动调参。📖 项目定位与核心功能设计哲学 | 43,000 | 2026-06-13 | [lllyasviel-Fooocus-深度调研.md](lllyasviel-Fooocus-深度调研.md) |
 | 77 | [`lynote-ai/humanize-text`](https://github.com/lynote-ai/humanize-text) | — | — | — | [lynote-ai-humanize-text-深度调研.md](lynote-ai-humanize-text-深度调研.md) |
@@ -106,12 +106,12 @@
 | 91 | [`nexu-io/html-anything`](https://github.com/nexu-io/html-anything) | Agentic HTML 编辑器 | 7,009 | 2026-06-20 | [nexu-io-html-anything-深度调研.md](nexu-io-html-anything-深度调研.md) |
 | 92 | [`NoopApp/noop`](https://github.com/NoopApp/noop) | — | — | — | [NoopApp-noop-深度调研.md](NoopApp-noop-深度调研.md) |
 | 93 | [`Normation/rudder`](https://github.com/Normation/rudder) | — | — | — | [Normation-rudder-深度调研.md](Normation-rudder-深度调研.md) |
-| 94 | [`NVIDIA/cosmos`](https://github.com/NVIDIA/cosmos) | NVIDIA 世界模型开放平台——包含世界模型、数据集和工具，让开发者构建物理 AI（机器人、自动驾驶、智慧基础设施等）。二、核心分析为什么重要？"世界模型"是 | 10,117 | 2026-06-14 | [NVIDIA-cosmos-深度调研.md](NVIDIA-cosmos-深度调研.md) |
+| 94 | [`NVIDIA/cosmos`](https://github.com/NVIDIA/cosmos) | NVIDIA 开源的全模态世界模型平台——MoT 双塔架构统一视觉推理、世界生成与动作预测，为 Physical AI 提供基础模型 | 10,733 | 2026-07-01 | [NVIDIA-cosmos-深度调研.md](NVIDIA-cosmos-深度调研.md) |
 | 95 | [`NVIDIA/SkillSpector`](https://github.com/NVIDIA/SkillSpector) | SkillSpector — AI Agent Skills Security Scanner (NVIDIA) | 8,602 | 2026-06-21 | [NVIDIA-SkillSpector-深度调研.md](NVIDIA-SkillSpector-深度调研.md) |
 | 96 | [`obra/superpowers`](https://github.com/obra/superpowers) | GitHub Star 第五多的项目（19.7 万⭐）——一个 Agent 技能框架 & 软件开发方法论，支持 Claude / Codex / Cursor | 197,310 | 2026-05-14 | [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md) |
 | 97 | [`op7418/guizang-social-card-skill`](https://github.com/op7418/guizang-social-card-skill) | Guizang Social Card Skill | — | 2026-05-27 | [op7418-guizang-social-card-skill-深度调研.md](op7418-guizang-social-card-skill-深度调研.md) |
 | 98 | [`op7418/Humanizer-zh`](https://github.com/op7418/Humanizer-zh) | — | — | 2026-06-19 | [op7418-Humanizer-zh-深度调研.md](op7418-Humanizer-zh-深度调研.md) |
-| 99 | [`Open-LLM-VTuber/Open-LLM-VTuber`](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) | 用手势控制、语音中断和 Live2D 虚拟形象与任何 LLM 进行免提对话——全平台本地运行。二、核心分析这个项目在做什么Open-LLM-VTuber 把 L | 11,246 | 2026-06-14 | [Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md](Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md) |
+| 99 | [`Open-LLM-VTuber/Open-LLM-VTuber`](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) | 可打断语音交互 + Live2D 虚拟形象的 AI 伴侣——全本地运行、多后端支持、跨平台桌面 AI 交互框架 | 12,202 | 2026-07-01 | [Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md](Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md) |
 | 100 | [`openai/plugins`](https://github.com/openai/plugins) | OpenAI Plugins 的官方参考实现。二、核心分析注意：这是一个"参考仓库"这个仓库不是生产级工具，而是 OpenAI 官方发布的 Plugins 规范 | 2,947 | 2026-06-14 | [openai-plugins-深度调研.md](openai-plugins-深度调研.md) |
 | 101 | [`openclaw/openclaw`](https://github.com/openclaw/openclaw) | GitHub Star 第三多的 AI Agent 平台（37.3 万⭐）——由同一作者维护的跨平台 AI 助手，支持 Any OS / Any Platfor | 373,050 | 2026-05-19 | [openclaw-openclaw-深度调研.md](openclaw-openclaw-深度调研.md) |
 | 102 | [`OpenCut-app/OpenCut`](https://github.com/OpenCut-app/OpenCut) | — | — | — | [OpenCut-app-OpenCut-深度调研.md](OpenCut-app-OpenCut-深度调研.md) |
