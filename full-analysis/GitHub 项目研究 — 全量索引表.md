@@ -202,13 +202,16 @@
 | 187 | [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) | 18 AI 历史名人群组辩论系统——跨 6+LLM 提供商的结构化决策辩论，7 步仪式化协议+防假共识加权投票 | 1,823 | 2026-06-30 | [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md) |
 | 188 | [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) | 中文社区最全 AI 驱动渗透测试工具——目标驱动求解引擎+13 个 LLM Provider+21 渗透 Skill+180 文档 | 1,100 | 2026-06-30 | [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md) |
 | 189 | [`altic-dev/FluidVoice`](https://github.com/altic-dev/FluidVoice) | macOS 最快全本地离线听写应用——8 种语音模型+Fluid Intelligence 本地 AI 增强+命令/写作双模式+brew install | 4,323 | 2026-06-30 | [altic-dev-FluidVoice-深度调研.md](altic-dev-FluidVoice-深度调研.md) |
+| 190 | [`DietrichGebert/ponytail`](https://github.com/DietrichGebert/ponytail) | 让 AI 编码代理从「写得多=好」变为「写得少=好」的行为改造插件——YAGNI 七步决策阶梯+16 平台+四级强度，减 54% 代码量 | 68,953 | 2026-07-01 | [DietrichGebert-ponytail-深度调研.md](DietrichGebert-ponytail-深度调研.md) |
+| 191 | [`headroomlabs-ai/headroom`](https://github.com/headroomlabs-ai/headroom) | AI Agent 上下文压缩中间层——内容感知结构化压缩+CCR 可逆设计+四种部署形态，减 60-95% Token | 54,583 | 2026-07-01 | [headroomlabs-ai-headroom-深度调研.md](headroomlabs-ai-headroom-深度调研.md) |
+| 192 | [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) | 简历评分 Agent 管线——PDF→分节 JSON→GitHub 交叉验证→公平评分+证据引用，InterviewStreet 开源 | 3,970 | 2026-07-01 | [interviewstreet-hiring-agent-深度调研.md](interviewstreet-hiring-agent-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（52）
+### AI Agent / 助手框架（54）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -262,6 +265,8 @@
 - [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) — [NousResearch-hermes-agent-深度调研.md](NousResearch-hermes-agent-深度调研.md)
 - [`BloopAI/vibe-kanban`](https://github.com/BloopAI/vibe-kanban) — [BloopAI-vibe-kanban-深度调研.md](BloopAI-vibe-kanban-深度调研.md)
 - [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) — [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md)
+- [`headroomlabs-ai/headroom`](https://github.com/headroomlabs-ai/headroom) — [headroomlabs-ai-headroom-深度调研.md](headroomlabs-ai-headroom-深度调研.md)
+- [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) — [interviewstreet-hiring-agent-深度调研.md](interviewstreet-hiring-agent-深度调研.md)
 
 ### LLM / 推理框架（4） 🆕
 
@@ -270,7 +275,7 @@
 - [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) — [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 
-### AI 编码 / Skill 技能（11）
+### AI 编码 / Skill 技能（12）
 
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
 - [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) — [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md)
@@ -283,6 +288,7 @@
 - [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) — [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md)
 - [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) — [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md)
 - [`anomalyco/opencode`](https://github.com/anomalyco/opencode) — [anomalyco-opencode-深度调研.md](anomalyco-opencode-深度调研.md)
+- [`DietrichGebert/ponytail`](https://github.com/DietrichGebert/ponytail) — [DietrichGebert-ponytail-深度调研.md](DietrichGebert-ponytail-深度调研.md)
 
 ### RAG / 知识库 / 记忆（7）
 
