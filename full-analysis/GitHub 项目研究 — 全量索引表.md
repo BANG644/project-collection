@@ -212,13 +212,18 @@
 | 197 | [`ATH-MaaS/Pixelle-Video`](https://github.com/ATH-MaaS/Pixelle-Video) | AI 全自动短视频引擎——主题→文案→配图→配音→BGM→合成，ComfyUI 工作流架构，ComfyKit 抽象层实现模型与管线彻底解耦 | 23,970 | 2026-07-02 | [ATH-MaaS-Pixelle-Video-深度调研.md](ATH-MaaS-Pixelle-Video-深度调研.md) |
 | 198 | [`refly-ai/refly`](https://github.com/refly-ai/refly) | 全球首个开源 Agent Skills 构建平台——Vibe Workflow 可视化 IDE，将企业 SOP 编译为确定性的、版本化的 Skill，支持导出 MCP/API/Bot | 7,416 | 2026-07-02 | [refly-ai-refly-深度调研.md](refly-ai-refly-深度调研.md) |
 | 199 | [`OpenBMB/UltraRAG`](https://github.com/OpenBMB/UltraRAG) | 全球首个 MCP 原生 RAG 框架——清华 THUNLP+OpenBMB，YAML 声明式管线，所有组件封装为独立 MCP Server，内置 Eval+DeepResearch | 5,627 | 2026-07-02 | [OpenBMB-UltraRAG-深度调研.md](OpenBMB-UltraRAG-深度调研.md) |
+| 200 | [`allenai/olmocr`](https://github.com/allenai/olmocr) | Ai2 7B VLM PDF→LLM 线性化工具套件，全链路开源含 SFT+GRPO+合成数据+自建评测 | 18,224 | 2026-07-02 | [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md) |
+| 201 | [`microsoft/AI-For-Beginners`](https://github.com/microsoft/AI-For-Beginners) | 微软官方 12 周 24 课 AI 入门课程，PyTorch+TF 双框架，50+ 语言翻译 MIT 许可 | 50,336 | 2026-07-02 | [microsoft-AI-For-Beginners-深度调研.md](microsoft-AI-For-Beginners-深度调研.md) |
+| 202 | [`facebook/astryx`](https://github.com/facebook/astryx) | Meta 8 年打磨 150+ 组件 React 设计系统，CLI+MCP 双通道 AI 原生架构 | 2,487 | 2026-07-02 | [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md) |
+| 203 | [`TencentCloud/CubeSandbox`](https://github.com/TencentCloud/CubeSandbox) | 腾讯云 KVM+RustVMM 60ms AI Agent 沙箱，E2B SDK Drop-in 兼容硬件级隔离 | 6,755 | 2026-07-02 | [TencentCloud-CubeSandbox-深度调研.md](TencentCloud-CubeSandbox-深度调研.md) |
+| 204 | [`ogulcancelik/herdr`](https://github.com/ogulcancelik/herdr) | 终端原生 AI Agent 多路复用器，状态感知侧边栏+Socket 编排 API+Rust 单二进制 | 9,535 | 2026-07-02 | [ogulcancelik-herdr-深度调研.md](ogulcancelik-herdr-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（56）
+### AI Agent / 助手框架（58）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -276,6 +281,8 @@
 - [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) — [interviewstreet-hiring-agent-深度调研.md](interviewstreet-hiring-agent-深度调研.md)
 - [`diegosouzapw/OmniRoute`](https://github.com/diegosouzapw/OmniRoute) — [diegosouzapw-OmniRoute-深度调研.md](diegosouzapw-OmniRoute-深度调研.md)
 - [`refly-ai/refly`](https://github.com/refly-ai/refly) — [refly-ai-refly-深度调研.md](refly-ai-refly-深度调研.md)
+- [`TencentCloud/CubeSandbox`](https://github.com/TencentCloud/CubeSandbox) — [TencentCloud-CubeSandbox-深度调研.md](TencentCloud-CubeSandbox-深度调研.md)
+- [`ogulcancelik/herdr`](https://github.com/ogulcancelik/herdr) — [ogulcancelik-herdr-深度调研.md](ogulcancelik-herdr-深度调研.md)
 
 ### LLM / 推理框架（4） 🆕
 
@@ -299,7 +306,7 @@
 - [`anomalyco/opencode`](https://github.com/anomalyco/opencode) — [anomalyco-opencode-深度调研.md](anomalyco-opencode-深度调研.md)
 - [`DietrichGebert/ponytail`](https://github.com/DietrichGebert/ponytail) — [DietrichGebert-ponytail-深度调研.md](DietrichGebert-ponytail-深度调研.md)
 
-### RAG / 知识库 / 记忆（8）
+### RAG / 知识库 / 记忆（9）
 
 - [`1Panel-dev/MaxKBStar`](https://github.com/1Panel-dev/MaxKBStar) — [1Panel-dev-MaxKBStar-深度调研.md](1Panel-dev-MaxKBStar-深度调研.md)
 - [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) — [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md)
@@ -309,6 +316,7 @@
 - [`topoteretes/cognee`](https://github.com/topoteretes/cognee) — [topoteretes-cognee-深度调研.md](topoteretes-cognee-深度调研.md)
 - [`mem0ai/mem0`](https://github.com/mem0ai/mem0) — [mem0ai-mem0-深度调研.md](mem0ai-mem0-深度调研.md)
 - [`OpenBMB/UltraRAG`](https://github.com/OpenBMB/UltraRAG) — [OpenBMB-UltraRAG-深度调研.md](OpenBMB-UltraRAG-深度调研.md)
+- [`allenai/olmocr`](https://github.com/allenai/olmocr) — [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md)
 
 ### 开发工具 / CLI（9）
 
@@ -322,7 +330,7 @@
 - [`every-app/open-seo`](https://github.com/every-app/open-seo) — [every-app-open-seo-深度调研.md](every-app-open-seo-深度调研.md)
 - [`baidu/Unlimited-OCR`](https://github.com/baidu/Unlimited-OCR) — [baidu-Unlimited-OCR-深度调研.md](baidu-Unlimited-OCR-深度调研.md)
 
-### 前端 / 设计 / UI（6）
+### 前端 / 设计 / UI（7）
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
 - [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) — [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md)
@@ -330,6 +338,7 @@
 - [`github.com/penpot`](https://github.com/penpot) — [github.com-penpot-深度调研.md](github.com-penpot-深度调研.md)
 - [`JimLiu/baoyu-design`](https://github.com/JimLiu/baoyu-design) — [JimLiu-baoyu-design-深度调研.md](JimLiu-baoyu-design-深度调研.md)
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
+- [`facebook/astryx`](https://github.com/facebook/astryx) — [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md)
 
 ### 视频 / 音频 / 多媒体（11）
 
@@ -357,7 +366,7 @@
 - [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) — [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md)
 - [`usestrix/strix`](https://github.com/usestrix/strix) — [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md)
 
-### 学习资料 / 方法论（7）
+### 学习资料 / 方法论（8）
 
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
@@ -366,6 +375,7 @@
 - [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) — [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md)
 - [`bozhouDev/codex-orange-book`](https://github.com/bozhouDev/codex-orange-book) — [bozhouDev-codex-orange-book-深度调研.md](bozhouDev-codex-orange-book-深度调研.md)
 - [`huggingface/agents-course`](https://github.com/huggingface/agents-course) — [huggingface-agents-course-深度调研.md](huggingface-agents-course-深度调研.md)
+- [`microsoft/AI-For-Beginners`](https://github.com/microsoft/AI-For-Beginners) — [microsoft-AI-For-Beginners-深度调研.md](microsoft-AI-For-Beginners-深度调研.md)
 
 ### 其他（70）
 
