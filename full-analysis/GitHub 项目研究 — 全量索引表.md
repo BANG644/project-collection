@@ -209,13 +209,16 @@
 | 194 | [`usestrix/strix`](https://github.com/usestrix/strix) | AI Agent 驱动的渗透测试框架——Agent 图编排+真实 PoC 验证+自动修复，把安全测试从"扫描器报疑似"推进到"每条漏洞都能复现" | 28,023 | 2026-07-01 | [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md) |
 | 195 | [`HKUDS/Vibe-Trading`](https://github.com/HKUDS/Vibe-Trading) | 香港大学数据科学实验室开源——信号→风控→执行三层 AI 交易 Agent，模板方法+策略模式混合，Lookahead 哨兵检测未来数据泄露 | 15,718 | 2026-07-01 | [HKUDS-Vibe-Trading-深度调研.md](HKUDS-Vibe-Trading-深度调研.md) |
 | 196 | [`diegosouzapw/OmniRoute`](https://github.com/diegosouzapw/OmniRoute) | 免费 AI 网关——一条端点覆盖 231 家提供商（50+免费），RTK+Caveman 堆叠压缩 15-95% Token，MCP/A2A 双协议 | 8,397 | 2026-07-01 | [diegosouzapw-OmniRoute-深度调研.md](diegosouzapw-OmniRoute-深度调研.md) |
+| 197 | [`ATH-MaaS/Pixelle-Video`](https://github.com/ATH-MaaS/Pixelle-Video) | AI 全自动短视频引擎——主题→文案→配图→配音→BGM→合成，ComfyUI 工作流架构，ComfyKit 抽象层实现模型与管线彻底解耦 | 23,970 | 2026-07-02 | [ATH-MaaS-Pixelle-Video-深度调研.md](ATH-MaaS-Pixelle-Video-深度调研.md) |
+| 198 | [`refly-ai/refly`](https://github.com/refly-ai/refly) | 全球首个开源 Agent Skills 构建平台——Vibe Workflow 可视化 IDE，将企业 SOP 编译为确定性的、版本化的 Skill，支持导出 MCP/API/Bot | 7,416 | 2026-07-02 | [refly-ai-refly-深度调研.md](refly-ai-refly-深度调研.md) |
+| 199 | [`OpenBMB/UltraRAG`](https://github.com/OpenBMB/UltraRAG) | 全球首个 MCP 原生 RAG 框架——清华 THUNLP+OpenBMB，YAML 声明式管线，所有组件封装为独立 MCP Server，内置 Eval+DeepResearch | 5,627 | 2026-07-02 | [OpenBMB-UltraRAG-深度调研.md](OpenBMB-UltraRAG-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（55）
+### AI Agent / 助手框架（56）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -272,6 +275,7 @@
 - [`headroomlabs-ai/headroom`](https://github.com/headroomlabs-ai/headroom) — [headroomlabs-ai-headroom-深度调研.md](headroomlabs-ai-headroom-深度调研.md)
 - [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) — [interviewstreet-hiring-agent-深度调研.md](interviewstreet-hiring-agent-深度调研.md)
 - [`diegosouzapw/OmniRoute`](https://github.com/diegosouzapw/OmniRoute) — [diegosouzapw-OmniRoute-深度调研.md](diegosouzapw-OmniRoute-深度调研.md)
+- [`refly-ai/refly`](https://github.com/refly-ai/refly) — [refly-ai-refly-深度调研.md](refly-ai-refly-深度调研.md)
 
 ### LLM / 推理框架（4） 🆕
 
@@ -295,7 +299,7 @@
 - [`anomalyco/opencode`](https://github.com/anomalyco/opencode) — [anomalyco-opencode-深度调研.md](anomalyco-opencode-深度调研.md)
 - [`DietrichGebert/ponytail`](https://github.com/DietrichGebert/ponytail) — [DietrichGebert-ponytail-深度调研.md](DietrichGebert-ponytail-深度调研.md)
 
-### RAG / 知识库 / 记忆（7）
+### RAG / 知识库 / 记忆（8）
 
 - [`1Panel-dev/MaxKBStar`](https://github.com/1Panel-dev/MaxKBStar) — [1Panel-dev-MaxKBStar-深度调研.md](1Panel-dev-MaxKBStar-深度调研.md)
 - [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) — [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md)
@@ -304,6 +308,7 @@
 - [`supermemoryai/supermemory`](https://github.com/supermemoryai/supermemory) — [supermemoryai-supermemory-深度调研.md](supermemoryai-supermemory-深度调研.md)
 - [`topoteretes/cognee`](https://github.com/topoteretes/cognee) — [topoteretes-cognee-深度调研.md](topoteretes-cognee-深度调研.md)
 - [`mem0ai/mem0`](https://github.com/mem0ai/mem0) — [mem0ai-mem0-深度调研.md](mem0ai-mem0-深度调研.md)
+- [`OpenBMB/UltraRAG`](https://github.com/OpenBMB/UltraRAG) — [OpenBMB-UltraRAG-深度调研.md](OpenBMB-UltraRAG-深度调研.md)
 
 ### 开发工具 / CLI（9）
 
@@ -326,7 +331,7 @@
 - [`JimLiu/baoyu-design`](https://github.com/JimLiu/baoyu-design) — [JimLiu-baoyu-design-深度调研.md](JimLiu-baoyu-design-深度调研.md)
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
 
-### 视频 / 音频 / 多媒体（10）
+### 视频 / 音频 / 多媒体（11）
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
 - [`index-tts/index-tts`](https://github.com/index-tts/index-tts) — [index-tts-index-tts-深度调研.md](index-tts-index-tts-深度调研.md)
@@ -338,6 +343,7 @@
 - [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) — [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md)
 - [`browser-use/video-use`](https://github.com/browser-use/video-use) — [browser-use-video-use-深度调研.md](browser-use-video-use-深度调研.md)
 - [`3b1b/manim`](https://github.com/3b1b/manim) — [3b1b-manim-深度调研.md](3b1b-manim-深度调研.md)
+- [`ATH-MaaS/Pixelle-Video`](https://github.com/ATH-MaaS/Pixelle-Video) — [ATH-MaaS-Pixelle-Video-深度调研.md](ATH-MaaS-Pixelle-Video-深度调研.md)
 
 ### 计算机视觉 / CV（1） 🆕
 
