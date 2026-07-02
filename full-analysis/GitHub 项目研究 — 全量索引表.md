@@ -218,6 +218,9 @@
 | 202 | [`facebook/astryx`](https://github.com/facebook/astryx) | Meta 8 年打磨 150+ 组件 React 设计系统，CLI+MCP 双通道 AI 原生架构 | 2,487 | 2026-07-02 | [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md) |
 | 203 | [`TencentCloud/CubeSandbox`](https://github.com/TencentCloud/CubeSandbox) | 腾讯云 KVM+RustVMM 60ms AI Agent 沙箱，E2B SDK Drop-in 兼容硬件级隔离 | 6,755 | 2026-07-02 | [TencentCloud-CubeSandbox-深度调研.md](TencentCloud-CubeSandbox-深度调研.md) |
 | 204 | [`ogulcancelik/herdr`](https://github.com/ogulcancelik/herdr) | 终端原生 AI Agent 多路复用器，状态感知侧边栏+Socket 编排 API+Rust 单二进制 | 9,535 | 2026-07-02 | [ogulcancelik-herdr-深度调研.md](ogulcancelik-herdr-深度调研.md) |
+| 205 | [`tw93/Pake`](https://github.com/tw93/Pake) | 一行命令把任意网页变成 <5MB 桌面应用的 Rust/Tauri CLI，No Electron 极轻量 | 59,019 | 2026-07-03 | [tw93-Pake-深度调研.md](tw93-Pake-深度调研.md) |
+| 206 | [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) | 通过 MCP 协议让任何 LLM 直接操控 Blender 建模的开源桥梁，集成 Rodin/Hunyuan3D 生成 | 23,410 | 2026-07-03 | [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md) |
+| 207 | [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) | 本地运行、100+ LLM 支持的 AI 简历构建+职位匹配优化平台，核心特色 Resume Diff 审计 | 27,615 | 2026-07-03 | [srbhr-Resume-Matcher-深度调研.md](srbhr-Resume-Matcher-深度调研.md) |
 
 ---
 
@@ -319,7 +322,7 @@
 - [`OpenBMB/UltraRAG`](https://github.com/OpenBMB/UltraRAG) — [OpenBMB-UltraRAG-深度调研.md](OpenBMB-UltraRAG-深度调研.md)
 - [`allenai/olmocr`](https://github.com/allenai/olmocr) — [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md)
 
-### 开发工具 / CLI（9）
+### 开发工具 / CLI（12）
 
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
 - [`GLips/Figma-Context-MCP`](https://github.com/GLips/Figma-Context-MCP) — [GLips-Figma-Context-MCP-深度调研.md](GLips-Figma-Context-MCP-深度调研.md)
@@ -330,6 +333,8 @@
 - [`Stirling-Tools/Stirling-PDF`](https://github.com/Stirling-Tools/Stirling-PDF) — [Stirling-Tools-Stirling-PDF-深度调研.md](Stirling-Tools-Stirling-PDF-深度调研.md)
 - [`every-app/open-seo`](https://github.com/every-app/open-seo) — [every-app-open-seo-深度调研.md](every-app-open-seo-深度调研.md)
 - [`baidu/Unlimited-OCR`](https://github.com/baidu/Unlimited-OCR) — [baidu-Unlimited-OCR-深度调研.md](baidu-Unlimited-OCR-深度调研.md)
+- [`tw93/Pake`](https://github.com/tw93/Pake) — [tw93-Pake-深度调研.md](tw93-Pake-深度调研.md)
+- [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
 
 ### 前端 / 设计 / UI（7）
 
@@ -378,9 +383,10 @@
 - [`huggingface/agents-course`](https://github.com/huggingface/agents-course) — [huggingface-agents-course-深度调研.md](huggingface-agents-course-深度调研.md)
 - [`microsoft/AI-For-Beginners`](https://github.com/microsoft/AI-For-Beginners) — [microsoft-AI-For-Beginners-深度调研.md](microsoft-AI-For-Beginners-深度调研.md)
 
-### 其他（70）
+### 其他（72）
 
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
+- [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) — [srbhr-Resume-Matcher-深度调研.md](srbhr-Resume-Matcher-深度调研.md)
 - [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) — [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md)
 - [`accomplish-ai/coworker`](https://github.com/accomplish-ai/coworker) — [accomplish-ai-coworker-深度调研.md](accomplish-ai-coworker-深度调研.md)
 - [`ace-trump-tech/DeltaForce-OBS-Locker`](https://github.com/ace-trump-tech/DeltaForce-OBS-Locker) — [ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md](ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md)
