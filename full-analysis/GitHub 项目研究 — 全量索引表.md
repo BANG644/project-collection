@@ -156,6 +156,7 @@
 | 141 | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | 一、项目定位 | — | 2026-06-15 | [vercel-labs-agent-browser-深度调研.md](vercel-labs-agent-browser-深度调研.md) |
 | 142 | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | — | — | — | [VoltAgent-awesome-design-md-深度调研.md](VoltAgent-awesome-design-md-深度调研.md) |
 | 143 | [`vorpus/performativeUI`](https://github.com/vorpus/performativeUI) | — | — | 2026-06-07 | [vorpus-performativeUI-深度调研.md](vorpus-performativeUI-深度调研.md) |
+| 144 | [`viitor-ai/viitor-voice-nar`](https://github.com/viitor-ai/viitor-voice-nar) | 非自回归 TTS 语音克隆 + 局部编辑（DualCodec 25Hz + gRPC v2 微服务拆分），⚠️ 5 大红旗疑似刷星 | 240 | 2026-07-03 | [viitor-ai-viitor-voice-nar-深度调研.md](viitor-ai-viitor-voice-nar-深度调研.md) |
 | 144 | [`withastro/flue`](https://github.com/withastro/flue) | 沙箱 Agent 框架 | 5,498 | 2026-06-19 | [withastro-flue-深度调研.md](withastro-flue-深度调研.md) |
 | 145 | [`withkynam/vibecode-pro-max-kit`](https://github.com/withkynam/vibecode-pro-max-kit) | — | — | 2026-06-19 | [withkynam-vibecode-pro-max-kit-深度调研.md](withkynam-vibecode-pro-max-kit-深度调研.md) |
 | 146 | [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) | PaperSpine | — | 2026-05-17 | [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md) |
@@ -441,6 +442,7 @@
 - [`tensorflow/tensorflow`](https://github.com/tensorflow/tensorflow) — [tensorflow-tensorflow-深度调研.md](tensorflow-tensorflow-深度调研.md)
 - [`Tong89/smartNode`](https://github.com/Tong89/smartNode) — [Tong89-smartNode-深度调研.md](Tong89-smartNode-深度调研.md)
 - [`vorpus/performativeUI`](https://github.com/vorpus/performativeUI) — [vorpus-performativeUI-深度调研.md](vorpus-performativeUI-深度调研.md)
+- [`viitor-ai/viitor-voice-nar`](https://github.com/viitor-ai/viitor-voice-nar) — [viitor-ai-viitor-voice-nar-深度调研.md](viitor-ai-viitor-voice-nar-深度调研.md)
 - [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) — [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md)
 - [`wuji-labs/nopua`](https://github.com/wuji-labs/nopua) — [wuji-labs-nopua-深度调研.md](wuji-labs-nopua-深度调研.md)
 - [`xming521/WeClone`](https://github.com/xming521/WeClone) — [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md)

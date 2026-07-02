@@ -326,6 +326,7 @@ github-project-research/
 | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | [vercel-labs-agent-browser-深度调研.md](vercel-labs-agent-browser-深度调研.md) |
 | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | [VoltAgent-awesome-design-md-深度调研.md](VoltAgent-awesome-design-md-深度调研.md) |
 | [`vorpus/performativeUI`](https://github.com/vorpus/performativeUI) | [vorpus-performativeUI-深度调研.md](vorpus-performativeUI-深度调研.md) |
+| [`viitor-ai/viitor-voice-nar`](https://github.com/viitor-ai/viitor-voice-nar) | [viitor-ai-viitor-voice-nar-深度调研.md](viitor-ai-viitor-voice-nar-深度调研.md) |
 
 ### W（4 个）
 
@@ -463,6 +464,7 @@ github-project-research/
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
 - [`index-tts/index-tts`](https://github.com/index-tts/index-tts) — [index-tts-index-tts-深度调研.md](index-tts-index-tts-深度调研.md)
+- [`viitor-ai/viitor-voice-nar`](https://github.com/viitor-ai/viitor-voice-nar) — [viitor-ai-viitor-voice-nar-深度调研.md](viitor-ai-viitor-voice-nar-深度调研.md) (非自回归 TTS + 局部编辑)
 - [`jamiepine/voicebox`](https://github.com/jamiepine/voicebox) — [jamiepine-voicebox-深度调研.md](jamiepine-voicebox-深度调研.md)
 - [`Jane-xiaoer/xiaoer-videolab`](https://github.com/Jane-xiaoer/xiaoer-videolab) — [Jane-xiaoer-xiaoer-videolab-深度调研.md](Jane-xiaoer-xiaoer-videolab-深度调研.md)
 - [`lllyasviel/Fooocus`](https://github.com/lllyasviel/Fooocus) — [lllyasviel-Fooocus-深度调研.md](lllyasviel-Fooocus-深度调研.md)
@@ -547,6 +549,7 @@ github-project-research/
 - [`tensorflow/tensorflow`](https://github.com/tensorflow/tensorflow) — [tensorflow-tensorflow-深度调研.md](tensorflow-tensorflow-深度调研.md)
 - [`Tong89/smartNode`](https://github.com/Tong89/smartNode) — [Tong89-smartNode-深度调研.md](Tong89-smartNode-深度调研.md)
 - [`vorpus/performativeUI`](https://github.com/vorpus/performativeUI) — [vorpus-performativeUI-深度调研.md](vorpus-performativeUI-深度调研.md)
+- [`viitor-ai/viitor-voice-nar`](https://github.com/viitor-ai/viitor-voice-nar) — [viitor-ai-viitor-voice-nar-深度调研.md](viitor-ai-viitor-voice-nar-深度调研.md)
 - [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) — [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md)
 - [`wuji-labs/nopua`](https://github.com/wuji-labs/nopua) — [wuji-labs-nopua-深度调研.md](wuji-labs-nopua-深度调研.md)
 - [`xming521/WeClone`](https://github.com/xming521/WeClone) — [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md)
