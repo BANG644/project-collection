@@ -221,13 +221,16 @@
 | 205 | [`tw93/Pake`](https://github.com/tw93/Pake) | 一行命令把任意网页变成 <5MB 桌面应用的 Rust/Tauri CLI，No Electron 极轻量 | 59,019 | 2026-07-03 | [tw93-Pake-深度调研.md](tw93-Pake-深度调研.md) |
 | 206 | [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) | 通过 MCP 协议让任何 LLM 直接操控 Blender 建模的开源桥梁，集成 Rodin/Hunyuan3D 生成 | 23,410 | 2026-07-03 | [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md) |
 | 207 | [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) | 本地运行、100+ LLM 支持的 AI 简历构建+职位匹配优化平台，核心特色 Resume Diff 审计 | 27,615 | 2026-07-03 | [srbhr-Resume-Matcher-深度调研.md](srbhr-Resume-Matcher-深度调研.md) |
+| 208 | [`JuliusBrussee/caveman`](https://github.com/JuliusBrussee/caveman) | 🪨 Claude Code 穴居人 Token 压缩技能，削减 65% 输出 Token，支持 30+ 编程助手 | 80,667 | 2026-07-03 | [JuliusBrussee-caveman-深度调研.md](JuliusBrussee-caveman-深度调研.md) |
+| 209 | [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Google 官方 Chrome DevTools MCP 服务器，让 AI 代理控制和检查实时浏览器 | 45,057 | 2026-07-03 | [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md) |
+| 210 | [`openai/codex-plugin-cc`](https://github.com/openai/codex-plugin-cc) | OpenAI 官方 Claude Code↔Codex 桥接插件，审查代码+委派任务+会话转移 | 22,561 | 2026-07-03 | [openai-codex-plugin-cc-深度调研.md](openai-codex-plugin-cc-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（58）
+### AI Agent / 助手框架（59）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -287,6 +290,7 @@
 - [`refly-ai/refly`](https://github.com/refly-ai/refly) — [refly-ai-refly-深度调研.md](refly-ai-refly-深度调研.md)
 - [`TencentCloud/CubeSandbox`](https://github.com/TencentCloud/CubeSandbox) — [TencentCloud-CubeSandbox-深度调研.md](TencentCloud-CubeSandbox-深度调研.md)
 - [`ogulcancelik/herdr`](https://github.com/ogulcancelik/herdr) — [ogulcancelik-herdr-深度调研.md](ogulcancelik-herdr-深度调研.md)
+- [`openai/codex-plugin-cc`](https://github.com/openai/codex-plugin-cc) — [openai-codex-plugin-cc-深度调研.md](openai-codex-plugin-cc-深度调研.md)
 
 ### LLM / 推理框架（4） 🆕
 
@@ -295,7 +299,7 @@
 - [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) — [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 
-### AI 编码 / Skill 技能（12）
+### AI 编码 / Skill 技能（13）
 
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
 - [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) — [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md)
@@ -309,6 +313,7 @@
 - [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) — [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md)
 - [`anomalyco/opencode`](https://github.com/anomalyco/opencode) — [anomalyco-opencode-深度调研.md](anomalyco-opencode-深度调研.md)
 - [`DietrichGebert/ponytail`](https://github.com/DietrichGebert/ponytail) — [DietrichGebert-ponytail-深度调研.md](DietrichGebert-ponytail-深度调研.md)
+- [`JuliusBrussee/caveman`](https://github.com/JuliusBrussee/caveman) — [JuliusBrussee-caveman-深度调研.md](JuliusBrussee-caveman-深度调研.md)
 
 ### RAG / 知识库 / 记忆（9）
 
@@ -322,7 +327,7 @@
 - [`OpenBMB/UltraRAG`](https://github.com/OpenBMB/UltraRAG) — [OpenBMB-UltraRAG-深度调研.md](OpenBMB-UltraRAG-深度调研.md)
 - [`allenai/olmocr`](https://github.com/allenai/olmocr) — [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md)
 
-### 开发工具 / CLI（12）
+### 开发工具 / CLI（13）
 
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
 - [`GLips/Figma-Context-MCP`](https://github.com/GLips/Figma-Context-MCP) — [GLips-Figma-Context-MCP-深度调研.md](GLips-Figma-Context-MCP-深度调研.md)
@@ -335,6 +340,7 @@
 - [`baidu/Unlimited-OCR`](https://github.com/baidu/Unlimited-OCR) — [baidu-Unlimited-OCR-深度调研.md](baidu-Unlimited-OCR-深度调研.md)
 - [`tw93/Pake`](https://github.com/tw93/Pake) — [tw93-Pake-深度调研.md](tw93-Pake-深度调研.md)
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
+- [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) — [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md)
 
 ### 前端 / 设计 / UI（7）
 
