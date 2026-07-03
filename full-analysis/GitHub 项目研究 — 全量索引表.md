@@ -137,7 +137,8 @@
 | 121 | [`sapientinc/HRM-Text`](https://github.com/sapientinc/HRM-Text) | — | — | — | [sapientinc-HRM-Text-深度调研.md](sapientinc-HRM-Text-深度调研.md) |
 | 122 | [`searxng/searxng`](https://github.com/searxng/searxng) | — | 31,832 | 2026-06-10 | [searxng-searxng-深度调研.md](searxng-searxng-深度调研.md) |
 | 123 | [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) | Remove-MS-Edge | 2 | 2026-06-19 | [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md) |
-| 124 | [`shanraisshan/claude-code-best-practice`](https://github.com/shanraisshan/claude-code-best-practice) | 📘  — Claude Code 最佳实践指南 | 59,344 | 2026-06-24 | [shanraisshan-claude-code-best-practice-深度调研.md](shanraisshan-claude-code-best-practice-深度调研.md) |
+| 124 | [`safishamsi/graphify`](https://github.com/safishamsi/graphify) | AI 编程助手 Skill——把代码/文档/图片/视频建成可查询的知识图谱，77k⭐ | 77,003 | 2026-07-04 | [safishamsi-graphify-深度调研.md](safishamsi-graphify-深度调研.md) |
+| 125 | [`shanraisshan/claude-code-best-practice`](https://github.com/shanraisshan/claude-code-best-practice) | 📘  — Claude Code 最佳实践指南 | 59,344 | 2026-06-24 | [shanraisshan-claude-code-best-practice-深度调研.md](shanraisshan-claude-code-best-practice-深度调研.md) |
 | 125 | [`ShareX/ShareX`](https://github.com/ShareX/ShareX) | ShareX 是一款免费开源的屏幕截图、录屏和文件共享工具，单次按键即可完成捕获或录制，并支持上传到多种目标服务。📖 核心功能屏幕截图：区域/窗口/全屏/滚动截 | 38,060 | 2026-06-12 | [ShareX-ShareX-深度调研.md](ShareX-ShareX-深度调研.md) |
 | 126 | [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | GitHub Star 最多的项目（46.7 万⭐）——由 Sindre Sorhus 维护的「Awesome 列表之列表」，一个以人工审核为核心的质量索引体系 | 467,891 | 2026-05-05 | [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md) |
 | 127 | [`Sjj1024/PakePlus`](https://github.com/Sjj1024/PakePlus) | — | — | — | [Sjj1024-PakePlus-深度调研.md](Sjj1024-PakePlus-深度调研.md) |
@@ -306,13 +307,14 @@
 - [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) — [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 
-### AI 编码 / Skill 技能（13）
+### AI 编码 / Skill 技能（14）
 
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
 - [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) — [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md)
 - [`colbymchenry/codegraph`](https://github.com/colbymchenry/codegraph) — [colbymchenry-codegraph-深度调研.md](colbymchenry-codegraph-深度调研.md)
 - [`DeusData/codebase-memory-mcp`](https://github.com/DeusData/codebase-memory-mcp) — [DeusData-codebase-memory-mcp-深度调研.md](DeusData-codebase-memory-mcp-深度调研.md)
 - [`Doorman11991/smallcode`](https://github.com/Doorman11991/smallcode) — [Doorman11991-smallcode-深度调研.md](Doorman11991-smallcode-深度调研.md)
+- [`safishamsi/graphify`](https://github.com/safishamsi/graphify) — [safishamsi-graphify-深度调研.md](safishamsi-graphify-深度调研.md)
 - [`shanraisshan/claude-code-best-practice`](https://github.com/shanraisshan/claude-code-best-practice) — [shanraisshan-claude-code-best-practice-深度调研.md](shanraisshan-claude-code-best-practice-深度调研.md)
 - [`sybil-solutions/codex-shim`](https://github.com/sybil-solutions/codex-shim) — [sybil-solutions-codex-shim-深度调研.md](sybil-solutions-codex-shim-深度调研.md)
 - [`withkynam/vibecode-pro-max-kit`](https://github.com/withkynam/vibecode-pro-max-kit) — [withkynam-vibecode-pro-max-kit-深度调研.md](withkynam-vibecode-pro-max-kit-深度调研.md)
