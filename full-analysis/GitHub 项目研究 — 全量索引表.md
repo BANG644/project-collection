@@ -104,7 +104,8 @@
 | 89 | [`multica-ai/multica`](https://github.com/multica-ai/multica) | 一、项目定位 | — | 2026-06-15 | [multica-ai-multica-深度调研.md](multica-ai-multica-深度调研.md) |
 | 90 | [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill) | AI Agent 跨平台调研技能（Skill）——输入主题，自动搜索 Reddit、X、YouTube、HN、Polymarket、GitHub、TikTok、 | 40,990 | 2026-06-14 | [mvanhorn-last30days-skill-深度调研.md](mvanhorn-last30days-skill-深度调研.md) |
 | 91 | [`nexu-io/html-anything`](https://github.com/nexu-io/html-anything) | Agentic HTML 编辑器 | 7,009 | 2026-06-20 | [nexu-io-html-anything-深度调研.md](nexu-io-html-anything-深度调研.md) |
-| 92 | [`NoopApp/noop`](https://github.com/NoopApp/noop) | — | — | — | [NoopApp-noop-深度调研.md](NoopApp-noop-深度调研.md) |
+| 92 | [`nexu-io/open-design`](https://github.com/nexu-io/open-design) | The Vibe Design Workspace & open-source Claude Design alternative | 74,675 | 2026-07-03 | [nexu-io-open-design-深度调研.md](nexu-io-open-design-深度调研.md) |
+| 93 | [`NoopApp/noop`](https://github.com/NoopApp/noop) | — | — | — | [NoopApp-noop-深度调研.md](NoopApp-noop-深度调研.md) |
 | 93 | [`Normation/rudder`](https://github.com/Normation/rudder) | — | — | — | [Normation-rudder-深度调研.md](Normation-rudder-深度调研.md) |
 | 94 | [`NVIDIA/cosmos`](https://github.com/NVIDIA/cosmos) | NVIDIA 开源的全模态世界模型平台——MoT 双塔架构统一视觉推理、世界生成与动作预测，为 Physical AI 提供基础模型 | 10,733 | 2026-07-01 | [NVIDIA-cosmos-深度调研.md](NVIDIA-cosmos-深度调研.md) |
 | 95 | [`NVIDIA/SkillSpector`](https://github.com/NVIDIA/SkillSpector) | SkillSpector — AI Agent Skills Security Scanner (NVIDIA) | 8,602 | 2026-06-21 | [NVIDIA-SkillSpector-深度调研.md](NVIDIA-SkillSpector-深度调研.md) |
@@ -224,17 +225,23 @@
 | 208 | [`JuliusBrussee/caveman`](https://github.com/JuliusBrussee/caveman) | 🪨 Claude Code 穴居人 Token 压缩技能，削减 65% 输出 Token，支持 30+ 编程助手 | 80,667 | 2026-07-03 | [JuliusBrussee-caveman-深度调研.md](JuliusBrussee-caveman-深度调研.md) |
 | 209 | [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Google 官方 Chrome DevTools MCP 服务器，让 AI 代理控制和检查实时浏览器 | 45,057 | 2026-07-03 | [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md) |
 | 210 | [`openai/codex-plugin-cc`](https://github.com/openai/codex-plugin-cc) | OpenAI 官方 Claude Code↔Codex 桥接插件，审查代码+委派任务+会话转移 | 22,561 | 2026-07-03 | [openai-codex-plugin-cc-深度调研.md](openai-codex-plugin-cc-深度调研.md) |
+| 211 | [`nexu-io/open-design`](https://github.com/nexu-io/open-design) | Vibe Design Workspace & 开源 Claude Design 平替——本地优先 AI 设计工作流编排器，25 种 Agent 适配器 + 150+ DESIGN.md + 261 插件的结构化流程引擎 | 74,675 | 2026-07-04 | [nexu-io-open-design-深度调研.md](nexu-io-open-design-深度调研.md) |
+| 212 | [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) | 重新定义软件与 AI Agent 交互方式——HARNESS.md 方法论 + CLI-Hub 托管平台，让任意软件零改代码成为 Agent 原生 | 44,666 | 2026-07-04 | [HKUDS-CLI-Anything-深度调研.md](HKUDS-CLI-Anything-深度调研.md) |
+| 213 | [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) | 首个为 AI Agent 设计的全功能 Office 套件——单二进制操作 Word/Excel/PPT，含 HTML 渲染引擎实现 render→look→fix 闭环 | 8,342 | 2026-07-04 | [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（59）
+### AI Agent / 助手框架（61）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
 - [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) — [addyosmani-agent-skills-深度调研.md](addyosmani-agent-skills-深度调研.md)
+- [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) — [HKUDS-CLI-Anything-深度调研.md](HKUDS-CLI-Anything-深度调研.md)
+- [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) — [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md)
+
 - [`amap-demo/amap-sdk-skills`](https://github.com/amap-demo/amap-sdk-skills) — [amap-demo-amap-sdk-skills-深度调研.md](amap-demo-amap-sdk-skills-深度调研.md)
 - [`amElnagdy/guard-skills`](https://github.com/amElnagdy/guard-skills) — [amElnagdy-guard-skills-深度调研.md](amElnagdy-guard-skills-深度调研.md)
 - [`anthropics/skills`](https://github.com/anthropics/skills) — [anthropics-skills-深度调研.md](anthropics-skills-深度调研.md)
@@ -342,13 +349,14 @@
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
 - [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) — [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md)
 
-### 前端 / 设计 / UI（7）
+### 前端 / 设计 / UI（9）
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
 - [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) — [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md)
 - [`excalidraw/excalidraw`](https://github.com/excalidraw/excalidraw) — [excalidraw-excalidraw-深度调研.md](excalidraw-excalidraw-深度调研.md)
 - [`github.com/penpot`](https://github.com/penpot) — [github.com-penpot-深度调研.md](github.com-penpot-深度调研.md)
 - [`JimLiu/baoyu-design`](https://github.com/JimLiu/baoyu-design) — [JimLiu-baoyu-design-深度调研.md](JimLiu-baoyu-design-深度调研.md)
+- [`nexu-io/open-design`](https://github.com/nexu-io/open-design) — [nexu-io-open-design-深度调研.md](nexu-io-open-design-深度调研.md)
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
 - [`facebook/astryx`](https://github.com/facebook/astryx) — [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md)
 
