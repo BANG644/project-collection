@@ -229,6 +229,9 @@
 | 211 | [`nexu-io/open-design`](https://github.com/nexu-io/open-design) | Vibe Design Workspace & 开源 Claude Design 平替——本地优先 AI 设计工作流编排器，25 种 Agent 适配器 + 150+ DESIGN.md + 261 插件的结构化流程引擎 | 74,675 | 2026-07-04 | [nexu-io-open-design-深度调研.md](nexu-io-open-design-深度调研.md) |
 | 212 | [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) | 重新定义软件与 AI Agent 交互方式——HARNESS.md 方法论 + CLI-Hub 托管平台，让任意软件零改代码成为 Agent 原生 | 44,666 | 2026-07-04 | [HKUDS-CLI-Anything-深度调研.md](HKUDS-CLI-Anything-深度调研.md) |
 | 213 | [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) | 首个为 AI Agent 设计的全功能 Office 套件——单二进制操作 Word/Excel/PPT，含 HTML 渲染引擎实现 render→look→fix 闭环 | 8,342 | 2026-07-04 | [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md) |
+| 214 | [`safishamsi/graphify`](https://github.com/safishamsi/graphify) | AI 编程助手的知识图谱编译器——AST+LLM 双通道提取，71.5x Token 压缩，15+ 编程助手 Skill 跨平台运行 | 77,000 | 2026-07-04 | [safishamsi-graphify-深度调研.md](safishamsi-graphify-深度调研.md) |
+| 215 | [`agentskills/agentskills`](https://github.com/agentskills/agentskills) | Agent Skills 开放标准——Anthropic+OpenAI 联合背书，39+ 产品支持，跨平台 SKILL.md 规范，三层渐进式暴露 | 21,954 | 2026-07-04 | [agentskills-agentskills-深度调研.md](agentskills-agentskills-深度调研.md) |
+| 216 | [`harvard-edge/cs249r_book`](https://github.com/harvard-edge/cs249r_book) | 哈佛 CS249r 开源教科书——《Machine Learning Systems》从系统级视角构建/优化/部署 AI，TinyTorch 手搓框架+四件套学习栈 | 26,108 | 2026-07-04 | [harvard-edge-cs249r_book-深度调研.md](harvard-edge-cs249r_book-深度调研.md) |
 
 ---
 
