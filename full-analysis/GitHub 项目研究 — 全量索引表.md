@@ -232,6 +232,9 @@
 | 214 | [`safishamsi/graphify`](https://github.com/safishamsi/graphify) | AI 编程助手的知识图谱编译器——AST+LLM 双通道提取，71.5x Token 压缩，15+ 编程助手 Skill 跨平台运行 | 77,000 | 2026-07-04 | [safishamsi-graphify-深度调研.md](safishamsi-graphify-深度调研.md) |
 | 215 | [`agentskills/agentskills`](https://github.com/agentskills/agentskills) | Agent Skills 开放标准——Anthropic+OpenAI 联合背书，39+ 产品支持，跨平台 SKILL.md 规范，三层渐进式暴露 | 21,954 | 2026-07-04 | [agentskills-agentskills-深度调研.md](agentskills-agentskills-深度调研.md) |
 | 216 | [`harvard-edge/cs249r_book`](https://github.com/harvard-edge/cs249r_book) | 哈佛 CS249r 开源教科书——《Machine Learning Systems》从系统级视角构建/优化/部署 AI，TinyTorch 手搓框架+四件套学习栈 | 26,108 | 2026-07-04 | [harvard-edge-cs249r_book-深度调研.md](harvard-edge-cs249r_book-深度调研.md) |
+| 217 | [`jgm/pandoc`](https://github.com/jgm/pandoc) | 通用文档转换器——纯 Haskell 实现，AST 中间表示+嵌入式 Lua+Lua 过滤器生态，支持 60+ 格式互转，200 万行测试保障 | 45,217 | 2026-07-05 | [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md) |
+| 218 | [`lllyasviel/stable-diffusion-webui-forge`](https://github.com/lllyasviel/stable-diffusion-webui-forge) | A1111 的速度优化 Fork——内存管理革命+UnetPatcher 注入+原生 Flux 支持，存量 WebUI 用户的自然升级路径 | 12,795 | 2026-07-05 | [lllyasviel-stable-diffusion-webui-forge-深度调研.md](lllyasviel-stable-diffusion-webui-forge-深度调研.md) |
+| 219 | [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) | Windows 程序自定义引擎——三层分离架构（引擎注入+Mod 加载器+VSCode 市场），混合注入策略+MinHook 定制+UWP 兼容 | 8,281 | 2026-07-05 | [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md) |
 
 ---
 
@@ -354,6 +357,10 @@
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
 - [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) — [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md)
 
+### 文档 / 文档工具（1） 🆕
+
+- [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
+
 ### 前端 / 设计 / UI（9）
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
@@ -365,7 +372,7 @@
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
 - [`facebook/astryx`](https://github.com/facebook/astryx) — [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md)
 
-### 视频 / 音频 / 多媒体（11）
+### 视频 / 音频 / 多媒体（12）
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
 - [`index-tts/index-tts`](https://github.com/index-tts/index-tts) — [index-tts-index-tts-深度调研.md](index-tts-index-tts-深度调研.md)
@@ -378,18 +385,20 @@
 - [`browser-use/video-use`](https://github.com/browser-use/video-use) — [browser-use-video-use-深度调研.md](browser-use-video-use-深度调研.md)
 - [`3b1b/manim`](https://github.com/3b1b/manim) — [3b1b-manim-深度调研.md](3b1b-manim-深度调研.md)
 - [`ATH-MaaS/Pixelle-Video`](https://github.com/ATH-MaaS/Pixelle-Video) — [ATH-MaaS-Pixelle-Video-深度调研.md](ATH-MaaS-Pixelle-Video-深度调研.md)
+- [`lllyasviel/stable-diffusion-webui-forge`](https://github.com/lllyasviel/stable-diffusion-webui-forge) — [lllyasviel-stable-diffusion-webui-forge-深度调研.md](lllyasviel-stable-diffusion-webui-forge-深度调研.md)
 
 ### 计算机视觉 / CV（1） 🆕
 
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 
-### 安全 / 运维 / 系统工具（6）
+### 安全 / 运维 / 系统工具（7）
 
 - [`Raphire/Win11Debloat`](https://github.com/Raphire/Win11Debloat) — [Raphire-Win11Debloat-深度调研.md](Raphire-Win11Debloat-深度调研.md)
 - [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) — [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md)
 - [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) — [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md)
 - [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) — [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md)
 - [`usestrix/strix`](https://github.com/usestrix/strix) — [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md)
+- [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) — [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md)
 
 ### 学习资料 / 方法论（8）
 
