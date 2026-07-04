@@ -235,17 +235,22 @@
 | 217 | [`jgm/pandoc`](https://github.com/jgm/pandoc) | 通用文档转换器——纯 Haskell 实现，AST 中间表示+嵌入式 Lua+Lua 过滤器生态，支持 60+ 格式互转，200 万行测试保障 | 45,217 | 2026-07-05 | [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md) |
 | 218 | [`lllyasviel/stable-diffusion-webui-forge`](https://github.com/lllyasviel/stable-diffusion-webui-forge) | A1111 的速度优化 Fork——内存管理革命+UnetPatcher 注入+原生 Flux 支持，存量 WebUI 用户的自然升级路径 | 12,795 | 2026-07-05 | [lllyasviel-stable-diffusion-webui-forge-深度调研.md](lllyasviel-stable-diffusion-webui-forge-深度调研.md) |
 | 219 | [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) | Windows 程序自定义引擎——三层分离架构（引擎注入+Mod 加载器+VSCode 市场），混合注入策略+MinHook 定制+UWP 兼容 | 8,281 | 2026-07-05 | [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md) |
+| 220 | [`immich-app/immich`](https://github.com/immich-app/immich) | 自托管 Google Photos 开源替代——高性能照片/视频管理，微服务架构+NestJS+Flutter+本地AI全栈覆盖 | 105,566 | 2026-07-05 | [immich-app-immich-深度调研.md](immich-app-immich-深度调研.md) |
+| 221 | [`alibaba/page-agent`](https://github.com/alibaba/page-agent) | JavaScript 页内 GUI Agent——一行脚本注入网页，自然语言操控 Web 界面，纯 JS 无需浏览器扩展 | 23,020 | 2026-07-05 | [alibaba-page-agent-深度调研.md](alibaba-page-agent-深度调研.md) |
+| 222 | [`Zackriya-Solutions/meetily`](https://github.com/Zackriya-Solutions/meetily) | 隐私优先的 AI 会议助手——Rust+Tauri 底座，100% 本地运行，Parakeet 4x 转写加速，无需云服务 | 15,069 | 2026-07-05 | [Zackriya-Solutions-meetily-深度调研.md](Zackriya-Solutions-meetily-深度调研.md) |
+| 223 | [`logto-io/logto`](https://github.com/logto-io/logto) | 面向 SaaS 和 AI Agent 的现代化开源认证基础设施——OIDC/OAuth 2.1，SOC2/HIPAA 合规，50K MAU 免费 | 13,709 | 2026-07-05 | [logto-io-logto-深度调研.md](logto-io-logto-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（61）
+### AI Agent / 助手框架（63）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
 - [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) — [addyosmani-agent-skills-深度调研.md](addyosmani-agent-skills-深度调研.md)
+- [`alibaba/page-agent`](https://github.com/alibaba/page-agent) — [alibaba-page-agent-深度调研.md](alibaba-page-agent-深度调研.md)
 - [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) — [HKUDS-CLI-Anything-深度调研.md](HKUDS-CLI-Anything-深度调研.md)
 - [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) — [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md)
 
@@ -305,6 +310,7 @@
 - [`TencentCloud/CubeSandbox`](https://github.com/TencentCloud/CubeSandbox) — [TencentCloud-CubeSandbox-深度调研.md](TencentCloud-CubeSandbox-深度调研.md)
 - [`ogulcancelik/herdr`](https://github.com/ogulcancelik/herdr) — [ogulcancelik-herdr-深度调研.md](ogulcancelik-herdr-深度调研.md)
 - [`openai/codex-plugin-cc`](https://github.com/openai/codex-plugin-cc) — [openai-codex-plugin-cc-深度调研.md](openai-codex-plugin-cc-深度调研.md)
+- [`Zackriya-Solutions/meetily`](https://github.com/Zackriya-Solutions/meetily) — [Zackriya-Solutions-meetily-深度调研.md](Zackriya-Solutions-meetily-深度调研.md)
 
 ### LLM / 推理框架（4） 🆕
 
@@ -342,7 +348,7 @@
 - [`OpenBMB/UltraRAG`](https://github.com/OpenBMB/UltraRAG) — [OpenBMB-UltraRAG-深度调研.md](OpenBMB-UltraRAG-深度调研.md)
 - [`allenai/olmocr`](https://github.com/allenai/olmocr) — [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md)
 
-### 开发工具 / CLI（13）
+### 开发工具 / CLI（14）
 
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
 - [`GLips/Figma-Context-MCP`](https://github.com/GLips/Figma-Context-MCP) — [GLips-Figma-Context-MCP-深度调研.md](GLips-Figma-Context-MCP-深度调研.md)
@@ -356,6 +362,7 @@
 - [`tw93/Pake`](https://github.com/tw93/Pake) — [tw93-Pake-深度调研.md](tw93-Pake-深度调研.md)
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
 - [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) — [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md)
+- [`logto-io/logto`](https://github.com/logto-io/logto) — [logto-io-logto-深度调研.md](logto-io-logto-深度调研.md)
 
 ### 文档 / 文档工具（1） 🆕
 
@@ -372,9 +379,10 @@
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
 - [`facebook/astryx`](https://github.com/facebook/astryx) — [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md)
 
-### 视频 / 音频 / 多媒体（12）
+### 视频 / 音频 / 多媒体（13）
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
+- [`immich-app/immich`](https://github.com/immich-app/immich) — [immich-app-immich-深度调研.md](immich-app-immich-深度调研.md)
 - [`index-tts/index-tts`](https://github.com/index-tts/index-tts) — [index-tts-index-tts-深度调研.md](index-tts-index-tts-深度调研.md)
 - [`jamiepine/voicebox`](https://github.com/jamiepine/voicebox) — [jamiepine-voicebox-深度调研.md](jamiepine-voicebox-深度调研.md)
 - [`Jane-xiaoer/xiaoer-videolab`](https://github.com/Jane-xiaoer/xiaoer-videolab) — [Jane-xiaoer-xiaoer-videolab-深度调研.md](Jane-xiaoer-xiaoer-videolab-深度调研.md)
