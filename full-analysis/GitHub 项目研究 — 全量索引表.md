@@ -239,13 +239,17 @@
 | 221 | [`alibaba/page-agent`](https://github.com/alibaba/page-agent) | JavaScript 页内 GUI Agent——一行脚本注入网页，自然语言操控 Web 界面，纯 JS 无需浏览器扩展 | 23,020 | 2026-07-05 | [alibaba-page-agent-深度调研.md](alibaba-page-agent-深度调研.md) |
 | 222 | [`Zackriya-Solutions/meetily`](https://github.com/Zackriya-Solutions/meetily) | 隐私优先的 AI 会议助手——Rust+Tauri 底座，100% 本地运行，Parakeet 4x 转写加速，无需云服务 | 15,069 | 2026-07-05 | [Zackriya-Solutions-meetily-深度调研.md](Zackriya-Solutions-meetily-深度调研.md) |
 | 223 | [`logto-io/logto`](https://github.com/logto-io/logto) | 面向 SaaS 和 AI Agent 的现代化开源认证基础设施——OIDC/OAuth 2.1，SOC2/HIPAA 合规，50K MAU 免费 | 13,709 | 2026-07-05 | [logto-io-logto-深度调研.md](logto-io-logto-深度调研.md) |
+| 224 | [`asgeirtj/system_prompts_leaks`](https://github.com/asgeirtj/system_prompts_leaks) | 全球最大 AI 系统提示词泄露合集——50+ 主流 AI 产品的底层 System Prompt 定期公开，曾获《华盛顿邮报》报道 | 49,819 | 2026-07-06 | [asgeirtj-system_prompts_leaks-深度调研.md](asgeirtj-system_prompts_leaks-深度调研.md) |
+| 225 | [`coreyhaines31/marketingskills`](https://github.com/coreyhaines31/marketingskills) | 45+ 营销 Agent Skill 集——CRO/文案/SEO/分析/增长工程全链路，跨 Claude Code/Codex/Cursor | 36,374 | 2026-07-06 | [coreyhaines31-marketingskills-深度调研.md](coreyhaines31-marketingskills-深度调研.md) |
+| 226 | [`alirezarezvani/claude-skills`](https://github.com/alirezarezvani/claude-skills) | 354 个跨平台 Agent Skill 合集——18 领域、13 个 AI 编码工具、593 个零依赖 Python CLI | 20,488 | 2026-07-06 | [alirezarezvani-claude-skills-深度调研.md](alirezarezvani-claude-skills-深度调研.md) |
+| 227 | [`gastownhall/gastown`](https://github.com/gastownhall/gastown) | Steve Yegge 多 Agent 工作区管理器——Mayor/Deacon/Polecat 六角色 + Git 原生状态持久化 | 16,342 | 2026-07-06 | [gastownhall-gastown-深度调研.md](gastownhall-gastown-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（63）
+### AI Agent / 助手框架（67）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -254,17 +258,22 @@
 - [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) — [HKUDS-CLI-Anything-深度调研.md](HKUDS-CLI-Anything-深度调研.md)
 - [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) — [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md)
 
+- [`alirezarezvani/claude-skills`](https://github.com/alirezarezvani/claude-skills) — [alirezarezvani-claude-skills-深度调研.md](alirezarezvani-claude-skills-深度调研.md)
+
 - [`amap-demo/amap-sdk-skills`](https://github.com/amap-demo/amap-sdk-skills) — [amap-demo-amap-sdk-skills-深度调研.md](amap-demo-amap-sdk-skills-深度调研.md)
 - [`amElnagdy/guard-skills`](https://github.com/amElnagdy/guard-skills) — [amElnagdy-guard-skills-深度调研.md](amElnagdy-guard-skills-深度调研.md)
+- [`asgeirtj/system_prompts_leaks`](https://github.com/asgeirtj/system_prompts_leaks) — [asgeirtj-system_prompts_leaks-深度调研.md](asgeirtj-system_prompts_leaks-深度调研.md)
 - [`anthropics/skills`](https://github.com/anthropics/skills) — [anthropics-skills-深度调研.md](anthropics-skills-深度调研.md)
 - [`BANG644/ai-workflow-optimizer`](https://github.com/BANG644/ai-workflow-optimizer) — [BANG644-ai-workflow-optimizer-深度调研.md](BANG644-ai-workflow-optimizer-深度调研.md)
 - [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) — [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md)
 - [`chopratejas/headroom`](https://github.com/chopratejas/headroom) — [chopratejas-headroom-深度调研.md](chopratejas-headroom-深度调研.md)
 - [`cloudflare/security-audit-skill`](https://github.com/cloudflare/security-audit-skill) — [cloudflare-security-audit-skill-深度调研.md](cloudflare-security-audit-skill-深度调研.md)
 - [`CopilotKit/CopilotKit`](https://github.com/CopilotKit/CopilotKit) — [CopilotKit-CopilotKit-深度调研.md](CopilotKit-CopilotKit-深度调研.md)
+- [`coreyhaines31/marketingskills`](https://github.com/coreyhaines31/marketingskills) — [coreyhaines31-marketingskills-深度调研.md](coreyhaines31-marketingskills-深度调研.md)
 - [`datawhalechina/Agent-Learning-Hub`](https://github.com/datawhalechina/Agent-Learning-Hub) — [datawhalechina-Agent-Learning-Hub-深度调研.md](datawhalechina-Agent-Learning-Hub-深度调研.md)
 - [`firecrawl/firecrawl`](https://github.com/firecrawl/firecrawl) — [firecrawl-firecrawl-深度调研.md](firecrawl-firecrawl-深度调研.md)
 - [`Forsy-AI/agent-apprenticeship`](https://github.com/Forsy-AI/agent-apprenticeship) — [Forsy-AI-agent-apprenticeship-深度调研.md](Forsy-AI-agent-apprenticeship-深度调研.md)
+- [`gastownhall/gastown`](https://github.com/gastownhall/gastown) — [gastownhall-gastown-深度调研.md](gastownhall-gastown-深度调研.md)
 - [`github.com/BuilderIO`](https://github.com/BuilderIO) — [github.com-BuilderIO-深度调研.md](github.com-BuilderIO-深度调研.md)
 - [`hanshuaikang/nezha`](https://github.com/hanshuaikang/nezha) — [hanshuaikang-nezha-深度调研.md](hanshuaikang-nezha-深度调研.md)
 - [`KKKKhazix/khazix-skills`](https://github.com/KKKKhazix/khazix-skills) — [KKKKhazix-khazix-skills-深度调研.md](KKKKhazix-khazix-skills-深度调研.md)
