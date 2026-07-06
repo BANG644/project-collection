@@ -246,6 +246,10 @@
 | 228 | [`affaan-m/ECC`](https://github.com/affaan-m/ECC) | Agent Harness 性能优化系统——六大组件柱+跨 7 个 Harness 适配层+持续学习系统+商业化开源并行 | 226,635 | 2026-07-07 | [affaan-m-ECC-深度调研.md](affaan-m-ECC-深度调研.md) |
 | 229 | [`shareAI-lab/learn-claude-code`](https://github.com/shareAI-lab/learn-claude-code) | "Bash is all you need"——从 0 到 1 构建 Agent Harness 的 20 步渐进式教学项目，3 个依赖，70K Stars | 70,067 | 2026-07-07 | [shareAI-lab-learn-claude-code-深度调研.md](shareAI-lab-learn-claude-code-深度调研.md) |
 | 230 | [`earendil-works/pi`](https://github.com/earendil-works/pi) | 可自定义终端 AI Coding Agent——libGDX 创始人打造，4 层抽象+20+LLM 提供商+树状 Session+TUI 框架 | 68,098 | 2026-07-07 | [earendil-works-pi-深度调研.md](earendil-works-pi-深度调研.md) |
+| 231 | [`karakeep-app/karakeep`](https://github.com/karakeep-app/karakeep) | 自托管"收藏一切"应用——链接/笔记/图片/PDF/视频全支持，AI 自动标签+Meilisearch 全文搜索+多端覆盖+Agent Skills | 26,838 | 2026-07-07 | [karakeep-app-karakeep-深度调研.md](karakeep-app-karakeep-深度调研.md) |
+| 232 | [`alibaba/zvec`](https://github.com/alibaba/zvec) | 阿里巴巴开源进程内向量数据库——"SQLite of vector search"，pip install 即用，HNSW+DiskANN+FTS+Hybrid Search | 13,437 | 2026-07-07 | [alibaba-zvec-深度调研.md](alibaba-zvec-深度调研.md) |
+| 233 | [`steipete/CodexBar`](https://github.com/steipete/CodexBar) | macOS 菜单栏 AI 编程额度监控——57+ Provider 全覆盖，隐私优先，CLI+GUI 双模，生态辐射 Windows/Linux | 16,696 | 2026-07-07 | [steipete-CodexBar-深度调研.md](steipete-CodexBar-深度调研.md) |
+| 234 | [`bradautomates/claude-video`](https://github.com/bradautomates/claude-video) | Agent Skill——给 Claude Code/Codex 等 50+ 代理装上视频理解能力，下载/抽帧/字幕/场景感知，多级降级策略 | 4,137 | 2026-07-07 | [bradautomates-claude-video-深度调研.md](bradautomates-claude-video-深度调研.md) |
 
 ---
 
