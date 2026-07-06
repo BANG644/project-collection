@@ -243,17 +243,21 @@
 | 225 | [`coreyhaines31/marketingskills`](https://github.com/coreyhaines31/marketingskills) | 45+ 营销 Agent Skill 集——CRO/文案/SEO/分析/增长工程全链路，跨 Claude Code/Codex/Cursor | 36,374 | 2026-07-06 | [coreyhaines31-marketingskills-深度调研.md](coreyhaines31-marketingskills-深度调研.md) |
 | 226 | [`alirezarezvani/claude-skills`](https://github.com/alirezarezvani/claude-skills) | 354 个跨平台 Agent Skill 合集——18 领域、13 个 AI 编码工具、593 个零依赖 Python CLI | 20,488 | 2026-07-06 | [alirezarezvani-claude-skills-深度调研.md](alirezarezvani-claude-skills-深度调研.md) |
 | 227 | [`gastownhall/gastown`](https://github.com/gastownhall/gastown) | Steve Yegge 多 Agent 工作区管理器——Mayor/Deacon/Polecat 六角色 + Git 原生状态持久化 | 16,342 | 2026-07-06 | [gastownhall-gastown-深度调研.md](gastownhall-gastown-深度调研.md) |
+| 228 | [`affaan-m/ECC`](https://github.com/affaan-m/ECC) | Agent Harness 性能优化系统——六大组件柱+跨 7 个 Harness 适配层+持续学习系统+商业化开源并行 | 226,635 | 2026-07-07 | [affaan-m-ECC-深度调研.md](affaan-m-ECC-深度调研.md) |
+| 229 | [`shareAI-lab/learn-claude-code`](https://github.com/shareAI-lab/learn-claude-code) | "Bash is all you need"——从 0 到 1 构建 Agent Harness 的 20 步渐进式教学项目，3 个依赖，70K Stars | 70,067 | 2026-07-07 | [shareAI-lab-learn-claude-code-深度调研.md](shareAI-lab-learn-claude-code-深度调研.md) |
+| 230 | [`earendil-works/pi`](https://github.com/earendil-works/pi) | 可自定义终端 AI Coding Agent——libGDX 创始人打造，4 层抽象+20+LLM 提供商+树状 Session+TUI 框架 | 68,098 | 2026-07-07 | [earendil-works-pi-深度调研.md](earendil-works-pi-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（67）
+### AI Agent / 助手框架（70）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
 - [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) — [addyosmani-agent-skills-深度调研.md](addyosmani-agent-skills-深度调研.md)
+- [`affaan-m/ECC`](https://github.com/affaan-m/ECC) — [affaan-m-ECC-深度调研.md](affaan-m-ECC-深度调研.md)
 - [`alibaba/page-agent`](https://github.com/alibaba/page-agent) — [alibaba-page-agent-深度调研.md](alibaba-page-agent-深度调研.md)
 - [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) — [HKUDS-CLI-Anything-深度调研.md](HKUDS-CLI-Anything-深度调研.md)
 - [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) — [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md)
@@ -315,11 +319,13 @@
 - [`headroomlabs-ai/headroom`](https://github.com/headroomlabs-ai/headroom) — [headroomlabs-ai-headroom-深度调研.md](headroomlabs-ai-headroom-深度调研.md)
 - [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) — [interviewstreet-hiring-agent-深度调研.md](interviewstreet-hiring-agent-深度调研.md)
 - [`diegosouzapw/OmniRoute`](https://github.com/diegosouzapw/OmniRoute) — [diegosouzapw-OmniRoute-深度调研.md](diegosouzapw-OmniRoute-深度调研.md)
+- [`earendil-works/pi`](https://github.com/earendil-works/pi) — [earendil-works-pi-深度调研.md](earendil-works-pi-深度调研.md)
 - [`refly-ai/refly`](https://github.com/refly-ai/refly) — [refly-ai-refly-深度调研.md](refly-ai-refly-深度调研.md)
 - [`TencentCloud/CubeSandbox`](https://github.com/TencentCloud/CubeSandbox) — [TencentCloud-CubeSandbox-深度调研.md](TencentCloud-CubeSandbox-深度调研.md)
 - [`ogulcancelik/herdr`](https://github.com/ogulcancelik/herdr) — [ogulcancelik-herdr-深度调研.md](ogulcancelik-herdr-深度调研.md)
 - [`openai/codex-plugin-cc`](https://github.com/openai/codex-plugin-cc) — [openai-codex-plugin-cc-深度调研.md](openai-codex-plugin-cc-深度调研.md)
 - [`Zackriya-Solutions/meetily`](https://github.com/Zackriya-Solutions/meetily) — [Zackriya-Solutions-meetily-深度调研.md](Zackriya-Solutions-meetily-深度调研.md)
+- [`shareAI-lab/learn-claude-code`](https://github.com/shareAI-lab/learn-claude-code) — [shareAI-lab-learn-claude-code-深度调研.md](shareAI-lab-learn-claude-code-深度调研.md)
 
 ### LLM / 推理框架（4） 🆕
 
