@@ -252,7 +252,10 @@
 | 234 | [`bradautomates/claude-video`](https://github.com/bradautomates/claude-video) | Agent Skill——给 Claude Code/Codex 等 50+ 代理装上视频理解能力，下载/抽帧/字幕/场景感知，多级降级策略 | 4,137 | 2026-07-07 | [bradautomates-claude-video-深度调研.md](bradautomates-claude-video-深度调研.md) |
 | 235 | [`ollama/ollama`](https://github.com/ollama/ollama) | LLM 界的 Docker——本地运行大模型的"一键部署"标准，Go+C/C++ 双引擎，Modelfile 生态 | 175,666 | 2026-07-08 | [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md) |
 | 236 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | Fair-code AI 原生工作流自动化平台——开源 Zapier + AI Agent 编排层，400+ 集成，视觉+代码双模 | 195,555 | 2026-07-08 | [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md) |
-| 237 | [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) | 全网最全 Nano Banana Pro 提示词案例库——986+ 案例，Gemini 3 Pro Image 画廊，GitHub Pages 零后端 | 794 | 2026-07-08 | [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md) |
+| 237 |
+| 238 | [](https://github.com/MadsLorentzen/ai-job-search) | AI 全流程求职自动化框架——Claude Code 工作流，Drafter-Reviewer 双 Agent 质检 + LaTeX 原生 + ATS 审计 | 10,384 | 2026-07-08 | [MadsLorentzen-ai-job-search-深度调研.md](MadsLorentzen-ai-job-search-深度调研.md) |
+| 239 | [](https://github.com/kyutai-labs/pocket-tts) | CPU 原生轻量 TTS（100M 参数）——pip install 即用，CALM 潜空间 LM 架构，6x 实时，声音克隆 + 多语言 | 6,078 | 2026-07-08 | [kyutai-labs-pocket-tts-深度调研.md](kyutai-labs-pocket-tts-深度调研.md) |
+| 240 | [](https://github.com/dotnet/skills) | 微软 .NET 官方 AI 编程代理技能集——15 个专项 Plugin 覆盖 .NET 全栈，skill-validator + Dashboard 企业级质量 | 4,274 | 2026-07-08 | [dotnet-skills-深度调研.md](dotnet-skills-深度调研.md) | [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) | 全网最全 Nano Banana Pro 提示词案例库——986+ 案例，Gemini 3 Pro Image 画廊，GitHub Pages 零后端 | 794 | 2026-07-08 | [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md) |
 
 ---
 
