@@ -250,6 +250,9 @@
 | 232 | [`alibaba/zvec`](https://github.com/alibaba/zvec) | 阿里巴巴开源进程内向量数据库——"SQLite of vector search"，pip install 即用，HNSW+DiskANN+FTS+Hybrid Search | 13,437 | 2026-07-07 | [alibaba-zvec-深度调研.md](alibaba-zvec-深度调研.md) |
 | 233 | [`steipete/CodexBar`](https://github.com/steipete/CodexBar) | macOS 菜单栏 AI 编程额度监控——57+ Provider 全覆盖，隐私优先，CLI+GUI 双模，生态辐射 Windows/Linux | 16,696 | 2026-07-07 | [steipete-CodexBar-深度调研.md](steipete-CodexBar-深度调研.md) |
 | 234 | [`bradautomates/claude-video`](https://github.com/bradautomates/claude-video) | Agent Skill——给 Claude Code/Codex 等 50+ 代理装上视频理解能力，下载/抽帧/字幕/场景感知，多级降级策略 | 4,137 | 2026-07-07 | [bradautomates-claude-video-深度调研.md](bradautomates-claude-video-深度调研.md) |
+| 235 | [`ollama/ollama`](https://github.com/ollama/ollama) | LLM 界的 Docker——本地运行大模型的"一键部署"标准，Go+C/C++ 双引擎，Modelfile 生态 | 175,666 | 2026-07-08 | [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md) |
+| 236 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | Fair-code AI 原生工作流自动化平台——开源 Zapier + AI Agent 编排层，400+ 集成，视觉+代码双模 | 195,555 | 2026-07-08 | [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md) |
+| 237 | [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) | 全网最全 Nano Banana Pro 提示词案例库——986+ 案例，Gemini 3 Pro Image 画廊，GitHub Pages 零后端 | 794 | 2026-07-08 | [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md) |
 
 ---
 
@@ -387,7 +390,7 @@
 
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 
-### 前端 / 设计 / UI（9）
+### 前端 / 设计 / UI（10）
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
 - [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) — [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md)
@@ -397,6 +400,7 @@
 - [`nexu-io/open-design`](https://github.com/nexu-io/open-design) — [nexu-io-open-design-深度调研.md](nexu-io-open-design-深度调研.md)
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
 - [`facebook/astryx`](https://github.com/facebook/astryx) — [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md)
+- [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) — [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md)
 
 ### 视频 / 音频 / 多媒体（13）
 
