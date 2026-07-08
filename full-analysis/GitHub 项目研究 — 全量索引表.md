@@ -252,17 +252,20 @@
 | 234 | [`bradautomates/claude-video`](https://github.com/bradautomates/claude-video) | Agent Skill——给 Claude Code/Codex 等 50+ 代理装上视频理解能力，下载/抽帧/字幕/场景感知，多级降级策略 | 4,137 | 2026-07-07 | [bradautomates-claude-video-深度调研.md](bradautomates-claude-video-深度调研.md) |
 | 235 | [`ollama/ollama`](https://github.com/ollama/ollama) | LLM 界的 Docker——本地运行大模型的"一键部署"标准，Go+C/C++ 双引擎，Modelfile 生态 | 175,666 | 2026-07-08 | [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md) |
 | 236 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | Fair-code AI 原生工作流自动化平台——开源 Zapier + AI Agent 编排层，400+ 集成，视觉+代码双模 | 195,555 | 2026-07-08 | [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md) |
-| 237 |
-| 238 | [](https://github.com/MadsLorentzen/ai-job-search) | AI 全流程求职自动化框架——Claude Code 工作流，Drafter-Reviewer 双 Agent 质检 + LaTeX 原生 + ATS 审计 | 10,384 | 2026-07-08 | [MadsLorentzen-ai-job-search-深度调研.md](MadsLorentzen-ai-job-search-深度调研.md) |
-| 239 | [](https://github.com/kyutai-labs/pocket-tts) | CPU 原生轻量 TTS（100M 参数）——pip install 即用，CALM 潜空间 LM 架构，6x 实时，声音克隆 + 多语言 | 6,078 | 2026-07-08 | [kyutai-labs-pocket-tts-深度调研.md](kyutai-labs-pocket-tts-深度调研.md) |
-| 240 | [](https://github.com/dotnet/skills) | 微软 .NET 官方 AI 编程代理技能集——15 个专项 Plugin 覆盖 .NET 全栈，skill-validator + Dashboard 企业级质量 | 4,274 | 2026-07-08 | [dotnet-skills-深度调研.md](dotnet-skills-深度调研.md) | [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) | 全网最全 Nano Banana Pro 提示词案例库——986+ 案例，Gemini 3 Pro Image 画廊，GitHub Pages 零后端 | 794 | 2026-07-08 | [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md) |
+| 237 | [](https://github.com/MadsLorentzen/ai-job-search) | AI 全流程求职自动化框架——Claude Code 工作流，Drafter-Reviewer 双 Agent 质检 + LaTeX 原生 + ATS 审计 | 10,384 | 2026-07-08 | [MadsLorentzen-ai-job-search-深度调研.md](MadsLorentzen-ai-job-search-深度调研.md) |
+| 238 | [](https://github.com/kyutai-labs/pocket-tts) | CPU 原生轻量 TTS（100M 参数）——pip install 即用，CALM 潜空间 LM 架构，6x 实时，声音克隆 + 多语言 | 6,078 | 2026-07-08 | [kyutai-labs-pocket-tts-深度调研.md](kyutai-labs-pocket-tts-深度调研.md) |
+| 239 | [](https://github.com/dotnet/skills) | 微软 .NET 官方 AI 编程代理技能集——15 个专项 Plugin 覆盖 .NET 全栈，skill-validator + Dashboard 企业级质量 | 4,274 | 2026-07-08 | [dotnet-skills-深度调研.md](dotnet-skills-深度调研.md) |
+| 240 | [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) | 全网最全 Nano Banana Pro 提示词案例库——986+ 案例，Gemini 3 Pro Image 画廊，GitHub Pages 零后端 | 794 | 2026-07-08 | [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md) |
+| 241 | [`openai/openai-cookbook`](https://github.com/openai/openai-cookbook) | OpenAI 官方 API 最佳实践合集——265+ Notebook 全产品覆盖，配套网站，持续维护中 | 74,599 | 2026-07-09 | [openai-openai-cookbook-深度调研.md](openai-openai-cookbook-深度调研.md) |
+| 242 | [`anthropics/claude-quickstarts`](https://github.com/anthropics/claude-quickstarts) | Anthropic 官方 Claude API 快速入门项目——6 个可运行参考项目覆盖客服/数据分析/桌面自动化/Agent 全场景 | 17,187 | 2026-07-09 | [anthropics-claude-quickstarts-深度调研.md](anthropics-claude-quickstarts-深度调研.md) |
+| 243 | [`xingkongliang/skills-manager`](https://github.com/xingkongliang/skills-manager) | Tauri 2 跨平台 AI Agent 技能管理桌面应用——Preset 场景编排+Git 备份+ToolAdapter 插件式架构+CLI 嵌入 | 2,843 | 2026-07-09 | [xingkongliang-skills-manager-深度调研.md](xingkongliang-skills-manager-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（70）
+### AI Agent / 助手框架（72）
 
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -336,6 +339,8 @@
 - [`openai/codex-plugin-cc`](https://github.com/openai/codex-plugin-cc) — [openai-codex-plugin-cc-深度调研.md](openai-codex-plugin-cc-深度调研.md)
 - [`Zackriya-Solutions/meetily`](https://github.com/Zackriya-Solutions/meetily) — [Zackriya-Solutions-meetily-深度调研.md](Zackriya-Solutions-meetily-深度调研.md)
 - [`shareAI-lab/learn-claude-code`](https://github.com/shareAI-lab/learn-claude-code) — [shareAI-lab-learn-claude-code-深度调研.md](shareAI-lab-learn-claude-code-深度调研.md)
+- [`anthropics/claude-quickstarts`](https://github.com/anthropics/claude-quickstarts) — [anthropics-claude-quickstarts-深度调研.md](anthropics-claude-quickstarts-深度调研.md)
+- [`xingkongliang/skills-manager`](https://github.com/xingkongliang/skills-manager) — [xingkongliang-skills-manager-深度调研.md](xingkongliang-skills-manager-深度调研.md)
 
 ### LLM / 推理框架（4） 🆕
 
@@ -434,7 +439,7 @@
 - [`usestrix/strix`](https://github.com/usestrix/strix) — [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md)
 - [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) — [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md)
 
-### 学习资料 / 方法论（8）
+### 学习资料 / 方法论（9）
 
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
@@ -444,6 +449,7 @@
 - [`bozhouDev/codex-orange-book`](https://github.com/bozhouDev/codex-orange-book) — [bozhouDev-codex-orange-book-深度调研.md](bozhouDev-codex-orange-book-深度调研.md)
 - [`huggingface/agents-course`](https://github.com/huggingface/agents-course) — [huggingface-agents-course-深度调研.md](huggingface-agents-course-深度调研.md)
 - [`microsoft/AI-For-Beginners`](https://github.com/microsoft/AI-For-Beginners) — [microsoft-AI-For-Beginners-深度调研.md](microsoft-AI-For-Beginners-深度调研.md)
+- [`openai/openai-cookbook`](https://github.com/openai/openai-cookbook) — [openai-openai-cookbook-深度调研.md](openai-openai-cookbook-深度调研.md)
 
 ### 其他（72）
 
