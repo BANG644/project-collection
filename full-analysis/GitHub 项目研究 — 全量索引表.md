@@ -259,6 +259,9 @@
 | 241 | [`openai/openai-cookbook`](https://github.com/openai/openai-cookbook) | OpenAI 官方 API 最佳实践合集——265+ Notebook 全产品覆盖，配套网站，持续维护中 | 74,599 | 2026-07-09 | [openai-openai-cookbook-深度调研.md](openai-openai-cookbook-深度调研.md) |
 | 242 | [`anthropics/claude-quickstarts`](https://github.com/anthropics/claude-quickstarts) | Anthropic 官方 Claude API 快速入门项目——6 个可运行参考项目覆盖客服/数据分析/桌面自动化/Agent 全场景 | 17,187 | 2026-07-09 | [anthropics-claude-quickstarts-深度调研.md](anthropics-claude-quickstarts-深度调研.md) |
 | 243 | [`xingkongliang/skills-manager`](https://github.com/xingkongliang/skills-manager) | Tauri 2 跨平台 AI Agent 技能管理桌面应用——Preset 场景编排+Git 备份+ToolAdapter 插件式架构+CLI 嵌入 | 2,843 | 2026-07-09 | [xingkongliang-skills-manager-深度调研.md](xingkongliang-skills-manager-深度调研.md) |
+| 244 | [`TencentCloud/TencentDB-Agent-Memory`](https://github.com/TencentCloud/TencentDB-Agent-Memory) | 腾讯云开源 AI Agent 本地长期记忆引擎——L0→L3 四层语义金字塔 + Mermaid 符号化短期记忆，61.38% Token 节省 | 7,576 | 2026-07-09 | [TencentCloud-TencentDB-Agent-Memory-深度调研.md](TencentCloud-TencentDB-Agent-Memory-深度调研.md) |
+| 245 | [`wonderwhy-er/DesktopCommanderMCP`](https://github.com/wonderwhy-er/DesktopCommanderMCP) | Claude MCP 全能终端控制服务器——终端/文件/Office/搜索/远程控制/Docker 隔离，MCP 生态最全工具集 | 6,354 | 2026-07-09 | [wonderwhy-er-DesktopCommanderMCP-深度调研.md](wonderwhy-er-DesktopCommanderMCP-深度调研.md) |
+| 246 | [`Diolinux/PhotoGIMP`](https://github.com/Diolinux/PhotoGIMP) | 让 GIMP 变身 Photoshop 的配置补丁——6 年持续维护，跨 Linux/macOS/Windows，快捷键严格对齐 PS | 14,971 | 2026-07-09 | [Diolinux-PhotoGIMP-深度调研.md](Diolinux-PhotoGIMP-深度调研.md) |
 
 ---
 
