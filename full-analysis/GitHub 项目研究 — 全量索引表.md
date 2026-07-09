@@ -262,14 +262,18 @@
 | 244 | [`TencentCloud/TencentDB-Agent-Memory`](https://github.com/TencentCloud/TencentDB-Agent-Memory) | 腾讯云开源 AI Agent 本地长期记忆引擎——L0→L3 四层语义金字塔 + Mermaid 符号化短期记忆，61.38% Token 节省 | 7,576 | 2026-07-09 | [TencentCloud-TencentDB-Agent-Memory-深度调研.md](TencentCloud-TencentDB-Agent-Memory-深度调研.md) |
 | 245 | [`wonderwhy-er/DesktopCommanderMCP`](https://github.com/wonderwhy-er/DesktopCommanderMCP) | Claude MCP 全能终端控制服务器——终端/文件/Office/搜索/远程控制/Docker 隔离，MCP 生态最全工具集 | 6,354 | 2026-07-09 | [wonderwhy-er-DesktopCommanderMCP-深度调研.md](wonderwhy-er-DesktopCommanderMCP-深度调研.md) |
 | 246 | [`Diolinux/PhotoGIMP`](https://github.com/Diolinux/PhotoGIMP) | 让 GIMP 变身 Photoshop 的配置补丁——6 年持续维护，跨 Linux/macOS/Windows，快捷键严格对齐 PS | 14,971 | 2026-07-09 | [Diolinux-PhotoGIMP-深度调研.md](Diolinux-PhotoGIMP-深度调研.md) |
+| 247 | [`blader/humanizer`](https://github.com/blader/humanizer) | 去除 AI 写作痕迹的跨 Agent 纯 Markdown 技能——基于 Wikipedia 33 类 AI 写作模式，声纹校准 + em dash 硬约束 | 28,427 | 2026-07-10 | [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md) |
+| 248 | [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) | 语音优先的本地 Agent 编排运行时——可审计 DAG、每节点 Docker 隔离、生成式 UI、全本地隐私 | 357 | 2026-07-10 | [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md) |
+| 249 | [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram) | 证据驱动的学习引擎 Claude Code/Codex 插件——FSRS-4.5 排程 + 自由回忆盲审 + 100% 本地 receipt | 472 | 2026-07-10 | [nagisanzenin-engram-深度调研.md](nagisanzenin-engram-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（72）
+### AI Agent / 助手框架（73）
 
+- [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) — [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md)
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
 - [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) — [addyosmani-agent-skills-深度调研.md](addyosmani-agent-skills-深度调研.md)
@@ -352,8 +356,9 @@
 - [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) — [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 
-### AI 编码 / Skill 技能（14）
+### AI 编码 / Skill 技能（15）
 
+- [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
 - [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) — [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md)
 - [`colbymchenry/codegraph`](https://github.com/colbymchenry/codegraph) — [colbymchenry-codegraph-深度调研.md](colbymchenry-codegraph-深度调研.md)
@@ -442,8 +447,9 @@
 - [`usestrix/strix`](https://github.com/usestrix/strix) — [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md)
 - [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) — [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md)
 
-### 学习资料 / 方法论（9）
+### 学习资料 / 方法论（10）
 
+- [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram) — [nagisanzenin-engram-深度调研.md](nagisanzenin-engram-深度调研.md)
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
 - [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) — [CyC2018-CS-Notes-深度调研.md](CyC2018-CS-Notes-深度调研.md)

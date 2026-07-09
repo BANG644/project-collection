@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 234                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 251                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -81,10 +81,11 @@ github-project-research/
 | [`alchaincyf/zhangxuefeng-skill`](https://github.com/alchaincyf/zhangxuefeng-skill) | [alchaincyf-zhangxuefeng-skill-深度调研.md](alchaincyf-zhangxuefeng-skill-深度调研.md) |
 | [`aws/agent-toolkit-for-aws`](https://github.com/aws/agent-toolkit-for-aws) | [aws-agent-toolkit-for-aws-深度调研.md](aws-agent-toolkit-for-aws-深度调研.md) |
 
-### B（9 个）
+### B（10 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
+| [`blader/humanizer`](https://github.com/blader/humanizer) | [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md) |
 | [`BANG644/ai-workflow-optimizer`](https://github.com/BANG644/ai-workflow-optimizer) | ⚠️ 个人工作台仓库（2⭐），建议忽略 | [BANG644-ai-workflow-optimizer-深度调研.md](BANG644-ai-workflow-optimizer-深度调研.md) |
 | [`BANG644/docx-svg-to-pdf`](https://github.com/BANG644/docx-svg-to-pdf) | ⚠️ 个人工作台仓库（1⭐），建议忽略 | [BANG644-docx-svg-to-pdf-深度调研.md](BANG644-docx-svg-to-pdf-深度调研.md) |
 | [`BANG644/scheduler-sent`](https://github.com/BANG644/scheduler-sent) | [BANG644-scheduler-sent-深度调研.md](BANG644-scheduler-sent-深度调研.md) |
@@ -225,10 +226,11 @@ github-project-research/
 | [`mem0ai/mem0`](https://github.com/mem0ai/mem0) | [mem0ai-mem0-深度调研.md](mem0ai-mem0-深度调研.md) |
 | [`mauriceboe/TREK`](https://github.com/mauriceboe/TREK) | [mauriceboe-TREK-深度调研.md](mauriceboe-TREK-深度调研.md) |
 
-### N（6 个）
+### N（7 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
+| [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram) | [nagisanzenin-engram-深度调研.md](nagisanzenin-engram-深度调研.md) |
 | [`nexu-io/html-anything`](https://github.com/nexu-io/html-anything) | [nexu-io-html-anything-深度调研.md](nexu-io-html-anything-深度调研.md) |
 | [`NoopApp/noop`](https://github.com/NoopApp/noop) | [NoopApp-noop-深度调研.md](NoopApp-noop-深度调研.md) |
 | [`Normation/rudder`](https://github.com/Normation/rudder) | [Normation-rudder-深度调研.md](Normation-rudder-深度调研.md) |
@@ -337,10 +339,11 @@ github-project-research/
 | [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) | [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md) |
 | [`wuji-labs/nopua`](https://github.com/wuji-labs/nopua) | [wuji-labs-nopua-深度调研.md](wuji-labs-nopua-深度调研.md) |
 
-### X（3 个）
+### X（4 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
+| [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) | [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md) |
 | [`xming521/WeClone`](https://github.com/xming521/WeClone) | [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md) |
 | [`xw7872081123/wallpaper-engine-steam`](https://github.com/xw7872081123/wallpaper-engine-steam) | 🚫 疑似虚假仓库，源码与描述完全不符 | [xw7872081123-wallpaper-engine-steam-深度调研.md](xw7872081123-wallpaper-engine-steam-深度调研.md) |
 | [`xbtlin/ai-berkshire`](https://github.com/xbtlin/ai-berkshire) | [xbtlin-ai-berkshire-深度调研.md](xbtlin-ai-berkshire-深度调研.md) |
@@ -365,6 +368,7 @@ github-project-research/
 
 ### AI Agent / 助手框架
 
+- [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) — [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md)
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
 - [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) — [addyosmani-agent-skills-深度调研.md](addyosmani-agent-skills-深度调研.md)
@@ -420,6 +424,7 @@ github-project-research/
 
 ### AI 编码 / Skill 技能
 
+- [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
 - [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) — [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md)
 - [`colbymchenry/codegraph`](https://github.com/colbymchenry/codegraph) — [colbymchenry-codegraph-深度调研.md](colbymchenry-codegraph-深度调研.md)
@@ -480,6 +485,7 @@ github-project-research/
 
 ### 学习资料 / 方法论
 
+- [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram) — [nagisanzenin-engram-深度调研.md](nagisanzenin-engram-深度调研.md)
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
 - [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) — [CyC2018-CS-Notes-深度调研.md](CyC2018-CS-Notes-深度调研.md)
