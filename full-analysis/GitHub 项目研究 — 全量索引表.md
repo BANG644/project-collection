@@ -21,7 +21,7 @@
 | 6 | [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) | — | — | 2026-06-19 | [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md) |
 | 7 | [`accomplish-ai/coworker`](https://github.com/accomplish-ai/coworker) | — | — | 2026-06-19 | [accomplish-ai-coworker-深度调研.md](accomplish-ai-coworker-深度调研.md) |
 | 8 | [`ace-trump-tech/DeltaForce-OBS-Locker`](https://github.com/ace-trump-tech/DeltaForce-OBS-Locker) | — | — | — | [ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md](ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md) |
-| 9 | [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) | Production-Grade Engineering Skills for AI Coding Agents | 64 | 2026-06-21 | [addyosmani-agent-skills-深度调研.md](addyosmani-agent-skills-深度调研.md) |
+| 9 | [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) | 把完整软件生命周期编码成 Agent 技能（24 技能 + 反合理化 + 三层 eval） | 76,686 | 2026-07-11 | [addyosmani-agent-skills-深度调研.md](addyosmani-agent-skills-深度调研.md) |
 | 10 | [`amap-demo/amap-sdk-skills`](https://github.com/amap-demo/amap-sdk-skills) | — | — | — | [amap-demo-amap-sdk-skills-深度调研.md](amap-demo-amap-sdk-skills-深度调研.md) |
 | 11 | [`amElnagdy/guard-skills`](https://github.com/amElnagdy/guard-skills) | 深度调研报告： | 467 | 2026-06-18 | [amElnagdy-guard-skills-深度调研.md](amElnagdy-guard-skills-深度调研.md) |
 | 12 | [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) | — | 30,184 | — | [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md) |
@@ -91,7 +91,7 @@
 | 76 | [`lllyasviel/Fooocus`](https://github.com/lllyasviel/Fooocus) | 基于 Stable Diffusion XL 的离线、开源、免费图像生成软件，用户只需关注提示词即可生成高质量图像，无需手动调参。📖 项目定位与核心功能设计哲学 | 43,000 | 2026-06-13 | [lllyasviel-Fooocus-深度调研.md](lllyasviel-Fooocus-深度调研.md) |
 | 77 | [`lynote-ai/humanize-text`](https://github.com/lynote-ai/humanize-text) | — | — | — | [lynote-ai-humanize-text-深度调研.md](lynote-ai-humanize-text-深度调研.md) |
 | 78 | [`MatinSenPai/SenPaiScanner`](https://github.com/MatinSenPai/SenPaiScanner) | — | — | — | [MatinSenPai-SenPaiScanner-深度调研.md](MatinSenPai-SenPaiScanner-深度调研.md) |
-| 79 | [`mattpocock/skills`](https://github.com/mattpocock/skills) | — | 2,507 | — | [mattpocock-skills-深度调研.md](mattpocock-skills-深度调研.md) |
+| 79 | [`mattpocock/skills`](https://github.com/mattpocock/skills) | Skills for Real Engineers——Matt Pocock 日常 Claude Code 工作流开源（grilling 质询 + 用户/模型双调用） | 164,409 | 2026-07-11 | [mattpocock-skills-深度调研.md](mattpocock-skills-深度调研.md) |
 | 80 | [`Michaelliv/pi-dynamic-workflows`](https://github.com/Michaelliv/pi-dynamic-workflows) | — | — | 2026-06-19 | [Michaelliv-pi-dynamic-workflows-深度调研.md](Michaelliv-pi-dynamic-workflows-深度调研.md) |
 | 81 | [`microsoft/agent-lightning`](https://github.com/microsoft/agent-lightning) | — | — | — | [microsoft-agent-lightning-深度调研.md](microsoft-agent-lightning-深度调研.md) |
 | 82 | [`microsoft/graphrag`](https://github.com/microsoft/graphrag) | — | 33,787 | 2026-06-16 | [microsoft-graphrag-深度调研.md](microsoft-graphrag-深度调研.md) |
@@ -109,7 +109,7 @@
 | 93 | [`Normation/rudder`](https://github.com/Normation/rudder) | — | — | — | [Normation-rudder-深度调研.md](Normation-rudder-深度调研.md) |
 | 94 | [`NVIDIA/cosmos`](https://github.com/NVIDIA/cosmos) | NVIDIA 开源的全模态世界模型平台——MoT 双塔架构统一视觉推理、世界生成与动作预测，为 Physical AI 提供基础模型 | 10,733 | 2026-07-01 | [NVIDIA-cosmos-深度调研.md](NVIDIA-cosmos-深度调研.md) |
 | 95 | [`NVIDIA/SkillSpector`](https://github.com/NVIDIA/SkillSpector) | SkillSpector — AI Agent Skills Security Scanner (NVIDIA) | 8,602 | 2026-06-21 | [NVIDIA-SkillSpector-深度调研.md](NVIDIA-SkillSpector-深度调研.md) |
-| 96 | [`obra/superpowers`](https://github.com/obra/superpowers) | GitHub Star 第五多的项目（19.7 万⭐）——一个 Agent 技能框架 & 软件开发方法论，支持 Claude / Codex / Cursor | 197,310 | 2026-05-14 | [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md) |
+| 96 | [`obra/superpowers`](https://github.com/obra/superpowers) | Agent 技能框架 & 软件开发方法论——子 Agent 驱动开发 + worktree 隔离，可放手长跑 | 251,668 | 2026-07-11 | [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md) |
 | 97 | [`op7418/guizang-social-card-skill`](https://github.com/op7418/guizang-social-card-skill) | Guizang Social Card Skill | — | 2026-05-27 | [op7418-guizang-social-card-skill-深度调研.md](op7418-guizang-social-card-skill-深度调研.md) |
 | 98 | [`op7418/Humanizer-zh`](https://github.com/op7418/Humanizer-zh) | — | — | 2026-06-19 | [op7418-Humanizer-zh-深度调研.md](op7418-Humanizer-zh-深度调研.md) |
 | 99 | [`Open-LLM-VTuber/Open-LLM-VTuber`](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) | 可打断语音交互 + Live2D 虚拟形象的 AI 伴侣——全本地运行、多后端支持、跨平台桌面 AI 交互框架 | 12,202 | 2026-07-01 | [Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md](Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md) |
@@ -228,7 +228,7 @@
 | 210 | [`openai/codex-plugin-cc`](https://github.com/openai/codex-plugin-cc) | OpenAI 官方 Claude Code↔Codex 桥接插件，审查代码+委派任务+会话转移 | 22,561 | 2026-07-03 | [openai-codex-plugin-cc-深度调研.md](openai-codex-plugin-cc-深度调研.md) |
 | 211 | [`nexu-io/open-design`](https://github.com/nexu-io/open-design) | Vibe Design Workspace & 开源 Claude Design 平替——本地优先 AI 设计工作流编排器，25 种 Agent 适配器 + 150+ DESIGN.md + 261 插件的结构化流程引擎 | 74,675 | 2026-07-04 | [nexu-io-open-design-深度调研.md](nexu-io-open-design-深度调研.md) |
 | 212 | [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) | 重新定义软件与 AI Agent 交互方式——HARNESS.md 方法论 + CLI-Hub 托管平台，让任意软件零改代码成为 Agent 原生 | 44,666 | 2026-07-04 | [HKUDS-CLI-Anything-深度调研.md](HKUDS-CLI-Anything-深度调研.md) |
-| 213 | [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) | 首个为 AI Agent 设计的全功能 Office 套件——单二进制操作 Word/Excel/PPT，含 HTML 渲染引擎实现 render→look→fix 闭环 | 8,342 | 2026-07-04 | [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md) |
+| 213 | [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) | 首个为 AI Agent 设计的全功能 Office 套件——单二进制操作 Word/Excel/PPT，含 HTML 渲染引擎实现 render→look→fix 闭环 | 14,303 | 2026-07-11 | [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md) |
 | 214 | [`safishamsi/graphify`](https://github.com/safishamsi/graphify) | AI 编程助手的知识图谱编译器——AST+LLM 双通道提取，71.5x Token 压缩，15+ 编程助手 Skill 跨平台运行 | 77,000 | 2026-07-04 | [safishamsi-graphify-深度调研.md](safishamsi-graphify-深度调研.md) |
 | 215 | [`agentskills/agentskills`](https://github.com/agentskills/agentskills) | Agent Skills 开放标准——Anthropic+OpenAI 联合背书，39+ 产品支持，跨平台 SKILL.md 规范，三层渐进式暴露 | 21,954 | 2026-07-04 | [agentskills-agentskills-深度调研.md](agentskills-agentskills-深度调研.md) |
 | 216 | [`harvard-edge/cs249r_book`](https://github.com/harvard-edge/cs249r_book) | 哈佛 CS249r 开源教科书——《Machine Learning Systems》从系统级视角构建/优化/部署 AI，TinyTorch 手搓框架+四件套学习栈 | 26,108 | 2026-07-04 | [harvard-edge-cs249r_book-深度调研.md](harvard-edge-cs249r_book-深度调研.md) |
