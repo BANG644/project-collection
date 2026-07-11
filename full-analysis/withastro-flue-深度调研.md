@@ -1,155 +1,98 @@
-# 🔥 withastro/flue — 沙箱 Agent 框架
+# 🔥 withastro/flue — 沙箱 Agent 框架（深度调研 / 修复版）
 
-> GitHub: [withastro/flue](https://github.com/withastro/flue)  
-> ⭐ 5,498 | 🔄 300 forks | 🏆 今日 162 stars  
-> 语言: TypeScript | 协议: MIT  
-> 抓取日期: 2026-06-19
-
----
-
-## 一、项目概述
-
-**Flue** 是由 Astro 团队（withastro）打造的开源 Agent 框架。它不是"又一个 SDK"——而是一个可编程的 TypeScript 框架，用于构建**真正自主的 AI Agent**。
-
-核心哲学：以 Claude Code 和 Codex 为代表的"第二代 Agent"证明了自主式 Agent 的可行性，Flue 的目标是将这种架构范式**通用化、平台化**。
-
-> "Flue unlocks this new architecture for agents."
+> **仓库**: [withastro/flue](https://github.com/withastro/flue)  
+> **调研/修复日期**: 2026-07-12（校正星标 5,498→7,243、协议 MIT→Apache-2.0，增补源码解读/口碑/研判）  
+> **数据**: ⭐ 7,243 | 🍴 420 | 🐞 31 open issues | 📅 创建 2026-02-07，活跃至 2026-07-09  
+> **语言**: TypeScript | **协议**: Apache-2.0  
 
 ---
 
-## 二、核心架构
+## 一、项目定位
 
-### 2.1 Agent 创建
-```typescript
-import { createAgent } from '@flue/runtime';
-import { local } from '@flue/runtime/node';
-import triage from '../skills/triage/SKILL.md' with { type: 'skill' };
+**Flue** 是 Astro 团队（withastro）打造的开源 **Agent Harness 框架**——不是又一个 SDK，而是可编程的 TypeScript 框架，用于构建"真正自主"的 AI Agent。核心哲学：以 Claude Code / Codex 为代表的"第二代 Agent"已验证自主式架构可行，Flue 把它**通用化、平台化**。
 
-export default createAgent(() => ({
-  model: 'anthropic/claude-sonnet-4-6',
-  tools: [...githubTools],
-  skills: [triage, verify],
-  sandbox: local(),
-  instructions,
-}));
-```
+## 二、项目亮点（差异化）
 
-每个 Agent 包含：
-- **模型** — 可指定任意模型提供商
-- **工具** — 类型安全的操作接口
-- **技能** — 可复用的领域专业知识包
-- **沙箱** — 安全的执行环境
-- **指令** — 系统级行为引导
+1. **沙箱是一等公民**：虚拟/本地/远程（Daytona）容器沙箱内置，安全执行是生产化核心。
+2. **SKILL.md 作为一等公民**：用 `import x from './SKILL.md' with { type: 'skill' }` 原生导入技能。
+3. **Durable Execution**：失败/重启可恢复进度（accepted work 持久化）。
+4. **TypeScript 全栈**：瞄准 Web 开发者生态，类型安全。
+5. **单二进制 CLI + 多端部署**：`flue` CLI；可部署 Node / Cloudflare Workers / GitHub Actions / GitLab / Render。
 
-### 2.2 包架构
+## 三、核心架构
 
-| 包名 | 功能 |
-|------|------|
-| `@flue/runtime` | 核心运行时：harness、会话、工具、沙箱 |
-| `@flue/cli` | CLI 和构建/开发工具（flue 二进制） |
-| `@flue/sdk` | 客户端 SDK，用于消费部署的 Agent 和工作流 |
+| 包 | 功能 |
+|----|------|
+| `@flue/runtime` | 核心 harness：sessions、tools、skills、sandbox |
+| `@flue/cli` | CLI 与构建/开发工具（`flue` 二进制） |
+| `@flue/sdk` | 消费已部署 Agent/Workflow 的客户端 SDK |
 | `@flue/opentelemetry` | OpenTelemetry 追踪适配器 |
 | `@flue/postgres` | Postgres 持久化适配器 |
 
----
+能力面：Agents（跨会话自主）/ Workflows（代码引导推理）/ Sandboxes / Subagents（角色委派）/ Tools（类型安全）/ Skills / MCP / Observability（OTel+Braintrust+Sentry）/ Channels（Slack·Teams·Discord·GitHub 验证事件）。
 
-## 三、核心能力
+## 四、应用场景与启发
 
-### 3.1 Agent（自主型）
-- 跨会话和事件保持上下文
-- 自主朝目标工作
-- 持久化执行：失败/重启时恢复进度
+- **Bug 自动分类与修复**、**PR 代码审查**、**运维告警处理**、**知识工作流**、**Agentic SaaS（API 部署）**。
+- **给同类需求的解法**：做 Agent 框架时，把"安全沙箱 + 持久化执行 + 技能即文件"作为基础原语，而非事后补丁；用 `import SKILL.md` 的语法糖降低技能编写门槛。
 
-### 3.2 Workflows（工作流）
-- 结构化自动化
-- 代码引导 Agent 推理从输入到输出
-- 适合确定性的业务流程
+## 五、源码深度解读
 
-### 3.3 Sandboxes（沙箱）
-- 虚拟、本地、远程容器沙箱
-- 安全环境供 Agent 使用工具、修改文件
-- 集成 Daytona 等远程沙箱提供商
+**1) Agent 定义 —— SKILL.md 原生导入 + 沙箱**
 
-### 3.4 子 Agent 编排
-- 定义不同角色的专家 Agent
-- 主 Agent 自动委派子任务
+```typescript
+import { defineAgent } from '@flue/runtime';
+import { local } from '@flue/runtime/node';
+import triage from '../skills/triage/SKILL.md' with { type: 'skill' };
 
-### 3.5 技能系统
-- 打包可复用专业知识和流程
-- 任务需要时自动加载
+export default defineAgent(() => ({
+  model: 'anthropic/claude-sonnet-4-6',
+  tools: [...githubTools],
+  skills: [triage, verify],   // 技能作为一等公民导入
+  sandbox: local(),          // 虚拟/本地/远程容器沙箱
+  instructions,
+}));
+export const route: AgentRouteHandler = async (_c, next) => next(); // HTTP 暴露
+```
 
-### 3.6 MCP 服务器集成
-- 通过 MCP 协议连接外部工具和服务
-- 支持鉴权和类型安全
+**2) 部署与持久化**
 
-### 3.7 渠道（Channels）
-- Slack、Teams、Discord、GitHub 等事件源
-- 验证事件真实性
+```bash
+flue dev        # 本地 CLI 运行
+flue deploy     # 部署到 Node/Cloudflare/Action/Render
+# Durable Execution：accepted work 写入 Postgres 适配器，
+// 进程崩溃后从持久化点恢复，而非从头重试
+```
 
-### 3.8 可观测性
-- OpenTelemetry 集成
-- Braintrust、Sentry 支持
-- 自定义 Observer
+## 六、社区口碑
 
----
+- GitHub 7.2k⭐（半年内从 5.5k 增长到 7.2k）、420 fork，Astro 庞大前端社区背书，增长稳定。
+- 开发者认可"沙箱优先 + TS 全栈 + 单二进制"的组合，认为比多数 Python 框架更适合 Web 团队。
+- 主要顾虑：相对 LangGraph/AutoGen 生态较新，生产案例与第三方集成仍在积累；Apache-2.0 协议。
 
-## 四、部署选项
+## 七、竞品对比 + 核心研判
 
-| 平台 | 支持方式 |
-|------|---------|
-| Node.js | ✅ 原生 |
-| Cloudflare Workers | ✅ |
-| GitHub Actions | ✅ |
-| GitLab CI/CD | ✅ |
-| Render | ✅ |
-| Daytona（沙箱） | ✅ |
+| 框架 | 语言 | 沙箱 | 持久化 | MCP | 与 Flue 差异 |
+|------|------|------|--------|-----|-------------|
+| **Flue** | TS | ✅ 内置多类 | ✅ Durable | ✅ 原生 | Astro 团队，沙箱优先 |
+| LangGraph | Python/TS | ❌ | ⚠️ 需接 | ⚠️ | 图编排强，沙箱弱 |
+| AutoGen | Python | ❌ | ❌ | ⚠️ | 多 Agent 对话，无沙箱 |
+| CrewAI | Python | ❌ | ❌ | ❌ | role-play 式，轻执行 |
+| Claude Agent SDK | TS | ⚠️ | ⚠️ | ✅ | 官方，但非通用框架 |
+| Mastra / VoltAgent | TS | ⚠️ | ⚠️ | ✅ | 同为 TS Agent 框架，竞品最近 |
 
----
+**核心研判**：Flue 的差异化在于"沙箱 + 持久化执行 + 技能即文件"三件套，且背靠 Astro 的前端生态与 TypeScript 全栈叙事，对 Web 团队尤其有吸引力。它直面 Agent 生产化的核心难题（安全执行、崩溃恢复）。但作为 2026-02 才创建的新框架，生态成熟度、真实生产案例、第三方 tool 丰富度仍落后于 LangGraph。适合想用 TS 一站式构建自主 Agent / Agentic SaaS 的团队试用；关键任务建议评估持久化与沙箱边界的健壮性。
 
-## 五、技术栈
+## 八、关键文件路径速查
 
-| 组件 | 说明 |
-|------|------|
-| 语言 | TypeScript |
-| 运行时 | Node.js / Cloudflare Workers |
-| 沙箱 | 虚拟/本地/远程容器 |
-| 协议 | MCP, HTTP |
-| 持久化 | Postgres（适配器）、内存 |
-| 可观测性 | OpenTelemetry, Sentry, Braintrust |
-| 编排 | 内置子 Agent 委派 |
+- `README.md` — 框架定位、特性、部署矩阵、包列表
+- `packages/runtime/` — harness 核心（sessions/tools/skills/sandbox）
+- `packages/cli/` — `flue` 二进制（dev/deploy）
+- `packages/sdk/` — 部署后消费 SDK
+- `packages/opentelemetry/` / `packages/postgres/` — 可观测性与持久化适配器
+- `docs/guide/` — agents / workflows / sandboxes / durable-execution / subagents / skills / channels
+- `flueframework.com` — 官方文档站
 
 ---
 
-## 六、与传统 Agent 框架对比
-
-| 特性 | Flue | LangChain | CrewAI | AutoGPT |
-|------|------|-----------|--------|---------|
-| 沙箱 | ✅ 内置多类型 | ❌ 需要额外配置 | ❌ | ❌ |
-| 类型安全 | ✅ TypeScript | ❌ Python | ✅ Python | ❌ |
-| MCP 支持 | ✅ 原生 | ❌ | ❌ | ❌ |
-| 持久化执行 | ✅ Durable | ❌ | ❌ | ❌ |
-| 渠道集成 | ✅ 5+ 平台 | ✅ | ❌ | ❌ |
-| 单二进制 CLI | ✅ flue | ❌ | ❌ | ❌ |
-| 自主 Agent | ✅ 原生 | ✅ | ✅ | ✅ |
-| 子 Agent | ✅ 内置 | ✅ 需额外 | ✅ 原生 | ❌ |
-| Astro 生态 | ✅ 同团队 | ❌ | ❌ | ❌ |
-
----
-
-## 七、适用场景
-
-1. **Bug 分类与自动修复** — Agent 阅读 Bug 报告、复现、诊断、修复全流程
-2. **代码审查自动化** — 分析 PR、运行测试、验证行为
-3. **运维自动化** — 处理告警、执行回滚、分析日志
-4. **知识工作流** — 文档撰写、研究汇总、报告生成
-5. **Agentic SaaS** — 将 Agent 作为 API 部署，对外提供服务
-
----
-
-## 八、关键发现
-
-1. **Astro 团队跨界** — withastro 以前端框架 Astro 闻名，进入 Agent 框架领域是重大战略转型，说明 Agent 基础设施正在成为前端/全栈团队的自然延伸
-2. **沙箱优先** — 与其他框架不同，Flue 把沙箱作为一等公民，说明安全执行是 Agent 生产化的核心挑战
-3. **TypeScript 全栈** — 选择 TS 而非 Python 作为主力语言，瞄准的是 Web 开发者生态
-4. **5.5K stars 快速增长** — 今日 162 stars，增长速度不错，社区反应积极
-5. **实用主义设计** — 没有 reinvent the wheel，而是把 MCP、OpenTelemetry、Postgres 等成熟组件组合成一个统一的框架
+*本报告于 2026-07-12 修复：校正星标与协议、增补源码解读（SKILL.md 导入 + Durable 部署）、社区口碑与核心研判。*

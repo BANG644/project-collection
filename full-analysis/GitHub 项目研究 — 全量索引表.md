@@ -46,7 +46,7 @@
 | 31 | [`colbymchenry/codegraph`](https://github.com/colbymchenry/codegraph) | — | — | 2026-06-19 | [colbymchenry-codegraph-深度调研.md](colbymchenry-codegraph-深度调研.md) |
 | 32 | [`CopilotKit/CopilotKit`](https://github.com/CopilotKit/CopilotKit) | Agent 与生成式 UI 的前端技术栈——React、Angular、Mobile、Slack 等。也是 AG-UI Protocol 的创造者。二、核心分析 | 34,973 | 2026-06-14 | [CopilotKit-CopilotKit-深度调研.md](CopilotKit-CopilotKit-深度调研.md) |
 | 33 | [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) | — | — | 2026-06-19 | [CyC2018-CS-Notes-深度调研.md](CyC2018-CS-Notes-深度调研.md) |
-| 34 | [`datawhalechina/Agent-Learning-Hub`](https://github.com/datawhalechina/Agent-Learning-Hub) | — | — | 2026-06-15 | [datawhalechina-Agent-Learning-Hub-深度调研.md](datawhalechina-Agent-Learning-Hub-深度调研.md) |
+| 34 | [`datawhalechina/Agent-Learning-Hub`](https://github.com/datawhalechina/Agent-Learning-Hub) | 中文圈最佳 AI Agent 可执行学习路线图（8 Stage + 每步可验证产出） | 5,151 | 2026-07-12 | [datawhalechina-Agent-Learning-Hub-深度调研.md](datawhalechina-Agent-Learning-Hub-深度调研.md) |
 | 35 | [`DeusData/codebase-memory-mcp`](https://github.com/DeusData/codebase-memory-mcp) | 🚀  — 高性能代码智能 MCP 服务器 | 7,023 | 2026-06-19 | [DeusData-codebase-memory-mcp-深度调研.md](DeusData-codebase-memory-mcp-深度调研.md) |
 | 36 | [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) | — | — | 2026-06-04 | [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md) |
 | 37 | [`Doorman11991/smallcode`](https://github.com/Doorman11991/smallcode) | SmallCode | — | 2026-06-17 | [Doorman11991-smallcode-深度调研.md](Doorman11991-smallcode-深度调研.md) |
@@ -159,7 +159,7 @@
 | 142 | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | — | — | — | [VoltAgent-awesome-design-md-深度调研.md](VoltAgent-awesome-design-md-深度调研.md) |
 | 143 | [`vorpus/performativeUI`](https://github.com/vorpus/performativeUI) | — | — | 2026-06-07 | [vorpus-performativeUI-深度调研.md](vorpus-performativeUI-深度调研.md) |
 | 144 | [`viitor-ai/viitor-voice-nar`](https://github.com/viitor-ai/viitor-voice-nar) | 非自回归 TTS 语音克隆 + 局部编辑（DualCodec 25Hz + gRPC v2 微服务拆分），⚠️ 5 大红旗疑似刷星 | 240 | 2026-07-03 | [viitor-ai-viitor-voice-nar-深度调研.md](viitor-ai-viitor-voice-nar-深度调研.md) |
-| 144 | [`withastro/flue`](https://github.com/withastro/flue) | 沙箱 Agent 框架 | 5,498 | 2026-06-19 | [withastro-flue-深度调研.md](withastro-flue-深度调研.md) |
+| 144 | [`withastro/flue`](https://github.com/withastro/flue) | Astro 团队 TS Agent Harness 框架——沙箱+持久化执行+SKILL.md 原生导入 | 7,243 | 2026-07-12 | [withastro-flue-深度调研.md](withastro-flue-深度调研.md) |
 | 145 | [`withkynam/vibecode-pro-max-kit`](https://github.com/withkynam/vibecode-pro-max-kit) | — | — | 2026-06-19 | [withkynam-vibecode-pro-max-kit-深度调研.md](withkynam-vibecode-pro-max-kit-深度调研.md) |
 | 146 | [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) | PaperSpine | — | 2026-05-17 | [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md) |
 | 147 | [`wuji-labs/nopua`](https://github.com/wuji-labs/nopua) | — | — | — | [wuji-labs-nopua-深度调研.md](wuji-labs-nopua-深度调研.md) |
@@ -265,6 +265,9 @@
 | 247 | [`blader/humanizer`](https://github.com/blader/humanizer) | 去除 AI 写作痕迹的跨 Agent 纯 Markdown 技能——基于 Wikipedia 33 类 AI 写作模式，声纹校准 + em dash 硬约束 | 28,427 | 2026-07-10 | [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md) |
 | 248 | [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) | 语音优先的本地 Agent 编排运行时——可审计 DAG、每节点 Docker 隔离、生成式 UI、全本地隐私 | 357 | 2026-07-10 | [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md) |
 | 249 | [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram) | 证据驱动的学习引擎 Claude Code/Codex 插件——FSRS-4.5 排程 + 自由回忆盲审 + 100% 本地 receipt | 472 | 2026-07-10 | [nagisanzenin-engram-深度调研.md](nagisanzenin-engram-深度调研.md) |
+| 250 | [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) | Anthropic 官方 Claude 实践代码合集（可跑 Notebook + 自举 Claude Code harness 质量门禁） | 47,842 | 2026-07-12 | [anthropics-claude-cookbooks-深度调研.md](anthropics-claude-cookbooks-深度调研.md) |
+| 251 | [`google/langextract`](https://github.com/google/langextract) | Google LLM 结构化提取库——源定位 Grounding + 交互式可视化审阅，多模型/本地部署 | 37,130 | 2026-07-12 | [google-langextract-深度调研.md](google-langextract-深度调研.md) |
+| 252 | [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) | 联想 Legion/Vantage 开源替代——零遥测无后台服务，已归档 | 7,563 | 2026-07-12 | [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md) |
 
 ---
 
@@ -356,7 +359,7 @@
 - [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) — [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 
-### AI 编码 / Skill 技能（15）
+### AI 编码 / Skill 技能（16）
 
 - [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
@@ -373,6 +376,7 @@
 - [`anomalyco/opencode`](https://github.com/anomalyco/opencode) — [anomalyco-opencode-深度调研.md](anomalyco-opencode-深度调研.md)
 - [`DietrichGebert/ponytail`](https://github.com/DietrichGebert/ponytail) — [DietrichGebert-ponytail-深度调研.md](DietrichGebert-ponytail-深度调研.md)
 - [`JuliusBrussee/caveman`](https://github.com/JuliusBrussee/caveman) — [JuliusBrussee-caveman-深度调研.md](JuliusBrussee-caveman-深度调研.md)
+- [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) — [anthropics-claude-cookbooks-深度调研.md](anthropics-claude-cookbooks-深度调研.md)
 
 ### RAG / 知识库 / 记忆（9）
 
@@ -386,7 +390,7 @@
 - [`OpenBMB/UltraRAG`](https://github.com/OpenBMB/UltraRAG) — [OpenBMB-UltraRAG-深度调研.md](OpenBMB-UltraRAG-深度调研.md)
 - [`allenai/olmocr`](https://github.com/allenai/olmocr) — [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md)
 
-### 开发工具 / CLI（14）
+### 开发工具 / CLI（15）
 
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
 - [`GLips/Figma-Context-MCP`](https://github.com/GLips/Figma-Context-MCP) — [GLips-Figma-Context-MCP-深度调研.md](GLips-Figma-Context-MCP-深度调研.md)
@@ -401,6 +405,7 @@
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
 - [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) — [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md)
 - [`logto-io/logto`](https://github.com/logto-io/logto) — [logto-io-logto-深度调研.md](logto-io-logto-深度调研.md)
+- [`google/langextract`](https://github.com/google/langextract) — [google-langextract-深度调研.md](google-langextract-深度调研.md)
 
 ### 文档 / 文档工具（1） 🆕
 
@@ -438,7 +443,7 @@
 
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 
-### 安全 / 运维 / 系统工具（7）
+### 安全 / 运维 / 系统工具（8）
 
 - [`Raphire/Win11Debloat`](https://github.com/Raphire/Win11Debloat) — [Raphire-Win11Debloat-深度调研.md](Raphire-Win11Debloat-深度调研.md)
 - [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) — [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md)
@@ -446,6 +451,7 @@
 - [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) — [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md)
 - [`usestrix/strix`](https://github.com/usestrix/strix) — [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md)
 - [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) — [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md)
+- [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
 
 ### 学习资料 / 方法论（10）
 
