@@ -542,6 +542,11 @@
 - [`screenpipe/screenpipe`](https://github.com/screenpipe/screenpipe) — [screenpipe-screenpipe-深度调研.md](screenpipe-screenpipe-深度调研.md)
 - [`virattt/dexter`](https://github.com/virattt/dexter) — [virattt-dexter-深度调研.md](virattt-dexter-深度调研.md)
 - [`HKUDS/Vibe-Trading`](https://github.com/HKUDS/Vibe-Trading) — [HKUDS-Vibe-Trading-深度调研.md](HKUDS-Vibe-Trading-深度调研.md)
+- [`coreybutler/nvm-windows`](https://github.com/coreybutler/nvm-windows) — [coreybutler-nvm-windows-深度调研.md](coreybutler-nvm-windows-深度调研.md)
+- [`davila7/claude-code-templates`](https://github.com/davila7/claude-code-templates) — [davila7-claude-code-templates-深度调研.md](davila7-claude-code-templates-深度调研.md)
+- [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) — [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md)
+- [`gastownhall/beads`](https://github.com/gastownhall/beads) — [gastownhall-beads-深度调研.md](gastownhall-beads-深度调研.md)
+- [`zai-org/Open-AutoGLM`](https://github.com/zai-org/Open-AutoGLM) — [zai-org-Open-AutoGLM-深度调研.md](zai-org-Open-AutoGLM-深度调研.md)
 
 ---
 

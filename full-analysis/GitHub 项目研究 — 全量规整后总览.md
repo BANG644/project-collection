@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 251                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 259                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -96,7 +96,7 @@ github-project-research/
 | [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) | [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md) |
 | [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | [bytedance-deer-flow-深度调研.md](bytedance-deer-flow-深度调研.md) |
 
-### C（10 个）
+### C（11 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -110,8 +110,9 @@ github-project-research/
 | [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) | [CyC2018-CS-Notes-深度调研.md](CyC2018-CS-Notes-深度调研.md) |
 | [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) | [calesthio-OpenMontage-深度调研.md](calesthio-OpenMontage-深度调研.md) |
 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) | [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md) |
+| [`coreybutler/nvm-windows`](https://github.com/coreybutler/nvm-windows) | [coreybutler-nvm-windows-深度调研.md](coreybutler-nvm-windows-深度调研.md) |
 
-### D（6 个）
+### D（7 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -121,6 +122,7 @@ github-project-research/
 | [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) | [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md) |
 | [`Doorman11991/smallcode`](https://github.com/Doorman11991/smallcode) | [Doorman11991-smallcode-深度调研.md](Doorman11991-smallcode-深度调研.md) |
 | [`dreammis/social-auto-upload`](https://github.com/dreammis/social-auto-upload) | [dreammis-social-auto-upload-深度调研.md](dreammis-social-auto-upload-深度调研.md) |
+| [`davila7/claude-code-templates`](https://github.com/davila7/claude-code-templates) | [davila7-claude-code-templates-深度调研.md](davila7-claude-code-templates-深度调研.md) |
 
 ### E（5 个）
 
@@ -132,14 +134,15 @@ github-project-research/
 | [`evershopcommerce/evershop`](https://github.com/evershopcommerce/evershop) | [evershopcommerce-evershop-深度调研.md](evershopcommerce-evershop-深度调研.md) |
 | [`excalidraw/excalidraw`](https://github.com/excalidraw/excalidraw) | [excalidraw-excalidraw-深度调研.md](excalidraw-excalidraw-深度调研.md) |
 
-### F（2 个）
+### F（3 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`firecrawl/firecrawl`](https://github.com/firecrawl/firecrawl) | [firecrawl-firecrawl-深度调研.md](firecrawl-firecrawl-深度调研.md) |
 | [`Forsy-AI/agent-apprenticeship`](https://github.com/Forsy-AI/agent-apprenticeship) | [Forsy-AI-agent-apprenticeship-深度调研.md](Forsy-AI-agent-apprenticeship-深度调研.md) |
+| [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md) |
 
-### G（13 个）
+### G（14 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -156,6 +159,7 @@ github-project-research/
 | [`greensock/GSAP`](https://github.com/greensock/GSAP) | [greensock-GSAP-深度调研.md](greensock-GSAP-深度调研.md) |
 | [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) | [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md) |
 | [`google-labs-code/design.md`](https://github.com/google-labs-code/design.md) | [google-labs-code-design.md-深度调研.md](google-labs-code-design.md-深度调研.md) |
+| [`gastownhall/beads`](https://github.com/gastownhall/beads) | [gastownhall-beads-深度调研.md](gastownhall-beads-深度调研.md) |
 
 ### H（4 个）
 
@@ -354,13 +358,14 @@ github-project-research/
 |------------|----------|
 | [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) | [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md) |
 
-### Z（3 个）
+### Z（4 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`zai-org/GLM-5`](https://github.com/zai-org/GLM-5) | [zai-org-GLM-5-深度调研.md](zai-org-GLM-5-深度调研.md) |
 | [`zarazhangrui/beautiful-html-templates`](https://github.com/zarazhangrui/beautiful-html-templates) | [zarazhangrui-beautiful-html-templates-深度调研.md](zarazhangrui-beautiful-html-templates-深度调研.md) |
 | [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) | [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md) |
+| [`zai-org/Open-AutoGLM`](https://github.com/zai-org/Open-AutoGLM) | [zai-org-Open-AutoGLM-深度调研.md](zai-org-Open-AutoGLM-深度调研.md) |
 
 ---
 
@@ -415,6 +420,7 @@ github-project-research/
 - [`n8n-io/n8n`](https://github.com/n8n-io/n8n) — [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md)
 - [`browserbase/stagehand`](https://github.com/browserbase/stagehand) — [browserbase-stagehand-深度调研.md](browserbase-stagehand-深度调研.md)
 - [`aws/agent-toolkit-for-aws`](https://github.com/aws/agent-toolkit-for-aws) — [aws-agent-toolkit-for-aws-深度调研.md](aws-agent-toolkit-for-aws-深度调研.md)
+- [`zai-org/Open-AutoGLM`](https://github.com/zai-org/Open-AutoGLM) — [zai-org-Open-AutoGLM-深度调研.md](zai-org-Open-AutoGLM-深度调研.md)
 
 ### LLM / 推理框架 🆕
 
@@ -435,6 +441,8 @@ github-project-research/
 - [`withkynam/vibecode-pro-max-kit`](https://github.com/withkynam/vibecode-pro-max-kit) — [withkynam-vibecode-pro-max-kit-深度调研.md](withkynam-vibecode-pro-max-kit-深度调研.md)
 - [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) — [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md)
 - [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) — [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md)
+- [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) — [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md)
+- [`davila7/claude-code-templates`](https://github.com/davila7/claude-code-templates) — [davila7-claude-code-templates-深度调研.md](davila7-claude-code-templates-深度调研.md)
 
 ### RAG / 知识库 / 记忆
 
@@ -445,6 +453,7 @@ github-project-research/
 - [`supermemoryai/supermemory`](https://github.com/supermemoryai/supermemory) — [supermemoryai-supermemory-深度调研.md](supermemoryai-supermemory-深度调研.md)
 - [`topoteretes/cognee`](https://github.com/topoteretes/cognee) — [topoteretes-cognee-深度调研.md](topoteretes-cognee-深度调研.md)
 - [`mem0ai/mem0`](https://github.com/mem0ai/mem0) — [mem0ai-mem0-深度调研.md](mem0ai-mem0-深度调研.md)
+- [`gastownhall/beads`](https://github.com/gastownhall/beads) — [gastownhall-beads-深度调研.md](gastownhall-beads-深度调研.md)
 
 ### 开发工具 / CLI
 
@@ -455,6 +464,7 @@ github-project-research/
 - [`larksuite/cli`](https://github.com/larksuite/cli) — [larksuite-cli-深度调研.md](larksuite-cli-深度调研.md)
 - [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) — [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md)
 - [`Stirling-Tools/Stirling-PDF`](https://github.com/Stirling-Tools/Stirling-PDF) — [Stirling-Tools-Stirling-PDF-深度调研.md](Stirling-Tools-Stirling-PDF-深度调研.md)
+- [`coreybutler/nvm-windows`](https://github.com/coreybutler/nvm-windows) — [coreybutler-nvm-windows-深度调研.md](coreybutler-nvm-windows-深度调研.md)
 
 ### 前端 / 设计 / UI
 
