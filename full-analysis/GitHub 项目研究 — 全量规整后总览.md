@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 259                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 263                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -142,7 +142,7 @@ github-project-research/
 | [`Forsy-AI/agent-apprenticeship`](https://github.com/Forsy-AI/agent-apprenticeship) | [Forsy-AI-agent-apprenticeship-深度调研.md](Forsy-AI-agent-apprenticeship-深度调研.md) |
 | [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md) |
 
-### G（14 个）
+### G（15 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -160,6 +160,7 @@ github-project-research/
 | [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) | [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md) |
 | [`google-labs-code/design.md`](https://github.com/google-labs-code/design.md) | [google-labs-code-design.md-深度调研.md](google-labs-code-design.md-深度调研.md) |
 | [`gastownhall/beads`](https://github.com/gastownhall/beads) | [gastownhall-beads-深度调研.md](gastownhall-beads-深度调研.md) |
+| [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify) | [Graphify-Labs-graphify-深度调研.md](Graphify-Labs-graphify-深度调研.md) |
 
 ### H（4 个）
 
@@ -287,7 +288,7 @@ github-project-research/
 | [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo) | [ruvnet-ruflo-深度调研.md](ruvnet-ruflo-深度调研.md) |
 | [`ruvnet/RuView`](https://github.com/ruvnet/RuView) | [ruvnet-RuView-深度调研.md](ruvnet-RuView-深度调研.md) |
 
-### S（16 个）
+### S（19 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -307,6 +308,9 @@ github-project-research/
 | [`sveltejs/svelte`](https://github.com/sveltejs/svelte) | [sveltejs-svelte-深度调研.md](sveltejs-svelte-深度调研.md) |
 | [`sybil-solutions/codex-shim`](https://github.com/sybil-solutions/codex-shim) | [sybil-solutions-codex-shim-深度调研.md](sybil-solutions-codex-shim-深度调研.md) |
 | [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) | [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md) |
+| [`github/spec-kit`](https://github.com/github/spec-kit) | [github-spec-kit-深度调研.md](github-spec-kit-深度调研.md) |
+| [`moeru-ai/airi`](https://github.com/moeru-ai/airi) | [moeru-ai-airi-深度调研.md](moeru-ai-airi-深度调研.md) |
+| [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) | [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md) |
 
 ### T（5 个）
 
@@ -443,6 +447,8 @@ github-project-research/
 - [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) — [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md)
 - [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) — [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md)
 - [`davila7/claude-code-templates`](https://github.com/davila7/claude-code-templates) — [davila7-claude-code-templates-深度调研.md](davila7-claude-code-templates-深度调研.md)
+- [`github/spec-kit`](https://github.com/github/spec-kit) — [github-spec-kit-深度调研.md](github-spec-kit-深度调研.md)
+- [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify) — [Graphify-Labs-graphify-深度调研.md](Graphify-Labs-graphify-深度调研.md)
 
 ### RAG / 知识库 / 记忆
 
@@ -474,6 +480,7 @@ github-project-research/
 - [`github.com/penpot`](https://github.com/penpot) — [github.com-penpot-深度调研.md](github.com-penpot-深度调研.md)
 - [`JimLiu/baoyu-design`](https://github.com/JimLiu/baoyu-design) — [JimLiu-baoyu-design-深度调研.md](JimLiu-baoyu-design-深度调研.md)
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
+- [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) — [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md)
 
 ### 视频 / 音频 / 多媒体
 
@@ -486,6 +493,7 @@ github-project-research/
 - [`NVIDIA/cosmos`](https://github.com/NVIDIA/cosmos) — [NVIDIA-cosmos-深度调研.md](NVIDIA-cosmos-深度调研.md)
 - [`Open-LLM-VTuber/Open-LLM-VTuber`](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) — [Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md](Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md)
 - [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) — [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md)
+- [`moeru-ai/airi`](https://github.com/moeru-ai/airi) — [moeru-ai-airi-深度调研.md](moeru-ai-airi-深度调研.md)
 
 ### 安全 / 运维 / 系统工具
 

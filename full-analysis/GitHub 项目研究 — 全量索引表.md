@@ -137,7 +137,7 @@
 | 121 | [`sapientinc/HRM-Text`](https://github.com/sapientinc/HRM-Text) | — | — | — | [sapientinc-HRM-Text-深度调研.md](sapientinc-HRM-Text-深度调研.md) |
 | 122 | [`searxng/searxng`](https://github.com/searxng/searxng) | — | 31,832 | 2026-06-10 | [searxng-searxng-深度调研.md](searxng-searxng-深度调研.md) |
 | 123 | [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) | Remove-MS-Edge | 2 | 2026-06-19 | [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md) |
-| 124 | [`safishamsi/graphify`](https://github.com/safishamsi/graphify) | AI 编程助手 Skill——把代码/文档/图片/视频建成可查询的知识图谱，77k⭐ | 77,003 | 2026-07-04 | [safishamsi-graphify-深度调研.md](safishamsi-graphify-深度调研.md) |
+| 124 | [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify) | 代码知识图谱技能——tree-sitter 本地建图、边带置信标签、MCP server，替代 grep/RAG | 84,377 | 2026-07-14 | [Graphify-Labs-graphify-深度调研.md](Graphify-Labs-graphify-深度调研.md) |
 | 125 | [`shanraisshan/claude-code-best-practice`](https://github.com/shanraisshan/claude-code-best-practice) | 📘  — Claude Code 最佳实践指南 | 59,344 | 2026-06-24 | [shanraisshan-claude-code-best-practice-深度调研.md](shanraisshan-claude-code-best-practice-深度调研.md) |
 | 125 | [`ShareX/ShareX`](https://github.com/ShareX/ShareX) | ShareX 是一款免费开源的屏幕截图、录屏和文件共享工具，单次按键即可完成捕获或录制，并支持上传到多种目标服务。📖 核心功能屏幕截图：区域/窗口/全屏/滚动截 | 38,060 | 2026-06-12 | [ShareX-ShareX-深度调研.md](ShareX-ShareX-深度调研.md) |
 | 126 | [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | GitHub Star 最多的项目（46.7 万⭐）——由 Sindre Sorhus 维护的「Awesome 列表之列表」，一个以人工审核为核心的质量索引体系 | 467,891 | 2026-05-05 | [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md) |
@@ -229,7 +229,7 @@
 | 211 | [`nexu-io/open-design`](https://github.com/nexu-io/open-design) | Vibe Design Workspace & 开源 Claude Design 平替——本地优先 AI 设计工作流编排器，25 种 Agent 适配器 + 150+ DESIGN.md + 261 插件的结构化流程引擎 | 74,675 | 2026-07-04 | [nexu-io-open-design-深度调研.md](nexu-io-open-design-深度调研.md) |
 | 212 | [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) | 重新定义软件与 AI Agent 交互方式——HARNESS.md 方法论 + CLI-Hub 托管平台，让任意软件零改代码成为 Agent 原生 | 44,666 | 2026-07-04 | [HKUDS-CLI-Anything-深度调研.md](HKUDS-CLI-Anything-深度调研.md) |
 | 213 | [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) | 首个为 AI Agent 设计的全功能 Office 套件——单二进制操作 Word/Excel/PPT，含 HTML 渲染引擎实现 render→look→fix 闭环 | 14,303 | 2026-07-11 | [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md) |
-| 214 | [`safishamsi/graphify`](https://github.com/safishamsi/graphify) | AI 编程助手的知识图谱编译器——AST+LLM 双通道提取，71.5x Token 压缩，15+ 编程助手 Skill 跨平台运行 | 77,000 | 2026-07-04 | [safishamsi-graphify-深度调研.md](safishamsi-graphify-深度调研.md) |
+| 214 | [`github/spec-kit`](https://github.com/github/spec-kit) | GitHub 官方 Spec-Driven Development 工具包——CLI + 模板系统 + Bundle，规范即可执行产物，30+ Agent 适配 | 120,478 | 2026-07-14 | [github-spec-kit-深度调研.md](github-spec-kit-深度调研.md) |
 | 215 | [`agentskills/agentskills`](https://github.com/agentskills/agentskills) | Agent Skills 开放标准——Anthropic+OpenAI 联合背书，39+ 产品支持，跨平台 SKILL.md 规范，三层渐进式暴露 | 21,954 | 2026-07-04 | [agentskills-agentskills-深度调研.md](agentskills-agentskills-深度调研.md) |
 | 216 | [`harvard-edge/cs249r_book`](https://github.com/harvard-edge/cs249r_book) | 哈佛 CS249r 开源教科书——《Machine Learning Systems》从系统级视角构建/优化/部署 AI，TinyTorch 手搓框架+四件套学习栈 | 26,108 | 2026-07-04 | [harvard-edge-cs249r_book-深度调研.md](harvard-edge-cs249r_book-深度调研.md) |
 | 217 | [`jgm/pandoc`](https://github.com/jgm/pandoc) | 通用文档转换器——纯 Haskell 实现，AST 中间表示+嵌入式 Lua+Lua 过滤器生态，支持 60+ 格式互转，200 万行测试保障 | 45,217 | 2026-07-05 | [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md) |
@@ -268,6 +268,8 @@
 | 250 | [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) | Anthropic 官方 Claude 实践代码合集（可跑 Notebook + 自举 Claude Code harness 质量门禁） | 47,842 | 2026-07-12 | [anthropics-claude-cookbooks-深度调研.md](anthropics-claude-cookbooks-深度调研.md) |
 | 251 | [`google/langextract`](https://github.com/google/langextract) | Google LLM 结构化提取库——源定位 Grounding + 交互式可视化审阅，多模型/本地部署 | 37,130 | 2026-07-12 | [google-langextract-深度调研.md](google-langextract-深度调研.md) |
 | 252 | [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) | 联想 Legion/Vantage 开源替代——零遥测无后台服务，已归档 | 7,563 | 2026-07-12 | [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md) |
+| 253 | [`moeru-ai/airi`](https://github.com/moeru-ai/airi) | 自托管 AI VTuber/数字人容器——WebGPU+VRM/Live2D，能聊能玩 Minecraft/Factorio | 41,798 | 2026-07-14 | [moeru-ai-airi-深度调研.md](moeru-ai-airi-深度调研.md) |
+| 254 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) | Together AI 反 AI 味设计技能——57 道 slop 门 + 6 轴自批判 + 结构多样，拒绝模板味 | 4,963 | 2026-07-14 | [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md) |
 
 ---
 
@@ -359,7 +361,7 @@
 - [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) — [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 
-### AI 编码 / Skill 技能（16）
+### AI 编码 / Skill 技能（17）
 
 - [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
@@ -367,7 +369,8 @@
 - [`colbymchenry/codegraph`](https://github.com/colbymchenry/codegraph) — [colbymchenry-codegraph-深度调研.md](colbymchenry-codegraph-深度调研.md)
 - [`DeusData/codebase-memory-mcp`](https://github.com/DeusData/codebase-memory-mcp) — [DeusData-codebase-memory-mcp-深度调研.md](DeusData-codebase-memory-mcp-深度调研.md)
 - [`Doorman11991/smallcode`](https://github.com/Doorman11991/smallcode) — [Doorman11991-smallcode-深度调研.md](Doorman11991-smallcode-深度调研.md)
-- [`safishamsi/graphify`](https://github.com/safishamsi/graphify) — [safishamsi-graphify-深度调研.md](safishamsi-graphify-深度调研.md)
+- [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify) — [Graphify-Labs-graphify-深度调研.md](Graphify-Labs-graphify-深度调研.md)
+- [`github/spec-kit`](https://github.com/github/spec-kit) — [github-spec-kit-深度调研.md](github-spec-kit-深度调研.md)
 - [`shanraisshan/claude-code-best-practice`](https://github.com/shanraisshan/claude-code-best-practice) — [shanraisshan-claude-code-best-practice-深度调研.md](shanraisshan-claude-code-best-practice-深度调研.md)
 - [`sybil-solutions/codex-shim`](https://github.com/sybil-solutions/codex-shim) — [sybil-solutions-codex-shim-深度调研.md](sybil-solutions-codex-shim-深度调研.md)
 - [`withkynam/vibecode-pro-max-kit`](https://github.com/withkynam/vibecode-pro-max-kit) — [withkynam-vibecode-pro-max-kit-深度调研.md](withkynam-vibecode-pro-max-kit-深度调研.md)
@@ -411,7 +414,7 @@
 
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 
-### 前端 / 设计 / UI（10）
+### 前端 / 设计 / UI（11）
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
 - [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) — [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md)
@@ -422,8 +425,9 @@
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
 - [`facebook/astryx`](https://github.com/facebook/astryx) — [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md)
 - [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) — [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md)
+- [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) — [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md)
 
-### 视频 / 音频 / 多媒体（13）
+### 视频 / 音频 / 多媒体（14）
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
 - [`immich-app/immich`](https://github.com/immich-app/immich) — [immich-app-immich-深度调研.md](immich-app-immich-深度调研.md)
@@ -438,6 +442,7 @@
 - [`3b1b/manim`](https://github.com/3b1b/manim) — [3b1b-manim-深度调研.md](3b1b-manim-深度调研.md)
 - [`ATH-MaaS/Pixelle-Video`](https://github.com/ATH-MaaS/Pixelle-Video) — [ATH-MaaS-Pixelle-Video-深度调研.md](ATH-MaaS-Pixelle-Video-深度调研.md)
 - [`lllyasviel/stable-diffusion-webui-forge`](https://github.com/lllyasviel/stable-diffusion-webui-forge) — [lllyasviel-stable-diffusion-webui-forge-深度调研.md](lllyasviel-stable-diffusion-webui-forge-深度调研.md)
+- [`moeru-ai/airi`](https://github.com/moeru-ai/airi) — [moeru-ai-airi-深度调研.md](moeru-ai-airi-深度调研.md)
 
 ### 计算机视觉 / CV（1） 🆕
 
