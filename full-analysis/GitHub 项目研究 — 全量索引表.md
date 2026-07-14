@@ -115,7 +115,7 @@
 | 99 | [`Open-LLM-VTuber/Open-LLM-VTuber`](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) | 可打断语音交互 + Live2D 虚拟形象的 AI 伴侣——全本地运行、多后端支持、跨平台桌面 AI 交互框架 | 12,202 | 2026-07-01 | [Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md](Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md) |
 | 100 | [`openai/plugins`](https://github.com/openai/plugins) | OpenAI Plugins 的官方参考实现。二、核心分析注意：这是一个"参考仓库"这个仓库不是生产级工具，而是 OpenAI 官方发布的 Plugins 规范 | 2,947 | 2026-06-14 | [openai-plugins-深度调研.md](openai-plugins-深度调研.md) |
 | 101 | [`openclaw/openclaw`](https://github.com/openclaw/openclaw) | GitHub Star 第三多的 AI Agent 平台（37.3 万⭐）——由同一作者维护的跨平台 AI 助手，支持 Any OS / Any Platfor | 373,050 | 2026-05-19 | [openclaw-openclaw-深度调研.md](openclaw-openclaw-深度调研.md) |
-| 102 | [`OpenCut-app/OpenCut`](https://github.com/OpenCut-app/OpenCut) | — | — | — | [OpenCut-app-OpenCut-深度调研.md](OpenCut-app-OpenCut-深度调研.md) |
+| 102 | [`OpenCut-app/OpenCut`](https://github.com/OpenCut-app/OpenCut) | 开源版 CapCut——Web/桌面/移动端同源的免费视频编辑器，Rust 核心 + 插件优先 + MCP/Headless 蓝图 | 68,972 | 2026-07-15 | [OpenCut-app-OpenCut-深度调研.md](OpenCut-app-OpenCut-深度调研.md) |
 | 103 | [`opencv/opencv`](https://github.com/opencv/opencv) | 开源计算机视觉库。行业标准级项目。二、核心分析OpenCV 5.0.0 (2026-06-06)刚刚发布！这是 OpenCV 诞生 14 年后的第五个主版本。见 | 89,034 | 2026-06-14 | [opencv-opencv-深度调研.md](opencv-opencv-深度调研.md) |
 | 104 | [`OthmanAdi/planning-with-files`](https://github.com/OthmanAdi/planning-with-files) | — | — | 2026-06-19 | [OthmanAdi-planning-with-files-深度调研.md](OthmanAdi-planning-with-files-深度调研.md) |
 | 105 | [`Panniantong/Agent-Reach`](https://github.com/Panniantong/Agent-Reach) | 零 API 费用的 AI Agent 互联网能力脚手架——安装即弃架构，支持 Twitter/B站/小红书等 15+ 平台，4 个月 45K ⭐ | 45,550 | 2026-06-30 | [Panniantong-Agent-Reach-深度调研.md](Panniantong-Agent-Reach-深度调研.md) |
@@ -270,6 +270,8 @@
 | 252 | [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) | 联想 Legion/Vantage 开源替代——零遥测无后台服务，已归档 | 7,563 | 2026-07-12 | [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md) |
 | 253 | [`moeru-ai/airi`](https://github.com/moeru-ai/airi) | 自托管 AI VTuber/数字人容器——WebGPU+VRM/Live2D，能聊能玩 Minecraft/Factorio | 41,798 | 2026-07-14 | [moeru-ai-airi-深度调研.md](moeru-ai-airi-深度调研.md) |
 | 254 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) | Together AI 反 AI 味设计技能——57 道 slop 门 + 6 轴自批判 + 结构多样，拒绝模板味 | 4,963 | 2026-07-14 | [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md) |
+| 255 | [`Dicklesworthstone/destructive_command_guard`](https://github.com/Dicklesworthstone/destructive_command_guard) | Agent 原生命令护栏——Rust 写的 hook，AST 语义匹配 + 50+ 安全包拦截 AI Agent 的破坏性 git/shell 命令 | 4,285 | 2026-07-15 | [Dicklesworthstone-destructive_command_guard-深度调研.md](Dicklesworthstone-destructive_command_guard-深度调研.md) |
+| 256 | [`virattt/ai-hedge-fund`](https://github.com/virattt/ai-hedge-fund) | "投资大师即 Agent"的多智能体对冲基金模拟——LangGraph 编排 + React Flow 可视化，纯教育不交易 | 61,797 | 2026-07-15 | [virattt-ai-hedge-fund-深度调研.md](virattt-ai-hedge-fund-深度调研.md) |
 
 ---
 
@@ -448,11 +450,12 @@
 
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 
-### 安全 / 运维 / 系统工具（8）
+### 安全 / 运维 / 系统工具（9）
 
 - [`Raphire/Win11Debloat`](https://github.com/Raphire/Win11Debloat) — [Raphire-Win11Debloat-深度调研.md](Raphire-Win11Debloat-深度调研.md)
 - [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) — [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md)
 - [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) — [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md)
+- [`Dicklesworthstone/destructive_command_guard`](https://github.com/Dicklesworthstone/destructive_command_guard) — [Dicklesworthstone-destructive_command_guard-深度调研.md](Dicklesworthstone-destructive_command_guard-深度调研.md)
 - [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) — [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md)
 - [`usestrix/strix`](https://github.com/usestrix/strix) — [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md)
 - [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) — [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md)
@@ -471,7 +474,7 @@
 - [`microsoft/AI-For-Beginners`](https://github.com/microsoft/AI-For-Beginners) — [microsoft-AI-For-Beginners-深度调研.md](microsoft-AI-For-Beginners-深度调研.md)
 - [`openai/openai-cookbook`](https://github.com/openai/openai-cookbook) — [openai-openai-cookbook-深度调研.md](openai-openai-cookbook-深度调研.md)
 
-### 其他（72）
+### 其他（73）
 
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
 - [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) — [srbhr-Resume-Matcher-深度调研.md](srbhr-Resume-Matcher-深度调研.md)
@@ -516,6 +519,7 @@
 - [`Normation/rudder`](https://github.com/Normation/rudder) — [Normation-rudder-深度调研.md](Normation-rudder-深度调研.md)
 - [`op7418/Humanizer-zh`](https://github.com/op7418/Humanizer-zh) — [op7418-Humanizer-zh-深度调研.md](op7418-Humanizer-zh-深度调研.md)
 - [`OpenCut-app/OpenCut`](https://github.com/OpenCut-app/OpenCut) — [OpenCut-app-OpenCut-深度调研.md](OpenCut-app-OpenCut-深度调研.md)
+- [`virattt/ai-hedge-fund`](https://github.com/virattt/ai-hedge-fund) — [virattt-ai-hedge-fund-深度调研.md](virattt-ai-hedge-fund-深度调研.md)
 - [`opencv/opencv`](https://github.com/opencv/opencv) — [opencv-opencv-深度调研.md](opencv-opencv-深度调研.md)
 - [`OthmanAdi/planning-with-files`](https://github.com/OthmanAdi/planning-with-files) — [OthmanAdi-planning-with-files-深度调研.md](OthmanAdi-planning-with-files-深度调研.md)
 - [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) — [pbakaus-impeccable-深度调研.md](pbakaus-impeccable-深度调研.md)

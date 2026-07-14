@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 263                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 264                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -112,7 +112,7 @@ github-project-research/
 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) | [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md) |
 | [`coreybutler/nvm-windows`](https://github.com/coreybutler/nvm-windows) | [coreybutler-nvm-windows-深度调研.md](coreybutler-nvm-windows-深度调研.md) |
 
-### D（7 个）
+### D（8 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -123,6 +123,7 @@ github-project-research/
 | [`Doorman11991/smallcode`](https://github.com/Doorman11991/smallcode) | [Doorman11991-smallcode-深度调研.md](Doorman11991-smallcode-深度调研.md) |
 | [`dreammis/social-auto-upload`](https://github.com/dreammis/social-auto-upload) | [dreammis-social-auto-upload-深度调研.md](dreammis-social-auto-upload-深度调研.md) |
 | [`davila7/claude-code-templates`](https://github.com/davila7/claude-code-templates) | [davila7-claude-code-templates-深度调研.md](davila7-claude-code-templates-深度调研.md) |
+| [`Dicklesworthstone/destructive_command_guard`](https://github.com/Dicklesworthstone/destructive_command_guard) | [Dicklesworthstone-destructive_command_guard-深度调研.md](Dicklesworthstone-destructive_command_guard-深度调研.md) |
 
 ### E（5 个）
 
@@ -328,7 +329,7 @@ github-project-research/
 |------------|----------|
 | [`unclecode/crawl4ai`](https://github.com/unclecode/crawl4ai) | [unclecode-crawl4ai-深度调研.md](unclecode-crawl4ai-深度调研.md) |
 
-### V（4 个）
+### V（5 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -337,6 +338,7 @@ github-project-research/
 | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | [VoltAgent-awesome-design-md-深度调研.md](VoltAgent-awesome-design-md-深度调研.md) |
 | [`vorpus/performativeUI`](https://github.com/vorpus/performativeUI) | [vorpus-performativeUI-深度调研.md](vorpus-performativeUI-深度调研.md) |
 | [`viitor-ai/viitor-voice-nar`](https://github.com/viitor-ai/viitor-voice-nar) | [viitor-ai-viitor-voice-nar-深度调研.md](viitor-ai-viitor-voice-nar-深度调研.md) |
+| [`virattt/ai-hedge-fund`](https://github.com/virattt/ai-hedge-fund) | [virattt-ai-hedge-fund-深度调研.md](virattt-ai-hedge-fund-深度调研.md) |
 
 ### W（4 个）
 
@@ -500,6 +502,7 @@ github-project-research/
 - [`Raphire/Win11Debloat`](https://github.com/Raphire/Win11Debloat) — [Raphire-Win11Debloat-深度调研.md](Raphire-Win11Debloat-深度调研.md)
 - [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) — [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md)
 - [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) — [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md)
+- [`Dicklesworthstone/destructive_command_guard`](https://github.com/Dicklesworthstone/destructive_command_guard) — [Dicklesworthstone-destructive_command_guard-深度调研.md](Dicklesworthstone-destructive_command_guard-深度调研.md)
 
 ### 学习资料 / 方法论
 
@@ -553,6 +556,7 @@ github-project-research/
 - [`Normation/rudder`](https://github.com/Normation/rudder) — [Normation-rudder-深度调研.md](Normation-rudder-深度调研.md)
 - [`op7418/Humanizer-zh`](https://github.com/op7418/Humanizer-zh) — [op7418-Humanizer-zh-深度调研.md](op7418-Humanizer-zh-深度调研.md)
 - [`OpenCut-app/OpenCut`](https://github.com/OpenCut-app/OpenCut) — [OpenCut-app-OpenCut-深度调研.md](OpenCut-app-OpenCut-深度调研.md)
+- [`virattt/ai-hedge-fund`](https://github.com/virattt/ai-hedge-fund) — [virattt-ai-hedge-fund-深度调研.md](virattt-ai-hedge-fund-深度调研.md)
 - [`opencv/opencv`](https://github.com/opencv/opencv) — [opencv-opencv-深度调研.md](opencv-opencv-深度调研.md)
 - [`OthmanAdi/planning-with-files`](https://github.com/OthmanAdi/planning-with-files) — [OthmanAdi-planning-with-files-深度调研.md](OthmanAdi-planning-with-files-深度调研.md)
 - [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) — [pbakaus-impeccable-深度调研.md](pbakaus-impeccable-深度调研.md)
