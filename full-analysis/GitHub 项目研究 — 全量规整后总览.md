@@ -244,11 +244,12 @@ github-project-research/
 | [`NVIDIA/SkillSpector`](https://github.com/NVIDIA/SkillSpector) | [NVIDIA-SkillSpector-深度调研.md](NVIDIA-SkillSpector-深度调研.md) |
 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md) |
 
-### O（11 个）
+### O（12 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`obra/superpowers`](https://github.com/obra/superpowers) | [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md) |
+| [`odysseus-dev/odysseus`](https://github.com/odysseus-dev/odysseus) | [odysseus-dev-odysseus-深度调研.md](odysseus-dev-odysseus-深度调研.md) |
 | [`op7418/guizang-social-card-skill`](https://github.com/op7418/guizang-social-card-skill) | [op7418-guizang-social-card-skill-深度调研.md](op7418-guizang-social-card-skill-深度调研.md) |
 | [`op7418/Humanizer-zh`](https://github.com/op7418/Humanizer-zh) | [op7418-Humanizer-zh-深度调研.md](op7418-Humanizer-zh-深度调研.md) |
 | [`Open-LLM-VTuber/Open-LLM-VTuber`](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) | [Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md](Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md) |
@@ -260,13 +261,12 @@ github-project-research/
 | [`ollama/ollama`](https://github.com/ollama/ollama) | [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md) |
 | [`opendatalab/MinerU`](https://github.com/opendatalab/MinerU) | [opendatalab-MinerU-深度调研.md](opendatalab-MinerU-深度调研.md) |
 
-### P（5 个）
+### P（4 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`Panniantong/Agent-Reach`](https://github.com/Panniantong/Agent-Reach) | [Panniantong-Agent-Reach-深度调研.md](Panniantong-Agent-Reach-深度调研.md) |
 | [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) | [pbakaus-impeccable-深度调研.md](pbakaus-impeccable-深度调研.md) |
-| [`pewdiepie-archdaemon/odysseus`](https://github.com/pewdiepie-archdaemon/odysseus) | [pewdiepie-archdaemon-odysseus-深度调研.md](pewdiepie-archdaemon-odysseus-深度调研.md) |
 | [`phuryn/pm-skills`](https://github.com/phuryn/pm-skills) | [phuryn-pm-skills-深度调研.md](phuryn-pm-skills-深度调研.md) |
 | [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) | [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md) |
 
@@ -560,7 +560,7 @@ github-project-research/
 - [`opencv/opencv`](https://github.com/opencv/opencv) — [opencv-opencv-深度调研.md](opencv-opencv-深度调研.md)
 - [`OthmanAdi/planning-with-files`](https://github.com/OthmanAdi/planning-with-files) — [OthmanAdi-planning-with-files-深度调研.md](OthmanAdi-planning-with-files-深度调研.md)
 - [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) — [pbakaus-impeccable-深度调研.md](pbakaus-impeccable-深度调研.md)
-- [`pewdiepie-archdaemon/odysseus`](https://github.com/pewdiepie-archdaemon/odysseus) — [pewdiepie-archdaemon-odysseus-深度调研.md](pewdiepie-archdaemon-odysseus-深度调研.md)
+- [`odysseus-dev/odysseus`](https://github.com/odysseus-dev/odysseus) — [odysseus-dev-odysseus-深度调研.md](odysseus-dev-odysseus-深度调研.md)
 - [`qiuqiubuchongle/cloud-chokepoint-atlas`](https://github.com/qiuqiubuchongle/cloud-chokepoint-atlas) — [qiuqiubuchongle-cloud-chokepoint-atlas-深度调研.md](qiuqiubuchongle-cloud-chokepoint-atlas-深度调研.md)
 - [`refactoringhq/tolaria`](https://github.com/refactoringhq/tolaria) — [refactoringhq-tolaria-深度调研.md](refactoringhq-tolaria-深度调研.md)
 - [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo) — [ruvnet-ruflo-深度调研.md](ruvnet-ruflo-深度调研.md)

@@ -1,92 +1,145 @@
-# 🔍 heygen-com/hyperframes — 深度调研报告
+# 🔬 heygen-com/hyperframes — 全方位深度调研
 
-> **HeyGen 开源：写 HTML，渲染视频，专为 Agent 打造** | 29.9K ⭐ | Apache 2.0 | 2026-04 开源
+> **调研日期**：2026-07-16 | **数据来源**：GitHub API + README + 源码树（重写自 4.3KB 占位报告）
+> **定位一句话**：HTML 原生的确定性视频渲染框架——「写 HTML，渲染视频，为 Agent 而生」，用无头 Chrome 逐帧 seek + FFmpeg 编码产出可复现的 MP4。
 
 ---
 
-## 📌 项目定位
+## 📌 项目亮点（5 条差异化）
 
-HyperFrames 是 HeyGen（AI 视频 + AI 数字人平台）开源的 **HTML 视频渲染框架**。核心理念直击要害：
-
-> **Write HTML. Render video. Built for agents.**
-
-开发者或 AI Agent 只需使用 **HTML + CSS + JS + GSAP** 编写视频画面，即可通过浏览器实时预览并最终渲染为 MP4 视频文件。它本质上是用「写网页」的方式「做视频」。
+1. **HTML 原生，零构建**：视频即一个带 `data-*` 属性的 HTML 文件，浏览器直接预览，`index.html` 即播即渲染——**不需要 React、不需要打包器**（直击 Remotion 的痛点）。
+2. **确定性渲染**：同一份输入 → 同一帧 → 同一输出。基于无头 Chrome seek + FFmpeg 编码，天然适配 CI、回归测试、自动化渲染流水线。
+3. **Agent 优先 + 19 个技能**：`/hyperframes` 是路由器，按需加载领域技能（视频/幻灯片/合成端口）；技能教 Agent 走「规划→写合法 HTML→接可 seek 动画→加媒体→lint→预览→渲染」生产闭环。
+4. **`frame.md` 设计反演**：把 Web 设计系统（design.md）**反演为镜头专用 DESIGN.md 超集**，让 Agent 能在不猜缩放、不引入 Web chrome 的前提下用品牌 token 合成视频。
+5. **Apache-2.0 + 真开源 + HeyGen 背书**：无按渲染计费、无商用门槛；背后是商业 AI 视频/数字人公司 HeyGen——典型的「开源占标准、标准反哺商业」护城河策略。
 
 ---
 
 ## 🏗️ 核心架构
 
-### 技术栈
-
-| 组件 | 技术 | 说明 |
-|------|------|------|
-| 渲染引擎 | Chromium 浏览器 | 利用浏览器渲染管线逐帧捕捉 |
-| 动画库 | GSAP (GreenSock) | 行业标准 Web 动画库，精确帧控制 |
-| 构建工具 | Vite + TypeScript | 现代化的前端构建链 |
-| 运行时 | Node.js + CLI | npx hyperframes 命令驱动 |
-
-### 工作流程
-
 ```
-HTML/CSS/JS 编写 → npx hyperframes preview（实时预览）→ npx hyperframes render（输出 MP4）
-      ↑                    ↑                              ↑
-  Agent 生成          浏览器实时预览                 静帧渲染
+packages/
+├── core / engine / producer   # 解析 composition → 驱动无头 Chrome → FFmpeg 编码 → 混音
+├── aws-lambda/                # 分布式渲染：CDK 渲染栈 + chromium.ts + handler.ts + s3Transport.ts
+├── studio/                    # 浏览器端预览/编辑 surface
+└── catalog/                   # 可复用 block：转场/叠层/字幕/图表/地图/特效
+.claude-plugin/  .codex-plugin/  .cursor-plugin/   # 各 Agent 的技能市场清单
+docs/  DESIGN.md  AGENTS.md  CL AUDE.md  DESIGN.md
 ```
 
-### 关键能力
+**渲染管线（How It Works）**：
 
-1. **全 HTML 可表达**：任何能在浏览器中渲染的 CSS 动画、SVG、Canvas、WebGL 效果，都可以直接成为视频画面。
-2. **GSAP 时间轴**：借助 GSAP 时间轴 API 控制每一帧的变换、透明度、位移。精度到毫秒级。
-3. **音视频同步**：支持音频轨道叠加，实现配音/背景音同步。
-4. **Agent 友好**：AI Agent 可以直接输出 HTML/CSS 源码，HyperFrames 负责渲染。无需理解传统视频编辑软件。
-5. **开源免费**：Apache 2.0 协议，可自托管、可商用。
+```
+HTML + data-start/duration/track-index
+   + GSAP / CSS / Lottie / Three.js / Anime.js / WAAPI 适配器动画
+        │
+        ▼
+浏览器即时预览（human + agent 同款输入）
+        │
+        ▼
+无头 Chrome 逐帧 seek → 截帧 → FFmpeg 编码 + 音频混音
+        │
+        ▼
+确定性 MP4（同输入 = 同帧 = 同输出）
+```
 
----
-
-## 💬 社区口碑
-
-| 维度 | 评价 |
-|------|------|
-| **Star 增长** | 2026-04 开源，一周暴涨 9.6K ⭐，目前 30K+ |
-| **用户评价** | 「视频版的 Vercel」—「终于不用学 AE 了」|
-| **采用情况** | 被多个 AI 视频工具链采用为新一代渲染后端 |
-| **主要争议** | 长视频性能受限，复杂效果需手动优化 GSAP 参数 |
-
-### 竞品对比
-
-| 项目 | 定位 | 核心差异 |
-|------|------|----------|
-| **HyperFrames** | 写 HTML 渲染视频 | 面向 Agent，纯 Web 技术栈，Apache 2.0 |
-| **Remotion** | React 视频框架 | 需 React 技能，面向开发者，较复杂 |
-| **Seedance** | AI 视频生成 | 黑盒生成，控制力弱 |
-| **After Effects** | 专业视频编辑 | 二进制格式，Git 不兼容，无法被 AI 生成 |
-
-### HyperFrames vs Remotion
-
-| 对比维度 | HyperFrames | Remotion |
-|----------|-------------|----------|
-| 技术栈 | HTML/CSS/JS + GSAP | React + Node.js |
-| Agent 友好度 | ⭐⭐⭐⭐⭐ 纯 HTML 输出即可 | ⭐⭐⭐ 需要理解 React 组件 |
-| 学习成本 | 极低（前端基础） | 中等（React 基础） |
-| 文件版本管理 | 纯文本，Git 友好 | 纯文本，Git 友好 |
-| 许可证 | Apache 2.0 | MIT（但对某些企业有限制） |
-| 长视频性能 | 中 | 优（逐帧渲染优化） |
+**架构判断**：渲染核心与「创作 surface / 技能 / Catalog / 云渲染」解耦。渲染引擎是纯 TS（headless Chrome + FFmpeg），与具体 Agent 框架无关；Agent 技能层通过 `.claude/.codex/.cursor-plugin` 多端分发，且 `--full-depth` 全量克隆避免技能滞后。这是「引擎开源 + 云/Studio 增值」的标准 SaaS 分层。
 
 ---
 
-## 🧠 核心研判
+## 💡 应用场景与启发
 
-1. **视频生产的「Vue/React 时刻」**：正如 Vue/React 将 UI 开发从手动 DOM 操作解放到声明式组件，HyperFrames 将视频制作从时间轴拖拽到声明式 HTML/CSS。这是视频生产的编程化拐点。
-2. **Agent 天生配对**：AI Agent 最擅长的事情之一是生成 HTML/CSS。HyperFrames 巧妙地利用了这个能力，把「AI 写网页」和「AI 做视频」无缝衔接。
-3. **标准化的胜利**：HTML 是世界上兼容性最好的文档格式。用 HTML 定义视频意味着模板可以 Git 管理、版本回退、社区贡献，这是传统视频格式（PR/AE 项目文件）完全做不到的。
-4. **HeyGen 的战略布局**：作为商业 AI 视频公司开源 HyperFrames，本质是 **用开源占领标准，用标准反哺商业**（类似 React 与 Meta）。这是典型的开源护城河策略。
-5. **风险**：长视频场景下，逐帧渲染效率不如 Remotion 等专门方案。此外 GSAP 虽强大但对新手有学习门槛。
+- **文档/PR/站点 → 视频**：PR walkthrough 带动效代码 diff + 旁白 + 字幕；Docs-to-video、Site-tour 讲解器。
+- **数据可视化视频**：chart race、地图动画、仪表盘播报（Catalog 直接提供 `data-chart` block）。
+- **社交媒体视频**：kinetic 字幕、叠层、BGM 自动化；可复用 motion graphics 进自动化内容流水线。
+- **`frame.md` 设计反演范式可复用**：任何「Web 设计系统 → 视频」的翻译都能借鉴「token 不变、规则反演、数值来自脚本」的思路。
+- **Agent 技能路由器模式可复用**：`/router` 按需派发领域技能 + on-demand 安装，比一次性塞满所有技能更省上下文，值得其他 Agent 工具链借鉴。
 
 ---
 
-## 🔗 关键链接
+## 🔍 源码深度解读（2 个核心模块）
 
-- GitHub: https://github.com/heygen-com/hyperframes
-- 官方文档: https://hyperframes.heygen.com
-- 快速开始: `npx hyperframes init my-video`
-- 许可证: Apache 2.0
+### 1. 组合模型：HTML + `data-*` 时间轴 + 适配器动画
+
+```html
+<div id="stage" data-composition-id="launch" data-start="0" data-width="1920" data-height="1080">
+  <video class="clip" data-start="0" data-duration="6" data-track-index="0" src="intro.mp4" muted></video>
+  <h1 id="title" class="clip" data-start="1" data-duration="4" data-track-index="1">Launch day</h1>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.from("#title", { opacity: 0, y: 40, duration: 0.8 }, 1);
+    window.__timelines = window.__timelines || {};
+    window.__timelines.launch = tl;   // 注册给 seek 引擎
+  </script>
+</div>
+```
+
+`data-start` / `data-duration` / `data-track-index` 把时间轴声明进 DOM；动画运行时（GSAP 等）把 timeline 挂到 `window.__timelines` 供渲染器按帧 seek。**人类写 HTML、Agent 写 HTML、渲染器读 HTML——三者同构，这是它「agent-friendly」的本质。**
+
+### 2. 渲染引擎：无头 Chrome seek + FFmpeg 编码（确定性）
+
+引擎骨架（基于 README Stack 表与 `packages/aws-lambda/src/chromium.ts`、`handler.ts`）：
+
+```
+parseComposition(html) → 提取 clips/tracks/timelines
+  → for each frame t in [0, duration*fps]:
+        headlessChrome.goto(html); window.__timelines[id].seek(t/fps); screenshot()
+  → ffmpeg concat frames + mix audio tracks → deterministic MP4
+```
+
+`packages/aws-lambda` 用 CDK 起渲染栈，`handler.ts` 收渲染任务、`chromium.ts` 管无头实例、`s3Transport.ts` 回传产物——把同样的「seek+encode」逻辑搬到云端分布式渲染。**确定性来自「按帧 seek 而非靠墙钟动画」**，这也是它相对 Remotion 的帧精度优势。
+
+---
+
+## 🌐 社区口碑
+
+- **增长**：2026-03-10 创建，至 2026-07-16 约 **35,403⭐ / 3,316 forks**，npm 周下载与 Discord 社区活跃；HeyGen 官方持续投入。
+- **正面**：「视频界的 HTML」「终于不用学 After Effects」「Agent 直接吐 HTML 就能出片」。
+- **负面/局限**：重度依赖无头 Chrome（重）、长视频性能待优化；GSAP/动画需一定前端基础；ffmpeg/chromium 环境依赖对 Windows 用户有门槛（仓库已配 `.github/actions/install-ffmpeg-windows`）。
+- **采用**：作为「HTML 原生视频」渲染内核，被多个 AI 视频工具链引用；`hyperframes.dev` 提供社区 playground 与 design 模板市场。
+
+---
+
+## 🥊 竞品对比
+
+| 项目 | 授权 | 创作模型 | 与 HyperFrames 的差异 |
+|------|------|----------|----------------------|
+| **HyperFrames** | Apache-2.0 | 纯 HTML + 可 seek 动画 | 无构建步骤、Agent 友好、确定性、真开源 |
+| [Remotion](https://github.com/remotion-dev/remotion) | 源代码可用（Remotion License） | React 组件 | 生态成熟、Lambda 渲染成熟；需打包、JSX 门槛 |
+| After Effects | 商业闭源 | 时间轴拖拽（二进制工程） | Git 不友好、不可被 Agent 生成 |
+| Runway / Kling / Sora | 商业闭源 | 黑盒文/图生视频 | 不可编程、控制力弱、按量计费 |
+| HeyGen（商业版） | 闭源 SaaS | 模板/数字人 | HyperFrames 的开源渲染底座，商业增值在上层 |
+
+**关键差异**：HyperFrames 赌「HTML 而非 React」——人与 Agent 都能直接写、无需构建、确定性可回归；Remotion 赌 React 生态。许可证上 HyperFrames 的 Apache-2.0 也比 Remotion 的源代码可用许可对商用更友好。
+
+---
+
+## 🎯 核心研判
+
+### 优势
+- HTML 原生把「写网页」与「做视频」无缝衔接，门槛极低。
+- 确定性渲染天生适配 CI / 回归 / 自动化流水线。
+- 19 技能 + 多端插件（Claude/Codex/Cursor）+ `--full-depth` 技能同步，Agent 体验完整。
+- Apache-2.0 无商用门槛；HeyGen 资源背书，非个人玩具。
+
+### 风险
+- 渲染强依赖无头 Chrome + FFmpeg，环境重、长视频性能待打磨。
+- 生态与成熟度弱于 Remotion（后者 Lambda 渲染已成熟多年）。
+- 动画表达力上限取决于适配器（GSAP/Lottie/Three.js）覆盖度。
+- 作为 HeyGen 战略资产，长期路线图受商业考量牵引。
+
+### 趋势判断
+**上升期，处「可编程视频」赛道早期卡位**。2026 年 Agent 视频工具链升温（OpenMontage、本仓库同源方向），HyperFrames 以「渲染引擎标准」定位抢身位。若社区 block/Catalog 与云渲染持续丰富，有望成为 HTML 视频的事实标准——类似 React 之于 UI。
+
+---
+
+## 📂 关键文件路径速查
+
+- `packages/core` `packages/engine` `packages/producer` — 渲染核心（解析/驱动/编码）
+- `packages/aws-lambda/src/{chromium,handler,s3Transport}.ts` — 分布式渲染栈
+- `packages/studio` — 浏览器端预览/编辑
+- `packages/catalog` — 可复用 block（转场/字幕/图表/地图/特效）
+- `.claude-plugin/marketplace.json` `.codex-plugin/` `.cursor-plugin/` — Agent 技能分发
+- `DESIGN.md` / `docs/` — `frame.md` 设计反演与文档
+- `AGENTS.md` `CLAUDE.md` `CONTRIBUTING.md` — Agent/贡献约定

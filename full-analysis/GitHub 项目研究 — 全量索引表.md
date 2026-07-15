@@ -70,7 +70,7 @@
 | 55 | [`Gloridust/WechatOnCloud`](https://github.com/Gloridust/WechatOnCloud) | WechatOnCloud (云微) | — | 2026-06-17 | [Gloridust-WechatOnCloud-深度调研.md](Gloridust-WechatOnCloud-深度调研.md) |
 | 56 | [`greensock/GSAP`](https://github.com/greensock/GSAP) | — | — | 2026-06-19 | [greensock-GSAP-深度调研.md](greensock-GSAP-深度调研.md) |
 | 57 | [`hanshuaikang/nezha`](https://github.com/hanshuaikang/nezha) | — | — | 2026-03-22 | [hanshuaikang-nezha-深度调研.md](hanshuaikang-nezha-深度调研.md) |
-| 58 | [`heygen-com/hyperframes`](https://github.com/heygen-com/hyperframes) | — | — | — | [heygen-com-hyperframes-深度调研.md](heygen-com-hyperframes-深度调研.md) |
+| 58 | [`heygen-com/hyperframes`](https://github.com/heygen-com/hyperframes) | HTML 原生确定性视频渲染框架——写 HTML 渲染视频，无头 Chrome seek + FFmpeg 编码，19 Agent 技能 + frame.md 设计反演，Apache-2.0 | 35,403 | 2026-07-16 | [heygen-com-hyperframes-深度调研.md](heygen-com-hyperframes-深度调研.md) |
 | 59 | [`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master) | — | — | 2026-06-19 | [hugohe3-ppt-master-深度调研.md](hugohe3-ppt-master-深度调研.md) |
 | 60 | [`index-tts/index-tts`](https://github.com/index-tts/index-tts) | — | — | — | [index-tts-index-tts-深度调研.md](index-tts-index-tts-深度调研.md) |
 | 61 | [`jackwener/OpenCLI`](https://github.com/jackwener/OpenCLI) | — | — | 2026-06-19 | [jackwener-OpenCLI-深度调研.md](jackwener-OpenCLI-深度调研.md) |
@@ -120,7 +120,7 @@
 | 104 | [`OthmanAdi/planning-with-files`](https://github.com/OthmanAdi/planning-with-files) | — | — | 2026-06-19 | [OthmanAdi-planning-with-files-深度调研.md](OthmanAdi-planning-with-files-深度调研.md) |
 | 105 | [`Panniantong/Agent-Reach`](https://github.com/Panniantong/Agent-Reach) | 零 API 费用的 AI Agent 互联网能力脚手架——安装即弃架构，支持 Twitter/B站/小红书等 15+ 平台，4 个月 45K ⭐ | 45,550 | 2026-06-30 | [Panniantong-Agent-Reach-深度调研.md](Panniantong-Agent-Reach-深度调研.md) |
 | 106 | [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) | — | — | — | [pbakaus-impeccable-深度调研.md](pbakaus-impeccable-深度调研.md) |
-| 107 | [`pewdiepie-archdaemon/odysseus`](https://github.com/pewdiepie-archdaemon/odysseus) | Odysseus — 自我托管 AI 工作空间 | — | 2026-06-09 | [pewdiepie-archdaemon-odysseus-深度调研.md](pewdiepie-archdaemon-odysseus-深度调研.md) |
+| 107 | [`odysseus-dev/odysseus`](https://github.com/odysseus-dev/odysseus) | 自托管 AI 工作空间操作系统——chat/agents/研究/文档/邮件/笔记/日历/本地模型九域合一，AGPL-3.0 + 硬件感知 Cookbook | 82,883 | 2026-07-16 | [odysseus-dev-odysseus-深度调研.md](odysseus-dev-odysseus-深度调研.md) |
 | 108 | [`phuryn/pm-skills`](https://github.com/phuryn/pm-skills) | PM 技能市场——100+ 个 Agent Skills、命令和插件，覆盖从发现到策略、执行、发布、增长的 PM 全流程。二、核心分析PM-Skills 是一个 | 17,514 | 2026-06-14 | [phuryn-pm-skills-深度调研.md](phuryn-pm-skills-深度调研.md) |
 | 109 | [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) | — | — | 2026-03-05 | [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md) |
 | 110 | [`qiuqiubuchongle/cloud-chokepoint-atlas`](https://github.com/qiuqiubuchongle/cloud-chokepoint-atlas) | — | — | — | [qiuqiubuchongle-cloud-chokepoint-atlas-深度调研.md](qiuqiubuchongle-cloud-chokepoint-atlas-深度调研.md) |
@@ -523,7 +523,7 @@
 - [`opencv/opencv`](https://github.com/opencv/opencv) — [opencv-opencv-深度调研.md](opencv-opencv-深度调研.md)
 - [`OthmanAdi/planning-with-files`](https://github.com/OthmanAdi/planning-with-files) — [OthmanAdi-planning-with-files-深度调研.md](OthmanAdi-planning-with-files-深度调研.md)
 - [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) — [pbakaus-impeccable-深度调研.md](pbakaus-impeccable-深度调研.md)
-- [`pewdiepie-archdaemon/odysseus`](https://github.com/pewdiepie-archdaemon/odysseus) — [pewdiepie-archdaemon-odysseus-深度调研.md](pewdiepie-archdaemon-odysseus-深度调研.md)
+- [`odysseus-dev/odysseus`](https://github.com/odysseus-dev/odysseus) — [odysseus-dev-odysseus-深度调研.md](odysseus-dev-odysseus-深度调研.md)
 - [`qiuqiubuchongle/cloud-chokepoint-atlas`](https://github.com/qiuqiubuchongle/cloud-chokepoint-atlas) — [qiuqiubuchongle-cloud-chokepoint-atlas-深度调研.md](qiuqiubuchongle-cloud-chokepoint-atlas-深度调研.md)
 - [`refactoringhq/tolaria`](https://github.com/refactoringhq/tolaria) — [refactoringhq-tolaria-深度调研.md](refactoringhq-tolaria-深度调研.md)
 - [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo) — [ruvnet-ruflo-深度调研.md](ruvnet-ruflo-深度调研.md)
