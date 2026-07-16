@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 264                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 268                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -143,7 +143,7 @@ github-project-research/
 | [`Forsy-AI/agent-apprenticeship`](https://github.com/Forsy-AI/agent-apprenticeship) | [Forsy-AI-agent-apprenticeship-深度调研.md](Forsy-AI-agent-apprenticeship-深度调研.md) |
 | [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md) |
 
-### G（15 个）
+### G（16 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -154,6 +154,7 @@ github-project-research/
 | [`github.com/google-research`](https://github.com/google-research) | [github.com-google-research-深度调研.md](github.com-google-research-深度调研.md) |
 | [`github.com/penpot`](https://github.com/penpot) | [github.com-penpot-深度调研.md](github.com-penpot-深度调研.md) |
 | [`github.com/TencentCloud`](https://github.com/TencentCloud) | [TencentCloud-深度调研.md](TencentCloud-深度调研.md) |
+| [`github/copilot-sdk`](https://github.com/github/copilot-sdk) | [github-copilot-sdk-深度调研.md](github-copilot-sdk-深度调研.md) |
 | [`GitHubDaily/GitHubDaily`](https://github.com/GitHubDaily/GitHubDaily) | [GitHubDaily-GitHubDaily-深度调研.md](GitHubDaily-GitHubDaily-深度调研.md) |
 | [`GLips/Figma-Context-MCP`](https://github.com/GLips/Figma-Context-MCP) | [GLips-Figma-Context-MCP-深度调研.md](GLips-Figma-Context-MCP-深度调研.md) |
 | [`Gloridust/WechatOnCloud`](https://github.com/Gloridust/WechatOnCloud) | [Gloridust-WechatOnCloud-深度调研.md](Gloridust-WechatOnCloud-深度调研.md) |
@@ -163,12 +164,13 @@ github-project-research/
 | [`gastownhall/beads`](https://github.com/gastownhall/beads) | [gastownhall-beads-深度调研.md](gastownhall-beads-深度调研.md) |
 | [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify) | [Graphify-Labs-graphify-深度调研.md](Graphify-Labs-graphify-深度调研.md) |
 
-### H（4 个）
+### H（5 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`hanshuaikang/nezha`](https://github.com/hanshuaikang/nezha) | [hanshuaikang-nezha-深度调研.md](hanshuaikang-nezha-深度调研.md) |
 | [`heygen-com/hyperframes`](https://github.com/heygen-com/hyperframes) | [heygen-com-hyperframes-深度调研.md](heygen-com-hyperframes-深度调研.md) |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | [HKUDS-DeepTutor-深度调研.md](HKUDS-DeepTutor-深度调研.md) |
 | [`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master) | [hugohe3-ppt-master-深度调研.md](hugohe3-ppt-master-深度调研.md) |
 | [`hiyouga/LlamaFactory`](https://github.com/hiyouga/LlamaFactory) | [hiyouga-LlamaFactory-深度调研.md](hiyouga-LlamaFactory-深度调研.md) |
 
@@ -199,7 +201,7 @@ github-project-research/
 | [`KKKKhazix/khazix-skills`](https://github.com/KKKKhazix/khazix-skills) | [KKKKhazix-khazix-skills-深度调研.md](KKKKhazix-khazix-skills-深度调研.md) |
 | [`koala73/worldmonitor`](https://github.com/koala73/worldmonitor) | [koala73-worldmonitor-深度调研.md](koala73-worldmonitor-深度调研.md) |
 
-### L（8 个）
+### L（9 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -210,6 +212,7 @@ github-project-research/
 | [`liyue-aigc/female-portrait-dataset`](https://github.com/liyue-aigc/female-portrait-dataset) | [liyue-aigc-female-portrait-dataset-深度调研.md](liyue-aigc-female-portrait-dataset-深度调研.md) |
 | [`lllyasviel/Fooocus`](https://github.com/lllyasviel/Fooocus) | [lllyasviel-Fooocus-深度调研.md](lllyasviel-Fooocus-深度调研.md) |
 | [`lynote-ai/humanize-text`](https://github.com/lynote-ai/humanize-text) | [lynote-ai-humanize-text-深度调研.md](lynote-ai-humanize-text-深度调研.md) |
+| [`lobehub/lobehub`](https://github.com/lobehub/lobehub) | [lobehub-lobehub-深度调研.md](lobehub-lobehub-深度调研.md) |
 | [`langgenius/dify`](https://github.com/langgenius/dify) | [langgenius-dify-深度调研.md](langgenius-dify-深度调研.md) |
 
 ### M（15 个）
@@ -261,13 +264,14 @@ github-project-research/
 | [`ollama/ollama`](https://github.com/ollama/ollama) | [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md) |
 | [`opendatalab/MinerU`](https://github.com/opendatalab/MinerU) | [opendatalab-MinerU-深度调研.md](opendatalab-MinerU-深度调研.md) |
 
-### P（4 个）
+### P（5 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`Panniantong/Agent-Reach`](https://github.com/Panniantong/Agent-Reach) | [Panniantong-Agent-Reach-深度调研.md](Panniantong-Agent-Reach-深度调研.md) |
 | [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) | [pbakaus-impeccable-深度调研.md](pbakaus-impeccable-深度调研.md) |
 | [`phuryn/pm-skills`](https://github.com/phuryn/pm-skills) | [phuryn-pm-skills-深度调研.md](phuryn-pm-skills-深度调研.md) |
+| [`PostHog/posthog`](https://github.com/PostHog/posthog) | [PostHog-posthog-深度调研.md](PostHog-posthog-深度调研.md) |
 | [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) | [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md) |
 
 ### Q（1 个）
@@ -427,6 +431,8 @@ github-project-research/
 - [`browserbase/stagehand`](https://github.com/browserbase/stagehand) — [browserbase-stagehand-深度调研.md](browserbase-stagehand-深度调研.md)
 - [`aws/agent-toolkit-for-aws`](https://github.com/aws/agent-toolkit-for-aws) — [aws-agent-toolkit-for-aws-深度调研.md](aws-agent-toolkit-for-aws-深度调研.md)
 - [`zai-org/Open-AutoGLM`](https://github.com/zai-org/Open-AutoGLM) — [zai-org-Open-AutoGLM-深度调研.md](zai-org-Open-AutoGLM-深度调研.md)
+- [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — [HKUDS-DeepTutor-深度调研.md](HKUDS-DeepTutor-深度调研.md)
+- [`lobehub/lobehub`](https://github.com/lobehub/lobehub) — [lobehub-lobehub-深度调研.md](lobehub-lobehub-深度调研.md)
 
 ### LLM / 推理框架 🆕
 
@@ -451,6 +457,7 @@ github-project-research/
 - [`davila7/claude-code-templates`](https://github.com/davila7/claude-code-templates) — [davila7-claude-code-templates-深度调研.md](davila7-claude-code-templates-深度调研.md)
 - [`github/spec-kit`](https://github.com/github/spec-kit) — [github-spec-kit-深度调研.md](github-spec-kit-深度调研.md)
 - [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify) — [Graphify-Labs-graphify-深度调研.md](Graphify-Labs-graphify-深度调研.md)
+- [`github/copilot-sdk`](https://github.com/github/copilot-sdk) — [github-copilot-sdk-深度调研.md](github-copilot-sdk-深度调研.md)
 
 ### RAG / 知识库 / 记忆
 
@@ -473,6 +480,7 @@ github-project-research/
 - [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) — [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md)
 - [`Stirling-Tools/Stirling-PDF`](https://github.com/Stirling-Tools/Stirling-PDF) — [Stirling-Tools-Stirling-PDF-深度调研.md](Stirling-Tools-Stirling-PDF-深度调研.md)
 - [`coreybutler/nvm-windows`](https://github.com/coreybutler/nvm-windows) — [coreybutler-nvm-windows-深度调研.md](coreybutler-nvm-windows-深度调研.md)
+- [`PostHog/posthog`](https://github.com/PostHog/posthog) — [PostHog-posthog-深度调研.md](PostHog-posthog-深度调研.md)
 
 ### 前端 / 设计 / UI
 

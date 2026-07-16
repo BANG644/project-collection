@@ -2,7 +2,7 @@
 
 > **调研日期**：2026-05-19  
 > **仓库地址**：https://github.com/bytedance/UI-TARS-desktop  
-> **Stars**：34K+ | **协议**：Apache 2.0 | **语言**：TypeScript（主）+ Python + Rust
+> **Stars**：38,024 | **协议**：Apache 2.0 | **语言**：TypeScript（主）+ Python + Rust
 
 ---
 
@@ -254,7 +254,7 @@ UI-TARS 的底层引擎是 **Tarko 框架**，采用三层抽象架构：
 
 | 指标 | 数据 |
 |------|------|
-| GitHub Stars | 34K+ |
+| GitHub Stars | 38,024 |
 | Contributors | 活跃（字节内部团队 + 社区） |
 | Issue 响应 | 较快（官方团队维护） |
 | Release 频率 | 稳定（约季度大版本） |
@@ -281,4 +281,44 @@ UI-TARS 的底层引擎是 **Tarko 框架**，采用三层抽象架构：
 
 ---
 
-*本报告由 IMA 知识库管家自动整理归档 🗃️*
+## 11. 竞品深度对比
+
+UI-TARS-desktop 处在「GUI/计算机操作 Agent」赛道，直接竞品是各家「让模型操作图形界面」的方案：
+
+| 维度 | UI-TARS-desktop（字节） | OpenAI Operator | Claude Computer Use（Anthropic） | Microsoft OmniParser | Agent.exe / 同类开源 |
+|------|--------------------------|-----------------|-------------------------------|----------------------|----------------------|
+| 核心模型 | UI-TARS（GUI 微调 VLM） | 自有 CUA 模型 | Claude 多模态 | 仅解析层（喂给任意 VLM） | 各异 |
+| 桌面自动化 | ✅ 原生 | ✅（浏览器为主） | ✅ | ❌（只解析） | ✅ |
+| 浏览器自动化 | ✅ 混合策略 | ✅ | ✅ | ❌ | ✅ |
+| MCP 集成 | ✅ | 有限 | ✅ | ❌ | 部分 |
+| 开源程度 | ✅ Apache 2.0（含模型权重思路） | ❌ 闭源 SaaS | 部分（API） | ✅ 开源 | 各异 |
+| 远程/沙箱 | ✅ Remote Operator / AIO Sandbox | ❌ | ❌ | ❌ | 有限 |
+| 定位 | 开发者可自托管的 GUI Agent 栈 | 托管 Agent 产品 | 模型能力（需自搭） | 解析组件 | 实验性 |
+
+**结论**：UI-TARS-desktop 的差异化在于「开源 + 自托管 + 桌面/浏览器双栈 + MCP + Remote Operator 沙箱」的组合。OmniParser 只做解析层、需自行接 VLM；Operator/Computer Use 闭源或仅 API。对想要「拿得到、改得了、自己跑」的团队，UI-TARS-desktop 是当前最完整的开源 GUI Agent 栈。
+
+---
+
+## 12. 核心研判
+
+### 优势
+- 字节出品，GUI 微调 VLM（UI-TARS）质量领先，桌面/浏览器双栈覆盖全。
+- Apache 2.0 全开源，可自托管、可改模型，工程成熟度高于多数开源 GUI Agent。
+- MCP 工具链 + Remote Operator + AIO Sandbox 构成「安全可远程」的操作闭环。
+
+### 风险
+- 稳定性仍待大规模验证（GUI 操作 inherently 脆弱，长任务易失手）。
+- 依赖 UI-TARS 模型权重与算力，端侧/低配机器体验受限。
+- 与 Midscene.js 关系紧密但分工易混淆，新手上手需厘清。
+
+### 入场建议
+- 想要自托管 GUI 自动化 → UI-TARS-desktop 是开源首选，重点看 Remote Operator 与 AIO Sandbox 成熟度。
+- 想借鉴 → 抄其「三层架构（感知/规划/动作）+ MCP 工具化 + 沙箱隔离」；VLM 可换成自有模型。
+- 仅要「界面解析」能力 → 直接用 OmniParser 接自己的 VLM 更轻。
+
+### 一句话总结
+> UI-TARS-desktop 把「GUI 微调 VLM + 桌面/浏览器双栈 + MCP + 沙箱」打包成最完整的开源计算机操作 Agent 栈，适合想自托管、可改造的团队，稳定性是上线前唯一的待解问号。
+
+---
+
+*本报告由 GitHub 深度调研员补全竞品对比与核心研判章节（原稿由 IMA 知识库管家整理）🔍🐙*
