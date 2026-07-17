@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 268                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 270                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -96,7 +96,7 @@ github-project-research/
 | [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) | [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md) |
 | [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | [bytedance-deer-flow-深度调研.md](bytedance-deer-flow-深度调研.md) |
 
-### C（11 个）
+### C（12 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -105,6 +105,7 @@ github-project-research/
 | [`clash-verge-rev/clash-verge-rev`](https://github.com/clash-verge-rev/clash-verge-rev) | [clash-verge-rev-clash-verge-rev-深度调研.md](clash-verge-rev-clash-verge-rev-深度调研.md) |
 | [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) | [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md) |
 | [`cloudflare/security-audit-skill`](https://github.com/cloudflare/security-audit-skill) | [cloudflare-security-audit-skill-深度调研.md](cloudflare-security-audit-skill-深度调研.md) |
+| [`codecrafters-io/build-your-own-x`](https://github.com/codecrafters-io/build-your-own-x) | [codecrafters-io-build-your-own-x-深度调研.md](codecrafters-io-build-your-own-x-深度调研.md) |
 | [`colbymchenry/codegraph`](https://github.com/colbymchenry/codegraph) | [colbymchenry-codegraph-深度调研.md](colbymchenry-codegraph-深度调研.md) |
 | [`CopilotKit/CopilotKit`](https://github.com/CopilotKit/CopilotKit) | [CopilotKit-CopilotKit-深度调研.md](CopilotKit-CopilotKit-深度调研.md) |
 | [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) | [CyC2018-CS-Notes-深度调研.md](CyC2018-CS-Notes-深度调研.md) |
@@ -317,13 +318,14 @@ github-project-research/
 | [`moeru-ai/airi`](https://github.com/moeru-ai/airi) | [moeru-ai-airi-深度调研.md](moeru-ai-airi-深度调研.md) |
 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) | [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md) |
 
-### T（5 个）
+### T（6 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`tastyeffectco/sandboxd`](https://github.com/tastyeffectco/sandboxd) | [tastyeffectco-sandboxd-深度调研.md](tastyeffectco-sandboxd-深度调研.md) |
 | [`tensorflow/tensorflow`](https://github.com/tensorflow/tensorflow) | [tensorflow-tensorflow-深度调研.md](tensorflow-tensorflow-深度调研.md) |
 | [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) | [thananon-9arm-skills-深度调研.md](thananon-9arm-skills-深度调研.md) |
+| [`tirth8205/code-review-graph`](https://github.com/tirth8205/code-review-graph) | [tirth8205-code-review-graph-深度调研.md](tirth8205-code-review-graph-深度调研.md) |
 | [`Tong89/smartNode`](https://github.com/Tong89/smartNode) | [Tong89-smartNode-深度调研.md](Tong89-smartNode-深度调研.md) |
 | [`topoteretes/cognee`](https://github.com/topoteretes/cognee) | [topoteretes-cognee-深度调研.md](topoteretes-cognee-深度调研.md) |
 
@@ -458,6 +460,7 @@ github-project-research/
 - [`github/spec-kit`](https://github.com/github/spec-kit) — [github-spec-kit-深度调研.md](github-spec-kit-深度调研.md)
 - [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify) — [Graphify-Labs-graphify-深度调研.md](Graphify-Labs-graphify-深度调研.md)
 - [`github/copilot-sdk`](https://github.com/github/copilot-sdk) — [github-copilot-sdk-深度调研.md](github-copilot-sdk-深度调研.md)
+- [`tirth8205/code-review-graph`](https://github.com/tirth8205/code-review-graph) — [tirth8205-code-review-graph-深度调研.md](tirth8205-code-review-graph-深度调研.md)
 
 ### RAG / 知识库 / 记忆
 
@@ -520,6 +523,7 @@ github-project-research/
 - [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) — [CyC2018-CS-Notes-深度调研.md](CyC2018-CS-Notes-深度调研.md)
 - [`easychen/opc-methodologyStar`](https://github.com/easychen/opc-methodologyStar) — [easychen-opc-methodologyStar-深度调研.md](easychen-opc-methodologyStar-深度调研.md)
 - [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) — [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md)
+- [`codecrafters-io/build-your-own-x`](https://github.com/codecrafters-io/build-your-own-x) — [codecrafters-io-build-your-own-x-深度调研.md](codecrafters-io-build-your-own-x-深度调研.md)
 
 ### 其他
 

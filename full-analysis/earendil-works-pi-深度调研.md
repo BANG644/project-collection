@@ -1,7 +1,8 @@
 # earendil-works/pi 深度调研报告
 
-> 调研时间：2026-07-06 | Stars：68,098 | Forks：8,354 | License：MIT
+> 调研时间：2026-07-06 | **Stars 更新：72,113（2026-07-18）** | Forks：8,904 | License：MIT
 > 主语言：TypeScript | 维护者：badlogic (Mario Zechner, libGDX 创始人)
+> 📌 2026-07-18 补完：新增「九、源码深度解读」「十、核心研判」两章（基于 `agent.ts` / `agent-harness.ts` 实读）
 
 ---
 
@@ -15,7 +16,7 @@
 
 | 维度 | 数据 |
 |------|------|
-| GitHub Stars | 68,098（截至调研日），不到一年从 0 涨到 6.8 万 |
+| GitHub Stars | 72,113（2026-07-18 更新，较初版 68,098 涨约 4K），不到一年从 0 涨到 7.2 万 |
 | 技术栈 | TypeScript Monorepo |
 | 许可证 | MIT |
 | 核心包 | `pi-coding-agent`、`pi-agent-core`、`pi-ai`、`pi-tui` 四个 npm 包 |
@@ -343,6 +344,68 @@ Pi 未来走向的几个观察信号：
 - **Windows 支持完善**：是否会解决 TUI 渲染兼容性问题，这将决定项目在开发者市场的天花板
 - **包生态繁荣**：Pi Packages 的市场是否能像 VS Code 扩展市场一样形成网络效应
 - **与 OpenClaw 的关系**：项目 README 提到 OpenClaw 是基于 Pi 开发的，这是否会形成上下层生态
+
+---
+
+## 九、源码深度解读（补完于 2026-07-18）
+
+> 本章基于 `packages/agent/src/agent.ts` 与 `packages/agent/src/harness/agent-harness.ts` 实读，聚焦「为什么 Pi 的扩展能力最强」这一核心问题。
+
+### 9.1 Agent 类：有状态的 Loop 包装器
+
+`agent.ts` 的 `Agent` 类是整套运行时的门面。它**不直接实现循环**，而是把底层纯函数 `runAgentLoop` / `runAgentLoopContinue` 包成一个有状态对象，对外暴露 `prompt` / `continue` / `steer` / `followUp` 与 `subscribe()` 事件订阅。
+
+关键设计有三处值得记：
+
+- **事件总线即扩展底座**：`subscribe(listener)` 让外部以「事件 + AbortSignal」方式订阅 `agent_end` / `tool_execution_*` / `turn_end` 等全生命周期事件，监听器按订阅顺序 `await`。这正是第二章提到的「25 个扩展事件」的落点——扩展系统本质是挂在这条 event bus 上的 TypeScript 进程内监听器，比 Claude Code 的 Shell hook 更类型安全、访问更深。
+- **steer / followUp 双队列**：`steer()` 在 assistant turn 结束后注入消息，`followUp()` 在 Agent 本应停止时再续一轮。`PendingMessageQueue` 支持 `"all"`（批量）与 `"one-at-a-time"`（逐条）两种 drain 模式。这是 Pi 区别于竞品的独有机制——**运行期可外部注入控制流**，天然适配「人在回路」与「多 Agent 接力」。
+- **不可变状态快照**：`createContextSnapshot()` 在每次 run 前把 `systemPrompt/messages/tools` 拷贝成快照传入 loop，避免运行中被引用篡改；`state.tools` / `state.messages` 的 setter 都做 `.slice()` 深拷贝，降低扩展并发改状态的隐患。
+
+```typescript
+// agent.ts 节选：运行期注入控制流（双队列）+ 统一事件派发（扩展底座）
+steer(message: AgentMessage): void { this.steeringQueue.enqueue(message); }
+followUp(message: AgentMessage): void { this.followUpQueue.enqueue(message); }
+// processEvents 中统一派发给所有 listener —— 扩展系统挂在这里
+for (const listener of this.listeners) { await listener(event, signal); }
+```
+
+### 9.2 Harness：把文档变成 System Prompt
+
+`agent-harness.ts` 承载了影响 Agent 行为的核心逻辑：Compaction（上下文压缩）、Skills 按需加载、Prompt Template 渲染、Session 树管理。两点最值得关注：
+
+- **`prepareNextTurn` 钩子**：loop 每轮结束前会调用 `prepareNextTurn` / `prepareNextTurnWithContext`，允许外部在「下一轮之前」改写上下文、注入记忆或技能——这是 Pi 实现「自主 Agent」「长期记忆」的官方扩展点，比在 system prompt 里堆规则更干净。
+- **Compaction 与 Branch Summary**：`compaction/branch-summarization.ts` 提供基于 Session 树分支的摘要压缩，意味着压缩是按「分支」而非整段对话做的，多分支探索时能各自保留上下文。
+
+### 9.3 一句话源码研判
+
+Pi 的代码与其哲学一致：**核心极薄、扩展极厚**。整个 Agent 运行时的「主循环」只有 `runAgentLoop` 一个纯函数入口，其余全是围绕它的状态管理、事件派发、队列与 hook。读懂 `agent.ts` + `agent-harness.ts` 两个文件，就基本读懂了 Pi 的全部设计意图。
+
+---
+
+## 十、核心研判（补完于 2026-07-18）
+
+### 10.1 项目优势
+
+- **可塑性天花板最高**：四层抽象 + 25 事件 + operations 抽象，是当前 AI Coding Agent 里定制能力最强的底座，适合「想把 Agent 接进自己工具链」的团队。
+- **模型无关**：324+ 模型 / 20+ 提供商，一个命令换模型，规避厂商锁定。
+- **MIT + 名人信用**：libGDX 创始人 + Armin Ronacher（Flask/Sentry）参与，背书强；供应链安全实践（锁文件审核、脚本白名单）是同类标杆。
+
+### 10.2 项目风险
+
+- **默认 YOLO 无权限门控**：安全靠用户自建扩展，企业合规场景需额外工程，存在误执行风险。
+- **strict tool calling 可靠性**：`strict: false` 导致约 20% tool call 不符合 schema（Issue #6306），核心可靠性待解。
+- **Windows TUI 渲染 bug**（#6300）：ConPTY 自动换行下光标偏移，Windows 用户体验受挫。
+- **生态早期**：相比 Claude Code / Codex CLI，扩展市场与文档深度仍处早期。
+
+### 10.3 趋势判断
+
+- MCP 是否进核心、权限扩展是否成为标配、Windows 兼容是否补全，将决定 Pi 的开发者市场天花板。
+- 与 OpenClaw（基于 Pi 构建）的上下层关系若成型，可能形成「底座 + 上层产品」生态。
+
+### 10.4 给同类需求的启发
+
+- **做平台而非做产品**：把「控制权」开放给扩展，比堆功能更可持续——这是 Pi 给所有自研 Agent 工具的第一课。
+- **事件总线 + 运行期注入队列（steer/followUp）** 是构建「人在回路 / 多 Agent 接力」的优雅范式，比轮询或重新发起会话更干净，值得借鉴。
 
 ---
 
