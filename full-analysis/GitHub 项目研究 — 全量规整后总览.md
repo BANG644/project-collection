@@ -181,7 +181,7 @@ github-project-research/
 |------------|----------|
 | [`index-tts/index-tts`](https://github.com/index-tts/index-tts) | [index-tts-index-tts-深度调研.md](index-tts-index-tts-深度调研.md) |
 
-### J（8 个）
+### J（9 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -193,6 +193,7 @@ github-project-research/
 | [`jina-ai/reader`](https://github.com/jina-ai/reader) | [jina-ai-reader-深度调研.md](jina-ai-reader-深度调研.md) |
 | [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) | [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md) |
 | [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) | [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md) |
+| [`JustVugg/colibri`](https://github.com/JustVugg/colibri) | [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md) |
 
 ### K（3 个）
 
@@ -202,7 +203,7 @@ github-project-research/
 | [`KKKKhazix/khazix-skills`](https://github.com/KKKKhazix/khazix-skills) | [KKKKhazix-khazix-skills-深度调研.md](KKKKhazix-khazix-skills-深度调研.md) |
 | [`koala73/worldmonitor`](https://github.com/koala73/worldmonitor) | [koala73-worldmonitor-深度调研.md](koala73-worldmonitor-深度调研.md) |
 
-### L（9 个）
+### L（10 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -215,6 +216,7 @@ github-project-research/
 | [`lynote-ai/humanize-text`](https://github.com/lynote-ai/humanize-text) | [lynote-ai-humanize-text-深度调研.md](lynote-ai-humanize-text-深度调研.md) |
 | [`lobehub/lobehub`](https://github.com/lobehub/lobehub) | [lobehub-lobehub-深度调研.md](lobehub-lobehub-深度调研.md) |
 | [`langgenius/dify`](https://github.com/langgenius/dify) | [langgenius-dify-深度调研.md](langgenius-dify-深度调研.md) |
+| [`langchain-ai/openwiki`](https://github.com/langchain-ai/openwiki) | [langchain-ai-openwiki-深度调研.md](langchain-ai-openwiki-深度调研.md) |
 
 ### M（15 个）
 
@@ -248,7 +250,7 @@ github-project-research/
 | [`NVIDIA/SkillSpector`](https://github.com/NVIDIA/SkillSpector) | [NVIDIA-SkillSpector-深度调研.md](NVIDIA-SkillSpector-深度调研.md) |
 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md) |
 
-### O（12 个）
+### O（13 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -264,6 +266,7 @@ github-project-research/
 | [`OthmanAdi/planning-with-files`](https://github.com/OthmanAdi/planning-with-files) | [OthmanAdi-planning-with-files-深度调研.md](OthmanAdi-planning-with-files-深度调研.md) |
 | [`ollama/ollama`](https://github.com/ollama/ollama) | [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md) |
 | [`opendatalab/MinerU`](https://github.com/opendatalab/MinerU) | [opendatalab-MinerU-深度调研.md](opendatalab-MinerU-深度调研.md) |
+| [`oomol-lab/open-connector`](https://github.com/oomol-lab/open-connector) | [oomol-lab-open-connector-深度调研.md](oomol-lab-open-connector-深度调研.md) |
 
 ### P（5 个）
 
@@ -355,7 +358,7 @@ github-project-research/
 | [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) | [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md) |
 | [`wuji-labs/nopua`](https://github.com/wuji-labs/nopua) | [wuji-labs-nopua-深度调研.md](wuji-labs-nopua-深度调研.md) |
 
-### X（4 个）
+### X（5 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -363,6 +366,7 @@ github-project-research/
 | [`xming521/WeClone`](https://github.com/xming521/WeClone) | [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md) |
 | [`xw7872081123/wallpaper-engine-steam`](https://github.com/xw7872081123/wallpaper-engine-steam) | 🚫 疑似虚假仓库，源码与描述完全不符 | [xw7872081123-wallpaper-engine-steam-深度调研.md](xw7872081123-wallpaper-engine-steam-深度调研.md) |
 | [`xbtlin/ai-berkshire`](https://github.com/xbtlin/ai-berkshire) | [xbtlin-ai-berkshire-深度调研.md](xbtlin-ai-berkshire-深度调研.md) |
+| [`xai-org/grok-build`](https://github.com/xai-org/grok-build) | [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md) |
 
 ### Y（1 个）
 
@@ -395,6 +399,8 @@ github-project-research/
 - [`BANG644/ai-workflow-optimizer`](https://github.com/BANG644/ai-workflow-optimizer) — [BANG644-ai-workflow-optimizer-深度调研.md](BANG644-ai-workflow-optimizer-深度调研.md)
 - [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) — [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md)
 - [`chopratejas/headroom`](https://github.com/chopratejas/headroom) — [chopratejas-headroom-深度调研.md](chopratejas-headroom-深度调研.md)
+- [`langchain-ai/openwiki`](https://github.com/langchain-ai/openwiki) — [langchain-ai-openwiki-深度调研.md](langchain-ai-openwiki-深度调研.md)
+- [`oomol-lab/open-connector`](https://github.com/oomol-lab/open-connector) — [oomol-lab-open-connector-深度调研.md](oomol-lab-open-connector-深度调研.md)
 - [`cloudflare/security-audit-skill`](https://github.com/cloudflare/security-audit-skill) — [cloudflare-security-audit-skill-深度调研.md](cloudflare-security-audit-skill-深度调研.md)
 - [`CopilotKit/CopilotKit`](https://github.com/CopilotKit/CopilotKit) — [CopilotKit-CopilotKit-深度调研.md](CopilotKit-CopilotKit-深度调研.md)
 - [`datawhalechina/Agent-Learning-Hub`](https://github.com/datawhalechina/Agent-Learning-Hub) — [datawhalechina-Agent-Learning-Hub-深度调研.md](datawhalechina-Agent-Learning-Hub-深度调研.md)
@@ -441,6 +447,7 @@ github-project-research/
 - [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) — [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md)
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) — [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md)
+- [`JustVugg/colibri`](https://github.com/JustVugg/colibri) — [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md)
 
 ### AI 编码 / Skill 技能
 
@@ -461,6 +468,7 @@ github-project-research/
 - [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify) — [Graphify-Labs-graphify-深度调研.md](Graphify-Labs-graphify-深度调研.md)
 - [`github/copilot-sdk`](https://github.com/github/copilot-sdk) — [github-copilot-sdk-深度调研.md](github-copilot-sdk-深度调研.md)
 - [`tirth8205/code-review-graph`](https://github.com/tirth8205/code-review-graph) — [tirth8205-code-review-graph-深度调研.md](tirth8205-code-review-graph-深度调研.md)
+- [`xai-org/grok-build`](https://github.com/xai-org/grok-build) — [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md)
 
 ### RAG / 知识库 / 记忆
 

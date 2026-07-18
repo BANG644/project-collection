@@ -284,7 +284,7 @@
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（73）
+### AI Agent / 助手框架（74）
 
 - [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) — [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md)
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
@@ -362,14 +362,18 @@
 - [`anthropics/claude-quickstarts`](https://github.com/anthropics/claude-quickstarts) — [anthropics-claude-quickstarts-深度调研.md](anthropics-claude-quickstarts-深度调研.md)
 - [`xingkongliang/skills-manager`](https://github.com/xingkongliang/skills-manager) — [xingkongliang-skills-manager-深度调研.md](xingkongliang-skills-manager-深度调研.md)
 
-### LLM / 推理框架（4） 🆕
+- [`oomol-lab/open-connector`](https://github.com/oomol-lab/open-connector) — [oomol-lab-open-connector-深度调研.md](oomol-lab-open-connector-深度调研.md)
+
+### LLM / 推理框架（5） 🆕
 
 - [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) — [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md)
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) — [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 
-### AI 编码 / Skill 技能（17）
+- [`JustVugg/colibri`](https://github.com/JustVugg/colibri) — [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md)
+
+### AI 编码 / Skill 技能（18）
 
 - [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
@@ -388,6 +392,8 @@
 - [`DietrichGebert/ponytail`](https://github.com/DietrichGebert/ponytail) — [DietrichGebert-ponytail-深度调研.md](DietrichGebert-ponytail-深度调研.md)
 - [`JuliusBrussee/caveman`](https://github.com/JuliusBrussee/caveman) — [JuliusBrussee-caveman-深度调研.md](JuliusBrussee-caveman-深度调研.md)
 - [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) — [anthropics-claude-cookbooks-深度调研.md](anthropics-claude-cookbooks-深度调研.md)
+
+- [`xai-org/grok-build`](https://github.com/xai-org/grok-build) — [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md)
 
 ### RAG / 知识库 / 记忆（9）
 
@@ -418,7 +424,9 @@
 - [`logto-io/logto`](https://github.com/logto-io/logto) — [logto-io-logto-深度调研.md](logto-io-logto-深度调研.md)
 - [`google/langextract`](https://github.com/google/langextract) — [google-langextract-深度调研.md](google-langextract-深度调研.md)
 
-### 文档 / 文档工具（1） 🆕
+- [`langchain-ai/openwiki`](https://github.com/langchain-ai/openwiki) — [langchain-ai-openwiki-深度调研.md](langchain-ai-openwiki-深度调研.md)
+
+### 文档 / 文档工具（2） 🆕
 
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 
