@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 270                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 277                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -195,13 +195,14 @@ github-project-research/
 | [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) | [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md) |
 | [`JustVugg/colibri`](https://github.com/JustVugg/colibri) | [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md) |
 
-### K（3 个）
-
+### K（4 个）
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`kageroumado/phosphene`](https://github.com/kageroumado/phosphene) | [kageroumado-phosphene-深度调研.md](kageroumado-phosphene-深度调研.md) |
 | [`KKKKhazix/khazix-skills`](https://github.com/KKKKhazix/khazix-skills) | [KKKKhazix-khazix-skills-深度调研.md](KKKKhazix-khazix-skills-深度调研.md) |
 | [`koala73/worldmonitor`](https://github.com/koala73/worldmonitor) | [koala73-worldmonitor-深度调研.md](koala73-worldmonitor-深度调研.md) |
+| [`kvcache-ai/ktransformers`](https://github.com/kvcache-ai/ktransformers) | [kvcache-ai-ktransformers-深度调研.md](kvcache-ai-ktransformers-深度调研.md) |
+
 
 ### L（10 个）
 
@@ -218,25 +219,26 @@ github-project-research/
 | [`langgenius/dify`](https://github.com/langgenius/dify) | [langgenius-dify-深度调研.md](langgenius-dify-深度调研.md) |
 | [`langchain-ai/openwiki`](https://github.com/langchain-ai/openwiki) | [langchain-ai-openwiki-深度调研.md](langchain-ai-openwiki-深度调研.md) |
 
-### M（15 个）
-
+### M（16 个）
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`MatinSenPai/SenPaiScanner`](https://github.com/MatinSenPai/SenPaiScanner) | [MatinSenPai-SenPaiScanner-深度调研.md](MatinSenPai-SenPaiScanner-深度调研.md) |
 | [`mattpocock/skills`](https://github.com/mattpocock/skills) | [mattpocock-skills-深度调研.md](mattpocock-skills-深度调研.md) |
+| [`mauriceboe/TREK`](https://github.com/mauriceboe/TREK) | [mauriceboe-TREK-深度调研.md](mauriceboe-TREK-深度调研.md) |
+| [`mem0ai/mem0`](https://github.com/mem0ai/mem0) | [mem0ai-mem0-深度调研.md](mem0ai-mem0-深度调研.md) |
 | [`Michaelliv/pi-dynamic-workflows`](https://github.com/Michaelliv/pi-dynamic-workflows) | [Michaelliv-pi-dynamic-workflows-深度调研.md](Michaelliv-pi-dynamic-workflows-深度调研.md) |
 | [`microsoft/agent-lightning`](https://github.com/microsoft/agent-lightning) | [microsoft-agent-lightning-深度调研.md](microsoft-agent-lightning-深度调研.md) |
 | [`microsoft/graphrag`](https://github.com/microsoft/graphrag) | [microsoft-graphrag-深度调研.md](microsoft-graphrag-深度调研.md) |
 | [`microsoft/markitdown`](https://github.com/microsoft/markitdown) | [microsoft-markitdown-深度调研.md](microsoft-markitdown-深度调研.md) |
 | [`microsoft/PowerToys`](https://github.com/microsoft/PowerToys) | [microsoft-PowerToys-深度调研.md](microsoft-PowerToys-深度调研.md) |
 | [`microsoft/SkillOpt`](https://github.com/microsoft/SkillOpt) | [microsoft-SkillOpt-深度调研.md](microsoft-SkillOpt-深度调研.md) |
+| [`MoonshotAI/kimi-cli`](https://github.com/MoonshotAI/kimi-cli) | [MoonshotAI-kimi-cli-深度调研.md](MoonshotAI-kimi-cli-深度调研.md) |
 | [`motion-canvas/motion-canvas`](https://github.com/motion-canvas/motion-canvas) | [motion-canvas-motion-canvas-深度调研.md](motion-canvas-motion-canvas-深度调研.md) |
 | [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | [msitarzewski-agency-agents-深度调研.md](msitarzewski-agency-agents-深度调研.md) |
 | [`mukul975/Anthropic-Cybersecurity-Skills`](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | [mukul975-Anthropic-Cybersecurity-Skills-深度调研.md](mukul975-Anthropic-Cybersecurity-Skills-深度调研.md) |
 | [`multica-ai/multica`](https://github.com/multica-ai/multica) | [multica-ai-multica-深度调研.md](multica-ai-multica-深度调研.md) |
 | [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill) | [mvanhorn-last30days-skill-深度调研.md](mvanhorn-last30days-skill-深度调研.md) |
-| [`mem0ai/mem0`](https://github.com/mem0ai/mem0) | [mem0ai-mem0-深度调研.md](mem0ai-mem0-深度调研.md) |
-| [`mauriceboe/TREK`](https://github.com/mauriceboe/TREK) | [mauriceboe-TREK-深度调研.md](mauriceboe-TREK-深度调研.md) |
+
 
 ### N（7 个）
 
@@ -321,8 +323,7 @@ github-project-research/
 | [`moeru-ai/airi`](https://github.com/moeru-ai/airi) | [moeru-ai-airi-深度调研.md](moeru-ai-airi-深度调研.md) |
 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) | [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md) |
 
-### T（6 个）
-
+### T（7 个）
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`tastyeffectco/sandboxd`](https://github.com/tastyeffectco/sandboxd) | [tastyeffectco-sandboxd-深度调研.md](tastyeffectco-sandboxd-深度调研.md) |
@@ -331,6 +332,8 @@ github-project-research/
 | [`tirth8205/code-review-graph`](https://github.com/tirth8205/code-review-graph) | [tirth8205-code-review-graph-深度调研.md](tirth8205-code-review-graph-深度调研.md) |
 | [`Tong89/smartNode`](https://github.com/Tong89/smartNode) | [Tong89-smartNode-深度调研.md](Tong89-smartNode-深度调研.md) |
 | [`topoteretes/cognee`](https://github.com/topoteretes/cognee) | [topoteretes-cognee-深度调研.md](topoteretes-cognee-深度调研.md) |
+| [`trycua/cua`](https://github.com/trycua/cua) | [trycua-cua-深度调研.md](trycua-cua-深度调研.md) |
+
 
 ### U（1 个）
 
@@ -442,12 +445,16 @@ github-project-research/
 - [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — [HKUDS-DeepTutor-深度调研.md](HKUDS-DeepTutor-深度调研.md)
 - [`lobehub/lobehub`](https://github.com/lobehub/lobehub) — [lobehub-lobehub-深度调研.md](lobehub-lobehub-深度调研.md)
 
+- [`trycua/cua`](https://github.com/trycua/cua) — [trycua-cua-深度调研.md](trycua-cua-深度调研.md)
+
 ### LLM / 推理框架 🆕
 
 - [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) — [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md)
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) — [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md)
 - [`JustVugg/colibri`](https://github.com/JustVugg/colibri) — [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md)
+
+- [`kvcache-ai/ktransformers`](https://github.com/kvcache-ai/ktransformers) — [kvcache-ai-ktransformers-深度调研.md](kvcache-ai-ktransformers-深度调研.md)
 
 ### AI 编码 / Skill 技能
 
@@ -469,6 +476,8 @@ github-project-research/
 - [`github/copilot-sdk`](https://github.com/github/copilot-sdk) — [github-copilot-sdk-深度调研.md](github-copilot-sdk-深度调研.md)
 - [`tirth8205/code-review-graph`](https://github.com/tirth8205/code-review-graph) — [tirth8205-code-review-graph-深度调研.md](tirth8205-code-review-graph-深度调研.md)
 - [`xai-org/grok-build`](https://github.com/xai-org/grok-build) — [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md)
+
+- [`MoonshotAI/kimi-cli`](https://github.com/MoonshotAI/kimi-cli) — [MoonshotAI-kimi-cli-深度调研.md](MoonshotAI-kimi-cli-深度调研.md)
 
 ### RAG / 知识库 / 记忆
 
