@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 277                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 279                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -58,7 +58,7 @@ github-project-research/
 |------------|----------|
 | [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) | [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md) |
 
-### A（18 个）
+### A（19 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -80,6 +80,7 @@ github-project-research/
 | [`awesome/selfhosted`](https://github.com/awesome/selfhosted) | [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md) |
 | [`alchaincyf/zhangxuefeng-skill`](https://github.com/alchaincyf/zhangxuefeng-skill) | [alchaincyf-zhangxuefeng-skill-深度调研.md](alchaincyf-zhangxuefeng-skill-深度调研.md) |
 | [`aws/agent-toolkit-for-aws`](https://github.com/aws/agent-toolkit-for-aws) | [aws-agent-toolkit-for-aws-深度调研.md](aws-agent-toolkit-for-aws-深度调研.md) |
+| [`AstrBotDevs/AstrBot`](https://github.com/AstrBotDevs/AstrBot) | [AstrBotDevs-AstrBot-深度调研.md](AstrBotDevs-AstrBot-深度调研.md) |
 
 ### B（10 个）
 
@@ -136,13 +137,14 @@ github-project-research/
 | [`evershopcommerce/evershop`](https://github.com/evershopcommerce/evershop) | [evershopcommerce-evershop-深度调研.md](evershopcommerce-evershop-深度调研.md) |
 | [`excalidraw/excalidraw`](https://github.com/excalidraw/excalidraw) | [excalidraw-excalidraw-深度调研.md](excalidraw-excalidraw-深度调研.md) |
 
-### F（3 个）
+### F（4 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`firecrawl/firecrawl`](https://github.com/firecrawl/firecrawl) | [firecrawl-firecrawl-深度调研.md](firecrawl-firecrawl-深度调研.md) |
 | [`Forsy-AI/agent-apprenticeship`](https://github.com/Forsy-AI/agent-apprenticeship) | [Forsy-AI-agent-apprenticeship-深度调研.md](Forsy-AI-agent-apprenticeship-深度调研.md) |
 | [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md) |
+| [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md) |
 
 ### G（16 个）
 

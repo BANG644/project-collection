@@ -131,7 +131,7 @@
 | 116 | [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) | 简历评分 Agent 管线——PDF→分节 JSON→GitHub 交叉验证→公平评分+证据引用，InterviewStreet 开源 | 3,970 | 2026-07-01 | [interviewstreet-hiring-agent-深度调研.md](interviewstreet-hiring-agent-深度调研.md) |
 | 117 | [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) | 首个为 AI Agent 设计的全功能 Office 套件——单二进制操作 Word/Excel/PPT，含 HTML 渲染引擎实现 render→look→fix 闭环 | 14,303 | 2026-07-11 | [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md) |
 | 118 | [`jackwener/OpenCLI`](https://github.com/jackwener/OpenCLI) | — | — | 2026-06-19 | [jackwener-OpenCLI-深度调研.md](jackwener-OpenCLI-深度调研.md) |
-| 119 | [`jamiepine/voicebox`](https://github.com/jamiepine/voicebox) | Voicebox — Open-Source AI Voice Studio | 32,132 | — | [jamiepine-voicebox-深度调研.md](jamiepine-voicebox-深度调研.md) |
+| 119 | [`jamiepine/voicebox`](https://github.com/jamiepine/voicebox) | Voicebox — 本地优先开源 AI 语音工作室（ElevenLabs+WisprFlow 合体，7 TTS 引擎 + Agent 语音 I/O via MCP） | 44,039 | 2026-07-21 | [jamiepine-voicebox-深度调研.md](jamiepine-voicebox-深度调研.md) |
 | 120 | [`Jane-xiaoer/xiaoer-videolab`](https://github.com/Jane-xiaoer/xiaoer-videolab) | 深度调研报告： | 464 | 2026-06-18 | [Jane-xiaoer-xiaoer-videolab-深度调研.md](Jane-xiaoer-xiaoer-videolab-深度调研.md) |
 | 121 | [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) | 面向 AI 编程助手的网站逆向工程模板，AGENTS.md 单一源 + 9 平台 skill 自动同步 + foreman/worktree 多 agent 派发 | 21,607 | 2026-06-27 | [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md) |
 | 122 | [`jd-opensource/JoyAI-Echo`](https://github.com/jd-opensource/JoyAI-Echo) | — | — | — | [jd-opensource-JoyAI-Echo-深度调研.md](jd-opensource-JoyAI-Echo-深度调研.md) |
@@ -281,14 +281,17 @@
 | 266 | [`zai-org/GLM-5`](https://github.com/zai-org/GLM-5) | 从 Vibe Coding 到 Agentic Engineering 的旗舰模型 | 4,121 | 2026-06-19 | [zai-org-GLM-5-深度调研.md](zai-org-GLM-5-深度调研.md) |
 | 267 | [`zarazhangrui/beautiful-html-templates`](https://github.com/zarazhangrui/beautiful-html-templates) | beautiful-html-templates | — | 2026-05-05 | [zarazhangrui-beautiful-html-templates-深度调研.md](zarazhangrui-beautiful-html-templates-深度调研.md) |
 | 268 | [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 驱动的多市场股票智能分析系统 | 18,500 | — | [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md) |
+| 269 | [`AstrBotDevs/AstrBot`](https://github.com/AstrBotDevs/AstrBot) | AstrBot — 平台无关开源 Agent 聊天框架，国产 IM 全覆盖 + 1000+ 插件 + Agent 沙箱 | 37,019 | 2026-07-21 | [AstrBotDevs-AstrBot-深度调研.md](AstrBotDevs-AstrBot-深度调研.md) |
+| 270 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | FastMCP — MCP 生态事实标准 Python 框架，装饰器即工具，Servers/Clients/Apps 三支柱 | 26,470 | 2026-07-21 | [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md) |
 
 ---
 
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（74）
+### AI Agent / 助手框架（75）
 
+- [`AstrBotDevs/AstrBot`](https://github.com/AstrBotDevs/AstrBot) — [AstrBotDevs-AstrBot-深度调研.md](AstrBotDevs-AstrBot-深度调研.md)
 - [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) — [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md)
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -410,8 +413,9 @@
 - [`OpenBMB/UltraRAG`](https://github.com/OpenBMB/UltraRAG) — [OpenBMB-UltraRAG-深度调研.md](OpenBMB-UltraRAG-深度调研.md)
 - [`allenai/olmocr`](https://github.com/allenai/olmocr) — [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md)
 
-### 开发工具 / CLI（15）
+### 开发工具 / CLI（16）
 
+- [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) — [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
 - [`GLips/Figma-Context-MCP`](https://github.com/GLips/Figma-Context-MCP) — [GLips-Figma-Context-MCP-深度调研.md](GLips-Figma-Context-MCP-深度调研.md)
 - [`jackwener/OpenCLI`](https://github.com/jackwener/OpenCLI) — [jackwener-OpenCLI-深度调研.md](jackwener-OpenCLI-深度调研.md)
