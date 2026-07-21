@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 279                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 283                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -39,12 +39,13 @@ github-project-research/
 
 完整版（含一句话定位、Stars、报告链接）请见 [全量索引表](GitHub%20项目研究%20—%20全量索引表.md)。本节按 owner 字母分组，仅列 owner/repo + 报告文件名。
 
-### 1（2 个）
+### 1（3 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) | [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md) |
 | [`1Panel-dev/MaxKBStar`](https://github.com/1Panel-dev/MaxKBStar) | [1Panel-dev-MaxKBStar-深度调研.md](1Panel-dev-MaxKBStar-深度调研.md) |
+| [`1jehuang/jcode`](https://github.com/1jehuang/jcode) | [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md) |
 
 ### 2（1 个）
 
@@ -52,13 +53,14 @@ github-project-research/
 |------------|----------|
 | [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) | [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md) |
 
-### 5（1 个）
+### 5（2 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) | [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md) |
+| [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) | [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md) |
 
-### A（19 个）
+### A（20 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -81,6 +83,7 @@ github-project-research/
 | [`alchaincyf/zhangxuefeng-skill`](https://github.com/alchaincyf/zhangxuefeng-skill) | [alchaincyf-zhangxuefeng-skill-深度调研.md](alchaincyf-zhangxuefeng-skill-深度调研.md) |
 | [`aws/agent-toolkit-for-aws`](https://github.com/aws/agent-toolkit-for-aws) | [aws-agent-toolkit-for-aws-深度调研.md](aws-agent-toolkit-for-aws-深度调研.md) |
 | [`AstrBotDevs/AstrBot`](https://github.com/AstrBotDevs/AstrBot) | [AstrBotDevs-AstrBot-深度调研.md](AstrBotDevs-AstrBot-深度调研.md) |
+| [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) | [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md) |
 
 ### B（10 个）
 
@@ -114,7 +117,7 @@ github-project-research/
 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) | [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md) |
 | [`coreybutler/nvm-windows`](https://github.com/coreybutler/nvm-windows) | [coreybutler-nvm-windows-深度调研.md](coreybutler-nvm-windows-深度调研.md) |
 
-### D（8 个）
+### D（9 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -126,6 +129,7 @@ github-project-research/
 | [`dreammis/social-auto-upload`](https://github.com/dreammis/social-auto-upload) | [dreammis-social-auto-upload-深度调研.md](dreammis-social-auto-upload-深度调研.md) |
 | [`davila7/claude-code-templates`](https://github.com/davila7/claude-code-templates) | [davila7-claude-code-templates-深度调研.md](davila7-claude-code-templates-深度调研.md) |
 | [`Dicklesworthstone/destructive_command_guard`](https://github.com/Dicklesworthstone/destructive_command_guard) | [Dicklesworthstone-destructive_command_guard-深度调研.md](Dicklesworthstone-destructive_command_guard-深度调研.md) |
+| [`dottxt-ai/outlines`](https://github.com/dottxt-ai/outlines) | [dottxt-ai-outlines-深度调研.md](dottxt-ai-outlines-深度调研.md) |
 
 ### E（5 个）
 
@@ -457,6 +461,7 @@ github-project-research/
 - [`JustVugg/colibri`](https://github.com/JustVugg/colibri) — [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md)
 
 - [`kvcache-ai/ktransformers`](https://github.com/kvcache-ai/ktransformers) — [kvcache-ai-ktransformers-深度调研.md](kvcache-ai-ktransformers-深度调研.md)
+- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 
 ### AI 编码 / Skill 技能
 
@@ -480,6 +485,7 @@ github-project-research/
 - [`xai-org/grok-build`](https://github.com/xai-org/grok-build) — [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md)
 
 - [`MoonshotAI/kimi-cli`](https://github.com/MoonshotAI/kimi-cli) — [MoonshotAI-kimi-cli-深度调研.md](MoonshotAI-kimi-cli-深度调研.md)
+- [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 
 ### RAG / 知识库 / 记忆
 
@@ -503,6 +509,7 @@ github-project-research/
 - [`Stirling-Tools/Stirling-PDF`](https://github.com/Stirling-Tools/Stirling-PDF) — [Stirling-Tools-Stirling-PDF-深度调研.md](Stirling-Tools-Stirling-PDF-深度调研.md)
 - [`coreybutler/nvm-windows`](https://github.com/coreybutler/nvm-windows) — [coreybutler-nvm-windows-深度调研.md](coreybutler-nvm-windows-深度调研.md)
 - [`PostHog/posthog`](https://github.com/PostHog/posthog) — [PostHog-posthog-深度调研.md](PostHog-posthog-深度调研.md)
+- [`dottxt-ai/outlines`](https://github.com/dottxt-ai/outlines) — [dottxt-ai-outlines-深度调研.md](dottxt-ai-outlines-深度调研.md)
 
 ### 前端 / 设计 / UI
 
@@ -543,6 +550,7 @@ github-project-research/
 - [`easychen/opc-methodologyStar`](https://github.com/easychen/opc-methodologyStar) — [easychen-opc-methodologyStar-深度调研.md](easychen-opc-methodologyStar-深度调研.md)
 - [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) — [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md)
 - [`codecrafters-io/build-your-own-x`](https://github.com/codecrafters-io/build-your-own-x) — [codecrafters-io-build-your-own-x-深度调研.md](codecrafters-io-build-your-own-x-深度调研.md)
+- [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) — [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md)
 
 ### 其他
 
