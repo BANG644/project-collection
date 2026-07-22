@@ -287,6 +287,8 @@
 | 272 | [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 驱动的多市场股票智能分析系统 | 18,500 | — | [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md) |
 | 273 | [`AstrBotDevs/AstrBot`](https://github.com/AstrBotDevs/AstrBot) | AstrBot — 平台无关开源 Agent 聊天框架，国产 IM 全覆盖 + 1000+ 插件 + Agent 沙箱 | 37,019 | 2026-07-21 | [AstrBotDevs-AstrBot-深度调研.md](AstrBotDevs-AstrBot-深度调研.md) |
 | 274 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | FastMCP — MCP 生态事实标准 Python 框架，装饰器即工具，Servers/Clients/Apps 三支柱 | 26,470 | 2026-07-21 | [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md) |
+| 275 | [`DioxusLabs/dioxus`](https://github.com/DioxusLabs/dioxus) | Dioxus — Rust 全栈跨平台应用框架，一套代码覆盖 Web / 桌面 / 移动端 / SSR | 37,947 | 2026-07-23 | [DioxusLabs-dioxus-深度调研.md](DioxusLabs-dioxus-深度调研.md) |
+| 276 | [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) | Kronos — 首个开源金融 K 线基础模型，K 线专用 tokenizer 量化 + 自回归 Transformer | 32,536 | 2026-07-23 | [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md) |
 
 ---
 
@@ -444,7 +446,7 @@
 
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 
-### 前端 / 设计 / UI（11）
+### 前端 / 设计 / UI（12）
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
 - [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) — [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md)
@@ -456,6 +458,7 @@
 - [`facebook/astryx`](https://github.com/facebook/astryx) — [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md)
 - [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) — [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md)
 - [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) — [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md)
+- [`DioxusLabs/dioxus`](https://github.com/DioxusLabs/dioxus) — [DioxusLabs-dioxus-深度调研.md](DioxusLabs-dioxus-深度调研.md)
 
 ### 视频 / 音频 / 多媒体（14）
 
@@ -503,7 +506,7 @@
 - [`openai/openai-cookbook`](https://github.com/openai/openai-cookbook) — [openai-openai-cookbook-深度调研.md](openai-openai-cookbook-深度调研.md)
 - [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) — [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md)
 
-### 其他（73）
+### 其他（74）
 
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
 - [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) — [srbhr-Resume-Matcher-深度调研.md](srbhr-Resume-Matcher-深度调研.md)
@@ -535,6 +538,7 @@
 - [`jd-opensource/JoyAI-Echo`](https://github.com/jd-opensource/JoyAI-Echo) — [jd-opensource-JoyAI-Echo-深度调研.md](jd-opensource-JoyAI-Echo-深度调研.md)
 - [`kageroumado/phosphene`](https://github.com/kageroumado/phosphene) — [kageroumado-phosphene-深度调研.md](kageroumado-phosphene-深度调研.md)
 - [`koala73/worldmonitor`](https://github.com/koala73/worldmonitor) — [koala73-worldmonitor-深度调研.md](koala73-worldmonitor-深度调研.md)
+- [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) — [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md)
 - [`LanRhyme/MicYou`](https://github.com/LanRhyme/MicYou) — [LanRhyme-MicYou-深度调研.md](LanRhyme-MicYou-深度调研.md)
 - [`lfnovo/open-notebook`](https://github.com/lfnovo/open-notebook) — [lfnovo-open-notebook-深度调研.md](lfnovo-open-notebook-深度调研.md)
 - [`liyue-aigc/female-portrait-dataset`](https://github.com/liyue-aigc/female-portrait-dataset) — [liyue-aigc-female-portrait-dataset-深度调研.md](liyue-aigc-female-portrait-dataset-深度调研.md)

@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 283                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 285                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -117,7 +117,7 @@ github-project-research/
 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) | [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md) |
 | [`coreybutler/nvm-windows`](https://github.com/coreybutler/nvm-windows) | [coreybutler-nvm-windows-深度调研.md](coreybutler-nvm-windows-深度调研.md) |
 
-### D（9 个）
+### D（10 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -130,6 +130,7 @@ github-project-research/
 | [`davila7/claude-code-templates`](https://github.com/davila7/claude-code-templates) | [davila7-claude-code-templates-深度调研.md](davila7-claude-code-templates-深度调研.md) |
 | [`Dicklesworthstone/destructive_command_guard`](https://github.com/Dicklesworthstone/destructive_command_guard) | [Dicklesworthstone-destructive_command_guard-深度调研.md](Dicklesworthstone-destructive_command_guard-深度调研.md) |
 | [`dottxt-ai/outlines`](https://github.com/dottxt-ai/outlines) | [dottxt-ai-outlines-深度调研.md](dottxt-ai-outlines-深度调研.md) |
+| [`DioxusLabs/dioxus`](https://github.com/DioxusLabs/dioxus) | [DioxusLabs-dioxus-深度调研.md](DioxusLabs-dioxus-深度调研.md) |
 
 ### E（5 个）
 
@@ -201,13 +202,14 @@ github-project-research/
 | [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) | [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md) |
 | [`JustVugg/colibri`](https://github.com/JustVugg/colibri) | [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md) |
 
-### K（4 个）
+### K（5 个）
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`kageroumado/phosphene`](https://github.com/kageroumado/phosphene) | [kageroumado-phosphene-深度调研.md](kageroumado-phosphene-深度调研.md) |
 | [`KKKKhazix/khazix-skills`](https://github.com/KKKKhazix/khazix-skills) | [KKKKhazix-khazix-skills-深度调研.md](KKKKhazix-khazix-skills-深度调研.md) |
 | [`koala73/worldmonitor`](https://github.com/koala73/worldmonitor) | [koala73-worldmonitor-深度调研.md](koala73-worldmonitor-深度调研.md) |
 | [`kvcache-ai/ktransformers`](https://github.com/kvcache-ai/ktransformers) | [kvcache-ai-ktransformers-深度调研.md](kvcache-ai-ktransformers-深度调研.md) |
+| [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) | [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md) |
 
 
 ### L（10 个）
@@ -520,6 +522,7 @@ github-project-research/
 - [`JimLiu/baoyu-design`](https://github.com/JimLiu/baoyu-design) — [JimLiu-baoyu-design-深度调研.md](JimLiu-baoyu-design-深度调研.md)
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
 - [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) — [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md)
+- [`DioxusLabs/dioxus`](https://github.com/DioxusLabs/dioxus) — [DioxusLabs-dioxus-深度调研.md](DioxusLabs-dioxus-深度调研.md)
 
 ### 视频 / 音频 / 多媒体
 
@@ -582,6 +585,7 @@ github-project-research/
 - [`jd-opensource/JoyAI-Echo`](https://github.com/jd-opensource/JoyAI-Echo) — [jd-opensource-JoyAI-Echo-深度调研.md](jd-opensource-JoyAI-Echo-深度调研.md)
 - [`kageroumado/phosphene`](https://github.com/kageroumado/phosphene) — [kageroumado-phosphene-深度调研.md](kageroumado-phosphene-深度调研.md)
 - [`koala73/worldmonitor`](https://github.com/koala73/worldmonitor) — [koala73-worldmonitor-深度调研.md](koala73-worldmonitor-深度调研.md)
+- [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) — [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md)
 - [`LanRhyme/MicYou`](https://github.com/LanRhyme/MicYou) — [LanRhyme-MicYou-深度调研.md](LanRhyme-MicYou-深度调研.md)
 - [`lfnovo/open-notebook`](https://github.com/lfnovo/open-notebook) — [lfnovo-open-notebook-深度调研.md](lfnovo-open-notebook-深度调研.md)
 - [`liyue-aigc/female-portrait-dataset`](https://github.com/liyue-aigc/female-portrait-dataset) — [liyue-aigc-female-portrait-dataset-深度调研.md](liyue-aigc-female-portrait-dataset-深度调研.md)
