@@ -1,181 +1,125 @@
-# 🔬 ruvnet/RuView - 全方位深度调研
+# 📡 ruvnet/RuView — 用 WiFi 信号"看见"墙后的世界（无摄像头的空间智能）
 
-## 📌 一句话定位
+> **仓库地址**: https://github.com/ruvnet/RuView  
+> **Stars**: 85,030 | **语言**: Rust / Python / C / TypeScript | **许可证**: MIT  
+> **组织**: ruvnet（Cognitum）  
+> **抓取日期**: 2026-07-24（GitHub Trending 当日上榜）
 
-`ruvnet/RuView` 是一个把普通 WiFi / ESP32 CSI 信号包装成“空间感知、存在检测、生命体征监测”的实验型系统：它的宣传很强，但真实落地难度也很高，核心风险集中在硬件兼容、固件稳定性、信号质量和文档可操作性上。
+---
 
-> 结论先行：这不是一个“装上就能穿墙看人”的成熟消费级项目，更像一个高速迭代的 WiFi sensing / DensePose / 智能家居集成实验场。适合研究、PoC 和硬件黑客，不适合直接当稳定产品部署。
+## 一、项目定位（一句话）
 
-## 🏗️ 项目全景
+RuView 是一个**基于 WiFi CSI（信道状态信息）的无摄像头空间感知平台**：用廉价 ESP32 节点读取人体扰动无线电波的反射，实时推断出"谁在房间里、在做什么、呼吸/心率多少、是否跌倒"——穿透墙壁、黑暗、无需任何摄像头或可穿戴设备。
 
-| 维度 | 观察 |
-|---|---|
-| 仓库 | `ruvnet/RuView` |
-| GitHub | https://github.com/ruvnet/RuView |
-| 定位 | WiFi CSI 空间智能、人体存在/动作/生命体征推断 |
-| Stars / Forks | 约 74K stars、9.9K forks（2026-06-18 抽样） |
-| 默认分支 | `main` |
-| 最新 release | `v0.8.1-esp32`：display + mmwave false-detect fixes |
-| 主要技术域 | ESP32 firmware、CSI 信号处理、Rust v2、Python v1、Home Assistant / Matter / HAP 集成 |
+---
 
-### 目录结构与工程信号
+## 二、项目亮点（差异化）
 
-从递归文件树看，仓库不是单一 Python demo，而是多层系统：
+1. **隐私优先的"穿透感知"** — 核心卖点是"See through walls with WiFi"：完全靠无线电物理信号，零像素、零摄像头，天然规避隐私/合规雷区（与摄像头方案形成根本差异）。
+2. **9 美元硬件跑通** — ESP32-S3/C6 CSI 节点单价约 $9，Cognitum Seed 边缘协处理器约 $140 整机 BOM，把传统需要雷达/深度相机才能做的感知压到消费级成本。
+3. **端侧脉冲神经网络（SNN）** — 模型在本地 30 秒内自适应学习环境，预训练权重 4-bit 量化后仅 8KB，在树莓派上微秒级推理，无云、无联网。
+4. **密码学可证明的可信感知** — 每次测量都经 **Ed25519 witness chain** 签名见证，解决"传感数据能否被信任"这一 IoT 老大难问题。
+5. **105 个开箱即用的"边缘模块"（Cog）** — 从 `app-registry.json` 动态加载的健康/安防/建筑/零售/工业/研究等模块目录，外加 Home Assistant / Apple Home / Google Home / Alexa / Matter 主流智能家居全桥接（每节点暴露 21 个实体）。
 
-- `.claude/`、`.claude-flow/`：大量 agent / workflow / swarm 配置，说明仓库中混入了非常多 AI 辅助工程资产。
-- `firmware/`：ESP32 CSI 节点、硬件采集、边缘处理相关代码。
-- `v2/`：Rust 化重构主线，包含 core / signal / nn / train / hardware 等 crate。
-- `python/`、`requirements.txt`、`pyproject.toml`：旧版或研究型 Python 管线。
-- `ui/`、`docs/`、`examples/`：面向用户集成与演示。
+---
 
-**关键判断**：仓库体量和目录名显示它想做“端到端产品”，但 issue 中反复出现 ESP32 yield=0pps、watchdog crash、false detection、动画无数据等问题，说明它仍处于工程打磨期。
+## 三、核心架构
 
-## 🧠 核心架构解读
+整体是"**硬件采集 → 边缘推理 → 可信见证 → 平台集成**"四层流水线：
 
-### 1. Python v1：研究型 WiFi-DensePose 管线
+```
+ESP32 CSI 节点 ($9)
+   │  6 频段信道跳变 + TDM 时隙调度（邻居路由器当免费雷达照明源）
+   ▼
+CSI 处理 (core/csi_processor.py：相位净化 → 包裹相位 → 循环方差)
+   │
+   ▼
+Spiking NN 本地学习 (<30s) + 预训练 8KB 量化模型（HuggingFace: wifi-densepose-pretrained）
+   │  ├─ 呼吸/心率（带通滤波 + 过零 BPM）
+   │  ├─ 存在检测（82.3% 时序三元组精度 head + 相位方差兜底）
+   │  ├─ 17 关键点姿态（Cog: pose_v1.safetensors，Candle 加载）
+   │  └─ OccWorld 世界模型（TransVQVAE，15 帧未来占用预测）
+   ▼
+Ed25519 Witness Chain 签名见证
+   │
+   ▼
+FastAPI 后端 (archive/v1/src/api：pose/stream/auth/health 路由 + WebSocket)
+   │  + 3D 点云融合（MiDaS 相机深度 + WiFi CSI + mmWave 雷达）
+   ▼
+智能生态桥接（HA --mqtt / Matter / Apple-Home / Alexa）
+```
 
-`pyproject.toml` 中项目名为 `wifi-densepose`，关键词包括 `wifi`、`csi`、`pose-estimation`、`densepose`、`neural-networks`。这说明 RuView 的概念核心不是普通 IoT 传感器，而是利用 CSI（Channel State Information）做人体姿态/存在/生命体征估计。
+**关键技术选择**：
+- **Rust crate `wifi-densepose-ruvector`**（已上 crates.io）：128 维对比学习 CSI 编码器，4-bit 量化版仅 8KB，M4 Pro 上 **164,183 emb/s**。
+- **多频 Mesh 扫描**：跨 6 个 WiFi 信道跳变，用邻居路由器信号当"免费雷达照明源"，感知带宽 ×3。
+- **3D 点云融合**：MiDaS 深度 + CSI + mmWave，22ms 流水线、19K+ 点/帧，把异质传感统一成空间模型。
 
-`requirements.txt` 暴露了系统形态：
+---
 
-- `numpy/scipy/scikit-learn/opencv-python`：信号处理与传统 ML。
-- `torch/torchvision`：神经网络推理或训练。
-- `fastapi/uvicorn/websockets/pydantic`：服务端 API 与实时数据推送。
-- `sqlalchemy/redis`：状态、历史数据或缓存。
-- `asyncio-mqtt/aiohttp/paramiko`：硬件、MQTT、远程控制集成。
+## 四、应用场景与启发
 
-**研判**：这不是单纯 README 级“概念项目”，至少曾尝试搭建完整数据链路；但依赖跨度过大，也意味着环境复现成本高。
+- **适老化 / 独居监护**：跌倒检测 <200ms、呼吸/心率非接触监测、长时间无活动异常告警——比摄像头方案更易被老人接受（无监视感）。
+- **智能家居存在感知**："某人在睡觉/浴室占用/会议进行中"等语义状态直接进 HA 自动化，比 PIR 人体传感器信息量大一个量级。
+- **零售/工业计数**：专门的 learned counter Cog（occupancy-zones / queue-length / customer-flow），实时自校准。
+- **给 AI/IoT 构建者的启发**：
+  1. **CSI 是一种全新的传感器模态**——当你的项目需要"存在/动作/生命体征"但装不了摄像头时，这是现成方案。
+  2. **可信感知的范本**：Ed25519 witness chain 把"数据可信"做成默认能力，值得任何传感/IoT 项目借鉴。
+  3. **诚实的度量是信任资产**：RuView 主动撤回了早期"100% 存在检测"的夸大数字，改为诚实的 82.3% 留出基准——这种"自纠"文化在 AI 硬件项目里极少见，反而是它最值钱的工程信号。
 
-### 2. Rust v2：把研究原型拆成可维护 crate
+---
 
-`CLAUDE.md` 对 v2 的描述很关键：Rust 版本被拆成多个 crate，例如：
+## 五、源码深度解读
 
-| Crate | 角色 |
-|---|---|
-| `wifi-densepose-core` | 核心类型、trait、错误、CSI frame 基础抽象 |
-| `wifi-densepose-signal` | CSI 信号处理、RuvSense 多站点 sensing |
-| `wifi-densepose-nn` | ONNX / PyTorch / Candle 推理后端 |
-| `wifi-densepose-train` | 训练流水线、指标集成 |
-| `wifi-densepose-hardware` | ESP32 聚合、TDM 协议、信道跳频固件 |
-| `wifi-densepose-mat` | Mass Casualty Assessment Tool 场景化扩展 |
+### 5.1 CSI 处理内核（`archive/v1/src/core/csi_processor.py`）
+放射信号进入后的第一道工程化处理：相位净化（phase_sanitizer）→ 包裹相位解卷 → 循环方差计算。这是后续一切生命体征提取的物理基础，决定了 BPM 估计的稳健性。
 
-**架构含义**：作者意识到 Python 原型难以支撑长期演进，所以把核心能力向 Rust crate 化迁移。这个方向是对的：CSI 数据流、固件通信、实时推理更需要强类型、性能和边界清晰的模块。
+### 5.2 推理服务（`archive/v1/src/api/routers/pose.py` + `stream.py`）
+FastAPI 把姿态/流数据通过 REST + WebSocket 双通道暴露；`websocket/pose_stream.py` 的 connection_manager 负责多客户端并发推送，是上层桥接（HA/Matter）取数的统一入口。
 
-### 3. 固件层：真实风险集中区
+### 5.3 本地校准与学习（`aether-arena/calibration/model.py` / `infer.py` / `cog_calibrate.py`）
+SNN 自适应学习的核心：30 秒内用环境样本微调，把通用预训练模型校准到具体房间。配合 `aether-arena/ledger/ledger_tools.py` 做不可篡改的记录。
 
-近期 issue/release 显示，真正决定 RuView 是否“能跑”的不是 UI，而是 ESP32 固件与 CSI 数据质量。例如：
+> 注：仓库顶层大量 `.claude/`、`.claude-flow/` 是 Agent 协作脚手架（agent 定义、metrics、horizons），非运行时代码；真实源码在 `archive/`、`aether-arena/`、`firmware/` 三处。
 
-- `#1116`：edge_dsp watchdog crash，用户报告 3 台 ESP32-S3 在 v0.6.5 上崩溃。
-- `#1107`：MR60BHA2 false detection 导致 ENOMEM + yield=0pps，已在 v0.8.1-esp32 修复。
-- `#1050`：Observatory figure 不动画，因为 `/ws/sensing` stream 缺 person position/pose 数据。
-- `#1049`：multistatic guard interval 硬编码 5000µs 导致 trust demotion。
-- `#949`：Seed TLS 初始化触发 stack overflow，后续把 `SWARM_TASK_STACK` 从 3072 提到 8192。
+---
 
-这些不是小问题，而是直接影响“有没有数据、数据准不准、设备会不会崩”的底层问题。
+## 六、全网口碑
 
-## 🔍 源码深度解读
+- **增长极快**：85K⭐ 在登上 Trending 后短期内冲到高位，是当日 Trending 头部项目，说明"无摄像头穿墙感知"叙事击中了强需求。
+- **工程可信度信号强**：1463 个测试通过、crates.io 正式发布、多架构 Docker、HuggingFace 公开权重、并**主动撤回夸大指标**——这些在"vibe-coded 爆款"里相当罕见，社区口碑偏正面。
+- **需警惕的噪音**：星标增速与项目实际成熟度存在落差（核心仍是研究型原型 + 大量 Agent 脚手架），"85K⭐"含一定 Trending 流量水分，落地仍需具体硬件与调参。
 
-### `firmware/esp32-csi-node/main/swarm_bridge.c`
+---
 
-该文件中的注释说明 `#949` 的根因：原来的 3KB stack 只适合 HTTP，用户一旦配置 HTTPS Seed URL，就会触发 mbedTLS 握手，栈空间不足并 panic。修复方式是把 `SWARM_TASK_STACK` 提升到 8192。
+## 七、竞品对比 + 核心研判
 
-这透露出两点：
+### 竞品对比
+| 维度 | RuView | mmWave 雷达(TI IWR) | 微软 Soundwave(研究) | 摄像头方案(Nest/HomePod) | 商用量身感知(Origin Wireless) |
+|------|:------:|:-------------------:|:--------------------:|:------------------------:|:----------------------------:|
+| 硬件成本 | ~$9 ESP32 | 中高 | 研究 | 高 | 高 |
+| 摄像头/隐私 | ✅ 无像素 | ✅ 无 | ✅ 无 | ❌ 有 | ✅ 无 |
+| 穿墙能力 | ✅ ~5m | ⚠️ 有限 | ✅ | ❌ | ✅ |
+| 端侧推理 | ✅ SNN 8KB | ⚠️ 部分 | ❌ 云 | ❌ 云 | 厂商黑盒 |
+| 可信 attestation | ✅ Ed25519 | ❌ | ❌ | ❌ | ❌ |
+| 开源程度 | ✅ MIT | ❌ | ❌ | ❌ | ❌ |
+| 智能家居集成 | ✅ HA/Matter/Apple/Alexa | ❌ | ❌ | ✅ | 部分 |
 
-1. 项目确实在跟真实硬件 bug 斗争，不是空壳。
-2. 文档/默认配置和真实部署路径之间存在落差：用户配置 HTTPS 这种正常选择，可能触发深层固件问题。
+### 核心研判
+- **优势**：隐私原生 + 极致低成本 + 端侧可信感知 + 主流生态全桥接，叙事与工程完整性在同类里罕见。
+- **风险**：CSI 对环境（多径、家具变动）高度敏感，实际精度依赖调参；85K⭐ 含 Trending 流量水分，成熟度为研究原型级；"穿墙感知"在部分地区触及监控/法律的灰色地带，部署需合规评估。
+- **趋势**："无摄像头感知"正从论文走向消费级（Apple/Google 也在做存在感知），Matter 标准化让这类设备能无缝进智能家居；端侧 SNN 是边缘 AI 的明确方向。
+- **启发**：把 RuView 当作"传感即代码"的范本——当你需要存在/动作/生命体征数据又不想上摄像头时，CSI 是现成路径；其 witness chain + 诚实基准的做法，值得任何"AI 给出关键判断"的项目抄作业。
 
-### `requirements.txt` / `pyproject.toml`
+---
 
-依赖组合证明它是“信号处理 + 神经网络 + 服务端 + 硬件集成”的混合系统。风险也来自这里：任何一个层面（驱动、CSI、模型、API、UI）坏掉，用户都会感觉“点进去没有内容”或“看起来像 demo”。
+## 八、关键文件速查
 
-### `CLAUDE.md`
-
-`CLAUDE.md` 中的 crate 划分比 README 更有价值，因为它揭示了作者真正想要的长期架构：
-
-- core 抽象 CSI frame；
-- signal 做多站点感知；
-- nn 做跨后端推理；
-- hardware 处理 ESP32 和 TDM；
-- train / metrics 负责模型迭代。
-
-**独家发现**：README 讲的是“WiFi 穿墙感知”的愿景，`CLAUDE.md` 暴露的是“Python v1 + Rust v2 + ESP32 固件 + 智能家居桥接”的复杂多栈迁移工程。这种复杂度本身就是采用风险。
-
-## 🌐 社区口碑与真实反馈
-
-外部搜索没有拿到可靠第三方长评，因此本节以 GitHub Issues / Releases 作为一手反馈源。
-
-### 好评/积极信号
-
-- 维护频率高：2026-06 中旬仍有 release，例如 `v0.8.1-esp32`。
-- issue 中维护者会给出硬件验证、固件版本、复现条件等细节，不是简单关闭问题。
-- 方向有差异化：WiFi CSI + Home Assistant / Matter / HAP 集成，确实比普通摄像头/毫米波传感器更有想象力。
-
-### 差评/风险信号
-
-- `#1125 Has anyone got this project to work?` 这种 issue 标题很刺眼，说明至少有用户无法跑通。
-- 多个问题集中在 `yield=0pps`、watchdog crash、false detection、stream 缺数据，属于“核心链路不稳定”。
-- 大量 AI/Claude flow 资产混在仓库中，可能造成目录噪声，增加新用户理解成本。
-- README 愿景强，但硬件、固件、网络、模型、UI 的组合门槛非常高。
-
-### 维护者响应风格
-
-维护者倾向于快速迭代固件和 release，而不是只在 issue 中解释。这对追新用户是好事；但对稳定生产环境是风险，因为版本变化频繁，用户必须跟上 firmware / config / hardware 组合。
-
-## ⚔️ 竞品与替代方案
-
-| 方向 | RuView | 替代方案 | 差异 |
-|---|---|---|---|
-| 家庭存在检测 | WiFi CSI + ESP32 + 智能家居桥接 | mmWave 人体存在传感器 | RuView 更有想象力，但 mmWave 更成熟、可购买即用 |
-| 姿态/动作识别 | 非视觉信号推断 | 摄像头 + CV / Depth Camera | RuView 隐私优势强，但精度和部署稳定性不如视觉方案直观 |
-| 研究原型 | 开源多栈系统 | academic CSI sensing repos | RuView 更产品化，但复杂度也更高 |
-| Home Assistant 集成 | MQTT / Matter / HAP 方向 | Zigbee / BLE / Thread 传感器 | RuView 潜在信息量更丰富，但硬件调试成本高 |
-
-## 🎯 核心研判
-
-### 优势
-
-1. **方向足够差异化**：用 WiFi 信号做空间感知，天然有隐私叙事和“无摄像头”卖点。
-2. **不是单文件玩具**：Python、Rust、firmware、UI、docs、release 都存在，说明作者在做完整系统。
-3. **一手 issue 价值高**：大量硬件 bug 记录反而说明项目经历真实设备测试。
-
-### 风险
-
-1. **部署复杂度过高**：硬件型号、固件版本、WiFi 环境、CSI 数据质量都会影响结果。
-2. **稳定性尚未闭环**：近期 issue 仍有 watchdog crash、false detection、数据流缺失。
-3. **文档承诺与实际体验有落差**：README 的“穿墙感知”叙事很强，但新手可能连数据流都跑不通。
-4. **仓库噪声大**：`.claude` / flow / agents 资产大量存在，容易干扰工程入口判断。
-
-### 适用场景
-
-- WiFi sensing / CSI / ESP32 方向研究。
-- 智能家居 PoC，验证“非摄像头感知”是否可行。
-- 需要观察一个高速迭代 AI+IoT 仓库的架构演进。
-
-### 不适用场景
-
-- 需要稳定 SLA 的家庭安防或医疗/照护场景。
-- 不具备 ESP32 固件、网络、信号处理调试能力的普通用户。
-- 希望“一键安装就可用”的产品选型。
-
-## 📂 关键文件路径速查
-
-- `README.md`：愿景与用户入口。
-- `pyproject.toml`：Python v1 项目元信息。
-- `requirements.txt`：信号处理、API、硬件依赖全景。
-- `CLAUDE.md`：Rust v2 crate 架构说明，价值高于 README。
-- `firmware/esp32-csi-node/main/swarm_bridge.c`：固件真实问题与修复证据。
-- `v2/`：Rust 化重构主线。
-
-## ⭐ 三条关键发现
-
-1. **RuView 最大价值不是 README 的“穿墙”口号，而是它把 CSI sensing、ESP32、Rust crate、智能家居桥接放进同一系统。**
-2. **最大风险也来自同一件事：系统链路过长，任何固件/网络/模型/UI 环节出错，用户体验都会变成“没内容、没数据、跑不通”。**
-3. **近期 release 和 issue 说明项目仍活跃，但还处在硬件稳定性打磨阶段，不应按成熟产品看待。**
-
-## 🧪 研究方法与数据来源
-
-- GitHub Repo API：stars、forks、topics、release、默认分支。
-- GitHub 文件树：目录结构、关键文件定位。
-- GitHub Issues：`#1125`、`#1116`、`#1107`、`#1050`、`#1049`、`#949` 等。
-- 关键文件抽样：`README.md`、`pyproject.toml`、`requirements.txt`、`CLAUDE.md`、`swarm_bridge.c`。
-- 外部搜索：未发现可靠第三方长评，因此不编造口碑。
+| 路径 | 作用 |
+|------|------|
+| `archive/v1/src/core/csi_processor.py` | CSI 相位净化与特征提取内核 |
+| `archive/v1/src/api/routers/pose.py` | 姿态 REST 接口 |
+| `archive/v1/src/api/websocket/pose_stream.py` | 姿态 WebSocket 推送 |
+| `aether-arena/calibration/model.py` / `infer.py` | SNN 本地校准与推理 |
+| `app-registry.json` | 105 个边缘 Cog 模块目录 |
+| `firmware/esp32-csi-node/` | ESP32-S3/C6 CSI 固件与烧录 |
+| crates.io `wifi-densepose-ruvector` | Rust CSI 编码器核心库 |

@@ -16,7 +16,7 @@
 | 1 | [`github.com/BuilderIO`](https://github.com/BuilderIO) | BuilderIO Agent-Native — Agent 原生应用框架 | — | — | [github.com-BuilderIO-深度调研.md](github.com-BuilderIO-深度调研.md) |
 | 2 | [`github.com/DietrichGebert`](https://github.com/DietrichGebert) | Ponytail | — | 2026-06-26 | [github.com-DietrichGebert-深度调研.md](github.com-DietrichGebert-深度调研.md) |
 | 3 | [`github.com/google-research`](https://github.com/google-research) | Google Research TimesFM — 时间序列基础模型 | — | — | [github.com-google-research-深度调研.md](github.com-google-research-深度调研.md) |
-| 4 | [`github.com/penpot`](https://github.com/penpot) | Penpot — 开源设计平台 | — | 2026-06-11 | [github.com-penpot-深度调研.md](github.com-penpot-深度调研.md) |
+| 4 | [`github.com/penpot`](https://github.com/penpot) | Penpot — 开源设计平台（MCP Server 打通设计⇄代码） | 57,240 | 2026-07-24 | [github.com-penpot-深度调研.md](github.com-penpot-深度调研.md) |
 | 5 | [`github.com/TencentCloud`](https://github.com/TencentCloud) | TencentCloud GitHub 组织 | 5,043 | 2026-06-07 | [TencentCloud-深度调研.md](TencentCloud-深度调研.md) |
 | 6 | [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) | 18 AI 历史名人群组辩论系统——跨 6+LLM 提供商的结构化决策辩论，7 步仪式化协议+防假共识加权投票 | 1,823 | 2026-06-30 | [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md) |
 | 7 |[`1jehuang/jcode`](https://github.com/1jehuang/jcode) | 最轻量 Rust 编码 Agent Harness——27.8MB 内存 + Ambient 常驻多会话 + 生产级 Loop 模块化 | 10,207 | 2026-07-22 | [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md) |
@@ -226,7 +226,7 @@
 | 211 | [`roboflow/supervision`](https://github.com/roboflow/supervision) | 计算机视觉工程沉淀工具箱——20+标注器+ByteTrack追踪+区域计数+数据集转换，CV 项目的事实标准胶水层 | 45,863 | 2026-07-01 | [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md) |
 | 212 | [`rohitg00/agentmemory`](https://github.com/rohitg00/agentmemory) | — | — | 2026-02-25 | [rohitg00-agentmemory-深度调研.md](rohitg00-agentmemory-深度调研.md) |
 | 213 | [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo) | — | — | — | [ruvnet-ruflo-深度调研.md](ruvnet-ruflo-深度调研.md) |
-| 214 | [`ruvnet/RuView`](https://github.com/ruvnet/RuView) | — | — | 2026-06-18 | [ruvnet-RuView-深度调研.md](ruvnet-RuView-深度调研.md) |
+| 214 | [`ruvnet/RuView`](https://github.com/ruvnet/RuView) | RuView — 用 WiFi CSI 做无摄像头穿墙空间感知（Rust+ESP32+SNN，呼吸/心率/姿态/跌倒） | 85,030 | 2026-07-24 | [ruvnet-RuView-深度调研.md](ruvnet-RuView-深度调研.md) |
 | 215 | [`sansan0/TrendRadar`](https://github.com/sansan0/TrendRadar) | AI 驱动的开源舆情监控与热点筛选工具，聚合多平台热点、RSS 订阅，支持 AI 智能分析、翻译和多渠道推送。📖 项目定位与核心功能定位TrendRadar 定 | 59.3 | 2026-06-13 | [sansan0-TrendRadar-深度调研.md](sansan0-TrendRadar-深度调研.md) |
 | 216 | [`santifer/career-ops`](https://github.com/santifer/career-ops) | AI 求职系统 | 54,765 | 2026-06-20 | [santifer-career-ops-深度调研.md](santifer-career-ops-深度调研.md) |
 | 217 | [`sapientinc/HRM-Text`](https://github.com/sapientinc/HRM-Text) | — | — | — | [sapientinc-HRM-Text-深度调研.md](sapientinc-HRM-Text-深度调研.md) |
@@ -282,13 +282,14 @@
 | 267 | [`xw7872081123/wallpaper-engine-steam`](https://github.com/xw7872081123/wallpaper-engine-steam) | 🚫 疑似虚假/SEO 垃圾仓库（84⭐），源码为儿童算术游戏，与描述完全不符 | — | 2026-05-18 | [xw7872081123-wallpaper-engine-steam-深度调研.md](xw7872081123-wallpaper-engine-steam-深度调研.md) |
 | 268 | [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) | 中文 LeetCode 刷题攻略的标杆项目——《代码随想录》配套仓库，200+ 道经典题目的系统化刷题路线。📖 核心功能系统化刷题路线：按「数组→链表→哈希表→ | 61 | 2026-06-12 | [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md) |
 | 269 | [`Zackriya-Solutions/meetily`](https://github.com/Zackriya-Solutions/meetily) | 隐私优先的 AI 会议助手——Rust+Tauri 底座，100% 本地运行，Parakeet 4x 转写加速，无需云服务 | 15,069 | 2026-07-05 | [Zackriya-Solutions-meetily-深度调研.md](Zackriya-Solutions-meetily-深度调研.md) |
-| 270 | [`zai-org/GLM-5`](https://github.com/zai-org/GLM-5) | 从 Vibe Coding 到 Agentic Engineering 的旗舰模型 | 4,121 | 2026-06-19 | [zai-org-GLM-5-深度调研.md](zai-org-GLM-5-深度调研.md) |
+| 270 | [`zai-org/GLM-5`](https://github.com/zai-org/GLM-5) | 从 Vibe Coding 到 Agentic Engineering 的旗舰模型 | 6,746 | 2026-07-24 | [zai-org-GLM-5-深度调研.md](zai-org-GLM-5-深度调研.md) |
 | 271 | [`zarazhangrui/beautiful-html-templates`](https://github.com/zarazhangrui/beautiful-html-templates) | beautiful-html-templates | — | 2026-05-05 | [zarazhangrui-beautiful-html-templates-深度调研.md](zarazhangrui-beautiful-html-templates-深度调研.md) |
 | 272 | [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 驱动的多市场股票智能分析系统 | 18,500 | — | [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md) |
 | 273 | [`AstrBotDevs/AstrBot`](https://github.com/AstrBotDevs/AstrBot) | AstrBot — 平台无关开源 Agent 聊天框架，国产 IM 全覆盖 + 1000+ 插件 + Agent 沙箱 | 37,019 | 2026-07-21 | [AstrBotDevs-AstrBot-深度调研.md](AstrBotDevs-AstrBot-深度调研.md) |
 | 274 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | FastMCP — MCP 生态事实标准 Python 框架，装饰器即工具，Servers/Clients/Apps 三支柱 | 26,470 | 2026-07-21 | [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md) |
 | 275 | [`DioxusLabs/dioxus`](https://github.com/DioxusLabs/dioxus) | Dioxus — Rust 全栈跨平台应用框架，一套代码覆盖 Web / 桌面 / 移动端 / SSR | 37,947 | 2026-07-23 | [DioxusLabs-dioxus-深度调研.md](DioxusLabs-dioxus-深度调研.md) |
 | 276 | [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) | Kronos — 首个开源金融 K 线基础模型，K 线专用 tokenizer 量化 + 自回归 Transformer | 32,536 | 2026-07-23 | [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md) |
+| 277 | [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) | OpenCodeReview — 阿里出品"确定性工程×Agent"混合架构的 AI 代码审查 CLI | 11,333 | 2026-07-24 | [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md) |
 
 ---
 
@@ -386,7 +387,7 @@
 - [`JustVugg/colibri`](https://github.com/JustVugg/colibri) — [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md)
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 
-### AI 编码 / Skill 技能（19）
+### AI 编码 / Skill 技能（20）
 
 - [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
@@ -408,6 +409,7 @@
 
 - [`xai-org/grok-build`](https://github.com/xai-org/grok-build) — [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
+- [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 
 ### RAG / 知识库 / 记忆（9）
 

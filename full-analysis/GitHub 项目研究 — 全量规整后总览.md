@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 285                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 286                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -60,7 +60,7 @@ github-project-research/
 | [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) | [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md) |
 | [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) | [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md) |
 
-### A（20 个）
+### A（21 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -83,6 +83,7 @@ github-project-research/
 | [`alchaincyf/zhangxuefeng-skill`](https://github.com/alchaincyf/zhangxuefeng-skill) | [alchaincyf-zhangxuefeng-skill-深度调研.md](alchaincyf-zhangxuefeng-skill-深度调研.md) |
 | [`aws/agent-toolkit-for-aws`](https://github.com/aws/agent-toolkit-for-aws) | [aws-agent-toolkit-for-aws-深度调研.md](aws-agent-toolkit-for-aws-深度调研.md) |
 | [`AstrBotDevs/AstrBot`](https://github.com/AstrBotDevs/AstrBot) | [AstrBotDevs-AstrBot-深度调研.md](AstrBotDevs-AstrBot-深度调研.md) |
+| [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) | [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md) |
 | [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) | [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md) |
 
 ### B（10 个）
@@ -468,6 +469,7 @@ github-project-research/
 ### AI 编码 / Skill 技能
 
 - [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
+- [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
 - [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) — [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md)
 - [`colbymchenry/codegraph`](https://github.com/colbymchenry/codegraph) — [colbymchenry-codegraph-深度调研.md](colbymchenry-codegraph-深度调研.md)
