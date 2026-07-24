@@ -387,7 +387,7 @@
 - [`JustVugg/colibri`](https://github.com/JustVugg/colibri) — [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md)
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 
-### AI 编码 / Skill 技能（20）
+### AI 编码 / Skill 技能（21）
 
 - [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
@@ -423,7 +423,7 @@
 - [`OpenBMB/UltraRAG`](https://github.com/OpenBMB/UltraRAG) — [OpenBMB-UltraRAG-深度调研.md](OpenBMB-UltraRAG-深度调研.md)
 - [`allenai/olmocr`](https://github.com/allenai/olmocr) — [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md)
 
-### 开发工具 / CLI（17）
+### 开发工具 / CLI（20）
 
 - [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) — [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
@@ -494,7 +494,7 @@
 - [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) — [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
 
-### 学习资料 / 方法论（11）
+### 学习资料 / 方法论（12）
 
 - [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram) — [nagisanzenin-engram-深度调研.md](nagisanzenin-engram-深度调研.md)
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
@@ -593,6 +593,13 @@
 - [`zai-org/Open-AutoGLM`](https://github.com/zai-org/Open-AutoGLM) — [zai-org-Open-AutoGLM-深度调研.md](zai-org-Open-AutoGLM-深度调研.md)
 
 ---
+- [`Automattic/harper`](https://github.com/Automattic/harper) — [Automattic-harper-深度调研.md](Automattic-harper-深度调研.md)
+- [`ComposioHQ/awesome-claude-skills`](https://github.com/ComposioHQ/awesome-claude-skills) — [ComposioHQ-awesome-claude-skills-深度调研.md](ComposioHQ-awesome-claude-skills-深度调研.md)
+- [`Lordog/dive-into-llms`](https://github.com/Lordog/dive-into-llms) — [Lordog-dive-into-llms-深度调研.md](Lordog-dive-into-llms-深度调研.md)
+- [`OtterMind/Chat2DB`](https://github.com/OtterMind/Chat2DB) — [OtterMind-Chat2DB-深度调研.md](OtterMind-Chat2DB-深度调研.md)
+- [`yorukot/superfile`](https://github.com/yorukot/superfile) — [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md)
+
+---
 
 ## 📝 维护规则
 
@@ -603,3 +610,9 @@
 
 
 
+
+- [`ComposioHQ/awesome-claude-skills`](https://github.com/ComposioHQ/awesome-claude-skills) — [ComposioHQ-awesome-claude-skills-深度调研.md](ComposioHQ-awesome-claude-skills-深度调研.md)
+- [`OtterMind/Chat2DB`](https://github.com/OtterMind/Chat2DB) — [OtterMind-Chat2DB-深度调研.md](OtterMind-Chat2DB-深度调研.md)
+- [`yorukot/superfile`](https://github.com/yorukot/superfile) — [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md)
+- [`Automattic/harper`](https://github.com/Automattic/harper) — [Automattic-harper-深度调研.md](Automattic-harper-深度调研.md)
+- [`Lordog/dive-into-llms`](https://github.com/Lordog/dive-into-llms) — [Lordog-dive-into-llms-深度调研.md](Lordog-dive-into-llms-深度调研.md)

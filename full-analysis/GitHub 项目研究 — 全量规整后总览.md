@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 286                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 291                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -60,7 +60,7 @@ github-project-research/
 | [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) | [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md) |
 | [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) | [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md) |
 
-### A（21 个）
+### A（22 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -86,6 +86,8 @@ github-project-research/
 | [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) | [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md) |
 | [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) | [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md) |
 
+
+- [`Automattic/harper`](https://github.com/Automattic/harper) — [Automattic-harper-深度调研.md](Automattic-harper-深度调研.md)
 ### B（10 个）
 
 | owner/repo | 报告文件 |
@@ -101,7 +103,7 @@ github-project-research/
 | [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) | [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md) |
 | [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | [bytedance-deer-flow-深度调研.md](bytedance-deer-flow-深度调研.md) |
 
-### C（12 个）
+### C（13 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -118,6 +120,8 @@ github-project-research/
 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) | [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md) |
 | [`coreybutler/nvm-windows`](https://github.com/coreybutler/nvm-windows) | [coreybutler-nvm-windows-深度调研.md](coreybutler-nvm-windows-深度调研.md) |
 
+
+- [`ComposioHQ/awesome-claude-skills`](https://github.com/ComposioHQ/awesome-claude-skills) — [ComposioHQ-awesome-claude-skills-深度调研.md](ComposioHQ-awesome-claude-skills-深度调研.md)
 ### D（10 个）
 
 | owner/repo | 报告文件 |
@@ -213,7 +217,7 @@ github-project-research/
 | [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) | [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md) |
 
 
-### L（10 个）
+### L（11 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -228,6 +232,8 @@ github-project-research/
 | [`langgenius/dify`](https://github.com/langgenius/dify) | [langgenius-dify-深度调研.md](langgenius-dify-深度调研.md) |
 | [`langchain-ai/openwiki`](https://github.com/langchain-ai/openwiki) | [langchain-ai-openwiki-深度调研.md](langchain-ai-openwiki-深度调研.md) |
 
+
+- [`Lordog/dive-into-llms`](https://github.com/Lordog/dive-into-llms) — [Lordog-dive-into-llms-深度调研.md](Lordog-dive-into-llms-深度调研.md)
 ### M（16 个）
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -261,7 +267,7 @@ github-project-research/
 | [`NVIDIA/SkillSpector`](https://github.com/NVIDIA/SkillSpector) | [NVIDIA-SkillSpector-深度调研.md](NVIDIA-SkillSpector-深度调研.md) |
 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md) |
 
-### O（13 个）
+### O（14 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -279,6 +285,8 @@ github-project-research/
 | [`opendatalab/MinerU`](https://github.com/opendatalab/MinerU) | [opendatalab-MinerU-深度调研.md](opendatalab-MinerU-深度调研.md) |
 | [`oomol-lab/open-connector`](https://github.com/oomol-lab/open-connector) | [oomol-lab-open-connector-深度调研.md](oomol-lab-open-connector-深度调研.md) |
 
+
+- [`OtterMind/Chat2DB`](https://github.com/OtterMind/Chat2DB) — [OtterMind-Chat2DB-深度调研.md](OtterMind-Chat2DB-深度调研.md)
 ### P（5 个）
 
 | owner/repo | 报告文件 |
@@ -380,12 +388,14 @@ github-project-research/
 | [`xbtlin/ai-berkshire`](https://github.com/xbtlin/ai-berkshire) | [xbtlin-ai-berkshire-深度调研.md](xbtlin-ai-berkshire-深度调研.md) |
 | [`xai-org/grok-build`](https://github.com/xai-org/grok-build) | [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md) |
 
-### Y（1 个）
+### Y（2 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) | [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md) |
 
+
+- [`yorukot/superfile`](https://github.com/yorukot/superfile) — [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md)
 ### Z（4 个）
 
 | owner/repo | 报告文件 |
@@ -491,6 +501,8 @@ github-project-research/
 - [`MoonshotAI/kimi-cli`](https://github.com/MoonshotAI/kimi-cli) — [MoonshotAI-kimi-cli-深度调研.md](MoonshotAI-kimi-cli-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 
+
+- [`ComposioHQ/awesome-claude-skills`](https://github.com/ComposioHQ/awesome-claude-skills) — [ComposioHQ-awesome-claude-skills-深度调研.md](ComposioHQ-awesome-claude-skills-深度调研.md)
 ### RAG / 知识库 / 记忆
 
 - [`1Panel-dev/MaxKBStar`](https://github.com/1Panel-dev/MaxKBStar) — [1Panel-dev-MaxKBStar-深度调研.md](1Panel-dev-MaxKBStar-深度调研.md)
@@ -515,6 +527,10 @@ github-project-research/
 - [`PostHog/posthog`](https://github.com/PostHog/posthog) — [PostHog-posthog-深度调研.md](PostHog-posthog-深度调研.md)
 - [`dottxt-ai/outlines`](https://github.com/dottxt-ai/outlines) — [dottxt-ai-outlines-深度调研.md](dottxt-ai-outlines-深度调研.md)
 
+
+- [`OtterMind/Chat2DB`](https://github.com/OtterMind/Chat2DB) — [OtterMind-Chat2DB-深度调研.md](OtterMind-Chat2DB-深度调研.md)
+- [`yorukot/superfile`](https://github.com/yorukot/superfile) — [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md)
+- [`Automattic/harper`](https://github.com/Automattic/harper) — [Automattic-harper-深度调研.md](Automattic-harper-深度调研.md)
 ### 前端 / 设计 / UI
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
@@ -557,6 +573,8 @@ github-project-research/
 - [`codecrafters-io/build-your-own-x`](https://github.com/codecrafters-io/build-your-own-x) — [codecrafters-io-build-your-own-x-深度调研.md](codecrafters-io-build-your-own-x-深度调研.md)
 - [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) — [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md)
 
+
+- [`Lordog/dive-into-llms`](https://github.com/Lordog/dive-into-llms) — [Lordog-dive-into-llms-深度调研.md](Lordog-dive-into-llms-深度调研.md)
 ### 其他
 
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
