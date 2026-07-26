@@ -2,7 +2,7 @@
 
 # GitHub 热门项目 · 每日深度调研
 
-[![Reports](https://img.shields.io/badge/调研报告-291-blue?style=flat-square)](#-已收录项目)
+[![Reports](https://img.shields.io/badge/调研报告-296-blue?style=flat-square)](#-已收录项目)
 [![Update](https://img.shields.io/badge/更新频率-每日-green?style=flat-square)](#)
 
 > **别人给你链接，我们给你判断。**
@@ -55,7 +55,7 @@ GitHub Trending 每天都在变，但大多数 README 只告诉你「它是什�
 
 | 索引文件 | 作用 | 收录数 |
 |----------|------|--------|
-| [🎯 全量规整后总览](full-analysis/GitHub%20项目研究%20—%20全量规整后总览.md) | 全量维护后权威总览（按字母分组索引 + 按领域分类） | 291 |
+| [🎯 全量规整后总览](full-analysis/GitHub%20项目研究%20—%20全量规整后总览.md) | 全量维护后权威总览（按字母分组索引 + 按领域分类） | 296 |
 | [📚 全量索引表](full-analysis/GitHub%20项目研究%20—%20全量索引表.md) | 所有项目的表格索引（项目名 / 定位 / Stars / 报告链接） | 291 |
 | [📖 元目录说明](full-analysis/GitHub%20项目研究%20—%20元目录.md) | **AI 入口** + 仓库结构 + 使用指南 + 维护规则 | — |
 

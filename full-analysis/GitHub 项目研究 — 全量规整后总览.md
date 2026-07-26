@@ -103,7 +103,7 @@ github-project-research/
 | [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) | [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md) |
 | [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | [bytedance-deer-flow-深度调研.md](bytedance-deer-flow-深度调研.md) |
 
-### C（13 个）
+### C（14 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -122,6 +122,8 @@ github-project-research/
 
 
 - [`ComposioHQ/awesome-claude-skills`](https://github.com/ComposioHQ/awesome-claude-skills) — [ComposioHQ-awesome-claude-skills-深度调研.md](ComposioHQ-awesome-claude-skills-深度调研.md)
+
+- [`code-yeongyu/oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent) — [code-yeongyu-oh-my-openagent-深度调研.md](code-yeongyu-oh-my-openagent-深度调研.md)
 ### D（10 个）
 
 | owner/repo | 报告文件 |
@@ -177,7 +179,7 @@ github-project-research/
 | [`gastownhall/beads`](https://github.com/gastownhall/beads) | [gastownhall-beads-深度调研.md](gastownhall-beads-深度调研.md) |
 | [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify) | [Graphify-Labs-graphify-深度调研.md](Graphify-Labs-graphify-深度调研.md) |
 
-### H（5 个）
+### H（6 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -187,6 +189,8 @@ github-project-research/
 | [`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master) | [hugohe3-ppt-master-深度调研.md](hugohe3-ppt-master-深度调研.md) |
 | [`hiyouga/LlamaFactory`](https://github.com/hiyouga/LlamaFactory) | [hiyouga-LlamaFactory-深度调研.md](hiyouga-LlamaFactory-深度调研.md) |
 
+
+- [`hicccc77/WeFlow`](https://github.com/hicccc77/WeFlow) — [hicccc77-WeFlow-深度调研.md](hicccc77-WeFlow-深度调研.md)
 ### I（1 个）
 
 | owner/repo | 报告文件 |
@@ -217,7 +221,7 @@ github-project-research/
 | [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) | [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md) |
 
 
-### L（11 个）
+### L（12 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -234,6 +238,8 @@ github-project-research/
 
 
 - [`Lordog/dive-into-llms`](https://github.com/Lordog/dive-into-llms) — [Lordog-dive-into-llms-深度调研.md](Lordog-dive-into-llms-深度调研.md)
+
+- [`LC044/WeChatMsg`](https://github.com/LC044/WeChatMsg) — [LC044-WeChatMsg-深度调研.md](LC044-WeChatMsg-深度调研.md)
 ### M（16 个）
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -255,7 +261,7 @@ github-project-research/
 | [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill) | [mvanhorn-last30days-skill-深度调研.md](mvanhorn-last30days-skill-深度调研.md) |
 
 
-### N（7 个）
+### N（8 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -267,6 +273,8 @@ github-project-research/
 | [`NVIDIA/SkillSpector`](https://github.com/NVIDIA/SkillSpector) | [NVIDIA-SkillSpector-深度调研.md](NVIDIA-SkillSpector-深度调研.md) |
 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md) |
 
+
+- [`nextlevelbuilder/ui-ux-pro-max-skill`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — [nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md](nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md)
 ### O（14 个）
 
 | owner/repo | 报告文件 |
@@ -340,7 +348,7 @@ github-project-research/
 | [`moeru-ai/airi`](https://github.com/moeru-ai/airi) | [moeru-ai-airi-深度调研.md](moeru-ai-airi-深度调研.md) |
 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) | [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md) |
 
-### T（7 个）
+### T（8 个）
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`tastyeffectco/sandboxd`](https://github.com/tastyeffectco/sandboxd) | [tastyeffectco-sandboxd-深度调研.md](tastyeffectco-sandboxd-深度调研.md) |
@@ -352,6 +360,8 @@ github-project-research/
 | [`trycua/cua`](https://github.com/trycua/cua) | [trycua-cua-深度调研.md](trycua-cua-深度调研.md) |
 
 
+
+- [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) — [thedotmack-claude-mem-深度调研.md](thedotmack-claude-mem-深度调研.md)
 ### U（1 个）
 
 | owner/repo | 报告文件 |
@@ -503,6 +513,8 @@ github-project-research/
 
 
 - [`ComposioHQ/awesome-claude-skills`](https://github.com/ComposioHQ/awesome-claude-skills) — [ComposioHQ-awesome-claude-skills-深度调研.md](ComposioHQ-awesome-claude-skills-深度调研.md)
+
+- [`code-yeongyu/oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent) — [code-yeongyu-oh-my-openagent-深度调研.md](code-yeongyu-oh-my-openagent-深度调研.md)
 ### RAG / 知识库 / 记忆
 
 - [`1Panel-dev/MaxKBStar`](https://github.com/1Panel-dev/MaxKBStar) — [1Panel-dev-MaxKBStar-深度调研.md](1Panel-dev-MaxKBStar-深度调研.md)
@@ -514,6 +526,8 @@ github-project-research/
 - [`mem0ai/mem0`](https://github.com/mem0ai/mem0) — [mem0ai-mem0-深度调研.md](mem0ai-mem0-深度调研.md)
 - [`gastownhall/beads`](https://github.com/gastownhall/beads) — [gastownhall-beads-深度调研.md](gastownhall-beads-深度调研.md)
 
+
+- [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) — [thedotmack-claude-mem-深度调研.md](thedotmack-claude-mem-深度调研.md)
 ### 开发工具 / CLI
 
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
@@ -542,6 +556,8 @@ github-project-research/
 - [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) — [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md)
 - [`DioxusLabs/dioxus`](https://github.com/DioxusLabs/dioxus) — [DioxusLabs-dioxus-深度调研.md](DioxusLabs-dioxus-深度调研.md)
 
+
+- [`nextlevelbuilder/ui-ux-pro-max-skill`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — [nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md](nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md)
 ### 视频 / 音频 / 多媒体
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
@@ -652,6 +668,9 @@ github-project-research/
 
 ---
 
+
+- [`hicccc77/WeFlow`](https://github.com/hicccc77/WeFlow) — [hicccc77-WeFlow-深度调研.md](hicccc77-WeFlow-深度调研.md)
+- [`LC044/WeChatMsg`](https://github.com/LC044/WeChatMsg) — [LC044-WeChatMsg-深度调研.md](LC044-WeChatMsg-深度调研.md)
 ## 🔍 调研方法论（7 维度深度调研）
 
 每份报告遵循以下框架：

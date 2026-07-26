@@ -290,6 +290,11 @@
 | 275 | [`DioxusLabs/dioxus`](https://github.com/DioxusLabs/dioxus) | Dioxus — Rust 全栈跨平台应用框架，一套代码覆盖 Web / 桌面 / 移动端 / SSR | 37,947 | 2026-07-23 | [DioxusLabs-dioxus-深度调研.md](DioxusLabs-dioxus-深度调研.md) |
 | 276 | [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) | Kronos — 首个开源金融 K 线基础模型，K 线专用 tokenizer 量化 + 自回归 Transformer | 32,536 | 2026-07-23 | [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md) |
 | 277 | [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) | OpenCodeReview — 阿里出品"确定性工程×Agent"混合架构的 AI 代码审查 CLI | 11,333 | 2026-07-24 | [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md) |
+| 278 | [`code-yeongyu/oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent) | 多 harness 编码 Agent harness 封装（OpenCode/Codex 团队编排 + hashline 编辑 + Team Mode） | 66,620 | 2026-07-27 | [code-yeongyu-oh-my-openagent-深度调研.md](code-yeongyu-oh-my-openagent-深度调研.md) |
+| 279 | [`hicccc77/WeFlow`](https://github.com/hicccc77/WeFlow) | WeFlow — 本地微信实时聊天记录查看/分析/导出 + 年度报告（仓库已 DMCA 剥离） | 13,265 | 2026-07-27 | [hicccc77-WeFlow-深度调研.md](hicccc77-WeFlow-深度调研.md) |
+| 280 | [`LC044/WeChatMsg`](https://github.com/LC044/WeChatMsg) | WeChatMsg（留痕）— Windows 微信聊天记录本地解密导出工具（已停更，Memotrace 前身） | 41,876 | 2026-07-27 | [LC044-WeChatMsg-深度调研.md](LC044-WeChatMsg-深度调研.md) |
+| 281 | [`nextlevelbuilder/ui-ux-pro-max-skill`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | UI/UX Pro Max — 给 AI 编码助手的设计智能技能库（84 风格 / 192 配色 / 19 平台） | 110,365 | 2026-07-27 | [nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md](nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md) |
+| 282 | [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) | claude-mem — 跨 Agent 会话记忆压缩系统（Hook 捕获 + SQLite/ChromaDB 双存储 + 注入） | 88,631 | 2026-07-27 | [thedotmack-claude-mem-深度调研.md](thedotmack-claude-mem-深度调研.md) |
 
 ---
 
@@ -387,7 +392,7 @@
 - [`JustVugg/colibri`](https://github.com/JustVugg/colibri) — [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md)
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 
-### AI 编码 / Skill 技能（21）
+### AI 编码 / Skill 技能（22）
 
 - [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
@@ -411,7 +416,9 @@
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 
-### RAG / 知识库 / 记忆（9）
+
+- [`code-yeongyu/oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent) — [code-yeongyu-oh-my-openagent-深度调研.md](code-yeongyu-oh-my-openagent-深度调研.md)
+### RAG / 知识库 / 记忆（10）
 
 - [`1Panel-dev/MaxKBStar`](https://github.com/1Panel-dev/MaxKBStar) — [1Panel-dev-MaxKBStar-深度调研.md](1Panel-dev-MaxKBStar-深度调研.md)
 - [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) — [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md)
@@ -423,6 +430,8 @@
 - [`OpenBMB/UltraRAG`](https://github.com/OpenBMB/UltraRAG) — [OpenBMB-UltraRAG-深度调研.md](OpenBMB-UltraRAG-深度调研.md)
 - [`allenai/olmocr`](https://github.com/allenai/olmocr) — [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md)
 
+
+- [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) — [thedotmack-claude-mem-深度调研.md](thedotmack-claude-mem-深度调研.md)
 ### 开发工具 / CLI（20）
 
 - [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) — [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md)
@@ -448,7 +457,7 @@
 
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 
-### 前端 / 设计 / UI（12）
+### 前端 / 设计 / UI（13）
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
 - [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) — [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md)
@@ -462,6 +471,8 @@
 - [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) — [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md)
 - [`DioxusLabs/dioxus`](https://github.com/DioxusLabs/dioxus) — [DioxusLabs-dioxus-深度调研.md](DioxusLabs-dioxus-深度调研.md)
 
+
+- [`nextlevelbuilder/ui-ux-pro-max-skill`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — [nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md](nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md)
 ### 视频 / 音频 / 多媒体（14）
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
@@ -508,7 +519,7 @@
 - [`openai/openai-cookbook`](https://github.com/openai/openai-cookbook) — [openai-openai-cookbook-深度调研.md](openai-openai-cookbook-深度调研.md)
 - [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) — [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md)
 
-### 其他（74）
+### 其他（76）
 
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
 - [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) — [srbhr-Resume-Matcher-深度调研.md](srbhr-Resume-Matcher-深度调研.md)
@@ -601,6 +612,9 @@
 
 ---
 
+
+- [`hicccc77/WeFlow`](https://github.com/hicccc77/WeFlow) — [hicccc77-WeFlow-深度调研.md](hicccc77-WeFlow-深度调研.md)
+- [`LC044/WeChatMsg`](https://github.com/LC044/WeChatMsg) — [LC044-WeChatMsg-深度调研.md](LC044-WeChatMsg-深度调研.md)
 ## 📝 维护规则
 
 1. 新增调研报告后，必须在本表追加索引行（owner/repo 列点击跳转 GitHub；报告文件列点击打开本地报告）。
