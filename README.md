@@ -2,7 +2,7 @@
 
 # GitHub 热门项目 · 每日深度调研
 
-[![Reports](https://img.shields.io/badge/调研报告-296-blue?style=flat-square)](#-已收录项目)
+[![Reports](https://img.shields.io/badge/调研报告-301-blue?style=flat-square)](#-已收录项目)
 [![Update](https://img.shields.io/badge/更新频率-每日-green?style=flat-square)](#)
 
 > **别人给你链接，我们给你判断。**
@@ -43,7 +43,7 @@ GitHub Trending 每天都在变，但大多数 README 只告诉你「它是什�
 
 | 指标 | 数值 |
 |------|------|
-| 调研报告总数 | **291** |
+| 调研报告总数 | **301** |
 | 跨领域覆盖 | AI Agent / 开发工具 / 设计 / 多媒体 / 安全运维 / 学习方法论 |
 | 更新节奏 | **每日** |
 
@@ -55,8 +55,8 @@ GitHub Trending 每天都在变，但大多数 README 只告诉你「它是什�
 
 | 索引文件 | 作用 | 收录数 |
 |----------|------|--------|
-| [🎯 全量规整后总览](full-analysis/GitHub%20项目研究%20—%20全量规整后总览.md) | 全量维护后权威总览（按字母分组索引 + 按领域分类） | 296 |
-| [📚 全量索引表](full-analysis/GitHub%20项目研究%20—%20全量索引表.md) | 所有项目的表格索引（项目名 / 定位 / Stars / 报告链接） | 291 |
+| [🎯 全量规整后总览](full-analysis/GitHub%20项目研究%20—%20全量规整后总览.md) | 全量维护后权威总览（按字母分组索引 + 按领域分类） | 301 |
+| [📚 全量索引表](full-analysis/GitHub%20项目研究%20—%20全量索引表.md) | 所有项目的表格索引（项目名 / 定位 / Stars / 报告链接） | 301 |
 | [📖 元目录说明](full-analysis/GitHub%20项目研究%20—%20元目录.md) | **AI 入口** + 仓库结构 + 使用指南 + 维护规则 | — |
 
 ---
@@ -71,14 +71,14 @@ GitHub Trending 每天都在变，但大多数 README 只告诉你「它是什�
 | 🔧 AI 编码 / Skill 技能 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)、[anthropics/skills](https://github.com/anthropics/skills)、[mattpocock/skills](https://github.com/mattpocock/skills)、[blader/humanizer](https://github.com/blader/humanizer)、[anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks)、[farion1231/cc-switch](https://github.com/farion1231/cc-switch)、[davila7/claude-code-templates](https://github.com/davila7/claude-code-templates)、[1jehuang/jcode](https://github.com/1jehuang/jcode)、[ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) |
 | 🧠 RAG / 知识库 / 记忆 | [microsoft/graphrag](https://github.com/microsoft/graphrag)、[1Panel-dev/MaxKBStar](https://github.com/1Panel-dev/MaxKBStar)、[rohitg00/agentmemory](https://github.com/rohitg00/agentmemory)、[supermemoryai/supermemory](https://github.com/supermemoryai/supermemory)、[mem0ai/mem0](https://github.com/mem0ai/mem0)、[OpenBMB/UltraRAG](https://github.com/OpenBMB/UltraRAG)、[gastownhall/beads](https://github.com/gastownhall/beads) |
 | 🦾 LLM 微调 / 推理 | [hiyouga/LlamaFactory](https://github.com/hiyouga/LlamaFactory)、[jingyaogong/minimind](https://github.com/jingyaogong/minimind)、[ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)、[ollama/ollama](https://github.com/ollama/ollama)、[AlexsJones/llmfit](https://github.com/AlexsJones/llmfit) |
-| 🛠️ 开发工具 / CLI | [unclecode/crawl4ai](https://github.com/unclecode/crawl4ai)、[jina-ai/reader](https://github.com/jina-ai/reader)、[GLips/Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP)、[iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI)、[google/langextract](https://github.com/google/langextract)、[coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)、[PrefectHQ/fastmcp](https://github.com/PrefectHQ/fastmcp)、[dottxt-ai/outlines](https://github.com/dottxt-ai/outlines)、[OtterMind/Chat2DB](https://github.com/OtterMind/Chat2DB)、[yorukot/superfile](https://github.com/yorukot/superfile)、[Automattic/harper](https://github.com/Automattic/harper) |
+| 🛠️ 开发工具 / CLI | [unclecode/crawl4ai](https://github.com/unclecode/crawl4ai)、[jina-ai/reader](https://github.com/jina-ai/reader)、[GLips/Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP)、[iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI)、[google/langextract](https://github.com/google/langextract)、[coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)、[PrefectHQ/fastmcp](https://github.com/PrefectHQ/fastmcp)、[dottxt-ai/outlines](https://github.com/dottxt-ai/outlines)、[OtterMind/Chat2DB](https://github.com/OtterMind/Chat2DB)、[yorukot/superfile](https://github.com/yorukot/superfile)、[Automattic/harper](https://github.com/Automattic/harper)、[ocornut/imgui](https://github.com/ocornut/imgui) |
 | 🎨 前端 / 设计 / UI | [antvis/Infographic](https://github.com/antvis/Infographic)、[diffusionstudio/lottie](https://github.com/diffusionstudio/lottie)、[excalidraw/excalidraw](https://github.com/excalidraw/excalidraw)、[nexu-io/open-design](https://github.com/nexu-io/open-design)、[DioxusLabs/dioxus](https://github.com/DioxusLabs/dioxus) |
 | 🎬 视频 / 音频 / 多媒体 | [remotion-dev/remotion](https://github.com/remotion-dev/remotion)、[Open-LLM-VTuber/Open-LLM-VTuber](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber)、[Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI)、[ATH-MaaS/Pixelle-Video](https://github.com/ATH-MaaS/Pixelle-Video)、[OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut)、[heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) |
-| 🔒 安全 / 运维 / 系统工具 | [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat)、[ShadowWhisperer/Remove-MS-Edge](https://github.com/ShadowWhisperer/Remove-MS-Edge)、[usestrix/strix](https://github.com/usestrix/strix)、[BartoszCichecki/LenovoLegionToolkit](https://github.com/BartoszCichecki/LenovoLegionToolkit)、[Dicklesworthstone/destructive_command_guard](https://github.com/Dicklesworthstone/destructive_command_guard) |
+| 🔒 安全 / 运维 / 系统工具 | [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat)、[ShadowWhisperer/Remove-MS-Edge](https://github.com/ShadowWhisperer/Remove-MS-Edge)、[usestrix/strix](https://github.com/usestrix/strix)、[BartoszCichecki/LenovoLegionToolkit](https://github.com/BartoszCichecki/LenovoLegionToolkit)、[Dicklesworthstone/destructive_command_guard](https://github.com/Dicklesworthstone/destructive_command_guard)、[permissionlesstech/bitchat](https://github.com/permissionlesstech/bitchat)、[amnezia-vpn/amnezia-client](https://github.com/amnezia-vpn/amnezia-client) |
 | 👁️ 计算机视觉 / CV | [roboflow/supervision](https://github.com/roboflow/supervision) |
 | 📘 学习资料 / 方法论 | [521xueweihan/HelloGitHub](https://github.com/521xueweihan/HelloGitHub)、[CyC2018/CS-Notes](https://github.com/CyC2018/CS-Notes)、[youngyangyang04/leetcode-master](https://github.com/youngyangyang04/leetcode-master)、[nagisanzenin/engram](https://github.com/nagisanzenin/engram)、[easychen/lean-side-bussiness](https://github.com/easychen/lean-side-bussiness)、[bojieli/ai-agent-book](https://github.com/bojieli/ai-agent-book)、[Lordog/dive-into-llms](https://github.com/Lordog/dive-into-llms) |
 | 📊 金融 / 量化 | [virattt/dexter](https://github.com/virattt/dexter)、[HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading)、[virattt/ai-hedge-fund](https://github.com/virattt/ai-hedge-fund)、[shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) |
-| 🏗️ 大型开源项目 | [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow)、[opencv/opencv](https://github.com/opencv/opencv)、[supabase/supabase](https://github.com/supabase/supabase)、[sveltejs/svelte](https://github.com/sveltejs/svelte) |
+| 🏗️ 大型开源项目 | [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow)、[opencv/opencv](https://github.com/opencv/opencv)、[supabase/supabase](https://github.com/supabase/supabase)、[sveltejs/svelte](https://github.com/sveltejs/svelte)、[LifeArchiveProject/WeChatDataAnalysis](https://github.com/LifeArchiveProject/WeChatDataAnalysis) |
 
 ---
 
@@ -104,7 +104,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 规整后权威总览
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明 + AI 入口
-│   └── owner-repo-深度调研.md × 291                      # 规范化调研报告
+│   └── owner-repo-深度调研.md × 301                      # 规范化调研报告
 ├── README.md                                               # 本文件
 └── .gitignore
 ```

@@ -299,6 +299,12 @@
 ---
 
 
+| 283 | [`permissionlesstech/bitchat`](https://github.com/permissionlesstech/bitchat) | 去中心化 P2P 加密通讯——蓝牙 mesh + Nostr 双传输，无服务器无账号 | 32,017 | 2026-07-28 | [permissionlesstech-bitchat-深度调研.md](permissionlesstech-bitchat-深度调研.md) |
+| 284 | [`ocornut/imgui`](https://github.com/ocornut/imgui) | bloat-free 即时模式 C++ GUI 库——输出顶点缓冲，游戏/工具开发标配 | 75,169 | 2026-07-28 | [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md) |
+| 285 | [`jenkinsci/jenkins`](https://github.com/jenkinsci/jenkins) | 领先开源自动化服务器——2000+ 插件 ExtensionPoint 架构，Pipeline as Code | 25,855 | 2026-07-28 | [jenkinsci-jenkins-深度调研.md](jenkinsci-jenkins-深度调研.md) |
+| 286 | [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) | 自托管 VPN 客户端——一键 Docker 部署 + AmneziaWG/XRay 流量混淆 | 13,710 | 2026-07-28 | [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md) |
+| 287 | [`LifeArchiveProject/WeChatDataAnalysis`](https://github.com/LifeArchiveProject/WeChatDataAnalysis) | 微信 4.x 数据库解密与年度总结/导出——Python+Vue+Electron，含 MCP 接入 | 1,843 | 2026-07-28 | [LifeArchiveProject-WeChatDataAnalysis-深度调研.md](LifeArchiveProject-WeChatDataAnalysis-深度调研.md) |
+
 ## 🏷️ 按技术领域分类
 
 ### AI Agent / 助手框架（75）
@@ -432,7 +438,7 @@
 
 
 - [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) — [thedotmack-claude-mem-深度调研.md](thedotmack-claude-mem-深度调研.md)
-### 开发工具 / CLI（20）
+### 开发工具 / CLI（21）
 
 - [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) — [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
@@ -452,12 +458,13 @@
 
 - [`langchain-ai/openwiki`](https://github.com/langchain-ai/openwiki) — [langchain-ai-openwiki-深度调研.md](langchain-ai-openwiki-深度调研.md)
 - [`dottxt-ai/outlines`](https://github.com/dottxt-ai/outlines) — [dottxt-ai-outlines-深度调研.md](dottxt-ai-outlines-深度调研.md)
+- [`jenkinsci/jenkins`](https://github.com/jenkinsci/jenkins) — [jenkinsci-jenkins-深度调研.md](jenkinsci-jenkins-深度调研.md)
 
 ### 文档 / 文档工具（2） 🆕
 
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 
-### 前端 / 设计 / UI（13）
+### 前端 / 设计 / UI（14）
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
 - [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) — [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md)
@@ -473,6 +480,8 @@
 
 
 - [`nextlevelbuilder/ui-ux-pro-max-skill`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — [nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md](nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md)
+- [`ocornut/imgui`](https://github.com/ocornut/imgui) — [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md)
+
 ### 视频 / 音频 / 多媒体（14）
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
@@ -494,7 +503,7 @@
 
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 
-### 安全 / 运维 / 系统工具（9）
+### 安全 / 运维 / 系统工具（11）
 
 - [`Raphire/Win11Debloat`](https://github.com/Raphire/Win11Debloat) — [Raphire-Win11Debloat-深度调研.md](Raphire-Win11Debloat-深度调研.md)
 - [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) — [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md)
@@ -504,6 +513,8 @@
 - [`usestrix/strix`](https://github.com/usestrix/strix) — [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md)
 - [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) — [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
+- [`permissionlesstech/bitchat`](https://github.com/permissionlesstech/bitchat) — [permissionlesstech-bitchat-深度调研.md](permissionlesstech-bitchat-深度调研.md)
+- [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 
 ### 学习资料 / 方法论（12）
 
@@ -519,7 +530,7 @@
 - [`openai/openai-cookbook`](https://github.com/openai/openai-cookbook) — [openai-openai-cookbook-深度调研.md](openai-openai-cookbook-深度调研.md)
 - [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) — [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md)
 
-### 其他（76）
+### 其他（77）
 
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
 - [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) — [srbhr-Resume-Matcher-深度调研.md](srbhr-Resume-Matcher-深度调研.md)
@@ -630,3 +641,4 @@
 - [`yorukot/superfile`](https://github.com/yorukot/superfile) — [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md)
 - [`Automattic/harper`](https://github.com/Automattic/harper) — [Automattic-harper-深度调研.md](Automattic-harper-深度调研.md)
 - [`Lordog/dive-into-llms`](https://github.com/Lordog/dive-into-llms) — [Lordog-dive-into-llms-深度调研.md](Lordog-dive-into-llms-深度调研.md)
+- [`LifeArchiveProject/WeChatDataAnalysis`](https://github.com/LifeArchiveProject/WeChatDataAnalysis) — [LifeArchiveProject-WeChatDataAnalysis-深度调研.md](LifeArchiveProject-WeChatDataAnalysis-深度调研.md)

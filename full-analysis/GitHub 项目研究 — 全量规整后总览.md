@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 291                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 301                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -60,7 +60,7 @@ github-project-research/
 | [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) | [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md) |
 | [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) | [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md) |
 
-### A（22 个）
+### A（23 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -88,7 +88,9 @@ github-project-research/
 
 
 - [`Automattic/harper`](https://github.com/Automattic/harper) — [Automattic-harper-深度调研.md](Automattic-harper-深度调研.md)
-### B（10 个）
+- [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
+
+### B（11 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -102,6 +104,7 @@ github-project-research/
 | [`browser-use/video-use`](https://github.com/browser-use/video-use) | [browser-use-video-use-深度调研.md](browser-use-video-use-深度调研.md) |
 | [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) | [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md) |
 | [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | [bytedance-deer-flow-深度调研.md](bytedance-deer-flow-深度调研.md) |
+- [`permissionlesstech/bitchat`](https://github.com/permissionlesstech/bitchat) — [permissionlesstech-bitchat-深度调研.md](permissionlesstech-bitchat-深度调研.md)
 
 ### C（14 个）
 
@@ -191,13 +194,14 @@ github-project-research/
 
 
 - [`hicccc77/WeFlow`](https://github.com/hicccc77/WeFlow) — [hicccc77-WeFlow-深度调研.md](hicccc77-WeFlow-深度调研.md)
-### I（1 个）
+### I（2 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`index-tts/index-tts`](https://github.com/index-tts/index-tts) | [index-tts-index-tts-深度调研.md](index-tts-index-tts-深度调研.md) |
+- [`ocornut/imgui`](https://github.com/ocornut/imgui) — [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md)
 
-### J（9 个）
+### J（10 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -210,6 +214,7 @@ github-project-research/
 | [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) | [jingyaogong-minimind-深度调研.md](jingyaogong-minimind-深度调研.md) |
 | [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) | [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md) |
 | [`JustVugg/colibri`](https://github.com/JustVugg/colibri) | [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md) |
+- [`jenkinsci/jenkins`](https://github.com/jenkinsci/jenkins) — [jenkinsci-jenkins-深度调研.md](jenkinsci-jenkins-深度调研.md)
 
 ### K（5 个）
 | owner/repo | 报告文件 |
@@ -221,7 +226,7 @@ github-project-research/
 | [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) | [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md) |
 
 
-### L（12 个）
+### L（13 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -240,6 +245,8 @@ github-project-research/
 - [`Lordog/dive-into-llms`](https://github.com/Lordog/dive-into-llms) — [Lordog-dive-into-llms-深度调研.md](Lordog-dive-into-llms-深度调研.md)
 
 - [`LC044/WeChatMsg`](https://github.com/LC044/WeChatMsg) — [LC044-WeChatMsg-深度调研.md](LC044-WeChatMsg-深度调研.md)
+- [`LifeArchiveProject/WeChatDataAnalysis`](https://github.com/LifeArchiveProject/WeChatDataAnalysis) — [LifeArchiveProject-WeChatDataAnalysis-深度调研.md](LifeArchiveProject-WeChatDataAnalysis-深度调研.md)
+
 ### M（16 个）
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -545,6 +552,8 @@ github-project-research/
 - [`OtterMind/Chat2DB`](https://github.com/OtterMind/Chat2DB) — [OtterMind-Chat2DB-深度调研.md](OtterMind-Chat2DB-深度调研.md)
 - [`yorukot/superfile`](https://github.com/yorukot/superfile) — [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md)
 - [`Automattic/harper`](https://github.com/Automattic/harper) — [Automattic-harper-深度调研.md](Automattic-harper-深度调研.md)
+- [`jenkinsci/jenkins`](https://github.com/jenkinsci/jenkins) — [jenkinsci-jenkins-深度调研.md](jenkinsci-jenkins-深度调研.md)
+
 ### 前端 / 设计 / UI
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
@@ -558,6 +567,8 @@ github-project-research/
 
 
 - [`nextlevelbuilder/ui-ux-pro-max-skill`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — [nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md](nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md)
+- [`ocornut/imgui`](https://github.com/ocornut/imgui) — [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md)
+
 ### 视频 / 音频 / 多媒体
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
@@ -577,6 +588,8 @@ github-project-research/
 - [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) — [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md)
 - [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) — [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md)
 - [`Dicklesworthstone/destructive_command_guard`](https://github.com/Dicklesworthstone/destructive_command_guard) — [Dicklesworthstone-destructive_command_guard-深度调研.md](Dicklesworthstone-destructive_command_guard-深度调研.md)
+- [`permissionlesstech/bitchat`](https://github.com/permissionlesstech/bitchat) — [permissionlesstech-bitchat-深度调研.md](permissionlesstech-bitchat-深度调研.md)
+- [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 
 ### 学习资料 / 方法论
 
@@ -703,3 +716,4 @@ github-project-research/
 **别人给你链接，我们给你判断。**
 
 </div>
+- [`LifeArchiveProject/WeChatDataAnalysis`](https://github.com/LifeArchiveProject/WeChatDataAnalysis) — [LifeArchiveProject-WeChatDataAnalysis-深度调研.md](LifeArchiveProject-WeChatDataAnalysis-深度调研.md)
