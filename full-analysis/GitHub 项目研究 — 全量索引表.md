@@ -87,7 +87,7 @@
 | 72 | [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) | — | — | 2026-06-19 | [CyC2018-CS-Notes-深度调研.md](CyC2018-CS-Notes-深度调研.md) |
 | 73 | [`datawhalechina/Agent-Learning-Hub`](https://github.com/datawhalechina/Agent-Learning-Hub) | 中文圈最佳 AI Agent 可执行学习路线图（8 Stage + 每步可验证产出） | 5,151 | 2026-07-12 | [datawhalechina-Agent-Learning-Hub-深度调研.md](datawhalechina-Agent-Learning-Hub-深度调研.md) |
 | 74 | [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) | DeepSeek 开源推测解码全栈代码库——DSpark/DFlash/Eagle3 三算法同仓，60-85% 推理加速 | 2,085 | 2026-06-29 | [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md) |
-| 75 | [`DeusData/codebase-memory-mcp`](https://github.com/DeusData/codebase-memory-mcp) | 🚀  — 高性能代码智能 MCP 服务器 | 7,023 | 2026-06-19 | [DeusData-codebase-memory-mcp-深度调研.md](DeusData-codebase-memory-mcp-深度调研.md) |
+| 75 | [`DeusData/codebase-memory-mcp`](https://github.com/DeusData/codebase-memory-mcp) | 高性能代码智能 MCP 服务器——C 实现，持久化知识图谱 + MCP 原生 + Token 节省 | 36,166 | 2026-07-29 | [DeusData-codebase-memory-mcp-深度调研.md](DeusData-codebase-memory-mcp-深度调研.md) |
 | 76 | [`Dicklesworthstone/destructive_command_guard`](https://github.com/Dicklesworthstone/destructive_command_guard) | Agent 原生命令护栏——Rust 写的 hook，AST 语义匹配 + 50+ 安全包拦截 AI Agent 的破坏性 git/shell 命令 | 4,285 | 2026-07-15 | [Dicklesworthstone-destructive_command_guard-深度调研.md](Dicklesworthstone-destructive_command_guard-深度调研.md) |
 | 77 | [`diegosouzapw/OmniRoute`](https://github.com/diegosouzapw/OmniRoute) | 免费 AI 网关——一条端点覆盖 231 家提供商（50+免费），RTK+Caveman 堆叠压缩 15-95% Token，MCP/A2A 双协议 | 8,397 | 2026-07-01 | [diegosouzapw-OmniRoute-深度调研.md](diegosouzapw-OmniRoute-深度调研.md) |
 | 78 | [`DietrichGebert/ponytail`](https://github.com/DietrichGebert/ponytail) | 让 AI 编码代理从「写得多=好」变为「写得少=好」的行为改造插件——YAGNI 七步决策阶梯+16 平台+四级强度，减 54% 代码量 | 68,953 | 2026-07-01 | [DietrichGebert-ponytail-深度调研.md](DietrichGebert-ponytail-深度调研.md) |
@@ -305,6 +305,10 @@
 | 286 | [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) | 自托管 VPN 客户端——一键 Docker 部署 + AmneziaWG/XRay 流量混淆 | 13,710 | 2026-07-28 | [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md) |
 | 287 | [`LifeArchiveProject/WeChatDataAnalysis`](https://github.com/LifeArchiveProject/WeChatDataAnalysis) | 微信 4.x 数据库解密与年度总结/导出——Python+Vue+Electron，含 MCP 接入 | 1,843 | 2026-07-28 | [LifeArchiveProject-WeChatDataAnalysis-深度调研.md](LifeArchiveProject-WeChatDataAnalysis-深度调研.md) |
 
+| 288 | [`MoonshotAI/Kimi-K3`](https://github.com/MoonshotAI/Kimi-K3) | 2.8T 开源权重多模态 Agentic 前沿模型——KDA+AttnRes+Latent MoE（激活 16/896 专家），1M 上下文 | 3,254 | 2026-07-29 | [MoonshotAI-Kimi-K3-深度调研.md](MoonshotAI-Kimi-K3-深度调研.md) |
+| 289 | [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) | 给 AI Agent 的永久只追加记忆——定宽记录 + 二分合并树压缩，单文件零依赖 | 769 | 2026-07-29 | [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md) |
+| 290 | [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) | 基于 Firecracker 的分布式 Agent 沙箱平台——E2B 兼容 API，overlaybd+ublk+内存快照 | 1,393 | 2026-07-29 | [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md) |
+| 291 | [`mshumer/Claude-of-Duty`](https://github.com/mshumer/Claude-of-Duty) | 单 prompt 多 Agent 生成的浏览器 FPS——Three.js+WebGL2 全程序化，OVERWATCH 引擎契约 | 1,527 | 2026-07-29 | [mshumer-Claude-of-Duty-深度调研.md](mshumer-Claude-of-Duty-深度调研.md) |
 ## 🏷️ 按技术领域分类
 
 ### AI Agent / 助手框架（75）
@@ -388,7 +392,7 @@
 
 - [`oomol-lab/open-connector`](https://github.com/oomol-lab/open-connector) — [oomol-lab-open-connector-深度调研.md](oomol-lab-open-connector-深度调研.md)
 
-### LLM / 推理框架（6） 🆕
+### LLM / 推理框架（7） 🆕
 
 - [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) — [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md)
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
@@ -398,6 +402,7 @@
 - [`JustVugg/colibri`](https://github.com/JustVugg/colibri) — [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md)
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 
+- [`MoonshotAI/Kimi-K3`](https://github.com/MoonshotAI/Kimi-K3) — [MoonshotAI-Kimi-K3-深度调研.md](MoonshotAI-Kimi-K3-深度调研.md)
 ### AI 编码 / Skill 技能（22）
 
 - [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
@@ -424,7 +429,7 @@
 
 
 - [`code-yeongyu/oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent) — [code-yeongyu-oh-my-openagent-深度调研.md](code-yeongyu-oh-my-openagent-深度调研.md)
-### RAG / 知识库 / 记忆（10）
+### RAG / 知识库 / 记忆（11）
 
 - [`1Panel-dev/MaxKBStar`](https://github.com/1Panel-dev/MaxKBStar) — [1Panel-dev-MaxKBStar-深度调研.md](1Panel-dev-MaxKBStar-深度调研.md)
 - [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) — [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md)
@@ -438,7 +443,8 @@
 
 
 - [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) — [thedotmack-claude-mem-深度调研.md](thedotmack-claude-mem-深度调研.md)
-### 开发工具 / CLI（21）
+- [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
+### 开发工具 / CLI（22）
 
 - [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) — [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
@@ -464,7 +470,8 @@
 
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 
-### 前端 / 设计 / UI（14）
+- [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
+### 前端 / 设计 / UI（15）
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
 - [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) — [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md)
@@ -482,6 +489,7 @@
 - [`nextlevelbuilder/ui-ux-pro-max-skill`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — [nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md](nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md)
 - [`ocornut/imgui`](https://github.com/ocornut/imgui) — [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md)
 
+- [`mshumer/Claude-of-Duty`](https://github.com/mshumer/Claude-of-Duty) — [mshumer-Claude-of-Duty-深度调研.md](mshumer-Claude-of-Duty-深度调研.md)
 ### 视频 / 音频 / 多媒体（14）
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)

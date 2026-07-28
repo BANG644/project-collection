@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 301                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 305                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -216,7 +216,7 @@ github-project-research/
 | [`JustVugg/colibri`](https://github.com/JustVugg/colibri) | [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md) |
 - [`jenkinsci/jenkins`](https://github.com/jenkinsci/jenkins) — [jenkinsci-jenkins-深度调研.md](jenkinsci-jenkins-深度调研.md)
 
-### K（5 个）
+### K（6 个）
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`kageroumado/phosphene`](https://github.com/kageroumado/phosphene) | [kageroumado-phosphene-深度调研.md](kageroumado-phosphene-深度调研.md) |
@@ -224,6 +224,7 @@ github-project-research/
 | [`koala73/worldmonitor`](https://github.com/koala73/worldmonitor) | [koala73-worldmonitor-深度调研.md](koala73-worldmonitor-深度调研.md) |
 | [`kvcache-ai/ktransformers`](https://github.com/kvcache-ai/ktransformers) | [kvcache-ai-ktransformers-深度调研.md](kvcache-ai-ktransformers-深度调研.md) |
 | [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) | [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md) |
+| [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) | [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md) |
 
 
 ### L（13 个）
@@ -247,7 +248,7 @@ github-project-research/
 - [`LC044/WeChatMsg`](https://github.com/LC044/WeChatMsg) — [LC044-WeChatMsg-深度调研.md](LC044-WeChatMsg-深度调研.md)
 - [`LifeArchiveProject/WeChatDataAnalysis`](https://github.com/LifeArchiveProject/WeChatDataAnalysis) — [LifeArchiveProject-WeChatDataAnalysis-深度调研.md](LifeArchiveProject-WeChatDataAnalysis-深度调研.md)
 
-### M（16 个）
+### M（18 个）
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`MatinSenPai/SenPaiScanner`](https://github.com/MatinSenPai/SenPaiScanner) | [MatinSenPai-SenPaiScanner-深度调研.md](MatinSenPai-SenPaiScanner-深度调研.md) |
@@ -268,6 +269,8 @@ github-project-research/
 | [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill) | [mvanhorn-last30days-skill-深度调研.md](mvanhorn-last30days-skill-深度调研.md) |
 
 
+- [`MoonshotAI/Kimi-K3`](https://github.com/MoonshotAI/Kimi-K3) — [MoonshotAI-Kimi-K3-深度调研.md](MoonshotAI-Kimi-K3-深度调研.md)
+- [`mshumer/Claude-of-Duty`](https://github.com/mshumer/Claude-of-Duty) — [mshumer-Claude-of-Duty-深度调研.md](mshumer-Claude-of-Duty-深度调研.md)
 ### N（8 个）
 
 | owner/repo | 报告文件 |
@@ -375,7 +378,7 @@ github-project-research/
 |------------|----------|
 | [`unclecode/crawl4ai`](https://github.com/unclecode/crawl4ai) | [unclecode-crawl4ai-深度调研.md](unclecode-crawl4ai-深度调研.md) |
 
-### V（5 个）
+### V（7 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -385,6 +388,7 @@ github-project-research/
 | [`vorpus/performativeUI`](https://github.com/vorpus/performativeUI) | [vorpus-performativeUI-深度调研.md](vorpus-performativeUI-深度调研.md) |
 | [`viitor-ai/viitor-voice-nar`](https://github.com/viitor-ai/viitor-voice-nar) | [viitor-ai-viitor-voice-nar-深度调研.md](viitor-ai-viitor-voice-nar-深度调研.md) |
 | [`virattt/ai-hedge-fund`](https://github.com/virattt/ai-hedge-fund) | [virattt-ai-hedge-fund-深度调研.md](virattt-ai-hedge-fund-深度调研.md) |
+| [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) | [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md) |
 
 ### W（4 个）
 
@@ -493,6 +497,7 @@ github-project-research/
 - [`kvcache-ai/ktransformers`](https://github.com/kvcache-ai/ktransformers) — [kvcache-ai-ktransformers-深度调研.md](kvcache-ai-ktransformers-深度调研.md)
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 
+- [`MoonshotAI/Kimi-K3`](https://github.com/MoonshotAI/Kimi-K3) — [MoonshotAI-Kimi-K3-深度调研.md](MoonshotAI-Kimi-K3-深度调研.md)
 ### AI 编码 / Skill 技能
 
 - [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
@@ -535,6 +540,7 @@ github-project-research/
 
 
 - [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) — [thedotmack-claude-mem-深度调研.md](thedotmack-claude-mem-深度调研.md)
+- [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 ### 开发工具 / CLI
 
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
@@ -554,6 +560,7 @@ github-project-research/
 - [`Automattic/harper`](https://github.com/Automattic/harper) — [Automattic-harper-深度调研.md](Automattic-harper-深度调研.md)
 - [`jenkinsci/jenkins`](https://github.com/jenkinsci/jenkins) — [jenkinsci-jenkins-深度调研.md](jenkinsci-jenkins-深度调研.md)
 
+- [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
 ### 前端 / 设计 / UI
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
@@ -569,6 +576,7 @@ github-project-research/
 - [`nextlevelbuilder/ui-ux-pro-max-skill`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — [nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md](nextlevelbuilder-ui-ux-pro-max-skill-深度调研.md)
 - [`ocornut/imgui`](https://github.com/ocornut/imgui) — [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md)
 
+- [`mshumer/Claude-of-Duty`](https://github.com/mshumer/Claude-of-Duty) — [mshumer-Claude-of-Duty-深度调研.md](mshumer-Claude-of-Duty-深度调研.md)
 ### 视频 / 音频 / 多媒体
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
