@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 305                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 309                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -127,7 +127,7 @@ github-project-research/
 - [`ComposioHQ/awesome-claude-skills`](https://github.com/ComposioHQ/awesome-claude-skills) — [ComposioHQ-awesome-claude-skills-深度调研.md](ComposioHQ-awesome-claude-skills-深度调研.md)
 
 - [`code-yeongyu/oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent) — [code-yeongyu-oh-my-openagent-深度调研.md](code-yeongyu-oh-my-openagent-深度调研.md)
-### D（10 个）
+### D（11 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -141,6 +141,8 @@ github-project-research/
 | [`Dicklesworthstone/destructive_command_guard`](https://github.com/Dicklesworthstone/destructive_command_guard) | [Dicklesworthstone-destructive_command_guard-深度调研.md](Dicklesworthstone-destructive_command_guard-深度调研.md) |
 | [`dottxt-ai/outlines`](https://github.com/dottxt-ai/outlines) | [dottxt-ai-outlines-深度调研.md](dottxt-ai-outlines-深度调研.md) |
 | [`DioxusLabs/dioxus`](https://github.com/DioxusLabs/dioxus) | [DioxusLabs-dioxus-深度调研.md](DioxusLabs-dioxus-深度调研.md) |
+
+| [`different-ai/openwork`](https://github.com/different-ai/openwork) | [different-ai-openwork-深度调研.md](different-ai-openwork-深度调研.md) |
 
 ### E（5 个）
 
@@ -182,7 +184,7 @@ github-project-research/
 | [`gastownhall/beads`](https://github.com/gastownhall/beads) | [gastownhall-beads-深度调研.md](gastownhall-beads-深度调研.md) |
 | [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify) | [Graphify-Labs-graphify-深度调研.md](Graphify-Labs-graphify-深度调研.md) |
 
-### H（6 个）
+### H（7 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -194,6 +196,8 @@ github-project-research/
 
 
 - [`hicccc77/WeFlow`](https://github.com/hicccc77/WeFlow) — [hicccc77-WeFlow-深度调研.md](hicccc77-WeFlow-深度调研.md)
+| [`huggingface/speech-to-speech`](https://github.com/huggingface/speech-to-speech) | [huggingface-speech-to-speech-深度调研.md](huggingface-speech-to-speech-深度调研.md) |
+
 ### I（2 个）
 
 | owner/repo | 报告文件 |
@@ -248,7 +252,7 @@ github-project-research/
 - [`LC044/WeChatMsg`](https://github.com/LC044/WeChatMsg) — [LC044-WeChatMsg-深度调研.md](LC044-WeChatMsg-深度调研.md)
 - [`LifeArchiveProject/WeChatDataAnalysis`](https://github.com/LifeArchiveProject/WeChatDataAnalysis) — [LifeArchiveProject-WeChatDataAnalysis-深度调研.md](LifeArchiveProject-WeChatDataAnalysis-深度调研.md)
 
-### M（18 个）
+### M（19 个）
 | owner/repo | 报告文件 |
 |------------|----------|
 | [`MatinSenPai/SenPaiScanner`](https://github.com/MatinSenPai/SenPaiScanner) | [MatinSenPai-SenPaiScanner-深度调研.md](MatinSenPai-SenPaiScanner-深度调研.md) |
@@ -271,6 +275,8 @@ github-project-research/
 
 - [`MoonshotAI/Kimi-K3`](https://github.com/MoonshotAI/Kimi-K3) — [MoonshotAI-Kimi-K3-深度调研.md](MoonshotAI-Kimi-K3-深度调研.md)
 - [`mshumer/Claude-of-Duty`](https://github.com/mshumer/Claude-of-Duty) — [mshumer-Claude-of-Duty-深度调研.md](mshumer-Claude-of-Duty-深度调研.md)
+| [`microsoft/VibeVoice`](https://github.com/microsoft/VibeVoice) | [microsoft-VibeVoice-深度调研.md](microsoft-VibeVoice-深度调研.md) |
+
 ### N（8 个）
 
 | owner/repo | 报告文件 |
@@ -305,7 +311,7 @@ github-project-research/
 
 
 - [`OtterMind/Chat2DB`](https://github.com/OtterMind/Chat2DB) — [OtterMind-Chat2DB-深度调研.md](OtterMind-Chat2DB-深度调研.md)
-### P（5 个）
+### P（6 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
@@ -314,6 +320,8 @@ github-project-research/
 | [`phuryn/pm-skills`](https://github.com/phuryn/pm-skills) | [phuryn-pm-skills-深度调研.md](phuryn-pm-skills-深度调研.md) |
 | [`PostHog/posthog`](https://github.com/PostHog/posthog) | [PostHog-posthog-深度调研.md](PostHog-posthog-深度调研.md) |
 | [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) | [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md) |
+
+| [`pascalorg/editor`](https://github.com/pascalorg/editor) | [pascalorg-editor-深度调研.md](pascalorg-editor-深度调研.md) |
 
 ### Q（1 个）
 
@@ -487,6 +495,8 @@ github-project-research/
 
 - [`trycua/cua`](https://github.com/trycua/cua) — [trycua-cua-深度调研.md](trycua-cua-深度调研.md)
 
+- [`different-ai/openwork`](https://github.com/different-ai/openwork) — [different-ai-openwork-深度调研.md](different-ai-openwork-深度调研.md)
+
 ### LLM / 推理框架 🆕
 
 - [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) — [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md)
@@ -577,6 +587,8 @@ github-project-research/
 - [`ocornut/imgui`](https://github.com/ocornut/imgui) — [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md)
 
 - [`mshumer/Claude-of-Duty`](https://github.com/mshumer/Claude-of-Duty) — [mshumer-Claude-of-Duty-深度调研.md](mshumer-Claude-of-Duty-深度调研.md)
+- [`pascalorg/editor`](https://github.com/pascalorg/editor) — [pascalorg-editor-深度调研.md](pascalorg-editor-深度调研.md)
+
 ### 视频 / 音频 / 多媒体
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
@@ -589,6 +601,9 @@ github-project-research/
 - [`Open-LLM-VTuber/Open-LLM-VTuber`](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) — [Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md](Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md)
 - [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) — [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md)
 - [`moeru-ai/airi`](https://github.com/moeru-ai/airi) — [moeru-ai-airi-深度调研.md](moeru-ai-airi-深度调研.md)
+
+- [`microsoft/VibeVoice`](https://github.com/microsoft/VibeVoice) — [microsoft-VibeVoice-深度调研.md](microsoft-VibeVoice-深度调研.md)
+- [`huggingface/speech-to-speech`](https://github.com/huggingface/speech-to-speech) — [huggingface-speech-to-speech-深度调研.md](huggingface-speech-to-speech-深度调研.md)
 
 ### 安全 / 运维 / 系统工具
 

@@ -309,9 +309,14 @@
 | 289 | [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) | 给 AI Agent 的永久只追加记忆——定宽记录 + 二分合并树压缩，单文件零依赖 | 769 | 2026-07-29 | [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md) |
 | 290 | [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) | 基于 Firecracker 的分布式 Agent 沙箱平台——E2B 兼容 API，overlaybd+ublk+内存快照 | 1,393 | 2026-07-29 | [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md) |
 | 291 | [`mshumer/Claude-of-Duty`](https://github.com/mshumer/Claude-of-Duty) | 单 prompt 多 Agent 生成的浏览器 FPS——Three.js+WebGL2 全程序化，OVERWATCH 引擎契约 | 1,527 | 2026-07-29 | [mshumer-Claude-of-Duty-深度调研.md](mshumer-Claude-of-Duty-深度调研.md) |
+| 292 | [`microsoft/VibeVoice`](https://github.com/microsoft/VibeVoice) | 微软开源前沿语音 AI——7.5Hz 连续 tokenizer + next-token diffusion，TTS 长序列合成 + ASR 60min 单遍识别 + VibeASR.cpp 边缘 CPU 实时 | 51,182 | 2026-07-30 | [microsoft-VibeVoice-深度调研.md](microsoft-VibeVoice-深度调研.md) |
+| 293 | [`different-ai/openwork`](https://github.com/different-ai/openwork) | 开源版 Claude Cowork——远程 MCP 能力总线，让 Codex/Claude Code/Cursor 复用同一套 skills/MCP，桌面端可弹出 | 17,739 | 2026-07-30 | [different-ai-openwork-深度调研.md](different-ai-openwork-深度调研.md) |
+| 294 | [`pascalorg/editor`](https://github.com/pascalorg/editor) | 浏览器原生开源 3D 建筑编辑器——R3F+WebGPU，自然语言草模 + 扁平字典数据模型 + npm 引擎可嵌 | 19,452 | 2026-07-30 | [pascalorg-editor-深度调研.md](pascalorg-editor-深度调研.md) |
+| 295 | [`huggingface/speech-to-speech`](https://github.com/huggingface/speech-to-speech) | HF 开源语音 Agent 流水线 VAD→STT→LLM→TTS，OpenAI Realtime 兼容端点，全本地可自托管 | 7,771 | 2026-07-30 | [huggingface-speech-to-speech-深度调研.md](huggingface-speech-to-speech-深度调研.md) |
+
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（75）
+### AI Agent / 助手框架（76）
 
 - [`AstrBotDevs/AstrBot`](https://github.com/AstrBotDevs/AstrBot) — [AstrBotDevs-AstrBot-深度调研.md](AstrBotDevs-AstrBot-深度调研.md)
 - [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) — [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md)
@@ -392,6 +397,7 @@
 
 - [`oomol-lab/open-connector`](https://github.com/oomol-lab/open-connector) — [oomol-lab-open-connector-深度调研.md](oomol-lab-open-connector-深度调研.md)
 
+- [`different-ai/openwork`](https://github.com/different-ai/openwork) — [different-ai-openwork-深度调研.md](different-ai-openwork-深度调研.md)
 ### LLM / 推理框架（7） 🆕
 
 - [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) — [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md)
@@ -471,7 +477,7 @@
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
-### 前端 / 设计 / UI（15）
+### 前端 / 设计 / UI（16）
 
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
 - [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) — [diffusionstudio-lottie-深度调研.md](diffusionstudio-lottie-深度调研.md)
@@ -490,7 +496,8 @@
 - [`ocornut/imgui`](https://github.com/ocornut/imgui) — [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md)
 
 - [`mshumer/Claude-of-Duty`](https://github.com/mshumer/Claude-of-Duty) — [mshumer-Claude-of-Duty-深度调研.md](mshumer-Claude-of-Duty-深度调研.md)
-### 视频 / 音频 / 多媒体（14）
+- [`pascalorg/editor`](https://github.com/pascalorg/editor) — [pascalorg-editor-深度调研.md](pascalorg-editor-深度调研.md)
+### 视频 / 音频 / 多媒体（16）
 
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
 - [`immich-app/immich`](https://github.com/immich-app/immich) — [immich-app-immich-深度调研.md](immich-app-immich-深度调研.md)
@@ -507,6 +514,8 @@
 - [`lllyasviel/stable-diffusion-webui-forge`](https://github.com/lllyasviel/stable-diffusion-webui-forge) — [lllyasviel-stable-diffusion-webui-forge-深度调研.md](lllyasviel-stable-diffusion-webui-forge-深度调研.md)
 - [`moeru-ai/airi`](https://github.com/moeru-ai/airi) — [moeru-ai-airi-深度调研.md](moeru-ai-airi-深度调研.md)
 
+- [`microsoft/VibeVoice`](https://github.com/microsoft/VibeVoice) — [microsoft-VibeVoice-深度调研.md](microsoft-VibeVoice-深度调研.md)
+- [`huggingface/speech-to-speech`](https://github.com/huggingface/speech-to-speech) — [huggingface-speech-to-speech-深度调研.md](huggingface-speech-to-speech-深度调研.md)
 ### 计算机视觉 / CV（1） 🆕
 
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
