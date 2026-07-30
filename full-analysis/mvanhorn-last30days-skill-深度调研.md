@@ -1,251 +1,109 @@
-# 🔬 mvanhorn/last30days-skill — 全方位深度调研
+# mvanhorn/last30days-skill — 「搜人不搜编辑」的 Agent 情报引擎深度调研
 
-> **调研日期**: 2026-07-09 | **数据来源**: GitHub API + README + 源码 + 中文社区评测 + 英文社区讨论 | **总评**: ⭐ 50,612 | 🍴 4,224
+> **调研时间**: 2026-07-31 | **Stars**: 55,428⭐ | **Forks**: 4,779
+> **语言**: Python | **许可**: MIT | **创建**: 2026-01-23（半年冲到 55K⭐，曾 GitHub Trending 日榜 #1）
+> **仓库**: https://github.com/mvanhorn/last30days-skill
 
-## 📌 一句话定位
+## 项目定位（一句话）
 
-**Agent 驱动的跨平台社交搜索引擎**——输入主题，AI 代理并行搜索 Reddit、X、YouTube、HN、Polymarket、TikTok 等 10+ 平台，以真实用户互动数据（upvotes、赔率、评论数）而非 SEO 权重来排序，合成为一份带来源的简报。
+一个跨 50+ Agent Harness 安装的调研技能：`/last30days <话题>` 并行搜 14 个平台（Reddit/X/YouTube/TikTok/HN/Polymarket/GitHub/arXiv…），按**真实人类互动量**（upvote/点赞/真金白银的赔率）排序，AI 评审合成一份带引用的 30 天简报——「Google 聚合编辑，它搜索人」。
 
-> 核心判断：这不是另一个"AI 搜索"——它不做网页索引，而是做**社交信号聚合**。50K ⭐ 意味着市场对"绕过封闭平台信息孤岛"的需求远大于供给。
+## 项目亮点（差异化）
 
-## ⭐ 项目亮点
+1. **排序信号是钱和注意力，不是 SEO** — Polymarket 赔率有真金白银背书；1500 upvote 的 Reddit 帖 > 没人读的博客；这个信号体系是所有「AI 搜索」里独一份
+2. **打通 14 个互相封闭的围墙花园** — ChatGPT 有 Reddit 协议但搜不了 X；Gemini 有 YouTube 但没 Reddit；Claude 全都没有。它用 BYO keys + 浏览器 cookie 把全部桥接给任意 Agent
+3. **零配置免费层可用** — Reddit/HN/Polymarket/GitHub 无需任何 key 即跑（公共 JSON/Algolia/Gamma API），30 秒 setup 向导再解锁 X/YouTube/TikTok
+4. **SKILL.md 与引擎之间的「契约」工程** — prose 契约 + Python 引擎的分工被明确定义（见源码解读），是 Agent Skills 规范工程化的最佳样本
+5. **CONCEPTS.md 定义项目专属词汇表** — Entity grounding、Confidence floor、Nothing-solid 等概念精确到「失败模式往哪个方向退化」的程度，工程文档成熟度罕见
 
-1. **社交信号驱动排名** — 不是 AI 估算的"相关性"，而是真实 Reddit upvotes、Polymarket 赔率、YouTube 观看量。这完全改变了"什么是重要信息"的定义
-2. **10+ 封闭平台覆盖** — Reddit 评论、X 推文、TikTok 视频、Instagram Reels、Bluesky、Threads——这些是 Google 搜不到的内容
-3. **渐进式架构（Progressive Disclosure）** — 先元数据、后工具定义、再执行，避免一次加载爆掉 Agent 上下文。这已成为 Agent Skills 生态的参考范式
-4. **0 配置可用** — Reddit、HN、Polymarket、GitHub 无需任何 API Key 就能跑，大幅降低试用门槛
-5. **Lyft 联合创始人出品** — Matt Van Horn 的背书不仅带来可信度，还意味着充足的工程资源和社区运营投入
-
-## 🏗️ 项目架构全景
-
-### 目录结构
+## 核心架构
 
 ```
-last30days-skill/
-├── skills/last30days/SKILL.md    # 核心技能文件（193KB，入口文件）
-│   └── scripts/                   # Python 执行引擎
-│       └── lib/                   # 各平台后端实现（backends.py 调度）
-├── mcp/                           # MCP 服务实现（Go 语言）
-├── tests/                         # 1000+ 测试用例
-├── docs/                          # 架构决策文档 + 解决方案记录
-├── AGENTS.md                      # Agent 治理规则（10KB）
-├── CONCEPTS.md                    # 精确定义 Skill/Engine/Harness 术语
-└── CONFIGURATION.md               # 完整配置指南（40KB）
+skills/last30days/
+├── SKILL.md                       # Agent 面向的 prose 契约（source of truth）⭐
+├── scripts/
+│   ├── last30days.py              # 引擎主入口（--plan/--competitors-plan/--emit=compact…）
+│   ├── briefing.py                # 简报渲染
+│   ├── evaluate_search_quality.py # 搜索质量评估（1000+ 测试）
+│   └── lib/                       # 平台适配层
+│       ├── backends.py / cluster.py / competitors.py
+│       ├── bird_x.py（X cookie 认证）/ bluesky.py / arxiv.py
+│       └── chrome_cookies.py      # 浏览器会话复用 ⭐
+├── agents/openai.yaml             # Codex 适配
+└── references/save-html-brief.md
+多 Harness 清单：.claude-plugin/ .codex-plugin/ .grok-plugin/ .agents/（一仓四清单）
 ```
 
-### 核心架构：三层引擎
+**管线**：话题 → 先做功课（识别相关人物/GitHub 账号/subreddit/X 账号）→ 14 平台并行抓取 → Entity grounding 过滤离题内容 → 跨平台同源合并（cluster）→ 互动量评分排序 → AI 评审合成简报。
 
-```
-User: "/last30days topic"
-        │
-        ▼
-┌─────────────────────────────────────┐
-│  Layer 1: Planner（规划层）          │
-│  - 实体解析（entity_extract.py）    │
-│  - 查询扩展（query.py）             │
-│  - 平台发现（categories.py）        │
-└────────────┬────────────────────────┘
-             │
-             ▼
-┌─────────────────────────────────────┐
-│  Layer 2: Fanout（并行搜索层）       │
-│  - ThreadPoolExecutor 并发          │
-│  - 后端适配器（backends.py）        │
-│    ├── Reddit: RSS + keyless + API  │
-│    ├── X: Bird (free) → xAI (paid) │
-│    ├── YouTube: yt-dlp + transcript │
-│    ├── Polymarket: API → real odds  │
-│    └── TikTok/IG: ScrapeCreators    │
-└────────────┬────────────────────────┘
-             │
-             ▼
-┌─────────────────────────────────────┐
-│  Layer 3: Fusion（合成层）           │
-│  - 归一化（normalize.py）           │
-│  - 聚类去重（cluster.py）           │
-│  - 重排序（rerank.py by engagement)│
-│  - 富化（reddit_enrich.py 拿评论）  │
-│  - 简报渲染（render.py → HTML）    │
-└─────────────────────────────────────┘
-```
+## 应用场景与启发
 
-### 设计哲学
+**可用场景**：
+- 会前尽调：`/last30days Peter Steinberger` 给出对方近 30 天真实动态（PR 速率/X 争论/播客字幕），LinkedIn 2023 陈旧信息的对立面
+- 技术选型/竞品：`A vs B` 一趟并排对比；`--competitors` 自动发现同赛道玩家再跑一轮
+- 内容选题：Discovery 模式（无话题）自动从各平台热榜提名「值得研究什么」
+- 投资情绪扫描：社群情绪 + Polymarket 赔率的组合视角
 
-**来源独立（Source Agnostic）**：每种数据源被抽象为统一的 `Backend` 接口，新增平台只需实现 `search() + enrich()` 两个方法。这是该架构能快速从 4 个平台扩展到 10+ 的核心原因。
+**给同类需求的启发**：
+1. **「SKILL.md 契约 + 引擎实现」的分层定义**——SKILL.md 告诉模型传什么 flag，引擎产出固定 shape（badge 行/排名证据簇/emoji 树页脚），模型**契约性地必须透传**。做「技能包着脚本」的项目都该这样定义边界，防止模型自由发挥破坏输出
+2. **Entity grounding 的保守失败设计**：命中判定只 key 在实体头词上（尾词常是搜索修饰词）；未命中给「决定性降权」使高互动救不回离题内容；但判定门槛刻意保守——失败模式退化为「不罚」，绝不退化为「埋掉正确内容」。任何相关性过滤器都该这样声明退化方向
+3. **Nothing-solid 一等公民**：Discovery 零命中时诚实报告「本窗口无可称为趋势的信号」并指出最接近的次阈值候选，而非渲染垃圾——AI 产品「宁可空手不可编造」的范本
+4. **Checkpoint 身份绑定**：多腿协议的断点续跑要求每个 host 写入文件回显 bundle id，mock 与 real 状态永不交叉，空状态视为损坏 fail-closed——长流程 Agent 管线的状态管理教科书
 
-**退化链（Degradation Chain）**：每个平台配有多个备选获取策略。以 Reddit 为例：RSS → keyless → public API → authenticated API。任一环节失败自动降级，而不是抛错退出。这是生产环境可靠性远超同类工具的关键。
+## 源码深度解读
 
-## 💡 应用场景与启发
+### Keyless path（免费层）的工程取舍
 
-### 典型使用场景
+无 key 时数据靠爬虫 + RSS，排序退化为本地词法评分（无 LLM 重排）。因此 Entity grounding 等词法防线在免费层最关键——**分层降级时，越往下的层越依赖确定性防线**。Reddit 评论增补预算（comment-enrichment slots）按相关性分配：先过 grounding 的帖子先占坑，不把预算浪费在终将被降权的高热离题帖上。
 
-| 场景 | 用法 | 传统替代方案 |
-|------|------|-------------|
-| 会议前了解一个人 | `/last30days Peter Steinberger` | 刷 LinkedIn/Twitter 30 分钟 |
-| 竞品动态监控 | `/last30days company --competitors` | 手动跟踪多个 RSS |
-| 投资决策参考 | `/last30days AI chip --hiring-signals` | 读季度报告 |
-| 热点事件追踪 | `/last30days 总统竞选` | 刷新闻网站 |
-| 旅行功课 | `/last30days Disney World` | 搜攻略文章 |
+### 多 Harness 分发（一仓四清单）
 
-### 对同类项目的启发
+`.claude-plugin/`（marketplace）、`.codex-plugin/`、`.grok-plugin/`、`.agents/plugins/` 四套清单指向同一 `skills/` 目录，配合 `npx skills add` 通用安装器覆盖 50+ Harness。AGENTS.md 明言：「这是 Agent Skills 包不是 CLI 工具，产品是斜杠命令，Python 是实现」——定位纪律清晰。
 
-1. **"封闭平台数据提取"是 Agent 搜索最大的差异化空间**：Google 搜不到 Reddit 内部讨论、Twitter 内部趋势、TikTok 内部标签。能够绕过这些"信息孤岛"的 Agent 工具具有无可替代的价值
-2. **真实参与度远比 AI 估算可靠**：用 Polymarket 赔率（真金白银）和 Reddit upvotes（真实用户行为）来排序，比 OpenAI 的"相关性评分"更接近真实世界的关注度
-3. **渐进式披露是 Agent Skill 的架构答案**：Agent 工具面临的最大问题是上下文窗口有限。last30days 的 3 层加载策略（元数据→定义→执行）值得所有 Agent Skill 参考
+### chrome_cookies.py
 
-## 🧠 核心源码解读
+X/Twitter 无需 API key：从用户已登录的浏览器提取 cookie 完成认证。「用户已有的会话就是最好的凭证」——绕过平台 API 收费墙的通用思路（合规敏感，项目将选择权交给用户）。
 
-### 1. Planner：实体解析引擎（`planner.py` 32KB）
+## 全网口碑
 
-这是最容易被忽略但最精妙的部分。并非简单拼接搜索词，而是**智能解析用户意图**：
+- 曾 GitHub Trending 日榜 #1（README 挂 badge），skills.sh 安装量 18K+，评测称「+441 star/天」增长期
+- **正面共识**：信息源视角比传统搜索「更全、更具体、更真实」；对开发者话题 Reddit+HN+GitHub 免费层已胜过 Perplexity 免费档（第三方评测原话）；v3「先做功课再搜索」显著提升准确率
+- **已核实的问题**（社区评测列举）：实体歧义仍偶发（共享名词拉错实体，首跑建议 sanity check）；输出文件在 `~/Documents/Last30Days/` 无限堆积无内置清理；YouTube 静默丢弃 bug；X 的 CT0 cookie 陷阱
+- **风险提示被反复引用**：热度继承热度的毛病——爆红帖可能通篇是错的，社群信号是「值得查证的线索」而非结论
 
-```python
-# 核心逻辑：从用户输入中提取结构化实体
-def plan(self, topic: str) -> Plan:
-    # Step 1: 实体粗提取
-    entities = self._extract_entities(topic)  # 识别可能的人/公司/产品
-    
-    # Step 2: 实体解析（resolve）
-    resolved = self._resolve_entities(entities)
-    # 如果 topic="OpenClaw" → 解析出:
-    #   - GitHub: openclaw/openclaw
-    #   - Reddit: r/openclaw
-    #   - X: @openclaw
-    #   - 创始人: @binaryberry
-    
-    # Step 3: 查询规划
-    queries = []
-    for entity in resolved:
-        for platform in entity.get_platforms():
-            queries.append(Query(
-                entity=entity,
-                platform=platform,
-                query=self._build_search_query(entity, platform)
-            ))
-    return Plan(queries=queries)
-```
+## 竞品对比
 
-这种实体预解析机制确保了"OpenClaw vs Paperclip"这样的比较查询能被拆解为两个实体的独立平台搜索，而不是当做一个模糊的关键词。
+| 维度 | last30days | Perplexity | ChatGPT Search | blader/humanizer 等单点技能 |
+|------|-----------|-----------|----------------|---------------------------|
+| 社交平台覆盖 | ✅ 14 平台含 X/TikTok | ⚠️ 网页为主 | ⚠️ Reddit 协议内 | ❌ |
+| 排序信号 | ✅ 真实互动+赔率 | ❌ 相关性 | ❌ | — |
+| 运行位置 | ✅ 用户自己的 Agent 内 | ❌ SaaS | ❌ SaaS | ✅ |
+| 成本 | ✅ 免费层可用（BYOK 增强）| 免费层受限 | 需订阅 | — |
+| 时间窗口 | ✅ 强制 30 天新鲜度 | ⚠️ | ⚠️ | — |
 
-### 2. Fanout：并发调度引擎（`fanout.py` 3KB + `backends.py` 22KB）
+**本仓库关联阅读**：与已入库 `addyosmani-agent-skills`、`obra-superpowers` 同属 Agent Skills 生态顶流，但那些是「工作流技能」，本项目是把**数据获取能力**做成技能的代表——技能生态从「教模型做事」扩展到「给模型接管数据源」的标志。
 
-Thin orchestrator 的典范——文件极小但调度逻辑极其稳健：
+## 核心研判
 
-```python
-def fanout_search(plan: Plan) -> SearchResults:
-    # 关键策略：每个查询独立线程，互不阻塞
-    with ThreadPoolExecutor(max_workers=20) as exe:
-        futures = {
-            exe.submit(backend.search, query): query
-            for query in plan.queries
-        }
-        for future in as_completed(futures):
-            query = futures[future]
-            try:
-                result = future.result(timeout=30)
-            except Exception as e:
-                # 关键设计：错误不抛出，只记录
-                results.append(ErrorResult(query, e))
-            else:
-                results.append(result)
-    return results
-```
+**优势**：信号体系（人+钱投票）差异化清晰不可替代；免费层诚意 + 50+ Harness 覆盖带来病毒式增长；工程文档（CONCEPTS/契约/失败模式声明）质量为技能类项目天花板。
 
-独立线程 + 异常捕获为 `ErrorResult`（而非抛出）= 一个平台的超时不会拖垮整体搜索。这在多 API 依赖场景下是生死攸关的设计决策。
+**风险/局限**：
+1. 平台反爬/API 变更是永恒军备竞赛（X cookie 方案尤其脆弱）
+2. 浏览器 cookie 提取的授权边界处于灰色地带，企业环境慎用
+3. 热度排序固有偏差：红≠对，投资决策场景必须二次核实
+4. 单人维护（Matt Van Horn），55K⭐ 体量下的 bus factor 风险
 
-### 3. Fusion：数据富化引擎（`reddit_enrich.py` 9KB）
+**趋势判断**：「Agent 技能 = 数据源桥接器」这一形态会被大量复制（垂直版：论文版/财报版/本地生活版）。其 SKILL.md 契约工程和保守失败设计将成为后来者的隐性标准。
 
-从"搜索到结果"到"搜索到有价值的结果"的核心差异：
+## 关键文件路径速查
 
-```python
-def enrich_reddit_post(post_id: str) -> Enrichment:
-    # 调用 Reddit 公共 JSON API 拿真实数据
-    data = requests.get(
-        f"https://www.reddit.com/comments/{post_id}/.json",
-        headers={"User-Agent": "mozilla/5.0"}
-    ).json()
-    return Enrichment(
-        upvotes=data[0]['data']['children'][0]['data']['ups'],
-        upvote_ratio=data[0]['data']['children'][0]['data']['upvote_ratio'],
-        num_comments=data[1]['data']['children'][0]['data']['num_comments'],
-        top_comments=[  # Top 10 评论
-            c['data']['body']
-            for c in data[1]['data']['children'][:10]
-            if c['kind'] == 't1'
-        ]
-    )
-```
-
-"富化"（Enrichment）是整个项目的杀手锏——普通 AI 搜索给摘要，它给的是**真实评论原文 + upvote 数据**。用户可以自己判断哪些评论有价值，而不是听 AI 撮合。
-
-## 🌐 全网口碑画像
-
-### 好评共识
-
-- **"选题效率提升 10 倍"** — 多个中文内容创作者反馈，传统需数小时刷屏的工作，`/last30days` 30 秒搞定（来源：掘金文章、今日头条评测）
-- **"数据准确性远超 AI 搜索"** — 评测指出其"评分机制确保 Reddit 高赞评论不会因 SEO 优化不足被埋没"
-- **"Google 搜不到的东西它能搜"** — 评论指出跨平台数据聚合是传统和 AI 搜索都无法提供的能力
-- **"标杆级文档质量"** — CONCEPTS.md 和 CONFIGURATION.md 被社区誉为 Agent Skills 生态的"最佳实践"
-- **"有 1000+ 测试用例的开源 Agent Skill"** — 来自 Hacker News 的技术讨论（来源：HN 相关主题）
-
-### 差评共识 & 踩坑高发区
-
-| 痛点 | 具体表现 | 来源 |
-|------|---------|------|
-| **API Key 配置复杂** | 需要配置 OpenAI、xAI、YouTube 等多个 Key | GitHub Issues |
-| **付费 API 依赖** | X/Twitter 的 xAI API 需付费，TikTok/Instagram 需 ScrapeCreators | 社区反馈 |
-| **YouTube 转录浪费** | Issue #531：转录预算耗在非目标窗口视频上 | Open Issue |
-| **无订阅模式** | Issue #532：只能手动执行，不能定时推送 | Open Issue |
-| **配置门槛高** | 配置向导（setup wizard）体验仍需改进 | CONFIGURATION.md 评论区 |
-
-### 争议焦点
-
-- **"Skil 还是 App 的边界在哪里"**：部分用户认为它太大太重（193KB 的 SKILL.md），已经超出了"Skill"的范畴，更像是一个独立应用
-- **"数据源合法性"**：使用无头抓取 Reddit/X/TikTok 是否违反 ToS？项目本身未提供法律声明
-
-## ⚔️ 竞品对比
-
-| 维度 | last30days-skill | Agent-Reach | Perplexity | OpenAI Deep Research |
-|------|-------------------|-------------|------------|---------------------|
-| **定位** | Agent 跨平台研究 | CLI 调研工具 | AI 搜索引擎 | AI 深度研究 |
-| **平台覆盖** | 10+ 个（含社交平台） | 7 个（含 B站/小红书） | 通用网页 | 通用网页 |
-| **数据准确性** | 真实 upvotes/赔率 | 无公开保障 | 混合来源 | AI 生成摘要 |
-| **安装方式** | npx skills / 插件市场 | pip install | Web | Web |
-| **费用** | 自带 API Key 即可 | 0 API 费用 | 订阅制 | 使用额度 |
-| **差异化** | Polymarket 赔率 + 跨平台 | 国内平台 | 通用搜索 | 深度推理 |
-
-**选择建议**：
-- **面向英文互联网的内容创作者/投资人** → last30days-skill（独家覆盖 Reddit/X/Polymarket）
-- **面向国内平台的内容创作者** → Agent-Reach（覆盖 B站/小红书）
-- **需要通用问答** → Perplexity（零配置、低门槛）
-
-## 🎯 核心研判
-
-### 不可替代的价值
-
-last30days 的真正护城河不是代码（MIT 开源），而是**它与 10+ 个封闭平台建立的数据管道**。每个平台都需要独特的认证、抓取、解析策略——这种"反向集成"的成本在新进入者复现前只会越来越高。
-
-### 风险
-
-1. **API 依赖风险**：X/xAI 的 API 政策变更、TikTok 反爬升级、Reddit API 收费——任何一个平台的反向工程失败都会削弱价值
-2. **Agent 格式依赖**：Agent Skills 生态尚在发展初期，如果 Claude/Cursor 改变 Skill 加载方式，rewrite 成本不小
-3. **1000+ 测试的维护负担**：80 个 Open Issue + 4.2K Forks 表明社区贡献活跃但核心维护者压力大
-4. **配置复杂度**：多 API Key 的配置体验对非技术用户不友好
-
-### 趋势判断
-
-**高速成长期**。50K ⭐ 的增速（2026年1月创建，7月即达 50K）表明市场对"社交信号搜索"有大量未满足需求。核心风险在平台 API 政策变化，而非竞争。
-
-## 📂 关键文件路径速查
-
-| 文件 | 大小 | 说明 |
-|------|------|------|
-| `skills/last30days/SKILL.md` | 193KB | 核心技能定义（入口） |
-| `skills/last30days/scripts/lib/planner.py` | 32KB | 实体解析与查询规划 |
-| `skills/last30days/scripts/lib/backends.py` | 22KB | 多后端适配器调度 |
-| `skills/last30days/scripts/lib/reddit_enrich.py` | 9KB | 数据富化（核心差异化） |
-| `skills/last30days/scripts/lib/pipeline.py` | 76KB | 全流程编排 |
-| `skills/last30days/scripts/lib/render.py` | 89KB | 简报 HTML 渲染 |
-| `CONFIGURATION.md` | 40KB | 完整配置指南 |
-| `CONCEPTS.md` | 3.6KB | 术语精确定义 |
-| `AGENTS.md` | 10KB | Agent 治理规则 |
+| 路径 | 作用 |
+|------|------|
+| `skills/last30days/SKILL.md` | Agent 面向契约（source of truth）⭐ |
+| `skills/last30days/scripts/last30days.py` | 引擎主入口 |
+| `skills/last30days/scripts/lib/chrome_cookies.py` | 浏览器会话复用认证 ⭐ |
+| `skills/last30days/scripts/lib/cluster.py` | 跨平台同源合并 |
+| `skills/last30days/scripts/evaluate_search_quality.py` | 搜索质量回归测试 |
+| `CONCEPTS.md` | 项目词汇表（Entity grounding / Confidence floor / Nothing-solid）⭐⭐ |
+| `CONFIGURATION.md` | 全部 key/cookie 配置说明 |
+| `.claude-plugin/` `.codex-plugin/` `.grok-plugin/` `.agents/` | 多 Harness 分发清单 |

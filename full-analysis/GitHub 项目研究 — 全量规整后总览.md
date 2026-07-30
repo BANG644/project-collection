@@ -106,10 +106,11 @@ github-project-research/
 | [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | [bytedance-deer-flow-深度调研.md](bytedance-deer-flow-深度调研.md) |
 - [`permissionlesstech/bitchat`](https://github.com/permissionlesstech/bitchat) — [permissionlesstech-bitchat-深度调研.md](permissionlesstech-bitchat-深度调研.md)
 
-### C（14 个）
+### C（15 个）
 
 | owner/repo | 报告文件 |
 |------------|----------|
+| [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) | [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md) |
 | [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) | [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md) |
 | [`chopratejas/headroom`](https://github.com/chopratejas/headroom) | [chopratejas-headroom-深度调研.md](chopratejas-headroom-深度调研.md) |
 | [`clash-verge-rev/clash-verge-rev`](https://github.com/clash-verge-rev/clash-verge-rev) | [clash-verge-rev-clash-verge-rev-深度调研.md](clash-verge-rev-clash-verge-rev-深度调研.md) |
@@ -553,6 +554,7 @@ github-project-research/
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 ### 开发工具 / CLI
 
+- [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) — [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
 - [`GLips/Figma-Context-MCP`](https://github.com/GLips/Figma-Context-MCP) — [GLips-Figma-Context-MCP-深度调研.md](GLips-Figma-Context-MCP-深度调研.md)
 - [`jackwener/OpenCLI`](https://github.com/jackwener/OpenCLI) — [jackwener-OpenCLI-深度调研.md](jackwener-OpenCLI-深度调研.md)

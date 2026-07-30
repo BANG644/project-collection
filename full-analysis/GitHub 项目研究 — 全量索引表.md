@@ -75,7 +75,7 @@
 | 60 | [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) | 首个开源 Agent-First 视频制作系统，3 层知识架构+52 工具+12 pipeline+预算三档治理+CHAI 评审 | 24,205 | 2026-06-27 | [calesthio-OpenMontage-深度调研.md](calesthio-OpenMontage-深度调研.md) |
 | 61 | [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) | My Claude Code Setup | — | 2026-06-17 | [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md) |
 | 62 | [`chopratejas/headroom`](https://github.com/chopratejas/headroom) | AI Agent 上下文压缩层 | 38,636 | 2026-06-20 | [chopratejas-headroom-深度调研.md](chopratejas-headroom-深度调研.md) |
-| 63 | [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Google 官方 Chrome DevTools MCP 服务器，让 AI 代理控制和检查实时浏览器 | 45,057 | 2026-07-03 | [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md) |
+| 63 | [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Google 官方 Chrome DevTools MCP——性能 trace/堆快照/Lighthouse 变 Agent 原生能力，puppeteer+DevTools 双引擎 | 47,976 | 2026-07-31 | [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md) |
 | 64 | [`clash-verge-rev/clash-verge-rev`](https://github.com/clash-verge-rev/clash-verge-rev) | — | — | — | [clash-verge-rev-clash-verge-rev-深度调研.md](clash-verge-rev-clash-verge-rev-深度调研.md) |
 | 65 | [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) | — | — | — | [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md) |
 | 66 | [`cloudflare/security-audit-skill`](https://github.com/cloudflare/security-audit-skill) | — | 346 | 2026-06-23 | [cloudflare-security-audit-skill-深度调研.md](cloudflare-security-audit-skill-深度调研.md) |
@@ -179,7 +179,7 @@
 | 164 | [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | — | — | — | [msitarzewski-agency-agents-深度调研.md](msitarzewski-agency-agents-深度调研.md) |
 | 165 | [`mukul975/Anthropic-Cybersecurity-Skills`](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | AI Agent 网络安全技能库 | 4,200 | 2026-04-09 | [mukul975-Anthropic-Cybersecurity-Skills-深度调研.md](mukul975-Anthropic-Cybersecurity-Skills-深度调研.md) |
 | 166 | [`multica-ai/multica`](https://github.com/multica-ai/multica) | 一、项目定位 | — | 2026-06-15 | [multica-ai-multica-深度调研.md](multica-ai-multica-深度调研.md) |
-| 167 | [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill) | AI Agent 跨平台调研技能（Skill）——输入主题，自动搜索 Reddit、X、YouTube、HN、Polymarket、GitHub、TikTok、 | 40,990 | 2026-06-14 | [mvanhorn-last30days-skill-深度调研.md](mvanhorn-last30days-skill-深度调研.md) |
+| 167 | [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill) | 「搜人不搜编辑」Agent 情报引擎——14 平台并行 + 真实互动量/Polymarket 赔率排序，50+ Harness 可装 | 55,428 | 2026-07-31 | [mvanhorn-last30days-skill-深度调研.md](mvanhorn-last30days-skill-深度调研.md) |
 | 168 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | Fair-code 工作流自动化平台，400+集成+Agent SDK+AI 工作流生成器 | 194,179 | 2026-06-27 | [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md) |
 | 169 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | Fair-code AI 原生工作流自动化平台——开源 Zapier + AI Agent 编排层，400+ 集成，视觉+代码双模 | 195,555 | 2026-07-08 | [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md) |
 | 170 | [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram) | 证据驱动的学习引擎 Claude Code/Codex 插件——FSRS-4.5 排程 + 自由回忆盲审 + 100% 本地 receipt | 472 | 2026-07-10 | [nagisanzenin-engram-深度调研.md](nagisanzenin-engram-深度调研.md) |
@@ -222,7 +222,7 @@
 | 207 | [`refactoringhq/tolaria`](https://github.com/refactoringhq/tolaria) | Files-first/Git-first 的桌面 Markdown 知识库——vault 即 git 仓库，AI-first but not AI-only，AGENTS.md 原生集成 | 17,431 | 2026-06-30 | [refactoringhq-tolaria-深度调研.md](refactoringhq-tolaria-深度调研.md) |
 | 208 | [`refly-ai/refly`](https://github.com/refly-ai/refly) | 全球首个开源 Agent Skills 构建平台——Vibe Workflow 可视化 IDE，将企业 SOP 编译为确定性的、版本化的 Skill，支持导出 MCP/API/Bot | 7,416 | 2026-07-02 | [refly-ai-refly-深度调研.md](refly-ai-refly-深度调研.md) |
 | 209 | [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) | — | 49.6 | 2026-06-10 | [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md) |
-| 210 | [`revfactory/harness`](https://github.com/revfactory/harness) | 🔧  — Agent 团队编排元技能框架 | 7,412 | 2026-06-24 | [revfactory-harness-深度调研.md](revfactory-harness-深度调研.md) |
+| 210 | [`revfactory/harness`](https://github.com/revfactory/harness) | Claude Code「Agent 团队架构工厂」元技能——L3 Meta-Factory，6 架构模式 + Phase 0 审计 + drift 检测 | 8,562 | 2026-07-31 | [revfactory-harness-深度调研.md](revfactory-harness-深度调研.md) |
 | 211 | [`roboflow/supervision`](https://github.com/roboflow/supervision) | 计算机视觉工程沉淀工具箱——20+标注器+ByteTrack追踪+区域计数+数据集转换，CV 项目的事实标准胶水层 | 45,863 | 2026-07-01 | [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md) |
 | 212 | [`rohitg00/agentmemory`](https://github.com/rohitg00/agentmemory) | — | — | 2026-02-25 | [rohitg00-agentmemory-深度调研.md](rohitg00-agentmemory-深度调研.md) |
 | 213 | [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo) | — | — | — | [ruvnet-ruflo-深度调研.md](ruvnet-ruflo-深度调研.md) |
@@ -284,7 +284,7 @@
 | 269 | [`Zackriya-Solutions/meetily`](https://github.com/Zackriya-Solutions/meetily) | 隐私优先的 AI 会议助手——Rust+Tauri 底座，100% 本地运行，Parakeet 4x 转写加速，无需云服务 | 15,069 | 2026-07-05 | [Zackriya-Solutions-meetily-深度调研.md](Zackriya-Solutions-meetily-深度调研.md) |
 | 270 | [`zai-org/GLM-5`](https://github.com/zai-org/GLM-5) | 从 Vibe Coding 到 Agentic Engineering 的旗舰模型 | 6,746 | 2026-07-24 | [zai-org-GLM-5-深度调研.md](zai-org-GLM-5-深度调研.md) |
 | 271 | [`zarazhangrui/beautiful-html-templates`](https://github.com/zarazhangrui/beautiful-html-templates) | beautiful-html-templates | — | 2026-05-05 | [zarazhangrui-beautiful-html-templates-深度调研.md](zarazhangrui-beautiful-html-templates-深度调研.md) |
-| 272 | [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 驱动的多市场股票智能分析系统 | 18,500 | — | [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md) |
+| 272 | [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 驱动五市场自选股 AI 日报——Fork-to-run 零成本架构 + 双 Guardrail 防幻觉 + 通知路由四件套 | 59,613 | 2026-07-31 | [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md) |
 | 273 | [`AstrBotDevs/AstrBot`](https://github.com/AstrBotDevs/AstrBot) | AstrBot — 平台无关开源 Agent 聊天框架，国产 IM 全覆盖 + 1000+ 插件 + Agent 沙箱 | 37,019 | 2026-07-21 | [AstrBotDevs-AstrBot-深度调研.md](AstrBotDevs-AstrBot-深度调研.md) |
 | 274 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | FastMCP — MCP 生态事实标准 Python 框架，装饰器即工具，Servers/Clients/Apps 三支柱 | 26,470 | 2026-07-21 | [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md) |
 | 275 | [`DioxusLabs/dioxus`](https://github.com/DioxusLabs/dioxus) | Dioxus — Rust 全栈跨平台应用框架，一套代码覆盖 Web / 桌面 / 移动端 / SSR | 37,947 | 2026-07-23 | [DioxusLabs-dioxus-深度调研.md](DioxusLabs-dioxus-深度调研.md) |
