@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 309                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 314                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -90,10 +90,10 @@ github-project-research/
 - [`Automattic/harper`](https://github.com/Automattic/harper) — [Automattic-harper-深度调研.md](Automattic-harper-深度调研.md)
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 
-### B（11 个）
-
+### B（12 个）
 | owner/repo | 报告文件 |
 |------------|----------|
+| [`bytebot-ai/bytebot`](https://github.com/bytebot-ai/bytebot) | [bytebot-ai-bytebot-深度调研.md](bytebot-ai-bytebot-深度调研.md) |
 | [`blader/humanizer`](https://github.com/blader/humanizer) | [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md) |
 | [`BANG644/ai-workflow-optimizer`](https://github.com/BANG644/ai-workflow-optimizer) | ⚠️ 个人工作台仓库（2⭐），建议忽略 | [BANG644-ai-workflow-optimizer-深度调研.md](BANG644-ai-workflow-optimizer-深度调研.md) |
 | [`BANG644/docx-svg-to-pdf`](https://github.com/BANG644/docx-svg-to-pdf) | ⚠️ 个人工作台仓库（1⭐），建议忽略 | [BANG644-docx-svg-to-pdf-深度调研.md](BANG644-docx-svg-to-pdf-深度调研.md) |
@@ -106,10 +106,10 @@ github-project-research/
 | [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | [bytedance-deer-flow-深度调研.md](bytedance-deer-flow-深度调研.md) |
 - [`permissionlesstech/bitchat`](https://github.com/permissionlesstech/bitchat) — [permissionlesstech-bitchat-深度调研.md](permissionlesstech-bitchat-深度调研.md)
 
-### C（15 个）
-
+### C（16 个）
 | owner/repo | 报告文件 |
 |------------|----------|
+| [`chatwoot/chatwoot`](https://github.com/chatwoot/chatwoot) | [chatwoot-chatwoot-深度调研.md](chatwoot-chatwoot-深度调研.md) |
 | [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) | [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md) |
 | [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) | [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md) |
 | [`chopratejas/headroom`](https://github.com/chopratejas/headroom) | [chopratejas-headroom-深度调研.md](chopratejas-headroom-深度调研.md) |
@@ -164,10 +164,10 @@ github-project-research/
 | [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md) |
 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md) |
 
-### G（16 个）
-
+### G（17 个）
 | owner/repo | 报告文件 |
 |------------|----------|
+| [`github/gh-aw`](https://github.com/github/gh-aw) | [github-gh-aw-深度调研.md](github-gh-aw-深度调研.md) |
 | [`garrytan/gbrain`](https://github.com/garrytan/gbrain) | [garrytan-gbrain-深度调研.md](garrytan-gbrain-深度调研.md) |
 | [`garrytan/gstack`](https://github.com/garrytan/gstack) | [garrytan-gstack-深度调研.md](garrytan-gstack-深度调研.md) |
 | [`github.com/BuilderIO`](https://github.com/BuilderIO) | [github.com-BuilderIO-深度调研.md](github.com-BuilderIO-深度调研.md) |
@@ -253,9 +253,10 @@ github-project-research/
 - [`LC044/WeChatMsg`](https://github.com/LC044/WeChatMsg) — [LC044-WeChatMsg-深度调研.md](LC044-WeChatMsg-深度调研.md)
 - [`LifeArchiveProject/WeChatDataAnalysis`](https://github.com/LifeArchiveProject/WeChatDataAnalysis) — [LifeArchiveProject-WeChatDataAnalysis-深度调研.md](LifeArchiveProject-WeChatDataAnalysis-深度调研.md)
 
-### M（19 个）
+### M（20 个）
 | owner/repo | 报告文件 |
 |------------|----------|
+| [`MiroMindAI/MiroThinker`](https://github.com/MiroMindAI/MiroThinker) | [MiroMindAI-MiroThinker-深度调研.md](MiroMindAI-MiroThinker-深度调研.md) |
 | [`MatinSenPai/SenPaiScanner`](https://github.com/MatinSenPai/SenPaiScanner) | [MatinSenPai-SenPaiScanner-深度调研.md](MatinSenPai-SenPaiScanner-深度调研.md) |
 | [`mattpocock/skills`](https://github.com/mattpocock/skills) | [mattpocock-skills-深度调研.md](mattpocock-skills-深度调研.md) |
 | [`mauriceboe/TREK`](https://github.com/mauriceboe/TREK) | [mauriceboe-TREK-深度调研.md](mauriceboe-TREK-深度调研.md) |
@@ -367,9 +368,10 @@ github-project-research/
 | [`moeru-ai/airi`](https://github.com/moeru-ai/airi) | [moeru-ai-airi-深度调研.md](moeru-ai-airi-深度调研.md) |
 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) | [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md) |
 
-### T（8 个）
+### T（9 个）
 | owner/repo | 报告文件 |
 |------------|----------|
+| [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) | [Tencent-WeKnora-深度调研.md](Tencent-WeKnora-深度调研.md) |
 | [`tastyeffectco/sandboxd`](https://github.com/tastyeffectco/sandboxd) | [tastyeffectco-sandboxd-深度调研.md](tastyeffectco-sandboxd-深度调研.md) |
 | [`tensorflow/tensorflow`](https://github.com/tensorflow/tensorflow) | [tensorflow-tensorflow-深度调研.md](tensorflow-tensorflow-深度调研.md) |
 | [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) | [thananon-9arm-skills-深度调研.md](thananon-9arm-skills-深度调研.md) |
@@ -441,6 +443,9 @@ github-project-research/
 
 ### AI Agent / 助手框架
 
+- [`chatwoot/chatwoot`](https://github.com/chatwoot/chatwoot) — [chatwoot-chatwoot-深度调研.md](chatwoot-chatwoot-深度调研.md)
+- [`bytebot-ai/bytebot`](https://github.com/bytebot-ai/bytebot) — [bytebot-ai-bytebot-深度调研.md](bytebot-ai-bytebot-深度调研.md)
+- [`MiroMindAI/MiroThinker`](https://github.com/MiroMindAI/MiroThinker) — [MiroMindAI-MiroThinker-深度调研.md](MiroMindAI-MiroThinker-深度调研.md)
 - [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) — [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md)
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`aaif-goose/goose`](https://github.com/aaif-goose/goose) — [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md)
@@ -511,6 +516,7 @@ github-project-research/
 - [`MoonshotAI/Kimi-K3`](https://github.com/MoonshotAI/Kimi-K3) — [MoonshotAI-Kimi-K3-深度调研.md](MoonshotAI-Kimi-K3-深度调研.md)
 ### AI 编码 / Skill 技能
 
+- [`github/gh-aw`](https://github.com/github/gh-aw) — [github-gh-aw-深度调研.md](github-gh-aw-深度调研.md)
 - [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
@@ -540,6 +546,7 @@ github-project-research/
 - [`code-yeongyu/oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent) — [code-yeongyu-oh-my-openagent-深度调研.md](code-yeongyu-oh-my-openagent-深度调研.md)
 ### RAG / 知识库 / 记忆
 
+- [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) — [Tencent-WeKnora-深度调研.md](Tencent-WeKnora-深度调研.md)
 - [`1Panel-dev/MaxKBStar`](https://github.com/1Panel-dev/MaxKBStar) — [1Panel-dev-MaxKBStar-深度调研.md](1Panel-dev-MaxKBStar-深度调研.md)
 - [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) — [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md)
 - [`microsoft/graphrag`](https://github.com/microsoft/graphrag) — [microsoft-graphrag-深度调研.md](microsoft-graphrag-深度调研.md)

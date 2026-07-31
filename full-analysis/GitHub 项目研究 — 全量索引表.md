@@ -313,10 +313,19 @@
 | 293 | [`different-ai/openwork`](https://github.com/different-ai/openwork) | 开源版 Claude Cowork——远程 MCP 能力总线，让 Codex/Claude Code/Cursor 复用同一套 skills/MCP，桌面端可弹出 | 17,739 | 2026-07-30 | [different-ai-openwork-深度调研.md](different-ai-openwork-深度调研.md) |
 | 294 | [`pascalorg/editor`](https://github.com/pascalorg/editor) | 浏览器原生开源 3D 建筑编辑器——R3F+WebGPU，自然语言草模 + 扁平字典数据模型 + npm 引擎可嵌 | 19,452 | 2026-07-30 | [pascalorg-editor-深度调研.md](pascalorg-editor-深度调研.md) |
 | 295 | [`huggingface/speech-to-speech`](https://github.com/huggingface/speech-to-speech) | HF 开源语音 Agent 流水线 VAD→STT→LLM→TTS，OpenAI Realtime 兼容端点，全本地可自托管 | 7,771 | 2026-07-30 | [huggingface-speech-to-speech-深度调研.md](huggingface-speech-to-speech-深度调研.md) |
+| 296 | [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) | 腾讯开源 RAG+ReAct Agent+自动 Wiki 一体化企业知识框架（微信对话开放平台底层） | 19,206 | 2026-08-01 | [Tencent-WeKnora-深度调研.md](Tencent-WeKnora-深度调研.md) |
+| 297 | [`chatwoot/chatwoot`](https://github.com/chatwoot/chatwoot) | 开源客户支持平台——Intercom/Zendesk 替代，全渠道收件箱 + Captain AI Agent | 35,063 | 2026-08-01 | [chatwoot-chatwoot-深度调研.md](chatwoot-chatwoot-深度调研.md) |
+| 298 | [`github/gh-aw`](https://github.com/github/gh-aw) | GitHub 官方 Agentic Workflows——Markdown 写自动化编译成 Actions，沙箱+只读+安全输出 | 4,840 | 2026-08-01 | [github-gh-aw-深度调研.md](github-gh-aw-深度调研.md) |
+| 299 | [`bytebot-ai/bytebot`](https://github.com/bytebot-ai/bytebot) | 开源 AI 桌面 Agent——给 AI 一台 Ubuntu 虚拟机，跨应用办公自动化（已归档 2025-09） | 11,069 | 2026-08-01 | [bytebot-ai-bytebot-深度调研.md](bytebot-ai-bytebot-深度调研.md) |
+| 300 | [`MiroMindAI/MiroThinker`](https://github.com/MiroMindAI/MiroThinker) | 深度研究 Agent——interactive scaling + 近因上下文，BrowseComp SOTA，配套训练数据闭环 | 8,361 | 2026-08-01 | [MiroMindAI-MiroThinker-深度调研.md](MiroMindAI-MiroThinker-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（76）
+### AI Agent / 助手框架（79）
+
+- [`chatwoot/chatwoot`](https://github.com/chatwoot/chatwoot) — [chatwoot-chatwoot-深度调研.md](chatwoot-chatwoot-深度调研.md)
+- [`bytebot-ai/bytebot`](https://github.com/bytebot-ai/bytebot) — [bytebot-ai-bytebot-深度调研.md](bytebot-ai-bytebot-深度调研.md)
+- [`MiroMindAI/MiroThinker`](https://github.com/MiroMindAI/MiroThinker) — [MiroMindAI-MiroThinker-深度调研.md](MiroMindAI-MiroThinker-深度调研.md)
 
 - [`AstrBotDevs/AstrBot`](https://github.com/AstrBotDevs/AstrBot) — [AstrBotDevs-AstrBot-深度调研.md](AstrBotDevs-AstrBot-深度调研.md)
 - [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) — [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md)
@@ -409,7 +418,9 @@
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 
 - [`MoonshotAI/Kimi-K3`](https://github.com/MoonshotAI/Kimi-K3) — [MoonshotAI-Kimi-K3-深度调研.md](MoonshotAI-Kimi-K3-深度调研.md)
-### AI 编码 / Skill 技能（22）
+### AI 编码 / Skill 技能（23）
+
+- [`github/gh-aw`](https://github.com/github/gh-aw) — [github-gh-aw-深度调研.md](github-gh-aw-深度调研.md)
 
 - [`blader/humanizer`](https://github.com/blader/humanizer) — [blader-humanizer-深度调研.md](blader-humanizer-深度调研.md)
 - [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) — [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md)
@@ -435,7 +446,9 @@
 
 
 - [`code-yeongyu/oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent) — [code-yeongyu-oh-my-openagent-深度调研.md](code-yeongyu-oh-my-openagent-深度调研.md)
-### RAG / 知识库 / 记忆（11）
+### RAG / 知识库 / 记忆（12）
+
+- [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) — [Tencent-WeKnora-深度调研.md](Tencent-WeKnora-深度调研.md)
 
 - [`1Panel-dev/MaxKBStar`](https://github.com/1Panel-dev/MaxKBStar) — [1Panel-dev-MaxKBStar-深度调研.md](1Panel-dev-MaxKBStar-深度调研.md)
 - [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) — [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md)
