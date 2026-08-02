@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 314                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 316                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -59,6 +59,12 @@ github-project-research/
 |------------|----------|
 | [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) | [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md) |
 | [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) | [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md) |
+
+### 6（1 个）
+
+| owner/repo | 报告文件 |
+|------------|----------|
+| [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) | [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md) |
 
 ### A（23 个）
 
@@ -164,9 +170,10 @@ github-project-research/
 | [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md) |
 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md) |
 
-### G（17 个）
+### G（18 个）
 | owner/repo | 报告文件 |
 |------------|----------|
+| [`gsd-build/get-shit-done`](https://github.com/gsd-build/get-shit-done) | [gsd-build-get-shit-done-深度调研.md](gsd-build-get-shit-done-深度调研.md) |
 | [`github/gh-aw`](https://github.com/github/gh-aw) | [github-gh-aw-深度调研.md](github-gh-aw-深度调研.md) |
 | [`garrytan/gbrain`](https://github.com/garrytan/gbrain) | [garrytan-gbrain-深度调研.md](garrytan-gbrain-深度调研.md) |
 | [`garrytan/gstack`](https://github.com/garrytan/gstack) | [garrytan-gstack-深度调研.md](garrytan-gstack-深度调研.md) |
@@ -443,6 +450,8 @@ github-project-research/
 
 ### AI Agent / 助手框架
 
+- [`gsd-build/get-shit-done`](https://github.com/gsd-build/get-shit-done) — [gsd-build-get-shit-done-深度调研.md](gsd-build-get-shit-done-深度调研.md)
+- [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) — [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md)
 - [`chatwoot/chatwoot`](https://github.com/chatwoot/chatwoot) — [chatwoot-chatwoot-深度调研.md](chatwoot-chatwoot-深度调研.md)
 - [`bytebot-ai/bytebot`](https://github.com/bytebot-ai/bytebot) — [bytebot-ai-bytebot-深度调研.md](bytebot-ai-bytebot-深度调研.md)
 - [`MiroMindAI/MiroThinker`](https://github.com/MiroMindAI/MiroThinker) — [MiroMindAI-MiroThinker-深度调研.md](MiroMindAI-MiroThinker-深度调研.md)

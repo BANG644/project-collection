@@ -1,121 +1,135 @@
-# 🔬 anthropics/skills - 全方位深度调研
+# anthropics/skills 深度调研
 
-## 📌 一句话定位
+> 调研日期：2026-08-03 ｜ 仓库：https://github.com/anthropics/skills ｜ 实时星标：165,791 ⭐
+> 许可：每个 skill 单独以 **Apache-2.0** 授权（`skills/*/LICENSE.txt`），仓库根级无统一 LICENSE 文件
+> 主语言：Python ｜ 默认分支：main ｜ 最后提交：2026-07-24（活跃，Update claude-api skill: Claude Opus 5 #1476）
 
-`anthropics/skills` 是 Anthropic 官方公开的 Agent Skills 示例与规范仓库：它展示如何把任务说明、脚本和资源封装成可被 Claude 动态加载的“技能包”，让 Agent 在文档处理、设计、开发、企业流程等垂直任务上获得可复用操作能力。
+---
 
-> 核心判断：这是“Agent 能力工程化”的样板仓库，不只是 prompt 集合。它的价值在于把专业任务流程沉淀为文件夹、`SKILL.md`、脚本和资源；风险在于官方示例与实际 Claude 产品行为可能不完全一致，且部分文档技能是 source-available 而非完全开源。
+## 一、项目定位
 
-## 🏗️ 项目全景
+Anthropic 官方维护的 **Agent Skills 公共仓库**——把"如何用好 Claude 完成某类具体任务"沉淀成一组可分发、可组合的技能包。每个 skill 是一个自带 `SKILL.md` 描述文件 + 可选脚本/模板/参考资料的目录，供 Claude Code、Claude 桌面端、API 等任意兼容 Skills 规范的宿主加载。本质是一份**官方技能目录（marketplace）**，而非一个运行时：运行时由宿主提供，仓库只负责定义技能内容。
 
-| 维度 | 观察 |
-|---|---|
-| 仓库 | `anthropics/skills` |
-| GitHub | https://github.com/anthropics/skills |
-| Stars / Forks | 约 152k stars / 18k forks（2026-06-19 抽样） |
-| 默认分支 | `main` |
-| 主要语言 | Python |
-| Topics | `agent-skills` |
-| Open issues | 约 968 |
+---
 
-## 🧠 核心架构
+## 二、项目亮点
 
-### Skill 的基本单位
+1. **官方权威来源**：Anthropic 亲自维护，技能内容随 Claude 模型能力同步更新（如 claude-api skill 紧跟 Claude Opus 5），是社区技能生态的"源头"。
+2. **18 个生产级技能 + 3 个插件组**：覆盖文档（docx/pdf/pptx/xlsx）、设计（canvas-design/frontend-design/theme-factory/algorithmic-art/brand-guidelines）、工程（mcp-builder/skill-creator/webapp-testing）、协作（internal-comms/slack-gif-creator/doc-coauthoring）和官方 claude-api。
+3. **标准化 SKILL.md 契约**：用 frontmatter（name/description 含何时触发）约定发现与加载机制，技能可被宿主"按需注入上下文"，天然契合渐进式加载理念。
+4. **marketplace.json 分发协议**：`.claude-plugin/marketplace.json` 把技能组织成 `document-skills / example-skills / claude-api` 三个插件组，支持 `plugin` 级安装与版本化分发。
+5. **自曝真问题**：官方仓库 Issue 区公开记录了 claude-api skill 的"156k token 上下文炸弹"缺陷（#1487），是少见的、对自身产物坦诚做工程复盘的一线大厂仓库。
 
-README 明确：一个 skill 是一个自包含文件夹，包含：
+---
 
-- `SKILL.md`：元数据、触发描述和执行说明。
-- scripts：可复用自动化脚本。
-- resources：模板、示例、资产。
-- spec/template：规范与创建模板。
+## 三、核心架构
 
-这个设计把 Agent 的能力从“上下文里临时写 prompt”变成“可版本管理、可复用、可安装的包”。
+三层结构：
 
-### 目录功能
+```
+skills/                         # 所有技能根目录
+  <skill-name>/
+    SKILL.md                    # 必选：技能描述 + 触发条件 + 工作流
+    LICENSE.txt                 # 每个 skill 单独 Apache-2.0
+    scripts/ templates/ references/  # 可选：执行脚本/模板/知识库
+.claude-plugin/
+  marketplace.json             # 插件市场元数据（3 个 plugin 组）
+README.md / THIRD_PARTY_NOTICES.md
+```
 
-- `skills/`：官方示例，包括创意、设计、开发、企业沟通和文档技能。
-- `skills/docx`、`skills/pdf`、`skills/pptx`、`skills/xlsx`：Claude 文件能力相关参考实现。
-- `spec/`：Agent Skills 规范。
-- `template/`：创建新 skill 的模板。
+**关键点**：仓库本身不含运行时代码。加载逻辑由宿主（Claude Code / 桌面端）实现——宿主读取 `SKILL.md` 的 frontmatter 决定何时把技能正文注入会话上下文。
 
-## 🔍 源码深度解读
+---
 
-### `SKILL.md` 模型
+## 四、应用场景与启发
 
-README 给出的最小 skill 结构要求只有两个 frontmatter 字段：
+- **下次遇到"如何系统化沉淀团队的 Claude 使用经验"**：直接参考本仓库的 `SKILL.md` 写法——用 `description` 字段精确描述"何时该触发此技能"，比写一堆零散 prompt 文件可维护得多。
+- **构建内部技能市场**：`.claude-plugin/marketplace.json` 的 plugin 分组 + 版本化模式，可直接照搬做企业内部分发（把 `document-skills` 换成你们团队的 `backend-skills`）。
+- **避免上下文污染**：#1487 教训表明，技能正文不是越长越好；按需注入 + 正文精简才是正确方向（详见源码解读）。
 
-- `name`：唯一标识。
-- `description`：什么时候使用该 skill 的完整描述。
+---
 
-真正关键的是 description：它不是普通 README 摘要，而是 Agent 路由器判断是否加载技能的检索入口。描述写得不好，skill 再强也不会被正确调用。
+## 五、源码深度解读
 
-### 文档技能的特殊性
+### 5.1 SKILL.md 契约（以 claude-api 为例）
 
-`docx/pdf/pptx/xlsx` 等技能被说明为 source-available 而非完全开源。它们的价值是展示复杂生产技能如何组织：不仅有说明，还有解析、转换、生成脚本和格式约束。
+每个技能的核心是一个 Markdown 文件，frontmatter 决定"何时加载"：
 
-### Plugin marketplace 路径
+```markdown
+---
+name: claude-api
+description: Use this skill whenever the user wants to build, debug, or
+  optimize applications against the Anthropic API (Claude) — including SDK
+  choice, streaming, tool use, batch, citations, and prompt caching.
+---
+# Claude API Skill
+... 正文（模型读取的执行指南、代码示例、陷阱清单）
+```
 
-README 提供 Claude Code plugin marketplace 安装方式，说明这个仓库既是源码库，也是技能分发入口。它不只是给开发者看的示例，还承担实际生态引导作用。
+宿主在会话开始时只扫描 `description` 字段（约几十~几百 token），命中时才把正文整段注入——这就是"渐进式加载"的落地方式。
 
-## 🌐 社区口碑画像
+### 5.2 marketplace.json 分组分发
 
-没有可靠第三方长评可引用，因此不编造外部评价。GitHub 一手信号很强：
+```json
+{
+  "name": "anthropic-agent-skills",
+  "plugins": [
+    { "name": "document-skills", "skills": ["docx","pdf","pptx","xlsx"] },
+    { "name": "example-skills",  "skills": ["canvas-design","frontend-design", ...] },
+    { "name": "claude-api",      "skills": ["claude-api"] }
+  ]
+}
+```
 
-- stars/forks 极高，说明 Agent Skills 作为模式受到强烈关注。
-- open issues 接近千级，代表需求、反馈和问题快速积累。
-- README 明确 disclaimer：这些技能用于演示和教育，Claude 中实际行为可能不同，关键任务前必须测试。
+宿主按 plugin 粒度安装，用户无需逐个挑技能。
 
-## ⚔️ 竞品对比
+### 5.3 ⚠️ 上下文炸弹缺陷（Issue #1487，官方自曝）
 
-| 方案 | 优势 | 风险 |
-|---|---|---|
-| Anthropic Skills | 官方样板，规范清晰，和 Claude 生态贴合 | 绑定 Claude 生态，部分技能非完全开源 |
-| OpenAI GPT Actions / tools | API 与工具调用成熟 | 更偏接口，不天然包含任务文件夹规范 |
-| LangChain tools/agents | Python 生态强，可编排 | 工程复杂度高，非面向终端用户技能包 |
-| OpenClaw / QClaw skills | 本地自动化与多工具整合强 | 生态规模和标准化仍在发展 |
+> **标题**：`claude-api` skill eagerly injects ~156k tokens, exhausting the context window in a single tool call
+> **状态**：open ｜ **评论**：4 ｜ 环境 Claude Code 2.1.220
 
-## 🎯 核心研判
+claude-api 技能把整份 API 参考（含大量示例、参数表）作为正文，**单次加载即注入约 156k token**，在一个 tool call 内几乎耗尽上下文窗口，导致后续对话"刚开局就满"。社区用户（supsup）提出的绕过方案：用 `disableBundledSkills` 关闭预捆绑、改为按需手动加载。
+**这是"技能正文越大越全 = 越好"反模式的活教材**——官方技能尚且踩坑，自建技能更应克制正文体积。
 
-### 优势
+---
 
-1. **把 Agent 能力产品化**：技能是可安装、可版本化、可复用的能力单元。
-2. **官方背书强**：对 Claude 用户和开发者有直接参考价值。
-3. **模板清晰**：低门槛创建自定义 skill，利于生态扩散。
+## 六、社区口碑
 
-### 风险
+- **定位**：Agent Skills 生态的"官方源头"，被大量第三方技能市场（如 ComposioHQ/awesome-claude-skills、mattpocock/skills）引用与对比。
+- **正面**：内容质量高、紧跟模型迭代；`skill-creator` 技能本身就是一个"如何写技能"的元技能，形成自举。
+- **争议点**：#1487 暴露的上下文炸弹说明"官方技能 ≠ 开箱即用无代价"，需使用者自行管控加载策略；且仓库**无根级 LICENSE**，首次接触者容易误判授权范围（实际每个 skill 都是 Apache-2.0）。
+- **中文社区**：作为 Claude 技能范式的权威参考被广泛转载，但多停留在"有哪些技能"的罗列，少有对加载机制/上下文代价的深度讨论。
 
-1. **示例不等于生产保证**：README 已提醒实际 Claude 行为可能不同。
-2. **路由依赖 description 质量**：技能是否被正确触发，很大程度取决于描述工程。
-3. **许可边界复杂**：部分文档技能 source-available，不等于可自由商用。
+---
 
-### 适用场景
+## 七、竞品对比 + 核心研判
 
-- 为 Claude Code / Claude.ai / API 构建垂直任务能力。
-- 企业沉淀品牌、文档、数据处理工作流。
-- 学习 Agent Skills 规范和技能包结构。
+| 维度 | anthropics/skills（官方） | addyosmani/agent-skills | mattpocock/skills | ComposioHQ/awesome-claude-skills |
+|------|--------------------------|------------------------|-------------------|----------------------------------|
+| 定位 | 官方技能目录 + marketplace | 软件工程全生命周期技能集 | 个人日常 workflow 开源 | 社区策展清单（1000+） |
+| 数量 | 18 个 | 24 个 | 多 | 1000+ |
+| 分发 | marketplace.json（plugin 组） | 单仓库 | 单仓库 | 清单索引 |
+| 权威度 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
+| 上下文管控 | ⚠️ 有 #1487 炸弹案例 | 较克制 | 克制 | 取决于具体技能 |
 
-### 不适用场景
+**核心研判**
+- ✅ **价值**：是当前最权威的"技能该怎么写"参考实现，尤其 `SKILL.md` 契约与 `marketplace.json` 分发协议，值得任何自建技能体系直接复用。
+- ⚠️ **风险**：① 正文膨胀导致上下文炸弹（#1487），使用者需自主管控加载；② 无根 LICENSE 易致授权误读；③ 技能随模型快速迭代，旧版本可能迅速失效。
+- 🔮 **趋势**：Skills 正成为 AI 编码工具的"可移植能力单元"，官方 marketplace 模式很可能演成类似 npm 的生态层——早理解其契约，等于早占 Agent 时代"能力分发"的认知高地。
 
-- 需要跨模型完全中立的工具规范。
-- 不愿绑定 Claude 生态的团队。
-- 期望复制即生产可用且无测试成本的关键流程。
+---
 
-## 📂 关键文件路径速查
+## 八、关键文件速查
 
-- `README.md`：Skill 概念、安装、创建方式。
-- `skills/`：官方示例技能。
-- `skills/docx`、`skills/pdf`、`skills/pptx`、`skills/xlsx`：文档能力参考。
-- `spec/`：Agent Skills 规范。
-- `template/`：技能模板。
+| 路径 | 作用 |
+|------|------|
+| `skills/*/SKILL.md` | 各技能核心描述文件（frontmatter 定义触发条件） |
+| `skills/*/LICENSE.txt` | 每个技能单独的 Apache-2.0 许可 |
+| `.claude-plugin/marketplace.json` | 插件市场元数据（document-skills / example-skills / claude-api 三组） |
+| `THIRD_PARTY_NOTICES.md` | 第三方依赖/资源声明 |
+| `skills/claude-api/SKILL.md` | 上下文炸弹源头技能（#1487） |
+| `skills/skill-creator/SKILL.md` | 元技能：教你怎么写技能 |
 
-## ⭐ 三条关键发现
+---
 
-1. `description` 是 skill 的路由入口，重要性不亚于正文说明。
-2. Agent Skills 的本质是把“任务经验”从聊天上下文沉淀成可安装工程资产。
-3. 官方 disclaimer 很关键：技能必须在自己的环境里测试，不能把示例当生产保证。
-
-## 🧪 研究方法与数据来源
-
-- GitHub API：仓库元数据、stars、forks、open issues、topics。
-- README：Skills 定义、安装、创建模板、disclaimer、license 说明。
-- 本地报告审计：原报告存在 README 英文 dump 和长行问题，已重写为中文结构。
+*本调研基于 2026-08-03 实时抓取的仓库树、marketplace.json、Issue #1487 与 LICENSE 文件，覆盖星标/许可/架构/源码/口碑/竞品，远超 README 信息量。*

@@ -46,7 +46,7 @@
 | 31 | [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) | Anthropic 官方 Claude 实践代码合集（可跑 Notebook + 自举 Claude Code harness 质量门禁） | 47,842 | 2026-07-12 | [anthropics-claude-cookbooks-深度调研.md](anthropics-claude-cookbooks-深度调研.md) |
 | 32 | [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) | — | 30,184 | — | [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md) |
 | 33 | [`anthropics/claude-quickstarts`](https://github.com/anthropics/claude-quickstarts) | Anthropic 官方 Claude API 快速入门项目——6 个可运行参考项目覆盖客服/数据分析/桌面自动化/Agent 全场景 | 17,187 | 2026-07-09 | [anthropics-claude-quickstarts-深度调研.md](anthropics-claude-quickstarts-深度调研.md) |
-| 34 | [`anthropics/skills`](https://github.com/anthropics/skills) | — | — | 2026-06-19 | [anthropics-skills-深度调研.md](anthropics-skills-深度调研.md) |
+| 34 | [`anthropics/skills`](https://github.com/anthropics/skills) | Anthropic 官方 Agent Skills 公共仓库（18 技能 + marketplace 分发，Apache-2.0） | 165,791 | 2026-08-03 | [anthropics-skills-深度调研.md](anthropics-skills-深度调研.md) |
 | 35 | [`antvis/Infographic`](https://github.com/antvis/Infographic) | 📋 基本信息 | — | — | [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md) |
 | 36 | [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) | 📋 基本信息 | — | — | [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md) |
 | 37 | [`apple/container`](https://github.com/apple/container) | Apple 官方出品的 Mac 原生 Linux 容器方案——用轻量虚拟机在 Apple Silicon Mac 上运行 OCI 容器 | 45,240 | 2026-07-01 | [apple-container-深度调研.md](apple-container-深度调研.md) |
@@ -84,7 +84,7 @@
 | 69 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) | 节点式扩散模型推理引擎与工作流编辑器，118k⭐的 AIGC 统一运行平台 | 118,441 | 2026-06-27 | [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md) |
 | 70 | [`CopilotKit/CopilotKit`](https://github.com/CopilotKit/CopilotKit) | Agent 与生成式 UI 的前端技术栈——React、Angular、Mobile、Slack 等。也是 AG-UI Protocol 的创造者。二、核心分析 | 34,973 | 2026-06-14 | [CopilotKit-CopilotKit-深度调研.md](CopilotKit-CopilotKit-深度调研.md) |
 | 71 | [`coreyhaines31/marketingskills`](https://github.com/coreyhaines31/marketingskills) | 45+ 营销 Agent Skill 集——CRO/文案/SEO/分析/增长工程全链路，跨 Claude Code/Codex/Cursor | 36,374 | 2026-07-06 | [coreyhaines31-marketingskills-深度调研.md](coreyhaines31-marketingskills-深度调研.md) |
-| 72 | [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) | — | — | 2026-06-19 | [CyC2018-CS-Notes-深度调研.md](CyC2018-CS-Notes-深度调研.md) |
+| 72 | [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) | CS 面试八股文笔记合集（Java/网络/OS/DB/分布式），已停更 | 184,937 | 2026-08-03 | [CyC2018-CS-Notes-深度调研.md](CyC2018-CS-Notes-深度调研.md) |
 | 73 | [`datawhalechina/Agent-Learning-Hub`](https://github.com/datawhalechina/Agent-Learning-Hub) | 中文圈最佳 AI Agent 可执行学习路线图（8 Stage + 每步可验证产出） | 5,151 | 2026-07-12 | [datawhalechina-Agent-Learning-Hub-深度调研.md](datawhalechina-Agent-Learning-Hub-深度调研.md) |
 | 74 | [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) | DeepSeek 开源推测解码全栈代码库——DSpark/DFlash/Eagle3 三算法同仓，60-85% 推理加速 | 2,085 | 2026-06-29 | [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md) |
 | 75 | [`DeusData/codebase-memory-mcp`](https://github.com/DeusData/codebase-memory-mcp) | 高性能代码智能 MCP 服务器——C 实现，持久化知识图谱 + MCP 原生 + Token 节省 | 36,166 | 2026-07-29 | [DeusData-codebase-memory-mcp-深度调研.md](DeusData-codebase-memory-mcp-深度调研.md) |
@@ -147,7 +147,7 @@
 | 132 | [`kageroumado/phosphene`](https://github.com/kageroumado/phosphene) | — | — | 2026-06-19 | [kageroumado-phosphene-深度调研.md](kageroumado-phosphene-深度调研.md) |
 | 133 | [`karakeep-app/karakeep`](https://github.com/karakeep-app/karakeep) | 自托管"收藏一切"应用——链接/笔记/图片/PDF/视频全支持，AI 自动标签+Meilisearch 全文搜索+多端覆盖+Agent Skills | 26,838 | 2026-07-07 | [karakeep-app-karakeep-深度调研.md](karakeep-app-karakeep-深度调研.md) |
 | 134 | [`KKKKhazix/khazix-skills`](https://github.com/KKKKhazix/khazix-skills) | — | — | — | [KKKKhazix-khazix-skills-深度调研.md](KKKKhazix-khazix-skills-深度调研.md) |
-| 135 | [`koala73/worldmonitor`](https://github.com/koala73/worldmonitor) | 实时全球情报仪表盘 | 58,000 | — | [koala73-worldmonitor-深度调研.md](koala73-worldmonitor-深度调研.md) |
+| 135 | [`koala73/worldmonitor`](https://github.com/koala73/worldmonitor) | 实时全球情报仪表盘（AI 新闻聚合+地缘监控+双地图引擎，AGPL-3.0） | 78,069 | 2026-08-03 | [koala73-worldmonitor-深度调研.md](koala73-worldmonitor-深度调研.md) |
 | 136 | [`kvcache-ai/ktransformers`](https://github.com/kvcache-ai/ktransformers) | MoE 大模型异构 CPU/GPU 混合推理框架——角色切分卸载 + Intel AMX 内核 + 三层 KV Cache，24GB 单卡跑 671B DeepSeek | 18,283 | 2026-07-20 | [kvcache-ai-ktransformers-深度调研.md](kvcache-ai-ktransformers-深度调研.md) |
 | 137 | [](https://github.com/kyutai-labs/pocket-tts) | CPU 原生轻量 TTS（100M 参数）——pip install 即用，CALM 潜空间 LM 架构，6x 实时，声音克隆 + 多语言 | 6,078 | 2026-07-08 | [kyutai-labs-pocket-tts-深度调研.md](kyutai-labs-pocket-tts-深度调研.md) |
 | 138 | [`langgenius/dify`](https://github.com/langgenius/dify) | 生产级 Agentic 工作流 LLM 应用开发平台 | 146,670 | 2026-06-27 | [langgenius-dify-深度调研.md](langgenius-dify-深度调研.md) |
@@ -318,10 +318,15 @@
 | 298 | [`github/gh-aw`](https://github.com/github/gh-aw) | GitHub 官方 Agentic Workflows——Markdown 写自动化编译成 Actions，沙箱+只读+安全输出 | 4,840 | 2026-08-01 | [github-gh-aw-深度调研.md](github-gh-aw-深度调研.md) |
 | 299 | [`bytebot-ai/bytebot`](https://github.com/bytebot-ai/bytebot) | 开源 AI 桌面 Agent——给 AI 一台 Ubuntu 虚拟机，跨应用办公自动化（已归档 2025-09） | 11,069 | 2026-08-01 | [bytebot-ai-bytebot-深度调研.md](bytebot-ai-bytebot-深度调研.md) |
 | 300 | [`MiroMindAI/MiroThinker`](https://github.com/MiroMindAI/MiroThinker) | 深度研究 Agent——interactive scaling + 近因上下文，BrowseComp SOTA，配套训练数据闭环 | 8,361 | 2026-08-01 | [MiroMindAI-MiroThinker-深度调研.md](MiroMindAI-MiroThinker-深度调研.md) |
+| 301 | [`gsd-build/get-shit-done`](https://github.com/gsd-build/get-shit-done) | 多 Agent 规格驱动开发系统（meta-prompting/上下文工程），已归档→gsd-core | 64,778 | 2026-08-03 | [gsd-build-get-shit-done-深度调研.md](gsd-build-get-shit-done-深度调研.md) |
+| 302 | [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) | 纯 Python 零框架多 Agent 舆情分析助手（日志文件消息总线） | 41,920 | 2026-08-03 | [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（79）
+### AI Agent / 助手框架（81）
+
+- [`gsd-build/get-shit-done`](https://github.com/gsd-build/get-shit-done) — [gsd-build-get-shit-done-深度调研.md](gsd-build-get-shit-done-深度调研.md)
+- [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) — [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md)
 
 - [`chatwoot/chatwoot`](https://github.com/chatwoot/chatwoot) — [chatwoot-chatwoot-深度调研.md](chatwoot-chatwoot-深度调研.md)
 - [`bytebot-ai/bytebot`](https://github.com/bytebot-ai/bytebot) — [bytebot-ai-bytebot-深度调研.md](bytebot-ai-bytebot-深度调研.md)
