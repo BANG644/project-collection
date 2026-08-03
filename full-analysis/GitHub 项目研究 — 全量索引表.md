@@ -44,7 +44,7 @@
 | 29 | [`amElnagdy/guard-skills`](https://github.com/amElnagdy/guard-skills) | 深度调研报告： | 467 | 2026-06-18 | [amElnagdy-guard-skills-深度调研.md](amElnagdy-guard-skills-深度调研.md) |
 | 30 | [`anomalyco/opencode`](https://github.com/anomalyco/opencode) | 180k⭐ 开源 AI 编码 Agent——终端 TUI+双 Agent+LSP 自修正+75+模型+权限按命令级别 | 180,267 | 2026-06-29 | [anomalyco-opencode-深度调研.md](anomalyco-opencode-深度调研.md) |
 | 31 | [`anthropics/claude-cookbooks`](https://github.com/anthropics/claude-cookbooks) | Anthropic 官方 Claude 实践代码合集（可跑 Notebook + 自举 Claude Code harness 质量门禁） | 47,842 | 2026-07-12 | [anthropics-claude-cookbooks-深度调研.md](anthropics-claude-cookbooks-深度调研.md) |
-| 32 | [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) | — | 30,184 | — | [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md) |
+| 32 | [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) | Anthropic 官方 Claude 插件治理仓库——仅 8% 为本地插件，外部 PR 自动关闭、policy/prompt.md 跨服务凭证判定、AI 审 Claude 插件 | 33,005 | 2026-08-03 | [anthropics-claude-plugins-official-深度调研.md](anthropics-claude-plugins-official-深度调研.md) |
 | 33 | [`anthropics/claude-quickstarts`](https://github.com/anthropics/claude-quickstarts) | Anthropic 官方 Claude API 快速入门项目——6 个可运行参考项目覆盖客服/数据分析/桌面自动化/Agent 全场景 | 17,187 | 2026-07-09 | [anthropics-claude-quickstarts-深度调研.md](anthropics-claude-quickstarts-深度调研.md) |
 | 34 | [`anthropics/skills`](https://github.com/anthropics/skills) | Anthropic 官方 Agent Skills 公共仓库（18 技能 + marketplace 分发，Apache-2.0） | 165,791 | 2026-08-03 | [anthropics-skills-深度调研.md](anthropics-skills-深度调研.md) |
 | 35 | [`antvis/Infographic`](https://github.com/antvis/Infographic) | 📋 基本信息 | — | — | [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md) |
@@ -74,7 +74,6 @@
 | 59 | [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) | 字节开源桌面端 GUI 计算机使用 Agent（CUA 模型 + 原生 GUI 操作） | 38,024 | 2026-07-17 | [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md) |
 | 60 | [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) | 首个开源 Agent-First 视频制作系统，3 层知识架构+52 工具+12 pipeline+预算三档治理+CHAI 评审 | 24,205 | 2026-06-27 | [calesthio-OpenMontage-深度调研.md](calesthio-OpenMontage-深度调研.md) |
 | 61 | [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) | My Claude Code Setup | — | 2026-06-17 | [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md) |
-| 62 | [`chopratejas/headroom`](https://github.com/chopratejas/headroom) | AI Agent 上下文压缩层 | 38,636 | 2026-06-20 | [chopratejas-headroom-深度调研.md](chopratejas-headroom-深度调研.md) |
 | 63 | [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Google 官方 Chrome DevTools MCP——性能 trace/堆快照/Lighthouse 变 Agent 原生能力，puppeteer+DevTools 双引擎 | 47,976 | 2026-07-31 | [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md) |
 | 64 | [`clash-verge-rev/clash-verge-rev`](https://github.com/clash-verge-rev/clash-verge-rev) | — | — | — | [clash-verge-rev-clash-verge-rev-深度调研.md](clash-verge-rev-clash-verge-rev-深度调研.md) |
 | 65 | [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) | — | — | — | [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md) |
@@ -108,7 +107,7 @@
 | 93 | [`firecrawl/firecrawl`](https://github.com/firecrawl/firecrawl) | Firecrawl — AI Agent 联网网关（search/scrape/interact/parse/monitor 一体） | 140,338 | 2026-06-28 | [firecrawl-firecrawl-深度调研.md](firecrawl-firecrawl-深度调研.md) |
 | 94 | [`Forsy-AI/agent-apprenticeship`](https://github.com/Forsy-AI/agent-apprenticeship) | — | 679 | 2026-06-23 | [Forsy-AI-agent-apprenticeship-深度调研.md](Forsy-AI-agent-apprenticeship-深度调研.md) |
 | 95 | [`garrytan/gbrain`](https://github.com/garrytan/gbrain) | — | 22,854 | 2026-04-05 | [garrytan-gbrain-深度调研.md](garrytan-gbrain-深度调研.md) |
-| 96 | [`garrytan/gstack`](https://github.com/garrytan/gstack) | — | — | — | [garrytan-gstack-深度调研.md](garrytan-gstack-深度调研.md) |
+| 96 | [`garrytan/gstack`](https://github.com/garrytan/gstack) | Agent 基础设施「浏览器化」——browse 浏览器常驻 + 六层 L1-L6 提示注入防御 + ETHOS.md Boil the Ocean 方法论 + 多 harness 宿主 + iOS 工作流 | 126,088 | 2026-07-15 | [garrytan-gstack-深度调研.md](garrytan-gstack-深度调研.md) |
 | 97 | [`gastownhall/gastown`](https://github.com/gastownhall/gastown) | Steve Yegge 多 Agent 工作区管理器——Mayor/Deacon/Polecat 六角色 + Git 原生状态持久化 | 16,342 | 2026-07-06 | [gastownhall-gastown-深度调研.md](gastownhall-gastown-深度调研.md) |
 | 98 | [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) | C/C++ LLM 推理框架，GGML 张量库 + GGUF 格式标准 | 98,000+ | 2026-06-27 | [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md) |
 | 99 | [`github/copilot-sdk`](https://github.com/github/copilot-sdk) | 把 Copilot CLI 生产级 Agent 运行时做成 6 语言可嵌入 SDK（JSON-RPC + BYOK） | 9,605 | 2026-07-17 | [github-copilot-sdk-深度调研.md](github-copilot-sdk-深度调研.md) |
@@ -178,7 +177,7 @@
 | 163 | [`motion-canvas/motion-canvas`](https://github.com/motion-canvas/motion-canvas) | — | 18.6 | 2026-06-10 | [motion-canvas-motion-canvas-深度调研.md](motion-canvas-motion-canvas-深度调研.md) |
 | 164 | [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | — | — | — | [msitarzewski-agency-agents-深度调研.md](msitarzewski-agency-agents-深度调研.md) |
 | 165 | [`mukul975/Anthropic-Cybersecurity-Skills`](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | AI Agent 网络安全技能库 | 4,200 | 2026-04-09 | [mukul975-Anthropic-Cybersecurity-Skills-深度调研.md](mukul975-Anthropic-Cybersecurity-Skills-深度调研.md) |
-| 166 | [`multica-ai/multica`](https://github.com/multica-ai/multica) | 一、项目定位 | — | 2026-06-15 | [multica-ai-multica-深度调研.md](multica-ai-multica-深度调研.md) |
+| 166 | [`multica-ai/multica`](https://github.com/multica-ai/multica) | 自托管「托管式 Agent 平台」——Agent 当数字同事（Issue→Task→Commit），毒化会话检测+默认关 Codex 多智能体，15+ harness 自动适配 | 43,522 | 2026-08-03 | [multica-ai-multica-深度调研.md](multica-ai-multica-深度调研.md) |
 | 167 | [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill) | 「搜人不搜编辑」Agent 情报引擎——14 平台并行 + 真实互动量/Polymarket 赔率排序，50+ Harness 可装 | 55,428 | 2026-07-31 | [mvanhorn-last30days-skill-深度调研.md](mvanhorn-last30days-skill-深度调研.md) |
 | 168 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | Fair-code 工作流自动化平台，400+集成+Agent SDK+AI 工作流生成器 | 194,179 | 2026-06-27 | [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md) |
 | 169 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | Fair-code AI 原生工作流自动化平台——开源 Zapier + AI Agent 编排层，400+ 集成，视觉+代码双模 | 195,555 | 2026-07-08 | [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md) |
@@ -262,7 +261,7 @@
 | 247 | [`unclecode/crawl4ai`](https://github.com/unclecode/crawl4ai) | 面向 LLM 的开源网页爬虫与抓取工具，将网页转化为干净的 Markdown，专为 RAG、AI Agent 和数据管道设计。📖 项目定位与核心功能设计理念Cr | 51 | 2026-06-13 | [unclecode-crawl4ai-深度调研.md](unclecode-crawl4ai-深度调研.md) |
 | 248 | [`usestrix/strix`](https://github.com/usestrix/strix) | AI Agent 驱动的渗透测试框架——Agent 图编排+真实 PoC 验证+自动修复，把安全测试从"扫描器报疑似"推进到"每条漏洞都能复现" | 28,023 | 2026-07-01 | [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md) |
 | 249 | [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) | — | — | — | [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md) |
-| 250 | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | 一、项目定位 | — | 2026-06-15 | [vercel-labs-agent-browser-深度调研.md](vercel-labs-agent-browser-深度调研.md) |
+| 250 | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | Vercel 原生 Rust 浏览器自动化 CLI——守护进程 + CDP 驱动 Chrome，@eN 引用快照，MCP 同源委托，多引擎（CDP/WebDriver） | 39,846 | 2026-08-02 | [vercel-labs-agent-browser-深度调研.md](vercel-labs-agent-browser-深度调研.md) |
 | 251 | [`vercel/eve`](https://github.com/vercel/eve) | Vercel 文件系统优先的持久化 Agent 框架——FS 配置+原生 HITL+多频道抽象，Apache-2.0 Beta | 2,792 | 2026-06-28 | [vercel-eve-深度调研.md](vercel-eve-深度调研.md) |
 | 252 | [`viitor-ai/viitor-voice-nar`](https://github.com/viitor-ai/viitor-voice-nar) | 非自回归 TTS 语音克隆 + 局部编辑（DualCodec 25Hz + gRPC v2 微服务拆分），⚠️ 5 大红旗疑似刷星 | 240 | 2026-07-03 | [viitor-ai-viitor-voice-nar-深度调研.md](viitor-ai-viitor-voice-nar-深度调研.md) |
 | 253 | [`virattt/ai-hedge-fund`](https://github.com/virattt/ai-hedge-fund) | "投资大师即 Agent"的多智能体对冲基金模拟——LangGraph 编排 + React Flow 可视化，纯教育不交易 | 61,797 | 2026-07-15 | [virattt-ai-hedge-fund-深度调研.md](virattt-ai-hedge-fund-深度调研.md) |
@@ -350,7 +349,6 @@
 - [`anthropics/skills`](https://github.com/anthropics/skills) — [anthropics-skills-深度调研.md](anthropics-skills-深度调研.md)
 - [`BANG644/ai-workflow-optimizer`](https://github.com/BANG644/ai-workflow-optimizer) — [BANG644-ai-workflow-optimizer-深度调研.md](BANG644-ai-workflow-optimizer-深度调研.md)
 - [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) — [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md)
-- [`chopratejas/headroom`](https://github.com/chopratejas/headroom) — [chopratejas-headroom-深度调研.md](chopratejas-headroom-深度调研.md)
 - [`cloudflare/security-audit-skill`](https://github.com/cloudflare/security-audit-skill) — [cloudflare-security-audit-skill-深度调研.md](cloudflare-security-audit-skill-深度调研.md)
 - [`CopilotKit/CopilotKit`](https://github.com/CopilotKit/CopilotKit) — [CopilotKit-CopilotKit-深度调研.md](CopilotKit-CopilotKit-深度调研.md)
 - [`coreyhaines31/marketingskills`](https://github.com/coreyhaines31/marketingskills) — [coreyhaines31-marketingskills-深度调研.md](coreyhaines31-marketingskills-深度调研.md)
