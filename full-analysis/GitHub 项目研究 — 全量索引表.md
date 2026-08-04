@@ -27,7 +27,7 @@
 | 12 | [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) | — | — | — | [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md) |
 | 13 | [`aaif-goose/goose`](https://github.com/aaif-goose/goose) | — | — | — | [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md) |
 | 14 | [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) | — | — | 2026-06-19 | [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md) |
-| 15 | [`accomplish-ai/coworker`](https://github.com/accomplish-ai/coworker) | — | — | 2026-06-19 | [accomplish-ai-coworker-深度调研.md](accomplish-ai-coworker-深度调研.md) |
+| 15 | [`accomplish-ai/coworker`](https://github.com/accomplish-ai/coworker) | Coworker — 本地优先开源 AI 同事（daemon+桌面+Web 三进程，MCP 能力层） | 10,938 | 2026-08-05 | [accomplish-ai-coworker-深度调研.md](accomplish-ai-coworker-深度调研.md) |
 | 16 | [`ace-trump-tech/DeltaForce-OBS-Locker`](https://github.com/ace-trump-tech/DeltaForce-OBS-Locker) | — | — | — | [ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md](ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md) |
 | 17 | [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) | 把完整软件生命周期编码成 Agent 技能（24 技能 + 反合理化 + 三层 eval） | 76,686 | 2026-07-11 | [addyosmani-agent-skills-深度调研.md](addyosmani-agent-skills-深度调研.md) |
 | 18 |[`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) | 本地大模型「尺码推荐器」——硬件四维打分 + 众包实测基准网络，Rust TUI/CLI | 30,094 | 2026-07-22 | [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md) |
@@ -190,7 +190,7 @@
 | 176 | [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | Nous Research 自我进化型 AI Agent 框架——闭环学习+12消息平台+6部署后端+五层记忆，205k⭐ | 205,068 | 2026-06-29 | [NousResearch-hermes-agent-深度调研.md](NousResearch-hermes-agent-深度调研.md) |
 | 177 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) | Together AI 反 AI 味设计技能——57 道 slop 门 + 6 轴自批判 + 结构多样，拒绝模板味 | 4,963 | 2026-07-14 | [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md) |
 | 178 | [`NVIDIA/cosmos`](https://github.com/NVIDIA/cosmos) | NVIDIA 开源的全模态世界模型平台——MoT 双塔架构统一视觉推理、世界生成与动作预测，为 Physical AI 提供基础模型 | 10,733 | 2026-07-01 | [NVIDIA-cosmos-深度调研.md](NVIDIA-cosmos-深度调研.md) |
-| 179 | [`NVIDIA/SkillSpector`](https://github.com/NVIDIA/SkillSpector) | SkillSpector — AI Agent Skills Security Scanner (NVIDIA) | 8,602 | 2026-06-21 | [NVIDIA-SkillSpector-深度调研.md](NVIDIA-SkillSpector-深度调研.md) |
+| 179 | [`NVIDIA/SkillSpector`](https://github.com/NVIDIA/SkillSpector) | SkillSpector — AI Agent Skills 安全扫描器（LangGraph 编排 + 静态/LLM 两阶段） | 14,164 | 2026-08-05 | [NVIDIA-SkillSpector-深度调研.md](NVIDIA-SkillSpector-深度调研.md) |
 | 180 | [`obra/superpowers`](https://github.com/obra/superpowers) | Agent 技能框架 & 软件开发方法论——子 Agent 驱动开发 + worktree 隔离，可放手长跑 | 251,668 | 2026-07-11 | [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md) |
 | 181 | [`odysseus-dev/odysseus`](https://github.com/odysseus-dev/odysseus) | 自托管 AI 工作空间操作系统——chat/agents/研究/文档/邮件/笔记/日历/本地模型九域合一，AGPL-3.0 + 硬件感知 Cookbook | 82,883 | 2026-07-16 | [odysseus-dev-odysseus-深度调研.md](odysseus-dev-odysseus-深度调研.md) |
 | 182 | [`ogulcancelik/herdr`](https://github.com/ogulcancelik/herdr) | 终端原生 AI Agent 多路复用器，状态感知侧边栏+Socket 编排 API+Rust 单二进制 | 9,535 | 2026-07-02 | [ogulcancelik-herdr-深度调研.md](ogulcancelik-herdr-深度调研.md) |
@@ -319,10 +319,15 @@
 | 300 | [`MiroMindAI/MiroThinker`](https://github.com/MiroMindAI/MiroThinker) | 深度研究 Agent——interactive scaling + 近因上下文，BrowseComp SOTA，配套训练数据闭环 | 8,361 | 2026-08-01 | [MiroMindAI-MiroThinker-深度调研.md](MiroMindAI-MiroThinker-深度调研.md) |
 | 301 | [`gsd-build/get-shit-done`](https://github.com/gsd-build/get-shit-done) | 多 Agent 规格驱动开发系统（meta-prompting/上下文工程），已归档→gsd-core | 64,778 | 2026-08-03 | [gsd-build-get-shit-done-深度调研.md](gsd-build-get-shit-done-深度调研.md) |
 | 302 | [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) | 纯 Python 零框架多 Agent 舆情分析助手（日志文件消息总线） | 41,920 | 2026-08-03 | [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md) |
+| 303 | [`toon-format/toon`](https://github.com/toon-format/toon) | Token 导向序列化格式（TOON）——比 JSON 省 ~33% token，面向 LLM 上下文压缩 | 25,068 | 2026-08-05 | [toon-format-toon-深度调研.md](toon-format-toon-深度调研.md) |
+| 304 | [`open-gsd/gsd-core`](https://github.com/open-gsd/gsd-core) | 规格驱动多 Agent 开发内核（meta-prompting/上下文工程），get-shit-done 官方继承者 | 7,702 | 2026-08-05 | [open-gsd-gsd-core-深度调研.md](open-gsd-gsd-core-深度调研.md) |
+| 305 | [`MemTensor/MemOS`](https://github.com/MemTensor/MemOS) | AI 记忆操作系统——textual/activation/parametric 三类记忆 + L1→Skills 结晶化 | 10,587 | 2026-08-05 | [MemTensor-MemOS-深度调研.md](MemTensor-MemOS-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（81）
+### AI Agent / 助手框架（82）
+
+- [`open-gsd/gsd-core`](https://github.com/open-gsd/gsd-core) — [open-gsd-gsd-core-深度调研.md](open-gsd-gsd-core-深度调研.md)
 
 - [`gsd-build/get-shit-done`](https://github.com/gsd-build/get-shit-done) — [gsd-build-get-shit-done-深度调研.md](gsd-build-get-shit-done-深度调研.md)
 - [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) — [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md)
@@ -449,7 +454,9 @@
 
 
 - [`code-yeongyu/oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent) — [code-yeongyu-oh-my-openagent-深度调研.md](code-yeongyu-oh-my-openagent-深度调研.md)
-### RAG / 知识库 / 记忆（12）
+### RAG / 知识库 / 记忆（13）
+
+- [`MemTensor/MemOS`](https://github.com/MemTensor/MemOS) — [MemTensor-MemOS-深度调研.md](MemTensor-MemOS-深度调研.md)
 
 - [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) — [Tencent-WeKnora-深度调研.md](Tencent-WeKnora-深度调研.md)
 
@@ -466,7 +473,9 @@
 
 - [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) — [thedotmack-claude-mem-深度调研.md](thedotmack-claude-mem-深度调研.md)
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
-### 开发工具 / CLI（22）
+### 开发工具 / CLI（23）
+
+- [`toon-format/toon`](https://github.com/toon-format/toon) — [toon-format-toon-深度调研.md](toon-format-toon-深度调研.md)
 
 - [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) — [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
