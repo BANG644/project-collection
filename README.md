@@ -2,7 +2,7 @@
 
 # GitHub 热门项目 · 每日深度调研
 
-[![Reports](https://img.shields.io/badge/调研报告-315-blue?style=flat-square)](#-已收录项目)
+[![Reports](https://img.shields.io/badge/调研报告-320-blue?style=flat-square)](#-已收录项目)
 [![Update](https://img.shields.io/badge/更新频率-每日-green?style=flat-square)](#)
 
 > **别人给你链接，我们给你判断。**
@@ -43,7 +43,7 @@ GitHub Trending 每天都在变，但大多数 README 只告诉你「它是什�
 
 | 指标 | 数值 |
 |------|------|
-| 调研报告总数 | **315** |
+| 调研报告总数 | **320** |
 | 跨领域覆盖 | AI Agent / 开发工具 / 设计 / 多媒体 / 安全运维 / 学习方法论 |
 | 更新节奏 | **每日** |
 
@@ -55,8 +55,8 @@ GitHub Trending 每天都在变，但大多数 README 只告诉你「它是什�
 
 | 索引文件 | 作用 | 收录数 |
 |----------|------|--------|
-| [🎯 全量规整后总览](full-analysis/GitHub%20项目研究%20—%20全量规整后总览.md) | 全量维护后权威总览（按字母分组索引 + 按领域分类） | 315 |
-| [📚 全量索引表](full-analysis/GitHub%20项目研究%20—%20全量索引表.md) | 所有项目的表格索引（项目名 / 定位 / Stars / 报告链接） | 315 |
+| [🎯 全量规整后总览](full-analysis/GitHub%20项目研究%20—%20全量规整后总览.md) | 全量维护后权威总览（按字母分组索引 + 按领域分类） | 320 |
+| [📚 全量索引表](full-analysis/GitHub%20项目研究%20—%20全量索引表.md) | 所有项目的表格索引（项目名 / 定位 / Stars / 报告链接） | 320 |
 | [📖 元目录说明](full-analysis/GitHub%20项目研究%20—%20元目录.md) | **AI 入口** + 仓库结构 + 使用指南 + 维护规则 | — |
 
 ---
@@ -104,7 +104,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 规整后权威总览
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明 + AI 入口
-│   └── owner-repo-深度调研.md × 315                      # 规范化调研报告
+│   └── owner-repo-深度调研.md × 320                      # 规范化调研报告
 ├── README.md                                               # 本文件
 └── .gitignore
 ```
