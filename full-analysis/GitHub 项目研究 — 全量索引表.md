@@ -84,7 +84,7 @@
 | 69 | [`code-yeongyu/oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent) | 多 harness 编码 Agent harness 封装（OpenCode/Codex 团队编排 + hashline 编辑 + Team Mode） | 66,620 | 2026-07-27 | [code-yeongyu-oh-my-openagent-深度调研.md](code-yeongyu-oh-my-openagent-深度调研.md) |
 | 70 | [`codecrafters-io/build-your-own-x`](https://github.com/codecrafters-io/build-your-own-x) | 从零复刻你最喜欢的技术——GitHub 全站最高星学习策展清单（30+ 品类分步教程），Codecrafters 免费漏斗入口 | 527,150 | 2026-07-18 | [codecrafters-io-build-your-own-x-深度调研.md](codecrafters-io-build-your-own-x-深度调研.md) |
 | 71 | [`colbymchenry/codegraph`](https://github.com/colbymchenry/codegraph) | — | — | 2026-06-19 | [colbymchenry-codegraph-深度调研.md](colbymchenry-codegraph-深度调研.md) |
-| 72 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) | 节点式扩散模型推理引擎与工作流编辑器，118k⭐的 AIGC 统一运行平台 | 118,441 | 2026-06-27 | [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md) |
+| 72 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) | 节点式 AI 内容生成引擎——图像/视频/3D/音频的数据流图工作流，局部重算 + 显存精算，100+ 模型原生支持，GPL-3.0 | 125,347 | 2026-08-10 | [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md) |
 | 73 | [`ComposioHQ/awesome-claude-skills`](https://github.com/ComposioHQ/awesome-claude-skills) | 1000+ Claude Skills 策展清单——界定 Skills≠MCP≠Tools，渐进式加载（~100 token 名称常驻，命中才载正文） | 69,947 | 2026-07-26 | [ComposioHQ-awesome-claude-skills-深度调研.md](ComposioHQ-awesome-claude-skills-深度调研.md) |
 | 74 | [`CopilotKit/CopilotKit`](https://github.com/CopilotKit/CopilotKit) | Agent 与生成式 UI 的前端技术栈——React、Angular、Mobile、Slack 等。也是 AG-UI Protocol 的创造者。二、核心分析 | 34,973 | 2026-06-14 | [CopilotKit-CopilotKit-深度调研.md](CopilotKit-CopilotKit-深度调研.md) |
 | 75 | [`coreybutler/nvm-windows`](https://github.com/coreybutler/nvm-windows) | Go 编写的 Node 版本管理器——symlink-in-PATH 切换 + 进程隔离 | 47,040 | 2026-07-13 | [coreybutler-nvm-windows-深度调研.md](coreybutler-nvm-windows-深度调研.md) |
@@ -210,7 +210,7 @@
 | 195 | [`MoonshotAI/Kimi-K3`](https://github.com/MoonshotAI/Kimi-K3) | 2.8T 开源权重多模态 Agentic 前沿模型——KDA+AttnRes+Latent MoE（激活 16/896 专家），1M 上下文 | 3,254 | 2026-07-29 | [MoonshotAI-Kimi-K3-深度调研.md](MoonshotAI-Kimi-K3-深度调研.md) |
 | 196 | [`motion-canvas/motion-canvas`](https://github.com/motion-canvas/motion-canvas) | — | 18.6 | 2026-06-10 | [motion-canvas-motion-canvas-深度调研.md](motion-canvas-motion-canvas-深度调研.md) |
 | 197 | [`mshumer/Claude-of-Duty`](https://github.com/mshumer/Claude-of-Duty) | 单 prompt 多 Agent 生成的浏览器 FPS——Three.js+WebGL2 全程序化，OVERWATCH 引擎契约 | 1,527 | 2026-07-29 | [mshumer-Claude-of-Duty-深度调研.md](mshumer-Claude-of-Duty-深度调研.md) |
-| 198 | [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | — | — | — | [msitarzewski-agency-agents-深度调研.md](msitarzewski-agency-agents-深度调研.md) |
+| 198 | [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | 「虚拟 AI 公司」人设库——200+ 结构化 agent 角色 Markdown，按 16-21 部门组织，一键装进十余种工具 + 原生 App，MIT | 140,498 | 2026-08-10 | [msitarzewski-agency-agents-深度调研.md](msitarzewski-agency-agents-深度调研.md) |
 | 199 | [`mukul975/Anthropic-Cybersecurity-Skills`](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | AI Agent 网络安全技能库 | 4,200 | 2026-04-09 | [mukul975-Anthropic-Cybersecurity-Skills-深度调研.md](mukul975-Anthropic-Cybersecurity-Skills-深度调研.md) |
 | 200 | [`multica-ai/multica`](https://github.com/multica-ai/multica) | 自托管「托管式 Agent 平台」——Agent 当数字同事（Issue→Task→Commit），毒化会话检测+默认关 Codex 多智能体，15+ harness 自动适配 | 43,522 | 2026-08-03 | [multica-ai-multica-深度调研.md](multica-ai-multica-深度调研.md) |
 | 201 | [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill) | 「搜人不搜编辑」Agent 情报引擎——14 平台并行 + 真实互动量/Polymarket 赔率排序，50+ Harness 可装 | 55,428 | 2026-07-31 | [mvanhorn-last30days-skill-深度调研.md](mvanhorn-last30days-skill-深度调研.md) |
@@ -253,90 +253,93 @@
 | 238 | [`penpot/penpot`](https://github.com/penpot/penpot) | Penpot — 开源设计平台（MCP Server 打通设计⇄代码） | 58,180 | 2026-08-07 | [penpot-penpot-深度调研.md](penpot-penpot-深度调研.md) |
 | 239 | [`permissionlesstech/bitchat`](https://github.com/permissionlesstech/bitchat) | 去中心化 P2P 加密通讯——蓝牙 mesh + Nostr 双传输，无服务器无账号 | 32,017 | 2026-07-28 | [permissionlesstech-bitchat-深度调研.md](permissionlesstech-bitchat-深度调研.md) |
 | 240 | [`phuryn/pm-skills`](https://github.com/phuryn/pm-skills) | PM 技能市场——100+ 个 Agent Skills、命令和插件，覆盖从发现到策略、执行、发布、增长的 PM 全流程。二、核心分析PM-Skills 是一个 | 17,514 | 2026-06-14 | [phuryn-pm-skills-深度调研.md](phuryn-pm-skills-深度调研.md) |
-| 241 | [`PostHog/posthog`](https://github.com/PostHog/posthog) | 开源自驱动产品平台——分析/回放/开关/实验/错误追踪 + Self-driving Agent | 35,759 | 2026-07-17 | [PostHog-posthog-深度调研.md](PostHog-posthog-深度调研.md) |
-| 242 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | FastMCP — MCP 生态事实标准 Python 框架，装饰器即工具，Servers/Clients/Apps 三支柱 | 26,470 | 2026-07-21 | [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md) |
-| 243 | [`PrimeIntellect-ai/prime-agent`](https://github.com/PrimeIntellect-ai/prime-agent) | 基于 RLM（递归语言模型）+ Continual Harness 的自改进编码 / 长周期自主 Agent——把上下文当变量、子 Agent 当函数调用 | 6,029 | 2026-08-08 | [PrimeIntellect-ai-prime-agent-深度调研.md](PrimeIntellect-ai-prime-agent-深度调研.md) |
-| 244 | [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) | — | — | 2026-03-05 | [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md) |
-| 245 | [`raiyanyahya/recall`](https://github.com/raiyanyahya/recall) | — | 310 | 2026-06-23 | [raiyanyahya-recall-深度调研.md](raiyanyahya-recall-深度调研.md) |
-| 246 | [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) | Windows 程序自定义引擎——三层分离架构（引擎注入+Mod 加载器+VSCode 市场），混合注入策略+MinHook 定制+UWP 兼容 | 8,281 | 2026-07-05 | [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md) |
-| 247 | [`Raphire/Win11Debloat`](https://github.com/Raphire/Win11Debloat) | 轻量级 PowerShell 脚本，一键去除 Windows 预装应用、禁用遥测、优化系统体验的开源工具。📖 核心功能详解1. 应用移除（App Removal | 47.4 | 2026-06-13 | [Raphire-Win11Debloat-深度调研.md](Raphire-Win11Debloat-深度调研.md) |
-| 248 | [`refactoringhq/tolaria`](https://github.com/refactoringhq/tolaria) | Files-first/Git-first 的桌面 Markdown 知识库——vault 即 git 仓库，AI-first but not AI-only，AGENTS.md 原生集成 | 17,431 | 2026-06-30 | [refactoringhq-tolaria-深度调研.md](refactoringhq-tolaria-深度调研.md) |
-| 249 | [`refly-ai/refly`](https://github.com/refly-ai/refly) | 全球首个开源 Agent Skills 构建平台——Vibe Workflow 可视化 IDE，将企业 SOP 编译为确定性的、版本化的 Skill，支持导出 MCP/API/Bot | 7,416 | 2026-07-02 | [refly-ai-refly-深度调研.md](refly-ai-refly-深度调研.md) |
-| 250 | [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) | — | 49.6 | 2026-06-10 | [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md) |
-| 251 | [`revfactory/harness`](https://github.com/revfactory/harness) | Claude Code「Agent 团队架构工厂」元技能——L3 Meta-Factory，6 架构模式 + Phase 0 审计 + drift 检测 | 8,562 | 2026-07-31 | [revfactory-harness-深度调研.md](revfactory-harness-深度调研.md) |
-| 252 | [`roboflow/supervision`](https://github.com/roboflow/supervision) | 计算机视觉工程沉淀工具箱——20+标注器+ByteTrack追踪+区域计数+数据集转换，CV 项目的事实标准胶水层 | 45,863 | 2026-07-01 | [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md) |
-| 253 | [`rohitg00/agentmemory`](https://github.com/rohitg00/agentmemory) | — | — | 2026-02-25 | [rohitg00-agentmemory-深度调研.md](rohitg00-agentmemory-深度调研.md) |
-| 254 | [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo) | — | — | — | [ruvnet-ruflo-深度调研.md](ruvnet-ruflo-深度调研.md) |
-| 255 | [`ruvnet/RuView`](https://github.com/ruvnet/RuView) | RuView — 用 WiFi CSI 做无摄像头穿墙空间感知（Rust+ESP32+SNN，呼吸/心率/姿态/跌倒） | 85,030 | 2026-07-24 | [ruvnet-RuView-深度调研.md](ruvnet-RuView-深度调研.md) |
-| 256 | [`sansan0/TrendRadar`](https://github.com/sansan0/TrendRadar) | AI 驱动的开源舆情监控与热点筛选工具，聚合多平台热点、RSS 订阅，支持 AI 智能分析、翻译和多渠道推送。📖 项目定位与核心功能定位TrendRadar 定 | 59.3 | 2026-06-13 | [sansan0-TrendRadar-深度调研.md](sansan0-TrendRadar-深度调研.md) |
-| 257 | [`santifer/career-ops`](https://github.com/santifer/career-ops) | AI 求职系统 | 54,765 | 2026-06-20 | [santifer-career-ops-深度调研.md](santifer-career-ops-深度调研.md) |
-| 258 | [`sapientinc/HRM-Text`](https://github.com/sapientinc/HRM-Text) | — | — | — | [sapientinc-HRM-Text-深度调研.md](sapientinc-HRM-Text-深度调研.md) |
-| 259 | [`screenpipe/screenpipe`](https://github.com/screenpipe/screenpipe) | 24/7 本地 AI 屏幕+音频记录引擎，事件驱动架构，YC S26 | 19,515 | 2026-06-28 | [screenpipe-screenpipe-深度调研.md](screenpipe-screenpipe-深度调研.md) |
-| 260 | [`searxng/searxng`](https://github.com/searxng/searxng) | — | 31,832 | 2026-06-10 | [searxng-searxng-深度调研.md](searxng-searxng-深度调研.md) |
-| 261 | [`semantica-agi/semantica`](https://github.com/semantica-agi/semantica) | Graph-Native 基础设施——为 AI Agent 提供可解释、可追溯、可审计的上下文与问责层（开源版 Palantir for AI Agents） | 2,266 | 2026-08-08 | [semantica-agi-semantica-深度调研.md](semantica-agi-semantica-深度调研.md) |
-| 262 | [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) | Remove-MS-Edge | 2 | 2026-06-19 | [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md) |
-| 263 | [`shanraisshan/claude-code-best-practice`](https://github.com/shanraisshan/claude-code-best-practice) | 📘  — Claude Code 最佳实践指南 | 59,344 | 2026-06-24 | [shanraisshan-claude-code-best-practice-深度调研.md](shanraisshan-claude-code-best-practice-深度调研.md) |
-| 264 | [`shareAI-lab/learn-claude-code`](https://github.com/shareAI-lab/learn-claude-code) | "Bash is all you need"——从 0 到 1 构建 Agent Harness 的 20 步渐进式教学项目，3 个依赖，71K Stars（补完核心研判+关键文件速查） | 71,335 | 2026-07-18 | [shareAI-lab-learn-claude-code-深度调研.md](shareAI-lab-learn-claude-code-深度调研.md) |
-| 265 | [`ShareX/ShareX`](https://github.com/ShareX/ShareX) | ShareX 是一款免费开源的屏幕截图、录屏和文件共享工具，单次按键即可完成捕获或录制，并支持上传到多种目标服务。📖 核心功能屏幕截图：区域/窗口/全屏/滚动截 | 38,060 | 2026-06-12 | [ShareX-ShareX-深度调研.md](ShareX-ShareX-深度调研.md) |
-| 266 | [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) | Kronos — 首个开源金融 K 线基础模型，K 线专用 tokenizer 量化 + 自回归 Transformer | 32,536 | 2026-07-23 | [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md) |
-| 267 | [`Shubhamsaboo/awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) | 100+ 开箱即用的 AI Agent & RAG 应用模板库，15 品类覆盖全栈 | 115,827 | 2026-06-28 | [Shubhamsaboo-awesome-llm-apps-深度调研.md](Shubhamsaboo-awesome-llm-apps-深度调研.md) |
-| 268 | [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) | 首个无用户标识符的通讯平台，单向消息队列+双加密+后量子安全 | 12,443 | 2026-06-27 | [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md) |
-| 269 | [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | GitHub Star 最多的项目（46.7 万⭐）——由 Sindre Sorhus 维护的「Awesome 列表之列表」，一个以人工审核为核心的质量索引体系 | 467,891 | 2026-05-05 | [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md) |
-| 270 | [`Sjj1024/PakePlus`](https://github.com/Sjj1024/PakePlus) | — | — | — | [Sjj1024-PakePlus-深度调研.md](Sjj1024-PakePlus-深度调研.md) |
-| 271 | [`Skyvern-AI/skyvern`](https://github.com/Skyvern-AI/skyvern) | Skyvern —— 用 LLM + 计算机视觉驱动的浏览器自动化 Agent，自然语言工作流替代脆弱 XPath 脚本 | 22,129 | 2026-07-07 | [Skyvern-AI-skyvern-深度调研.md](Skyvern-AI-skyvern-深度调研.md) |
-| 272 | [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) | 本地运行、100+ LLM 支持的 AI 简历构建+职位匹配优化平台，核心特色 Resume Diff 审计 | 27,615 | 2026-07-03 | [srbhr-Resume-Matcher-深度调研.md](srbhr-Resume-Matcher-深度调研.md) |
-| 273 | [`steipete/CodexBar`](https://github.com/steipete/CodexBar) | macOS 菜单栏 AI 编程额度监控——57+ Provider 全覆盖，隐私优先，CLI+GUI 双模，生态辐射 Windows/Linux | 16,696 | 2026-07-07 | [steipete-CodexBar-深度调研.md](steipete-CodexBar-深度调研.md) |
-| 274 | [`Stirling-Tools/Stirling-PDF`](https://github.com/Stirling-Tools/Stirling-PDF) | Stirling-PDF — #1 PDF Application on GitHub | 82,799 | — | [Stirling-Tools-Stirling-PDF-深度调研.md](Stirling-Tools-Stirling-PDF-深度调研.md) |
-| 275 | [`supabase/supabase`](https://github.com/supabase/supabase) | — | — | — | [supabase-supabase-深度调研.md](supabase-supabase-深度调研.md) |
-| 276 | [`supermemoryai/supermemory`](https://github.com/supermemoryai/supermemory) | — | — | — | [supermemoryai-supermemory-深度调研.md](supermemoryai-supermemory-深度调研.md) |
-| 277 | [`sveltejs/svelte`](https://github.com/sveltejs/svelte) | "编译器即框架"的前端革命者——Svelte 5 用 Runes 重新定义响应式系统，无虚拟 DOM、编译时优化、最小化 bundle | 87,585 | 2026-06-30 | [sveltejs-svelte-深度调研.md](sveltejs-svelte-深度调研.md) |
-| 278 | [`sybil-solutions/codex-shim`](https://github.com/sybil-solutions/codex-shim) | — | — | 2026-06-19 | [sybil-solutions-codex-shim-深度调研.md](sybil-solutions-codex-shim-深度调研.md) |
-| 279 | [`tastyeffectco/sandboxd`](https://github.com/tastyeffectco/sandboxd) | — | — | — | [tastyeffectco-sandboxd-深度调研.md](tastyeffectco-sandboxd-深度调研.md) |
-| 280 | [`TauricResearch/TradingAgents`](https://github.com/TauricResearch/TradingAgents) | 多 Agent LLM 金融交易框架——分析师→多空辩论→交易员→风控→基金经理五层决策链，LangGraph 编排 + 可插拔数据源 | 96,335 | 2026-08-09 | [TauricResearch-TradingAgents-深度调研.md](TauricResearch-TradingAgents-深度调研.md) |
-| 281 | [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) | 腾讯开源 RAG+ReAct Agent+自动 Wiki 一体化企业知识框架（微信对话开放平台底层） | 19,206 | 2026-08-01 | [Tencent-WeKnora-深度调研.md](Tencent-WeKnora-深度调研.md) |
-| 282 | [`TencentCloud/TencentDB-Agent-Memory`](https://github.com/TencentCloud/TencentDB-Agent-Memory) | TencentCloud 开源组织深度调研——聚焦 TencentDB-Agent-Memory（Agent 记忆层）+ CubeSandbox（代码沙箱） | — | 2026-06-07 | [TencentCloud-深度调研.md](TencentCloud-深度调研.md) |
-| 283 | [`TencentCloud/CubeSandbox`](https://github.com/TencentCloud/CubeSandbox) | 腾讯云 KVM+RustVMM 60ms AI Agent 沙箱，E2B SDK Drop-in 兼容硬件级隔离 | 6,755 | 2026-07-02 | [TencentCloud-CubeSandbox-深度调研.md](TencentCloud-CubeSandbox-深度调研.md) |
-| 284 | [`TencentCloud/TencentDB-Agent-Memory`](https://github.com/TencentCloud/TencentDB-Agent-Memory) | 腾讯云开源 AI Agent 本地长期记忆引擎——L0→L3 四层语义金字塔 + Mermaid 符号化短期记忆，61.38% Token 节省 | 7,576 | 2026-07-09 | [TencentCloud-TencentDB-Agent-Memory-深度调研.md](TencentCloud-TencentDB-Agent-Memory-深度调研.md) |
-| 285 | [`tensorflow/tensorflow`](https://github.com/tensorflow/tensorflow) | Google 维护的顶级开源机器学习框架（19.5 万⭐）——虽然正被 PyTorch 侵蚀市场份额，但在大规模部署、的生产环境、TPU 生态中仍是无可争议的首 | 195,154 | 2026-05-19 | [tensorflow-tensorflow-深度调研.md](tensorflow-tensorflow-深度调研.md) |
-| 286 | [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) | 9arm-skills | — | 2026-05-20 | [thananon-9arm-skills-深度调研.md](thananon-9arm-skills-深度调研.md) |
-| 287 | [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) | claude-mem — 跨 Agent 会话记忆压缩系统（Hook 捕获 + SQLite/ChromaDB 双存储 + 注入） | 88,631 | 2026-07-27 | [thedotmack-claude-mem-深度调研.md](thedotmack-claude-mem-深度调研.md) |
-| 288 | [`tirth8205/code-review-graph`](https://github.com/tirth8205/code-review-graph) | 本地优先代码智能图谱——Tree-sitter 建图+blast-radius+30 MCP 工具，AI 编码 review 上下文压缩 82x 中位数 | 19,684 | 2026-07-18 | [tirth8205-code-review-graph-深度调研.md](tirth8205-code-review-graph-深度调研.md) |
-| 289 | [`Tong89/smartNode`](https://github.com/Tong89/smartNode) | smartNode (天基智枢) | — | 2026-06-17 | [Tong89-smartNode-深度调研.md](Tong89-smartNode-深度调研.md) |
-| 290 | [`toon-format/toon`](https://github.com/toon-format/toon) | Token 导向序列化格式（TOON）——比 JSON 省 ~33% token，面向 LLM 上下文压缩 | 25,068 | 2026-08-05 | [toon-format-toon-深度调研.md](toon-format-toon-深度调研.md) |
-| 291 | [`topoteretes/cognee`](https://github.com/topoteretes/cognee) | — | — | — | [topoteretes-cognee-深度调研.md](topoteretes-cognee-深度调研.md) |
-| 292 | [`trycompai/crm`](https://github.com/trycompai/crm) | Agentic-first 开源 CRM——耐久研究 agent 是产品本体，API 零智能 + 租约队列 + deny-all 沙箱 + 证据账本 | 6,016 | 2026-07-31 | [trycompai-crm-深度调研.md](trycompai-crm-深度调研.md) |
-| 293 | [`trycua/cua`](https://github.com/trycua/cua) | Computer-Use 2.0 开源基础设施栈——跨 OS 沙箱 + 后台驱动 + Agent 框架 + 基准评测 + 训练数据生成 | 20,200 | 2026-07-20 | [trycua-cua-深度调研.md](trycua-cua-深度调研.md) |
-| 294 | [`tw93/Pake`](https://github.com/tw93/Pake) | 一行命令把任意网页变成 <5MB 桌面应用的 Rust/Tauri CLI，No Electron 极轻量 | 59,019 | 2026-07-03 | [tw93-Pake-深度调研.md](tw93-Pake-深度调研.md) |
-| 295 | [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) | 中文社区最全 AI 驱动渗透测试工具——目标驱动求解引擎+13 个 LLM Provider+21 渗透 Skill+180 文档 | 1,100 | 2026-06-30 | [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md) |
-| 296 | [`unclecode/crawl4ai`](https://github.com/unclecode/crawl4ai) | 面向 LLM 的开源网页爬虫与抓取工具，将网页转化为干净的 Markdown，专为 RAG、AI Agent 和数据管道设计。📖 项目定位与核心功能设计理念Cr | 51 | 2026-06-13 | [unclecode-crawl4ai-深度调研.md](unclecode-crawl4ai-深度调研.md) |
-| 297 | [`usestrix/strix`](https://github.com/usestrix/strix) | AI Agent 驱动的渗透测试框架——Agent 图编排+真实 PoC 验证+自动修复，把安全测试从"扫描器报疑似"推进到"每条漏洞都能复现" | 28,023 | 2026-07-01 | [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md) |
-| 298 | [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) | — | — | — | [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md) |
-| 299 | [`vercel/eve`](https://github.com/vercel/eve) | Vercel 文件系统优先的持久化 Agent 框架——FS 配置+原生 HITL+多频道抽象，Apache-2.0 Beta | 2,792 | 2026-06-28 | [vercel-eve-深度调研.md](vercel-eve-深度调研.md) |
-| 300 | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | Vercel 原生 Rust 浏览器自动化 CLI——守护进程 + CDP 驱动 Chrome，@eN 引用快照，MCP 同源委托，多引擎（CDP/WebDriver） | 39,846 | 2026-08-02 | [vercel-labs-agent-browser-深度调研.md](vercel-labs-agent-browser-深度调研.md) |
-| 301 | [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) | 给 AI Agent 的永久只追加记忆——定宽记录 + 二分合并树压缩，单文件零依赖 | 769 | 2026-07-29 | [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md) |
-| 302 | [`viitor-ai/viitor-voice-nar`](https://github.com/viitor-ai/viitor-voice-nar) | 非自回归 TTS 语音克隆 + 局部编辑（DualCodec 25Hz + gRPC v2 微服务拆分），⚠️ 5 大红旗疑似刷星 | 240 | 2026-07-03 | [viitor-ai-viitor-voice-nar-深度调研.md](viitor-ai-viitor-voice-nar-深度调研.md) |
-| 303 | [`virattt/ai-hedge-fund`](https://github.com/virattt/ai-hedge-fund) | "投资大师即 Agent"的多智能体对冲基金模拟——LangGraph 编排 + React Flow 可视化，纯教育不交易 | 61,797 | 2026-07-15 | [virattt-ai-hedge-fund-深度调研.md](virattt-ai-hedge-fund-深度调研.md) |
-| 304 | [`virattt/dexter`](https://github.com/virattt/dexter) | 金融研究自主 Agent——如 Claude Code 般交互，专为 SEC/财报/市场数据分析优化，支持 WhatsApp+Cron | 27,241 | 2026-06-30 | [virattt-dexter-深度调研.md](virattt-dexter-深度调研.md) |
-| 305 | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | — | — | — | [VoltAgent-awesome-design-md-深度调研.md](VoltAgent-awesome-design-md-深度调研.md) |
-| 306 | [`vorpus/performativeUI`](https://github.com/vorpus/performativeUI) | — | — | 2026-06-07 | [vorpus-performativeUI-深度调研.md](vorpus-performativeUI-深度调研.md) |
-| 307 | [`withastro/flue`](https://github.com/withastro/flue) | Astro 团队 TS Agent Harness 框架——沙箱+持久化执行+SKILL.md 原生导入 | 7,243 | 2026-07-12 | [withastro-flue-深度调研.md](withastro-flue-深度调研.md) |
-| 308 | [`withkynam/vibecode-pro-max-kit`](https://github.com/withkynam/vibecode-pro-max-kit) | — | — | 2026-06-19 | [withkynam-vibecode-pro-max-kit-深度调研.md](withkynam-vibecode-pro-max-kit-深度调研.md) |
-| 309 | [`wonderwhy-er/DesktopCommanderMCP`](https://github.com/wonderwhy-er/DesktopCommanderMCP) | Claude MCP 全能终端控制服务器——终端/文件/Office/搜索/远程控制/Docker 隔离，MCP 生态最全工具集 | 6,354 | 2026-07-09 | [wonderwhy-er-DesktopCommanderMCP-深度调研.md](wonderwhy-er-DesktopCommanderMCP-深度调研.md) |
-| 310 | [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) | PaperSpine | — | 2026-05-17 | [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md) |
-| 311 | [`wuji-labs/nopua`](https://github.com/wuji-labs/nopua) | — | — | — | [wuji-labs-nopua-深度调研.md](wuji-labs-nopua-深度调研.md) |
-| 312 | [`xai-org/grok-build`](https://github.com/xai-org/grok-build) | xAI 的 Rust 编码 Agent——ACP 协议三入口（TUI/headless/ACP），DeepAgents 风格 code graph | 18,477 | 2026-07-19 | [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md) |
-| 313 | [`xbtlin/ai-berkshire`](https://github.com/xbtlin/ai-berkshire) | AI 时代的伯克希尔——4 大师对抗+16 Skill+金融严谨工具 | 3,000 | 2026-06-27 | [xbtlin-ai-berkshire-深度调研.md](xbtlin-ai-berkshire-深度调研.md) |
-| 314 | [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) | 全网最全 Nano Banana Pro 提示词案例库——986+ 案例，Gemini 3 Pro Image 画廊，GitHub Pages 零后端 | 794 | 2026-07-08 | [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md) |
-| 315 | [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) | 语音优先的本地 Agent 编排运行时——可审计 DAG、每节点 Docker 隔离、生成式 UI、全本地隐私 | 357 | 2026-07-10 | [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md) |
-| 316 | [`xingkongliang/skills-manager`](https://github.com/xingkongliang/skills-manager) | Tauri 2 跨平台 AI Agent 技能管理桌面应用——Preset 场景编排+Git 备份+ToolAdapter 插件式架构+CLI 嵌入 | 2,843 | 2026-07-09 | [xingkongliang-skills-manager-深度调研.md](xingkongliang-skills-manager-深度调研.md) |
-| 317 | [`xming521/WeClone`](https://github.com/xming521/WeClone) | — | — | — | [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md) |
-| 318 | [`yorukot/superfile`](https://github.com/yorukot/superfile) | Go+bubbletea v2 现代 TUI 文件管理器——单 Model 编排多面板，内建压缩包/PDF/图预览 | 19,408 | 2026-07-26 | [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md) |
-| 319 | [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) | 中文 LeetCode 刷题攻略的标杆项目——《代码随想录》配套仓库，200+ 道经典题目的系统化刷题路线。📖 核心功能系统化刷题路线：按「数组→链表→哈希表→ | 61 | 2026-06-12 | [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md) |
-| 320 | [`Zackriya-Solutions/meetily`](https://github.com/Zackriya-Solutions/meetily) | 隐私优先的 AI 会议助手——Rust+Tauri 底座，100% 本地运行，Parakeet 4x 转写加速，无需云服务 | 15,069 | 2026-07-05 | [Zackriya-Solutions-meetily-深度调研.md](Zackriya-Solutions-meetily-深度调研.md) |
-| 321 | [`zai-org/GLM-5`](https://github.com/zai-org/GLM-5) | 从 Vibe Coding 到 Agentic Engineering 的旗舰模型 | 6,746 | 2026-07-24 | [zai-org-GLM-5-深度调研.md](zai-org-GLM-5-深度调研.md) |
-| 322 | [`zai-org/Open-AutoGLM`](https://github.com/zai-org/Open-AutoGLM) | 智谱开源手机 GUI Agent——VLM + ADB/HDC 执行闭环 | 25,756 | 2026-07-13 | [zai-org-Open-AutoGLM-深度调研.md](zai-org-Open-AutoGLM-深度调研.md) |
-| 323 | [`zarazhangrui/beautiful-html-templates`](https://github.com/zarazhangrui/beautiful-html-templates) | beautiful-html-templates | — | 2026-05-05 | [zarazhangrui-beautiful-html-templates-深度调研.md](zarazhangrui-beautiful-html-templates-深度调研.md) |
-| 324 | [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 驱动五市场自选股 AI 日报——Fork-to-run 零成本架构 + 双 Guardrail 防幻觉 + 通知路由四件套 | 59,613 | 2026-07-31 | [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md) |
+| 241 | [`pingdotgg/t3code`](https://github.com/pingdotgg/t3code) | Theo 的开源 Agent 工作台控制面——Web/桌面/移动三端统一 GUI 收编 Claude Code/Codex/Cursor 等，BYO 订阅 + git 原生一键 PR，MIT | 17,577 | 2026-08-10 | [pingdotgg-t3code-深度调研.md](pingdotgg-t3code-深度调研.md) |
+| 242 | [`PostHog/posthog`](https://github.com/PostHog/posthog) | 开源自驱动产品平台——分析/回放/开关/实验/错误追踪 + Self-driving Agent | 35,759 | 2026-07-17 | [PostHog-posthog-深度调研.md](PostHog-posthog-深度调研.md) |
+| 243 | [`pranshuparmar/witr`](https://github.com/pranshuparmar/witr) | Go 单文件静态二进制——把进程/端口/容器/文件「为什么在跑」收敛成一条人类可读祖先因果链（CLI+TUI），Apache-2.0 | 20,489 | 2026-08-10 | [pranshuparmar-witr-深度调研.md](pranshuparmar-witr-深度调研.md) |
+| 244 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | FastMCP — MCP 生态事实标准 Python 框架，装饰器即工具，Servers/Clients/Apps 三支柱 | 26,470 | 2026-07-21 | [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md) |
+| 245 | [`PrimeIntellect-ai/prime-agent`](https://github.com/PrimeIntellect-ai/prime-agent) | 基于 RLM（递归语言模型）+ Continual Harness 的自改进编码 / 长周期自主 Agent——把上下文当变量、子 Agent 当函数调用 | 6,029 | 2026-08-08 | [PrimeIntellect-ai-prime-agent-深度调研.md](PrimeIntellect-ai-prime-agent-深度调研.md) |
+| 246 | [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) | — | — | 2026-03-05 | [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md) |
+| 247 | [`raiyanyahya/recall`](https://github.com/raiyanyahya/recall) | — | 310 | 2026-06-23 | [raiyanyahya-recall-深度调研.md](raiyanyahya-recall-深度调研.md) |
+| 248 | [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) | Windows 程序自定义引擎——三层分离架构（引擎注入+Mod 加载器+VSCode 市场），混合注入策略+MinHook 定制+UWP 兼容 | 8,281 | 2026-07-05 | [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md) |
+| 249 | [`Raphire/Win11Debloat`](https://github.com/Raphire/Win11Debloat) | 轻量级 PowerShell 脚本，一键去除 Windows 预装应用、禁用遥测、优化系统体验的开源工具。📖 核心功能详解1. 应用移除（App Removal | 47.4 | 2026-06-13 | [Raphire-Win11Debloat-深度调研.md](Raphire-Win11Debloat-深度调研.md) |
+| 250 | [`refactoringhq/tolaria`](https://github.com/refactoringhq/tolaria) | Files-first/Git-first 的桌面 Markdown 知识库——vault 即 git 仓库，AI-first but not AI-only，AGENTS.md 原生集成 | 17,431 | 2026-06-30 | [refactoringhq-tolaria-深度调研.md](refactoringhq-tolaria-深度调研.md) |
+| 251 | [`refly-ai/refly`](https://github.com/refly-ai/refly) | 全球首个开源 Agent Skills 构建平台——Vibe Workflow 可视化 IDE，将企业 SOP 编译为确定性的、版本化的 Skill，支持导出 MCP/API/Bot | 7,416 | 2026-07-02 | [refly-ai-refly-深度调研.md](refly-ai-refly-深度调研.md) |
+| 252 | [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) | — | 49.6 | 2026-06-10 | [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md) |
+| 253 | [`revfactory/harness`](https://github.com/revfactory/harness) | Claude Code「Agent 团队架构工厂」元技能——L3 Meta-Factory，6 架构模式 + Phase 0 审计 + drift 检测 | 8,562 | 2026-07-31 | [revfactory-harness-深度调研.md](revfactory-harness-深度调研.md) |
+| 254 | [`roboflow/supervision`](https://github.com/roboflow/supervision) | 计算机视觉工程沉淀工具箱——20+标注器+ByteTrack追踪+区域计数+数据集转换，CV 项目的事实标准胶水层 | 45,863 | 2026-07-01 | [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md) |
+| 255 | [`rohitg00/agentmemory`](https://github.com/rohitg00/agentmemory) | — | — | 2026-02-25 | [rohitg00-agentmemory-深度调研.md](rohitg00-agentmemory-深度调研.md) |
+| 256 | [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo) | — | — | — | [ruvnet-ruflo-深度调研.md](ruvnet-ruflo-深度调研.md) |
+| 257 | [`ruvnet/RuView`](https://github.com/ruvnet/RuView) | RuView — 用 WiFi CSI 做无摄像头穿墙空间感知（Rust+ESP32+SNN，呼吸/心率/姿态/跌倒） | 85,030 | 2026-07-24 | [ruvnet-RuView-深度调研.md](ruvnet-RuView-深度调研.md) |
+| 258 | [`sansan0/TrendRadar`](https://github.com/sansan0/TrendRadar) | AI 驱动的开源舆情监控与热点筛选工具，聚合多平台热点、RSS 订阅，支持 AI 智能分析、翻译和多渠道推送。📖 项目定位与核心功能定位TrendRadar 定 | 59.3 | 2026-06-13 | [sansan0-TrendRadar-深度调研.md](sansan0-TrendRadar-深度调研.md) |
+| 259 | [`santifer/career-ops`](https://github.com/santifer/career-ops) | AI 求职系统 | 54,765 | 2026-06-20 | [santifer-career-ops-深度调研.md](santifer-career-ops-深度调研.md) |
+| 260 | [`sapientinc/HRM-Text`](https://github.com/sapientinc/HRM-Text) | — | — | — | [sapientinc-HRM-Text-深度调研.md](sapientinc-HRM-Text-深度调研.md) |
+| 261 | [`screenpipe/screenpipe`](https://github.com/screenpipe/screenpipe) | 24/7 本地 AI 屏幕+音频记录引擎，事件驱动架构，YC S26 | 19,515 | 2026-06-28 | [screenpipe-screenpipe-深度调研.md](screenpipe-screenpipe-深度调研.md) |
+| 262 | [`searxng/searxng`](https://github.com/searxng/searxng) | — | 31,832 | 2026-06-10 | [searxng-searxng-深度调研.md](searxng-searxng-深度调研.md) |
+| 263 | [`semantica-agi/semantica`](https://github.com/semantica-agi/semantica) | Graph-Native 基础设施——为 AI Agent 提供可解释、可追溯、可审计的上下文与问责层（开源版 Palantir for AI Agents） | 2,266 | 2026-08-08 | [semantica-agi-semantica-深度调研.md](semantica-agi-semantica-深度调研.md) |
+| 264 | [`ShadowWhisperer/Remove-MS-Edge`](https://github.com/ShadowWhisperer/Remove-MS-Edge) | Remove-MS-Edge | 2 | 2026-06-19 | [ShadowWhisperer-Remove-MS-Edge-深度调研.md](ShadowWhisperer-Remove-MS-Edge-深度调研.md) |
+| 265 | [`shanraisshan/claude-code-best-practice`](https://github.com/shanraisshan/claude-code-best-practice) | 📘  — Claude Code 最佳实践指南 | 59,344 | 2026-06-24 | [shanraisshan-claude-code-best-practice-深度调研.md](shanraisshan-claude-code-best-practice-深度调研.md) |
+| 266 | [`shareAI-lab/learn-claude-code`](https://github.com/shareAI-lab/learn-claude-code) | "Bash is all you need"——从 0 到 1 构建 Agent Harness 的 20 步渐进式教学项目，3 个依赖，71K Stars（补完核心研判+关键文件速查） | 71,335 | 2026-07-18 | [shareAI-lab-learn-claude-code-深度调研.md](shareAI-lab-learn-claude-code-深度调研.md) |
+| 267 | [`ShareX/ShareX`](https://github.com/ShareX/ShareX) | ShareX 是一款免费开源的屏幕截图、录屏和文件共享工具，单次按键即可完成捕获或录制，并支持上传到多种目标服务。📖 核心功能屏幕截图：区域/窗口/全屏/滚动截 | 38,060 | 2026-06-12 | [ShareX-ShareX-深度调研.md](ShareX-ShareX-深度调研.md) |
+| 268 | [`shiyu-coder/Kronos`](https://github.com/shiyu-coder/Kronos) | Kronos — 首个开源金融 K 线基础模型，K 线专用 tokenizer 量化 + 自回归 Transformer | 32,536 | 2026-07-23 | [shiyu-coder-Kronos-深度调研.md](shiyu-coder-Kronos-深度调研.md) |
+| 269 | [`Shubhamsaboo/awesome-llm-apps`](https://github.com/Shubhamsaboo/awesome-llm-apps) | 100+ 开箱即用的 AI Agent & RAG 应用模板库，15 品类覆盖全栈 | 115,827 | 2026-06-28 | [Shubhamsaboo-awesome-llm-apps-深度调研.md](Shubhamsaboo-awesome-llm-apps-深度调研.md) |
+| 270 | [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) | 首个无用户标识符的通讯平台，单向消息队列+双加密+后量子安全 | 12,443 | 2026-06-27 | [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md) |
+| 271 | [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | GitHub Star 最多的项目（46.7 万⭐）——由 Sindre Sorhus 维护的「Awesome 列表之列表」，一个以人工审核为核心的质量索引体系 | 467,891 | 2026-05-05 | [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md) |
+| 272 | [`Sjj1024/PakePlus`](https://github.com/Sjj1024/PakePlus) | — | — | — | [Sjj1024-PakePlus-深度调研.md](Sjj1024-PakePlus-深度调研.md) |
+| 273 | [`Skyvern-AI/skyvern`](https://github.com/Skyvern-AI/skyvern) | Skyvern —— 用 LLM + 计算机视觉驱动的浏览器自动化 Agent，自然语言工作流替代脆弱 XPath 脚本 | 22,129 | 2026-07-07 | [Skyvern-AI-skyvern-深度调研.md](Skyvern-AI-skyvern-深度调研.md) |
+| 274 | [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) | 本地运行、100+ LLM 支持的 AI 简历构建+职位匹配优化平台，核心特色 Resume Diff 审计 | 27,615 | 2026-07-03 | [srbhr-Resume-Matcher-深度调研.md](srbhr-Resume-Matcher-深度调研.md) |
+| 275 | [`steipete/CodexBar`](https://github.com/steipete/CodexBar) | macOS 菜单栏 AI 编程额度监控——57+ Provider 全覆盖，隐私优先，CLI+GUI 双模，生态辐射 Windows/Linux | 16,696 | 2026-07-07 | [steipete-CodexBar-深度调研.md](steipete-CodexBar-深度调研.md) |
+| 276 | [`Stirling-Tools/Stirling-PDF`](https://github.com/Stirling-Tools/Stirling-PDF) | Stirling-PDF — #1 PDF Application on GitHub | 82,799 | — | [Stirling-Tools-Stirling-PDF-深度调研.md](Stirling-Tools-Stirling-PDF-深度调研.md) |
+| 277 | [`supabase/supabase`](https://github.com/supabase/supabase) | — | — | — | [supabase-supabase-深度调研.md](supabase-supabase-深度调研.md) |
+| 278 | [`supermemoryai/supermemory`](https://github.com/supermemoryai/supermemory) | — | — | — | [supermemoryai-supermemory-深度调研.md](supermemoryai-supermemory-深度调研.md) |
+| 279 | [`sveltejs/svelte`](https://github.com/sveltejs/svelte) | "编译器即框架"的前端革命者——Svelte 5 用 Runes 重新定义响应式系统，无虚拟 DOM、编译时优化、最小化 bundle | 87,585 | 2026-06-30 | [sveltejs-svelte-深度调研.md](sveltejs-svelte-深度调研.md) |
+| 280 | [`sybil-solutions/codex-shim`](https://github.com/sybil-solutions/codex-shim) | — | — | 2026-06-19 | [sybil-solutions-codex-shim-深度调研.md](sybil-solutions-codex-shim-深度调研.md) |
+| 281 | [`tastyeffectco/sandboxd`](https://github.com/tastyeffectco/sandboxd) | — | — | — | [tastyeffectco-sandboxd-深度调研.md](tastyeffectco-sandboxd-深度调研.md) |
+| 282 | [`TauricResearch/TradingAgents`](https://github.com/TauricResearch/TradingAgents) | 多 Agent LLM 金融交易框架——分析师→多空辩论→交易员→风控→基金经理五层决策链，LangGraph 编排 + 可插拔数据源 | 96,335 | 2026-08-09 | [TauricResearch-TradingAgents-深度调研.md](TauricResearch-TradingAgents-深度调研.md) |
+| 283 | [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) | 腾讯开源 RAG+ReAct Agent+自动 Wiki 一体化企业知识框架（微信对话开放平台底层） | 19,206 | 2026-08-01 | [Tencent-WeKnora-深度调研.md](Tencent-WeKnora-深度调研.md) |
+| 284 | [`TencentCloud/TencentDB-Agent-Memory`](https://github.com/TencentCloud/TencentDB-Agent-Memory) | TencentCloud 开源组织深度调研——聚焦 TencentDB-Agent-Memory（Agent 记忆层）+ CubeSandbox（代码沙箱） | — | 2026-06-07 | [TencentCloud-深度调研.md](TencentCloud-深度调研.md) |
+| 285 | [`TencentCloud/CubeSandbox`](https://github.com/TencentCloud/CubeSandbox) | 腾讯云 KVM+RustVMM 60ms AI Agent 沙箱，E2B SDK Drop-in 兼容硬件级隔离 | 6,755 | 2026-07-02 | [TencentCloud-CubeSandbox-深度调研.md](TencentCloud-CubeSandbox-深度调研.md) |
+| 286 | [`TencentCloud/TencentDB-Agent-Memory`](https://github.com/TencentCloud/TencentDB-Agent-Memory) | 腾讯云开源 AI Agent 本地长期记忆引擎——L0→L3 四层语义金字塔 + Mermaid 符号化短期记忆，61.38% Token 节省 | 7,576 | 2026-07-09 | [TencentCloud-TencentDB-Agent-Memory-深度调研.md](TencentCloud-TencentDB-Agent-Memory-深度调研.md) |
+| 287 | [`tensorflow/tensorflow`](https://github.com/tensorflow/tensorflow) | Google 维护的顶级开源机器学习框架（19.5 万⭐）——虽然正被 PyTorch 侵蚀市场份额，但在大规模部署、的生产环境、TPU 生态中仍是无可争议的首 | 195,154 | 2026-05-19 | [tensorflow-tensorflow-深度调研.md](tensorflow-tensorflow-深度调研.md) |
+| 288 | [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) | 9arm-skills | — | 2026-05-20 | [thananon-9arm-skills-深度调研.md](thananon-9arm-skills-深度调研.md) |
+| 289 | [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) | claude-mem — 跨 Agent 会话记忆压缩系统（Hook 捕获 + SQLite/ChromaDB 双存储 + 注入） | 88,631 | 2026-07-27 | [thedotmack-claude-mem-深度调研.md](thedotmack-claude-mem-深度调研.md) |
+| 290 | [`tirth8205/code-review-graph`](https://github.com/tirth8205/code-review-graph) | 本地优先代码智能图谱——Tree-sitter 建图+blast-radius+30 MCP 工具，AI 编码 review 上下文压缩 82x 中位数 | 19,684 | 2026-07-18 | [tirth8205-code-review-graph-深度调研.md](tirth8205-code-review-graph-深度调研.md) |
+| 291 | [`Tong89/smartNode`](https://github.com/Tong89/smartNode) | smartNode (天基智枢) | — | 2026-06-17 | [Tong89-smartNode-深度调研.md](Tong89-smartNode-深度调研.md) |
+| 292 | [`toon-format/toon`](https://github.com/toon-format/toon) | Token 导向序列化格式（TOON）——比 JSON 省 ~33% token，面向 LLM 上下文压缩 | 25,068 | 2026-08-05 | [toon-format-toon-深度调研.md](toon-format-toon-深度调研.md) |
+| 293 | [`topoteretes/cognee`](https://github.com/topoteretes/cognee) | — | — | — | [topoteretes-cognee-深度调研.md](topoteretes-cognee-深度调研.md) |
+| 294 | [`trycompai/crm`](https://github.com/trycompai/crm) | Agentic-first 开源 CRM——耐久研究 agent 是产品本体，API 零智能 + 租约队列 + deny-all 沙箱 + 证据账本 | 6,016 | 2026-07-31 | [trycompai-crm-深度调研.md](trycompai-crm-深度调研.md) |
+| 295 | [`trycua/cua`](https://github.com/trycua/cua) | Computer-Use 2.0 开源基础设施栈——跨 OS 沙箱 + 后台驱动 + Agent 框架 + 基准评测 + 训练数据生成 | 20,200 | 2026-07-20 | [trycua-cua-深度调研.md](trycua-cua-深度调研.md) |
+| 296 | [`tw93/Pake`](https://github.com/tw93/Pake) | 一行命令把任意网页变成 <5MB 桌面应用的 Rust/Tauri CLI，No Electron 极轻量 | 59,019 | 2026-07-03 | [tw93-Pake-深度调研.md](tw93-Pake-深度调研.md) |
+| 297 | [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) | 中文社区最全 AI 驱动渗透测试工具——目标驱动求解引擎+13 个 LLM Provider+21 渗透 Skill+180 文档 | 1,100 | 2026-06-30 | [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md) |
+| 298 | [`unclecode/crawl4ai`](https://github.com/unclecode/crawl4ai) | 面向 LLM 的开源网页爬虫与抓取工具，将网页转化为干净的 Markdown，专为 RAG、AI Agent 和数据管道设计。📖 项目定位与核心功能设计理念Cr | 51 | 2026-06-13 | [unclecode-crawl4ai-深度调研.md](unclecode-crawl4ai-深度调研.md) |
+| 299 | [`usestrix/strix`](https://github.com/usestrix/strix) | AI Agent 驱动的渗透测试框架——Agent 图编排+真实 PoC 验证+自动修复，把安全测试从"扫描器报疑似"推进到"每条漏洞都能复现" | 28,023 | 2026-07-01 | [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md) |
+| 300 | [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) | — | — | — | [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md) |
+| 301 | [`vercel/eve`](https://github.com/vercel/eve) | Vercel 文件系统优先的持久化 Agent 框架——FS 配置+原生 HITL+多频道抽象，Apache-2.0 Beta | 2,792 | 2026-06-28 | [vercel-eve-深度调研.md](vercel-eve-深度调研.md) |
+| 302 | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | Vercel 原生 Rust 浏览器自动化 CLI——守护进程 + CDP 驱动 Chrome，@eN 引用快照，MCP 同源委托，多引擎（CDP/WebDriver） | 39,846 | 2026-08-02 | [vercel-labs-agent-browser-深度调研.md](vercel-labs-agent-browser-深度调研.md) |
+| 303 | [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) | 给 AI Agent 的永久只追加记忆——定宽记录 + 二分合并树压缩，单文件零依赖 | 769 | 2026-07-29 | [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md) |
+| 304 | [`viitor-ai/viitor-voice-nar`](https://github.com/viitor-ai/viitor-voice-nar) | 非自回归 TTS 语音克隆 + 局部编辑（DualCodec 25Hz + gRPC v2 微服务拆分），⚠️ 5 大红旗疑似刷星 | 240 | 2026-07-03 | [viitor-ai-viitor-voice-nar-深度调研.md](viitor-ai-viitor-voice-nar-深度调研.md) |
+| 305 | [`virattt/ai-hedge-fund`](https://github.com/virattt/ai-hedge-fund) | "投资大师即 Agent"的多智能体对冲基金模拟——LangGraph 编排 + React Flow 可视化，纯教育不交易 | 61,797 | 2026-07-15 | [virattt-ai-hedge-fund-深度调研.md](virattt-ai-hedge-fund-深度调研.md) |
+| 306 | [`virattt/dexter`](https://github.com/virattt/dexter) | 金融研究自主 Agent——如 Claude Code 般交互，专为 SEC/财报/市场数据分析优化，支持 WhatsApp+Cron | 27,241 | 2026-06-30 | [virattt-dexter-深度调研.md](virattt-dexter-深度调研.md) |
+| 307 | [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) | 多语言 monorepo 代码 RAG——Tree-sitter 抽结构进 Memgraph 统一图 Schema，自然语言查询 + AST 级编辑，可作 MCP server，MIT | 2,875 | 2026-08-10 | [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md) |
+| 308 | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | — | — | — | [VoltAgent-awesome-design-md-深度调研.md](VoltAgent-awesome-design-md-深度调研.md) |
+| 309 | [`vorpus/performativeUI`](https://github.com/vorpus/performativeUI) | — | — | 2026-06-07 | [vorpus-performativeUI-深度调研.md](vorpus-performativeUI-深度调研.md) |
+| 310 | [`withastro/flue`](https://github.com/withastro/flue) | Astro 团队 TS Agent Harness 框架——沙箱+持久化执行+SKILL.md 原生导入 | 7,243 | 2026-07-12 | [withastro-flue-深度调研.md](withastro-flue-深度调研.md) |
+| 311 | [`withkynam/vibecode-pro-max-kit`](https://github.com/withkynam/vibecode-pro-max-kit) | — | — | 2026-06-19 | [withkynam-vibecode-pro-max-kit-深度调研.md](withkynam-vibecode-pro-max-kit-深度调研.md) |
+| 312 | [`wonderwhy-er/DesktopCommanderMCP`](https://github.com/wonderwhy-er/DesktopCommanderMCP) | Claude MCP 全能终端控制服务器——终端/文件/Office/搜索/远程控制/Docker 隔离，MCP 生态最全工具集 | 6,354 | 2026-07-09 | [wonderwhy-er-DesktopCommanderMCP-深度调研.md](wonderwhy-er-DesktopCommanderMCP-深度调研.md) |
+| 313 | [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) | PaperSpine | — | 2026-05-17 | [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md) |
+| 314 | [`wuji-labs/nopua`](https://github.com/wuji-labs/nopua) | — | — | — | [wuji-labs-nopua-深度调研.md](wuji-labs-nopua-深度调研.md) |
+| 315 | [`xai-org/grok-build`](https://github.com/xai-org/grok-build) | xAI 的 Rust 编码 Agent——ACP 协议三入口（TUI/headless/ACP），DeepAgents 风格 code graph | 18,477 | 2026-07-19 | [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md) |
+| 316 | [`xbtlin/ai-berkshire`](https://github.com/xbtlin/ai-berkshire) | AI 时代的伯克希尔——4 大师对抗+16 Skill+金融严谨工具 | 3,000 | 2026-06-27 | [xbtlin-ai-berkshire-深度调研.md](xbtlin-ai-berkshire-深度调研.md) |
+| 317 | [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) | 全网最全 Nano Banana Pro 提示词案例库——986+ 案例，Gemini 3 Pro Image 画廊，GitHub Pages 零后端 | 794 | 2026-07-08 | [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md) |
+| 318 | [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) | 语音优先的本地 Agent 编排运行时——可审计 DAG、每节点 Docker 隔离、生成式 UI、全本地隐私 | 357 | 2026-07-10 | [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md) |
+| 319 | [`xingkongliang/skills-manager`](https://github.com/xingkongliang/skills-manager) | Tauri 2 跨平台 AI Agent 技能管理桌面应用——Preset 场景编排+Git 备份+ToolAdapter 插件式架构+CLI 嵌入 | 2,843 | 2026-07-09 | [xingkongliang-skills-manager-深度调研.md](xingkongliang-skills-manager-深度调研.md) |
+| 320 | [`xming521/WeClone`](https://github.com/xming521/WeClone) | — | — | — | [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md) |
+| 321 | [`yorukot/superfile`](https://github.com/yorukot/superfile) | Go+bubbletea v2 现代 TUI 文件管理器——单 Model 编排多面板，内建压缩包/PDF/图预览 | 19,408 | 2026-07-26 | [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md) |
+| 322 | [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) | 中文 LeetCode 刷题攻略的标杆项目——《代码随想录》配套仓库，200+ 道经典题目的系统化刷题路线。📖 核心功能系统化刷题路线：按「数组→链表→哈希表→ | 61 | 2026-06-12 | [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md) |
+| 323 | [`Zackriya-Solutions/meetily`](https://github.com/Zackriya-Solutions/meetily) | 隐私优先的 AI 会议助手——Rust+Tauri 底座，100% 本地运行，Parakeet 4x 转写加速，无需云服务 | 15,069 | 2026-07-05 | [Zackriya-Solutions-meetily-深度调研.md](Zackriya-Solutions-meetily-深度调研.md) |
+| 324 | [`zai-org/GLM-5`](https://github.com/zai-org/GLM-5) | 从 Vibe Coding 到 Agentic Engineering 的旗舰模型 | 6,746 | 2026-07-24 | [zai-org-GLM-5-深度调研.md](zai-org-GLM-5-深度调研.md) |
+| 325 | [`zai-org/Open-AutoGLM`](https://github.com/zai-org/Open-AutoGLM) | 智谱开源手机 GUI Agent——VLM + ADB/HDC 执行闭环 | 25,756 | 2026-07-13 | [zai-org-Open-AutoGLM-深度调研.md](zai-org-Open-AutoGLM-深度调研.md) |
+| 326 | [`zarazhangrui/beautiful-html-templates`](https://github.com/zarazhangrui/beautiful-html-templates) | beautiful-html-templates | — | 2026-05-05 | [zarazhangrui-beautiful-html-templates-深度调研.md](zarazhangrui-beautiful-html-templates-深度调研.md) |
+| 327 | [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 驱动五市场自选股 AI 日报——Fork-to-run 零成本架构 + 双 Guardrail 防幻觉 + 通知路由四件套 | 59,613 | 2026-07-31 | [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 ### AI Agent / 助手框架（88）
@@ -436,7 +439,7 @@
 - [`JustVugg/colibri`](https://github.com/JustVugg/colibri) — [JustVugg-colibri-深度调研.md](JustVugg-colibri-深度调研.md)
 - [`MoonshotAI/Kimi-K3`](https://github.com/MoonshotAI/Kimi-K3) — [MoonshotAI-Kimi-K3-深度调研.md](MoonshotAI-Kimi-K3-深度调研.md)
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
-### AI 编码 / Skill 技能（29）
+### AI 编码 / Skill 技能（30）
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`anomalyco/opencode`](https://github.com/anomalyco/opencode) — [anomalyco-opencode-深度调研.md](anomalyco-opencode-深度调研.md)
@@ -460,13 +463,14 @@
 - [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) — [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md)
 - [`JuliusBrussee/caveman`](https://github.com/JuliusBrussee/caveman) — [JuliusBrussee-caveman-深度调研.md](JuliusBrussee-caveman-深度调研.md)
 - [`langchain-ai/openwiki`](https://github.com/langchain-ai/openwiki) — [langchain-ai-openwiki-深度调研.md](langchain-ai-openwiki-深度调研.md)
+- [`pingdotgg/t3code`](https://github.com/pingdotgg/t3code) — [pingdotgg-t3code-深度调研.md](pingdotgg-t3code-深度调研.md)
 - [`PrimeIntellect-ai/prime-agent`](https://github.com/PrimeIntellect-ai/prime-agent) — [PrimeIntellect-ai-prime-agent-深度调研.md](PrimeIntellect-ai-prime-agent-深度调研.md)
 - [`shanraisshan/claude-code-best-practice`](https://github.com/shanraisshan/claude-code-best-practice) — [shanraisshan-claude-code-best-practice-深度调研.md](shanraisshan-claude-code-best-practice-深度调研.md)
 - [`sybil-solutions/codex-shim`](https://github.com/sybil-solutions/codex-shim) — [sybil-solutions-codex-shim-深度调研.md](sybil-solutions-codex-shim-深度调研.md)
 - [`withkynam/vibecode-pro-max-kit`](https://github.com/withkynam/vibecode-pro-max-kit) — [withkynam-vibecode-pro-max-kit-深度调研.md](withkynam-vibecode-pro-max-kit-深度调研.md)
 - [`xai-org/grok-build`](https://github.com/xai-org/grok-build) — [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md)
 - [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) — [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md)
-### RAG / 知识库 / 记忆（14）
+### RAG / 知识库 / 记忆（15）
 - [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`allenai/olmocr`](https://github.com/allenai/olmocr) — [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md)
 - [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) — [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md)
@@ -481,7 +485,8 @@
 - [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) — [thedotmack-claude-mem-深度调研.md](thedotmack-claude-mem-深度调研.md)
 - [`topoteretes/cognee`](https://github.com/topoteretes/cognee) — [topoteretes-cognee-深度调研.md](topoteretes-cognee-深度调研.md)
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
-### 开发工具 / CLI（24）
+- [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
+### 开发工具 / CLI（25）
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
 - [`Automattic/harper`](https://github.com/Automattic/harper) — [Automattic-harper-深度调研.md](Automattic-harper-深度调研.md)
@@ -500,6 +505,7 @@
 - [`logto-io/logto`](https://github.com/logto-io/logto) — [logto-io-logto-深度调研.md](logto-io-logto-深度调研.md)
 - [`oomol-lab/open-connector`](https://github.com/oomol-lab/open-connector) — [oomol-lab-open-connector-深度调研.md](oomol-lab-open-connector-深度调研.md)
 - [`OtterMind/Chat2DB`](https://github.com/OtterMind/Chat2DB) — [OtterMind-Chat2DB-深度调研.md](OtterMind-Chat2DB-深度调研.md)
+- [`pranshuparmar/witr`](https://github.com/pranshuparmar/witr) — [pranshuparmar-witr-深度调研.md](pranshuparmar-witr-深度调研.md)
 - [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) — [PrefectHQ-fastmcp-深度调研.md](PrefectHQ-fastmcp-深度调研.md)
 - [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) — [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md)
 - [`Stirling-Tools/Stirling-PDF`](https://github.com/Stirling-Tools/Stirling-PDF) — [Stirling-Tools-Stirling-PDF-深度调研.md](Stirling-Tools-Stirling-PDF-深度调研.md)
@@ -526,11 +532,12 @@
 - [`penpot/penpot`](https://github.com/penpot/penpot) — [penpot-penpot-深度调研.md](penpot-penpot-深度调研.md)
 - [`remotion-dev/remotion`](https://github.com/remotion-dev/remotion) — [remotion-dev-remotion-深度调研.md](remotion-dev-remotion-深度调研.md)
 - [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) — [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md)
-### 视频 / 音频 / 多媒体（16）
+### 视频 / 音频 / 多媒体（17）
 - [`3b1b/manim`](https://github.com/3b1b/manim) — [3b1b-manim-深度调研.md](3b1b-manim-深度调研.md)
 - [`ATH-MaaS/Pixelle-Video`](https://github.com/ATH-MaaS/Pixelle-Video) — [ATH-MaaS-Pixelle-Video-深度调研.md](ATH-MaaS-Pixelle-Video-深度调研.md)
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
 - [`browser-use/video-use`](https://github.com/browser-use/video-use) — [browser-use-video-use-深度调研.md](browser-use-video-use-深度调研.md)
+- [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) — [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md)
 - [`huggingface/speech-to-speech`](https://github.com/huggingface/speech-to-speech) — [huggingface-speech-to-speech-深度调研.md](huggingface-speech-to-speech-深度调研.md)
 - [`immich-app/immich`](https://github.com/immich-app/immich) — [immich-app-immich-深度调研.md](immich-app-immich-深度调研.md)
 - [`index-tts/index-tts`](https://github.com/index-tts/index-tts) — [index-tts-index-tts-深度调研.md](index-tts-index-tts-深度调研.md)
@@ -572,7 +579,7 @@
 - [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram) — [nagisanzenin-engram-深度调研.md](nagisanzenin-engram-深度调研.md)
 - [`openai/openai-cookbook`](https://github.com/openai/openai-cookbook) — [openai-openai-cookbook-深度调研.md](openai-openai-cookbook-深度调研.md)
 - [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) — [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md)
-### 其他（102）
+### 其他（101）
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
 - [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) — [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md)
 - [`accomplish-ai/coworker`](https://github.com/accomplish-ai/coworker) — [accomplish-ai-coworker-深度调研.md](accomplish-ai-coworker-深度调研.md)
@@ -591,7 +598,6 @@
 - [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) — [calesthio-OpenMontage-深度调研.md](calesthio-OpenMontage-深度调研.md)
 - [`clash-verge-rev/clash-verge-rev`](https://github.com/clash-verge-rev/clash-verge-rev) — [clash-verge-rev-clash-verge-rev-深度调研.md](clash-verge-rev-clash-verge-rev-深度调研.md)
 - [`codecrafters-io/build-your-own-x`](https://github.com/codecrafters-io/build-your-own-x) — [codecrafters-io-build-your-own-x-深度调研.md](codecrafters-io-build-your-own-x-深度调研.md)
-- [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI) — [Comfy-Org-ComfyUI-深度调研.md](Comfy-Org-ComfyUI-深度调研.md)
 - [`Diolinux/PhotoGIMP`](https://github.com/Diolinux/PhotoGIMP) — [Diolinux-PhotoGIMP-深度调研.md](Diolinux-PhotoGIMP-深度调研.md)
 - [`dotnet-skills`](https://github.com/dotnet-skills) — [dotnet-skills-深度调研.md](dotnet-skills-深度调研.md)
 - [`dreammis/social-auto-upload`](https://github.com/dreammis/social-auto-upload) — [dreammis-social-auto-upload-深度调研.md](dreammis-social-auto-upload-深度调研.md)
