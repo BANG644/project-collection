@@ -253,7 +253,7 @@
 | 238 | [`motion-canvas/motion-canvas`](https://github.com/motion-canvas/motion-canvas) | — | 18.6 | 2026-06-10 | [motion-canvas-motion-canvas-深度调研.md](motion-canvas-motion-canvas-深度调研.md) |
 | 239 | [`mshumer/Claude-of-Duty`](https://github.com/mshumer/Claude-of-Duty) | 单 prompt 多 Agent 生成的浏览器 FPS——Three.js+WebGL2 全程序化，OVERWATCH 引擎契约 | 1,527 | 2026-07-29 | [mshumer-Claude-of-Duty-深度调研.md](mshumer-Claude-of-Duty-深度调研.md) |
 | 240 | [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | 「虚拟 AI 公司」人设库——200+ 结构化 agent 角色 Markdown，按 16-21 部门组织，一键装进十余种工具 + 原生 App，MIT | 140,498 | 2026-08-10 | [msitarzewski-agency-agents-深度调研.md](msitarzewski-agency-agents-深度调研.md) |
-| 241 | [`mukul975/Anthropic-Cybersecurity-Skills`](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | AI Agent 网络安全技能库 | 4,200 | 2026-04-09 | [mukul975-Anthropic-Cybersecurity-Skills-深度调研.md](mukul975-Anthropic-Cybersecurity-Skills-深度调研.md) |
+| 241 | [`mukul975/Anthropic-Cybersecurity-Skills`](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | AI Agent 网络安全技能库（818 技能/34 域/6 框架） | 31,502 | 2026-08-29 | [mukul975-Anthropic-Cybersecurity-Skills-深度调研.md](mukul975-Anthropic-Cybersecurity-Skills-深度调研.md) |
 | 242 | [`multica-ai/andrej-karpathy-skills`](https://github.com/multica-ai/andrej-karpathy-skills) | Karpathy 把 LLM 编码常见坑浓缩成单文件 CLAUDE.md 行为准则（谨慎优先），跨 harness 即插即用，205K⭐ 现象级提示词项目 | 205,207 | 2026-08-23 | [multica-ai-andrej-karpathy-skills-深度调研.md](multica-ai-andrej-karpathy-skills-深度调研.md) |
 | 243 | [`multica-ai/multica`](https://github.com/multica-ai/multica) | 自托管「托管式 Agent 平台」——Agent 当数字同事（Issue→Task→Commit），毒化会话检测+默认关 Codex 多智能体，15+ harness 自动适配 | 43,522 | 2026-08-03 | [multica-ai-multica-深度调研.md](multica-ai-multica-深度调研.md) |
 | 244 | [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill) | 「搜人不搜编辑」Agent 情报引擎——14 平台并行 + 真实互动量/Polymarket 赔率排序，50+ Harness 可装 | 55,428 | 2026-07-31 | [mvanhorn-last30days-skill-深度调研.md](mvanhorn-last30days-skill-深度调研.md) |
@@ -264,7 +264,7 @@
 | 249 | [`nexu-io/html-anything`](https://github.com/nexu-io/html-anything) | Agentic HTML 编辑器 | 7,009 | 2026-06-20 | [nexu-io-html-anything-深度调研.md](nexu-io-html-anything-深度调研.md) |
 | 250 | [`nexu-io/open-design`](https://github.com/nexu-io/open-design) | Vibe Design Workspace & 开源 Claude Design 平替——本地优先 AI 设计工作流编排器，25 种 Agent 适配器 + 150+ DESIGN.md + 261 插件的结构化流程引擎 | 74,675 | 2026-07-04 | [nexu-io-open-design-深度调研.md](nexu-io-open-design-深度调研.md) |
 | 251 | [`NoopApp/noop`](https://github.com/NoopApp/noop) | — | — | — | [NoopApp-noop-深度调研.md](NoopApp-noop-深度调研.md) |
-| 252 | [`Normation/rudder`](https://github.com/Normation/rudder) | — | — | — | [Normation-rudder-深度调研.md](Normation-rudder-深度调研.md) |
+| 252 | [`Normation/rudder`](https://github.com/Normation/rudder) | 基础设施配置管理与安全自动化平台 | 706 | 2026-08-29 | [Normation-rudder-深度调研.md](Normation-rudder-深度调研.md) |
 | 253 | [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | Nous Research 自我进化型 AI Agent 框架——闭环学习+12消息平台+6部署后端+五层记忆，205k⭐ | 205,068 | 2026-06-29 | [NousResearch-hermes-agent-深度调研.md](NousResearch-hermes-agent-深度调研.md) |
 | 254 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) | Together AI 反 AI 味设计技能——57 道 slop 门 + 6 轴自批判 + 结构多样，拒绝模板味 | 4,963 | 2026-07-14 | [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md) |
 | 255 | [`NVIDIA/cosmos`](https://github.com/NVIDIA/cosmos) | NVIDIA 开源的全模态世界模型平台——MoT 双塔架构统一视觉推理、世界生成与动作预测，为 Physical AI 提供基础模型 | 10,733 | 2026-07-01 | [NVIDIA-cosmos-深度调研.md](NVIDIA-cosmos-深度调研.md) |
