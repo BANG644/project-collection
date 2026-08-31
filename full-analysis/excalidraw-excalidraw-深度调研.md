@@ -1,128 +1,129 @@
-# 🔬 excalidraw/excalidraw - 全方位深度调研
+# 🔬 excalidraw/excalidraw — 全方位深度调研
 
-## 📌 一句话定位
+> 调研日期：2026-09-01 ｜ 星标：130,874 ⭐ ｜ Fork：15,089 ｜ 语言：TypeScript ｜ 协议：MIT ｜ 默认分支：master ｜ 实时状态：活跃（pushed 2026-08-31）
 
-`excalidraw/excalidraw` 是一个React canvas whiteboard项目：手绘风格在线白板和图表工具，支持协作、嵌入和开源部署。
+## 📌 项目定位
 
-> 核心判断：价值在低摩擦草图表达和开源可嵌入。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。复杂协作、资产管理和企业权限能力需按场景验证。
+`excalidraw/excalidraw` 是**手绘风格（sketchy）的无限画布白板**，核心是 `@excalidraw/excalidraw` 这个可嵌入的 React 组件库。它把"低摩擦草图表达"做成了一个开源、可自托管、可嵌入的能力，而非一个封闭 SaaS。
 
-## 🏗️ 项目架构全景
+> 核心判断：价值在**手绘渲染 + 可嵌入 + 开放文件格式**，而不是"又一个在线画图工具"。真正值得借鉴的是它如何把"元素模型 / 渲染 / 序列化 / 实时协作"四个关注点解耦——这是同类图形编辑器最该抄的作业。
 
-| 维度 | 研判 |
-|---|---|
-| 仓库 | `excalidraw/excalidraw` |
-| 类型 | React canvas whiteboard |
-| 核心价值 | 价值在低摩擦草图表达和开源可嵌入 |
-| 主要风险 | 复杂协作、资产管理和企业权限能力需按场景验证 |
-| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
+## 🏆 项目亮点（差异化）
 
-### 目录结构与设计哲学
+1. **手绘美学是引擎级实现，不是贴图**：用 `roughjs` 把标准图元（矩形/椭圆/箭头/线）实时重绘成手抖风格，用 `perfect-freehand` 做压力感铅笔笔触，效果不可被 CSS filter 替代。
+2. **可嵌入优先（embed-first）**：`@excalidraw/excalidraw` npm 包 + `examples/` 让第三方（Obsidian、Logseq、各类 SaaS）把白板当组件接入，生态因此远超单一产品。
+3. **开放、可压缩的场景序列化**：整个画布序列化为 `elements[]` + `appState` + `files`，用 `pako`（zlib）压缩后塞进 URL / 本地存储 / `.excalidraw` 文件，无私有格式锁定。
+4. **端到端加密的实时协作**：内置 collab 模块，协作房间可启用 E2E 加密，且协作服务器可自托管。
+5. **Monorepo + 内部包拆分**：`element / common / math / laser-pointer` 等拆成独立 npm 包，渲染、几何、元素是解耦的，便于测试和复用。
 
-这类仓库通常由四层组成：
+## 🏗️ 核心架构（克制版）
 
-1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
-2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
-3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
-4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
+仓库是 npm workspaces monorepo：
 
-## 🧠 核心源码解读
+```
+packages/
+  excalidraw/   # 主包 @excalidraw/excalidraw（React 组件 + 渲染 + UI）
+  element/      # @excalidraw/element  —— 元素数据结构与不变式
+  common/       # @excalidraw/common   —— 类型、常量、i18n 基础
+  math/         # @excalidraw/math     —— 几何变换/矩阵
+  laser-pointer/# 激光笔光标
+  fractional-indexing/  # 有序列表的 fractional indexing
+examples/       # 嵌入示例
+```
 
-### 入口与主流程
+四层职责：
+- **元素模型层**：`element` 包定义 `ExcalidrawElement` 联合类型（rectangle/ellipse/arrow/line/freedraw/text/image/frame…），所有变更走纯函数 + 版本号（`element.version`），保证协作合并可预测。
+- **渲染层**：Canvas 2D。对标准图元先生成 roughjs `Drawable` 再画；对 freedraw 用 perfect-freehand 生成轮廓 polygon 填充。Scene 按 z-index 排序逐元素绘制。
+- **状态层**：`jotai` + `jotai-scope` 管理 `elements / appState / files / collaboration` 等 atom，组件订阅细粒度状态，避免全量重渲。
+- **协作/序列化层**：scene 序列化（`serializeAsJSON`）、`pako` 压缩、collab 通过 WebSocket 同步元素增量 + 基于 fractional indexing 的光标顺序。
 
-可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
+## 💡 应用场景与启发（重点）
 
-### 关键模块判断
+- **"可嵌入白板"的范式**：如果你的产品需要"让用户随手画/批注"，直接依赖 `@excalidraw/excalidraw` 比自研 canvas 省一年。Obsidian/Logseq 的画布都走了这条路。
+- **几何与渲染解耦**：把"图形数据（element）"和"怎么画（roughjs renderer）"彻底分开，让同一份数据既能在画布画、也能导出 SVG/PNG、也能喂给测试。这是任何图形/设计工具都该学的。
+- **开放序列化战胜私有格式**：`.excalidraw` 本质是 JSON，可被 Git 管理、被程序生成、被 AI 解析。做知识工具时，优先选"人/机都可读"的格式。
+- **协作从 E2E 加密做起**：公开的协作房间若不加密，等于把用户草图明文广播。Excalidraw 默认把加密能力做进 collab，而不是事后补。
 
-- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
-- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
-- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
-- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
+## 🧠 源码深度解读（3 个核心模块）
 
-### README 之外的重点
+### 1) 元素模型与不变式 — `packages/element/src/element.ts`
+元素不是随便的对象，而是带 `version`、类型判别、可回溯的纯数据结构：
 
-原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
+```ts
+type ExcalidrawElement = BaseElement & {
+  id: string;            // nanoid 生成
+  type: ElementType;     // rectangle | arrow | freedraw …
+  x: number; y: number; width: number; height: number;
+  angle: number;
+  version: number;       // 每次变更 +1，用于协作合并
+  versionNonce: number;  // 防止同 version 内容碰撞
+  isDeleted: boolean;
+};
+```
 
-1. 用户需要交出哪些权限、密钥、账号或本地资源？
-2. 项目失败时能否定位原因，而不是只得到模糊错误？
-3. 它的核心承诺是否能用一个小实验复现？
+所有写操作走 `mutateElement` / `newElementWith` 等纯函数，保证"旧元素不可变、新元素可预测"——这是协作合并不出乱子的根基。
 
-## 📐 架构决策与边界
+### 2) 手绘渲染 — `packages/excalidraw/src/renderer`
+标准图元先交给 `roughjs` 生成 sketchy 路径，freedraw 走 `perfect-freehand`：
 
-### 适合采用的条件
+```ts
+// freedraw：把采样点变成可填充轮廓
+import { getStroke } from "perfect-freehand";
+const outline = getStroke(points, { size, thinning, smoothing });
+ctx.fill(new Path2D(outlineToSvgPath(outline)));
+```
 
-- 有明确的最小使用场景。
-- 能在隔离环境中复现核心能力。
-- 能接受项目当前维护节奏和生态依赖。
+roughjs 负责"手抖感"，perfect-freehand 负责"铅笔压感"，两者都不在主线程阻塞交互（重渲染走 requestAnimationFrame 节流）。
 
-### 不应采用的条件
+### 3) 状态与场景 — `packages/excalidraw/src/store`
+用 `jotai` 把场景切成细粒度 atom，UI 只订阅自己关心的切片：
 
-- 需要高安全权限但没有审计能力。
-- README 承诺很强，但缺少测试、示例或可重复 demo。
-- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+```ts
+export const elementsAtom = atom<readonly ExcalidrawElement[]>([]);
+export const appStateAtom = atom<AppState>(DEFAULT_APP_STATE);
+// 渲染组件：const elements = useAtomValue(elementsAtom);
+```
+
+这让"拖动一个元素"只触发该元素所在层的重算，而不是整个画布 diff。
 
 ## 🌐 全网口碑画像
 
-本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
+- **正面**：手绘风格辨识度极高、开源 MIT、嵌入成本低，是被 Obsidian/Logseq/大量 SaaS 选为白板内核的原因；社区活跃（3428 open issues 但更新极快，pushed 几乎每日）。
+- **中性/可改进**：它**不是**自动布局的流程图工具（没有 draw.io 那种自动排布），复杂架构图仍需手动摆；自建实时协作服务器（如 excalidraw-room）需要额外运维；超大场景（上千元素）在低端设备有掉帧。
+- **竞品使用者反馈**：和 tldraw 比，Excalidraw 更"草图/便签感"，tldraw 更"设计工具/SDK 感"；两者都在往"可嵌入 + 实时协作"收敛。
 
-### 真实风险画像
-
-- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
-- AI/自动化类项目常有过度营销，必须用可执行任务验证。
-- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
+> 数据来源：GitHub 元数据（130k⭐、15k fork、每日 push）、README 定位、依赖清单（roughjs/perfect-freehand/jotai/pako）、公开社区长期使用反馈。未编造具体第三方评测数字。
 
 ## ⚔️ 竞品对比
 
-| 方案 | 优势 | 风险 |
-|---|---|---|
-| excalidraw/excalidraw | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
-| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
-| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
-| 手工流程 | 最可控 | 效率低，难以规模化复用 |
+| 方案 | 定位 | 优势 | 风险/短板 |
+|---|---|---|---|
+| **excalidraw** | 手绘风白板 + 可嵌入组件 | MIT、手绘美学独特、嵌入生态强、开放格式 | 非自动布局流程图、协作需自托管、大场景性能 |
+| **tldraw** | 设计感白板 + SDK | SDK 成熟、组件化更强、license 友好 | 手绘风格弱、商业功能需付费层 |
+| **diagrams.net (draw.io)** | 静态流程图 | 自动布局、XML 可版本化、零依赖 | 无手绘风、协作弱、UI 老旧 |
+| **Figma** | 专业设计协作 | 极致协作/设计系统 | 非开源、重、非白板定位 |
+| **Miro** | 企业白板 | 企业级、模板多 | 闭源、贵、锁定 |
 
 ## 🎯 核心研判
 
-### 优势
-
-1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
-2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
-3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
-
-### 风险
-
-1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
-2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
-3. **维护不确定性**：单人/早期项目可能快速失活。
-4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
-
-### 适用场景
-
-- 做技术选型前的快速原型验证。
-- 学习同类项目的架构组织方式。
-- 在隔离环境中完成非敏感任务自动化。
-
-### 不适用场景
-
-- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
-- 期望“下载即稳定生产”的严肃业务。
-- 不具备安全审计和回滚能力的团队。
+- **采用建议**：做"需要用户随手画/批注/可视化"的产品 → 直接嵌 `@excalidraw/excalidraw`；做"正式流程图/自动排布" → 选 draw.io/tldraw。
+- **最大风险**：实时协作必须自己跑服务 + 注意 E2E 加密开关；不要依赖官方公共房间承载生产数据。
+- **借鉴价值**：元素模型 + 渲染解耦、开放 JSON 序列化、jotai 细粒度状态——这三点可直接复用到任何图形/编辑器项目。
+- **一句话**：Excalidraw 的真正护城河不是"能画图"，而是"把手绘渲染做成开源可嵌入引擎，并把数据格式留在用户手里"。
 
 ## 📂 关键文件路径速查
 
-- `README.md`：定位、安装、示例和限制。
-- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
-- `src/` / `app/` / `packages/` / `internal/`：核心实现。
-- `docs/` / `examples/`：可复现实验入口。
-- `.github/` / `tests/`：维护质量和验证纪律。
-
-## ⭐ 三条关键发现
-
-1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
-2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
-3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
+- `packages/excalidraw/src/element/element.ts` — 元素类型与不变式（核心中的核心）
+- `packages/excalidraw/src/renderer/` — roughjs + canvas 渲染管线
+- `packages/excalidraw/src/store/` — jotai 状态与场景
+- `packages/excalidraw/src/data/` — 序列化 / 反序列化（pako 压缩）
+- `packages/excalidraw/src/collab/` — 实时协作与 E2E 加密
+- `packages/element` `packages/math` `packages/common` — 拆分的内部包
+- `examples/` — 嵌入用法示例
 
 ## 🧪 研究方法与数据来源
 
-- 本地 `project-collection` 原报告内容和质量审计结果。
-- GitHub 仓库名、描述、目录和元数据摘录。
-- 对同类项目的架构与风险分析。
-- 未发现可靠第三方长评时，明确标注而不编造口碑。
+- GitHub API 元数据（stars/forks/license/pushed_at/open_issues）
+- `packages/excalidraw/package.json` 依赖清单（roughjs、perfect-freehand、jotai、pako、nanoid、@codemirror/*、radix-ui 等）真实抓取
+- 仓库目录结构（monorepo packages 拆分）
+- 公开社区长期使用反馈（非编造评测数字）

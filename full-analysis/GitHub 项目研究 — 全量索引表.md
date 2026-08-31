@@ -94,7 +94,7 @@
 | 79 | [`chatwoot/chatwoot`](https://github.com/chatwoot/chatwoot) | 开源客户支持平台——Intercom/Zendesk 替代，全渠道收件箱 + Captain AI Agent | 35,063 | 2026-08-01 | [chatwoot-chatwoot-深度调研.md](chatwoot-chatwoot-深度调研.md) |
 | 80 | [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Google 官方 Chrome DevTools MCP——性能 trace/堆快照/Lighthouse 变 Agent 原生能力，puppeteer+DevTools 双引擎 | 47,976 | 2026-07-31 | [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md) |
 | 81 | [`citrolabs/ego-lite`](https://github.com/citrolabs/ego-lite) | 从零为「人和 AI Agent 共用浏览器」设计的 Chromium 浏览器——Agent 在隔离 Space 并行跑任务、继承用户登录态，代码接口（JS 一次性执行）非 CLI，MIT 连接层 | 10,261 | 2026-08-15 | [citrolabs-ego-lite-深度调研.md](citrolabs-ego-lite-深度调研.md) |
-| 82 | [`clash-verge-rev/clash-verge-rev`](https://github.com/clash-verge-rev/clash-verge-rev) | — | — | — | [clash-verge-rev-clash-verge-rev-深度调研.md](clash-verge-rev-clash-verge-rev-深度调研.md) |
+| 82 | [`clash-verge-rev/clash-verge-rev`](https://github.com/clash-verge-rev/clash-verge-rev) | 基于 Tauri 的跨平台 Mihomo(Clash Meta) 代理 GUI，Clash for Windows 停更后的主流继承者，TUN/系统代理/订阅管理齐全 | 141,364 | 2026-09-01 | [clash-verge-rev-clash-verge-rev-深度调研.md](clash-verge-rev-clash-verge-rev-深度调研.md) |
 | 83 | [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) | — | — | — | [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md) |
 | 84 | [`cloudflare/computer`](https://github.com/cloudflare/computer) | 住在 Durable Object 里的虚拟文件系统 + 可插拔执行运行时——给每个 Agent 一台「计算机」而非容器 | 5,435 | 2026-08-08 | [cloudflare-computer-深度调研.md](cloudflare-computer-深度调研.md) |
 | 85 | [`cloudflare/security-audit-skill`](https://github.com/cloudflare/security-audit-skill) | — | 346 | 2026-06-23 | [cloudflare-security-audit-skill-深度调研.md](cloudflare-security-audit-skill-深度调研.md) |
@@ -136,7 +136,7 @@
 | 121 | [`embabel/embabel-agent`](https://github.com/embabel/embabel-agent) | JVM 上的 agentic flow 框架——GOAP 真规划+OODA 动态 replan+强类型领域模型，注解/DSL 双编排，Spring 生态，Apache-2.0 | 4,195 | 2026-08-13 | [embabel-embabel-agent-深度调研.md](embabel-embabel-agent-深度调研.md) |
 | 122 | [`evershopcommerce/evershop`](https://github.com/evershopcommerce/evershop) | — | — | 2026-06-19 | [evershopcommerce-evershop-深度调研.md](evershopcommerce-evershop-深度调研.md) |
 | 123 | [`every-app/open-seo`](https://github.com/every-app/open-seo) | Semrush/Ahrefs 开源替代——自托管 SEO 平台+MCP 服务器+7 个 Agent Skills+Pay-as-you-go | 3,337 | 2026-06-28 | [every-app-open-seo-深度调研.md](every-app-open-seo-深度调研.md) |
-| 124 | [`excalidraw/excalidraw`](https://github.com/excalidraw/excalidraw) | — | — | — | [excalidraw-excalidraw-深度调研.md](excalidraw-excalidraw-深度调研.md) |
+| 124 | [`excalidraw/excalidraw`](https://github.com/excalidraw/excalidraw) | 手绘风无限画布白板 + 可嵌入 React 组件库(@excalidraw/excalidraw)，roughjs+perfect-freehand 实时渲染、开放 JSON 序列化 | 130,874 | 2026-09-01 | [excalidraw-excalidraw-深度调研.md](excalidraw-excalidraw-深度调研.md) |
 | 125 | [`facebook/astryx`](https://github.com/facebook/astryx) | Meta 8 年打磨 150+ 组件 React 设计系统，CLI+MCP 双通道 AI 原生架构 | 2,487 | 2026-07-02 | [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md) |
 | 126 | [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | Tauri 2 桌面端 AI 编码工具管理器——SQLite SSOT + 原子写 + 双向同步，统管 7 款 Coding Agent | 116,295 | 2026-07-13 | [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md) |
 | 127 | [`firecrawl/anydoc`](https://github.com/firecrawl/anydoc) | Firecrawl Rust 文档转 Markdown 库——9 类 Office/PDF 统一 model + 单序列化器，Rust/Node/Python/WASM 四端同构 | 4,343 | 2026-08-03 | [firecrawl-anydoc-深度调研.md](firecrawl-anydoc-深度调研.md) |
@@ -349,7 +349,7 @@
 | 334 | [`stablyai/orca`](https://github.com/stablyai/orca) | 为百倍开发者准备的 AI 编排器——并行 worktree 扇出任意 CLI 编码 Agent，桌面/移动/VPS 统一追踪，MIT | 42,566 | 2026-08-12 | [stablyai-orca-深度调研.md](stablyai-orca-深度调研.md) |
 | 335 | [`steipete/CodexBar`](https://github.com/steipete/CodexBar) | macOS 菜单栏 AI 编程额度监控——57+ Provider 全覆盖，隐私优先，CLI+GUI 双模，生态辐射 Windows/Linux | 16,696 | 2026-07-07 | [steipete-CodexBar-深度调研.md](steipete-CodexBar-深度调研.md) |
 | 336 | [`Stirling-Tools/Stirling-PDF`](https://github.com/Stirling-Tools/Stirling-PDF) | Stirling-PDF — #1 PDF Application on GitHub | 82,799 | — | [Stirling-Tools-Stirling-PDF-深度调研.md](Stirling-Tools-Stirling-PDF-深度调研.md) |
-| 337 | [`supabase/supabase`](https://github.com/supabase/supabase) | — | — | — | [supabase-supabase-深度调研.md](supabase-supabase-深度调研.md) |
+| 337 | [`supabase/supabase`](https://github.com/supabase/supabase) | 以 Postgres 为核心的开源后端平台(Firebase 替代)，Auth/REST/Realtime/Storage/向量(pgvector)一体化、可自托管 | 108,651 | 2026-09-01 | [supabase-supabase-深度调研.md](supabase-supabase-深度调研.md) |
 | 338 | [`supermemoryai/supermemory`](https://github.com/supermemoryai/supermemory) | — | — | — | [supermemoryai-supermemory-深度调研.md](supermemoryai-supermemory-深度调研.md) |
 | 339 | [`sveltejs/svelte`](https://github.com/sveltejs/svelte) | "编译器即框架"的前端革命者——Svelte 5 用 Runes 重新定义响应式系统，无虚拟 DOM、编译时优化、最小化 bundle | 87,585 | 2026-06-30 | [sveltejs-svelte-深度调研.md](sveltejs-svelte-深度调研.md) |
 | 340 | [`sybil-solutions/codex-shim`](https://github.com/sybil-solutions/codex-shim) | — | — | 2026-06-19 | [sybil-solutions-codex-shim-深度调研.md](sybil-solutions-codex-shim-深度调研.md) |

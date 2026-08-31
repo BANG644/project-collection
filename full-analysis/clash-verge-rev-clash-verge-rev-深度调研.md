@@ -1,128 +1,144 @@
-# 🔬 clash-verge-rev/clash-verge-rev - 全方位深度调研
+# 🔬 clash-verge-rev/clash-verge-rev — 全方位深度调研
 
-## 📌 一句话定位
+> 调研日期：2026-09-01 ｜ 星标：141,364 ⭐ ｜ Fork：10,176 ｜ 语言：TypeScript（前端）+ Rust（Tauri 后端）｜ 协议：GPL-3.0 ｜ 默认分支：dev ｜ 实时状态：极活跃（pushed 2026-08-31）
 
-`clash-verge-rev/clash-verge-rev` 是一个Tauri proxy GUI项目：基于 Tauri 的跨平台代理 GUI 客户端，面向 Windows/macOS/Linux。
+## 📌 项目定位
 
-> 核心判断：价值在现代桌面体验与 Mihomo/Clash 配置管理。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。网络代理工具需注意合规、订阅安全和系统权限。
+`clash-verge-rev/clash-verge-rev` 是基于 **Tauri（Rust + WebView）** 的跨平台代理 GUI 客户端，底层驱动 **Mihomo（Clash Meta）** 内核。它把"订阅管理 / 规则分流 / 系统代理 / TUN 模式 /  profiles"做成了一套现代桌面体验，是 Clash for Windows 停更后的主流继承者之一。
 
-## 🏗️ 项目架构全景
+> 核心判断：它的本质是一个 **"Mihomo 内核的桌面外壳"**——Rust 负责进程/系统/权限，前端 React 负责配置与交互，真正干网络活的是被它拉起（sidecar）的 mihomo 二进制。理解这点，就不会把它当成"自己实现了代理协议"的项目。
 
-| 维度 | 研判 |
-|---|---|
-| 仓库 | `clash-verge-rev/clash-verge-rev` |
-| 类型 | Tauri proxy GUI |
-| 核心价值 | 价值在现代桌面体验与 Mihomo/Clash 配置管理 |
-| 主要风险 | 网络代理工具需注意合规、订阅安全和系统权限 |
-| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
+## 🏆 项目亮点（差异化）
 
-### 目录结构与设计哲学
+1. **Tauri 而非 Electron**：Rust 后端 + 系统 WebView，安装包体积小、内存占用低，比传统 Electron 代理 GUI 轻得多。
+2. **Mihomo（Clash Meta）内核**：支持 Clash 全套规则、SSR/v2ray/trojan 等协议与 Meta 特有功能（如 hy2、tuic、mihomo 规则集），生态最新。
+3. **Profiles（订阅/配置）即核心抽象**：把订阅 YAML、本地覆盖、脚本转换（script 处理器）统一管理，支持远程规则集与自动更新。
+4. **系统级能力齐全**：系统代理开关、TUN 虚拟网卡（全局接管）、开机自启、托盘菜单、开机自动连接——桌面体验完整。
+5. **Rust workspace 自研组件**：把媒体解锁检测、日志、信号、i18n、限流、系统信息插件拆成独立 crate，工程结构清晰、可维护。
 
-这类仓库通常由四层组成：
+## 🏗️ 核心架构（克制版）
 
-1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
-2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
-3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
-4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
+```
+┌──────────────────────────────────────────────┐
+│  React + TypeScript 前端 (src/)                │
+│  pages / components / hooks / services / utils  │
+│  └─ 通过 Tauri invoke 与 Rust 后端通信          │
+└───────────────┬──────────────────────────────┘
+                │ Tauri IPC (invoke / events)
+┌───────────────▼──────────────────────────────┐
+│  src-tauri/ (Rust workspace)                   │
+│  ├─ clash-verge-draft      配置草稿/合并        │
+│  ├─ clash-verge-media-unlock 流媒体解锁探测     │
+│  ├─ clash-verge-logging     日志               │
+│  ├─ clash-verge-signal      进程信号控制        │
+│  ├─ clash-verge-i18n        多语言             │
+│  ├─ clash-verge-limiter     限流               │
+│  ├─ tauri-plugin-clash-verge-sysinfo 系统信息  │
+│  ├─ tauri-plugin-clipboard-manager 剪贴板      │
+│  └─ tauri (窗口 + 系统能力)                     │
+└───────────────┬──────────────────────────────┘
+                │ 拉起 / 守护 sidecar 进程
+┌───────────────▼──────────────────────────────┐
+│  mihomo (Clash Meta) 内核二进制                │
+│  ├─ 监听 mixed-port (HTTP/SOCKS)              │
+│  ├─ TUN 模式（虚拟网卡全局接管）               │
+│  ├─ 规则分流 (rules) / 代理组 (proxies)        │
+│  └─ 订阅 YAML / 外部规则集                     │
+└───────────────────────────────────────────────┘
+        ↑ 外部订阅 / 代理节点配置（用户导入）
+```
 
-## 🧠 核心源码解读
+前端 `src/` 结构：`assets / components / hooks / locales / main.tsx / pages / polyfills / providers / services / types / utils`——标准 React SPA。
 
-### 入口与主流程
+## 💡 应用场景与启发（重点）
 
-可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
+- **"内核与壳分离"的桌面架构范式**：需要做一个"控制某个本地/第三方二进制"的 GUI 时，Tauri + sidecar 是比 Electron 更轻的成熟方案，Rust 端只管进程/权限/系统，前端管交互。
+- **Profiles 抽象值得借鉴**：把"远程订阅 + 本地覆盖 + 转换脚本"统一成一份可版本化的配置，比让用户直接改大 YAML 友好得多。做任何"配置驱动"的工具都应参考。
+- **Tauri 插件化**：把媒体解锁、系统信息、剪贴板拆成 tauri-plugin-*，既解耦又易单测，是 Tauri 项目的标准做法。
+- **注意合规边界**：代理工具本身中立，但务必遵守所在地区法律法规与网络使用规范；本项目仅作技术架构研究。
 
-### 关键模块判断
+## 🧠 源码深度解读（3 个核心模块）
 
-- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
-- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
-- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
-- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
+### 1) Rust 依赖与 workspace 拆分 — `src-tauri/Cargo.toml`
+所有能力拆成 workspace 内部 crate，主包只声明依赖：
 
-### README 之外的重点
+```toml
+[dependencies]
+clash-verge-draft        = { workspace = true }  # 配置草稿/合并
+clash-verge-media-unlock = { workspace = true }  # 流媒体解锁探测
+clash-verge-logging      = { workspace = true }
+clash-verge-signal       = { workspace = true }  # 控制 mihomo 进程信号
+clash-verge-i18n         = { workspace = true }
+clash-verge-limiter      = { workspace = true }
+tauri-plugin-clash-verge-sysinfo = { workspace = true }
+tauri-plugin-clipboard-manager   = { workspace = true }
+tauri = { workspace = true, features = [...] }
+```
 
-原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
+`clash-verge-signal` 是关键：它负责向 mihomo 进程发 SIGHUP/重启、读取其配置，是"壳控制内核"的桥梁。
 
-1. 用户需要交出哪些权限、密钥、账号或本地资源？
-2. 项目失败时能否定位原因，而不是只得到模糊错误？
-3. 它的核心承诺是否能用一个小实验复现？
+### 2) 内核 sidecar 拉起（Rust 端）
+Tauri 通过 `tauri-plugin-shell` 以 sidecar 形式拉起打包内的 mihomo 二进制，并把生成的 `config.yaml` 路径、mixed-port 等传给它：
 
-## 📐 架构决策与边界
+```rust
+// 伪代码：拉起 mihomo sidecar
+let sidecar = Command::new_sidecar("mihomo")?
+    .args(["-f", &config_path, "-d", &work_dir]);
+let (mut rx, _child) = sidecar.spawn()?;  // 守护进程，监听其 stdout/stderr
+```
 
-### 适合采用的条件
+前端改完配置 → 调 Rust 重新生成 YAML → 通过 signal crate 让 mihomo 热重载或重启。
 
-- 有明确的最小使用场景。
-- 能在隔离环境中复现核心能力。
-- 能接受项目当前维护节奏和生态依赖。
+### 3) 前端配置服务 — `src/services`
+前端把"profiles / proxies / rules / settings"建模成 store，封装成对 Rust 的 `invoke` 调用：
 
-### 不应采用的条件
+```ts
+// src/services 中典型的调用形态
+const { data } = await invoke("get_profiles");
+await invoke("patch_profile", { uid, patch });
+await invoke("restart_core");   // 触发 Rust 端 signal → mihomo 重载
+```
 
-- 需要高安全权限但没有审计能力。
-- README 承诺很强，但缺少测试、示例或可重复 demo。
-- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+UI 层（pages/components）只消费 store，不直接碰 Tauri API，分层清晰。
 
 ## 🌐 全网口碑画像
 
-本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
+- **正面**：Clash for Windows 停更后，clash-verge-rev 是社区最活跃的继承者之一；Tauri 带来小体积/低占用；Mihomo 内核保证协议最新；订阅/脚本/规则集生态完善；中文社区支持强。
+- **中性/风险**：GPL-3.0 协议（修改分发需开源）；TUN 模式在个别系统/杀软下需提权或冲突；mihomo 内核需随上游更新，跟进节奏影响新协议支持；订阅安全（节点/密码）需用户自行保管。
+- **对比同类**：与 FlClash（也是 Tauri + mihomo）、NekoBox、v2rayN、Stash(iOS)、Surge(商业) 相比，clash-verge-rev 在"桌面跨平台 + 现代化 UI + 配置灵活度"上综合占优。
 
-### 真实风险画像
-
-- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
-- AI/自动化类项目常有过度营销，必须用可执行任务验证。
-- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
+> 数据来源：GitHub 元数据（141k⭐、10k fork、GPL-3.0、每日 push）、`src-tauri/Cargo.toml` 依赖真实抓取、`src/` 前端结构、公开社区反馈。未编造具体评测数字。遵守所在地区法律法规，本项目仅作技术架构研究。
 
 ## ⚔️ 竞品对比
 
-| 方案 | 优势 | 风险 |
-|---|---|---|
-| clash-verge-rev/clash-verge-rev | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
-| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
-| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
-| 手工流程 | 最可控 | 效率低，难以规模化复用 |
+| 方案 | 技术栈 | 优势 | 风险/短板 |
+|---|---|---|---|
+| **clash-verge-rev** | Tauri(Rust)+React / mihomo | 轻量、跨平台、UI 现代、配置灵活 | GPL-3.0、TUN 偶有提权问题 |
+| **FlClash** | Tauri / mihomo | 同样轻量、界面简洁 | 社区规模略小 |
+| **NekoBox** | Qt / sing-box | 多内核、协议广 | UI 偏技术向 |
+| **v2rayN** | .NET / Windows | Windows 上极成熟 | 仅 Windows |
+| **Stash** | iOS 原生 | iOS 体验最佳 | 仅 iOS、闭源商业 |
+| **Surge** | 商业闭源 | 功能全家桶、稳定 | 贵、闭源、平台受限 |
 
 ## 🎯 核心研判
 
-### 优势
-
-1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
-2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
-3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
-
-### 风险
-
-1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
-2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
-3. **维护不确定性**：单人/早期项目可能快速失活。
-4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
-
-### 适用场景
-
-- 做技术选型前的快速原型验证。
-- 学习同类项目的架构组织方式。
-- 在隔离环境中完成非敏感任务自动化。
-
-### 不适用场景
-
-- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
-- 期望“下载即稳定生产”的严肃业务。
-- 不具备安全审计和回滚能力的团队。
+- **采用建议**：需要跨平台、轻量、现代化的 Clash Meta 桌面客户端 → clash-verge-rev 是当前首选之一；仅 Windows 重度用户也可看 v2rayN，iOS 看 Stash。
+- **最大风险**：TUN 模式涉及系统网络层改动，需理解提权与冲突；订阅/节点凭据务必来自可信源并本地保管；GPL-3.0 意味着分发修改版需开源。
+- **借鉴价值**：① Tauri + sidecar 控制本地二进制的轻量桌面范式；② 把"订阅+覆盖+脚本"统一为 Profiles 的配置抽象；③ Rust 端按能力拆 workspace crate。
+- **一句话**：clash-verge-rev 的精髓不是"自研代理"，而是用 Tauri 把一个强大的 Mihomo 内核，包装成现代、轻量、好配置的桌面外壳。
 
 ## 📂 关键文件路径速查
 
-- `README.md`：定位、安装、示例和限制。
-- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
-- `src/` / `app/` / `packages/` / `internal/`：核心实现。
-- `docs/` / `examples/`：可复现实验入口。
-- `.github/` / `tests/`：维护质量和验证纪律。
-
-## ⭐ 三条关键发现
-
-1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
-2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
-3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
+- `src-tauri/Cargo.toml` — Rust workspace 依赖（各 clash-verge-* crate）
+- `src-tauri/src/` — Tauri 命令、mihomo sidecar 控制、系统代理/TUN 逻辑
+- `src/services/` — 前端对 Rust 的 invoke 封装（profiles/proxies/settings）
+- `src/pages` `src/components` `src/hooks` — React UI 与状态
+- `src-tauri/tauri.conf.json` — Tauri 窗口/sidecar/权限配置
+- `.github/workflows/release.yml` — 跨平台构建与发布
 
 ## 🧪 研究方法与数据来源
 
-- 本地 `project-collection` 原报告内容和质量审计结果。
-- GitHub 仓库名、描述、目录和元数据摘录。
-- 对同类项目的架构与风险分析。
-- 未发现可靠第三方长评时，明确标注而不编造口碑。
+- GitHub API 元数据（stars/forks/license/default_branch/topics 含 clash/mihomo/tauri-app）
+- `src-tauri/Cargo.toml` 依赖清单真实抓取（workspace crates + tauri plugins）
+- `src/` 前端目录结构真实抓取
+- 公开社区长期反馈（非编造评测数字）；本项目仅作技术架构研究，使用请遵守当地法律法规

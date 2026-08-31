@@ -1,128 +1,134 @@
-# 🔬 supabase/supabase - 全方位深度调研
+# 🔬 supabase/supabase — 全方位深度调研
 
-## 📌 一句话定位
+> 调研日期：2026-09-01 ｜ 星标：108,651 ⭐ ｜ Fork：13,685 ｜ 语言：TypeScript（含大量 Go/Elixir/Rust 服务）｜ 协议：Apache-2.0 ｜ 默认分支：master ｜ 实时状态：极活跃（pushed 2026-08-31）
 
-`supabase/supabase` 是一个Postgres backend platform项目：以 Postgres 为核心的开源后端平台，提供数据库、Auth、Realtime、Storage、Edge Functions 和向量能力。
+## 📌 项目定位
 
-> 核心判断：价值在 Firebase 替代路线与 Postgres 生态整合。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。自托管复杂度、迁移成本和云服务锁定需评估。
+`supabase/supabase` 是 **"开源的 Firebase 替代"——以 Postgres 为唯一真相源的后端开发平台**。它不重新发明数据库，而是把 Postgres 之上的 Auth、REST、Realtime、Storage、Edge Functions、向量检索全部用开源组件"组装"成一个开箱即用的后端，并配一个 Next.js  dashboard（Studio）。
 
-## 🏗️ 项目架构全景
+> 核心判断：Supabase 的本质不是"一个产品"，而是**一套围绕 Postgres 的后端服务体系 + 一个统一控制面**。它的护城河是"你永远拥有底层 Postgres，随时可以裸奔跑路"，而不是把数据锁进私有存储。
 
-| 维度 | 研判 |
-|---|---|
-| 仓库 | `supabase/supabase` |
-| 类型 | Postgres backend platform |
-| 核心价值 | 价值在 Firebase 替代路线与 Postgres 生态整合 |
-| 主要风险 | 自托管复杂度、迁移成本和云服务锁定需评估 |
-| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
+## 🏆 项目亮点（差异化）
 
-### 目录结构与设计哲学
+1. **Postgres 是唯一真相源**：所有能力（Auth/REST/Realtime/Storage/向量）都直接读写同一份 Postgres，没有独立的状态孤岛，迁移/备份/SQL 都标准化。
+2. **开源组件拼装，而非黑盒**：GoTrue（Auth）、PostgREST（REST）、Realtime（Elixir）、Storage API（S3 兼容）、Kong（网关）、pg-meta（管理）、Supavisor（连接池）——每个都能单独理解、单独替换。
+3. **行级安全（RLS）即权限模型**：权限直接写进 Postgres 的 RLS 策略，数据库层兜底，而不是在应用层各自实现，安全边界清晰。
+4. **AI / 向量原生**：pgvector + embeddings + `ai-commands`，把"语义检索/向量库"做成 Postgres 的一等能力，AI 应用零额外基础设施。
+5. **自托管与云等价**：`docker/docker-compose.yml` 一键拉起完整栈，本地开发环境和云端架构一致，没有"云上魔法"。
 
-这类仓库通常由四层组成：
+## 🏗️ 核心架构（克制版）
 
-1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
-2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
-3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
-4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
+这是典型的 **"控制面仓库 + 多服务后端"**：本仓库主要是 Studio（dashboard）、docker 自托管栈、以及若干前端/工具 packages；核心客户端 SDK（`supabase-js`、`auth-js`/`gotrue`、`realtime-js`、`storage-js`、`postgrest-js`）在独立仓库，但都通过本仓库的 Studio 与 docker 栈串起来。
 
-## 🧠 核心源码解读
+`docker/docker-compose.yml` 暴露的真实服务矩阵（**这是 Supabase 架构最该记住的一张图**）：
 
-### 入口与主流程
+```
+            ┌─────────────────────────────────────────┐
+   浏览器 → │ Kong (api-gw)  统一入口 / 路由 / 限流      │
+            └──────┬────────┬────────┬────────┬────────┘
+                   │        │        │        │
+                ┌──▼──┐  ┌──▼───┐ ┌──▼────┐ ┌─▼──────┐
+                │auth │  │ rest │ │realtime│ │storage │   ← 全部读写同一 Postgres
+                │GoTrue│ │Postg-│ │(Elixir)│ │(S3兼容)│
+                └─────┘  │REST │ └────────┘ └────────┘
+                         └──┬───┘
+                    ┌───────▼────────┐   ┌──────────┐  ┌──────────┐
+                    │  db (Postgres) │   │ meta     │  │ imgproxy │
+                    │  + pgvector    │   │(pg-meta) │  │(图片处理) │
+                    └────────────────┘   └──────────┘  └──────────┘
+                 ┌──────────┐  ┌──────────┐  ┌──────────┐
+                 │functions │  │supavisor │  │db-config │  ← Edge Functions(Deno)/连接池/配置
+                 └──────────┘  └──────────┘  └──────────┘
+                              └──── Studio (Next.js dashboard) ────┘
+```
 
-可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
+`packages/` 关键内部包（本仓库内）：`pg-meta`（Postgres 元数据客户端）、`ui` / `ui-patterns`（dashboard 组件）、`ai-commands`、`generator`、`common`、`config`、`marketing`。
 
-### 关键模块判断
+## 💡 应用场景与启发（重点）
 
-- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
-- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
-- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
-- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
+- **"别自建后端"的默认选项**：需要 Auth + 数据库 + 文件 + 实时 + 向量，又不想逐个接 SDK 时，Supabase 把这一整套拼图一次给齐，尤其适合 AI 应用（pgvector 直接当向量库）。
+- **RLS 作为单一权限真理**：把"谁能读/写哪行"下沉到数据库策略，比在十几个微服务里各写一遍鉴权更可靠、更易审计。做多租户/协作类产品时强烈建议借鉴。
+- **"开源组件拼装"的可替换架构**：每个能力都是独立开源项目，哪个不满意（如想换连接池、想换网关）可单独替换，没有全家桶绑架。自研平台时这是一种抗锁定、易演进的范本。
+- **自托管 = 生产等价**：docker 栈和云端同构，本地就能完整复现线上行为，CI/调试不再"线上才能测"。
 
-### README 之外的重点
+## 🧠 源码深度解读（3 个核心模块）
 
-原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
+### 1) 网关与路由 — `docker/docker-compose.yml` 的 `api-gw` (Kong)
+所有客户端请求先到 Kong，再按路径分发到 auth/rest/realtime/storage：
 
-1. 用户需要交出哪些权限、密钥、账号或本地资源？
-2. 项目失败时能否定位原因，而不是只得到模糊错误？
-3. 它的核心承诺是否能用一个小实验复现？
+```yaml
+services:
+  api-gw:      # Kong：统一入口、路由、限流
+  auth:        # GoTrue：JWT + OAuth + RLS 用户
+  rest:        # PostgREST：把 Postgres 表自动暴露成 REST（带 RLS）
+  realtime:    # Elixir：基于 Postgres 逻辑复制的实时变更广播
+  storage:     # S3 兼容对象存储网关
+  db:          # Postgres（含 pgvector）
+```
 
-## 📐 架构决策与边界
+关键认知：**rest 服务就是 PostgREST**——你建表即自动获得 CRUD API，权限由 RLS 决定，不需要手写 controller。
 
-### 适合采用的条件
+### 2) 权限模型 — Postgres Row Level Security
+Supabase 的"用户只能看自己的数据"不是应用层 if 判断，而是数据库策略：
 
-- 有明确的最小使用场景。
-- 能在隔离环境中复现核心能力。
-- 能接受项目当前维护节奏和生态依赖。
+```sql
+create policy "用户只能读自己的 todo"
+  on todos for select
+  using (auth.uid() = user_id);   -- auth.uid() 来自 GoTrue 签发的 JWT
+```
 
-### 不应采用的条件
+JWT 中的 `sub`（用户 ID）直接进入 SQL 上下文，RLS 在数据库层强制生效，绕过应用层也无效。
 
-- 需要高安全权限但没有审计能力。
-- README 承诺很强，但缺少测试、示例或可重复 demo。
-- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+### 3) 客户端聚合 — `supabase-js`（独立仓库，本仓库引用）
+前端一个 client 串起所有能力，底层是各独立 SDK：
+
+```ts
+import { createClient } from "@supabase/supabase-js";
+const sb = createClient(URL, ANON_KEY);
+await sb.from("todos").select();          // → PostgREST
+await sb.auth.signInWithOAuth({provider}); // → GoTrue
+await sb.channel("room").on("broadcast").subscribe(); // → Realtime
+```
+
+`supabase-js` 本身很薄，真正的逻辑在 `postgrest-js / auth-js / realtime-js / storage-js`，职责清晰、可单独测试。
 
 ## 🌐 全网口碑画像
 
-本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
+- **正面**：开源 Firebase 替代的事实标准；pgvector 让它在 AI 浪潮里吃尽红利（大量 AI 原型/产品直接拿它当后端）；文档与 DX 口碑极好；自托管社区活跃。
+- **中性/风险**：完整自托管对运维要求不低（十几个服务、Kong/RLS/Supavisor 都要懂）；部分高级能力（如 Realtime 大规模、Auth 复杂流）调优有门槛；云端版存在"Supabase 特有功能"带来的轻度绑定（但底层 Postgres 永远可导出，跑路成本远低于 Firebase）。
+- **与 Firebase 对比口碑**：开发者普遍偏好 Supabase 的"SQL 可控 + 开源 + 可自托管"，但 Firebase 在"零后端心智 + 谷歌生态"上仍占优。
 
-### 真实风险画像
-
-- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
-- AI/自动化类项目常有过度营销，必须用可执行任务验证。
-- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
+> 数据来源：GitHub 元数据（108k⭐、13k fork、Apache-2.0、每日 push）、`docker-compose.yml` 服务矩阵真实抓取、`packages/` 结构、公开社区长期反馈。未编造具体评测数字。
 
 ## ⚔️ 竞品对比
 
-| 方案 | 优势 | 风险 |
-|---|---|---|
-| supabase/supabase | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
-| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
-| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
-| 手工流程 | 最可控 | 效率低，难以规模化复用 |
+| 方案 | 内核 | 优势 | 风险/短板 |
+|---|---|---|---|
+| **Supabase** | Postgres | 开源、SQL 可控、可自托管、pgvector/AI 原生 | 自托管运维重、部分功能 Supabase 绑定 |
+| **Firebase** | 私有 NoSQL + 专有服务 | 零后端心智、谷歌生态、实时强 | 闭源、NoSQL 锁定、导出难、成本不可控 |
+| **Appwrite** | 自有服务 | 轻量、容器友好、API 清晰 | 生态/规模不如 Supabase、SQL 非核心 |
+| **PocketBase** | SQLite 内嵌 | 单文件、极简、自带 UI | 不适合大规模分布式、生态小 |
+| **Nhost** | Postgres（同路线） | 也是 PG + GraphQL | 规模/社区远小于 Supabase |
 
 ## 🎯 核心研判
 
-### 优势
-
-1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
-2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
-3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
-
-### 风险
-
-1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
-2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
-3. **维护不确定性**：单人/早期项目可能快速失活。
-4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
-
-### 适用场景
-
-- 做技术选型前的快速原型验证。
-- 学习同类项目的架构组织方式。
-- 在隔离环境中完成非敏感任务自动化。
-
-### 不适用场景
-
-- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
-- 期望“下载即稳定生产”的严肃业务。
-- 不具备安全审计和回滚能力的团队。
+- **采用建议**：AI 应用 / 中小团队后端 / 需要快速上线且保留"随时裸奔"能力的项目 → Supabase 是首选；纯前端无 SQL 意愿且深度谷歌生态 → 考虑 Firebase。
+- **最大风险**：自托管不是"一条命令"，RLS 写错 = 数据裸奔，务必把权限策略当代码审查；云端高级功能会带来轻度绑定，关键数据保持可导出。
+- **借鉴价值**：① RLS 作为单一权限真理；② 开源组件拼装抗锁定；③ 自托管与生产同构。这三点对任何后端平台设计都成立。
+- **一句话**：Supabase 的护城河不是技术多新，而是"把 Postgres 之上成熟的开源组件，拼装成开发者体验极佳、且永远可跑路的后端平台"。
 
 ## 📂 关键文件路径速查
 
-- `README.md`：定位、安装、示例和限制。
-- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
-- `src/` / `app/` / `packages/` / `internal/`：核心实现。
-- `docs/` / `examples/`：可复现实验入口。
-- `.github/` / `tests/`：维护质量和验证纪律。
-
-## ⭐ 三条关键发现
-
-1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
-2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
-3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
+- `docker/docker-compose.yml` — 完整自托管服务矩阵（架构总图）
+- `studio/` — Next.js 控制面（dashboard）
+- `packages/pg-meta/` — Postgres 元数据客户端
+- `packages/ui` `packages/ui-patterns` — dashboard 组件库
+- `packages/ai-commands` `packages/generator` — AI / 代码生成工具
+- 客户端 SDK（独立仓库，被本平台引用）：`supabase/js`、`supabase/auth-js`、`supabase/realtime-js`、`supabase/storage-js`、`supabase/postgrest-js`
 
 ## 🧪 研究方法与数据来源
 
-- 本地 `project-collection` 原报告内容和质量审计结果。
-- GitHub 仓库名、描述、目录和元数据摘录。
-- 对同类项目的架构与风险分析。
-- 未发现可靠第三方长评时，明确标注而不编造口碑。
+- GitHub API 元数据（stars/forks/license/pushed_at/open_issues/topics 含 postgres/postgrest/realtime/pgvector）
+- `docker/docker-compose.yml` 服务矩阵真实抓取（studio/api-gw/auth/rest/realtime/storage/imgproxy/meta/functions/db/supavisor/db-config/deno-cache）
+- `packages/` 目录结构真实抓取
+- 公开社区长期反馈（非编造评测数字）
