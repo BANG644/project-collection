@@ -241,7 +241,7 @@
 | 226 | [`mem0ai/mem0`](https://github.com/mem0ai/mem0) | AI Agent 记忆层，三层记忆架构+16 LLM+24 向量库+三信号融合检索 | 59,522 | 2026-06-27 | [mem0ai-mem0-深度调研.md](mem0ai-mem0-深度调研.md) |
 | 227 | [`MemTensor/MemOS`](https://github.com/MemTensor/MemOS) | AI 记忆操作系统——textual/activation/parametric 三类记忆 + L1→Skills 结晶化 | 10,587 | 2026-08-05 | [MemTensor-MemOS-深度调研.md](MemTensor-MemOS-深度调研.md) |
 | 228 | [`Michaelliv/pi-dynamic-workflows`](https://github.com/Michaelliv/pi-dynamic-workflows) | — | — | 2026-06-19 | [Michaelliv-pi-dynamic-workflows-深度调研.md](Michaelliv-pi-dynamic-workflows-深度调研.md) |
-| 229 | [`microsoft/agent-lightning`](https://github.com/microsoft/agent-lightning) | — | — | — | [microsoft-agent-lightning-深度调研.md](microsoft-agent-lightning-深度调研.md) |
+| 229 | [`microsoft/agent-lightning`](https://github.com/microsoft/agent-lightning) | 微软 AI Agent 强化学习训练框架——基于 verl+Ray+torch 把 agent 行为 RL 化（rollout→reward→PPO 迭代） | 17,935 | 2026-09-01 | [microsoft-agent-lightning-深度调研.md](microsoft-agent-lightning-深度调研.md) |
 | 230 | [`microsoft/AI-For-Beginners`](https://github.com/microsoft/AI-For-Beginners) | 微软官方 12 周 24 课 AI 入门课程，PyTorch+TF 双框架，50+ 语言翻译 MIT 许可 | 50,336 | 2026-07-02 | [microsoft-AI-For-Beginners-深度调研.md](microsoft-AI-For-Beginners-深度调研.md) |
 | 231 | [`microsoft/graphrag`](https://github.com/microsoft/graphrag) | — | 33,787 | 2026-06-16 | [microsoft-graphrag-深度调研.md](microsoft-graphrag-深度调研.md) |
 | 232 | [`microsoft/markitdown`](https://github.com/microsoft/markitdown) | AI 生态的"文件标准输入层"——将 PDF/Office/图片等一切文件格式统一转换为 Markdown，LangChain/AutoGen 默认集成 | 161,159 | 2026-06-30 | [microsoft-markitdown-深度调研.md](microsoft-markitdown-深度调研.md) |
@@ -342,7 +342,7 @@
 | 327 | [`simplex-chat/simplex-chat`](https://github.com/simplex-chat/simplex-chat) | 首个无用户标识符的通讯平台，单向消息队列+双加密+后量子安全 | 12,443 | 2026-06-27 | [simplex-chat-simplex-chat-深度调研.md](simplex-chat-simplex-chat-深度调研.md) |
 | 328 | [`simular-ai/Agent-S`](https://github.com/simular-ai/Agent-S) | 开源 GUI Agent（Computer-Use）框架——像人一样操作电脑，标志性 bBoN 行为边界用前后截图对比校验动作，S1→S3 多代扁平化降低推理时延 | 12,159 | 2026-08-16 | [simular-ai-Agent-S-深度调研.md](simular-ai-Agent-S-深度调研.md) |
 | 329 | [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | GitHub Star 最多的项目（46.7 万⭐）——由 Sindre Sorhus 维护的「Awesome 列表之列表」，一个以人工审核为核心的质量索引体系 | 467,891 | 2026-05-05 | [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md) |
-| 330 | [`Sjj1024/PakePlus`](https://github.com/Sjj1024/PakePlus) | — | — | — | [Sjj1024-PakePlus-深度调研.md](Sjj1024-PakePlus-深度调研.md) |
+| 330 | [`Sjj1024/PakePlus`](https://github.com/Sjj1024/PakePlus) | 基于 Tauri2+Vue3 的网页/本地前端项目打包器——输出 <5MB 跨平台桌面/手机 app 的 Pake 增强版 | 14,509 | 2026-09-01 | [Sjj1024-PakePlus-深度调研.md](Sjj1024-PakePlus-深度调研.md) |
 | 331 | [`Skyvern-AI/skyvern`](https://github.com/Skyvern-AI/skyvern) | Skyvern —— 用 LLM + 计算机视觉驱动的浏览器自动化 Agent，自然语言工作流替代脆弱 XPath 脚本 | 22,129 | 2026-07-07 | [Skyvern-AI-skyvern-深度调研.md](Skyvern-AI-skyvern-深度调研.md) |
 | 332 | [`smicallef/spiderfoot`](https://github.com/smicallef/spiderfoot) | 开源情报(OSINT)自动化——200+ 模块 publisher/subscriber 联邦+YAML 关联引擎 37 规则，覆盖 IP/域名/邮箱/账号，MIT | 20,287 | 2026-08-13 | [smicallef-spiderfoot-深度调研.md](smicallef-spiderfoot-深度调研.md) |
 | 333 | [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) | 本地运行、100+ LLM 支持的 AI 简历构建+职位匹配优化平台，核心特色 Resume Diff 审计 | 27,615 | 2026-07-03 | [srbhr-Resume-Matcher-深度调研.md](srbhr-Resume-Matcher-深度调研.md) |
@@ -350,7 +350,7 @@
 | 335 | [`steipete/CodexBar`](https://github.com/steipete/CodexBar) | macOS 菜单栏 AI 编程额度监控——57+ Provider 全覆盖，隐私优先，CLI+GUI 双模，生态辐射 Windows/Linux | 16,696 | 2026-07-07 | [steipete-CodexBar-深度调研.md](steipete-CodexBar-深度调研.md) |
 | 336 | [`Stirling-Tools/Stirling-PDF`](https://github.com/Stirling-Tools/Stirling-PDF) | Stirling-PDF — #1 PDF Application on GitHub | 82,799 | — | [Stirling-Tools-Stirling-PDF-深度调研.md](Stirling-Tools-Stirling-PDF-深度调研.md) |
 | 337 | [`supabase/supabase`](https://github.com/supabase/supabase) | 以 Postgres 为核心的开源后端平台(Firebase 替代)，Auth/REST/Realtime/Storage/向量(pgvector)一体化、可自托管 | 108,651 | 2026-09-01 | [supabase-supabase-深度调研.md](supabase-supabase-深度调研.md) |
-| 338 | [`supermemoryai/supermemory`](https://github.com/supermemoryai/supermemory) | — | — | — | [supermemoryai-supermemory-深度调研.md](supermemoryai-supermemory-深度调研.md) |
+| 338 | [`supermemoryai/supermemory`](https://github.com/supermemoryai/supermemory) | 面向 AI 时代的记忆/上下文引擎与 Memory API——Cloudflare Workers 边缘部署 + Drizzle/Postgres + 多框架 SDK | 29,167 | 2026-09-01 | [supermemoryai-supermemory-深度调研.md](supermemoryai-supermemory-深度调研.md) |
 | 339 | [`sveltejs/svelte`](https://github.com/sveltejs/svelte) | "编译器即框架"的前端革命者——Svelte 5 用 Runes 重新定义响应式系统，无虚拟 DOM、编译时优化、最小化 bundle | 87,585 | 2026-06-30 | [sveltejs-svelte-深度调研.md](sveltejs-svelte-深度调研.md) |
 | 340 | [`sybil-solutions/codex-shim`](https://github.com/sybil-solutions/codex-shim) | — | — | 2026-06-19 | [sybil-solutions-codex-shim-深度调研.md](sybil-solutions-codex-shim-深度调研.md) |
 | 341 | [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi) | 把 34 家 LLM 免费额度聚合成一个 OpenAI 兼容 /v1 端点的本地优先路由器——6 策略智能选路 + 自动故障转移 + AES-256-GCM 加密密钥，MIT | 22,155 | 2026-08-30 | [tashfeenahmed-freellmapi-深度调研.md](tashfeenahmed-freellmapi-深度调研.md) |
