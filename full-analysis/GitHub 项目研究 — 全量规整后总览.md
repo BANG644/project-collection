@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 398                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 399                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -215,13 +215,14 @@ github-project-research/
 - [`huggingface/speech-to-speech`](https://github.com/huggingface/speech-to-speech) — [huggingface-speech-to-speech-深度调研.md](huggingface-speech-to-speech-深度调研.md)
 - [`huggingface/transformers`](https://github.com/huggingface/transformers) — [huggingface-transformers-深度调研.md](huggingface-transformers-深度调研.md)
 - [`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master) — [hugohe3-ppt-master-深度调研.md](hugohe3-ppt-master-深度调研.md)
-### I（6 个）
+### I（7 个）
 - [`IceWhaleTech/CasaOS`](https://github.com/IceWhaleTech/CasaOS) — [IceWhaleTech-CasaOS-深度调研.md](IceWhaleTech-CasaOS-深度调研.md)
 - [`immich-app/immich`](https://github.com/immich-app/immich) — [immich-app-immich-深度调研.md](immich-app-immich-深度调研.md)
 - [`index-tts/index-tts`](https://github.com/index-tts/index-tts) — [index-tts-index-tts-深度调研.md](index-tts-index-tts-深度调研.md)
 - [`infiniflow/ragflow`](https://github.com/infiniflow/ragflow) — [infiniflow-ragflow-深度调研.md](infiniflow-ragflow-深度调研.md)
 - [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) — [interviewstreet-hiring-agent-深度调研.md](interviewstreet-hiring-agent-深度调研.md)
 - [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) — [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md)
+- [`iyear/tdl`](https://github.com/iyear/tdl) — [iyear-tdl-深度调研.md](iyear-tdl-深度调研.md)
 ### J（12 个）
 - [`jackwener/OpenCLI`](https://github.com/jackwener/OpenCLI) — [jackwener-OpenCLI-深度调研.md](jackwener-OpenCLI-深度调研.md)
 - [`jamiepine/voicebox`](https://github.com/jamiepine/voicebox) — [jamiepine-voicebox-深度调研.md](jamiepine-voicebox-深度调研.md)
@@ -7092,7 +7093,7 @@ github-project-research/
 - [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) — [thedotmack-claude-mem-深度调研.md](()thedotmack-claude-mem-深度调研.md
 - [`topoteretes/cognee`](https://github.com/topoteretes/cognee) — [topoteretes-cognee-深度调研.md](()topoteretes-cognee-深度调研.md
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](()VictorTaelin-OptMem-深度调研.md
-### 开发工具 / CLI（23）
+### 开发工具 / CLI（24）
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](()ahujasid-blender-mcp-深度调研.md
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](()antvis-mcp-server-chart-深度调研.md
 - [`Automattic/harper`](https://github.com/Automattic/harper) — [Automattic-harper-深度调研.md](()Automattic-harper-深度调研.md
@@ -7103,6 +7104,7 @@ github-project-research/
 - [`every-app/open-seo`](https://github.com/every-app/open-seo) — [every-app-open-seo-深度调研.md](()every-app-open-seo-深度调研.md
 - [`GLips/Figma-Context-MCP`](https://github.com/GLips/Figma-Context-MCP) — [GLips-Figma-Context-MCP-深度调研.md](()GLips-Figma-Context-MCP-深度调研.md
 - [`google/langextract`](https://github.com/google/langextract) — [google-langextract-深度调研.md](()google-langextract-深度调研.md
+- [`iyear/tdl`](https://github.com/iyear/tdl) — [iyear-tdl-深度调研.md](()iyear-tdl-深度调研.md
 - [`jackwener/OpenCLI`](https://github.com/jackwener/OpenCLI) — [jackwener-OpenCLI-深度调研.md](()jackwener-OpenCLI-深度调研.md
 - [`jenkinsci/jenkins`](https://github.com/jenkinsci/jenkins) — [jenkinsci-jenkins-深度调研.md](()jenkinsci-jenkins-深度调研.md
 - [`jina-ai/reader`](https://github.com/jina-ai/reader) — [jina-ai-reader-深度调研.md](()jina-ai-reader-深度调研.md

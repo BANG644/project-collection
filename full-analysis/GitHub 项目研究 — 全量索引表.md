@@ -65,7 +65,7 @@
 | 50 | [`asgeirtj/system_prompts_leaks`](https://github.com/asgeirtj/system_prompts_leaks) | 全球最大 AI 系统提示词泄露合集——50+ 主流 AI 产品的底层 System Prompt 定期公开，曾获《华盛顿邮报》报道 | 49,819 | 2026-07-06 | [asgeirtj-system_prompts_leaks-深度调研.md](asgeirtj-system_prompts_leaks-深度调研.md) |
 | 51 | [`AstrBotDevs/AstrBot`](https://github.com/AstrBotDevs/AstrBot) | AstrBot — 平台无关开源 Agent 聊天框架，国产 IM 全覆盖 + 1000+ 插件 + Agent 沙箱 | 37,019 | 2026-07-21 | [AstrBotDevs-AstrBot-深度调研.md](AstrBotDevs-AstrBot-深度调研.md) |
 | 52 | [`ATH-MaaS/Pixelle-Video`](https://github.com/ATH-MaaS/Pixelle-Video) | AI 全自动短视频引擎——主题→文案→配图→配音→BGM→合成，ComfyUI 工作流架构，ComfyKit 抽象层实现模型与管线彻底解耦 | 23,970 | 2026-07-02 | [ATH-MaaS-Pixelle-Video-深度调研.md](ATH-MaaS-Pixelle-Video-深度调研.md) |
-| 53 | [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | — | — | — | [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md) |
+| 53 | [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | SD 生态第一代标准 Web 前端——「目录即插件」零注册扩展 + sd_hijack 猴补丁跟上游；⚠️ master 已冻结于 2024-07，现为生态兼容锚点而非活跃上游 | 164,759 | 2026-09-02 | [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md) |
 | 54 | [`Automattic/harper`](https://github.com/Automattic/harper) | Rust 本地优先语法检查器——手写规则引擎（expr DSL）非 ML，WASM 可嵌，20 crate workspace | 12,923 | 2026-07-26 | [Automattic-harper-深度调研.md](Automattic-harper-深度调研.md) |
 | 55 | [`awesome/selfhosted`](https://github.com/awesome/selfhosted) | GitHub Star 第四多的项目（29.4 万⭐）——一个自托管软件的百科全书式索引，覆盖从博客平台到密码管理器的所有可私有部署的网络服务和 Web 应用。 | 293,647 | 2026-05-16 | [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md) |
 | 56 | [`aws/agent-toolkit-for-aws`](https://github.com/aws/agent-toolkit-for-aws) | AWS 官方 AI Agent 增强套件，Plugin+Skills+MCP Server 三层架构+40+验证Skills | 1,334 | 2026-06-27 | [aws-agent-toolkit-for-aws-深度调研.md](aws-agent-toolkit-for-aws-深度调研.md) |
@@ -371,7 +371,7 @@
 | 356 | [`Tong89/smartNode`](https://github.com/Tong89/smartNode) | smartNode (天基智枢) | — | 2026-06-17 | [Tong89-smartNode-深度调研.md](Tong89-smartNode-深度调研.md) |
 | 357 | [`ToolJet/ToolJet`](https://github.com/ToolJet/ToolJet) | AGPL-3.0 开源企业内部工具/低代码平台——拖拽式 App Builder+80+ 数据源+内置 DB，AI 原生（自然语言生成应用/Agent Builder），Retool 开源替代，NestJS+React 全栈 | 38,963 | 2026-08-15 | [ToolJet-ToolJet-深度调研.md](ToolJet-ToolJet-深度调研.md) |
 | 358 | [`toon-format/toon`](https://github.com/toon-format/toon) | Token 导向序列化格式（TOON）——比 JSON 省 ~33% token，面向 LLM 上下文压缩 | 25,068 | 2026-08-05 | [toon-format-toon-深度调研.md](toon-format-toon-深度调研.md) |
-| 359 | [`topoteretes/cognee`](https://github.com/topoteretes/cognee) | — | — | — | [topoteretes-cognee-深度调研.md](topoteretes-cognee-深度调研.md) |
+| 359 | [`topoteretes/cognee`](https://github.com/topoteretes/cognee) | 自托管 AI Agent 记忆平台——知识图谱+向量混合，把 improve/forget/provenance 做成记忆生命周期一等公民，内置 Mem0/Zep/Letta 迁移适配器 | 30,395 | 2026-09-02 | [topoteretes-cognee-深度调研.md](topoteretes-cognee-深度调研.md) |
 | 360 | [`trycompai/crm`](https://github.com/trycompai/crm) | Agentic-first 开源 CRM——耐久研究 agent 是产品本体，API 零智能 + 租约队列 + deny-all 沙箱 + 证据账本 | 6,016 | 2026-07-31 | [trycompai-crm-深度调研.md](trycompai-crm-深度调研.md) |
 | 361 | [`trycua/cua`](https://github.com/trycua/cua) | Computer-Use 2.0 开源基础设施栈——跨 OS 沙箱 + 后台驱动 + Agent 框架 + 基准评测 + 训练数据生成 | 20,200 | 2026-07-20 | [trycua-cua-深度调研.md](trycua-cua-深度调研.md) |
 | 362 | [`tt-a1i/archify`](https://github.com/tt-a1i/archify) | Agent Skill：把代码库/系统描述变成可交互、可验证、可分享的技术架构图（自包含 HTML + 类型化 JSON IR + 确定性校验） | 17,511 | 2026-08-27 | [tt-a1i-archify-深度调研.md](tt-a1i-archify-深度调研.md) |
@@ -402,7 +402,7 @@
 | 387 | [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) | 全网最全 Nano Banana Pro 提示词案例库——986+ 案例，Gemini 3 Pro Image 画廊，GitHub Pages 零后端 | 794 | 2026-07-08 | [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md) |
 | 388 | [`xiaotianfotos/homerail`](https://github.com/xiaotianfotos/homerail) | 语音优先的本地 Agent 编排运行时——可审计 DAG、每节点 Docker 隔离、生成式 UI、全本地隐私 | 357 | 2026-07-10 | [xiaotianfotos-homerail-深度调研.md](xiaotianfotos-homerail-深度调研.md) |
 | 389 | [`xingkongliang/skills-manager`](https://github.com/xingkongliang/skills-manager) | Tauri 2 跨平台 AI Agent 技能管理桌面应用——Preset 场景编排+Git 备份+ToolAdapter 插件式架构+CLI 嵌入 | 2,843 | 2026-07-09 | [xingkongliang-skills-manager-深度调研.md](xingkongliang-skills-manager-深度调研.md) |
-| 390 | [`xming521/WeClone`](https://github.com/xming521/WeClone) | — | — | — | [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md) |
+| 390 | [`xming521/WeClone`](https://github.com/xming521/WeClone) | 聊天记录→PII脱敏→QA训练集→LoRA微调→部署一站式链路；⚠️ 仅原生解析 Telegram，微信需外部工具导出 | 18,172 | 2026-09-02 | [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md) |
 | 391 | [`Yeachan-Heo/oh-my-claudecode`](https://github.com/Yeachan-Heo/oh-my-claudecode) | Teams-first 多智能体编排插件，把 Claude Code 升级为跨多 AI 后端并行协作的智能体操作系统——钩子事件总线零侵入挂载 19 个专业 Agent + 39 个 Skill | 38,670 | 2026-08-20 | [Yeachan-Heo-oh-my-claudecode-深度调研.md](Yeachan-Heo-oh-my-claudecode-深度调研.md) |
 | 392 | [`yorukot/superfile`](https://github.com/yorukot/superfile) | Go+bubbletea v2 现代 TUI 文件管理器——单 Model 编排多面板，内建压缩包/PDF/图预览 | 19,408 | 2026-07-26 | [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md) |
 | 393 | [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) | 中文 LeetCode 刷题攻略的标杆项目——《代码随想录》配套仓库，200+ 道经典题目的系统化刷题路线。📖 核心功能系统化刷题路线：按「数组→链表→哈希表→ | 61 | 2026-06-12 | [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md) |
@@ -411,6 +411,7 @@
 | 396 | [`zai-org/Open-AutoGLM`](https://github.com/zai-org/Open-AutoGLM) | 智谱开源手机 GUI Agent——VLM + ADB/HDC 执行闭环 | 25,756 | 2026-07-13 | [zai-org-Open-AutoGLM-深度调研.md](zai-org-Open-AutoGLM-深度调研.md) |
 | 397 | [`zarazhangrui/beautiful-html-templates`](https://github.com/zarazhangrui/beautiful-html-templates) | beautiful-html-templates | — | 2026-05-05 | [zarazhangrui-beautiful-html-templates-深度调研.md](zarazhangrui-beautiful-html-templates-深度调研.md) |
 | 398 | [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 驱动五市场自选股 AI 日报——Fork-to-run 零成本架构 + 双 Guardrail 防幻觉 + 通知路由四件套 | 59,613 | 2026-07-31 | [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md) |
+| 399 | [`iyear/tdl`](https://github.com/iyear/tdl) | Go 版 Telegram 工具箱——按 DC 分片连接池 + takeout 官方通道实现同类最快批量下载，go.work 三模块把内核提炼为可复用库 | 8,021 | 2026-09-02 | [iyear-tdl-深度调研.md](iyear-tdl-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 ### AI Agent / 助手框架（103）
@@ -591,7 +592,7 @@
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
-### 开发工具 / CLI（32）
+### 开发工具 / CLI（33）
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
 - [`AprilNEA/OpenLogi`](https://github.com/AprilNEA/OpenLogi) — [AprilNEA-OpenLogi-深度调研.md](AprilNEA-OpenLogi-深度调研.md)
@@ -606,6 +607,7 @@
 - [`GLips/Figma-Context-MCP`](https://github.com/GLips/Figma-Context-MCP) — [GLips-Figma-Context-MCP-深度调研.md](GLips-Figma-Context-MCP-深度调研.md)
 - [`google/guava`](https://github.com/google/guava) — [google-guava-深度调研.md](google-guava-深度调研.md)
 - [`google/langextract`](https://github.com/google/langextract) — [google-langextract-深度调研.md](google-langextract-深度调研.md)
+- [`iyear/tdl`](https://github.com/iyear/tdl) — [iyear-tdl-深度调研.md](iyear-tdl-深度调研.md)
 - [`jackwener/OpenCLI`](https://github.com/jackwener/OpenCLI) — [jackwener-OpenCLI-深度调研.md](jackwener-OpenCLI-深度调研.md)
 - [`jenkinsci/jenkins`](https://github.com/jenkinsci/jenkins) — [jenkinsci-jenkins-深度调研.md](jenkinsci-jenkins-深度调研.md)
 - [`jina-ai/reader`](https://github.com/jina-ai/reader) — [jina-ai-reader-深度调研.md](jina-ai-reader-深度调研.md)
