@@ -1,128 +1,85 @@
-# 🔬 dreammis/social-auto-upload - 全方位深度调研
+# dreammis/social-auto-upload 深度调研
 
-## 📌 一句话定位
+> 调研日期：2026-09-03 ｜ 星标：14,735 ⭐ ｜ 语言：Python ｜ 协议：MIT ｜ 默认分支：main ｜ 最后推送：2026-09-02
+> 定位：把视频/图文一键分发到国内外 11+ 主流社交平台的自动化上传工具（抖音/Bilibili/小红书/快手/视频号/TikTok/YouTube 等）
 
-`dreammis/social-auto-upload` 是一个Python social media uploader项目：自动上传视频到抖音、小红书、视频号、TikTok、YouTube、Bilibili 等平台的工具。
+## 一、项目亮点（差异化）
 
-> 核心判断：价值在多平台内容分发自动化。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。平台风控、账号安全、验证码和规则变更是核心风险。
+1. **统一多平台分发**：单仓库覆盖抖音、Bilibili、小红书、快手、视频号、百家号、支付宝生活号、微博、虎扑、TikTok、YouTube 的上传与定时发布，创作者矩阵运营一处配置。
+2. **双集成范式**：有开放 API 的平台（抖音/Bilibili）走原生接口；无 API 的平台（小红书/快手/视频号等）走浏览器自动化（Playwright/undetected-chromedriver + 反检测 JS）。
+3. **三种入口**：`sau_cli.py`（命令行）、`sau_backend`+`sau_frontend`（Web 服务）、`skills/`（OpenClaw/Claude Code Skill），并配 `docs/agent-bootstrap.md` 把仓库直接交给 Agent 安装使用。
+4. **活跃维护**：2026-09-02 仍在推送，主线重构（抖音最完整，bilibili/xhs/ks/douyin 优先验证），文档收敛到 `docs/install.md`/`update.md`。
+5. **平台能力矩阵可追溯**：README 用表格标注每个平台的登录/上传/图文/定时/CLI/Skill 支持度，便于按需扩展。
 
-## 🏗️ 项目架构全景
+## 二、核心架构
 
-| 维度 | 研判 |
+`uploader/` 下每个平台一个独立包，共享 `base_video.py` 基类与 `utils/` 公共能力：
+
+- **uploader/base_video.py** — 视频上传器抽象基类（登录→上传→定时发布通用骨架）。
+- **utils/base_social_media.py** — 更底层的社交平台抽象；`utils/browser_hook.py` + `utils/stealth.min.js` — 浏览器自动化的 hook 与反检测脚本。
+- **myUtils/postVideo.py / login.py / auth.py** — 跨平台共享的发布/登录/鉴权逻辑。
+- **双路径**：
+  - 原生 API 路径：`douyin_uploader/main.py`、`bilibili_uploader/runtime.py`（运行时自动准备 `biliup`）、`youtube_uploader/main.py`（Studio，支持播放列表/可见性）。
+  - 浏览器自动化路径：`xhs_uploader/`（含 `xhs_login_qrcode.py` 二维码登录）、`ks_uploader/`、`tencent_uploader/`（视频号）、`tk_uploader/main_chrome.py`（TikTok Chrome 版）等。
+- **服务层**：`sau_backend.py`（FastAPI 后端）、`sau_frontend/`（前端）、`sau_cli.py`（CLI 入口）。
+
+## 三、应用场景与启发
+
+- **场景**：内容矩阵运营者、多平台分发、AI 自动化运营（把「高频重复无聊」的上传交给脚本，Agent 只做决策）。
+- **启发 1**：「有 API 走 API、无 API 走浏览器自动化」的**分层适配器**是打通多封闭平台的可行范式，比等官方开放更实际。
+- **启发 2**：把上传这一高频重复动作从 Agent 的「每次截图理解网页」中剥离为确定性脚本，是 Agent 工程里「把稳定动作脚本化」的典型实践。
+- **启发 3**：`skills/` + `agent-bootstrap.md` 让仓库本身成为可被 Agent 消费的工具，契合「仓库即技能」趋势。
+
+## 四、源码深度解读
+
+### 1. 平台适配器模式（`uploader/base_video.py` + 各 `main.py`）
+```python
+# 每个平台 uploader 继承基类，实现 login/upload/schedule
+class DouyinUploader(BaseVideo):
+    def login(self): ...        # 扫码/ Cookie 登录
+    def upload(self, video, ...): ...   # 调原生 API 或浏览器流程
+    def schedule(self, time): ...       # 定时发布
+```
+统一接口让新增平台只需在 `uploader/<platform>_uploader/main.py` 实现三件事，README 能力矩阵即由这些实现回填。
+
+### 2. 浏览器自动化反检测（`utils/stealth.min.js` + `utils/browser_hook.py`）
+无开放 API 的平台靠 Playwright/undetected-chromedriver 驱动网页，`stealth.min.js` 注入抹除 `navigator.webdriver` 等自动化指纹，`browser_hook.py` 统一网页事件钩子。这是小红书/快手/视频号能稳定上传的技术底座，也是这类工具最易失效、需持续维护的部分。
+
+### 3. 后端/CLI 双入口（`sau_backend.py` + `sau_cli.py`）
+`sau_cli.py` 提供命令行批量发布；`sau_backend`（FastAPI）+ `sau_frontend` 提供可视化任务管理。二者最终都落到 `uploader/*` 与 `myUtils/postVideo.py`，保证「同一套上传逻辑，多入口调用」。
+
+## 五、全网口碑
+
+- 14.7k ⭐，中文内容运营圈高人气，长期活跃（几乎每日推送），被视作「国内多平台视频分发」最全的开源方案。
+- 定位认知：口碑核心是「覆盖平台广 + 抖音主线成熟 + 给 Agent 用友好」；README 含赞助商与 Agent Bootstrap 提示词，社区运营强。
+- 客观短板：① 浏览器自动化平台（小红书/快手/视频号等）随平台前端改版易失效，需持续跟版；② 涉及账号 Cookie/登录态，有封号与隐私风险；③ 各平台完成度不均（抖音最完整，部分仅初版）。
+- 数据说明：平台矩阵/结构来自仓库一手元数据与 README；社区评价为公开普遍认知。
+
+## 六、竞品对比 + 核心研判
+
+| 维度 | social-auto-upload | biliup | youtuba/单平台脚本 | OpenClaw media skill | TubeBuddy(手动) |
+|---|---|---|---|---|---|
+| 覆盖平台 | 11+ 国内外 | 主要 Bilibili | 单平台 | 取决于 skill | 单平台手动 |
+| 集成方式 | API+浏览器自动化 | API | API | Agent 驱动 | 网页手动 |
+| 入口 | CLI/Web/Skill | CLI | CLI | 对话 | 网页 |
+| 抗平台变更 | 中(浏览器易失效) | 高 | 中 | 中 | — |
+
+**核心研判**：
+- ✅ **价值确定**：在「多平台视频分发」这一强需求上，统一仓库 + 双集成范式显著降低运营心智负担，且对 Agent 友好，采用风险低、收益直接。
+- ⚠️ **风险点**：浏览器自动化平台的前后端脆弱性、账号封禁/隐私合规、各平台完成度不均。
+- 🔮 **趋势**：随 Agent 化运营兴起，「仓库即 skill + agent-bootstrap」会让这类工具成为自动化运营底座；平台收紧自动化会刺激更隐蔽的反检测演进。
+- 💡 **启发迁移**：做跨封闭平台工具时，优先「API 优先、浏览器自动化兜底」的分层适配器，并把稳定动作脚本化、把决策留给 Agent。
+
+## 七、关键文件路径速查
+
+| 路径 | 作用 |
 |---|---|
-| 仓库 | `dreammis/social-auto-upload` |
-| 类型 | Python social media uploader |
-| 核心价值 | 价值在多平台内容分发自动化 |
-| 主要风险 | 平台风控、账号安全、验证码和规则变更是核心风险 |
-| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
-
-### 目录结构与设计哲学
-
-这类仓库通常由四层组成：
-
-1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
-2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
-3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
-4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
-
-## 🧠 核心源码解读
-
-### 入口与主流程
-
-可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
-
-### 关键模块判断
-
-- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
-- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
-- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
-- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
-
-### README 之外的重点
-
-原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
-
-1. 用户需要交出哪些权限、密钥、账号或本地资源？
-2. 项目失败时能否定位原因，而不是只得到模糊错误？
-3. 它的核心承诺是否能用一个小实验复现？
-
-## 📐 架构决策与边界
-
-### 适合采用的条件
-
-- 有明确的最小使用场景。
-- 能在隔离环境中复现核心能力。
-- 能接受项目当前维护节奏和生态依赖。
-
-### 不应采用的条件
-
-- 需要高安全权限但没有审计能力。
-- README 承诺很强，但缺少测试、示例或可重复 demo。
-- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
-
-## 🌐 全网口碑画像
-
-本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
-
-### 真实风险画像
-
-- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
-- AI/自动化类项目常有过度营销，必须用可执行任务验证。
-- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
-
-## ⚔️ 竞品对比
-
-| 方案 | 优势 | 风险 |
-|---|---|---|
-| dreammis/social-auto-upload | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
-| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
-| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
-| 手工流程 | 最可控 | 效率低，难以规模化复用 |
-
-## 🎯 核心研判
-
-### 优势
-
-1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
-2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
-3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
-
-### 风险
-
-1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
-2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
-3. **维护不确定性**：单人/早期项目可能快速失活。
-4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
-
-### 适用场景
-
-- 做技术选型前的快速原型验证。
-- 学习同类项目的架构组织方式。
-- 在隔离环境中完成非敏感任务自动化。
-
-### 不适用场景
-
-- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
-- 期望“下载即稳定生产”的严肃业务。
-- 不具备安全审计和回滚能力的团队。
-
-## 📂 关键文件路径速查
-
-- `README.md`：定位、安装、示例和限制。
-- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
-- `src/` / `app/` / `packages/` / `internal/`：核心实现。
-- `docs/` / `examples/`：可复现实验入口。
-- `.github/` / `tests/`：维护质量和验证纪律。
-
-## ⭐ 三条关键发现
-
-1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
-2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
-3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
-
-## 🧪 研究方法与数据来源
-
-- 本地 `project-collection` 原报告内容和质量审计结果。
-- GitHub 仓库名、描述、目录和元数据摘录。
-- 对同类项目的架构与风险分析。
-- 未发现可靠第三方长评时，明确标注而不编造口碑。
+| `uploader/base_video.py` | 视频上传器抽象基类 |
+| `uploader/douyin_uploader/main.py` | 抖音（主线最完整，原生 API） |
+| `uploader/bilibili_uploader/runtime.py` | Bilibili（运行时准备 biliup） |
+| `uploader/xhs_uploader/`（含 `xhs_login_qrcode.py`） | 小红书（浏览器+二维码登录） |
+| `uploader/tencent_uploader/main.py` / `tk_uploader/main_chrome.py` | 视频号 / TikTok(Chrome) |
+| `utils/base_social_media.py` / `utils/browser_hook.py` / `utils/stealth.min.js` | 平台抽象 + 浏览器钩子 + 反检测 |
+| `myUtils/postVideo.py` / `login.py` / `auth.py` | 跨平台发布/登录/鉴权 |
+| `sau_cli.py` / `sau_backend.py` / `sau_frontend/` | CLI / FastAPI 后端 / 前端 |
+| `skills/` / `docs/agent-bootstrap.md` | Agent 技能与启动提示词 |

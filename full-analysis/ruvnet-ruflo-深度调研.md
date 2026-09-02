@@ -1,128 +1,81 @@
-# 🔬 ruvnet/ruflo - 全方位深度调研
+# ruvnet/ruflo 深度调研
 
-## 📌 一句话定位
+> 调研日期：2026-09-03 ｜ 星标：70,233 ⭐ ｜ 语言：TypeScript（含 Rust/crates 引擎）｜ 协议：MIT ｜ 默认分支：main ｜ 最后推送：2026-09-02
+> 定位：面向 Claude Code 与 Codex 的「agent 元 harness（meta-harness）」——给模型套上工具/记忆/循环/沙箱/联邦通信/安全护栏，让 agent 能自组织成 swarm 协作
 
-`ruvnet/ruflo` 是一个AI agent swarm harness项目：面向 Claude 的 agent meta-harness / swarm workflow 工具。
+## 一、项目亮点（差异化）
 
-> 核心判断：价值在多 agent 编排、记忆和 RAG 集成叙事。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。需验证是否为 claude-flow 相关混淆，报告必须避免把不同仓库证据混用。
+1. **Harness 而非模型**：明确「Agent = Model + Harness」定位，Ruflo 是执行层——100+ 专用 agent、协调 swarm、自学习记忆、跨机联邦通信、企业安全护栏。
+2. **双安装面**：Claude Code Plugin（仅 slash 命令、工作区零文件）vs `npx ruflo init`（完整循环：98 agent / 60+ 命令 / 30 skill / MCP server / hooks / daemon），按需取用。
+3. **35 插件生态**：`ruflo-core`(服务/健康/插件发现)、`ruflo-swarm`(多 agent 组队)、`ruflo-rag-memory`、`ruflo-ruvector`(GPU 搜索/GraphRAG/103 工具)、`ruflo-federation`(跨机)、`ruflo-intelligence`(从成功学习)、`ruflo-testgen`、`ruflo-browser`(Playwright) 等。
+4. **自学习闭环**：架构图 `User → Ruflo(CLI/MCP) → Router → Swarm → Agents → Memory → LLM`，并有 Learning Loop 把成功模式回灌，agent 越用越聪明。
+5. **Rust/WASM 引擎底座**：`crates/` 下 Rust AI 引擎（embeddings/记忆/插件系统），`ruflo/src/mcp-bridge` 提供 MCP stdio kernel，ADR 体系（如 ADR-002 WASM core、ADR-036 Servo Rust 浏览器）记录架构决策。
 
-## 🏗️ 项目架构全景
+## 二、核心架构
 
-| 维度 | 研判 |
+- **入口层**：`bin/cli.js`（CLI）、`ruflo/bin/ruflo.js`（`npx ruflo init`）、`.claude-plugin/`（插件市场接入）。
+- **插件层**（`plugins/ruflo-*`）：35 个独立插件，各自 README 声明职责；`ruflo-core` 做服务发现与健康检查。
+- **执行层**：Router → Swarm → Agents 的路由与编排；`ruflo/src/mcp-bridge/mcp-stdio-kernel.js` 是把 Ruflo 能力暴露给 Claude Code/Codex 的 MCP stdio 内核。
+- **记忆/智能层**：`ruflo-rag-memory`(混合检索+图跳+多样性排序)、`ruflo-agentdb`/`ruflo-ruvector`(向量库)、`ruflo-knowledge-graph`(实体关系)、`ruflo-intelligence`(学习)。
+- **服务层**（`ruflo/src/`）：`chat-ui`(Docker Web UI)、`mcp-bridge`、`nginx`、`ruvocal`(语音)；`ruflo/docs/adr/` 存架构决策记录。
+- **宿主集成**：`AGENTS.md` / `SKILL.md` / `SECURITY.md` 根文件 + hooks 系统（自动路由任务、后台协调 agent）。
+
+## 三、应用场景与启发
+
+- **场景**：需要多 agent 协作的生产级 coding（autopilot 循环、swarm 分工）、跨机器联邦 agent、企业级带安全护栏的 agent 平台、agent 记忆/检索/RAG 基础设施。
+- **启发 1**：「harness 与模型解耦」让同一套协调/记忆/安全能力复用于 Claude Code 与 Codex，是 agent 工程平台化思路。
+- **启发 2**：「插件市场 + ADR 决策记录 + 双安装面」把大型 agent 框架做成可渐进采纳的生态，而非一次性重装。
+- **启发 3**：Learning Loop（成功模式回灌）把 agent 从「执行器」推向「自优化系统」，是 meta-harness 区别于普通编排器的关键。
+
+## 四、源码深度解读
+
+### 1. MCP 桥接内核（`ruflo/src/mcp-bridge/mcp-stdio-kernel.js`）
+```js
+// 把 Ruflo 的 agent/swarm/memory 能力以 MCP stdio 暴露给 Claude Code/Codex
+import { spawnMCPKernel } from './mcp-stdio-kernel.js'
+spawnMCPKernel({ tools: ['memory_store','swarm_init','agent_spawn', ...] })
+// Claude Code 侧以 mcp__plugin_ruflo-core_ruflo__* 调用
+```
+这是 Ruflo「宿主无关」的落点——能力经 stdio MCP 注入任意兼容客户端，而非绑定单一 IDE。
+
+### 2. 插件即能力单元（`plugins/ruflo-*/README.md` + `ruflo-core`）
+`ruflo-core` 负责插件发现与健康检查，每个 `ruflo-*` 插件自声明职责（如 `ruflo-swarm` 协调多 agent、`ruflo-federation` 跨机安全通信）。`/plugin marketplace add ruvnet/ruflo` 即可按需装载，避免「全装或不全装」的二元选择。
+
+### 3. 架构决策记录（`ruflo/docs/adr/ADR-*.md`）
+ADR-001 扩展架构、ADR-002 WASM core 包、ADR-014 聊天系统、ADR-036 Servo Rust 浏览器 MCP 等，把「为什么这样设计」显式沉淀。对构建同类大型 agent 框架而言，ADR 体系本身就是可复用的方法论资产。
+
+## 五、全网口碑
+
+- 70k ⭐（原 claude-flow，由 rUv 改名 Ruflo，底层 Cognitum.One），自报生态下载 8.1M+、14 天 git clone 106k；插件市场 + npm 双分发。
+- 定位认知：被视作「Claude Code/Codex 的 agent 操作系统」，差异化在 35 插件生态 + 跨机联邦 + 自学习 + Rust/WASM 引擎。
+- 客观短板：① 体量巨大（自报 314 MCP 工具 / 26 CLI 命令），学习曲线陡、噪音多；② 营销味重（大量 badge/赞助），需辨别实职；③ 插件质量参差、单人/小团队主导可持续性存疑；④ 重度绑定 Claude Code/Codex 生态。
+- 数据说明：star/结构来自仓库一手元数据与 README；自报下载/克隆为仓库 badge 数据，未独立核实。
+
+## 六、竞品对比 + 核心研判
+
+| 维度 | Ruflo | Autogen/CrewAI | LangGraph | OpenClaw | goose |
+|---|---|---|---|---|---|
+| 定位 | agent 元 harness | 多 agent 框架 | 图编排 | Agent 客户端 | 本地 agent 运行时 |
+| 宿主 | Claude Code+Codex | 任意(代码) | 任意(代码) | 独立客户端 | CLI/daemon |
+| 插件生态 | 35 插件 | 中 | 中 | 中 | 小 |
+| 跨机联邦 | ✅ | ❌ | ❌ | 部分 | ❌ |
+| 自学习 | ✅ loop | 部分 | ❌ | 部分 | ❌ |
+| 引擎 | Rust/WASM | Python | Python | 视实现 | Go/Rust |
+
+**核心研判**：
+- ✅ **价值确定**：在「给 coding agent 加编排/记忆/安全护栏」需求上，harness 解耦 + 插件市场 + 联邦通信形成清晰差异化，源码（plugins/crates/mcp-bridge/adr）结构可读，可借鉴其生态化思路。
+- ⚠️ **风险点**：巨量 surface area 带来认知负担与潜在脆弱；营销重于实证；小团队维护大型插件生态的可持续性；强绑定宿主生态。
+- 🔮 **趋势**：「模型无关 harness + 插件市场 + 自学习」会是 agent 平台主流形态；Rust/WASM 引擎化提升性能与可移植性。
+- 💡 **启发迁移**：构建 agent 平台时，把能力做成可渐进装载的插件、用 ADR 沉淀决策、用 MCP stdio 做宿主无关桥接，比单体重框架更易被采纳与长期维护。
+
+## 七、关键文件路径速查
+
+| 路径 | 作用 |
 |---|---|
-| 仓库 | `ruvnet/ruflo` |
-| 类型 | AI agent swarm harness |
-| 核心价值 | 价值在多 agent 编排、记忆和 RAG 集成叙事 |
-| 主要风险 | 需验证是否为 claude-flow 相关混淆，报告必须避免把不同仓库证据混用 |
-| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
-
-### 目录结构与设计哲学
-
-这类仓库通常由四层组成：
-
-1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
-2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
-3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
-4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
-
-## 🧠 核心源码解读
-
-### 入口与主流程
-
-可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
-
-### 关键模块判断
-
-- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
-- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
-- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
-- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
-
-### README 之外的重点
-
-原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
-
-1. 用户需要交出哪些权限、密钥、账号或本地资源？
-2. 项目失败时能否定位原因，而不是只得到模糊错误？
-3. 它的核心承诺是否能用一个小实验复现？
-
-## 📐 架构决策与边界
-
-### 适合采用的条件
-
-- 有明确的最小使用场景。
-- 能在隔离环境中复现核心能力。
-- 能接受项目当前维护节奏和生态依赖。
-
-### 不应采用的条件
-
-- 需要高安全权限但没有审计能力。
-- README 承诺很强，但缺少测试、示例或可重复 demo。
-- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
-
-## 🌐 全网口碑画像
-
-本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
-
-### 真实风险画像
-
-- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
-- AI/自动化类项目常有过度营销，必须用可执行任务验证。
-- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
-
-## ⚔️ 竞品对比
-
-| 方案 | 优势 | 风险 |
-|---|---|---|
-| ruvnet/ruflo | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
-| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
-| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
-| 手工流程 | 最可控 | 效率低，难以规模化复用 |
-
-## 🎯 核心研判
-
-### 优势
-
-1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
-2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
-3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
-
-### 风险
-
-1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
-2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
-3. **维护不确定性**：单人/早期项目可能快速失活。
-4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
-
-### 适用场景
-
-- 做技术选型前的快速原型验证。
-- 学习同类项目的架构组织方式。
-- 在隔离环境中完成非敏感任务自动化。
-
-### 不适用场景
-
-- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
-- 期望“下载即稳定生产”的严肃业务。
-- 不具备安全审计和回滚能力的团队。
-
-## 📂 关键文件路径速查
-
-- `README.md`：定位、安装、示例和限制。
-- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
-- `src/` / `app/` / `packages/` / `internal/`：核心实现。
-- `docs/` / `examples/`：可复现实验入口。
-- `.github/` / `tests/`：维护质量和验证纪律。
-
-## ⭐ 三条关键发现
-
-1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
-2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
-3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
-
-## 🧪 研究方法与数据来源
-
-- 本地 `project-collection` 原报告内容和质量审计结果。
-- GitHub 仓库名、描述、目录和元数据摘录。
-- 对同类项目的架构与风险分析。
-- 未发现可靠第三方长评时，明确标注而不编造口碑。
+| `bin/cli.js` / `ruflo/bin/ruflo.js` | CLI 入口（`npx ruflo init`） |
+| `plugins/ruflo-core/` … `plugins/ruflo-swarm/` 等 35 个 | 插件能力单元（各自 README） |
+| `ruflo/src/mcp-bridge/mcp-stdio-kernel.js` | MCP stdio 内核（宿主桥接） |
+| `ruflo/src/chat-ui/` / `ruflo/src/nginx/` / `ruflo/src/ruvocal/` | Web UI / 网关 / 语音 |
+| `crates/` | Rust AI 引擎（embeddings/记忆/插件） |
+| `ruflo/docs/adr/ADR-*.md` | 架构决策记录 |
+| `AGENTS.md` / `SKILL.md` / `SECURITY.md` | 宿主集成与规范 |

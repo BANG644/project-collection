@@ -95,7 +95,7 @@
 | 80 | [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Google 官方 Chrome DevTools MCP——性能 trace/堆快照/Lighthouse 变 Agent 原生能力，puppeteer+DevTools 双引擎 | 47,976 | 2026-07-31 | [ChromeDevTools-chrome-devtools-mcp-深度调研.md](ChromeDevTools-chrome-devtools-mcp-深度调研.md) |
 | 81 | [`citrolabs/ego-lite`](https://github.com/citrolabs/ego-lite) | 从零为「人和 AI Agent 共用浏览器」设计的 Chromium 浏览器——Agent 在隔离 Space 并行跑任务、继承用户登录态，代码接口（JS 一次性执行）非 CLI，MIT 连接层 | 10,261 | 2026-08-15 | [citrolabs-ego-lite-深度调研.md](citrolabs-ego-lite-深度调研.md) |
 | 82 | [`clash-verge-rev/clash-verge-rev`](https://github.com/clash-verge-rev/clash-verge-rev) | 基于 Tauri 的跨平台 Mihomo(Clash Meta) 代理 GUI，Clash for Windows 停更后的主流继承者，TUN/系统代理/订阅管理齐全 | 141,364 | 2026-09-01 | [clash-verge-rev-clash-verge-rev-深度调研.md](clash-verge-rev-clash-verge-rev-深度调研.md) |
-| 83 | [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) | — | — | — | [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md) |
+| 83 | [`ClaudioDrews/memory-os`](https://github.com/ClaudioDrews/memory-os) | Hermes Agent 七层记忆操作系统（本地优先） | 1,352 | 2026-09-03 | [ClaudioDrews-memory-os-深度调研.md](ClaudioDrews-memory-os-深度调研.md) |
 | 84 | [`cloudflare/computer`](https://github.com/cloudflare/computer) | 住在 Durable Object 里的虚拟文件系统 + 可插拔执行运行时——给每个 Agent 一台「计算机」而非容器 | 5,435 | 2026-08-08 | [cloudflare-computer-深度调研.md](cloudflare-computer-深度调研.md) |
 | 85 | [`cloudflare/security-audit-skill`](https://github.com/cloudflare/security-audit-skill) | — | 346 | 2026-06-23 | [cloudflare-security-audit-skill-深度调研.md](cloudflare-security-audit-skill-深度调研.md) |
 | 86 | [`code-yeongyu/oh-my-openagent`](https://github.com/code-yeongyu/oh-my-openagent) | 多 harness 编码 Agent harness 封装（OpenCode/Codex 团队编排 + hashline 编辑 + Team Mode） | 66,620 | 2026-07-27 | [code-yeongyu-oh-my-openagent-深度调研.md](code-yeongyu-oh-my-openagent-深度调研.md) |
@@ -127,7 +127,7 @@
 | 112 | [`Doorman11991/smallcode`](https://github.com/Doorman11991/smallcode) | SmallCode | — | 2026-06-17 | [Doorman11991-smallcode-深度调研.md](Doorman11991-smallcode-深度调研.md) |
 | 113 | [``](https://github.com/) | 微软 .NET 官方 AI 编程代理技能集——15 个专项 Plugin 覆盖 .NET 全栈，skill-validator + Dashboard 企业级质量 | 4,274 | 2026-07-08 | [dotnet-skills-深度调研.md](dotnet-skills-深度调研.md) |
 | 114 | [`dottxt-ai/outlines`](https://github.com/dottxt-ai/outlines) | 生成时保证结构化输出——logits 掩码 + Provider 无关 + 类型即文法，被 NVIDIA/Cohere 采用 | 14,751 | 2026-07-22 | [dottxt-ai-outlines-深度调研.md](dottxt-ai-outlines-深度调研.md) |
-| 115 | [`dreammis/social-auto-upload`](https://github.com/dreammis/social-auto-upload) | — | — | — | [dreammis-social-auto-upload-深度调研.md](dreammis-social-auto-upload-深度调研.md) |
+| 115 | [`dreammis/social-auto-upload`](https://github.com/dreammis/social-auto-upload) | 多平台视频自动上传分发工具 | 14,735 | 2026-09-03 | [dreammis-social-auto-upload-深度调研.md](dreammis-social-auto-upload-深度调研.md) |
 | 116 | [`droidrun/mobilerun`](https://github.com/droidrun/mobilerun) | 用 LLM 自然语言控制 Android/iOS 设备的开源移动 GUI Agent 框架——a11y 树+截图双通道感知，Manager/Executor 双模式编排，llama-index 实现 LLM 无关 | 9,087 | 2026-08-20 | [droidrun-mobilerun-深度调研.md](droidrun-mobilerun-深度调研.md) |
 | 117 | [`earendil-works/pi`](https://github.com/earendil-works/pi) | 可自定义终端 AI Coding Agent——libGDX 创始人打造，4 层抽象+20+LLM 提供商+树状 Session+TUI 框架（补完源码解读+核心研判） | 72,113 | 2026-07-18 | [earendil-works-pi-深度调研.md](earendil-works-pi-深度调研.md) |
 | 118 | [`easychen/lean-side-bussiness`](https://github.com/easychen/lean-side-bussiness) | — | — | — | [easychen-lean-side-bussiness-深度调研.md](easychen-lean-side-bussiness-深度调研.md) |
@@ -324,7 +324,7 @@
 | 309 | [`rohitg00/agentmemory`](https://github.com/rohitg00/agentmemory) | — | — | 2026-02-25 | [rohitg00-agentmemory-深度调研.md](rohitg00-agentmemory-深度调研.md) |
 | 310 | [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 511 课/20 阶段/~329 小时的开放 AI 工程课程，每课 ship 可复用 artifact（prompt/skill/agent/MCP），证据驱动 + 课程即 Skill 包，MIT | 48,185 | 2026-08-25 | [rohitg00-ai-engineering-from-scratch-深度调研.md](rohitg00-ai-engineering-from-scratch-深度调研.md) |
 | 311 | [`rustdesk/rustdesk`](https://github.com/rustdesk/rustdesk) | 用 Rust 重写、AGPL-3.0 的开源远程桌面（TeamViewer/AnyDesk 自托管替代）——Rust 核心+Flutter UI、P2P 直连优先+中继可自建、全链路自研编解码/捕获/输入库 | 120,559 | 2026-08-15 | [rustdesk-rustdesk-深度调研.md](rustdesk-rustdesk-深度调研.md) |
-| 312 | [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo) | — | — | — | [ruvnet-ruflo-深度调研.md](ruvnet-ruflo-深度调研.md) |
+| 312 | [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo) | Claude Code/Codex agent 元 harness | 70,233 | 2026-09-03 | [ruvnet-ruflo-深度调研.md](ruvnet-ruflo-深度调研.md) |
 | 313 | [`ruvnet/RuView`](https://github.com/ruvnet/RuView) | RuView — 用 WiFi CSI 做无摄像头穿墙空间感知（Rust+ESP32+SNN，呼吸/心率/姿态/跌倒） | 85,030 | 2026-07-24 | [ruvnet-RuView-深度调研.md](ruvnet-RuView-深度调研.md) |
 | 314 | [`RyanCodrai/turbovec`](https://github.com/RyanCodrai/turbovec) | 基于 TurboQuant 算法的 Rust 向量索引（Python 绑定）——零训练在线摄入、手写 SIMD 内核超 FAISS、增量崩溃安全 sync、搜索时过滤，纯本地可气隙，MIT | 16,172 | 2026-08-22 | [RyanCodrai-turbovec-深度调研.md](RyanCodrai-turbovec-深度调研.md) |
 | 315 | [`sansan0/TrendRadar`](https://github.com/sansan0/TrendRadar) | AI 驱动的开源舆情监控与热点筛选工具，聚合多平台热点、RSS 订阅，支持 AI 智能分析、翻译和多渠道推送。📖 项目定位与核心功能定位TrendRadar 定 | 59.3 | 2026-06-13 | [sansan0-TrendRadar-深度调研.md](sansan0-TrendRadar-深度调研.md) |
@@ -380,7 +380,7 @@
 | 365 | [`unclecode/crawl4ai`](https://github.com/unclecode/crawl4ai) | 面向 LLM 的开源网页爬虫与抓取工具，将网页转化为干净的 Markdown，专为 RAG、AI Agent 和数据管道设计。📖 项目定位与核心功能设计理念Cr | 51 | 2026-06-13 | [unclecode-crawl4ai-深度调研.md](unclecode-crawl4ai-深度调研.md) |
 | 366 | [`unslothai/unsloth`](https://github.com/unslothai/unsloth) | 本地运行+微调 LLM/扩散模型的桌面与库一体方案——手写 GPU kernel 实现 2× 更快、70% 更省显存，支持 LoRA/QLoRA/RL，可接 Agent 后端，Apache-2.0 | 70,961 | 2026-08-14 | [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md) |
 | 367 | [`usestrix/strix`](https://github.com/usestrix/strix) | AI Agent 驱动的渗透测试框架——Agent 图编排+真实 PoC 验证+自动修复，把安全测试从"扫描器报疑似"推进到"每条漏洞都能复现" | 28,023 | 2026-07-01 | [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md) |
-| 368 | [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) | — | — | — | [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md) |
+| 368 | [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) | 单图→可变数量 3D 高斯推理库 | 1,264 | 2026-09-03 | [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md) |
 | 369 | [`vercel/eve`](https://github.com/vercel/eve) | Vercel 文件系统优先的持久化 Agent 框架——FS 配置+原生 HITL+多频道抽象，Apache-2.0 Beta | 2,792 | 2026-06-28 | [vercel-eve-深度调研.md](vercel-eve-深度调研.md) |
 | 370 | [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) | Vercel 原生 Rust 浏览器自动化 CLI——守护进程 + CDP 驱动 Chrome，@eN 引用快照，MCP 同源委托，多引擎（CDP/WebDriver） | 39,846 | 2026-08-02 | [vercel-labs-agent-browser-深度调研.md](vercel-labs-agent-browser-深度调研.md) |
 | 371 | [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) | 给 AI Agent 的永久只追加记忆——定宽记录 + 二分合并树压缩，单文件零依赖 | 769 | 2026-07-29 | [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md) |
