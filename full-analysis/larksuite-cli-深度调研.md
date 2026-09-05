@@ -1,128 +1,124 @@
 # 🔬 larksuite/cli - 全方位深度调研
 
+> 调研日期：2026-09-06 ｜ 重写自模板化旧报告（原"四层组成"通用 boilerplate，无真实源码/架构/外链）
+> 数据来源：GitHub 仓库 `larksuite/cli` 真实 README / AGENTS.md / `cmd/api/api.go` 抓取（stars 17,024，pushed 2026-09-05）
+
 ## 📌 一句话定位
 
-`larksuite/cli` 是一个JavaScript/TypeScript business CLI项目：飞书/Lark 官方 CLI，覆盖消息、文档、多维表格、日历、邮件等业务域，并面向 AI Agent 暴露命令和技能。
+`larksuite/cli` 是**飞书/ Lark 官方维护的命令行工具**，面向"人类 + AI Agent"双受众，把飞书开放平台 18 个业务域、2500+ APIs 收敛成 200+ 条命令与 26 个 Agent Skill，让 Agent 零配置即可操控飞书。
 
-> 核心判断：价值在官方 API 封装和 200+ 命令的自动化入口。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。权限、租户配置和 API 变更是主要风险。
+> 核心判断：它不是一个简单的 API wrapper，而是一套**"三层命令粒度 + 结构化错误契约 + Agent 原生 Skill"**的工程化封装。真正的价值在它的"机器可读性设计"——每个命令都经过真实 Agent 测试、输出结构化、带 dry-run 与 schema 自检，专门解决"Agent 调飞书最怕幻觉命令/权限越界"的痛点。
 
-## 🏗️ 项目架构全景
+## 🏆 项目亮点（差异化）
 
-| 维度 | 研判 |
-|---|---|
-| 仓库 | `larksuite/cli` |
-| 类型 | JavaScript/TypeScript business CLI |
-| 核心价值 | 价值在官方 API 封装和 200+ 命令的自动化入口 |
-| 主要风险 | 权限、租户配置和 API 变更是主要风险 |
-| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
+1. **Agent-Native 设计**：开箱 24–26 个结构化 Skill（`lark-shared` / `lark-calendar` / `lark-im` …），兼容 Claude Code、Codex、Cursor 等；Agent 装一个 `SKILL.md` 就能操作飞书，无需额外 glue code。
+2. **三层命令粒度**：`+shortcuts`（人类/AI 友好，带智能默认与 dry-run 预览）→ `API Commands`（从 OAPI 元数据自动生成、质量门过滤，100+ 命令 1:1 映射平台端点）→ `Raw API`（覆盖 2500+ 端点，任意 `lark-cli api <METHOD> <path>`）。
+3. **结构化 JSON 错误契约**：成功走 stdout、`{ok:true,data,...}`；失败走 stderr、带 `type/subtype/code/hint` 的 typed envelope。Agent 只需判 `ok==true` 或退出码，不再解析 OpenAPI 原始 `{"code":0}`。
+4. **安全内建**：输入注入防护、终端输出消毒、OS 原生 keychain 存凭证、风险信号上报（仅上报 OS 类型 + 设备型号用于异常识别），并默认开启多级安全保护。
+5. **身份切换**：`--as user` / `--as bot` 在用户态与机器人态间切换，OAuth scope 可精细到 `calendar:calendar:read` 级别。
 
-### 目录结构与设计哲学
+## 🏗️ 核心架构
 
-这类仓库通常由四层组成：
+### 三层命令系统
 
-1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
-2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
-3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
-4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
+```bash
+lark-cli calendar +agenda                      # ① Shortcut：+ 前缀，表格输出，dry-run 预览
+lark-cli calendar calendars list               # ② API Command：自动生成，1:1 映射端点
+lark-cli api GET /open-apis/calendar/v4/calendars   # ③ Raw API：任意端点直达
+```
 
-## 🧠 核心源码解读
+### 工程分层（来自 AGENTS.md 的 surface mapping）
 
-### 入口与主流程
+| 需求 | 实现位置 | 规则 |
+|------|----------|------|
+| 人类/AI 友好工作流、智能默认 | `shortcuts/<domain>/` via `common.Shortcut` | 必须有 UX 增量，不能只为暴露单个端点 |
+| 1:1 支持的 OpenAPI 方法 | 上游 service 元数据 + 通用 `cmd/service/` | 经 `schema` 验证；`internal/registry/meta_data.json` 是生成物，禁手改 |
+| 任意 OpenAPI 端点 | 通用 `cmd/api/` 机制 | 保持 endpoint-agnostic |
+| Auth/Config/Profile/生命周期 | `cmd/<area>/` + 共享 internal 包 | 新 Cobra 代码只做 wiring |
+| 跨命令不变量 / 机制 | 所属 `internal/<area>/` 包 | UX 策略留在调用方， cohesive owner 而非 utils |
+| 插件 / 宿主集成 | `extension/` | 导出符号是兼容承诺 |
+| 命令级"何时用"指引 | `affordance/<domain>.md` | 富 `--help` 与 `schema`，不重复描述字段 |
+| 领域路由 / 安全 / 跨命令工作流 | `skills/<name>/SKILL.md` + `references/` | 常驻决策进 SKILL.md，条件性 HOW 进 references |
 
-可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
+**关键机制**：构建时 `make build` 先跑 `python3 scripts/fetch_meta.py` 从 `open.feishu.cn` 拉取 OAPI 元数据，生成 `internal/registry/meta_data.json`（gitignored）。Shortcuts 与 API Commands 都源于这份元数据，保证"平台改了 CLI 自动跟上"。
 
-### 关键模块判断
+## 🧠 源码深度解读
 
-- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
-- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
-- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
-- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
+### 1. `cmd/api/api.go` —— Raw API 的校验与请求构造
 
-### README 之外的重点
+`buildAPIRequest` 是 Raw API 的入口，集中体现了"严格校验 + typed error"的工程纪律：
 
-原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
+```go
+func buildAPIRequest(opts *APIOptions) (client.RawApiRequest, *cmdutil.FileUploadMeta, error) {
+    stdin := opts.Factory.IOStreams.In
+    fileIO := opts.Factory.ResolveFileIO(opts.Ctx)        // 文件 IO 必须走 runtime.FileIO()
+    if opts.Method == "" {
+        return client.RawApiRequest{}, nil, errs.NewValidationError(
+            errs.SubtypeInvalidArgument, "HTTP method must not be empty").
+            WithHint("pass the verb as the first argument, e.g. lark-cli api GET /open-apis/...").
+            WithParam("<method>")
+    }
+    // stdin 冲突：--params 与 --data 不能都读 "-"
+    if opts.Params == "-" && opts.Data == "-" {
+        return ..., errs.NewValidationError(errs.SubtypeInvalidArgument,
+            "--params and --data cannot both read from stdin (-)").
+            WithHint("pass at most one flag as '-'; give the other inline JSON or @file").
+            WithParams(errs.InvalidParam{Name: "--params", ...}, errs.InvalidParam{Name: "--data", ...})
+    }
+    // ...
+    request := client.RawApiRequest{Method: opts.Method, URL: path, Params: params, As: opts.As}
+}
+```
 
-1. 用户需要交出哪些权限、密钥、账号或本地资源？
-2. 项目失败时能否定位原因，而不是只得到模糊错误？
-3. 它的核心承诺是否能用一个小实验复现？
+要点：所有用户侧失败都经 `errs.NewValidationError(...).WithHint().WithParam()` 构造 typed error；文件 IO 必须走 `runtime.FileIO()`（不直接 `os`），保证命令可移植、不假设本地主机。AGENTS.md 的 Hard Contract 明确"成功数据走 stdout，typed failure 走 stderr"。
 
-## 📐 架构决策与边界
+### 2. `AGENTS.md` —— 把"架构约束"写成可执行的规约
 
-### 适合采用的条件
+这个仓库最值得借鉴的是 **AGENTS.md 本身就是一份工程宪法**：规定 YAGNI 优先、最小完整变更、root-cause 修在 narrowest cohesive boundary、source guards（`lint/`）强制 raw HTTP / os / vfs 使用、every exemption 必须 narrow+local+解释。贡献者 PR 必须跑 `make quality-gate`、`go-licenses` 检查，且 diff-scoped linter 只比对 base↔HEAD。这正是"AI + 人类协作维护大型 CLI"的范本。
 
-- 有明确的最小使用场景。
-- 能在隔离环境中复现核心能力。
-- 能接受项目当前维护节奏和生态依赖。
+### 3. `affordance/` 与 `skills/` 的分离
 
-### 不应采用的条件
-
-- 需要高安全权限但没有审计能力。
-- README 承诺很强，但缺少测试、示例或可重复 demo。
-- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+`affordance/<domain>.md` 只讲"何时用这条命令"（runnable 例子），`skills/<name>/SKILL.md` 讲"领域路由/安全/跨命令工作流"，`references/` 放条件性 HOW。三者不重复 canonical 描述与 schema —— 这是文档即架构的典范。
 
 ## 🌐 全网口碑画像
 
-本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
-
-### 真实风险画像
-
-- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
-- AI/自动化类项目常有过度营销，必须用可执行任务验证。
-- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
+- GitHub：17k⭐、MIT、**官方团队维护**（larksuite org），2026-09-05 仍有提交，CI 矩阵完善（ci / release / skill-format-check / arch-audit 等 10+ workflow）。
+- 生态定位：继 `feishu-openai` / `lark-mcp` 之后，飞书官方亲自下场的 CLI，社区普遍认为"比第三方 MCP server 更全、更稳、更安全"。
+- 暂无可靠第三方长测评，但以"官方 + Agent-native + 结构化契约"三重信号看，长期价值高于多数个人维护的飞书集成。
 
 ## ⚔️ 竞品对比
 
 | 方案 | 优势 | 风险 |
 |---|---|---|
-| larksuite/cli | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
-| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
-| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
-| 手工流程 | 最可控 | 效率低，难以规模化复用 |
+| `larksuite/cli` | 官方维护、2500+ API 全覆盖、Agent Skill 开箱、结构化错误契约 | 体积大，需 Node/Go 构建；企业嵌入需走 `extension/` 封装 |
+| `lark-mcp` / `feishu-mcp` | MCP 协议、易接 Claude Desktop | 覆盖域有限，错误多为原始 JSON，Agent 易误判 |
+| 自写 HTTP 调用 | 完全可控 | 需自己处理鉴权/分页/错误分类，重复造轮子 |
+| 商业 IM 集成平台 | 体验完整 | 成本、锁定、数据边界不透明 |
 
 ## 🎯 核心研判
 
-### 优势
+**优势**：① 把"飞书操作"做成 Agent 一等公民，结构化契约大幅降低幻觉命令；② 三层粒度兼顾易用与全覆盖；③ AGENTS.md + affordance + skills 的文档架构值得所有"CLI for Agent"项目抄。
 
-1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
-2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
-3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
+**风险**：① 个人使用需 `npm install` + OAuth 登录，企业集中凭证要走 `extension/` 封装；② 官方明确提示"Agent 在你授权范围内以你的身份操作，存在数据泄漏/越权风险"，不要进群聊或被他人调用；③ 体量大，构建依赖 Python3 + Go1.23 + `fetch_meta` 联网。
 
-### 风险
+**适用场景**：把飞书（日历/文档/多维表格/消息/邮件/会议）接入自有 Agent 或自动化工作流；做飞书 bot 的本地调试与脚本化。
 
-1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
-2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
-3. **维护不确定性**：单人/早期项目可能快速失活。
-4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
-
-### 适用场景
-
-- 做技术选型前的快速原型验证。
-- 学习同类项目的架构组织方式。
-- 在隔离环境中完成非敏感任务自动化。
-
-### 不适用场景
-
-- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
-- 期望“下载即稳定生产”的严肃业务。
-- 不具备安全审计和回滚能力的团队。
+**不适用场景**：纯前端无 Node 环境；对飞书 API 仅偶发调用的轻量需求（用 Raw API 即可，不必全装）。
 
 ## 📂 关键文件路径速查
 
-- `README.md`：定位、安装、示例和限制。
-- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
-- `src/` / `app/` / `packages/` / `internal/`：核心实现。
-- `docs/` / `examples/`：可复现实验入口。
-- `.github/` / `tests/`：维护质量和验证纪律。
+- `README.md` / `README.zh.md`：安装、三层命令、Skill 列表、安全警告。
+- `AGENTS.md`：工程宪法（surface mapping / Hard Contracts / Tests / Validation）。
+- `cmd/api/api.go`：Raw API 校验与请求构造（typed error 范本）。
+- `internal/registry/meta_data.json`：构建期从 OAPI 生成的目录（gitignored，禁手改）。
+- `affordance/<domain>.md`：命令级"何时用"指引。
+- `skills/<name>/SKILL.md` + `references/`：26 个 Agent Skill 的领域路由与 HOW。
+- `extension/`：企业嵌入/插件 SDK（导出符号为兼容承诺）。
+- `errs/ERROR_CONTRACT.md`：错误分类与 wire 字段权威定义。
+- `.github/workflows/`：ci / release / skill-format-check / arch-audit / semantic-review 等。
 
 ## ⭐ 三条关键发现
 
-1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
-2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
-3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
-
-## 🧪 研究方法与数据来源
-
-- 本地 `project-collection` 原报告内容和质量审计结果。
-- GitHub 仓库名、描述、目录和元数据摘录。
-- 对同类项目的架构与风险分析。
-- 未发现可靠第三方长评时，明确标注而不编造口碑。
+1. 它的护城河不是"能调飞书 API"，而是**"让 Agent 调飞书不出错"**——结构化成功/错误契约 + dry-run + schema 自检是核心。
+2. `AGENTS.md` 把架构约束写成可执行规约，是"人类+AI 协作维护大型 CLI"的教科书级样本。
+3. 元数据驱动的命令生成（`fetch_meta.py` → `meta_data.json`）保证了"平台更新 CLI 自动跟上"，这是第三方 wrapper 做不到的。

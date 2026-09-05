@@ -1,128 +1,112 @@
 # 🔬 KKKKhazix/khazix-skills - 全方位深度调研
 
+> 调研日期：2026-09-06 ｜ 重写自模板化旧报告（原"四层组成"通用 boilerplate，无真实源码/架构/外链）
+> 数据来源：GitHub 仓库 `KKKKhazix/khazix-skills` 真实 README / `leader/SKILL.md` 抓取（stars 20,441，MIT，pushed 2026-08-16）
+
 ## 📌 一句话定位
 
-`KKKKhazix/khazix-skills` 是一个AI Skills collection项目：数字生命卡兹克开源的 AI Skills 场景集合。
+`KKKKhazix/khazix-skills` 是**数字生命卡兹克（虚实传媒创始人）每天自用的 6 个 AI Skill 开源合集**，遵循 [Agent Skills](https://agentskills.io) 开放标准，可被 Claude Code、Codex、Cursor、Kimi Code、CodeBuddy 等 40+ Agent 直接加载。
 
-> 核心判断：价值在把具体工作流沉淀为可复用 skill。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。目录型仓库质量不均，需要逐个 skill 验证。
+> 核心判断：这不是"提示词集合"，而是**经过真实项目跑通、沉淀为结构化指令集（SKILL.md + references + evals）的生产力工具箱**。最值钱的是 `leader` 和 `neat-freak`——一个解决"怎么把模糊想法变成 AI 能独立跑完的目标"，一个解决"Agent 干完活怎么收尾不脑腐"。
 
-## 🏗️ 项目架构全景
+## 🏆 项目亮点（差异化）
 
-| 维度 | 研判 |
-|---|---|
-| 仓库 | `KKKKhazix/khazix-skills` |
-| 类型 | AI Skills collection |
-| 核心价值 | 价值在把具体工作流沉淀为可复用 skill |
-| 主要风险 | 目录型仓库质量不均，需要逐个 skill 验证 |
-| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
+1. **遵循 Agent Skills 开放标准**：每个 Skill 是 `SKILL.md` 结构化指令集，支持该标准的 40+ Agent 都能"说一句帮我安装"即可加载，无需手动拼路径。
+2. **6 个都是真实踩坑沉淀**：leader（目标定义）、neat-freak（洁癖收尾）、hv-analysis（横纵分析法）、khazix-writer（卡兹克写作）、aihot（AI HOT 资讯）、storage-analyzer（清磁盘）。
+3. **`leader` 的"防 AI 五种死法"方法论**：把"如何让 Agent 长程不跑偏"工程化——作弊达标 / 幻觉命令 / 失忆 / 一条道走到黑 / 静默事故，每条都有对策（基线不可退、暗卷自留、PROGRESS.md、反向验证）。
+4. **`neat-freak` 的"三层知识对齐"**：项目文档（README/docs）、AI 规则文件（CLAUDE.md/AGENTS.md）、Agent 记忆分别处理，并审计规则是否真被执行——直击"代码迭代 8 轮文档还是初版"的脑腐痛点。
+5. **零配置安装**：`帮我安装这个 skill：https://github.com/KKKKhazix/khazix-skills/tree/main/<skill-name>`，Agent 自己 clone；不支持 Skill 的也能把 `SKILL.md` 当规则文件直接贴。
 
-### 目录结构与设计哲学
+## 🏗️ 核心架构
 
-这类仓库通常由四层组成：
+### Skill 集合结构
 
-1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
-2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
-3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
-4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
+```
+khazix-skills/
+├── leader/          SKILL.md + references/{anatomy.md,style.md}   # 目标定义
+├── neat-freak/      SKILL.md + evals/{evals.json, fixtures/...}   # 收尾对齐（含评测夹具）
+├── hv-analysis/     SKILL.md + references/{schema.json} + scripts/{md_to_pdf.py}
+├── khazix-writer/   SKILL.md + references/{content_methodology.md,style_examples.md}
+├── aihot/           SKILL.md + agents/{openai.yaml} + references/{api.md,errors.md,sync.md} + install.sh + manifest.sha256
+└── storage-analyzer/ SKILL.md
+```
 
-## 🧠 核心源码解读
+每个 Skill 自带 `references/`（条件性 HOW）与（部分）`evals/`（可验证夹具），符合 Agent Skills 标准"frontmatter 描述 WHAT/WHEN/NOT 触发，条件细节进 references"的约定。
 
-### 入口与主流程
+### 安装分发
 
-可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
+- 支持 Skill 的 Agent：自然语言触发安装，clone 到对应目录。
+- 不支持 Skill 的 Agent：`SKILL.md` 全文当项目规则文件/对话上下文，效果一致。
+- `aihot` 额外提供 `install.sh` + `manifest.sha256` 做完整性校验，体现"生产级分发"意识。
 
-### 关键模块判断
+## 🧠 源码深度解读
 
-- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
-- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
-- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
-- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
+### 1. `leader/SKILL.md` —— 把"派活给 AI"写成可复现协议
 
-### README 之外的重点
+frontmatter 的 `description` 本身就是路由触发器：
 
-原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
+```yaml
+---
+name: leader
+description: 把一句话的想法拆成 AI agent 能独立跑完的目标任务书。用户说「帮我给 agent 写个目标」
+  「帮我详细拆一下这个目标」「写个任务书/brief 给 agent」「写个 goal 提示词」「让 agent 自己跑这个项目」
+  「把活分给几个 agent 并行」时使用。先进代码库实测、必要时联网调研，再一次性提问（≤5 个），产出一份
+  ≤4000 字符、直接粘进 /goal 就能跑的任务书，含实测数字、白名单地界、防作弊验收和断点续跑。
+---
+```
 
-1. 用户需要交出哪些权限、密钥、账号或本地资源？
-2. 项目失败时能否定位原因，而不是只得到模糊错误？
-3. 它的核心承诺是否能用一个小实验复现？
+三个角色模型：**领导**（用户，出想法拍板）/ **管理者**（Agent，调研+写书+验收）/ **执行者**（目标模式里干活的 agent，一字不差执行、中途无人可问）。核心纪律：
 
-## 📐 架构决策与边界
+- **先实测再写书**：命令真的存在吗、基线数字多少、README 写的命令是不是 `echo` 占位的假绿灯——都是真坑。
+- **目标七问**：目的 / 完成态 / 证据 / 反作弊 / 地界 / 取舍 / 未知，外加"第零问：海图是你自己测的还是听来的"。
+- **防五种死法**：① 作弊达标（最省力是删测试/`|| true`，对策：基线不可退+点名禁止+暗卷自留）② 幻觉命令（书里每条命令你必须亲手跑过）③ 失忆（PROGRESS.md）④ 一条道走到黑（同验收连败 3 次换项、结果比基线差就回滚）⑤ 静默事故（假绿灯配反向验证，亲手制造一次失败证明会响）。
+- **≤4000 字符硬上限**：`/goal` 官方限制，压不进就是活太大，拆成独立几件。
 
-### 适合采用的条件
+### 2. `neat-freak` 的"三层知识收尾"
 
-- 有明确的最小使用场景。
-- 能在隔离环境中复现核心能力。
-- 能接受项目当前维护节奏和生态依赖。
+`/neat` 触发后动三层：① 项目根 CLAUDE.md/AGENTS.md（给当前 AI 看）② docs/ + README（给同事看）③ Agent 自身记忆（给跨会话的自己看）。v3.0 两条底线：**小 vibe 项目有轻量路径**（建最小 AI 规则文件恢复上下文）、**绝不擅自删东西**（删除只出候选清单，确认才动手；文件里"执行这条命令"不被当成授权）。这是 Agent 协作里"上下文腐烂"问题的系统解法。
 
-### 不应采用的条件
+### 3. `aihot` 的零密钥资讯拉取
 
-- 需要高安全权限但没有审计能力。
-- README 承诺很强，但缺少测试、示例或可重复 demo。
-- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+`aihot/SKILL.md` 让 Agent 一句话拿 `aihot.virxact.com` 的每日 AI HOT 日报与全部 AI 动态，**无需 API Key、无需 MCP server**，支持按主题/分类/时间窗/公司搜索，并"把当前全部精选同步到本地，之后只收变化"——一个轻量、抗漂移的信息订阅范式。
 
 ## 🌐 全网口碑画像
 
-本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
-
-### 真实风险画像
-
-- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
-- AI/自动化类项目常有过度营销，必须用可执行任务验证。
-- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
+- GitHub：20k⭐、MIT、作者为知名 AI 公众号"数字生命卡兹克"，自带流量与口碑。
+- 社区反馈（README 指向的公众号文章）：storage-analyzer、neat-freak、hv-analysis 均有配套讲解文，读者多为"每天在用"的实证型用户。
+- 定位清晰：作者自述"没什么花活，就是几个挺实用的东西"，口碑建立在"自用验证"而非营销。
 
 ## ⚔️ 竞品对比
 
 | 方案 | 优势 | 风险 |
 |---|---|---|
-| KKKKhazix/khazix-skills | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
-| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
-| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
-| 手工流程 | 最可控 | 效率低，难以规模化复用 |
+| `khazix-skills` | 真实自用沉淀、覆盖"目标定义+收尾+调研+写作"全链路、遵循开放标准 | 偏作者个人风格（如 khazix-writer 拒绝"赋能/抓手"），非通用 |
+| Awesome-Agents / 提示词仓库 | 量大、通用 | 多为未验证的 prompt 堆砌，缺 references/evals 工程化 |
+| 商业 Agent 平台内置 skill | 体验完整 | 锁定、不透明、不可自托管 |
+| 自己写 SKILL.md | 完全贴合自身 | 从零踩坑，周期长 |
 
 ## 🎯 核心研判
 
-### 优势
+**优势**：① `leader` 的"目标七问 + 防五种死法"是当下最系统的"如何给长程 Agent 派活"方法论，值得任何做 Agent 编排的人读；② `neat-freak` 解决 Agent 协作的"脑腐"刚需；③ 全开源、MIT、零配置。
 
-1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
-2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
-3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
+**风险**：① `khazix-writer` 强立场（拒绝特定套话），不适合要"通用好文笔"的用户；② Skill 质量依赖作者持续维护，目前单人维护；③ 部分 Skill（storage-analyzer）Windows 路径"代码就绪、首次留个心眼"，跨平台需自测。
 
-### 风险
+**适用场景**：把"模糊想法→可验收目标"交给 Agent 长程执行；Agent 干完活后的知识收尾；竞品/概念深度调研（hv-analysis）；公众号风格长文（khazix-writer）；每日 AI 资讯订阅（aihot）。
 
-1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
-2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
-3. **维护不确定性**：单人/早期项目可能快速失活。
-4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
-
-### 适用场景
-
-- 做技术选型前的快速原型验证。
-- 学习同类项目的架构组织方式。
-- 在隔离环境中完成非敏感任务自动化。
-
-### 不适用场景
-
-- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
-- 期望“下载即稳定生产”的严肃业务。
-- 不具备安全审计和回滚能力的团队。
+**不适用场景**：需要完全中立/通用写作风格；不愿引入作者个人方法论偏好；对 Skill 维护时效敏感的生产关键链路。
 
 ## 📂 关键文件路径速查
 
-- `README.md`：定位、安装、示例和限制。
-- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
-- `src/` / `app/` / `packages/` / `internal/`：核心实现。
-- `docs/` / `examples/`：可复现实验入口。
-- `.github/` / `tests/`：维护质量和验证纪律。
+- `README.md` / `README.en.md`：6 个 Skill 总览、安装方式、目录。
+- `leader/SKILL.md` + `references/{anatomy.md,style.md}`：目标定义方法论（七问/防五种死法/写书规则）。
+- `neat-freak/SKILL.md` + `evals/{evals.json,fixtures/...}`：收尾对齐 + 评测夹具。
+- `hv-analysis/SKILL.md` + `references/schema.json` + `scripts/md_to_pdf.py`：横纵分析法 → PDF 报告。
+- `khazix-writer/SKILL.md` + `references/{content_methodology.md,style_examples.md}`：写作风格规则。
+- `aihot/SKILL.md` + `agents/openai.yaml` + `references/{api.md,errors.md,sync.md}` + `install.sh` + `manifest.sha256`：AI HOT 资讯拉取。
+- `storage-analyzer/SKILL.md`：磁盘扫描三色分级。
 
 ## ⭐ 三条关键发现
 
-1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
-2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
-3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
-
-## 🧪 研究方法与数据来源
-
-- 本地 `project-collection` 原报告内容和质量审计结果。
-- GitHub 仓库名、描述、目录和元数据摘录。
-- 对同类项目的架构与风险分析。
-- 未发现可靠第三方长评时，明确标注而不编造口碑。
+1. 最该抄的不是某个 Skill 的写法，而是 **`leader` 把"派活给 Agent"工程化为可复现协议**——七问框架 + 防五种死法，直接提升长程 Agent 成功率。
+2. **`neat-freak` 戳中了 Agent 协作的真实痛点**：代码在迭代、文档/记忆在腐烂，它做的是"收尾对齐 + 规则审计"，不是又一套提示词。
+3. 整个仓库是 **"个人实证 → 开源 Skill"** 的范本：每个 Skill 都带 references 与（部分）evals，比纯 prompt 仓库工程化程度高一个量级。

@@ -192,7 +192,7 @@
 | 177 | [`jamiepine/voicebox`](https://github.com/jamiepine/voicebox) | Voicebox — 本地优先开源 AI 语音工作室（ElevenLabs+WisprFlow 合体，7 TTS 引擎 + Agent 语音 I/O via MCP） | 44,039 | 2026-07-21 | [jamiepine-voicebox-深度调研.md](jamiepine-voicebox-深度调研.md) |
 | 178 | [`Jane-xiaoer/xiaoer-videolab`](https://github.com/Jane-xiaoer/xiaoer-videolab) | 深度调研报告： | 464 | 2026-06-18 | [Jane-xiaoer-xiaoer-videolab-深度调研.md](Jane-xiaoer-xiaoer-videolab-深度调研.md) |
 | 179 | [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) | 面向 AI 编程助手的网站逆向工程模板，AGENTS.md 单一源 + 9 平台 skill 自动同步 + foreman/worktree 多 agent 派发 | 21,607 | 2026-06-27 | [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md) |
-| 180 | [`jd-opensource/JoyAI-Echo`](https://github.com/jd-opensource/JoyAI-Echo) | — | — | — | [jd-opensource-JoyAI-Echo-深度调研.md](jd-opensource-JoyAI-Echo-深度调研.md) |
+| 180 | [`jd-opensource/JoyAI-Echo`](https://github.com/jd-opensource/JoyAI-Echo) | 京东开源长时序音视频生成+可交互世界模型（Echo-LongVideo 10+min / Echo-WM），Director Agent 编排，LTX-2 衍生，仅学术/非商用 | 2,002 | 2026-09-06 | [jd-opensource-JoyAI-Echo-深度调研.md](jd-opensource-JoyAI-Echo-深度调研.md) |
 | 181 | [`jenkinsci/jenkins`](https://github.com/jenkinsci/jenkins) | 领先开源自动化服务器——2000+ 插件 ExtensionPoint 架构，Pipeline as Code | 25,855 | 2026-07-28 | [jenkinsci-jenkins-深度调研.md](jenkinsci-jenkins-深度调研.md) |
 | 182 | [`jgm/pandoc`](https://github.com/jgm/pandoc) | 通用文档转换器——纯 Haskell 实现，AST 中间表示+嵌入式 Lua+Lua 过滤器生态，支持 60+ 格式互转，200 万行测试保障 | 45,217 | 2026-07-05 | [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md) |
 | 183 | [`JimLiu/baoyu-design`](https://github.com/JimLiu/baoyu-design) | — | 516 | — | [JimLiu-baoyu-design-深度调研.md](JimLiu-baoyu-design-深度调研.md) |
@@ -204,7 +204,7 @@
 | 189 | [`kageroumado/phosphene`](https://github.com/kageroumado/phosphene) | — | — | 2026-06-19 | [kageroumado-phosphene-深度调研.md](kageroumado-phosphene-深度调研.md) |
 | 190 | [`karakeep-app/karakeep`](https://github.com/karakeep-app/karakeep) | 自托管"收藏一切"应用——链接/笔记/图片/PDF/视频全支持，AI 自动标签+Meilisearch 全文搜索+多端覆盖+Agent Skills | 26,838 | 2026-07-07 | [karakeep-app-karakeep-深度调研.md](karakeep-app-karakeep-深度调研.md) |
 | 191 | [`kepano/obsidian-skills`](https://github.com/kepano/obsidian-skills) | 遵循 Agent Skills 规范的 Obsidian 技能包——覆盖 MD/Bases/JSON Canvas/CLI，Defuddle 网页去噪提取省 token，MIT | 45,579 | 2026-08-14 | [kepano-obsidian-skills-深度调研.md](kepano-obsidian-skills-深度调研.md) |
-| 192 | [`KKKKhazix/khazix-skills`](https://github.com/KKKKhazix/khazix-skills) | — | — | — | [KKKKhazix-khazix-skills-深度调研.md](KKKKhazix-khazix-skills-深度调研.md) |
+| 192 | [`KKKKhazix/khazix-skills`](https://github.com/KKKKhazix/khazix-skills) | 数字生命卡兹克自用 6 个 AI Skill 合集（leader/neat-freak/hv-analysis…），遵循 Agent Skills 标准，40+ Agent 可装，MIT | 20,441 | 2026-09-06 | [KKKKhazix-khazix-skills-深度调研.md](KKKKhazix-khazix-skills-深度调研.md) |
 | 193 | [`koala73/worldmonitor`](https://github.com/koala73/worldmonitor) | 实时全球情报仪表盘（AI 新闻聚合+地缘监控+双地图引擎，AGPL-3.0） | 78,069 | 2026-08-03 | [koala73-worldmonitor-深度调研.md](koala73-worldmonitor-深度调研.md) |
 | 194 | [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) | 基于 Firecracker 的分布式 Agent 沙箱平台——E2B 兼容 API，overlaybd+ublk+内存快照 | 1,393 | 2026-07-29 | [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md) |
 | 195 | [`kvcache-ai/ktransformers`](https://github.com/kvcache-ai/ktransformers) | MoE 大模型异构 CPU/GPU 混合推理框架——角色切分卸载 + Intel AMX 内核 + 三层 KV Cache，24GB 单卡跑 671B DeepSeek | 18,283 | 2026-07-20 | [kvcache-ai-ktransformers-深度调研.md](kvcache-ai-ktransformers-深度调研.md) |
@@ -214,7 +214,7 @@
 | 199 | [`langchain-ai/openwiki`](https://github.com/langchain-ai/openwiki) | LangChain DeepAgents 文档写作 CLI——后端写护栏 + SHA-256 快照门禁 | 12,272 | 2026-07-19 | [langchain-ai-openwiki-深度调研.md](langchain-ai-openwiki-深度调研.md) |
 | 200 | [`langgenius/dify`](https://github.com/langgenius/dify) | 生产级 Agentic 工作流 LLM 应用开发平台 | 146,670 | 2026-06-27 | [langgenius-dify-深度调研.md](langgenius-dify-深度调研.md) |
 | 201 | [`LanRhyme/MicYou`](https://github.com/LanRhyme/MicYou) | MicYou | — | 2026-02-10 | [LanRhyme-MicYou-深度调研.md](LanRhyme-MicYou-深度调研.md) |
-| 202 | [`larksuite/cli`](https://github.com/larksuite/cli) | — | — | — | [larksuite-cli-深度调研.md](larksuite-cli-深度调研.md) |
+| 202 | [`larksuite/cli`](https://github.com/larksuite/cli) | 飞书/Lark 官方 CLI——三层命令粒度+26 Agent Skill+结构化错误契约，覆盖 2500+ API，MIT | 17,024 | 2026-09-06 | [larksuite-cli-深度调研.md](larksuite-cli-深度调研.md) |
 | 203 | [`LC044/WeChatMsg`](https://github.com/LC044/WeChatMsg) | WeChatMsg（留痕）— Windows 微信聊天记录本地解密导出工具（已停更，Memotrace 前身） | 41,876 | 2026-07-27 | [LC044-WeChatMsg-深度调研.md](LC044-WeChatMsg-深度调研.md) |
 | 204 | [`Leonxlnx/taste-skill`](https://github.com/Leonxlnx/taste-skill) | 给 AI "好品味"——阻止 AI 生成无聊、空洞、通用的内容。通过一套精心设计的规则集，让 AI 代码的输出更有设计感和个性。项目名 Taste-Skill: | 42,890 | 2026-06-14 | [Leonxlnx-taste-skill-深度调研.md](Leonxlnx-taste-skill-深度调研.md) |
 | 205 | [`lfnovo/open-notebook`](https://github.com/lfnovo/open-notebook) | Google NotebookLM 的开源替代品——支持 18+ AI 提供商、多模态内容处理、智能播客生成、自托管隐私保护 | 34,101 | 2026-07-01 | [lfnovo-open-notebook-深度调研.md](lfnovo-open-notebook-深度调研.md) |
@@ -228,7 +228,7 @@
 | 213 | [`localsend/localsend`](https://github.com/localsend/localsend) | 开源 AirDrop 替代——REST+HTTPS 零服务器 P2P 局域网文件/消息分享，六平台 Flutter 前端 + Rust 网络核心（Cargo workspace），自签证书 TOFU 指纹校验，Apache-2.0 | 88,486 | 2026-08-17 | [localsend-localsend-深度调研.md](localsend-localsend-深度调研.md) |
 | 214 | [`logto-io/logto`](https://github.com/logto-io/logto) | 面向 SaaS 和 AI Agent 的现代化开源认证基础设施——OIDC/OAuth 2.1，SOC2/HIPAA 合规，50K MAU 免费 | 13,709 | 2026-07-05 | [logto-io-logto-深度调研.md](logto-io-logto-深度调研.md) |
 | 215 | [`Lordog/dive-into-llms`](https://github.com/Lordog/dive-into-llms) | 上交大《动手学大模型》中文教程——11 章课件+教程+notebook，覆盖水印/隐写/越狱/对齐 | 44,960 | 2026-07-26 | [Lordog-dive-into-llms-深度调研.md](Lordog-dive-into-llms-深度调研.md) |
-| 216 | [`lynote-ai/humanize-text`](https://github.com/lynote-ai/humanize-text) | — | — | — | [lynote-ai-humanize-text-深度调研.md](lynote-ai-humanize-text-深度调研.md) |
+| 216 | [`lynote-ai/humanize-text`](https://github.com/lynote-ai/humanize-text) | AI 文本人性化开源工具包——LLM 改写+跨引擎翻译链（语言距离最大化），4 段生产管线，MIT | 1,600 | 2026-09-06 | [lynote-ai-humanize-text-深度调研.md](lynote-ai-humanize-text-深度调研.md) |
 | 217 | [``](https://github.com/) | AI 全流程求职自动化框架——Claude Code 工作流，Drafter-Reviewer 双 Agent 质检 + LaTeX 原生 + ATS 审计 | 10,384 | 2026-07-08 | [MadsLorentzen-ai-job-search-深度调研.md](MadsLorentzen-ai-job-search-深度调研.md) |
 | 218 | [`mahlernim/google-timeline-visualizer`](https://github.com/mahlernim/google-timeline-visualizer) | 隐私优先的 Google 地图时间线可视化工具（Kotlin/Python）——导入本地 Timeline.json 导出 MP4 旅行动画，Android/iOS PWA/桌面三端，数据绝不上传，MIT | 2,154 | 2026-08-22 | [mahlernim-google-timeline-visualizer-深度调研.md](mahlernim-google-timeline-visualizer-深度调研.md) |
 | 219 | [`MakazhanAlpamys/Soup`](https://github.com/MakazhanAlpamys/Soup) | 一条 YAML 一条命令完成 LLM 微调——Layer Streaming 把冻结基座驻留 CPU RAM/NVMe 逐层流式进 VRAM，8B+NF4 在 4GB 显卡 3.32GB 峰值训练（BETA） | 1,572 | 2026-08-16 | [MakazhanAlpamys-Soup-深度调研.md](MakazhanAlpamys-Soup-深度调研.md) |
