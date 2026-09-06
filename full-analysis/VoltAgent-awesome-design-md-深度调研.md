@@ -1,128 +1,103 @@
 # 🔬 VoltAgent/awesome-design-md - 全方位深度调研
 
+> 调研日期：2026-09-07 ｜ 重写自模板化旧报告（原"四层组成"通用 boilerplate，无真实源码/架构/外链）
+> 数据来源：GitHub 仓库 `VoltAgent/awesome-design-md` 真实 README / 目录树抓取（stars 114,423，pushed 2026-07-31，MIT，纯文档仓库）
+
 ## 📌 一句话定位
 
-`VoltAgent/awesome-design-md` 是一个awesome list / design system for agents项目：收集流行品牌设计系统的 DESIGN.md 分析，让 coding agent 生成匹配风格 UI。
+`VoltAgent/awesome-design-md` 是**精选的 DESIGN.md 合集**——从真实网站抽取的设计系统文档，让你把一份 `DESIGN.md` 丢进项目根目录，再告诉 AI agent "照这个风格搭页面"，即可生成视觉一致的 UI。它建立在 Google Stitch 提出的 **DESIGN.md 概念**（纯文本设计系统文档，AI 读取后生成一致 UI）之上。
 
-> 核心判断：价值在把设计系统约束转成 agent 可读文档。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。作为列表型仓库，质量取决于条目维护和设计规范准确性。
+> 核心判断：它不是代码库，而是 **awesome-list + 设计 token 抽取资源库**。真正价值在"73 个真实品牌的设计系统被结构化成了 Agent 最易读的 Markdown 格式"。⚠️ **stars 114,423 极不寻常**（同组织另一 repo `awesome-agent-skills` 仅 32k），疑似 viral 增长或含水分，引用时务必谨慎。
 
-## 🏗️ 项目架构全景
+## 🏆 项目亮点（差异化）
 
-| 维度 | 研判 |
-|---|---|
-| 仓库 | `VoltAgent/awesome-design-md` |
-| 类型 | awesome list / design system for agents |
-| 核心价值 | 价值在把设计系统约束转成 agent 可读文档 |
-| 主要风险 | 作为列表型仓库，质量取决于条目维护和设计规范准确性 |
-| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
+1. **73 个真实品牌 DESIGN.md**：覆盖 AI/LLM、DevTools、Fintech、Automotive、E-commerce、Media、Retro Web 等类目（Airbnb / Apple / Stripe / Claude / Notion / Tesla / BMW 等）。
+2. **Stitch 规范 9 节结构化**：每个文件含视觉主题、配色（语义名+hex+角色）、排版、组件、布局、深度、Do/Don't、响应式、Agent Prompt Guide。
+3. **Agent 原生格式**：DESIGN.md 是 Markdown——LLM 读得最好的格式，无需 Figma 导出 / JSON schema / 特殊工具。
+4. **可视化目录**：每个品牌附 `preview.html` + `preview-dark.html`（色板、字阶、按钮、卡片的可视化 catalog）。
+5. **请求入口 + 生态联动**：`getdesign.md/request` 可点单要某网站 DESIGN.md（含私有请求）；关联 EveryFeed / LaunchKit 等 VoltAgent 生态工具。
 
-### 目录结构与设计哲学
+## 🏗️ 核心架构
 
-这类仓库通常由四层组成：
+纯数据 / 文档仓库（GitHub `language: null`），无可执行代码：
 
-1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
-2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
-3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
-4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
+```
+awesome-design-md/
+├── design-md/<brand>/
+│   ├── DESIGN.md          # 设计系统（agent 读取的主文件）
+│   ├── README.md
+│   ├── preview.html       # 明色 catalog
+│   └── preview-dark.html  # 暗色 catalog
+├── .github/ISSUE_TEMPLATE/design-md-request.yml
+├── CONTRIBUTING.md
+└── LICENSE (MIT)
+```
 
-## 🧠 核心源码解读
+每个 `<brand>` 目录是独立的设计系统单元；README 的 Collection 段按 9 大类别列出全部 73 个条目，并给每条一句话视觉速写（如 "Stripe — Signature purple gradients, weight-300 elegance"）。
 
-### 入口与主流程
+## 🧠 源码深度解读
 
-可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
+### 1. 仓库本身无代码——价值在内容质量
 
-### 关键模块判断
+`language` 为 null、目录全是 `.md` / `.html`，说明这是**内容型仓库**。技术含量不在工程，而在"从真实网站 CSS 抽取的 design tokens 是否准确、是否遵循 Stitch 规范 9 节"。
 
-- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
-- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
-- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
-- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
+### 2. DESIGN.md 的 9 节规范（来自 Stitch specification）
 
-### README 之外的重点
+| # | 节 | 捕获内容 |
+|---|---|---|
+| 1 | Visual Theme & Atmosphere | 情绪、密度、设计哲学 |
+| 2 | Color Palette & Roles | 语义名 + hex + 功能角色 |
+| 3 | Typography Rules | 字族 + 完整层级表 |
+| 4 | Component Stylings | 按钮/卡片/输入/导航 + 状态 |
+| 5 | Layout Principles | 间距标度、网格、留白哲学 |
+| 6 | Depth & Elevation | 阴影系统、表面层级 |
+| 7 | Do's and Don'ts | 设计护栏与反模式 |
+| 8 | Responsive Behavior | 断点、触控目标、折叠策略 |
+| 9 | Agent Prompt Guide | 快捷配色参考、即用 prompt |
 
-原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
+### 3. 使用范式极简
 
-1. 用户需要交出哪些权限、密钥、账号或本地资源？
-2. 项目失败时能否定位原因，而不是只得到模糊错误？
-3. 它的核心承诺是否能用一个小实验复现？
-
-## 📐 架构决策与边界
-
-### 适合采用的条件
-
-- 有明确的最小使用场景。
-- 能在隔离环境中复现核心能力。
-- 能接受项目当前维护节奏和生态依赖。
-
-### 不应采用的条件
-
-- 需要高安全权限但没有审计能力。
-- README 承诺很强，但缺少测试、示例或可重复 demo。
-- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+```bash
+# 1. 复制某站点 DESIGN.md 到项目根
+cp design-md/stripe/DESIGN.md ./DESIGN.md
+# 2. 告诉 AI agent：用这个风格搭页面
+```
+这种"复制即生效"的零配置，正是它能被 coding agent / Google Stitch 直接消费的原因。
 
 ## 🌐 全网口碑画像
 
-本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
-
-### 真实风险画像
-
-- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
-- AI/自动化类项目常有过度营销，必须用可执行任务验证。
-- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
+- GitHub：⚠️ **114,423⭐**（异常高，同组织 `awesome-agent-skills` 仅 32,554⭐，二者量级悬殊，建议以"viral/可能含水分"看待）、321 open issues、VoltAgent（AI agent 框架公司）出品、Discord 社区。
+- README 自述 "Ranked #150 globally on GitHub"；归类为 vibe-coding / AI UI 生成资源。
+- 暂无可靠第三方长测评；以"VoltAgent 官方 + 73 真实品牌 + agent-native 格式"看，作为**现成 UI 风格库**价值明确，但高 star 数需打折。
 
 ## ⚔️ 竞品对比
 
 | 方案 | 优势 | 风险 |
 |---|---|---|
-| VoltAgent/awesome-design-md | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
-| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
-| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
-| 手工流程 | 最可控 | 效率低，难以规模化复用 |
+| `VoltAgent/awesome-design-md` | 73 真实品牌、Stitch 规范 9 节、含 preview、agent-native | star 数异常（可能含水分）；维护质量取决于条目更新频率 |
+| Mobbin / Godly / Refero | 截图级真实 UI 参考、量大 | 非 agent 可读格式，需人工转化 |
+| 官方设计系统文档 | 最权威 | 分散、非统一格式、非 agent 友好 |
 
 ## 🎯 核心研判
 
-### 优势
+**优势**：① 把"品牌设计系统"做成 Agent 一键消费的 Markdown，是 vibe-coding 时代的高复用资源；② 73 品牌 + preview 可视化 + 9 节规范，开箱即用；③ 请求入口让社区补品牌，网络效应强。
 
-1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
-2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
-3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
+**风险**：① **114k⭐ 极异常**，引用前务必当"可能夸大"处理，勿直接当作"顶级权威"；② 纯内容仓库，质量随条目维护波动；③ README 含明显营销推广（EveryFeed / LaunchKit），需区分"资源"与"广告"。
 
-### 风险
+**适用场景**：用 AI coding agent / Google Stitch 生成"品牌视觉一致 UI"的 vibe-coder、独立开发者、前端原型阶段。
 
-1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
-2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
-3. **维护不确定性**：单人/早期项目可能快速失活。
-4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
-
-### 适用场景
-
-- 做技术选型前的快速原型验证。
-- 学习同类项目的架构组织方式。
-- 在隔离环境中完成非敏感任务自动化。
-
-### 不适用场景
-
-- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
-- 期望“下载即稳定生产”的严肃业务。
-- 不具备安全审计和回滚能力的团队。
+**不适用场景**：需要像素级精确还原某品牌（应读官方设计系统）；对 star 数敏感、误把 viral 量当作质量背书的决策。
 
 ## 📂 关键文件路径速查
 
-- `README.md`：定位、安装、示例和限制。
-- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
-- `src/` / `app/` / `packages/` / `internal/`：核心实现。
-- `docs/` / `examples/`：可复现实验入口。
-- `.github/` / `tests/`：维护质量和验证纪律。
+- `README.md`：DESIGN.md 概念、9 类别 Collection、9 节规范说明、使用方式。
+- `design-md/<brand>/DESIGN.md`：73 个品牌设计系统主文件（agent 读取）。
+- `design-md/<brand>/preview.html` + `preview-dark.html`：可视化 catalog。
+- `.github/ISSUE_TEMPLATE/design-md-request.yml`：品牌请求模板。
+- `CONTRIBUTING.md`：改进现有文件 / 报 issue 的指引。
 
 ## ⭐ 三条关键发现
 
-1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
-2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
-3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
-
-## 🧪 研究方法与数据来源
-
-- 本地 `project-collection` 原报告内容和质量审计结果。
-- GitHub 仓库名、描述、目录和元数据摘录。
-- 对同类项目的架构与风险分析。
-- 未发现可靠第三方长评时，明确标注而不编造口碑。
+1. 它的护城河是**"真实品牌设计系统 → agent-native Markdown"的转换层**，而非任何代码——谁先把更多品牌做准，谁就有网络效应。
+2. **star 114k 与同组织其他 repo 量级严重不符**，引用时务必打折，优先看内容质量而非热度。
+3. 本质是 awesome-list 进化的形态：从"链接集合"升级为"可直接喂给 AI 的结构化设计资产"。

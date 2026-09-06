@@ -1,128 +1,102 @@
 # 🔬 sapientinc/HRM-Text - 全方位深度调研
 
+> 调研日期：2026-09-07 ｜ 重写自模板化旧报告（原"四层组成"通用 boilerplate，无真实源码/架构/外链）
+> 数据来源：GitHub 仓库 `sapientinc/HRM-Text` 真实 README / 目录树抓取（stars 1,969，pushed 2026-09-04，Apache-2.0，Python）
+
 ## 📌 一句话定位
 
-`sapientinc/HRM-Text` 是一个LLM / hierarchical reasoning model项目：基于 HRM 架构的 1B 文本生成模型，强调任务完成和潜空间推理。
+`HRM-Text` 是**基于 HRM（Hierarchical Reasoning Model，分层推理模型）架构的 1B 文本生成模型 + 完整预训练框架**，强调任务完成与潜空间推理。它宣称用 **130–600× 更少算力、150–900× 更少数据**实现基础模型预训练——约 $1000 即可从零预训练一个基础模型。
 
-> 核心判断：价值在小模型推理结构探索。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。模型评测、权重可得性和真实任务表现需独立验证。
+> 核心判断：它卖的不是"一个模型权重"，而是一整套**可复现的低成本基础模型预训练配方**（数据采样 → 预训 → SFT → 评测 → HF 导出），并配 arXiv 论文（2605.20613）与 HuggingFace 权重。真正价值在"把基础模型预训练门槛从百万级 GPU 小时压到 ~$1000"。
 
-## 🏗️ 项目架构全景
+## 🏆 项目亮点（差异化）
 
-| 维度 | 研判 |
-|---|---|
-| 仓库 | `sapientinc/HRM-Text` |
-| 类型 | LLM / hierarchical reasoning model |
-| 核心价值 | 价值在小模型推理结构探索 |
-| 主要风险 | 模型评测、权重可得性和真实任务表现需独立验证 |
-| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
+1. **从零预训练可及**：参考配方 L(0.6B) 8×H100 ~50h/$800；XL(1B) 16×H100 ~46h/$1472（按 $2/H100·h 估算）。
+2. **完整框架而非单点**：数据管线 + 预训 + SFT + 评测 + 转换器导出一条龙，配套 `data_io` 伴侣仓库做清洗/分词/分层采样。
+3. **前沿训练栈**：分层循环架构 + PrefixLM 序列打包 + **FlashAttention 3** kernels + **PyTorch FSDP2** 分布式训练。
+4. **多架构可对照**：`config/arch/net` 内置 hrm / transformer / trm / rins / ut 等基线，可同配方横向比较。
+5. **学术完整度**：arXiv 论文 2605.20613 + HuggingFace 模型 `HRM-Text-1B` + 公开基准（XL: GSM8k 84.7% / MATH 56.5% / MMLU 60.7%）。
 
-### 目录结构与设计哲学
+## 🏗️ 核心架构
 
-这类仓库通常由四层组成：
+Config 驱动的 Hydra 工程（注意：模型**依赖 Hopper 级 GPU**，因为 attention 路径依赖 FlashAttention 3）：
 
-1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
-2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
-3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
-4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
+```
+HRM-Text/
+├── config/
+│   ├── arch/net/        # hrm / transformer / trm / trm_match_recurrence / rins / ut
+│   ├── arch/size/       # B(12L) / L(24L) / XL(32L) / XXL(72L) / XXL_wide
+│   ├── cfg_pretrain.yaml / cfg_sft.yaml
+│   └── data/            # hlm.yaml / sft.yaml
+├── pretrain.py          # FSDP2 预训入口（optimizer/LR/W&B/checkpoint）
+├── dataset_new.py       # PrefixLM 打包数据集加载器
+├── multipack_sampler.py # 分布式 multipack batch 采样（LPT 分配）
+├── models/
+│   ├── flash_attention_prefixlm_v2.py  # 两遍 PrefixLM attention
+│   ├── layers.py        # RoPE / gated MHA / SwiGLU / static KV cache
+│   ├── baselines/hrm_nocarry_bp_warmup.py  # 主架构
+│   └── lm_head.py
+├── conversion/convert_to_hf.py   # FSDP2 ckpt → HF 格式
+├── evaluation/          # 评测引擎 + benchmark 包装 + config
+└── docker/Dockerfile    # 测试过的 CUDA/PyTorch/FA3 环境
+```
 
-## 🧠 核心源码解读
+## 🧠 源码深度解读
 
-### 入口与主流程
+### 1. `pretrain.py` —— FSDP2 训练主循环
 
-可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
+负责 FSDP2 wrapping、优化器创建、LR schedule、W&B 日志、代码/配置快照与分布式 checkpoint。多节点时每 rank 仅存自身分片，故 README 强烈建议挂载共享存储。
 
-### 关键模块判断
+### 2. `dataset_new.py` + `multipack_sampler.py` —— PrefixLM 打包
 
-- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
-- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
-- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
-- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
+`dataset_new.py` 加载 `data_io` 产出的 `tokens.npy` 与每 epoch 索引数组，构建 PrefixLM batch、默认 mask 指令 token、emit FlashAttention sequence metadata；`multipack_sampler.py` 用 LPT（最长处理时间）分配做分布式 multipack batching，提升 token-slot 利用率、均衡二次注意力计算量。
 
-### README 之外的重点
+### 3. `models/flash_attention_prefixlm_v2.py` —— 两遍注意力
 
-原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
+实现 PrefixLM 的两遍 path：**前缀区一次双向 pass + 回复区一次因果 pass**。这是"指令-回复"结构高效训练的关键，也解释了为何用 FlashAttention 3（Hopper 特性）。
 
-1. 用户需要交出哪些权限、密钥、账号或本地资源？
-2. 项目失败时能否定位原因，而不是只得到模糊错误？
-3. 它的核心承诺是否能用一个小实验复现？
+### 4. `models/layers.py` 与 `models/baselines/hrm_nocarry_bp_warmup.py`
 
-## 📐 架构决策与边界
-
-### 适合采用的条件
-
-- 有明确的最小使用场景。
-- 能在隔离环境中复现核心能力。
-- 能接受项目当前维护节奏和生态依赖。
-
-### 不应采用的条件
-
-- 需要高安全权限但没有审计能力。
-- README 承诺很强，但缺少测试、示例或可重复 demo。
-- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+`layers.py` 含 RoPE、gated MHA、SwiGLU MLP、static KV cache 与初始化工具；`hrm_nocarry_bp_warmup.py` 是 HRM-Text 主架构（分层递归，H/L 模块均分层）。
 
 ## 🌐 全网口碑画像
 
-本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
-
-### 真实风险画像
-
-- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
-- AI/自动化类项目常有过度营销，必须用可执行任务验证。
-- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
+- GitHub：1,969⭐、Apache-2.0、活跃（pushed 2026-09-04）、`sapientinc` 组织维护，Discord 社区 1200+。
+- 学术活跃：arXiv 2605.20613 + HuggingFace `HRM-Text-1B` 权重 + 公开基准表。
+- 社区定位：小模型高效预训练 / HRM 架构研究，对"预算有限想从零训基础模型"的研究者强信号。
 
 ## ⚔️ 竞品对比
 
 | 方案 | 优势 | 风险 |
 |---|---|---|
-| sapientinc/HRM-Text | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
-| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
-| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
-| 手工流程 | 最可控 | 效率低，难以规模化复用 |
+| `HRM-Text` | HRM 潜空间递归推理、完整可复现预训配方、$1000 级门槛、论文+权重齐全 | HRM 是否真优于标准 Transformer 仍待社区验证；依赖 FA3/Hopper |
+| TinyLlama / MiniCPM 训练 | 社区大、久经考验 | 架构为标准 Transformer，无 HRM 递归卖点 |
+| nanotron / lit-gpt | 通用预训框架、生态成熟 | 不提供"低成本配方 + 特定架构"组合，上手成本高 |
 
 ## 🎯 核心研判
 
-### 优势
+**优势**：① 把基础模型预训练从"大厂专属"拉到"单人可负担"，配方透明可复现；② HRM 架构提供标准 Transformer 之外的递归推理探索路径；③ 数据→预训→SFT→评测→导出全链路 + 多架构基线，研究友好。
 
-1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
-2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
-3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
+**风险**：① HRM 架构相比标准 Transformer 的真实增益**需独立验证**（样本/任务有限）；② 强依赖 Hopper + FlashAttention 3，非 H100/A100 用户难跑；③ 原生 vLLM 推理支持"进行中"，当前推理路径偏自研。
 
-### 风险
+**适用场景**：预算有限、想从零预训练小基础模型的研究者/团队；HRM/递归推理架构的方向探索。
 
-1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
-2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
-3. **维护不确定性**：单人/早期项目可能快速失活。
-4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
-
-### 适用场景
-
-- 做技术选型前的快速原型验证。
-- 学习同类项目的架构组织方式。
-- 在隔离环境中完成非敏感任务自动化。
-
-### 不适用场景
-
-- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
-- 期望“下载即稳定生产”的严肃业务。
-- 不具备安全审计和回滚能力的团队。
+**不适用场景**：无 Hopper 级 GPU；追求"开箱即用大模型"而非"自己训"的轻量需求。
 
 ## 📂 关键文件路径速查
 
-- `README.md`：定位、安装、示例和限制。
-- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
-- `src/` / `app/` / `packages/` / `internal/`：核心实现。
-- `docs/` / `examples/`：可复现实验入口。
-- `.github/` / `tests/`：维护质量和验证纪律。
+- `README.md`：预训配方、基准表、SFT、导出、状态。
+- `config/arch/net/` + `config/arch/size/`：架构与尺寸预设（Hydra 切换）。
+- `pretrain.py`：FSDP2 预训入口。
+- `dataset_new.py` / `multipack_sampler.py`：PrefixLM 数据集与 multipack 采样。
+- `models/flash_attention_prefixlm_v2.py`：两遍 PrefixLM attention。
+- `models/baselines/hrm_nocarry_bp_warmup.py`：HRM-Text 主架构。
+- `conversion/convert_to_hf.py`：FSDP2 → HF 格式导出。
+- `evaluation/`：评测引擎与 benchmark 配置。
+- `docker/Dockerfile`：测试过的 CUDA/PyTorch/FA3 环境。
 
 ## ⭐ 三条关键发现
 
-1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
-2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
-3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
-
-## 🧪 研究方法与数据来源
-
-- 本地 `project-collection` 原报告内容和质量审计结果。
-- GitHub 仓库名、描述、目录和元数据摘录。
-- 对同类项目的架构与风险分析。
-- 未发现可靠第三方长评时，明确标注而不编造口碑。
+1. 真正价值是**"低成本可复现预训练配方"**，模型权重只是配方跑出来的产物；HRM 架构是这条链路的差异化卖点。
+2. **PrefixLM 两遍注意力 + PrefixLM 序列打包 + multipack LPT 采样**三件套，是把"指令-回复"训练效率做高的工程关键。
+3. 引用前需冷静：**HRM 架构性能增益仍待社区独立复现**，且强绑定 Hopper/FA3 是硬约束。

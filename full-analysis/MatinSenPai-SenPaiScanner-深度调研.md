@@ -1,128 +1,101 @@
 # 🔬 MatinSenPai/SenPaiScanner - 全方位深度调研
 
+> 调研日期：2026-09-07 ｜ 重写自模板化旧报告（原"四层组成"通用 boilerplate，无真实源码/架构/外链）
+> 数据来源：GitHub 仓库 `MatinSenPai/SenPaiScanner` 真实 README / 目录树抓取（stars 2,365，pushed 2026-08-03，MIT，Go 1.26.1）
+
 ## 📌 一句话定位
 
-`MatinSenPai/SenPaiScanner` 是一个Go network scanner项目：用 Go 编写的轻量 Cloudflare IP 扫描器，并包含 Android/mobile 相关目录。
+`MatinSenPai/SenPaiScanner` 是**跨平台 Cloudflare 端点扫描器**，面向不稳定 / 被过滤 / 高延迟网络：先做快速边缘探测，再用**内嵌 Xray core** 通过真实代理配置做端到端验证，最后导出客户端就绪配置（Clash / Sing-box / 订阅）。
 
-> 核心判断：价值在快速扫描可用 Cloudflare IP。但它不能只按 README 口号理解，必须同时看真实源码结构、权限边界、维护节奏和实际任务验证。网络扫描工具需注意授权边界、误报和平台限制。
+> 核心判断：它解决的是"在受限网络里找到低延迟、可用的 Cloudflare 优选端点"这一具体需求。工程亮点在**两阶段验证 + 三界面统一 + 停止后速度测试 + 多格式导出**。⚠️ 属网络探测工具，仅可在**你授权测试的网络 / 地址范围**内使用。
 
-## 🏗️ 项目架构全景
+## 🏆 项目亮点（差异化）
 
-| 维度 | 研判 |
-|---|---|
-| 仓库 | `MatinSenPai/SenPaiScanner` |
-| 类型 | Go network scanner |
-| 核心价值 | 价值在快速扫描可用 Cloudflare IP |
-| 主要风险 | 网络扫描工具需注意授权边界、误报和平台限制 |
-| 调研结论 | 可作为候选工具/资料，但采用前必须做最小可复现实验 |
+1. **两阶段验证**：快速 Cloudflare 可达性检查 → 可选端到端 Xray 测试（对真实代理配置生效）。
+2. **实时结果**：扫描进行中即可搜索 / 排序 / 复制健康端点；停止后才对短名单做聚焦速度测试。
+3. **代理感知探测**：SNI / host / path / transport / TLS / port 全部从 `vless://` `trojan://` `vmess://` 分享链接自动推导。
+4. **可移植导出**：原始端点、rewrite 后的分享 URL、Base64 订阅、Sing-box JSON、Clash YAML 一键生成。
+5. **弹性元数据**：ISP / ASN 检测合并 Cloudflare + IPWhois + IPinfo，并以 Team Cymru DNS 作为回退。
+6. **安全邻居发现**：邻近 Cloudflare 地址探索**默认关闭**，需显式开启。
 
-### 目录结构与设计哲学
+## 🏗️ 核心架构
 
-这类仓库通常由四层组成：
+单一 Go 代码库，三界面共用同一扫描引擎：
 
-1. **入口层**：README、CLI、Web UI、Skill 或示例脚本，决定用户如何进入工作流。
-2. **核心层**：模型、图谱、上传器、agent 编排、桌面封装、SDK 或业务逻辑，是项目真正的技术含量。
-3. **配置层**：环境变量、API key、平台权限、模型权重、Docker/Tauri/Cloudflare 等运行依赖。
-4. **验证层**：tests、examples、demo、release、issue 反馈，决定它是否可复现而非只停留在宣传。
+```
+SenPaiScanner/
+├── cmd/senpaiscanner/main.go      # CLI 入口
+├── desktop/                       # Wails 桌面后端 + Signal Desk 前端（frontend/dist）
+├── android/                       # 原生 Kotlin + Jetpack Compose
+├── mobile/                        # Go mobile 桥接（与 Android 共享）
+├── internal/
+│   ├── engine/engine.go           # 扫描引擎：Cloudflare IPv4 ranges 加权随机采样
+│   ├── prober/prober.go          # 多端口探测（worker/timeout/WebSocket 检查）
+│   ├── xraytest/                 # 内嵌 Xray 验证（解析 vless/trojan/vmess，transport-aware）
+│   ├── ipsrc/                    # IP 源 + 邻居发现（ranges_v4/v6.txt，默认关）
+│   ├── output/  export/          # 端点 / 订阅 / Sing-box / Clash 导出
+│   ├── result/                   # 结果模型
+│   └── ui/                       # TUI 命令、live_results、ir_isps（ISP/ASN 检测）
+└── .github/workflows/            # ci / build-cli / build-gui / build-android / release
+```
 
-## 🧠 核心源码解读
+**Signal Desk 工作流**：Configure scan → Discover → Inspect/copy live → Stop → Speed test green → Rank → Export。桌面与 Android 各自把"Scan / Results / Export"放在独立 workspace，导出不中断结果查看。
 
-### 入口与主流程
+## 🧠 源码深度解读
 
-可预期的主流程是：用户输入目标或素材 → 项目入口加载配置 → 调用核心模块执行 → 生成可检查输出。调研重点不是“有没有功能”，而是每一步是否可恢复、可观察、可失败重试。
+### 1. `internal/engine/engine.go` —— 扫描引擎
 
-### 关键模块判断
+核心是对内嵌 Cloudflare IPv4 地址段做**加权随机采样**，配合文件输入（IP / CSV / CIDR），多 worker、可配置超时与 WebSocket 检查。取消操作会**保留已发现结果**——这是"长扫描可中断"的关键。
 
-- **输入解析**：是否明确校验文件、账号、模型、网络或平台参数。
-- **执行引擎**：是否把复杂任务拆成可测试模块，而不是把逻辑塞进单个脚本。
-- **状态管理**：是否记录中间状态、日志、错误原因和回滚路径。
-- **输出质量**：是否有示例、测试或 benchmark，而不是只展示截图/口号。
+### 2. `internal/prober/prober.go` —— 探测与多端口
 
-### README 之外的重点
+负责实际连通性探测，产出实时 health / latency / loss / throughput / colo / port / status。支持 TCP / WebSocket / gRPC / XHTTP(SplitHTTP) 的 transport-aware 解析。
 
-原报告的问题是把英文 README 或抓取内容直接倾倒，导致可读性和判断力很差。重写后应关注三个 README 之外的问题：
+### 3. `internal/xraytest/` —— 内嵌 Xray 验证（最有价值的部分）
 
-1. 用户需要交出哪些权限、密钥、账号或本地资源？
-2. 项目失败时能否定位原因，而不是只得到模糊错误？
-3. 它的核心承诺是否能用一个小实验复现？
+把 Xray core 进程内嵌进工具，用用户的真实代理配置做端到端验证，而非只测裸连通性。解析 `vless/trojan/vmess` 分享链接、推导 SNI/host/path/transport，验证后才标记为"绿色可用"。这是它区别于"只 ping IP"类扫描器的核心。
 
-## 📐 架构决策与边界
+### 4. `internal/ipsrc/` 与 `internal/ui/ir_isps.go` —— 源与元数据
 
-### 适合采用的条件
-
-- 有明确的最小使用场景。
-- 能在隔离环境中复现核心能力。
-- 能接受项目当前维护节奏和生态依赖。
-
-### 不应采用的条件
-
-- 需要高安全权限但没有审计能力。
-- README 承诺很强，但缺少测试、示例或可重复 demo。
-- 涉及账号、隐私、版权、反作弊、系统提示词等敏感边界却没有合规方案。
+`ipsrc` 管理 Cloudflare IPv4/IPv6 段与可选的邻居发现（默认关）；`ir_isps` 做 ISP/ASN 检测，合并多源并 Team Cymru DNS 回退，让导出结果带"这是哪家 ISP"的弹性元数据。
 
 ## 🌐 全网口碑画像
 
-本轮没有为该仓库找到足够可靠的第三方长评，因此不编造“社区好评/差评”。可确认的一手信号来自 GitHub 元数据、原报告摘录和本地文件结构。对于这类高热度项目，stars 只能说明关注度，不能说明可生产使用。
-
-### 真实风险画像
-
-- 热门仓库可能短期爆红，但 issue 积压和维护者响应才决定长期价值。
-- AI/自动化类项目常有过度营销，必须用可执行任务验证。
-- 涉及浏览器、账号、模型、网络或音视频生成时，权限和合规比功能更重要。
+- GitHub：2,365⭐、MIT、43 open issues、活跃（pushed 2026-08-03）。v1.0.0 引入 Signal Desk 工作流 + SHA256SUMS 校验。
+- 技术栈：Go 1.26.1 + Wails 2.11.0（桌面）+ JDK 17 / Android SDK 36（Android）。CI 矩阵完善（ci 含 race test/lint，三套 build + release）。
+- 社区定位：受限网络用户的"Cloudflare 优选端点"工具，分发形态完整（Windows/Linux/macOS/Android/Termux 全覆盖）。
 
 ## ⚔️ 竞品对比
 
 | 方案 | 优势 | 风险 |
 |---|---|---|
-| MatinSenPai/SenPaiScanner | 垂直场景明确，能快速试用 | 需要验证维护质量和真实边界 |
-| 通用框架/平台 | 生态成熟、文档多 | 配置重，垂直体验未必好 |
-| 商业闭源产品 | 体验完整、支持好 | 成本、锁定和数据边界不透明 |
-| 手工流程 | 最可控 | 效率低，难以规模化复用 |
+| `SenPaiScanner` | 三界面统一、内嵌 Xray 真实验证、停止后速度测试、多格式导出 | 仅限授权网络使用；功能聚焦 CF，非通用端口扫描 |
+| CloudflareSpeedTest（11HKM 等） | 轻量、纯测速、用户基数大 | 通常无内嵌代理验证、导出格式较少 |
+| 纯 ping/tcping 脚本 | 极简 | 无代理验证、无 UI、无批量导出 |
 
 ## 🎯 核心研判
 
-### 优势
+**优势**：① 工程完成度高（跨平台 + 内嵌验证 + 多格式导出 + 完整 CI）；② "两阶段验证 + 停止后速度测试"精准命中"要的是能用的端点，不是能 ping 通的 IP"这一痛点；③ 安全设计到位（邻居发现默认关、凭证不入库）。
 
-1. **问题意识明确**：围绕具体工作流，而不是泛泛包装 AI。
-2. **可作为样板研究**：即使不直接采用，也能借鉴目录组织、入口设计和任务拆分方式。
-3. **有工程化潜力**：如果测试、日志和配置齐全，可以沉淀为稳定工具链。
+**风险**：① 属网络探测工具，**务必仅在授权网络/地址范围使用**，勿在 issue 截图里泄露代理凭证；② 功能聚焦 Cloudflare，泛用性有限；③ 依赖 Xray 生态版本演进。
 
-### 风险
+**适用场景**：在受限 / 高延迟网络下，为 Cloudflare 反代 / 优选 IP 寻找低延迟可用端点，并直接产出 Clash/Sing-box 配置的用户。
 
-1. **宣传与实现可能不一致**：必须用源码和 demo 验证。
-2. **安全边界可能被低估**：账号、密钥、模型权重、浏览器登录态、系统权限都要隔离处理。
-3. **维护不确定性**：单人/早期项目可能快速失活。
-4. **合规风险**：涉及作弊、绕过检测、提示词泄露、语音克隆或平台自动化时尤其明显。
-
-### 适用场景
-
-- 做技术选型前的快速原型验证。
-- 学习同类项目的架构组织方式。
-- 在隔离环境中完成非敏感任务自动化。
-
-### 不适用场景
-
-- 生产账号、真实用户数据、商业版权素材或高价值密钥直接接入。
-- 期望“下载即稳定生产”的严肃业务。
-- 不具备安全审计和回滚能力的团队。
+**不适用场景**：未经授权对任意网络扫描（合规红线）；需要通用全端口服务发现的场景。
 
 ## 📂 关键文件路径速查
 
-- `README.md`：定位、安装、示例和限制。
-- `package.json` / `pyproject.toml` / `go.mod` / `Cargo.toml`：技术栈和依赖。
-- `src/` / `app/` / `packages/` / `internal/`：核心实现。
-- `docs/` / `examples/`：可复现实验入口。
-- `.github/` / `tests/`：维护质量和验证纪律。
+- `README.md` / `README.fa.md`：功能、Signal Desk 工作流、三界面下载、构建。
+- `cmd/senpaiscanner/main.go`：CLI 入口。
+- `internal/engine/engine.go`：扫描引擎（加权随机采样 Cloudflare 段）。
+- `internal/prober/prober.go`：多端口探测。
+- `internal/xraytest/`：内嵌 Xray 端到端验证。
+- `internal/ipsrc/` + `internal/ui/ir_isps.go`：IP 源 / 邻居发现 / ISP·ASN 检测。
+- `internal/export/export.go`：多格式客户端配置导出。
+- `.github/workflows/`：ci / build-cli / build-gui / build-android / release（含 SHA256SUMS）。
 
 ## ⭐ 三条关键发现
 
-1. 该项目的真正价值不在 README 口号，而在能否用最小实验复现核心承诺。
-2. 原报告最大问题是英文原文和抓取残留过多，无法帮助读者判断取舍。
-3. 采用前必须先做安全隔离：尤其是账号、密钥、模型权重、平台自动化和敏感内容。
-
-## 🧪 研究方法与数据来源
-
-- 本地 `project-collection` 原报告内容和质量审计结果。
-- GitHub 仓库名、描述、目录和元数据摘录。
-- 对同类项目的架构与风险分析。
-- 未发现可靠第三方长评时，明确标注而不编造口碑。
+1. 真正的技术护城河是**内嵌 Xray 的端到端验证**——它验证的是"你的代理配置真能跑通"，而非裸 IP 连通性。
+2. **"扫描中可复制 + 停止后才测速"** 的工作流设计，比"扫完再筛"高效得多，是受限网络用户的实际刚需。
+3. 合规是硬约束：仓库明确"仅扫描你授权测试的网络"，任何使用都必须在授权边界内。
