@@ -412,6 +412,10 @@
 | 397 | [`zarazhangrui/beautiful-html-templates`](https://github.com/zarazhangrui/beautiful-html-templates) | beautiful-html-templates | — | 2026-05-05 | [zarazhangrui-beautiful-html-templates-深度调研.md](zarazhangrui-beautiful-html-templates-深度调研.md) |
 | 398 | [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 驱动五市场自选股 AI 日报——Fork-to-run 零成本架构 + 双 Guardrail 防幻觉 + 通知路由四件套 | 59,613 | 2026-07-31 | [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md) |
 | 399 | [`iyear/tdl`](https://github.com/iyear/tdl) | Go 版 Telegram 工具箱——按 DC 分片连接池 + takeout 官方通道实现同类最快批量下载，go.work 三模块把内核提炼为可复用库 | 8,021 | 2026-09-02 | [iyear-tdl-深度调研.md](iyear-tdl-深度调研.md) |
+| 400 | [`ahujasid/mcp-for-blender`](https://github.com/ahujasid/mcp-for-blender) | 通过 MCP 把任意 LLM 连到 Blender 建模/改材质/生成 3D 资产的双组件桥（addon socket + MCP server），safe-mode 护栏 | 28,779 | 2026-09-17 | [ahujasid-mcp-for-blender-深度调研.md](ahujasid-mcp-for-blender-深度调研.md) |
+| 401 | [`ionic-team/capacitor`](https://github.com/ionic-team/capacitor) | 用 Web 技术构建跨平台原生 App 的运行时——统一 Plugin API + 原生工程即源码产物，Cordova 向后兼容 | 16,686 | 2026-09-17 | [ionic-team-capacitor-深度调研.md](ionic-team-capacitor-深度调研.md) |
+| 402 | [`nvm-windows/nvm`](https://github.com/nvm-windows/nvm) | Windows 平台 Node 版本管理器 v2（Zig shim / junction 双模式，免管理员权限，企业级 Certified Builds） | 47,696 | 2026-09-17 | [nvm-windows-nvm-深度调研.md](nvm-windows-nvm-深度调研.md) |
+| 403 | [`pot-app/pot-desktop`](https://github.com/pot-app/pot-desktop) | 跨平台划词翻译+OCR+TTS 桌面软件（Tauri），本地 HTTP 控制面 + 插件化多引擎，Bob 平替 | 19,433 | 2026-09-17 | [pot-app-pot-desktop-深度调研.md](pot-app-pot-desktop-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 ### AI Agent / 助手框架（103）
