@@ -417,6 +417,11 @@
 | 402 | [`nvm-windows/nvm`](https://github.com/nvm-windows/nvm) | Windows 平台 Node 版本管理器 v2（Zig shim / junction 双模式，免管理员权限，企业级 Certified Builds） | 47,696 | 2026-09-17 | [nvm-windows-nvm-深度调研.md](nvm-windows-nvm-深度调研.md) |
 | 403 | [`pot-app/pot-desktop`](https://github.com/pot-app/pot-desktop) | 跨平台划词翻译+OCR+TTS 桌面软件（Tauri），本地 HTTP 控制面 + 插件化多引擎，Bob 平替 | 19,433 | 2026-09-17 | [pot-app-pot-desktop-深度调研.md](pot-app-pot-desktop-深度调研.md) |
 
+| 404 | [`datawhalechina/happy-llm`](https://github.com/datawhalechina/happy-llm) | Datawhale 系统性中文开源大模型教材——从 NLP 基础到手写 LLaMA2、预训练/微调、RAG/Agent 与 Agentic-RL（CC BY-NC-SA 4.0） | 33,874 | 2026-09-18 | [datawhalechina-happy-llm-深度调研.md](datawhalechina-happy-llm-深度调研.md) |
+| 405 | [`wechatsync/Wechatsync`](https://github.com/wechatsync/Wechatsync) | 开源免费多平台文章同步工具（Chrome 扩展+CLI+MCP）——复用浏览器登录态调平台官方 API，29+ 平台草稿优先（GPL-3.0） | 6,314 | 2026-09-18 | [wechatsync-Wechatsync-深度调研.md](wechatsync-Wechatsync-深度调研.md) |
+| 406 | [`indiff/qttabbar`](https://github.com/indiff/qttabbar) | 给 Windows 文件资源管理器加多标签与增强功能的轻量扩展（Explorer Band），渐进式增强原生 UI（GPL-3.0，.NET 4.8） | 4,896 | 2026-09-18 | [indiff-qttabbar-深度调研.md](indiff-qttabbar-深度调研.md) |
+| 407 | [`srwi/EverythingToolbar`](https://github.com/srwi/EverythingToolbar) | Everything 极速文件搜索引擎的 Windows 任务栏前端外壳——薄前端+快引擎，替代缓慢的 Windows 自带搜索（.NET 8） | 14,758 | 2026-09-18 | [srwi-EverythingToolbar-深度调研.md](srwi-EverythingToolbar-深度调研.md) |
+
 ## 🏷️ 按技术领域分类
 ### AI Agent / 助手框架（103）
 - [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) — [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md)
@@ -596,7 +601,7 @@
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
-### 开发工具 / CLI（33）
+### 开发工具 / CLI（34）
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
 - [`AprilNEA/OpenLogi`](https://github.com/AprilNEA/OpenLogi) — [AprilNEA-OpenLogi-深度调研.md](AprilNEA-OpenLogi-深度调研.md)
@@ -630,6 +635,9 @@
 - [`toon-format/toon`](https://github.com/toon-format/toon) — [toon-format-toon-深度调研.md](toon-format-toon-深度调研.md)
 - [`tw93/Pake`](https://github.com/tw93/Pake) — [tw93-Pake-深度调研.md](tw93-Pake-深度调研.md)
 - [`yorukot/superfile`](https://github.com/yorukot/superfile) — [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md)
+
+- [`wechatsync/Wechatsync`](https://github.com/wechatsync/Wechatsync) — [wechatsync-Wechatsync-深度调研.md](wechatsync-Wechatsync-深度调研.md)
+
 ### 文档 / 文档工具（2）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
@@ -675,7 +683,7 @@
 - [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) — [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md)
 ### 计算机视觉 / CV（1）
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
-### 安全 / 运维 / 系统工具（20）
+### 安全 / 运维 / 系统工具（22）
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
 - [`basecamp/omarchy`](https://github.com/basecamp/omarchy) — [basecamp-omarchy-深度调研.md](basecamp-omarchy-深度调研.md)
@@ -696,7 +704,11 @@
 - [`tmux/tmux`](https://github.com/tmux/tmux) — [tmux-tmux-深度调研.md](tmux-tmux-深度调研.md)
 - [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) — [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md)
 - [`usestrix/strix`](https://github.com/usestrix/strix) — [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md)
-### 学习资料 / 方法论（15）
+
+- [`indiff/qttabbar`](https://github.com/indiff/qttabbar) — [indiff-qttabbar-深度调研.md](indiff-qttabbar-深度调研.md)
+- [`srwi/EverythingToolbar`](https://github.com/srwi/EverythingToolbar) — [srwi-EverythingToolbar-深度调研.md](srwi-EverythingToolbar-深度调研.md)
+
+### 学习资料 / 方法论（16）
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
 - [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) — [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md)
@@ -712,6 +724,9 @@
 - [`practical-tutorials/project-based-learning`](https://github.com/practical-tutorials/project-based-learning) — [practical-tutorials-project-based-learning-深度调研.md](practical-tutorials-project-based-learning-深度调研.md)
 - [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) — [rohitg00-ai-engineering-from-scratch-深度调研.md](rohitg00-ai-engineering-from-scratch-深度调研.md)
 - [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) — [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md)
+
+- [`datawhalechina/happy-llm`](https://github.com/datawhalechina/happy-llm) — [datawhalechina-happy-llm-深度调研.md](datawhalechina-happy-llm-深度调研.md)
+
 ### 其他（107）
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
 - [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) — [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md)
