@@ -422,8 +422,12 @@
 | 406 | [`indiff/qttabbar`](https://github.com/indiff/qttabbar) | 给 Windows 文件资源管理器加多标签与增强功能的轻量扩展（Explorer Band），渐进式增强原生 UI（GPL-3.0，.NET 4.8） | 4,896 | 2026-09-18 | [indiff-qttabbar-深度调研.md](indiff-qttabbar-深度调研.md) |
 | 407 | [`srwi/EverythingToolbar`](https://github.com/srwi/EverythingToolbar) | Everything 极速文件搜索引擎的 Windows 任务栏前端外壳——薄前端+快引擎，替代缓慢的 Windows 自带搜索（.NET 8） | 14,758 | 2026-09-18 | [srwi-EverythingToolbar-深度调研.md](srwi-EverythingToolbar-深度调研.md) |
 
+| 408 | [`vim/vim`](https://github.com/vim/vim) | 30+ 年演进的 C 语言模态文本编辑器——撤销树分支+ Vim9 脚本编译（快 ~68×）+ 极致可移植 + 强向后兼容 | 40,896 | 2026-09-19 | [vim-vim-深度调研.md](vim-vim-深度调研.md) |
+| 409 | [`hyperledger/fabric`](https://github.com/hyperledger/fabric) | Linux 基金会许可型联盟链框架——Execute-Order-Validate 三段式、通道级隐私、可插拔共识、MSP 成员身份 | 16,719 | 2026-09-19 | [hyperledger-fabric-深度调研.md](hyperledger-fabric-深度调研.md) |
+| 410 | [`vercel-labs/skills`](https://github.com/vercel-labs/skills) | Vercel Labs 开源 Agent Skills 生态 CLI（npx skills）——跨 75+ 编码 agent 安装/发现/更新 SKILL.md 技能包 | 31,956 | 2026-09-19 | [vercel-labs-skills-深度调研.md](vercel-labs-skills-深度调研.md) |
+| 411 | [`openchamber/openchamber`](https://github.com/openchamber/openchamber) | 基于 OpenCode SDK 的开源代理式开发环境——Session Goals+Multi-run 融合+变更走查+Private Relay 加密远程，跨桌面/Web/VS Code/手机 | 10,050 | 2026-09-19 | [openchamber-openchamber-深度调研.md](openchamber-openchamber-深度调研.md) |
 ## 🏷️ 按技术领域分类
-### AI Agent / 助手框架（103）
+### AI Agent / 助手框架（104）
 - [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) — [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md)
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) — [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md)
@@ -527,6 +531,8 @@
 - [`Zackriya-Solutions/meetily`](https://github.com/Zackriya-Solutions/meetily) — [Zackriya-Solutions-meetily-深度调研.md](Zackriya-Solutions-meetily-深度调研.md)
 - [`zai-org/GLM-5`](https://github.com/zai-org/GLM-5) — [zai-org-GLM-5-深度调研.md](zai-org-GLM-5-深度调研.md)
 - [`zai-org/Open-AutoGLM`](https://github.com/zai-org/Open-AutoGLM) — [zai-org-Open-AutoGLM-深度调研.md](zai-org-Open-AutoGLM-深度调研.md)
+- [`openchamber/openchamber`](https://github.com/openchamber/openchamber) — [openchamber-openchamber-深度调研.md](openchamber-openchamber-深度调研.md)
+
 ### LLM / 推理框架（10）
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
@@ -538,7 +544,7 @@
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
-### AI 编码 / Skill 技能（41）
+### AI 编码 / Skill 技能（42）
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`Alishahryar1/free-claude-code`](https://github.com/Alishahryar1/free-claude-code) — [Alishahryar1-free-claude-code-深度调研.md](Alishahryar1-free-claude-code-深度调研.md)
@@ -580,6 +586,8 @@
 - [`xai-org/grok-build`](https://github.com/xai-org/grok-build) — [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md)
 - [`Yeachan-Heo/oh-my-claudecode`](https://github.com/Yeachan-Heo/oh-my-claudecode) — [Yeachan-Heo-oh-my-claudecode-深度调研.md](Yeachan-Heo-oh-my-claudecode-深度调研.md)
 - [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) — [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md)
+- [`vercel-labs/skills`](https://github.com/vercel-labs/skills) — [vercel-labs-skills-深度调研.md](vercel-labs-skills-深度调研.md)
+
 ### RAG / 知识库 / 记忆（20）
 - [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
@@ -601,7 +609,7 @@
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
-### 开发工具 / CLI（34）
+### 开发工具 / CLI（35）
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
 - [`AprilNEA/OpenLogi`](https://github.com/AprilNEA/OpenLogi) — [AprilNEA-OpenLogi-深度调研.md](AprilNEA-OpenLogi-深度调研.md)
@@ -637,6 +645,8 @@
 - [`yorukot/superfile`](https://github.com/yorukot/superfile) — [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md)
 
 - [`wechatsync/Wechatsync`](https://github.com/wechatsync/Wechatsync) — [wechatsync-Wechatsync-深度调研.md](wechatsync-Wechatsync-深度调研.md)
+
+- [`vim/vim`](https://github.com/vim/vim) — [vim-vim-深度调研.md](vim-vim-深度调研.md)
 
 ### 文档 / 文档工具（2）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
@@ -727,7 +737,7 @@
 
 - [`datawhalechina/happy-llm`](https://github.com/datawhalechina/happy-llm) — [datawhalechina-happy-llm-深度调研.md](datawhalechina-happy-llm-深度调研.md)
 
-### 其他（107）
+### 其他（108）
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
 - [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) — [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md)
 - [`accomplish-ai/coworker`](https://github.com/accomplish-ai/coworker) — [accomplish-ai-coworker-深度调研.md](accomplish-ai-coworker-深度调研.md)
@@ -835,6 +845,8 @@
 - [`xming521/WeClone`](https://github.com/xming521/WeClone) — [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md)
 - [`zarazhangrui/beautiful-html-templates`](https://github.com/zarazhangrui/beautiful-html-templates) — [zarazhangrui-beautiful-html-templates-深度调研.md](zarazhangrui-beautiful-html-templates-深度调研.md)
 - [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) — [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md)
+- [`hyperledger/fabric`](https://github.com/hyperledger/fabric) — [hyperledger-fabric-深度调研.md](hyperledger-fabric-深度调研.md)
+
 ### 机器学习 / 科学计算（4）
 - [`google-deepmind/weathernext`](https://github.com/google-deepmind/weathernext) — [google-deepmind-weathernext-深度调研.md](google-deepmind-weathernext-深度调研.md)
 - [`huggingface/transformers`](https://github.com/huggingface/transformers) — [huggingface-transformers-深度调研.md](huggingface-transformers-深度调研.md)
