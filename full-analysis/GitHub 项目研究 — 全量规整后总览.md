@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 411                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 415                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -114,7 +114,8 @@ github-project-research/
 - [`bytebot-ai/bytebot`](https://github.com/bytebot-ai/bytebot) — [bytebot-ai-bytebot-深度调研.md](bytebot-ai-bytebot-深度调研.md)
 - [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) — [bytedance-deer-flow-深度调研.md](bytedance-deer-flow-深度调研.md)
 - [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) — [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md)
-### C（25 个）
+### C（26 个）
+- [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) — [calesthio-OpenMontage-深度调研.md](calesthio-OpenMontage-深度调研.md)
 - [`cathrynlavery/diagram-design`](https://github.com/cathrynlavery/diagram-design) — [cathrynlavery-diagram-design-深度调研.md](cathrynlavery-diagram-design-深度调研.md)
@@ -171,7 +172,8 @@ github-project-research/
 - [`evershopcommerce/evershop`](https://github.com/evershopcommerce/evershop) — [evershopcommerce-evershop-深度调研.md](evershopcommerce-evershop-深度调研.md)
 - [`every-app/open-seo`](https://github.com/every-app/open-seo) — [every-app-open-seo-深度调研.md](every-app-open-seo-深度调研.md)
 - [`excalidraw/excalidraw`](https://github.com/excalidraw/excalidraw) — [excalidraw-excalidraw-深度调研.md](excalidraw-excalidraw-深度调研.md)
-### F（6 个）
+### F（7 个）
+- [`firecrawl/cli`](https://github.com/firecrawl/cli) — [firecrawl-cli-深度调研.md](firecrawl-cli-深度调研.md)
 - [`facebook/astryx`](https://github.com/facebook/astryx) — [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md)
 - [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) — [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md)
 - [`firecrawl/anydoc`](https://github.com/firecrawl/anydoc) — [firecrawl-anydoc-深度调研.md](firecrawl-anydoc-深度调研.md)
@@ -351,7 +353,9 @@ github-project-research/
 - [`OtterMind/Chat2DB`](https://github.com/OtterMind/Chat2DB) — [OtterMind-Chat2DB-深度调研.md](OtterMind-Chat2DB-深度调研.md)
 - [`openchamber/openchamber`](https://github.com/openchamber/openchamber) — [openchamber-openchamber-深度调研.md](openchamber-openchamber-深度调研.md)
 
-### P（16 个）
+### P（18 个）
+- [`icip-cas/PPTAgent`](https://github.com/icip-cas/PPTAgent) — [icip-cas-PPTAgent-深度调研.md](icip-cas-PPTAgent-深度调研.md)
+- [`HKUDS/Paper2Slides`](https://github.com/HKUDS/Paper2Slides) — [HKUDS-Paper2Slides-深度调研.md](HKUDS-Paper2Slides-深度调研.md)
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`Panniantong/Agent-Reach`](https://github.com/Panniantong/Agent-Reach) — [Panniantong-Agent-Reach-深度调研.md](Panniantong-Agent-Reach-深度调研.md)
 - [`paperclipai/paperclip`](https://github.com/paperclipai/paperclip) — [paperclipai-paperclip-深度调研.md](paperclipai-paperclip-深度调研.md)
@@ -6975,7 +6979,8 @@ github-project-research/
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
-### AI Agent / 助手框架（88）
+### AI Agent / 助手框架（89）
+- [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
 - [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) — [0xNyk-council-of-high-intelligence-深度调研.md](()0xNyk-council-of-high-intelligence-深度调研.md
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](()2aronS-Duel-Agents-深度调研.md
 - [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) — [666ghj-BettaFish-深度调研.md](()666ghj-BettaFish-深度调研.md
@@ -7120,7 +7125,8 @@ github-project-research/
 - [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) — [thedotmack-claude-mem-深度调研.md](()thedotmack-claude-mem-深度调研.md
 - [`topoteretes/cognee`](https://github.com/topoteretes/cognee) — [topoteretes-cognee-深度调研.md](()topoteretes-cognee-深度调研.md
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](()VictorTaelin-OptMem-深度调研.md
-### 开发工具 / CLI（28）
+### 开发工具 / CLI（29）
+- [`firecrawl/cli`](https://github.com/firecrawl/cli) — [firecrawl-cli-深度调研.md](firecrawl-cli-深度调研.md)
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](()ahujasid-blender-mcp-深度调研.md
 - [`ahujasid/mcp-for-blender`](https://github.com/ahujasid/mcp-for-blender) — [ahujasid-mcp-for-blender-深度调研.md](ahujasid-mcp-for-blender-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](()antvis-mcp-server-chart-深度调研.md
@@ -7155,7 +7161,9 @@ github-project-research/
 ### 文档 / 文档工具（2）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](()jgm-pandoc-深度调研.md
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](()kvcache-ai-AgentENV-深度调研.md
-### 前端 / 设计 / UI（17）
+### 前端 / 设计 / UI（19）
+- [`icip-cas/PPTAgent`](https://github.com/icip-cas/PPTAgent) — [icip-cas-PPTAgent-深度调研.md](icip-cas-PPTAgent-深度调研.md)
+- [`HKUDS/Paper2Slides`](https://github.com/HKUDS/Paper2Slides) — [HKUDS-Paper2Slides-深度调研.md](HKUDS-Paper2Slides-深度调研.md)
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](()antvis-Infographic-深度调研.md
 - [`diffusionstudio/lottie`](https://github.com/diffusionstudio/lottie) — [diffusionstudio-lottie-深度调研.md](()diffusionstudio-lottie-深度调研.md
 - [`DioxusLabs/dioxus`](https://github.com/DioxusLabs/dioxus) — [DioxusLabs-dioxus-深度调研.md](()DioxusLabs-dioxus-深度调研.md
@@ -7346,3 +7354,7 @@ github-project-research/
 - [`LifeArchiveProject/WeChatDataAnalysis`](https://github.com/LifeArchiveProject/WeChatDataAnalysis) — [LifeArchiveProject-WeChatDataAnalysis-深度调研.md](LifeArchiveProject-WeChatDataAnalysis-深度调研.md)
 
 - [`hyperledger/fabric`](https://github.com/hyperledger/fabric) — [hyperledger-fabric-深度调研.md](hyperledger-fabric-深度调研.md)
+- [`icip-cas/PPTAgent`](https://github.com/icip-cas/PPTAgent) — [icip-cas-PPTAgent-深度调研.md](icip-cas-PPTAgent-深度调研.md)
+- [`HKUDS/Paper2Slides`](https://github.com/HKUDS/Paper2Slides) — [HKUDS-Paper2Slides-深度调研.md](HKUDS-Paper2Slides-深度调研.md)
+- [`firecrawl/cli`](https://github.com/firecrawl/cli) — [firecrawl-cli-深度调研.md](firecrawl-cli-深度调研.md)
+- [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
