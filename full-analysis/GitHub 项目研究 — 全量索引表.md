@@ -426,6 +426,14 @@
 | 409 | [`hyperledger/fabric`](https://github.com/hyperledger/fabric) | Linux 基金会许可型联盟链框架——Execute-Order-Validate 三段式、通道级隐私、可插拔共识、MSP 成员身份 | 16,719 | 2026-09-19 | [hyperledger-fabric-深度调研.md](hyperledger-fabric-深度调研.md) |
 | 410 | [`vercel-labs/skills`](https://github.com/vercel-labs/skills) | Vercel Labs 开源 Agent Skills 生态 CLI（npx skills）——跨 75+ 编码 agent 安装/发现/更新 SKILL.md 技能包 | 31,956 | 2026-09-19 | [vercel-labs-skills-深度调研.md](vercel-labs-skills-深度调研.md) |
 | 411 | [`openchamber/openchamber`](https://github.com/openchamber/openchamber) | 基于 OpenCode SDK 的开源代理式开发环境——Session Goals+Multi-run 融合+变更走查+Private Relay 加密远程，跨桌面/Web/VS Code/手机 | 10,050 | 2026-09-19 | [openchamber-openchamber-深度调研.md](openchamber-openchamber-深度调研.md) |
+| 412 | [`icip-cas/PPTAgent`](https://github.com/icip-cas/PPTAgent) | Agentic 框架，把"文档/主题"自动生成可编辑 PowerPoint，PPTAgent（EMNLP 2025）与 DeepPresenter（ACL 2026）学术落地 | 5,042 | 2026-09-20 | [icip-cas-PPTAgent-深度调研.md](icip-cas-PPTAgent-深度调研.md) |
+| 413 | [`HKUDS/Paper2Slides`](https://github.com/HKUDS/Paper2Slides) | 把论文/报告/文档"一键"转成专业 slides 与 poster 的 RAG 驱动生成框架，出自港大 HKUDS | 3,831 | 2026-09-20 | [HKUDS-Paper2Slides-深度调研.md](HKUDS-Paper2Slides-深度调研.md) |
+| 414 | [`firecrawl/cli`](https://github.com/firecrawl/cli) | Firecrawl 官方 CLI + Agent Skill 分发器——搜索/抓取/爬取/交互/萃取装进终端，一键注入各 AI 编码 agent | 635 | 2026-09-20 | [firecrawl-cli-深度调研.md](firecrawl-cli-深度调研.md) |
+| 415 | [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) | 把 LLM/AI agent 与 Windows 桥接的 MCP 服务器——操控文件/应用/UI/做 QA，无需 CV 或微调 | 7,045 | 2026-09-20 | [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md) |
+| 416 | [`CoplayDev/unity-mcp`](https://github.com/CoplayDev/unity-mcp) | 用 MCP 把 AI 助手桥接 Unity Editor，47 个工具入口建场景/改脚本/管资源/跑测试，属性声明+反射自动发现 | 14,361 | 2026-09-21 | [CoplayDev-unity-mcp-深度调研.md](CoplayDev-unity-mcp-深度调研.md) |
+| 417 | [`excalidraw/excalidraw-mcp`](https://github.com/excalidraw/excalidraw-mcp) | Excalidraw 官方 MCP App 服务器——流式手绘图表+可交互全屏编辑，兼容 MCP Apps 客户端 | 5,337 | 2026-09-21 | [excalidraw-excalidraw-mcp-深度调研.md](excalidraw-excalidraw-mcp-深度调研.md) |
+| 418 | [`glitternetwork/pinme`](https://github.com/glitternetwork/pinme) | 零配置一键部署 CLI——前端+Cloudflare Worker+D1，静态资源上 IPFS，原生支持 Claude Code Skill | 3,748 | 2026-09-21 | [glitternetwork-pinme-深度调研.md](glitternetwork-pinme-深度调研.md) |
+| 419 | [`volcengine/MineContext`](https://github.com/volcengine/MineContext) | 字节开源的主动式上下文感知 AI 伙伴——截图+多源理解，本地优先，主动推送摘要/待办 | 5,518 | 2026-09-21 | [volcengine-MineContext-深度调研.md](volcengine-MineContext-深度调研.md) |
 ## 🏷️ 按技术领域分类
 ### AI Agent / 助手框架（104）
 - [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) — [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md)
@@ -609,7 +617,9 @@
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
-### 开发工具 / CLI（36）
+### 开发工具 / CLI（38）
+- [`CoplayDev/unity-mcp`](https://github.com/CoplayDev/unity-mcp) — [CoplayDev-unity-mcp-深度调研.md](CoplayDev-unity-mcp-深度调研.md)
+- [`glitternetwork/pinme`](https://github.com/glitternetwork/pinme) — [glitternetwork-pinme-深度调研.md](glitternetwork-pinme-深度调研.md)
 - [`firecrawl/cli`](https://github.com/firecrawl/cli) — [firecrawl-cli-深度调研.md](firecrawl-cli-深度调研.md)
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
 - [`antvis/mcp-server-chart`](https://github.com/antvis/mcp-server-chart) — [antvis-mcp-server-chart-深度调研.md](antvis-mcp-server-chart-深度调研.md)
@@ -652,7 +662,8 @@
 ### 文档 / 文档工具（2）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
-### 前端 / 设计 / UI（19）
+### 前端 / 设计 / UI（20）
+- [`excalidraw/excalidraw-mcp`](https://github.com/excalidraw/excalidraw-mcp) — [excalidraw-excalidraw-mcp-深度调研.md](excalidraw-excalidraw-mcp-深度调研.md)
 - [`icip-cas/PPTAgent`](https://github.com/icip-cas/PPTAgent) — [icip-cas-PPTAgent-深度调研.md](icip-cas-PPTAgent-深度调研.md)
 - [`HKUDS/Paper2Slides`](https://github.com/HKUDS/Paper2Slides) — [HKUDS-Paper2Slides-深度调研.md](HKUDS-Paper2Slides-深度调研.md)
 - [`antvis/Infographic`](https://github.com/antvis/Infographic) — [antvis-Infographic-深度调研.md](antvis-Infographic-深度调研.md)
@@ -740,7 +751,8 @@
 
 - [`datawhalechina/happy-llm`](https://github.com/datawhalechina/happy-llm) — [datawhalechina-happy-llm-深度调研.md](datawhalechina-happy-llm-深度调研.md)
 
-### 其他（108）
+### 其他（109）
+- [`volcengine/MineContext`](https://github.com/volcengine/MineContext) — [volcengine-MineContext-深度调研.md](volcengine-MineContext-深度调研.md)
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
 - [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) — [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md)
 - [`accomplish-ai/coworker`](https://github.com/accomplish-ai/coworker) — [accomplish-ai-coworker-深度调研.md](accomplish-ai-coworker-深度调研.md)
