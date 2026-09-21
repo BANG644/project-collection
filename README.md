@@ -104,7 +104,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 规整后权威总览
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明 + AI 入口
-│   └── owner-repo-深度调研.md × 419                      # 规范化调研报告
+│   └── owner-repo-深度调研.md × 424                      # 规范化调研报告
 ├── README.md                                               # 本文件
 └── .gitignore
 ```
