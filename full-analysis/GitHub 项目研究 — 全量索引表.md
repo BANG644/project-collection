@@ -434,14 +434,19 @@
 | 417 | [`excalidraw/excalidraw-mcp`](https://github.com/excalidraw/excalidraw-mcp) | Excalidraw 官方 MCP App 服务器——流式手绘图表+可交互全屏编辑，兼容 MCP Apps 客户端 | 5,337 | 2026-09-21 | [excalidraw-excalidraw-mcp-深度调研.md](excalidraw-excalidraw-mcp-深度调研.md) |
 | 418 | [`glitternetwork/pinme`](https://github.com/glitternetwork/pinme) | 零配置一键部署 CLI——前端+Cloudflare Worker+D1，静态资源上 IPFS，原生支持 Claude Code Skill | 3,748 | 2026-09-21 | [glitternetwork-pinme-深度调研.md](glitternetwork-pinme-深度调研.md) |
 | 419 | [`volcengine/MineContext`](https://github.com/volcengine/MineContext) | 字节开源的主动式上下文感知 AI 伙伴——截图+多源理解，本地优先，主动推送摘要/待办 | 5,518 | 2026-09-21 | [volcengine-MineContext-深度调研.md](volcengine-MineContext-深度调研.md) |
-- [`HKUDS/ClawWork`](https://github.com/HKUDS/ClawWork) — [HKUDS-ClawWork-深度调研.md](HKUDS-ClawWork-深度调研.md)
-- [`IvanMurzak/Unity-MCP`](https://github.com/IvanMurzak/Unity-MCP) — [IvanMurzak-Unity-MCP-深度调研.md](IvanMurzak-Unity-MCP-深度调研.md)
-- [`Tarquinen/opencode-dynamic-context-pruning`](https://github.com/Tarquinen/opencode-dynamic-context-pruning) — [Tarquinen-opencode-dynamic-context-pruning-深度调研.md](Tarquinen-opencode-dynamic-context-pruning-深度调研.md)
-- [`remotion-dev/skills`](https://github.com/remotion-dev/skills) — [remotion-dev-skills-深度调研.md](remotion-dev-skills-深度调研.md)
-- [`EmergenceAI/Agent-E`](https://github.com/EmergenceAI/Agent-E) — [EmergenceAI-Agent-E-深度调研.md](EmergenceAI-Agent-E-深度调研.md)
+| 420 | [`HKUDS/ClawWork`](https://github.com/HKUDS/ClawWork) | 把 AI 助手变成“会赚钱的 AI 同事”的经济 accountability 基准与运行时 | 8,550 | 2026-09-22 | [HKUDS-ClawWork-深度调研.md](HKUDS-ClawWork-深度调研.md) |
+| 421 | [`IvanMurzak/Unity-MCP`](https://github.com/IvanMurzak/Unity-MCP) | 把任意 LLM 客户端桥接进 Unity Editor 与运行时（含游戏内 AI）的 MCP 工具/技能平台 | 4,313 | 2026-09-22 | [IvanMurzak-Unity-MCP-深度调研.md](IvanMurzak-Unity-MCP-深度调研.md) |
+| 422 | [`Tarquinen/opencode-dynamic-context-pruning`](https://github.com/Tarquinen/opencode-dynamic-context-pruning) | OpenCode V2 的“动态上下文裁剪”插件，用模型驱动的压缩降低 token 消耗 | 4,244 | 2026-09-22 | [Tarquinen-opencode-dynamic-context-pruning-深度调研.md](Tarquinen-opencode-dynamic-context-pruning-深度调研.md) |
+| 423 | [`remotion-dev/skills`](https://github.com/remotion-dev/skills) | Remotion 官方维护的 Agent Skills 集合，把“程序化视频最佳实践”做成 AI 可消费的技能包 | 4,679 | 2026-09-22 | [remotion-dev-skills-深度调研.md](remotion-dev-skills-深度调研.md) |
+| 424 | [`EmergenceAI/Agent-E`](https://github.com/EmergenceAI/Agent-E) | 基于 AG2(AutoGen) 的浏览器自动化 agent，用“分层规划 + DOM 蒸馏 + 技能化”让 LLM 安全操作网页 | 1,251 | 2026-09-22 | [EmergenceAI-Agent-E-深度调研.md](EmergenceAI-Agent-E-深度调研.md) |
+| 425 | [`CoderGamester/mcp-unity`](https://github.com/CoderGamester/mcp-unity) | 把 Unity Editor 通过 MCP 协议暴露给 AI 编码助手的桥接器（C# Editor 包 + Node.js 服务） | 1,909 | 2026-09-23 | [CoderGamester-mcp-unity-深度调研.md](CoderGamester-mcp-unity-深度调研.md) |
+| 426 | [`GordenSun/GordenSuperPPTSkills`](https://github.com/GordenSun/GordenSuperPPTSkills) | 用 GPT 生图 + 视觉解析，把“图片版豪华 PPT”还原成完全可编辑 PPTX 的 AI PPT 技能包（三技能串联） | 1,997 | 2026-09-23 | [GordenSun-GordenSuperPPTSkills-深度调研.md](GordenSun-GordenSuperPPTSkills-深度调研.md) |
+| 427 | [`OpenAdaptAI/OpenAdapt`](https://github.com/OpenAdaptAI/OpenAdapt) | 把“人类演示一次 GUI 操作”编译成可确定性重跑、且带独立效果验证的治理型程序，给 computer-use agent 提供“经过验证的手” | 1,737 | 2026-09-23 | [OpenAdaptAI-OpenAdapt-深度调研.md](OpenAdaptAI-OpenAdapt-深度调研.md) |
+| 428 | [`linyqh/NarratoAI`](https://github.com/linyqh/NarratoAI) | 一站式 AI 影视解说 + 自动化剪辑工具（文案撰写→自动剪辑→配音→字幕→导出剪映草稿） | 11,174 | 2026-09-23 | [linyqh-NarratoAI-深度调研.md](linyqh-NarratoAI-深度调研.md) |
+| 429 | [`w4po/ExplorerTabUtility`](https://github.com/w4po/ExplorerTabUtility) | 让 Windows 11 新开的资源管理器窗口自动变成标签页的工具（含复用/复制/重开/搜索/热键） | 2,942 | 2026-09-23 | [w4po-ExplorerTabUtility-深度调研.md](w4po-ExplorerTabUtility-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
-### AI Agent / 助手框架（106）
+### AI Agent / 助手框架（107）
 - [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) — [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md)
 - [`2aronS/Duel-Agents`](https://github.com/2aronS/Duel-Agents) — [2aronS-Duel-Agents-深度调研.md](2aronS-Duel-Agents-深度调研.md)
 - [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) — [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md)
@@ -550,6 +555,7 @@
 - [`EmergenceAI/Agent-E`](https://github.com/EmergenceAI/Agent-E) — [EmergenceAI-Agent-E-深度调研.md](EmergenceAI-Agent-E-深度调研.md)
 
 
+- [`OpenAdaptAI/OpenAdapt`](https://github.com/OpenAdaptAI/OpenAdapt) — [OpenAdaptAI-OpenAdapt-深度调研.md](OpenAdaptAI-OpenAdapt-深度调研.md)
 ### LLM / 推理框架（10）
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
@@ -561,7 +567,7 @@
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
-### AI 编码 / Skill 技能（43）
+### AI 编码 / Skill 技能（44）
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`Alishahryar1/free-claude-code`](https://github.com/Alishahryar1/free-claude-code) — [Alishahryar1-free-claude-code-深度调研.md](Alishahryar1-free-claude-code-深度调研.md)
@@ -607,6 +613,7 @@
 - [`IvanMurzak/Unity-MCP`](https://github.com/IvanMurzak/Unity-MCP) — [IvanMurzak-Unity-MCP-深度调研.md](IvanMurzak-Unity-MCP-深度调研.md)
 
 
+- [`CoderGamester/mcp-unity`](https://github.com/CoderGamester/mcp-unity) — [CoderGamester-mcp-unity-深度调研.md](CoderGamester-mcp-unity-深度调研.md)
 ### RAG / 知识库 / 记忆（20）
 - [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
@@ -675,7 +682,7 @@
 ### 文档 / 文档工具（2）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
-### 前端 / 设计 / UI（21）
+### 前端 / 设计 / UI（22）
 - [`excalidraw/excalidraw-mcp`](https://github.com/excalidraw/excalidraw-mcp) — [excalidraw-excalidraw-mcp-深度调研.md](excalidraw-excalidraw-mcp-深度调研.md)
 - [`icip-cas/PPTAgent`](https://github.com/icip-cas/PPTAgent) — [icip-cas-PPTAgent-深度调研.md](icip-cas-PPTAgent-深度调研.md)
 - [`HKUDS/Paper2Slides`](https://github.com/HKUDS/Paper2Slides) — [HKUDS-Paper2Slides-深度调研.md](HKUDS-Paper2Slides-深度调研.md)
@@ -699,7 +706,8 @@
 - [`remotion-dev/skills`](https://github.com/remotion-dev/skills) — [remotion-dev-skills-深度调研.md](remotion-dev-skills-深度调研.md)
 
 
-### 视频 / 音频 / 多媒体（21）
+- [`GordenSun/GordenSuperPPTSkills`](https://github.com/GordenSun/GordenSuperPPTSkills) — [GordenSun-GordenSuperPPTSkills-深度调研.md](GordenSun-GordenSuperPPTSkills-深度调研.md)
+### 视频 / 音频 / 多媒体（22）
 - [`3b1b/manim`](https://github.com/3b1b/manim) — [3b1b-manim-深度调研.md](3b1b-manim-深度调研.md)
 - [`ATH-MaaS/Pixelle-Video`](https://github.com/ATH-MaaS/Pixelle-Video) — [ATH-MaaS-Pixelle-Video-深度调研.md](ATH-MaaS-Pixelle-Video-深度调研.md)
 - [`AUTOMATIC1111/stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — [AUTOMATIC1111-stable-diffusion-webui-深度调研.md](AUTOMATIC1111-stable-diffusion-webui-深度调研.md)
@@ -721,9 +729,10 @@
 - [`Open-LLM-VTuber/Open-LLM-VTuber`](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) — [Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md](Open-LLM-VTuber-Open-LLM-VTuber-深度调研.md)
 - [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — [THU-MAIC-OpenMAIC-深度调研.md](THU-MAIC-OpenMAIC-深度调研.md)
 - [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) — [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md)
+- [`linyqh/NarratoAI`](https://github.com/linyqh/NarratoAI) — [linyqh-NarratoAI-深度调研.md](linyqh-NarratoAI-深度调研.md)
 ### 计算机视觉 / CV（1）
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
-### 安全 / 运维 / 系统工具（22）
+### 安全 / 运维 / 系统工具（23）
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
 - [`basecamp/omarchy`](https://github.com/basecamp/omarchy) — [basecamp-omarchy-深度调研.md](basecamp-omarchy-深度调研.md)
@@ -748,6 +757,7 @@
 - [`indiff/qttabbar`](https://github.com/indiff/qttabbar) — [indiff-qttabbar-深度调研.md](indiff-qttabbar-深度调研.md)
 - [`srwi/EverythingToolbar`](https://github.com/srwi/EverythingToolbar) — [srwi-EverythingToolbar-深度调研.md](srwi-EverythingToolbar-深度调研.md)
 
+- [`w4po/ExplorerTabUtility`](https://github.com/w4po/ExplorerTabUtility) — [w4po-ExplorerTabUtility-深度调研.md](w4po-ExplorerTabUtility-深度调研.md)
 ### 学习资料 / 方法论（16）
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
