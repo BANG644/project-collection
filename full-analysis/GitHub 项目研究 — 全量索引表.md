@@ -444,6 +444,11 @@
 | 427 | [`OpenAdaptAI/OpenAdapt`](https://github.com/OpenAdaptAI/OpenAdapt) | 把“人类演示一次 GUI 操作”编译成可确定性重跑、且带独立效果验证的治理型程序，给 computer-use agent 提供“经过验证的手” | 1,737 | 2026-09-23 | [OpenAdaptAI-OpenAdapt-深度调研.md](OpenAdaptAI-OpenAdapt-深度调研.md) |
 | 428 | [`linyqh/NarratoAI`](https://github.com/linyqh/NarratoAI) | 一站式 AI 影视解说 + 自动化剪辑工具（文案撰写→自动剪辑→配音→字幕→导出剪映草稿） | 11,174 | 2026-09-23 | [linyqh-NarratoAI-深度调研.md](linyqh-NarratoAI-深度调研.md) |
 | 429 | [`w4po/ExplorerTabUtility`](https://github.com/w4po/ExplorerTabUtility) | 让 Windows 11 新开的资源管理器窗口自动变成标签页的工具（含复用/复制/重开/搜索/热键） | 2,942 | 2026-09-23 | [w4po-ExplorerTabUtility-深度调研.md](w4po-ExplorerTabUtility-深度调研.md) |
+| 430 | [`VoltAgent/awesome-openclaw-skills`](https://github.com/VoltAgent/awesome-openclaw-skills) | OpenClaw 技能精选合集——从 ClawHub 官方 registry 筛选 5,300+ 技能，5 道质量门禁过滤 7,215 个劣质项，约 30 领域分类 | 52,746 | 2026-09-24 | [VoltAgent-awesome-openclaw-skills-深度调研.md](VoltAgent-awesome-openclaw-skills-深度调研.md) |
+| 431 | [`awesome-opencode/awesome-opencode`](https://github.com/awesome-opencode/awesome-opencode) | OpenCode 生态 awesome list——六段式策展（官方/插件/主题/agent/项目/资源），含 Antigravity 免费模型鉴权等前沿插件 | 10,351 | 2026-09-24 | [awesome-opencode-awesome-opencode-深度调研.md](awesome-opencode-awesome-opencode-深度调研.md) |
+| 432 | [`yzfly/Awesome-MCP-ZH`](https://github.com/yzfly/Awesome-MCP-ZH) | 专为中文用户打造的 MCP 资源合集——30+ 服务器分类 + 客户端 + 开发教程 + 2025-2026 协议演进动态 | 7,680 | 2026-09-24 | [yzfly-Awesome-MCP-ZH-深度调研.md](yzfly-Awesome-MCP-ZH-深度调研.md) |
+| 433 | [`GoogleChrome/chrome-extensions-samples`](https://github.com/GoogleChrome/chrome-extensions-samples) | Google 官方 Chrome 扩展示例库——api-samples（单 API）+ functional-samples（完整功能），Apache-2.0，含 Gemini 端侧 AI 示例 | 17,778 | 2026-09-24 | [GoogleChrome-chrome-extensions-samples-深度调研.md](GoogleChrome-chrome-extensions-samples-深度调研.md) |
+| 434 | [`easychen/opc-methodology`](https://github.com/easychen/opc-methodology) | 《一人企业方法论》开源书 + Agent 技能集 + 创业推演沙箱，CC-BY-NC-SA，skills/ 三段式（SKILL.md+agents+references）范本 | 16,803 | 2026-09-24 | [easychen-opc-methodology-深度调研.md](easychen-opc-methodology-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 ### AI Agent / 助手框架（107）
@@ -567,7 +572,7 @@
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
-### AI 编码 / Skill 技能（44）
+### AI 编码 / Skill 技能（46）
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`Alishahryar1/free-claude-code`](https://github.com/Alishahryar1/free-claude-code) — [Alishahryar1-free-claude-code-深度调研.md](Alishahryar1-free-claude-code-深度调研.md)
@@ -614,6 +619,9 @@
 
 
 - [`CoderGamester/mcp-unity`](https://github.com/CoderGamester/mcp-unity) — [CoderGamester-mcp-unity-深度调研.md](CoderGamester-mcp-unity-深度调研.md)
+- [`VoltAgent/awesome-openclaw-skills`](https://github.com/VoltAgent/awesome-openclaw-skills) — [VoltAgent-awesome-openclaw-skills-深度调研.md](VoltAgent-awesome-openclaw-skills-深度调研.md)
+- [`awesome-opencode/awesome-opencode`](https://github.com/awesome-opencode/awesome-opencode) — [awesome-opencode-awesome-opencode-深度调研.md](awesome-opencode-awesome-opencode-深度调研.md)
+
 ### RAG / 知识库 / 记忆（20）
 - [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
@@ -682,7 +690,7 @@
 ### 文档 / 文档工具（2）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
-### 前端 / 设计 / UI（22）
+### 前端 / 设计 / UI（23）
 - [`excalidraw/excalidraw-mcp`](https://github.com/excalidraw/excalidraw-mcp) — [excalidraw-excalidraw-mcp-深度调研.md](excalidraw-excalidraw-mcp-深度调研.md)
 - [`icip-cas/PPTAgent`](https://github.com/icip-cas/PPTAgent) — [icip-cas-PPTAgent-深度调研.md](icip-cas-PPTAgent-深度调研.md)
 - [`HKUDS/Paper2Slides`](https://github.com/HKUDS/Paper2Slides) — [HKUDS-Paper2Slides-深度调研.md](HKUDS-Paper2Slides-深度调研.md)
@@ -707,6 +715,8 @@
 
 
 - [`GordenSun/GordenSuperPPTSkills`](https://github.com/GordenSun/GordenSuperPPTSkills) — [GordenSun-GordenSuperPPTSkills-深度调研.md](GordenSun-GordenSuperPPTSkills-深度调研.md)
+- [`GoogleChrome/chrome-extensions-samples`](https://github.com/GoogleChrome/chrome-extensions-samples) — [GoogleChrome-chrome-extensions-samples-深度调研.md](GoogleChrome-chrome-extensions-samples-深度调研.md)
+
 ### 视频 / 音频 / 多媒体（22）
 - [`3b1b/manim`](https://github.com/3b1b/manim) — [3b1b-manim-深度调研.md](3b1b-manim-深度调研.md)
 - [`ATH-MaaS/Pixelle-Video`](https://github.com/ATH-MaaS/Pixelle-Video) — [ATH-MaaS-Pixelle-Video-深度调研.md](ATH-MaaS-Pixelle-Video-深度调研.md)
@@ -758,7 +768,7 @@
 - [`srwi/EverythingToolbar`](https://github.com/srwi/EverythingToolbar) — [srwi-EverythingToolbar-深度调研.md](srwi-EverythingToolbar-深度调研.md)
 
 - [`w4po/ExplorerTabUtility`](https://github.com/w4po/ExplorerTabUtility) — [w4po-ExplorerTabUtility-深度调研.md](w4po-ExplorerTabUtility-深度调研.md)
-### 学习资料 / 方法论（16）
+### 学习资料 / 方法论（17）
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
 - [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) — [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md)
@@ -776,6 +786,8 @@
 - [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) — [sindresorhus-awesome-深度调研.md](sindresorhus-awesome-深度调研.md)
 
 - [`datawhalechina/happy-llm`](https://github.com/datawhalechina/happy-llm) — [datawhalechina-happy-llm-深度调研.md](datawhalechina-happy-llm-深度调研.md)
+
+- [`easychen/opc-methodology`](https://github.com/easychen/opc-methodology) — [easychen-opc-methodology-深度调研.md](easychen-opc-methodology-深度调研.md)
 
 ### 其他（109）
 - [`volcengine/MineContext`](https://github.com/volcengine/MineContext) — [volcengine-MineContext-深度调研.md](volcengine-MineContext-深度调研.md)
@@ -901,9 +913,11 @@
 - [`livekit/agents`](https://github.com/livekit/agents) — [livekit-agents-深度调研.md](livekit-agents-深度调研.md)
 ### 安全 / 逆向工程（1）
 - [`NationalSecurityAgency/ghidra`](https://github.com/NationalSecurityAgency/ghidra) — [NationalSecurityAgency-ghidra-深度调研.md](NationalSecurityAgency-ghidra-深度调研.md)
-### AI Agent / LLM 基础设施（2）
+### AI Agent / LLM 基础设施（3）
 - [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
 - [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi) — [tashfeenahmed-freellmapi-深度调研.md](tashfeenahmed-freellmapi-深度调研.md)
+- [`yzfly/Awesome-MCP-ZH`](https://github.com/yzfly/Awesome-MCP-ZH) — [yzfly-Awesome-MCP-ZH-深度调研.md](yzfly-Awesome-MCP-ZH-深度调研.md)
+
 ## 📝 维护规则
 
 1. 新增调研报告后，必须在本表追加索引行（owner/repo 列点击跳转 GitHub；报告文件列点击打开本地报告）。
