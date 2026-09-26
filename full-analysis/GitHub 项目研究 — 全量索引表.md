@@ -460,6 +460,11 @@
 | 442 | [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) | Agentic 视频生成框架——导演/编剧/制片/生成器四位一体，idea/novel/script→视频，角色一致性工程 | 12,483 | 2026-09-26 | [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md) |
 | 443 | [`a2ui-project/a2ui`](https://github.com/a2ui-project/a2ui) | Agent-to-User Interface 开放标准——声明式 JSON 让 agent 讲 UI，客户端原生组件渲染，安全如数据 | 16,518 | 2026-09-26 | [a2ui-project-a2ui-深度调研.md](a2ui-project-a2ui-深度调研.md) |
 | 444 | [`EvoMap/evolver`](https://github.com/EvoMap/evolver) | GEP 基因进化协议驱动的 AI Agent 自进化引擎——Genes/Capsules/EvolutionEvents 可审计进化，可离线 | 9,118 | 2026-09-26 | [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md) |
+| 445 | [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) | 给 AI Agent 的中文 PPT 模板库+非破坏性文字编辑 Skill——21 套模板配 detail.json 元数据，只改字不毁排版 | 3,154 | 2026-09-27 | [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md) |
+| 446 | [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) | Apple 单图<1秒 3D Gaussian 新视角合成——单次前向回归度量空间高斯，LPIPS 降 25–34%，arXiv 2512.10685 | 8,918 | 2026-09-27 | [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md) |
+| 447 | [`frappe/studio`](https://github.com/frappe/studio) | Frappe 框架可视化 App 构建器——拖拽排版+连线数据源+页面脚本，产物即框架原生源码，可 bench 部署 | 285 | 2026-09-27 | [frappe-studio-深度调研.md](frappe-studio-深度调研.md) |
+| 448 | [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) | 本地部署音视频转风格化文档 Web 工具——ffmpeg wasm 前端处理+智能截图插图，多风格小红书/公众号/笔记 | 4,031 | 2026-09-27 | [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md) |
+| 449 | [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) | 开源离线 LoRa mesh 通信生态官网/文档 Hub——固件/多端客户端/协议分散在组织各仓，GPL-3.0 | 2,197 | 2026-09-27 | [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md) |
 ## 🏷️ 按技术领域分类
 ### AI Agent / 助手框架（109）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
@@ -591,11 +596,14 @@
 ### 文档 / 文档工具（2）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
-### 前端 / 设计 / UI（27）
+### 前端 / 设计 / UI（29）
+- [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
+- [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)
 - [`a2ui-project/a2ui`](https://github.com/a2ui-project/a2ui) — [a2ui-project-a2ui-深度调研.md](a2ui-project-a2ui-深度调研.md)
 - [`DayuanJiang/next-ai-draw-io`](https://github.com/DayuanJiang/next-ai-draw-io) — [DayuanJiang-next-ai-draw-io-深度调研.md](DayuanJiang-next-ai-draw-io-深度调研.md)
 - [`Anionex/banana-slides`](https://github.com/Anionex/banana-slides) — [Anionex-banana-slides-深度调研.md](Anionex-banana-slides-深度调研.md)
-### 视频 / 音频 / 多媒体（24）
+### 视频 / 音频 / 多媒体（25）
+- [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
 ### 计算机视觉 / CV（1）
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
@@ -646,7 +654,8 @@
 
 - [`easychen/opc-methodology`](https://github.com/easychen/opc-methodology) — [easychen-opc-methodology-深度调研.md](easychen-opc-methodology-深度调研.md)
 
-### 其他（109）
+### 其他（110）
+- [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)
 - [`volcengine/MineContext`](https://github.com/volcengine/MineContext) — [volcengine-MineContext-深度调研.md](volcengine-MineContext-深度调研.md)
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
 - [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) — [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md)
@@ -757,7 +766,8 @@
 - [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) — [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md)
 - [`hyperledger/fabric`](https://github.com/hyperledger/fabric) — [hyperledger-fabric-深度调研.md](hyperledger-fabric-深度调研.md)
 
-### 机器学习 / 科学计算（4）
+### 机器学习 / 科学计算（5）
+- [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
 - [`google-deepmind/weathernext`](https://github.com/google-deepmind/weathernext) — [google-deepmind-weathernext-深度调研.md](google-deepmind-weathernext-深度调研.md)
 - [`huggingface/transformers`](https://github.com/huggingface/transformers) — [huggingface-transformers-深度调研.md](huggingface-transformers-深度调研.md)
 - [`K-Dense-AI/scientific-agent-skills`](https://github.com/K-Dense-AI/scientific-agent-skills) — [K-Dense-AI-scientific-agent-skills-深度调研.md](K-Dense-AI-scientific-agent-skills-深度调研.md)
