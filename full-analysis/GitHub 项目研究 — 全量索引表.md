@@ -465,9 +465,16 @@
 | 447 | [`frappe/studio`](https://github.com/frappe/studio) | Frappe 框架可视化 App 构建器——拖拽排版+连线数据源+页面脚本，产物即框架原生源码，可 bench 部署 | 285 | 2026-09-27 | [frappe-studio-深度调研.md](frappe-studio-深度调研.md) |
 | 448 | [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) | 本地部署音视频转风格化文档 Web 工具——ffmpeg wasm 前端处理+智能截图插图，多风格小红书/公众号/笔记 | 4,031 | 2026-09-27 | [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md) |
 | 449 | [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) | 开源离线 LoRa mesh 通信生态官网/文档 Hub——固件/多端客户端/协议分散在组织各仓，GPL-3.0 | 2,197 | 2026-09-27 | [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md) |
+| 450 | [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) | 面向 Claude Code 的学术科研副驾驶框架——全链路 research→write→review→revise 且人在环内，CC BY-NC 非商用、27 模式/4 技能/39 角色、L3 主张-证据对齐闸门 | 49,638 | 2026-09-28 | [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md) |
+| 451 | [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 500+ AI Agent 项目/用例合集——跨 LangGraph/CrewAI/AutoGen/Agno 且每个 agent 带可运行代码 + 统一 metadata.yaml 契约，MIT | 38,121 | 2026-09-28 | [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md) |
+| 452 | [`ResearAI/AutoFigure-Edit`](https://github.com/ResearAI/AutoFigure-Edit) | 把论文方法文本变成可编辑 SVG 科研示意图（AutoFigure/ICLR 2026 升级版）——四阶段管线 + SAM3 分割 + 风格迁移，MIT | 4,292 | 2026-09-28 | [ResearAI-AutoFigure-Edit-深度调研.md](ResearAI-AutoFigure-Edit-深度调研.md) |
+| 453 | [`LorenzCK/OnTopReplica`](https://github.com/LorenzCK/OnTopReplica) | Windows 实时“窗口克隆”小工具——原生 DWM 缩略图镜像任意窗口并置顶，点击转发/穿透/分组切换，MS-RL | 3,396 | 2026-09-28 | [LorenzCK-OnTopReplica-深度调研.md](LorenzCK-OnTopReplica-深度调研.md) |
+| 454 | [`TurixAI/TuriX-CUA`](https://github.com/TurixAI/TuriX-CUA) | 开源计算机使用智能体（CUA）——Brain/Actor/Planner/Memory 多角色 + Skills 剧本 + MCP，OSWorld 64.2%（第 3）/macOS 自测 80%+，MIT | 3,166 | 2026-09-28 | [TurixAI-TuriX-CUA-深度调研.md](TurixAI-TuriX-CUA-深度调研.md) |
 ## 🏷️ 按技术领域分类
-### AI Agent / 助手框架（109）
+### AI Agent / 助手框架（111）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
+- [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
+- [`TurixAI/TuriX-CUA`](https://github.com/TurixAI/TuriX-CUA) — [TurixAI-TuriX-CUA-深度调研.md](TurixAI-TuriX-CUA-深度调研.md)
 ### LLM / 推理框架（10）
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
@@ -633,7 +640,7 @@
 - [`srwi/EverythingToolbar`](https://github.com/srwi/EverythingToolbar) — [srwi-EverythingToolbar-深度调研.md](srwi-EverythingToolbar-深度调研.md)
 
 - [`w4po/ExplorerTabUtility`](https://github.com/w4po/ExplorerTabUtility) — [w4po-ExplorerTabUtility-深度调研.md](w4po-ExplorerTabUtility-深度调研.md)
-### 学习资料 / 方法论（17）
+### 学习资料 / 方法论（18）
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
 - [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) — [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md)
@@ -654,7 +661,8 @@
 
 - [`easychen/opc-methodology`](https://github.com/easychen/opc-methodology) — [easychen-opc-methodology-深度调研.md](easychen-opc-methodology-深度调研.md)
 
-### 其他（110）
+- [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
+### 其他（111）
 - [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)
 - [`volcengine/MineContext`](https://github.com/volcengine/MineContext) — [volcengine-MineContext-深度调研.md](volcengine-MineContext-深度调研.md)
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
@@ -766,12 +774,14 @@
 - [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) — [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md)
 - [`hyperledger/fabric`](https://github.com/hyperledger/fabric) — [hyperledger-fabric-深度调研.md](hyperledger-fabric-深度调研.md)
 
-### 机器学习 / 科学计算（5）
+- [`LorenzCK/OnTopReplica`](https://github.com/LorenzCK/OnTopReplica) — [LorenzCK-OnTopReplica-深度调研.md](LorenzCK-OnTopReplica-深度调研.md)
+### 机器学习 / 科学计算（6）
 - [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
 - [`google-deepmind/weathernext`](https://github.com/google-deepmind/weathernext) — [google-deepmind-weathernext-深度调研.md](google-deepmind-weathernext-深度调研.md)
 - [`huggingface/transformers`](https://github.com/huggingface/transformers) — [huggingface-transformers-深度调研.md](huggingface-transformers-深度调研.md)
 - [`K-Dense-AI/scientific-agent-skills`](https://github.com/K-Dense-AI/scientific-agent-skills) — [K-Dense-AI-scientific-agent-skills-深度调研.md](K-Dense-AI-scientific-agent-skills-深度调研.md)
 - [`MakazhanAlpamys/Soup`](https://github.com/MakazhanAlpamys/Soup) — [MakazhanAlpamys-Soup-深度调研.md](MakazhanAlpamys-Soup-深度调研.md)
+- [`ResearAI/AutoFigure-Edit`](https://github.com/ResearAI/AutoFigure-Edit) — [ResearAI-AutoFigure-Edit-深度调研.md](ResearAI-AutoFigure-Edit-深度调研.md)
 ### AI 编码 / 设计工具（1）
 - [`abi/screenshot-to-code`](https://github.com/abi/screenshot-to-code) — [abi-screenshot-to-code-深度调研.md](abi-screenshot-to-code-深度调研.md)
 ### 开发工具 / 测试（1）
