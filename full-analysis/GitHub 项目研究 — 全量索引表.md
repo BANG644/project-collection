@@ -470,11 +470,17 @@
 | 452 | [`ResearAI/AutoFigure-Edit`](https://github.com/ResearAI/AutoFigure-Edit) | 把论文方法文本变成可编辑 SVG 科研示意图（AutoFigure/ICLR 2026 升级版）——四阶段管线 + SAM3 分割 + 风格迁移，MIT | 4,292 | 2026-09-28 | [ResearAI-AutoFigure-Edit-深度调研.md](ResearAI-AutoFigure-Edit-深度调研.md) |
 | 453 | [`LorenzCK/OnTopReplica`](https://github.com/LorenzCK/OnTopReplica) | Windows 实时“窗口克隆”小工具——原生 DWM 缩略图镜像任意窗口并置顶，点击转发/穿透/分组切换，MS-RL | 3,396 | 2026-09-28 | [LorenzCK-OnTopReplica-深度调研.md](LorenzCK-OnTopReplica-深度调研.md) |
 | 454 | [`TurixAI/TuriX-CUA`](https://github.com/TurixAI/TuriX-CUA) | 开源计算机使用智能体（CUA）——Brain/Actor/Planner/Memory 多角色 + Skills 剧本 + MCP，OSWorld 64.2%（第 3）/macOS 自测 80%+，MIT | 3,166 | 2026-09-28 | [TurixAI-TuriX-CUA-深度调研.md](TurixAI-TuriX-CUA-深度调研.md) |
+| 455 | [`Sylinko/Everywhere`](https://github.com/Sylinko/Everywhere) | 桌面端“屏幕感知”AI 助手——C#/Avalonia 跨平台，多 LLM + MCP/技能，就地理解当前屏幕内容，NOASSERTION 许可 | 6,296 | 2026-09-29 | [Sylinko-Everywhere-深度调研.md](Sylinko-Everywhere-深度调研.md) |
+| 456 | [`Done-0/fuck-u-code`](https://github.com/Done-0/fuck-u-code) | 多语言代码“祖传屎山”检测器——tree-sitter AST 七维评分 + 可选多模型 AI 审查，CLI/MCP/skill 三形态，MIT | 7,293 | 2026-09-29 | [Done-0-fuck-u-code-深度调研.md](Done-0-fuck-u-code-深度调研.md) |
+| 457 | [`perplexityai/bumblebee`](https://github.com/perplexityai/bumblebee) | 开发者终端供应链暴露只读扫描器——Go 单二进制零依赖，清点包/MCP/agent-skill，配威胁目录秒级标红，Apache-2.0 | 5,043 | 2026-09-29 | [perplexityai-bumblebee-深度调研.md](perplexityai-bumblebee-深度调研.md) |
+| 458 | [`schollz/find3`](https://github.com/schollz/find3) | 高精度室内定位框架 FIND3——蓝牙/WiFi/磁场多源指纹 + 10 分类器元学习，Go 数据服务 + Python ML 服务，MIT | 4,806 | 2026-09-29 | [schollz-find3-深度调研.md](schollz-find3-深度调研.md) |
+| 459 | [`vikiboss/60s`](https://github.com/vikiboss/60s) | 高质量开源聚合 API 集合——每天 60 秒看世界/各平台热搜/金价油价，Deno 构建多运行时一键部署，MIT | 5,770 | 2026-09-29 | [vikiboss-60s-深度调研.md](vikiboss-60s-深度调研.md) |
 ## 🏷️ 按技术领域分类
-### AI Agent / 助手框架（111）
+### AI Agent / 助手框架（112）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
 - [`TurixAI/TuriX-CUA`](https://github.com/TurixAI/TuriX-CUA) — [TurixAI-TuriX-CUA-深度调研.md](TurixAI-TuriX-CUA-深度调研.md)
+- [`Sylinko/Everywhere`](https://github.com/Sylinko/Everywhere) — [Sylinko-Everywhere-深度调研.md](Sylinko-Everywhere-深度调研.md)
 ### LLM / 推理框架（10）
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
@@ -556,7 +562,7 @@
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
-### 开发工具 / CLI（39）
+### 开发工具 / CLI（41）
 - [`CoplayDev/unity-mcp`](https://github.com/CoplayDev/unity-mcp) — [CoplayDev-unity-mcp-深度调研.md](CoplayDev-unity-mcp-深度调研.md)
 - [`glitternetwork/pinme`](https://github.com/glitternetwork/pinme) — [glitternetwork-pinme-深度调研.md](glitternetwork-pinme-深度调研.md)
 - [`firecrawl/cli`](https://github.com/firecrawl/cli) — [firecrawl-cli-深度调研.md](firecrawl-cli-深度调研.md)
@@ -600,6 +606,8 @@
 - [`Tarquinen/opencode-dynamic-context-pruning`](https://github.com/Tarquinen/opencode-dynamic-context-pruning) — [Tarquinen-opencode-dynamic-context-pruning-深度调研.md](Tarquinen-opencode-dynamic-context-pruning-深度调研.md)
 
 
+- [`Done-0/fuck-u-code`](https://github.com/Done-0/fuck-u-code) — [Done-0-fuck-u-code-深度调研.md](Done-0-fuck-u-code-深度调研.md)
+- [`vikiboss/60s`](https://github.com/vikiboss/60s) — [vikiboss-60s-深度调研.md](vikiboss-60s-深度调研.md)
 ### 文档 / 文档工具（2）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
@@ -614,7 +622,7 @@
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
 ### 计算机视觉 / CV（1）
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
-### 安全 / 运维 / 系统工具（23）
+### 安全 / 运维 / 系统工具（24）
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
 - [`basecamp/omarchy`](https://github.com/basecamp/omarchy) — [basecamp-omarchy-深度调研.md](basecamp-omarchy-深度调研.md)
@@ -640,6 +648,7 @@
 - [`srwi/EverythingToolbar`](https://github.com/srwi/EverythingToolbar) — [srwi-EverythingToolbar-深度调研.md](srwi-EverythingToolbar-深度调研.md)
 
 - [`w4po/ExplorerTabUtility`](https://github.com/w4po/ExplorerTabUtility) — [w4po-ExplorerTabUtility-深度调研.md](w4po-ExplorerTabUtility-深度调研.md)
+- [`perplexityai/bumblebee`](https://github.com/perplexityai/bumblebee) — [perplexityai-bumblebee-深度调研.md](perplexityai-bumblebee-深度调研.md)
 ### 学习资料 / 方法论（18）
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
@@ -775,13 +784,14 @@
 - [`hyperledger/fabric`](https://github.com/hyperledger/fabric) — [hyperledger-fabric-深度调研.md](hyperledger-fabric-深度调研.md)
 
 - [`LorenzCK/OnTopReplica`](https://github.com/LorenzCK/OnTopReplica) — [LorenzCK-OnTopReplica-深度调研.md](LorenzCK-OnTopReplica-深度调研.md)
-### 机器学习 / 科学计算（6）
+### 机器学习 / 科学计算（7）
 - [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
 - [`google-deepmind/weathernext`](https://github.com/google-deepmind/weathernext) — [google-deepmind-weathernext-深度调研.md](google-deepmind-weathernext-深度调研.md)
 - [`huggingface/transformers`](https://github.com/huggingface/transformers) — [huggingface-transformers-深度调研.md](huggingface-transformers-深度调研.md)
 - [`K-Dense-AI/scientific-agent-skills`](https://github.com/K-Dense-AI/scientific-agent-skills) — [K-Dense-AI-scientific-agent-skills-深度调研.md](K-Dense-AI-scientific-agent-skills-深度调研.md)
 - [`MakazhanAlpamys/Soup`](https://github.com/MakazhanAlpamys/Soup) — [MakazhanAlpamys-Soup-深度调研.md](MakazhanAlpamys-Soup-深度调研.md)
 - [`ResearAI/AutoFigure-Edit`](https://github.com/ResearAI/AutoFigure-Edit) — [ResearAI-AutoFigure-Edit-深度调研.md](ResearAI-AutoFigure-Edit-深度调研.md)
+- [`schollz/find3`](https://github.com/schollz/find3) — [schollz-find3-深度调研.md](schollz-find3-深度调研.md)
 ### AI 编码 / 设计工具（1）
 - [`abi/screenshot-to-code`](https://github.com/abi/screenshot-to-code) — [abi-screenshot-to-code-深度调研.md](abi-screenshot-to-code-深度调研.md)
 ### 开发工具 / 测试（1）
