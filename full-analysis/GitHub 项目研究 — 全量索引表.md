@@ -475,12 +475,20 @@
 | 457 | [`perplexityai/bumblebee`](https://github.com/perplexityai/bumblebee) | 开发者终端供应链暴露只读扫描器——Go 单二进制零依赖，清点包/MCP/agent-skill，配威胁目录秒级标红，Apache-2.0 | 5,043 | 2026-09-29 | [perplexityai-bumblebee-深度调研.md](perplexityai-bumblebee-深度调研.md) |
 | 458 | [`schollz/find3`](https://github.com/schollz/find3) | 高精度室内定位框架 FIND3——蓝牙/WiFi/磁场多源指纹 + 10 分类器元学习，Go 数据服务 + Python ML 服务，MIT | 4,806 | 2026-09-29 | [schollz-find3-深度调研.md](schollz-find3-深度调研.md) |
 | 459 | [`vikiboss/60s`](https://github.com/vikiboss/60s) | 高质量开源聚合 API 集合——每天 60 秒看世界/各平台热搜/金价油价，Deno 构建多运行时一键部署，MIT | 5,770 | 2026-09-29 | [vikiboss-60s-深度调研.md](vikiboss-60s-深度调研.md) |
+| 460 | [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) | 把 .docx 当 Jinja2 模板渲染的 Python 库（docxtpl）——补 python-docx 短板，批量生成 Word 文档，LGPL-2.1 | 2,709 | 2026-09-30 | [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md) |
+| 461 | [`RICHQAQ/PasteMD`](https://github.com/RICHQAQ/PasteMD) | 一键把 Markdown/网页 AI 对话粘贴进 Word/WPS/Excel 的桌面效率工具——保留富文本排版，AGPL-3.0 | 5,344 | 2026-09-30 | [RICHQAQ-PasteMD-深度调研.md](RICHQAQ-PasteMD-深度调研.md) |
+| 462 | [`ChatLab/ChatLab`](https://github.com/ChatLab/ChatLab) | 本地优先的 AI 聊天记录分析桌面应用——跨平台导出归一化 + Agent（24+ 工具）探索洞察，AGPL-3.0 | 7,457 | 2026-09-30 | [ChatLab-ChatLab-深度调研.md](ChatLab-ChatLab-深度调研.md) |
+| 463 | [`Feather-2/Burner-X`](https://github.com/Feather-2/Burner-X) | 浏览器即开即用的开源 AI 文献工作站——纯前端 Agentic RAG，OCR/翻译/分析 PDF 等，AGPL-3.0 | 1,772 | 2026-09-30 | [Feather-2-Burner-X-深度调研.md](Feather-2-Burner-X-深度调研.md) |
+| 464 | [`KsanaDock/Microverse`](https://github.com/KsanaDock/Microverse) | Godot 4 多智能体 AI 社交模拟沙盒游戏——类斯坦福 AI 小镇，可 DIY 可玩，MIT | 2,483 | 2026-09-30 | [KsanaDock-Microverse-深度调研.md](KsanaDock-Microverse-深度调研.md) |
 ## 🏷️ 按技术领域分类
-### AI Agent / 助手框架（112）
+### AI Agent / 助手框架（115）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
 - [`TurixAI/TuriX-CUA`](https://github.com/TurixAI/TuriX-CUA) — [TurixAI-TuriX-CUA-深度调研.md](TurixAI-TuriX-CUA-深度调研.md)
 - [`Sylinko/Everywhere`](https://github.com/Sylinko/Everywhere) — [Sylinko-Everywhere-深度调研.md](Sylinko-Everywhere-深度调研.md)
+- [`ChatLab/ChatLab`](https://github.com/ChatLab/ChatLab) — [ChatLab-ChatLab-深度调研.md](ChatLab-ChatLab-深度调研.md)
+- [`Feather-2/Burner-X`](https://github.com/Feather-2/Burner-X) — [Feather-2-Burner-X-深度调研.md](Feather-2-Burner-X-深度调研.md)
+- [`KsanaDock/Microverse`](https://github.com/KsanaDock/Microverse) — [KsanaDock-Microverse-深度调研.md](KsanaDock-Microverse-深度调研.md)
 ### LLM / 推理框架（10）
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
@@ -562,7 +570,7 @@
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
-### 开发工具 / CLI（41）
+### 开发工具 / CLI（42）
 - [`CoplayDev/unity-mcp`](https://github.com/CoplayDev/unity-mcp) — [CoplayDev-unity-mcp-深度调研.md](CoplayDev-unity-mcp-深度调研.md)
 - [`glitternetwork/pinme`](https://github.com/glitternetwork/pinme) — [glitternetwork-pinme-深度调研.md](glitternetwork-pinme-深度调研.md)
 - [`firecrawl/cli`](https://github.com/firecrawl/cli) — [firecrawl-cli-深度调研.md](firecrawl-cli-深度调研.md)
@@ -608,9 +616,11 @@
 
 - [`Done-0/fuck-u-code`](https://github.com/Done-0/fuck-u-code) — [Done-0-fuck-u-code-深度调研.md](Done-0-fuck-u-code-深度调研.md)
 - [`vikiboss/60s`](https://github.com/vikiboss/60s) — [vikiboss-60s-深度调研.md](vikiboss-60s-深度调研.md)
-### 文档 / 文档工具（2）
+- [`RICHQAQ/PasteMD`](https://github.com/RICHQAQ/PasteMD) — [RICHQAQ-PasteMD-深度调研.md](RICHQAQ-PasteMD-深度调研.md)
+### 文档 / 文档工具（3）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
+- [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) — [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md)
 ### 前端 / 设计 / UI（29）
 - [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
 - [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)
