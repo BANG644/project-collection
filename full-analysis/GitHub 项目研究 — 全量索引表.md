@@ -480,6 +480,11 @@
 | 462 | [`ChatLab/ChatLab`](https://github.com/ChatLab/ChatLab) | 本地优先的 AI 聊天记录分析桌面应用——跨平台导出归一化 + Agent（24+ 工具）探索洞察，AGPL-3.0 | 7,457 | 2026-09-30 | [ChatLab-ChatLab-深度调研.md](ChatLab-ChatLab-深度调研.md) |
 | 463 | [`Feather-2/Burner-X`](https://github.com/Feather-2/Burner-X) | 浏览器即开即用的开源 AI 文献工作站——纯前端 Agentic RAG，OCR/翻译/分析 PDF 等，AGPL-3.0 | 1,772 | 2026-09-30 | [Feather-2-Burner-X-深度调研.md](Feather-2-Burner-X-深度调研.md) |
 | 464 | [`KsanaDock/Microverse`](https://github.com/KsanaDock/Microverse) | Godot 4 多智能体 AI 社交模拟沙盒游戏——类斯坦福 AI 小镇，可 DIY 可玩，MIT | 2,483 | 2026-09-30 | [KsanaDock-Microverse-深度调研.md](KsanaDock-Microverse-深度调研.md) |
+| 465 | [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) | 基于 Python+FastAPI 的闲鱼自动化客服/运营系统——WebSocket 直连 + LLM 议价引擎 + 自动发货/擦亮，AGPL-3.0 | 7,368 | 2026-10-01 | [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md) |
+| 466 | [`BIT-DataLab/Edit-Banana`](https://github.com/BIT-DataLab/Edit-Banana) | 用 SAM3+VLM 把静态图表/公式重建为可编辑 DrawIO XML 的 AI 工具（许可证 Apache-2.0 与 AGPL-3.0 声明冲突） | 5,502 | 2026-10-01 | [BIT-DataLab-Edit-Banana-深度调研.md](BIT-DataLab-Edit-Banana-深度调研.md) |
+| 467 | [`popstas/telegram-download-chat`](https://github.com/popstas/telegram-download-chat) | Telegram 聊天历史下载/导出/过滤/分析一体化工具——原生 MCP Server + 多 Agent 插件（Claude/Cursor/Codex），MIT | 218 | 2026-10-01 | [popstas-telegram-download-chat-深度调研.md](popstas-telegram-download-chat-深度调研.md) |
+| 468 | [`nordicsemi/Android-nRF-Mesh-Library`](https://github.com/nordicsemi/Android-nRF-Mesh-Library) | Nordic 官方 Android 蓝牙 Mesh（1.0.1）配网与消息收发库——完整网络层 + 密钥/模型管理，BSD-3-Clause | 477 | 2026-10-01 | [nordicsemi-Android-nRF-Mesh-Library-深度调研.md](nordicsemi-Android-nRF-Mesh-Library-深度调研.md) |
+| 469 | [`osmdroid/osmdroid`](https://github.com/osmdroid/osmdroid) | Android 开源地图视图库（MapView 替代品）——可插拔瓦片系统，16 年历史，已于 2024-08 归档停更 | 3,079 | 2026-10-01 | [osmdroid-osmdroid-深度调研.md](osmdroid-osmdroid-深度调研.md) |
 ## 🏷️ 按技术领域分类
 ### AI Agent / 助手框架（115）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
@@ -570,7 +575,9 @@
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
-### 开发工具 / CLI（42）
+### 开发工具 / CLI（44）
+- [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
+- [`popstas/telegram-download-chat`](https://github.com/popstas/telegram-download-chat) — [popstas-telegram-download-chat-深度调研.md](popstas-telegram-download-chat-深度调研.md)
 - [`CoplayDev/unity-mcp`](https://github.com/CoplayDev/unity-mcp) — [CoplayDev-unity-mcp-深度调研.md](CoplayDev-unity-mcp-深度调研.md)
 - [`glitternetwork/pinme`](https://github.com/glitternetwork/pinme) — [glitternetwork-pinme-深度调研.md](glitternetwork-pinme-深度调研.md)
 - [`firecrawl/cli`](https://github.com/firecrawl/cli) — [firecrawl-cli-深度调研.md](firecrawl-cli-深度调研.md)
@@ -630,7 +637,8 @@
 ### 视频 / 音频 / 多媒体（25）
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
-### 计算机视觉 / CV（1）
+### 计算机视觉 / CV（2）
+- [`BIT-DataLab/Edit-Banana`](https://github.com/BIT-DataLab/Edit-Banana) — [BIT-DataLab-Edit-Banana-深度调研.md](BIT-DataLab-Edit-Banana-深度调研.md)
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 ### 安全 / 运维 / 系统工具（24）
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
@@ -681,7 +689,9 @@
 - [`easychen/opc-methodology`](https://github.com/easychen/opc-methodology) — [easychen-opc-methodology-深度调研.md](easychen-opc-methodology-深度调研.md)
 
 - [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
-### 其他（111）
+### 其他（113）
+- [`nordicsemi/Android-nRF-Mesh-Library`](https://github.com/nordicsemi/Android-nRF-Mesh-Library) — [nordicsemi-Android-nRF-Mesh-Library-深度调研.md](nordicsemi-Android-nRF-Mesh-Library-深度调研.md)
+- [`osmdroid/osmdroid`](https://github.com/osmdroid/osmdroid) — [osmdroid-osmdroid-深度调研.md](osmdroid-osmdroid-深度调研.md)
 - [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)
 - [`volcengine/MineContext`](https://github.com/volcengine/MineContext) — [volcengine-MineContext-深度调研.md](volcengine-MineContext-深度调研.md)
 - [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) — [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md)
