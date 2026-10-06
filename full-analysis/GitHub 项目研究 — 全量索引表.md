@@ -504,6 +504,11 @@
 | 486 | [`antirez/ds4`](https://github.com/antirez/ds4) | antirez 的 DeepSeek V4 本地推理引擎 DwarfStar——消费级硬件 + SSD 流式 + RDMA 张量并行，纯 C | 23,379 | 2026-10-05 | [antirez-ds4-深度调研.md](antirez-ds4-深度调研.md) |
 | 487 | [`earthtojake/text-to-cad`](https://github.com/earthtojake/text-to-cad) | 把自然语言转成可制造 CAD 工件（STEP/GLB/DXF）的 Agent 工具链——cadgen 运行时 + 多 harness 插件 | 16,787 | 2026-10-05 | [earthtojake-text-to-cad-深度调研.md](earthtojake-text-to-cad-深度调研.md) |
 | 488 | [`caddyserver/caddy`](https://github.com/caddyserver/caddy) | 自动 HTTPS 的可扩展 Web 服务器——模块化架构 + 原子热重载 + 单二进制，Apache-2.0 | 76,455 | 2026-10-05 | [caddyserver-caddy-深度调研.md](caddyserver-caddy-深度调研.md) |
+| 489 | [`a710128/opencode-vscode-ui`](https://github.com/a710128/opencode-vscode-ui) | VS Code 扩展——把 OpenCode 会话带进编辑器（工作区感知侧边栏 + 独立会话 Tab + Todo/改动文件视图），MIT | 22 | 2026-10-06 | [a710128-opencode-vscode-ui-深度调研.md](a710128-opencode-vscode-ui-深度调研.md) |
+| 490 | [`GBSOSS/skill-from-masters`](https://github.com/GBSOSS/skill-from-masters) | 基于大师方法论生成 AI Skill 的技能包（3 技能 + 15 领域方法论库），MIT | 1,587 | 2026-10-06 | [GBSOSS-skill-from-masters-深度调研.md](GBSOSS-skill-from-masters-深度调研.md) |
+| 491 | [`tester-army/e2e`](https://github.com/tester-army/e2e) | 面向 Web/移动端的 Agent 端到端测试框架（自然语言目标驱动 + agent.act/assert + 无模型回放），Apache-2.0 | 4,918 | 2026-10-06 | [tester-army-e2e-深度调研.md](tester-army-e2e-深度调研.md) |
+| 492 | [`cloudflare/cloudflare-os`](https://github.com/cloudflare/cloudflare-os) | 运行在 Cloudflare Workers 上的「AI 生产力操作系统」——Gadgets 沙箱应用 + Gatekeepers 能力型安全层（异步 human-in-loop 模拟），Apache-2.0 | 11,040 | 2026-10-06 | [cloudflare-cloudflare-os-深度调研.md](cloudflare-cloudflare-os-深度调研.md) |
+| 493 | [`DuarteSantos8/openGym`](https://github.com/DuarteSantos8/openGym) | 自托管的健身/自重训练追踪器（React PWA + Node 无框架，passkey 登录 + 跨设备合并同步 + 可选 AI Coach/MCP），AGPL-3.0 | 4,305 | 2026-10-06 | [DuarteSantos8-openGym-深度调研.md](DuarteSantos8-openGym-深度调研.md) |
 ## 🏷️ 按技术领域分类
 ### AI Agent / 助手框架（118）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
@@ -527,7 +532,7 @@
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
-### AI 编码 / Skill 技能（49）
+### AI 编码 / Skill 技能（51）
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`Alishahryar1/free-claude-code`](https://github.com/Alishahryar1/free-claude-code) — [Alishahryar1-free-claude-code-深度调研.md](Alishahryar1-free-claude-code-深度调研.md)
@@ -577,6 +582,8 @@
 - [`Yeachan-Heo/oh-my-claudecode`](https://github.com/Yeachan-Heo/oh-my-claudecode) — [Yeachan-Heo-oh-my-claudecode-深度调研.md](Yeachan-Heo-oh-my-claudecode-深度调研.md)
 - [`youngyangyang04/leetcode-master`](https://github.com/youngyangyang04/leetcode-master) — [youngyangyang04-leetcode-master-深度调研.md](youngyangyang04-leetcode-master-深度调研.md)
 - [`KhazP/vibe-coding-prompt-template`](https://github.com/KhazP/vibe-coding-prompt-template) — [KhazP-vibe-coding-prompt-template-深度调研.md](KhazP-vibe-coding-prompt-template-深度调研.md)
+- [`a710128/opencode-vscode-ui`](https://github.com/a710128/opencode-vscode-ui) — [a710128-opencode-vscode-ui-深度调研.md](a710128-opencode-vscode-ui-深度调研.md)
+- [`GBSOSS/skill-from-masters`](https://github.com/GBSOSS/skill-from-masters) — [GBSOSS-skill-from-masters-深度调研.md](GBSOSS-skill-from-masters-深度调研.md)
 ### RAG / 知识库 / 记忆（20）
 - [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
@@ -723,7 +730,7 @@
 - [`easychen/opc-methodology`](https://github.com/easychen/opc-methodology) — [easychen-opc-methodology-深度调研.md](easychen-opc-methodology-深度调研.md)
 
 - [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
-### 其他（116）
+### 其他（117）
 - [`nordicsemi/Android-nRF-Mesh-Library`](https://github.com/nordicsemi/Android-nRF-Mesh-Library) — [nordicsemi-Android-nRF-Mesh-Library-深度调研.md](nordicsemi-Android-nRF-Mesh-Library-深度调研.md)
 - [`osmdroid/osmdroid`](https://github.com/osmdroid/osmdroid) — [osmdroid-osmdroid-深度调研.md](osmdroid-osmdroid-深度调研.md)
 - [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)
@@ -841,6 +848,7 @@
 - [`cpaczek/skylight`](https://github.com/cpaczek/skylight) — [cpaczek-skylight-深度调研.md](cpaczek-skylight-深度调研.md)
 - [`b-nnett/goose`](https://github.com/b-nnett/goose) — [b-nnett-goose-深度调研.md](b-nnett-goose-深度调研.md)
 - [`earthtojake/text-to-cad`](https://github.com/earthtojake/text-to-cad) — [earthtojake-text-to-cad-深度调研.md](earthtojake-text-to-cad-深度调研.md)
+- [`DuarteSantos8/openGym`](https://github.com/DuarteSantos8/openGym) — [DuarteSantos8-openGym-深度调研.md](DuarteSantos8-openGym-深度调研.md)
 ### 机器学习 / 科学计算（8）
 - [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
 - [`google-deepmind/weathernext`](https://github.com/google-deepmind/weathernext) — [google-deepmind-weathernext-深度调研.md](google-deepmind-weathernext-深度调研.md)
@@ -852,17 +860,19 @@
 - [`antirez/ds4`](https://github.com/antirez/ds4) — [antirez-ds4-深度调研.md](antirez-ds4-深度调研.md)
 ### AI 编码 / 设计工具（1）
 - [`abi/screenshot-to-code`](https://github.com/abi/screenshot-to-code) — [abi-screenshot-to-code-深度调研.md](abi-screenshot-to-code-深度调研.md)
-### 开发工具 / 测试（1）
+### 开发工具 / 测试（2）
 - [`google/googletest`](https://github.com/google/googletest) — [google-googletest-深度调研.md](google-googletest-深度调研.md)
+- [`tester-army/e2e`](https://github.com/tester-army/e2e) — [tester-army-e2e-深度调研.md](tester-army-e2e-深度调研.md)
 ### AI Agent / 语音多模态（1）
 - [`livekit/agents`](https://github.com/livekit/agents) — [livekit-agents-深度调研.md](livekit-agents-深度调研.md)
 ### 安全 / 逆向工程（1）
 - [`NationalSecurityAgency/ghidra`](https://github.com/NationalSecurityAgency/ghidra) — [NationalSecurityAgency-ghidra-深度调研.md](NationalSecurityAgency-ghidra-深度调研.md)
-### AI Agent / LLM 基础设施（3）
+### AI Agent / LLM 基础设施（4）
 - [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
 - [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi) — [tashfeenahmed-freellmapi-深度调研.md](tashfeenahmed-freellmapi-深度调研.md)
 - [`yzfly/Awesome-MCP-ZH`](https://github.com/yzfly/Awesome-MCP-ZH) — [yzfly-Awesome-MCP-ZH-深度调研.md](yzfly-Awesome-MCP-ZH-深度调研.md)
 
+- [`cloudflare/cloudflare-os`](https://github.com/cloudflare/cloudflare-os) — [cloudflare-cloudflare-os-深度调研.md](cloudflare-cloudflare-os-深度调研.md)
 ## 📝 维护规则
 
 1. 新增调研报告后，必须在本表追加索引行（owner/repo 列点击跳转 GitHub；报告文件列点击打开本地报告）。
