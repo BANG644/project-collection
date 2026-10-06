@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 493                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 495                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -171,10 +171,11 @@ github-project-research/
 - [`greensock/gsap-skills`](https://github.com/greensock/gsap-skills) — [greensock-gsap-skills-深度调研.md](greensock-gsap-skills-深度调研.md)
 - [`gsd-build/get-shit-done`](https://github.com/gsd-build/get-shit-done) — [gsd-build-get-shit-done-深度调研.md](gsd-build-get-shit-done-深度调研.md)
 - [`GBSOSS/skill-from-masters`](https://github.com/GBSOSS/skill-from-masters) — [GBSOSS-skill-from-masters-深度调研.md](GBSOSS-skill-from-masters-深度调研.md)
-### H（21）
+### H（22）
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
 - [`HisMax/RedInk`](https://github.com/HisMax/RedInk) — [HisMax-RedInk-深度调研.md](HisMax-RedInk-深度调研.md)
+- [`helloianneo/ian-xiaohei-illustrations`](https://github.com/helloianneo/ian-xiaohei-illustrations) — [helloianneo-ian-xiaohei-illustrations-深度调研.md](helloianneo-ian-xiaohei-illustrations-深度调研.md)
 ### I（12 个）
 - [`IceWhaleTech/CasaOS`](https://github.com/IceWhaleTech/CasaOS) — [IceWhaleTech-CasaOS-深度调研.md](IceWhaleTech-CasaOS-深度调研.md)
 - [`icip-cas/PPTAgent`](https://github.com/icip-cas/PPTAgent) — [icip-cas-PPTAgent-深度调研.md](icip-cas-PPTAgent-深度调研.md)
@@ -216,7 +217,7 @@ github-project-research/
 - [`KsanaDock/Microverse`](https://github.com/KsanaDock/Microverse) — [KsanaDock-Microverse-深度调研.md](KsanaDock-Microverse-深度调研.md)
 
 - [`KhazP/vibe-coding-prompt-template`](https://github.com/KhazP/vibe-coding-prompt-template) — [KhazP-vibe-coding-prompt-template-深度调研.md](KhazP-vibe-coding-prompt-template-深度调研.md)
-### L（22 个）
+### L（23 个）
 - [`LadybirdBrowser/ladybird`](https://github.com/LadybirdBrowser/ladybird) — [LadybirdBrowser-ladybird-深度调研.md](LadybirdBrowser-ladybird-深度调研.md)
 - [`langbot-app/LangBot`](https://github.com/langbot-app/LangBot) — [langbot-app-LangBot-深度调研.md](langbot-app-LangBot-深度调研.md)
 - [`langchain-ai/openwiki`](https://github.com/langchain-ai/openwiki) — [langchain-ai-openwiki-深度调研.md](langchain-ai-openwiki-深度调研.md)
@@ -240,6 +241,7 @@ github-project-research/
 - [`lynote-ai/humanize-text`](https://github.com/lynote-ai/humanize-text) — [lynote-ai-humanize-text-深度调研.md](lynote-ai-humanize-text-深度调研.md)
 
 - [`LorenzCK/OnTopReplica`](https://github.com/LorenzCK/OnTopReplica) — [LorenzCK-OnTopReplica-深度调研.md](LorenzCK-OnTopReplica-深度调研.md)
+- [`liyue-aigc/female-portrait-director`](https://github.com/liyue-aigc/female-portrait-director) — [liyue-aigc-female-portrait-director-深度调研.md](liyue-aigc-female-portrait-director-深度调研.md)
 ### M（35 个）
 - [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)
 - [`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search) — [MadsLorentzen-ai-job-search-深度调研.md](MadsLorentzen-ai-job-search-深度调研.md)
@@ -508,7 +510,7 @@ github-project-research/
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
 
-### AI 编码 / Skill 技能（51）
+### AI 编码 / Skill 技能（53）
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`Alishahryar1/free-claude-code`](https://github.com/Alishahryar1/free-claude-code) — [Alishahryar1-free-claude-code-深度调研.md](Alishahryar1-free-claude-code-深度调研.md)
@@ -560,6 +562,8 @@ github-project-research/
 - [`KhazP/vibe-coding-prompt-template`](https://github.com/KhazP/vibe-coding-prompt-template) — [KhazP-vibe-coding-prompt-template-深度调研.md](KhazP-vibe-coding-prompt-template-深度调研.md)
 - [`a710128/opencode-vscode-ui`](https://github.com/a710128/opencode-vscode-ui) — [a710128-opencode-vscode-ui-深度调研.md](a710128-opencode-vscode-ui-深度调研.md)
 - [`GBSOSS/skill-from-masters`](https://github.com/GBSOSS/skill-from-masters) — [GBSOSS-skill-from-masters-深度调研.md](GBSOSS-skill-from-masters-深度调研.md)
+- [`helloianneo/ian-xiaohei-illustrations`](https://github.com/helloianneo/ian-xiaohei-illustrations) — [helloianneo-ian-xiaohei-illustrations-深度调研.md](helloianneo-ian-xiaohei-illustrations-深度调研.md)
+- [`liyue-aigc/female-portrait-director`](https://github.com/liyue-aigc/female-portrait-director) — [liyue-aigc-female-portrait-director-深度调研.md](liyue-aigc-female-portrait-director-深度调研.md)
 ### RAG / 知识库 / 记忆（20）
 - [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)

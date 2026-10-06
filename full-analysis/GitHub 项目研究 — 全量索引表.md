@@ -509,6 +509,8 @@
 | 491 | [`tester-army/e2e`](https://github.com/tester-army/e2e) | 面向 Web/移动端的 Agent 端到端测试框架（自然语言目标驱动 + agent.act/assert + 无模型回放），Apache-2.0 | 4,918 | 2026-10-06 | [tester-army-e2e-深度调研.md](tester-army-e2e-深度调研.md) |
 | 492 | [`cloudflare/cloudflare-os`](https://github.com/cloudflare/cloudflare-os) | 运行在 Cloudflare Workers 上的「AI 生产力操作系统」——Gadgets 沙箱应用 + Gatekeepers 能力型安全层（异步 human-in-loop 模拟），Apache-2.0 | 11,040 | 2026-10-06 | [cloudflare-cloudflare-os-深度调研.md](cloudflare-cloudflare-os-深度调研.md) |
 | 493 | [`DuarteSantos8/openGym`](https://github.com/DuarteSantos8/openGym) | 自托管的健身/自重训练追踪器（React PWA + Node 无框架，passkey 登录 + 跨设备合并同步 + 可选 AI Coach/MCP），AGPL-3.0 | 4,305 | 2026-10-06 | [DuarteSantos8-openGym-深度调研.md](DuarteSantos8-openGym-深度调研.md) |
+| 494 | [`helloianneo/ian-xiaohei-illustrations`](https://github.com/helloianneo/ian-xiaohei-illustrations) | Codex Skill——把中文正文变成「小黑」IP 手绘配图，渐进披露 references + 反模板化纪律，MIT | 12,376 | 2026-10-07 | [helloianneo-ian-xiaohei-illustrations-深度调研.md](helloianneo-ian-xiaohei-illustrations-深度调研.md) |
+| 495 | [`liyue-aigc/female-portrait-director`](https://github.com/liyue-aigc/female-portrait-director) | Codex Skill——女性人像导演式提示词，注册表路由 + 参数锁 + 导演闸门 + 独立安全边界，MIT | 1,627 | 2026-10-07 | [liyue-aigc-female-portrait-director-深度调研.md](liyue-aigc-female-portrait-director-深度调研.md) |
 ## 🏷️ 按技术领域分类
 ### AI Agent / 助手框架（118）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
@@ -532,7 +534,7 @@
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
-### AI 编码 / Skill 技能（51）
+### AI 编码 / Skill 技能（53）
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`Alishahryar1/free-claude-code`](https://github.com/Alishahryar1/free-claude-code) — [Alishahryar1-free-claude-code-深度调研.md](Alishahryar1-free-claude-code-深度调研.md)
@@ -584,6 +586,8 @@
 - [`KhazP/vibe-coding-prompt-template`](https://github.com/KhazP/vibe-coding-prompt-template) — [KhazP-vibe-coding-prompt-template-深度调研.md](KhazP-vibe-coding-prompt-template-深度调研.md)
 - [`a710128/opencode-vscode-ui`](https://github.com/a710128/opencode-vscode-ui) — [a710128-opencode-vscode-ui-深度调研.md](a710128-opencode-vscode-ui-深度调研.md)
 - [`GBSOSS/skill-from-masters`](https://github.com/GBSOSS/skill-from-masters) — [GBSOSS-skill-from-masters-深度调研.md](GBSOSS-skill-from-masters-深度调研.md)
+- [`helloianneo/ian-xiaohei-illustrations`](https://github.com/helloianneo/ian-xiaohei-illustrations) — [helloianneo-ian-xiaohei-illustrations-深度调研.md](helloianneo-ian-xiaohei-illustrations-深度调研.md)
+- [`liyue-aigc/female-portrait-director`](https://github.com/liyue-aigc/female-portrait-director) — [liyue-aigc-female-portrait-director-深度调研.md](liyue-aigc-female-portrait-director-深度调研.md)
 ### RAG / 知识库 / 记忆（20）
 - [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
