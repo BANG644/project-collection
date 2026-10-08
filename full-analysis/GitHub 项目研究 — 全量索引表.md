@@ -516,6 +516,9 @@
 | 497 | [`manaflow-ai/cmux`](https://github.com/manaflow-ai/cmux) | 为 AI 编程 Agent 打造的 macOS 原生终端——侧边栏标签页+通知环+内嵌可编程浏览器，Ghostty 兼容 | 27,782 | 2026-10-08 | [manaflow-ai-cmux-深度调研.md](manaflow-ai-cmux-深度调研.md) |
 | 498 | [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) | 给编程 Agent 安装的「输出纪律」技能/插件——用 10 条规则强制 LLM 先给动作、不埋答案 | 54,961 | 2026-10-08 | [ayghri-i-have-adhd-深度调研.md](ayghri-i-have-adhd-深度调研.md) |
 | 499 | [`boykopovar/AnyPS5`](https://github.com/boykopovar/AnyPS5) | 把 PS5 原生可执行文件自动移植到 Linux/Windows 的 C++ 工具链——relinker 原生重定位+PRX 库动态链接，无模拟器 | 9,628 | 2026-10-08 | [boykopovar-AnyPS5-深度调研.md](boykopovar-AnyPS5-深度调研.md) |
+| 500 | [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) | Anthropic 官方开源的「知识工作插件」市场——把 Claude 变成按角色/团队/公司定制的领域专家（Skills+MCP 连接器+Commands 三件套，含安全治理层） | 27,415 | 2026-10-09 | [anthropics-knowledge-work-plugins-深度调研.md](anthropics-knowledge-work-plugins-深度调研.md) |
+| 501 | [`EpicGames/raddebugger`](https://github.com/EpicGames/raddebugger) | Epic 原生用户态多进程图形化调试器（alpha，仅 Windows/PDB）——自研 RDI 调试信息格式 + RAD Linker，为巨型 C/C++ 项目而生 | 8,060 | 2026-10-09 | [EpicGames-raddebugger-深度调研.md](EpicGames-raddebugger-深度调研.md) |
+| 502 | [`storytold/artcraft`](https://github.com/storytold/artcraft) | 「艺术家的 IDE」——交互式 AI 图像/视频创作，先构图再生成、聚合 62 模型（Fair Source 非 OSI 许可） | 7,146 | 2026-10-09 | [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md) |
 ### AI Agent / 助手框架（118）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
@@ -538,7 +541,7 @@
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
-### AI 编码 / Skill 技能（54）
+### AI 编码 / Skill 技能（55）
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`Alishahryar1/free-claude-code`](https://github.com/Alishahryar1/free-claude-code) — [Alishahryar1-free-claude-code-深度调研.md](Alishahryar1-free-claude-code-深度调研.md)
@@ -593,6 +596,7 @@
 - [`helloianneo/ian-xiaohei-illustrations`](https://github.com/helloianneo/ian-xiaohei-illustrations) — [helloianneo-ian-xiaohei-illustrations-深度调研.md](helloianneo-ian-xiaohei-illustrations-深度调研.md)
 - [`liyue-aigc/female-portrait-director`](https://github.com/liyue-aigc/female-portrait-director) — [liyue-aigc-female-portrait-director-深度调研.md](liyue-aigc-female-portrait-director-深度调研.md)
 - [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) — [ayghri-i-have-adhd-深度调研.md](ayghri-i-have-adhd-深度调研.md)
+- [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) — [anthropics-knowledge-work-plugins-深度调研.md](anthropics-knowledge-work-plugins-深度调研.md)
 ### RAG / 知识库 / 记忆（20）
 - [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
@@ -614,7 +618,7 @@
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
-### 开发工具 / CLI（49）
+### 开发工具 / CLI（50）
 - [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
 - [`popstas/telegram-download-chat`](https://github.com/popstas/telegram-download-chat) — [popstas-telegram-download-chat-深度调研.md](popstas-telegram-download-chat-深度调研.md)
 - [`CoplayDev/unity-mcp`](https://github.com/CoplayDev/unity-mcp) — [CoplayDev-unity-mcp-深度调研.md](CoplayDev-unity-mcp-深度调研.md)
@@ -668,6 +672,7 @@
 - [`anomalyco/rift`](https://github.com/anomalyco/rift) — [anomalyco-rift-深度调研.md](anomalyco-rift-深度调研.md)
 - [`caddyserver/caddy`](https://github.com/caddyserver/caddy) — [caddyserver-caddy-深度调研.md](caddyserver-caddy-深度调研.md)
 - [`manaflow-ai/cmux`](https://github.com/manaflow-ai/cmux) — [manaflow-ai-cmux-深度调研.md](manaflow-ai-cmux-深度调研.md)
+- [`EpicGames/raddebugger`](https://github.com/EpicGames/raddebugger) — [EpicGames-raddebugger-深度调研.md](EpicGames-raddebugger-深度调研.md)
 ### 文档 / 文档工具（3）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
@@ -681,11 +686,12 @@
 - [`SenhorH/tab-labeler`](https://github.com/SenhorH/tab-labeler) — [SenhorH-tab-labeler-深度调研.md](SenhorH-tab-labeler-深度调研.md)
 - [`HisMax/RedInk`](https://github.com/HisMax/RedInk) — [HisMax-RedInk-深度调研.md](HisMax-RedInk-深度调研.md)
 - [`mem0ai/mem0-chrome-extension`](https://github.com/mem0ai/mem0-chrome-extension) — [mem0ai-mem0-chrome-extension-深度调研.md](mem0ai-mem0-chrome-extension-深度调研.md)
-### 视频 / 音频 / 多媒体（27）
+### 视频 / 音频 / 多媒体（28）
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
 - [`MicYou-Dev/MicYou`](https://github.com/MicYou-Dev/MicYou) — [MicYou-Dev-MicYou-深度调研.md](MicYou-Dev-MicYou-深度调研.md)
 - [`RanFeng/clipsketch-ai`](https://github.com/RanFeng/clipsketch-ai) — [RanFeng-clipsketch-ai-深度调研.md](RanFeng-clipsketch-ai-深度调研.md)
+- [`storytold/artcraft`](https://github.com/storytold/artcraft) — [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md)
 ### 计算机视觉 / CV（3）
 - [`BIT-DataLab/Edit-Banana`](https://github.com/BIT-DataLab/Edit-Banana) — [BIT-DataLab-Edit-Banana-深度调研.md](BIT-DataLab-Edit-Banana-深度调研.md)
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
