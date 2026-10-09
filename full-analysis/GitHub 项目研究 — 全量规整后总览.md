@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 502                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 505                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -69,7 +69,8 @@ github-project-research/
 - [`a710128/opencode-vscode-ui`](https://github.com/a710128/opencode-vscode-ui) — [a710128-opencode-vscode-ui-深度调研.md](a710128-opencode-vscode-ui-深度调研.md)
 - [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) — [ayghri-i-have-adhd-深度调研.md](ayghri-i-have-adhd-深度调研.md)
 - [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) — [anthropics-knowledge-work-plugins-深度调研.md](anthropics-knowledge-work-plugins-深度调研.md)
-### B（20 个）
+### B（21 个）
+- [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md)
 - [`baidu/Unlimited-OCR`](https://github.com/baidu/Unlimited-OCR) — [baidu-Unlimited-OCR-深度调研.md](baidu-Unlimited-OCR-深度调研.md)
 - [`BANG644/scheduler-sent`](https://github.com/BANG644/scheduler-sent) — [BANG644-scheduler-sent-深度调研.md](BANG644-scheduler-sent-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
@@ -349,7 +350,8 @@ github-project-research/
 - [`PrimeIntellect-ai/prime-agent`](https://github.com/PrimeIntellect-ai/prime-agent) — [PrimeIntellect-ai-prime-agent-深度调研.md](PrimeIntellect-ai-prime-agent-深度调研.md)
 - [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) — [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md)
 - [`popstas/telegram-download-chat`](https://github.com/popstas/telegram-download-chat) — [popstas-telegram-download-chat-深度调研.md](popstas-telegram-download-chat-深度调研.md)
-### R（19 个）
+### R（20 个）
+- [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) — [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md)
 - [`raiyanyahya/recall`](https://github.com/raiyanyahya/recall) — [raiyanyahya-recall-深度调研.md](raiyanyahya-recall-深度调研.md)
 - [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) — [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md)
 - [`Raphire/Win11Debloat`](https://github.com/Raphire/Win11Debloat) — [Raphire-Win11Debloat-深度调研.md](Raphire-Win11Debloat-深度调研.md)
@@ -403,7 +405,8 @@ github-project-research/
 - [`Salomondiei08/oh-my-hermes`](https://github.com/Salomondiei08/oh-my-hermes) — [Salomondiei08-oh-my-hermes-深度调研.md](Salomondiei08-oh-my-hermes-深度调研.md)
 - [`SenhorH/tab-labeler`](https://github.com/SenhorH/tab-labeler) — [SenhorH-tab-labeler-深度调研.md](SenhorH-tab-labeler-深度调研.md)
 - [`storytold/artcraft`](https://github.com/storytold/artcraft) — [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md)
-### T（28 个）
+### T（29 个）
+- [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`Tarquinen/opencode-dynamic-context-pruning`](https://github.com/Tarquinen/opencode-dynamic-context-pruning) — [Tarquinen-opencode-dynamic-context-pruning-深度调研.md](Tarquinen-opencode-dynamic-context-pruning-深度调研.md)
 - [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi) — [tashfeenahmed-freellmapi-深度调研.md](tashfeenahmed-freellmapi-深度调研.md)
 - [`tastyeffectco/sandboxd`](https://github.com/tastyeffectco/sandboxd) — [tastyeffectco-sandboxd-深度调研.md](tastyeffectco-sandboxd-深度调研.md)
@@ -517,7 +520,8 @@ github-project-research/
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
 
-### AI 编码 / Skill 技能（55）
+### AI 编码 / Skill 技能（56）
+- [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`Alishahryar1/free-claude-code`](https://github.com/Alishahryar1/free-claude-code) — [Alishahryar1-free-claude-code-深度调研.md](Alishahryar1-free-claude-code-深度调研.md)
@@ -667,7 +671,8 @@ github-project-research/
 - [`MicYou-Dev/MicYou`](https://github.com/MicYou-Dev/MicYou) — [MicYou-Dev-MicYou-深度调研.md](MicYou-Dev-MicYou-深度调研.md)
 - [`RanFeng/clipsketch-ai`](https://github.com/RanFeng/clipsketch-ai) — [RanFeng-clipsketch-ai-深度调研.md](RanFeng-clipsketch-ai-深度调研.md)
 - [`storytold/artcraft`](https://github.com/storytold/artcraft) — [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md)
-### 计算机视觉 / CV（3）
+### 计算机视觉 / CV（4）
+- [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) — [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md)
 - [`BIT-DataLab/Edit-Banana`](https://github.com/BIT-DataLab/Edit-Banana) — [BIT-DataLab-Edit-Banana-深度调研.md](BIT-DataLab-Edit-Banana-深度调研.md)
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 - [`Allenk/GeminiWatermarkTool`](https://github.com/Allenk/GeminiWatermarkTool) — [Allenk-GeminiWatermarkTool-深度调研.md](Allenk-GeminiWatermarkTool-深度调研.md)
@@ -864,7 +869,8 @@ github-project-research/
 
 - [`morluto/rea`](https://github.com/morluto/rea) — [morluto-rea-深度调研.md](morluto-rea-深度调研.md)
 - [`boykopovar/AnyPS5`](https://github.com/boykopovar/AnyPS5) — [boykopovar-AnyPS5-深度调研.md](boykopovar-AnyPS5-深度调研.md)
-### AI Agent / LLM 基础设施（4）
+### AI Agent / LLM 基础设施（5）
+- [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md)
 - [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
 - [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi) — [tashfeenahmed-freellmapi-深度调研.md](tashfeenahmed-freellmapi-深度调研.md)
 

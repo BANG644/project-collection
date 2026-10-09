@@ -13,6 +13,10 @@
 
 | # | owner/repo | 一句话定位 | Stars | 调研日期 | 报告文件 |
 |---|-----------|-----------|-------|---------|---------|
+
+
+
+
 | 1 | [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) | 18 AI 历史名人群组辩论系统——跨 6+LLM 提供商的结构化决策辩论，7 步仪式化协议+防假共识加权投票 | 1,823 | 2026-06-30 | [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md) |
 | 2 | [`1jehuang/jcode`](https://github.com/1jehuang/jcode) | 最轻量 Rust 编码 Agent Harness——27.8MB 内存 + Ambient 常驻多会话 + 生产级 Loop 模块化 | 10,207 | 2026-07-22 | [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md) |
 | 3 | [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) | — | 35,830 | 2026-06-10 | [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md) |
@@ -416,12 +420,10 @@
 | 401 | [`ionic-team/capacitor`](https://github.com/ionic-team/capacitor) | 用 Web 技术构建跨平台原生 App 的运行时——统一 Plugin API + 原生工程即源码产物，Cordova 向后兼容 | 16,686 | 2026-09-17 | [ionic-team-capacitor-深度调研.md](ionic-team-capacitor-深度调研.md) |
 | 402 | [`nvm-windows/nvm`](https://github.com/nvm-windows/nvm) | Windows 平台 Node 版本管理器 v2（Zig shim / junction 双模式，免管理员权限，企业级 Certified Builds） | 47,696 | 2026-09-17 | [nvm-windows-nvm-深度调研.md](nvm-windows-nvm-深度调研.md) |
 | 403 | [`pot-app/pot-desktop`](https://github.com/pot-app/pot-desktop) | 跨平台划词翻译+OCR+TTS 桌面软件（Tauri），本地 HTTP 控制面 + 插件化多引擎，Bob 平替 | 19,433 | 2026-09-17 | [pot-app-pot-desktop-深度调研.md](pot-app-pot-desktop-深度调研.md) |
-
 | 404 | [`datawhalechina/happy-llm`](https://github.com/datawhalechina/happy-llm) | Datawhale 系统性中文开源大模型教材——从 NLP 基础到手写 LLaMA2、预训练/微调、RAG/Agent 与 Agentic-RL（CC BY-NC-SA 4.0） | 33,874 | 2026-09-18 | [datawhalechina-happy-llm-深度调研.md](datawhalechina-happy-llm-深度调研.md) |
 | 405 | [`wechatsync/Wechatsync`](https://github.com/wechatsync/Wechatsync) | 开源免费多平台文章同步工具（Chrome 扩展+CLI+MCP）——复用浏览器登录态调平台官方 API，29+ 平台草稿优先（GPL-3.0） | 6,314 | 2026-09-18 | [wechatsync-Wechatsync-深度调研.md](wechatsync-Wechatsync-深度调研.md) |
 | 406 | [`indiff/qttabbar`](https://github.com/indiff/qttabbar) | 给 Windows 文件资源管理器加多标签与增强功能的轻量扩展（Explorer Band），渐进式增强原生 UI（GPL-3.0，.NET 4.8） | 4,896 | 2026-09-18 | [indiff-qttabbar-深度调研.md](indiff-qttabbar-深度调研.md) |
 | 407 | [`srwi/EverythingToolbar`](https://github.com/srwi/EverythingToolbar) | Everything 极速文件搜索引擎的 Windows 任务栏前端外壳——薄前端+快引擎，替代缓慢的 Windows 自带搜索（.NET 8） | 14,758 | 2026-09-18 | [srwi-EverythingToolbar-深度调研.md](srwi-EverythingToolbar-深度调研.md) |
-
 | 408 | [`vim/vim`](https://github.com/vim/vim) | 30+ 年演进的 C 语言模态文本编辑器——撤销树分支+ Vim9 脚本编译（快 ~68×）+ 极致可移植 + 强向后兼容 | 40,896 | 2026-09-19 | [vim-vim-深度调研.md](vim-vim-深度调研.md) |
 | 409 | [`hyperledger/fabric`](https://github.com/hyperledger/fabric) | Linux 基金会许可型联盟链框架——Execute-Order-Validate 三段式、通道级隐私、可插拔共识、MSP 成员身份 | 16,719 | 2026-09-19 | [hyperledger-fabric-深度调研.md](hyperledger-fabric-深度调研.md) |
 | 410 | [`vercel-labs/skills`](https://github.com/vercel-labs/skills) | Vercel Labs 开源 Agent Skills 生态 CLI（npx skills）——跨 75+ 编码 agent 安装/发现/更新 SKILL.md 技能包 | 31,956 | 2026-09-19 | [vercel-labs-skills-深度调研.md](vercel-labs-skills-深度调研.md) |
@@ -454,7 +456,6 @@
 | 437 | [`duixcom/Duix-Avatar`](https://github.com/duixcom/Duix-Avatar) | 鬼谷智能开源的 AI 数字人工具包——全离线本地运行，形象+声音克隆与视频合成(ASR/TTS/视频合成三 Docker 服务)，Electron 客户端 | 15,577 | 2026-09-25 | [duixcom-Duix-Avatar-深度调研.md](duixcom-Duix-Avatar-深度调研.md) |
 | 438 | [`NoeFabris/opencode-antigravity-auth`](https://github.com/NoeFabris/opencode-antigravity-auth) | OpenCode 插件——OAuth 接入 Google Antigravity 网关白嫖 Gemini/Claude 额度，请求转换+多账号负载均衡+会话/thinking 自动恢复，文档完善 | 10,982 | 2026-09-25 | [NoeFabris-opencode-antigravity-auth-深度调研.md](NoeFabris-opencode-antigravity-auth-深度调研.md) |
 | 439 | [`PleasePrompto/notebooklm-skill`](https://github.com/PleasePrompto/notebooklm-skill) | 让 Claude Code 查询 Google NotebookLM 的 agent skill——仅从自有文档检索降幻觉，run.py 自动 venv 包装+追问综合+本地库管理 | 7,777 | 2026-09-25 | [PleasePrompto-notebooklm-skill-深度调研.md](PleasePrompto-notebooklm-skill-深度调研.md) |
-
 | 440 | [`DayuanJiang/next-ai-draw-io`](https://github.com/DayuanJiang/next-ai-draw-io) | AI 驱动的 draw.io 图表生成 Web 应用——自然语言转可编辑 draw.io XML，含 MCP Server 与 VLM 视觉校验 | 36,043 | 2026-09-26 | [DayuanJiang-next-ai-draw-io-深度调研.md](DayuanJiang-next-ai-draw-io-深度调研.md) |
 | 441 | [`Anionex/banana-slides`](https://github.com/Anionex/banana-slides) | 一站式原生 AI PPT 生成应用——基于 nano banana pro，上传模板/素材出可编辑 PPTX 与视频 | 15,660 | 2026-09-26 | [Anionex-banana-slides-深度调研.md](Anionex-banana-slides-深度调研.md) |
 | 442 | [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) | Agentic 视频生成框架——导演/编剧/制片/生成器四位一体，idea/novel/script→视频，角色一致性工程 | 12,483 | 2026-09-26 | [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md) |
@@ -511,7 +512,6 @@
 | 493 | [`DuarteSantos8/openGym`](https://github.com/DuarteSantos8/openGym) | 自托管的健身/自重训练追踪器（React PWA + Node 无框架，passkey 登录 + 跨设备合并同步 + 可选 AI Coach/MCP），AGPL-3.0 | 4,305 | 2026-10-06 | [DuarteSantos8-openGym-深度调研.md](DuarteSantos8-openGym-深度调研.md) |
 | 494 | [`helloianneo/ian-xiaohei-illustrations`](https://github.com/helloianneo/ian-xiaohei-illustrations) | Codex Skill——把中文正文变成「小黑」IP 手绘配图，渐进披露 references + 反模板化纪律，MIT | 12,376 | 2026-10-07 | [helloianneo-ian-xiaohei-illustrations-深度调研.md](helloianneo-ian-xiaohei-illustrations-深度调研.md) |
 | 495 | [`liyue-aigc/female-portrait-director`](https://github.com/liyue-aigc/female-portrait-director) | Codex Skill——女性人像导演式提示词，注册表路由 + 参数锁 + 导演闸门 + 独立安全边界，MIT | 1,627 | 2026-10-07 | [liyue-aigc-female-portrait-director-深度调研.md](liyue-aigc-female-portrait-director-深度调研.md) |
-## 🏷️ 按技术领域分类
 | 496 | [`morluto/rea`](https://github.com/morluto/rea) | 为 AI Agent 设计的逆向工程 MCP/CLI 工具——把二进制/应用行为/桌面观测统一成 Agent 可调用的证据契约 | 13,760 | 2026-10-08 | [morluto-rea-深度调研.md](morluto-rea-深度调研.md) |
 | 497 | [`manaflow-ai/cmux`](https://github.com/manaflow-ai/cmux) | 为 AI 编程 Agent 打造的 macOS 原生终端——侧边栏标签页+通知环+内嵌可编程浏览器，Ghostty 兼容 | 27,782 | 2026-10-08 | [manaflow-ai-cmux-深度调研.md](manaflow-ai-cmux-深度调研.md) |
 | 498 | [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) | 给编程 Agent 安装的「输出纪律」技能/插件——用 10 条规则强制 LLM 先给动作、不埋答案 | 54,961 | 2026-10-08 | [ayghri-i-have-adhd-深度调研.md](ayghri-i-have-adhd-深度调研.md) |
@@ -519,6 +519,12 @@
 | 500 | [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) | Anthropic 官方开源的「知识工作插件」市场——把 Claude 变成按角色/团队/公司定制的领域专家（Skills+MCP 连接器+Commands 三件套，含安全治理层） | 27,415 | 2026-10-09 | [anthropics-knowledge-work-plugins-深度调研.md](anthropics-knowledge-work-plugins-深度调研.md) |
 | 501 | [`EpicGames/raddebugger`](https://github.com/EpicGames/raddebugger) | Epic 原生用户态多进程图形化调试器（alpha，仅 Windows/PDB）——自研 RDI 调试信息格式 + RAD Linker，为巨型 C/C++ 项目而生 | 8,060 | 2026-10-09 | [EpicGames-raddebugger-深度调研.md](EpicGames-raddebugger-深度调研.md) |
 | 502 | [`storytold/artcraft`](https://github.com/storytold/artcraft) | 「艺术家的 IDE」——交互式 AI 图像/视频创作，先构图再生成、聚合 62 模型（Fair Source 非 OSI 许可） | 7,146 | 2026-10-09 | [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md) |
+| 503 | [`BerriAI/litellm`](https://github.com/BerriAI/litellm) | 开源 AI 网关 + 统一 LLM SDK——100+ 提供商归一为 OpenAI 格式，虚拟密钥/花费追踪/护栏/负载均衡 | 60,569 | 2026-10-10 | [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md) |
+| 504 | [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) | 前馈式流式 3D 重建基础模型（GCT），ECCV 2026 最佳论文候选，~20FPS 长序列实时建图 | 17,630 | 2026-10-10 | [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md) |
+| 505 | [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) | SwiftUI Pro——给 AI 编码助手做 SwiftUI 代码审查的 Agent Skill（iOS 26+/Swift 6.4 现代 API） | 5,348 | 2026-10-10 | [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md) |
+
+## 🏷️ 按技术领域分类
+
 ### AI Agent / 助手框架（118）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
@@ -541,7 +547,8 @@
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
-### AI 编码 / Skill 技能（55）
+### AI 编码 / Skill 技能（56）
+- [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
 - [`Alishahryar1/free-claude-code`](https://github.com/Alishahryar1/free-claude-code) — [Alishahryar1-free-claude-code-深度调研.md](Alishahryar1-free-claude-code-深度调研.md)
@@ -692,7 +699,8 @@
 - [`MicYou-Dev/MicYou`](https://github.com/MicYou-Dev/MicYou) — [MicYou-Dev-MicYou-深度调研.md](MicYou-Dev-MicYou-深度调研.md)
 - [`RanFeng/clipsketch-ai`](https://github.com/RanFeng/clipsketch-ai) — [RanFeng-clipsketch-ai-深度调研.md](RanFeng-clipsketch-ai-深度调研.md)
 - [`storytold/artcraft`](https://github.com/storytold/artcraft) — [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md)
-### 计算机视觉 / CV（3）
+### 计算机视觉 / CV（4）
+- [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) — [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md)
 - [`BIT-DataLab/Edit-Banana`](https://github.com/BIT-DataLab/Edit-Banana) — [BIT-DataLab-Edit-Banana-深度调研.md](BIT-DataLab-Edit-Banana-深度调研.md)
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 - [`Allenk/GeminiWatermarkTool`](https://github.com/Allenk/GeminiWatermarkTool) — [Allenk-GeminiWatermarkTool-深度调研.md](Allenk-GeminiWatermarkTool-深度调研.md)
@@ -885,7 +893,8 @@
 - [`NationalSecurityAgency/ghidra`](https://github.com/NationalSecurityAgency/ghidra) — [NationalSecurityAgency-ghidra-深度调研.md](NationalSecurityAgency-ghidra-深度调研.md)
 - [`morluto/rea`](https://github.com/morluto/rea) — [morluto-rea-深度调研.md](morluto-rea-深度调研.md)
 - [`boykopovar/AnyPS5`](https://github.com/boykopovar/AnyPS5) — [boykopovar-AnyPS5-深度调研.md](boykopovar-AnyPS5-深度调研.md)
-### AI Agent / LLM 基础设施（4）
+### AI Agent / LLM 基础设施（5）
+- [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md)
 - [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
 - [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi) — [tashfeenahmed-freellmapi-深度调研.md](tashfeenahmed-freellmapi-深度调研.md)
 - [`yzfly/Awesome-MCP-ZH`](https://github.com/yzfly/Awesome-MCP-ZH) — [yzfly-Awesome-MCP-ZH-深度调研.md](yzfly-Awesome-MCP-ZH-深度调研.md)
