@@ -522,6 +522,10 @@
 | 503 | [`BerriAI/litellm`](https://github.com/BerriAI/litellm) | 开源 AI 网关 + 统一 LLM SDK——100+ 提供商归一为 OpenAI 格式，虚拟密钥/花费追踪/护栏/负载均衡 | 60,569 | 2026-10-10 | [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md) |
 | 504 | [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) | 前馈式流式 3D 重建基础模型（GCT），ECCV 2026 最佳论文候选，~20FPS 长序列实时建图 | 17,630 | 2026-10-10 | [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md) |
 | 505 | [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) | SwiftUI Pro——给 AI 编码助手做 SwiftUI 代码审查的 Agent Skill（iOS 26+/Swift 6.4 现代 API） | 5,348 | 2026-10-10 | [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md) |
+| 506 | [`mksglu/context-mode`](https://github.com/mksglu/context-mode) | 面向 AI 编码 Agent 的上下文优化 MCP 服务器 + 跨 17 平台 hooks——沙箱压缩 98% + SQLite/FTS5 会话记忆 + think-in-code 范式 | 26,204 | 2026-10-11 | [mksglu-context-mode-深度调研.md](mksglu-context-mode-深度调研.md)
+| 507 | [`Lakr233/vphone-cli`](https://github.com/Lakr233/vphone-cli) | 在 Apple Silicon Mac 用 Virtualization.framework 跑虚拟 iPhone——面向安全研究/逆向/调试，本地 HTTP+WS 自动化 API | 15,157 | 2026-10-11 | [Lakr233-vphone-cli-深度调研.md](Lakr233-vphone-cli-深度调研.md)
+| 508 | [`corsairdev/corsair`](https://github.com/corsairdev/corsair) | 全功能产品集成平台——统一语法封装数百第三方集成（Slack/Airtable…），agent/后端/仪表盘同一层，可自托管 | 13,646 | 2026-10-11 | [corsairdev-corsair-深度调研.md](corsairdev-corsair-深度调研.md)
+| 509 | [`majd/ipatool`](https://github.com/majd/ipatool) | App Store 搜/下 .ipa（全 Apple 平台）的 Go CLI——多平台、内置 MCP 服务器 | 11,579 | 2026-10-11 | [majd-ipatool-深度调研.md](majd-ipatool-深度调研.md)
 
 ## 🏷️ 按技术领域分类
 
@@ -547,7 +551,7 @@
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
-### AI 编码 / Skill 技能（56）
+### AI 编码 / Skill 技能（57）
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
@@ -604,6 +608,7 @@
 - [`liyue-aigc/female-portrait-director`](https://github.com/liyue-aigc/female-portrait-director) — [liyue-aigc-female-portrait-director-深度调研.md](liyue-aigc-female-portrait-director-深度调研.md)
 - [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) — [ayghri-i-have-adhd-深度调研.md](ayghri-i-have-adhd-深度调研.md)
 - [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) — [anthropics-knowledge-work-plugins-深度调研.md](anthropics-knowledge-work-plugins-深度调研.md)
+- [`mksglu/context-mode`](https://github.com/mksglu/context-mode) — [mksglu-context-mode-深度调研.md](mksglu-context-mode-深度调研.md)
 ### RAG / 知识库 / 记忆（20）
 - [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
@@ -625,7 +630,7 @@
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
-### 开发工具 / CLI（50）
+### 开发工具 / CLI（52）
 - [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
 - [`popstas/telegram-download-chat`](https://github.com/popstas/telegram-download-chat) — [popstas-telegram-download-chat-深度调研.md](popstas-telegram-download-chat-深度调研.md)
 - [`CoplayDev/unity-mcp`](https://github.com/CoplayDev/unity-mcp) — [CoplayDev-unity-mcp-深度调研.md](CoplayDev-unity-mcp-深度调研.md)
@@ -680,6 +685,8 @@
 - [`caddyserver/caddy`](https://github.com/caddyserver/caddy) — [caddyserver-caddy-深度调研.md](caddyserver-caddy-深度调研.md)
 - [`manaflow-ai/cmux`](https://github.com/manaflow-ai/cmux) — [manaflow-ai-cmux-深度调研.md](manaflow-ai-cmux-深度调研.md)
 - [`EpicGames/raddebugger`](https://github.com/EpicGames/raddebugger) — [EpicGames-raddebugger-深度调研.md](EpicGames-raddebugger-深度调研.md)
+- [`Lakr233/vphone-cli`](https://github.com/Lakr233/vphone-cli) — [Lakr233-vphone-cli-深度调研.md](Lakr233-vphone-cli-深度调研.md)
+- [`majd/ipatool`](https://github.com/majd/ipatool) — [majd-ipatool-深度调研.md](majd-ipatool-深度调研.md)
 ### 文档 / 文档工具（3）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
@@ -893,13 +900,14 @@
 - [`NationalSecurityAgency/ghidra`](https://github.com/NationalSecurityAgency/ghidra) — [NationalSecurityAgency-ghidra-深度调研.md](NationalSecurityAgency-ghidra-深度调研.md)
 - [`morluto/rea`](https://github.com/morluto/rea) — [morluto-rea-深度调研.md](morluto-rea-深度调研.md)
 - [`boykopovar/AnyPS5`](https://github.com/boykopovar/AnyPS5) — [boykopovar-AnyPS5-深度调研.md](boykopovar-AnyPS5-深度调研.md)
-### AI Agent / LLM 基础设施（5）
+### AI Agent / LLM 基础设施（6）
 - [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md)
 - [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
 - [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi) — [tashfeenahmed-freellmapi-深度调研.md](tashfeenahmed-freellmapi-深度调研.md)
 - [`yzfly/Awesome-MCP-ZH`](https://github.com/yzfly/Awesome-MCP-ZH) — [yzfly-Awesome-MCP-ZH-深度调研.md](yzfly-Awesome-MCP-ZH-深度调研.md)
 
 - [`cloudflare/cloudflare-os`](https://github.com/cloudflare/cloudflare-os) — [cloudflare-cloudflare-os-深度调研.md](cloudflare-cloudflare-os-深度调研.md)
+- [`corsairdev/corsair`](https://github.com/corsairdev/corsair) — [corsairdev-corsair-深度调研.md](corsairdev-corsair-深度调研.md)
 ## 📝 维护规则
 
 1. 新增调研报告后，必须在本表追加索引行（owner/repo 列点击跳转 GitHub；报告文件列点击打开本地报告）。
