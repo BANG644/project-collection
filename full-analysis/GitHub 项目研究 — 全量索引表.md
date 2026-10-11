@@ -526,10 +526,13 @@
 | 507 | [`Lakr233/vphone-cli`](https://github.com/Lakr233/vphone-cli) | 在 Apple Silicon Mac 用 Virtualization.framework 跑虚拟 iPhone——面向安全研究/逆向/调试，本地 HTTP+WS 自动化 API | 15,157 | 2026-10-11 | [Lakr233-vphone-cli-深度调研.md](Lakr233-vphone-cli-深度调研.md)
 | 508 | [`corsairdev/corsair`](https://github.com/corsairdev/corsair) | 全功能产品集成平台——统一语法封装数百第三方集成（Slack/Airtable…），agent/后端/仪表盘同一层，可自托管 | 13,646 | 2026-10-11 | [corsairdev-corsair-深度调研.md](corsairdev-corsair-深度调研.md)
 | 509 | [`majd/ipatool`](https://github.com/majd/ipatool) | App Store 搜/下 .ipa（全 Apple 平台）的 Go CLI——多平台、内置 MCP 服务器 | 11,579 | 2026-10-11 | [majd-ipatool-深度调研.md](majd-ipatool-深度调研.md)
+| 510 | [`lyogavin/airllm`](https://github.com/lyogavin/airllm) | 逐层流式卸载，让 70B+ 大模型在单张 4GB 显卡上推理（无需量化/蒸馏/剪枝），并支持小显存训练 | 36,312 | 2026-10-12 | [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md) |
+| 511 | [`bilawalsidhu/gods-eye-view`](https://github.com/bilawalsidhu/gods-eye-view) | 浏览器内「上帝视角」实时空间情报地球——融合公开航班/船舶/卫星/摄像头等真实信号，支持语音 AI 操控 | 51,281 | 2026-10-12 | [bilawalsidhu-gods-eye-view-深度调研.md](bilawalsidhu-gods-eye-view-深度调研.md) |
+| 512 | [`mvschwarz/openrig`](https://github.com/mvschwarz/openrig) | 本地 tmux 把 Claude Code/Codex/Pi 等 agent 编排成持久化多 agent 团队的开源 harness（YAML 拓扑 + TUI/MCP） | 6,911 | 2026-10-12 | [mvschwarz-openrig-深度调研.md](mvschwarz-openrig-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（118）
+### AI Agent / 助手框架（119）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
 - [`TurixAI/TuriX-CUA`](https://github.com/TurixAI/TuriX-CUA) — [TurixAI-TuriX-CUA-深度调研.md](TurixAI-TuriX-CUA-深度调研.md)
@@ -540,7 +543,8 @@
 - [`Salomondiei08/oh-my-hermes`](https://github.com/Salomondiei08/oh-my-hermes) — [Salomondiei08-oh-my-hermes-深度调研.md](Salomondiei08-oh-my-hermes-深度调研.md)
 - [`Turbo1123/roubao`](https://github.com/Turbo1123/roubao) — [Turbo1123-roubao-深度调研.md](Turbo1123-roubao-深度调研.md)
 - [`yikart/AiToEarn`](https://github.com/yikart/AiToEarn) — [yikart-AiToEarn-深度调研.md](yikart-AiToEarn-深度调研.md)
-### LLM / 推理框架（10）
+- [`mvschwarz/openrig`](https://github.com/mvschwarz/openrig) — [mvschwarz-openrig-深度调研.md](mvschwarz-openrig-深度调研.md)
+### LLM / 推理框架（11）
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
@@ -551,6 +555,7 @@
 - [`ollama/ollama`](https://github.com/ollama/ollama) — [ollama-ollama-深度调研.md](ollama-ollama-深度调研.md)
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
+- [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
 ### AI 编码 / Skill 技能（57）
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
@@ -691,7 +696,7 @@
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
 - [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) — [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md)
-### 前端 / 设计 / UI（32）
+### 前端 / 设计 / UI（33）
 - [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
 - [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)
 - [`a2ui-project/a2ui`](https://github.com/a2ui-project/a2ui) — [a2ui-project-a2ui-深度调研.md](a2ui-project-a2ui-深度调研.md)
@@ -700,6 +705,7 @@
 - [`SenhorH/tab-labeler`](https://github.com/SenhorH/tab-labeler) — [SenhorH-tab-labeler-深度调研.md](SenhorH-tab-labeler-深度调研.md)
 - [`HisMax/RedInk`](https://github.com/HisMax/RedInk) — [HisMax-RedInk-深度调研.md](HisMax-RedInk-深度调研.md)
 - [`mem0ai/mem0-chrome-extension`](https://github.com/mem0ai/mem0-chrome-extension) — [mem0ai-mem0-chrome-extension-深度调研.md](mem0ai-mem0-chrome-extension-深度调研.md)
+- [`bilawalsidhu/gods-eye-view`](https://github.com/bilawalsidhu/gods-eye-view) — [bilawalsidhu-gods-eye-view-深度调研.md](bilawalsidhu-gods-eye-view-深度调研.md)
 ### 视频 / 音频 / 多媒体（28）
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
