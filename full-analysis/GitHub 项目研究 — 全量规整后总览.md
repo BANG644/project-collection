@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 505                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 514                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -69,7 +69,7 @@ github-project-research/
 - [`a710128/opencode-vscode-ui`](https://github.com/a710128/opencode-vscode-ui) — [a710128-opencode-vscode-ui-深度调研.md](a710128-opencode-vscode-ui-深度调研.md)
 - [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) — [ayghri-i-have-adhd-深度调研.md](ayghri-i-have-adhd-深度调研.md)
 - [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) — [anthropics-knowledge-work-plugins-深度调研.md](anthropics-knowledge-work-plugins-深度调研.md)
-### B（22 个）
+### B（23 个）
 - [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md)
 - [`baidu/Unlimited-OCR`](https://github.com/baidu/Unlimited-OCR) — [baidu-Unlimited-OCR-深度调研.md](baidu-Unlimited-OCR-深度调研.md)
 - [`BANG644/scheduler-sent`](https://github.com/BANG644/scheduler-sent) — [BANG644-scheduler-sent-深度调研.md](BANG644-scheduler-sent-深度调研.md)
@@ -93,6 +93,7 @@ github-project-research/
 - [`b-nnett/goose`](https://github.com/b-nnett/goose) — [b-nnett-goose-深度调研.md](b-nnett-goose-深度调研.md)
 - [`boykopovar/AnyPS5`](https://github.com/boykopovar/AnyPS5) — [boykopovar-AnyPS5-深度调研.md](boykopovar-AnyPS5-深度调研.md)
 - [`bilawalsidhu/gods-eye-view`](https://github.com/bilawalsidhu/gods-eye-view) — [bilawalsidhu-gods-eye-view-深度调研.md](bilawalsidhu-gods-eye-view-深度调研.md)
+- [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 ### C（34 个）
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) — [calesthio-OpenMontage-深度调研.md](calesthio-OpenMontage-深度调研.md)
@@ -311,7 +312,7 @@ github-project-research/
 - [`nvm-sh/nvm`](https://github.com/nvm-sh/nvm) — [nvm-sh-nvm-深度调研.md](nvm-sh-nvm-深度调研.md)
 - [`nvm-windows/nvm`](https://github.com/nvm-windows/nvm) — [nvm-windows-nvm-深度调研.md](nvm-windows-nvm-深度调研.md)
 - [`nordicsemi/Android-nRF-Mesh-Library`](https://github.com/nordicsemi/Android-nRF-Mesh-Library) — [nordicsemi-Android-nRF-Mesh-Library-深度调研.md](nordicsemi-Android-nRF-Mesh-Library-深度调研.md)
-### O（25 个）
+### O（26 个）
 - [`obra/superpowers`](https://github.com/obra/superpowers) — [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md)
 - [`ocornut/imgui`](https://github.com/ocornut/imgui) — [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md)
 - [`odysseus-dev/odysseus`](https://github.com/odysseus-dev/odysseus) — [odysseus-dev-odysseus-深度调研.md](odysseus-dev-odysseus-深度调研.md)
@@ -338,6 +339,7 @@ github-project-research/
 - [`OtterMind/Chat2DB`](https://github.com/OtterMind/Chat2DB) — [OtterMind-Chat2DB-深度调研.md](OtterMind-Chat2DB-深度调研.md)
 
 - [`osmdroid/osmdroid`](https://github.com/osmdroid/osmdroid) — [osmdroid-osmdroid-深度调研.md](osmdroid-osmdroid-深度调研.md)
+- [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md)
 ### P（19 个）
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`Panniantong/Agent-Reach`](https://github.com/Panniantong/Agent-Reach) — [Panniantong-Agent-Reach-深度调研.md](Panniantong-Agent-Reach-深度调研.md)
@@ -504,7 +506,7 @@ github-project-research/
 - [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（119）
+### AI Agent / 助手框架（120）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
 - [`TurixAI/TuriX-CUA`](https://github.com/TurixAI/TuriX-CUA) — [TurixAI-TuriX-CUA-深度调研.md](TurixAI-TuriX-CUA-深度调研.md)
@@ -516,7 +518,8 @@ github-project-research/
 - [`Turbo1123/roubao`](https://github.com/Turbo1123/roubao) — [Turbo1123-roubao-深度调研.md](Turbo1123-roubao-深度调研.md)
 - [`yikart/AiToEarn`](https://github.com/yikart/AiToEarn) — [yikart-AiToEarn-深度调研.md](yikart-AiToEarn-深度调研.md)
 - [`mvschwarz/openrig`](https://github.com/mvschwarz/openrig) — [mvschwarz-openrig-深度调研.md](mvschwarz-openrig-深度调研.md)
-### LLM / 推理框架（11）
+- [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md)
+### LLM / 推理框架（12）
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
@@ -529,6 +532,7 @@ github-project-research/
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
 
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
+- [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 ### AI 编码 / Skill 技能（57）
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)

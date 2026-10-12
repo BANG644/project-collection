@@ -530,9 +530,12 @@
 | 511 | [`bilawalsidhu/gods-eye-view`](https://github.com/bilawalsidhu/gods-eye-view) | 浏览器内「上帝视角」实时空间情报地球——融合公开航班/船舶/卫星/摄像头等真实信号，支持语音 AI 操控 | 51,281 | 2026-10-12 | [bilawalsidhu-gods-eye-view-深度调研.md](bilawalsidhu-gods-eye-view-深度调研.md) |
 | 512 | [`mvschwarz/openrig`](https://github.com/mvschwarz/openrig) | 本地 tmux 把 Claude Code/Codex/Pi 等 agent 编排成持久化多 agent 团队的开源 harness（YAML 拓扑 + TUI/MCP） | 6,911 | 2026-10-12 | [mvschwarz-openrig-深度调研.md](mvschwarz-openrig-深度调研.md) |
 
+| 513 | [microsoft/BitNet](https://github.com/microsoft/BitNet) | 微软官方 1-bit（BitNet b1.58 三值）大模型推理框架 bitnet.cpp——CPU/GPU 无损极速本地/边缘推理 | 40,830 | 2026-10-13 | [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md) |
+| 514 | [open-webui/open-webui](https://github.com/open-webui/open-webui) | 自托管、可完全离线的 AI 平台——provider 无关的聊天/Agents/RAG/工具一体化界面（FastAPI+Svelte） | 154,772 | 2026-10-13 | [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md) |
+
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（119）
+### AI Agent / 助手框架（120）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
 - [`TurixAI/TuriX-CUA`](https://github.com/TurixAI/TuriX-CUA) — [TurixAI-TuriX-CUA-深度调研.md](TurixAI-TuriX-CUA-深度调研.md)
@@ -544,7 +547,8 @@
 - [`Turbo1123/roubao`](https://github.com/Turbo1123/roubao) — [Turbo1123-roubao-深度调研.md](Turbo1123-roubao-深度调研.md)
 - [`yikart/AiToEarn`](https://github.com/yikart/AiToEarn) — [yikart-AiToEarn-深度调研.md](yikart-AiToEarn-深度调研.md)
 - [`mvschwarz/openrig`](https://github.com/mvschwarz/openrig) — [mvschwarz-openrig-深度调研.md](mvschwarz-openrig-深度调研.md)
-### LLM / 推理框架（11）
+- [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md)
+### LLM / 推理框架（12）
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
@@ -556,6 +560,7 @@
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
+- [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 ### AI 编码 / Skill 技能（57）
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
