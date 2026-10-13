@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 514                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 516                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -129,7 +129,8 @@ github-project-research/
 - [`caddyserver/caddy`](https://github.com/caddyserver/caddy) — [caddyserver-caddy-深度调研.md](caddyserver-caddy-深度调研.md)
 - [`cloudflare/cloudflare-os`](https://github.com/cloudflare/cloudflare-os) — [cloudflare-cloudflare-os-深度调研.md](cloudflare-cloudflare-os-深度调研.md)
 - [`corsairdev/corsair`](https://github.com/corsairdev/corsair) — [corsairdev-corsair-深度调研.md](corsairdev-corsair-深度调研.md)
-### D（23）
+### D（24）
+- [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`DayuanJiang/next-ai-draw-io`](https://github.com/DayuanJiang/next-ai-draw-io) — [DayuanJiang-next-ai-draw-io-深度调研.md](DayuanJiang-next-ai-draw-io-深度调研.md)
 - [`DuarteSantos8/openGym`](https://github.com/DuarteSantos8/openGym) — [DuarteSantos8-openGym-深度调研.md](DuarteSantos8-openGym-深度调研.md)
 ### E（15）
@@ -480,7 +481,8 @@ github-project-research/
 - [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) — [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md)
 - [`wuji-labs/nopua`](https://github.com/wuji-labs/nopua) — [wuji-labs-nopua-深度调研.md](wuji-labs-nopua-深度调研.md)
 
-### X（6 个）
+### X（7 个）
+- [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
 - [`xai-org/grok-build`](https://github.com/xai-org/grok-build) — [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md)
 - [`xbtlin/ai-berkshire`](https://github.com/xbtlin/ai-berkshire) — [xbtlin-ai-berkshire-深度调研.md](xbtlin-ai-berkshire-深度调研.md)
 - [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) — [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md)
@@ -613,7 +615,8 @@ github-project-research/
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
 
-### 开发工具 / CLI（52）
+### 开发工具 / CLI（53）
+- [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
 - [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
 - [`popstas/telegram-download-chat`](https://github.com/popstas/telegram-download-chat) — [popstas-telegram-download-chat-深度调研.md](popstas-telegram-download-chat-深度调研.md)
 - [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) — [ahujasid-blender-mcp-深度调研.md](ahujasid-blender-mcp-深度调研.md)
@@ -682,7 +685,8 @@ github-project-research/
 - [`HisMax/RedInk`](https://github.com/HisMax/RedInk) — [HisMax-RedInk-深度调研.md](HisMax-RedInk-深度调研.md)
 - [`mem0ai/mem0-chrome-extension`](https://github.com/mem0ai/mem0-chrome-extension) — [mem0ai-mem0-chrome-extension-深度调研.md](mem0ai-mem0-chrome-extension-深度调研.md)
 - [`bilawalsidhu/gods-eye-view`](https://github.com/bilawalsidhu/gods-eye-view) — [bilawalsidhu-gods-eye-view-深度调研.md](bilawalsidhu-gods-eye-view-深度调研.md)
-### 视频 / 音频 / 多媒体（28）
+### 视频 / 音频 / 多媒体（29）
+- [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
 - [`MicYou-Dev/MicYou`](https://github.com/MicYou-Dev/MicYou) — [MicYou-Dev-MicYou-深度调研.md](MicYou-Dev-MicYou-深度调研.md)

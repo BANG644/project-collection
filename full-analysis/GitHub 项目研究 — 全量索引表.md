@@ -92,7 +92,7 @@
 | 73 | [`bytedance/UI-TARS-desktop`](https://github.com/bytedance/UI-TARS-desktop) | 字节开源桌面端 GUI 计算机使用 Agent（CUA 模型 + 原生 GUI 操作） | 38,024 | 2026-07-17 | [bytedance-UI-TARS-desktop-深度调研.md](bytedance-UI-TARS-desktop-深度调研.md) |
 | 74 | [`cactus-compute/needle`](https://github.com/cactus-compute/needle) | 14MB 单文件端侧基础模型（Needle 2, 45M）——字节级语法约束解码+置信度门控+工具检索，离线设备端工具调用/结构化抽取，MIT | 4,830 | 2026-08-14 | [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md) |
 | 75 | [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) | 首个开源 Agent-First 视频制作系统，3 层知识架构+52 工具+12 pipeline+预算三档治理+CHAI 评审 | 24,205 | 2026-06-27 | [calesthio-OpenMontage-深度调研.md](calesthio-OpenMontage-深度调研.md) |
-| 76 | [`cathrynlavery/diagram-design`](https://github.com/cathrynlavery/diagram-design) | 为 Claude Code 打造的 27 种编辑级图表技能——自包含 HTML/SVG+品牌自 onboarding+懒加载引用，MIT | 6,389 | 2026-08-12 | [cathrynlavery-diagram-design-深度调研.md](cathrynlavery-diagram-design-深度调研.md) |
+| 76 | [`cathrynlavery/diagram-design`](https://github.com/cathrynlavery/diagram-design) | 为 Claude Code/Codex/Copilot/Cursor 等打造的 45 种编辑级图表 Agent Skill——自包含 HTML/SVG、品牌门禁 onboarding、drawio/Mermaid/Excalidraw 导入，MIT | 53,852 | 2026-10-14 | [cathrynlavery-diagram-design-深度调研.md](cathrynlavery-diagram-design-深度调研.md) |
 | 77 | [`centminmod/my-claude-code-setup`](https://github.com/centminmod/my-claude-code-setup) | My Claude Code Setup | — | 2026-06-17 | [centminmod-my-claude-code-setup-深度调研.md](centminmod-my-claude-code-setup-深度调研.md) |
 | 78 | [`chaitanyagiri/munder-difflin`](https://github.com/chaitanyagiri/munder-difflin) | 桌面端多 Agent harness（Electron）——把 Claude Code/Codex/Grok 等 CLI 包装成可视化「办公室」由 GOD agent 编排，MIT | 3,066 | 2026-08-21 | [chaitanyagiri-munder-difflin-深度调研.md](chaitanyagiri-munder-difflin-深度调研.md) |
 | 79 | [`chatwoot/chatwoot`](https://github.com/chatwoot/chatwoot) | 开源客户支持平台——Intercom/Zendesk 替代，全渠道收件箱 + Captain AI Agent | 35,063 | 2026-08-01 | [chatwoot-chatwoot-深度调研.md](chatwoot-chatwoot-深度调研.md) |
@@ -532,6 +532,8 @@
 
 | 513 | [microsoft/BitNet](https://github.com/microsoft/BitNet) | 微软官方 1-bit（BitNet b1.58 三值）大模型推理框架 bitnet.cpp——CPU/GPU 无损极速本地/边缘推理 | 40,830 | 2026-10-13 | [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md) |
 | 514 | [open-webui/open-webui](https://github.com/open-webui/open-webui) | 自托管、可完全离线的 AI 平台——provider 无关的聊天/Agents/RAG/工具一体化界面（FastAPI+Svelte） | 154,772 | 2026-10-13 | [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md) |
+| 515 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 完全本地运行的开源 ElevenLabs 替代品——语音克隆/声音设计/视频配音/听写/转写/有声书，覆盖 646 语言，多引擎+Agent MCP | 62,600 | 2026-10-14 | [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md) |
+| 516 | [xtool-org/xtool](https://github.com/xtool-org/xtool) | 跨平台 Xcode 替代品——用 SwiftPM 在 Linux/Windows/macOS 构建/签名/部署 iOS 应用，核心库 XKit 可复用，MIT | 9,048 | 2026-10-14 | [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
@@ -640,7 +642,8 @@
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
-### 开发工具 / CLI（52）
+### 开发工具 / CLI（53）
+- [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
 - [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
 - [`popstas/telegram-download-chat`](https://github.com/popstas/telegram-download-chat) — [popstas-telegram-download-chat-深度调研.md](popstas-telegram-download-chat-深度调研.md)
 - [`CoplayDev/unity-mcp`](https://github.com/CoplayDev/unity-mcp) — [CoplayDev-unity-mcp-深度调研.md](CoplayDev-unity-mcp-深度调研.md)
@@ -711,7 +714,8 @@
 - [`HisMax/RedInk`](https://github.com/HisMax/RedInk) — [HisMax-RedInk-深度调研.md](HisMax-RedInk-深度调研.md)
 - [`mem0ai/mem0-chrome-extension`](https://github.com/mem0ai/mem0-chrome-extension) — [mem0ai-mem0-chrome-extension-深度调研.md](mem0ai-mem0-chrome-extension-深度调研.md)
 - [`bilawalsidhu/gods-eye-view`](https://github.com/bilawalsidhu/gods-eye-view) — [bilawalsidhu-gods-eye-view-深度调研.md](bilawalsidhu-gods-eye-view-深度调研.md)
-### 视频 / 音频 / 多媒体（28）
+### 视频 / 音频 / 多媒体（29）
+- [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
 - [`MicYou-Dev/MicYou`](https://github.com/MicYou-Dev/MicYou) — [MicYou-Dev-MicYou-深度调研.md](MicYou-Dev-MicYou-深度调研.md)
