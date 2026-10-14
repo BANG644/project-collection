@@ -534,10 +534,13 @@
 | 514 | [open-webui/open-webui](https://github.com/open-webui/open-webui) | 自托管、可完全离线的 AI 平台——provider 无关的聊天/Agents/RAG/工具一体化界面（FastAPI+Svelte） | 154,772 | 2026-10-13 | [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md) |
 | 515 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 完全本地运行的开源 ElevenLabs 替代品——语音克隆/声音设计/视频配音/听写/转写/有声书，覆盖 646 语言，多引擎+Agent MCP | 62,600 | 2026-10-14 | [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md) |
 | 516 | [xtool-org/xtool](https://github.com/xtool-org/xtool) | 跨平台 Xcode 替代品——用 SwiftPM 在 Linux/Windows/macOS 构建/签名/部署 iOS 应用，核心库 XKit 可复用，MIT | 9,048 | 2026-10-14 | [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md) |
+| 517 | [ifixai-ai/iFixAi](https://github.com/ifixai-ai/iFixAi) | AI Agent 独立审计工具——60 项检查 + A–F 评级，评「agent 是否按业务 KPI / 组织约束干活」，多裁判集成，Apache-2.0 | 27,103 | 2026-10-15 | [ifixai-ai-iFixAi-深度调研.md](ifixai-ai-iFixAi-深度调研.md) |
+| 518 | [vxcontrol/pentagi](https://github.com/vxcontrol/pentagi) | 开源自托管自主渗透测试多智能体系统——隔离 Docker 沙箱跑 20+ 安全工具，向量+知识图谱记忆，MIT（含 EULA） | 29,137 | 2026-10-15 | [vxcontrol-pentagi-深度调研.md](vxcontrol-pentagi-深度调研.md) |
+| 519 | [ntdevlabs/tiny11builder](https://github.com/ntdevlabs/tiny11builder) | 原生 WinUI 3 桌面应用制作瘦身版 Windows 11 ISO——三模式 + Turbo 续建，保留原 PowerShell 构建器 | 20,138 | 2026-10-15 | [ntdevlabs-tiny11builder-深度调研.md](ntdevlabs-tiny11builder-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（120）
+### AI Agent / 助手框架（121）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
 - [`TurixAI/TuriX-CUA`](https://github.com/TurixAI/TuriX-CUA) — [TurixAI-TuriX-CUA-深度调研.md](TurixAI-TuriX-CUA-深度调研.md)
@@ -550,6 +553,7 @@
 - [`yikart/AiToEarn`](https://github.com/yikart/AiToEarn) — [yikart-AiToEarn-深度调研.md](yikart-AiToEarn-深度调研.md)
 - [`mvschwarz/openrig`](https://github.com/mvschwarz/openrig) — [mvschwarz-openrig-深度调研.md](mvschwarz-openrig-深度调研.md)
 - [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md)
+- [`ifixai-ai/iFixAi`](https://github.com/ifixai-ai/iFixAi) — [ifixai-ai-iFixAi-深度调研.md](ifixai-ai-iFixAi-深度调研.md)
 ### LLM / 推理框架（12）
 - [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
@@ -776,7 +780,7 @@
 - [`easychen/opc-methodology`](https://github.com/easychen/opc-methodology) — [easychen-opc-methodology-深度调研.md](easychen-opc-methodology-深度调研.md)
 
 - [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
-### 其他（117）
+### 其他（118）
 - [`nordicsemi/Android-nRF-Mesh-Library`](https://github.com/nordicsemi/Android-nRF-Mesh-Library) — [nordicsemi-Android-nRF-Mesh-Library-深度调研.md](nordicsemi-Android-nRF-Mesh-Library-深度调研.md)
 - [`osmdroid/osmdroid`](https://github.com/osmdroid/osmdroid) — [osmdroid-osmdroid-深度调研.md](osmdroid-osmdroid-深度调研.md)
 - [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)
@@ -895,6 +899,7 @@
 - [`b-nnett/goose`](https://github.com/b-nnett/goose) — [b-nnett-goose-深度调研.md](b-nnett-goose-深度调研.md)
 - [`earthtojake/text-to-cad`](https://github.com/earthtojake/text-to-cad) — [earthtojake-text-to-cad-深度调研.md](earthtojake-text-to-cad-深度调研.md)
 - [`DuarteSantos8/openGym`](https://github.com/DuarteSantos8/openGym) — [DuarteSantos8-openGym-深度调研.md](DuarteSantos8-openGym-深度调研.md)
+- [`ntdevlabs/tiny11builder`](https://github.com/ntdevlabs/tiny11builder) — [ntdevlabs-tiny11builder-深度调研.md](ntdevlabs-tiny11builder-深度调研.md)
 ### 机器学习 / 科学计算（8）
 - [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
 - [`google-deepmind/weathernext`](https://github.com/google-deepmind/weathernext) — [google-deepmind-weathernext-深度调研.md](google-deepmind-weathernext-深度调研.md)
@@ -911,10 +916,11 @@
 - [`tester-army/e2e`](https://github.com/tester-army/e2e) — [tester-army-e2e-深度调研.md](tester-army-e2e-深度调研.md)
 ### AI Agent / 语音多模态（1）
 - [`livekit/agents`](https://github.com/livekit/agents) — [livekit-agents-深度调研.md](livekit-agents-深度调研.md)
-### 安全 / 逆向工程（3）
+### 安全 / 逆向工程（4）
 - [`NationalSecurityAgency/ghidra`](https://github.com/NationalSecurityAgency/ghidra) — [NationalSecurityAgency-ghidra-深度调研.md](NationalSecurityAgency-ghidra-深度调研.md)
 - [`morluto/rea`](https://github.com/morluto/rea) — [morluto-rea-深度调研.md](morluto-rea-深度调研.md)
 - [`boykopovar/AnyPS5`](https://github.com/boykopovar/AnyPS5) — [boykopovar-AnyPS5-深度调研.md](boykopovar-AnyPS5-深度调研.md)
+- [`vxcontrol/pentagi`](https://github.com/vxcontrol/pentagi) — [vxcontrol-pentagi-深度调研.md](vxcontrol-pentagi-深度调研.md)
 ### AI Agent / LLM 基础设施（6）
 - [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md)
 - [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
