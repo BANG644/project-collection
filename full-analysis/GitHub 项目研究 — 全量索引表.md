@@ -537,6 +537,9 @@
 | 517 | [ifixai-ai/iFixAi](https://github.com/ifixai-ai/iFixAi) | AI Agent 独立审计工具——60 项检查 + A–F 评级，评「agent 是否按业务 KPI / 组织约束干活」，多裁判集成，Apache-2.0 | 27,103 | 2026-10-15 | [ifixai-ai-iFixAi-深度调研.md](ifixai-ai-iFixAi-深度调研.md) |
 | 518 | [vxcontrol/pentagi](https://github.com/vxcontrol/pentagi) | 开源自托管自主渗透测试多智能体系统——隔离 Docker 沙箱跑 20+ 安全工具，向量+知识图谱记忆，MIT（含 EULA） | 29,137 | 2026-10-15 | [vxcontrol-pentagi-深度调研.md](vxcontrol-pentagi-深度调研.md) |
 | 519 | [ntdevlabs/tiny11builder](https://github.com/ntdevlabs/tiny11builder) | 原生 WinUI 3 桌面应用制作瘦身版 Windows 11 ISO——三模式 + Turbo 续建，保留原 PowerShell 构建器 | 20,138 | 2026-10-15 | [ntdevlabs-tiny11builder-深度调研.md](ntdevlabs-tiny11builder-深度调研.md) |
+| 520 | [`leanprover/lean4`](https://github.com/leanprover/lean4) | 依赖类型函数式编程语言 + 定理证明辅助器（Lean 4，自举、可编译原生代码、mathlib 生态） | 9,548 | 2026-10-16 | [leanprover-lean4-深度调研.md](leanprover-lean4-深度调研.md) |
+| 521 | [`xerj-org/xerj`](https://github.com/xerj-org/xerj) | 本地优先 AI 原生搜索引擎（ES API 兼容、autoindex 零配置、MCP + agent memory，省 token） | 5,447 | 2026-10-16 | [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md) |
+| 522 | [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) | 面向 agentic 的 LLM 推理引擎（控制面/执行面分离、模块化内核、非营利中立背书） | 2,409 | 2026-10-16 | [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
@@ -554,8 +557,7 @@
 - [`mvschwarz/openrig`](https://github.com/mvschwarz/openrig) — [mvschwarz-openrig-深度调研.md](mvschwarz-openrig-深度调研.md)
 - [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md)
 - [`ifixai-ai/iFixAi`](https://github.com/ifixai-ai/iFixAi) — [ifixai-ai-iFixAi-深度调研.md](ifixai-ai-iFixAi-深度调研.md)
-### LLM / 推理框架（12）
-- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+### LLM / 推理框架（13）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 - [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) — [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md)
@@ -567,6 +569,7 @@
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
 - [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
+- [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 ### AI 编码 / Skill 技能（57）
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
@@ -625,8 +628,7 @@
 - [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) — [ayghri-i-have-adhd-深度调研.md](ayghri-i-have-adhd-深度调研.md)
 - [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) — [anthropics-knowledge-work-plugins-深度调研.md](anthropics-knowledge-work-plugins-深度调研.md)
 - [`mksglu/context-mode`](https://github.com/mksglu/context-mode) — [mksglu-context-mode-深度调研.md](mksglu-context-mode-深度调研.md)
-### RAG / 知识库 / 记忆（20）
-- [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
+### RAG / 知识库 / 记忆（21）- [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
 - [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory) — [akitaonrails-ai-memory-深度调研.md](akitaonrails-ai-memory-深度调研.md)
 - [`allenai/olmocr`](https://github.com/allenai/olmocr) — [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md)
@@ -646,6 +648,7 @@
 - [`VictorTaelin/OptMem`](https://github.com/VictorTaelin/OptMem) — [VictorTaelin-OptMem-深度调研.md](VictorTaelin-OptMem-深度调研.md)
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
+- [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
 ### 开发工具 / CLI（53）
 - [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
 - [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
@@ -900,8 +903,7 @@
 - [`earthtojake/text-to-cad`](https://github.com/earthtojake/text-to-cad) — [earthtojake-text-to-cad-深度调研.md](earthtojake-text-to-cad-深度调研.md)
 - [`DuarteSantos8/openGym`](https://github.com/DuarteSantos8/openGym) — [DuarteSantos8-openGym-深度调研.md](DuarteSantos8-openGym-深度调研.md)
 - [`ntdevlabs/tiny11builder`](https://github.com/ntdevlabs/tiny11builder) — [ntdevlabs-tiny11builder-深度调研.md](ntdevlabs-tiny11builder-深度调研.md)
-### 机器学习 / 科学计算（8）
-- [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
+### 机器学习 / 科学计算（9）- [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
 - [`google-deepmind/weathernext`](https://github.com/google-deepmind/weathernext) — [google-deepmind-weathernext-深度调研.md](google-deepmind-weathernext-深度调研.md)
 - [`huggingface/transformers`](https://github.com/huggingface/transformers) — [huggingface-transformers-深度调研.md](huggingface-transformers-深度调研.md)
 - [`K-Dense-AI/scientific-agent-skills`](https://github.com/K-Dense-AI/scientific-agent-skills) — [K-Dense-AI-scientific-agent-skills-深度调研.md](K-Dense-AI-scientific-agent-skills-深度调研.md)
@@ -909,6 +911,7 @@
 - [`ResearAI/AutoFigure-Edit`](https://github.com/ResearAI/AutoFigure-Edit) — [ResearAI-AutoFigure-Edit-深度调研.md](ResearAI-AutoFigure-Edit-深度调研.md)
 - [`schollz/find3`](https://github.com/schollz/find3) — [schollz-find3-深度调研.md](schollz-find3-深度调研.md)
 - [`antirez/ds4`](https://github.com/antirez/ds4) — [antirez-ds4-深度调研.md](antirez-ds4-深度调研.md)
+- [`leanprover/lean4`](https://github.com/leanprover/lean4) — [leanprover-lean4-深度调研.md](leanprover-lean4-深度调研.md)
 ### AI 编码 / 设计工具（1）
 - [`abi/screenshot-to-code`](https://github.com/abi/screenshot-to-code) — [abi-screenshot-to-code-深度调研.md](abi-screenshot-to-code-深度调研.md)
 ### 开发工具 / 测试（2）

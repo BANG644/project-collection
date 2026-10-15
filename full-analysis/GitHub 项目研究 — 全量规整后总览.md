@@ -227,8 +227,7 @@ github-project-research/
 - [`KsanaDock/Microverse`](https://github.com/KsanaDock/Microverse) — [KsanaDock-Microverse-深度调研.md](KsanaDock-Microverse-深度调研.md)
 
 - [`KhazP/vibe-coding-prompt-template`](https://github.com/KhazP/vibe-coding-prompt-template) — [KhazP-vibe-coding-prompt-template-深度调研.md](KhazP-vibe-coding-prompt-template-深度调研.md)
-### L（25 个）
-- [`LadybirdBrowser/ladybird`](https://github.com/LadybirdBrowser/ladybird) — [LadybirdBrowser-ladybird-深度调研.md](LadybirdBrowser-ladybird-深度调研.md)
+### L（27 个）- [`LadybirdBrowser/ladybird`](https://github.com/LadybirdBrowser/ladybird) — [LadybirdBrowser-ladybird-深度调研.md](LadybirdBrowser-ladybird-深度调研.md)
 - [`langbot-app/LangBot`](https://github.com/langbot-app/LangBot) — [langbot-app-LangBot-深度调研.md](langbot-app-LangBot-深度调研.md)
 - [`langchain-ai/openwiki`](https://github.com/langchain-ai/openwiki) — [langchain-ai-openwiki-深度调研.md](langchain-ai-openwiki-深度调研.md)
 - [`langgenius/dify`](https://github.com/langgenius/dify) — [langgenius-dify-深度调研.md](langgenius-dify-深度调研.md)
@@ -254,6 +253,8 @@ github-project-research/
 - [`liyue-aigc/female-portrait-director`](https://github.com/liyue-aigc/female-portrait-director) — [liyue-aigc-female-portrait-director-深度调研.md](liyue-aigc-female-portrait-director-深度调研.md)
 - [`Lakr233/vphone-cli`](https://github.com/Lakr233/vphone-cli) — [Lakr233-vphone-cli-深度调研.md](Lakr233-vphone-cli-深度调研.md)
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
+- [`leanprover/lean4`](https://github.com/leanprover/lean4) — [leanprover-lean4-深度调研.md](leanprover-lean4-深度调研.md)
+- [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 ### M（40 个）
 - [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)
 - [`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search) — [MadsLorentzen-ai-job-search-深度调研.md](MadsLorentzen-ai-job-search-深度调研.md)
@@ -484,8 +485,7 @@ github-project-research/
 - [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) — [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md)
 - [`wuji-labs/nopua`](https://github.com/wuji-labs/nopua) — [wuji-labs-nopua-深度调研.md](wuji-labs-nopua-深度调研.md)
 
-### X（7 个）
-- [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
+### X（8 个）- [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
 - [`xai-org/grok-build`](https://github.com/xai-org/grok-build) — [xai-org-grok-build-深度调研.md](xai-org-grok-build-深度调研.md)
 - [`xbtlin/ai-berkshire`](https://github.com/xbtlin/ai-berkshire) — [xbtlin-ai-berkshire-深度调研.md](xbtlin-ai-berkshire-深度调研.md)
 - [`xianyu110/awesome-nanobananapro-prompts`](https://github.com/xianyu110/awesome-nanobananapro-prompts) — [xianyu110-awesome-nanobananapro-prompts-深度调研.md](xianyu110-awesome-nanobananapro-prompts-深度调研.md)
@@ -493,6 +493,7 @@ github-project-research/
 - [`xingkongliang/skills-manager`](https://github.com/xingkongliang/skills-manager) — [xingkongliang-skills-manager-深度调研.md](xingkongliang-skills-manager-深度调研.md)
 - [`xming521/WeClone`](https://github.com/xming521/WeClone) — [xming521-WeClone-深度调研.md](xming521-WeClone-深度调研.md)
 
+- [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
 ### Y（5 个）
 - [`Yeachan-Heo/oh-my-claudecode`](https://github.com/Yeachan-Heo/oh-my-claudecode) — [Yeachan-Heo-oh-my-claudecode-深度调研.md](Yeachan-Heo-oh-my-claudecode-深度调研.md)
 - [`yorukot/superfile`](https://github.com/yorukot/superfile) — [yorukot-superfile-深度调研.md](yorukot-superfile-深度调研.md)
@@ -525,8 +526,7 @@ github-project-research/
 - [`mvschwarz/openrig`](https://github.com/mvschwarz/openrig) — [mvschwarz-openrig-深度调研.md](mvschwarz-openrig-深度调研.md)
 - [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md)
 - [`ifixai-ai/iFixAi`](https://github.com/ifixai-ai/iFixAi) — [ifixai-ai-iFixAi-深度调研.md](ifixai-ai-iFixAi-深度调研.md)
-### LLM / 推理框架（12）
-- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+### LLM / 推理框架（13）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 - [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) — [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md)
@@ -539,6 +539,7 @@ github-project-research/
 
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
 - [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
+- [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 ### AI 编码 / Skill 技能（57）
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
@@ -597,8 +598,7 @@ github-project-research/
 - [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) — [ayghri-i-have-adhd-深度调研.md](ayghri-i-have-adhd-深度调研.md)
 - [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) — [anthropics-knowledge-work-plugins-深度调研.md](anthropics-knowledge-work-plugins-深度调研.md)
 - [`mksglu/context-mode`](https://github.com/mksglu/context-mode) — [mksglu-context-mode-深度调研.md](mksglu-context-mode-深度调研.md)
-### RAG / 知识库 / 记忆（20）
-- [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
+### RAG / 知识库 / 记忆（21）- [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
 - [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory) — [akitaonrails-ai-memory-深度调研.md](akitaonrails-ai-memory-深度调研.md)
 - [`allenai/olmocr`](https://github.com/allenai/olmocr) — [allenai-olmocr-深度调研.md](allenai-olmocr-深度调研.md)
@@ -619,6 +619,7 @@ github-project-research/
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
 
+- [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
 ### 开发工具 / CLI（53）
 - [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
 - [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
@@ -870,8 +871,7 @@ github-project-research/
 - [`earthtojake/text-to-cad`](https://github.com/earthtojake/text-to-cad) — [earthtojake-text-to-cad-深度调研.md](earthtojake-text-to-cad-深度调研.md)
 - [`DuarteSantos8/openGym`](https://github.com/DuarteSantos8/openGym) — [DuarteSantos8-openGym-深度调研.md](DuarteSantos8-openGym-深度调研.md)
 - [`ntdevlabs/tiny11builder`](https://github.com/ntdevlabs/tiny11builder) — [ntdevlabs-tiny11builder-深度调研.md](ntdevlabs-tiny11builder-深度调研.md)
-### 机器学习 / 科学计算（8）
-- [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
+### 机器学习 / 科学计算（9）- [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
 - [`google-deepmind/weathernext`](https://github.com/google-deepmind/weathernext) — [google-deepmind-weathernext-深度调研.md](google-deepmind-weathernext-深度调研.md)
 - [`huggingface/transformers`](https://github.com/huggingface/transformers) — [huggingface-transformers-深度调研.md](huggingface-transformers-深度调研.md)
 - [`K-Dense-AI/scientific-agent-skills`](https://github.com/K-Dense-AI/scientific-agent-skills) — [K-Dense-AI-scientific-agent-skills-深度调研.md](K-Dense-AI-scientific-agent-skills-深度调研.md)
@@ -880,6 +880,7 @@ github-project-research/
 - [`ResearAI/AutoFigure-Edit`](https://github.com/ResearAI/AutoFigure-Edit) — [ResearAI-AutoFigure-Edit-深度调研.md](ResearAI-AutoFigure-Edit-深度调研.md)
 - [`schollz/find3`](https://github.com/schollz/find3) — [schollz-find3-深度调研.md](schollz-find3-深度调研.md)
 - [`antirez/ds4`](https://github.com/antirez/ds4) — [antirez-ds4-深度调研.md](antirez-ds4-深度调研.md)
+- [`leanprover/lean4`](https://github.com/leanprover/lean4) — [leanprover-lean4-深度调研.md](leanprover-lean4-深度调研.md)
 ### AI 编码 / 设计工具（1）
 - [`abi/screenshot-to-code`](https://github.com/abi/screenshot-to-code) — [abi-screenshot-to-code-深度调研.md](abi-screenshot-to-code-深度调研.md)
 
