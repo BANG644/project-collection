@@ -540,6 +540,8 @@
 | 520 | [`leanprover/lean4`](https://github.com/leanprover/lean4) | 依赖类型函数式编程语言 + 定理证明辅助器（Lean 4，自举、可编译原生代码、mathlib 生态） | 9,548 | 2026-10-16 | [leanprover-lean4-深度调研.md](leanprover-lean4-深度调研.md) |
 | 521 | [`xerj-org/xerj`](https://github.com/xerj-org/xerj) | 本地优先 AI 原生搜索引擎（ES API 兼容、autoindex 零配置、MCP + agent memory，省 token） | 5,447 | 2026-10-16 | [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md) |
 | 522 | [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) | 面向 agentic 的 LLM 推理引擎（控制面/执行面分离、模块化内核、非营利中立背书） | 2,409 | 2026-10-16 | [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md) |
+| 523 | [`android/skills`](https://github.com/android/skills) | Google 官方 Android 开发 Agent Skills 仓库（遵循开放标准 SKILL.md，33 个 skill 跨 11 域，配套 Android CLI 分发） | 7,987 | 2026-10-17 | [android-skills-深度调研.md](android-skills-深度调研.md) |
+| 524 | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) | 面向 coding agent 的上下文压缩代理/插件——模型驱动可逆分层压缩，100K 窗口省 5× token、撑数月级会话 | 1,519 | 2026-10-17 | [ranxianglei-billion-context-深度调研.md](ranxianglei-billion-context-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
@@ -570,7 +572,8 @@
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
 - [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
-### AI 编码 / Skill 技能（57）
+### AI 编码 / Skill 技能（58）
+- [`android/skills`](https://github.com/android/skills) — [android-skills-深度调研.md](android-skills-深度调研.md)
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
@@ -924,7 +927,8 @@
 - [`morluto/rea`](https://github.com/morluto/rea) — [morluto-rea-深度调研.md](morluto-rea-深度调研.md)
 - [`boykopovar/AnyPS5`](https://github.com/boykopovar/AnyPS5) — [boykopovar-AnyPS5-深度调研.md](boykopovar-AnyPS5-深度调研.md)
 - [`vxcontrol/pentagi`](https://github.com/vxcontrol/pentagi) — [vxcontrol-pentagi-深度调研.md](vxcontrol-pentagi-深度调研.md)
-### AI Agent / LLM 基础设施（6）
+### AI Agent / LLM 基础设施（7）
+- [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) — [ranxianglei-billion-context-深度调研.md](ranxianglei-billion-context-深度调研.md)
 - [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md)
 - [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
 - [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi) — [tashfeenahmed-freellmapi-深度调研.md](tashfeenahmed-freellmapi-深度调研.md)

@@ -58,7 +58,7 @@ github-project-research/
 - [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) — [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md)
 - [`666ghj/MiroFish`](https://github.com/666ghj/MiroFish) — [666ghj-MiroFish-深度调研.md](666ghj-MiroFish-深度调研.md)
 
-### A（59）
+### A（60）
 - [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
 - [`Anionex/banana-slides`](https://github.com/Anionex/banana-slides) — [Anionex-banana-slides-深度调研.md](Anionex-banana-slides-深度调研.md)
 - [`a2ui-project/a2ui`](https://github.com/a2ui-project/a2ui) — [a2ui-project-a2ui-深度调研.md](a2ui-project-a2ui-深度调研.md)
@@ -69,6 +69,7 @@ github-project-research/
 - [`a710128/opencode-vscode-ui`](https://github.com/a710128/opencode-vscode-ui) — [a710128-opencode-vscode-ui-深度调研.md](a710128-opencode-vscode-ui-深度调研.md)
 - [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) — [ayghri-i-have-adhd-深度调研.md](ayghri-i-have-adhd-深度调研.md)
 - [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) — [anthropics-knowledge-work-plugins-深度调研.md](anthropics-knowledge-work-plugins-深度调研.md)
+- [`android/skills`](https://github.com/android/skills) — [android-skills-深度调研.md](android-skills-深度调研.md)
 ### B（23 个）
 - [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md)
 - [`baidu/Unlimited-OCR`](https://github.com/baidu/Unlimited-OCR) — [baidu-Unlimited-OCR-深度调研.md](baidu-Unlimited-OCR-深度调研.md)
@@ -363,7 +364,7 @@ github-project-research/
 - [`PrimeIntellect-ai/prime-agent`](https://github.com/PrimeIntellect-ai/prime-agent) — [PrimeIntellect-ai-prime-agent-深度调研.md](PrimeIntellect-ai-prime-agent-深度调研.md)
 - [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) — [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md)
 - [`popstas/telegram-download-chat`](https://github.com/popstas/telegram-download-chat) — [popstas-telegram-download-chat-深度调研.md](popstas-telegram-download-chat-深度调研.md)
-### R（20 个）
+### R（21 个）
 - [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) — [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md)
 - [`raiyanyahya/recall`](https://github.com/raiyanyahya/recall) — [raiyanyahya-recall-深度调研.md](raiyanyahya-recall-深度调研.md)
 - [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) — [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md)
@@ -385,6 +386,7 @@ github-project-research/
 - [`ResearAI/AutoFigure-Edit`](https://github.com/ResearAI/AutoFigure-Edit) — [ResearAI-AutoFigure-Edit-深度调研.md](ResearAI-AutoFigure-Edit-深度调研.md)
 - [`RICHQAQ/PasteMD`](https://github.com/RICHQAQ/PasteMD) — [RICHQAQ-PasteMD-深度调研.md](RICHQAQ-PasteMD-深度调研.md)
 - [`RanFeng/clipsketch-ai`](https://github.com/RanFeng/clipsketch-ai) — [RanFeng-clipsketch-ai-深度调研.md](RanFeng-clipsketch-ai-深度调研.md)
+- [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) — [ranxianglei-billion-context-深度调研.md](ranxianglei-billion-context-深度调研.md)
 ### S（32 个）
 - [`sansan0/TrendRadar`](https://github.com/sansan0/TrendRadar) — [sansan0-TrendRadar-深度调研.md](sansan0-TrendRadar-深度调研.md)
 - [`santifer/career-ops`](https://github.com/santifer/career-ops) — [santifer-career-ops-深度调研.md](santifer-career-ops-深度调研.md)
