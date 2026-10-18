@@ -542,10 +542,13 @@
 | 522 | [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) | 面向 agentic 的 LLM 推理引擎（控制面/执行面分离、模块化内核、非营利中立背书） | 2,409 | 2026-10-16 | [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md) |
 | 523 | [`android/skills`](https://github.com/android/skills) | Google 官方 Android 开发 Agent Skills 仓库（遵循开放标准 SKILL.md，33 个 skill 跨 11 域，配套 Android CLI 分发） | 7,987 | 2026-10-17 | [android-skills-深度调研.md](android-skills-深度调研.md) |
 | 524 | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) | 面向 coding agent 的上下文压缩代理/插件——模型驱动可逆分层压缩，100K 窗口省 5× token、撑数月级会话 | 1,519 | 2026-10-17 | [ranxianglei-billion-context-深度调研.md](ranxianglei-billion-context-深度调研.md) |
+| 525 | [`MadsLorentsen/ai-job-search`](https://github.com/MadsLorentsen/ai-job-search) | 本地优先的 Claude Code 求职流水线框架——/setup 建档案、/scrape 抓职位、/apply 用「起草-评审」双 Agent 生成 LaTeX 简历与求职信并做 ATS 文本层校验 | 52,454 | 2026-10-19 | [MadsLorentsen-ai-job-search-深度调研.md](MadsLorentsen-ai-job-search-深度调研.md) |
+| 526 | [`Kruk2/jasna`](https://github.com/Kruk2/jasna) | 免费 GPU 视频/图片马赛克修复工具——NVDEC 解码→rfdetr-v6 检测→BasicVSR++/LTX 修复→NVENC 编码，含 GUI/CLI 与 Segment Editor | 2,332 | 2026-10-19 | [Kruk2-jasna-深度调研.md](Kruk2-jasna-深度调研.md) |
+| 527 | [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) | 免费 LLM 学习路线图（基础/科学家/工程师三轨）+ 大量 Colab notebook 启动台，mlabonne 出品 | 83,925 | 2026-10-19 | [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（121）
+### AI Agent / 助手框架（122）
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
 - [`TurixAI/TuriX-CUA`](https://github.com/TurixAI/TuriX-CUA) — [TurixAI-TuriX-CUA-深度调研.md](TurixAI-TuriX-CUA-深度调研.md)
@@ -559,6 +562,7 @@
 - [`mvschwarz/openrig`](https://github.com/mvschwarz/openrig) — [mvschwarz-openrig-深度调研.md](mvschwarz-openrig-深度调研.md)
 - [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md)
 - [`ifixai-ai/iFixAi`](https://github.com/ifixai-ai/iFixAi) — [ifixai-ai-iFixAi-深度调研.md](ifixai-ai-iFixAi-深度调研.md)
+- [`MadsLorentsen/ai-job-search`](https://github.com/MadsLorentsen/ai-job-search) — [MadsLorentsen-ai-job-search-深度调研.md](MadsLorentsen-ai-job-search-深度调研.md)
 ### LLM / 推理框架（13）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
@@ -724,13 +728,14 @@
 - [`HisMax/RedInk`](https://github.com/HisMax/RedInk) — [HisMax-RedInk-深度调研.md](HisMax-RedInk-深度调研.md)
 - [`mem0ai/mem0-chrome-extension`](https://github.com/mem0ai/mem0-chrome-extension) — [mem0ai-mem0-chrome-extension-深度调研.md](mem0ai-mem0-chrome-extension-深度调研.md)
 - [`bilawalsidhu/gods-eye-view`](https://github.com/bilawalsidhu/gods-eye-view) — [bilawalsidhu-gods-eye-view-深度调研.md](bilawalsidhu-gods-eye-view-深度调研.md)
-### 视频 / 音频 / 多媒体（29）
+### 视频 / 音频 / 多媒体（30）
 - [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
 - [`MicYou-Dev/MicYou`](https://github.com/MicYou-Dev/MicYou) — [MicYou-Dev-MicYou-深度调研.md](MicYou-Dev-MicYou-深度调研.md)
 - [`RanFeng/clipsketch-ai`](https://github.com/RanFeng/clipsketch-ai) — [RanFeng-clipsketch-ai-深度调研.md](RanFeng-clipsketch-ai-深度调研.md)
 - [`storytold/artcraft`](https://github.com/storytold/artcraft) — [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md)
+- [`Kruk2/jasna`](https://github.com/Kruk2/jasna) — [Kruk2-jasna-深度调研.md](Kruk2-jasna-深度调研.md)
 ### 计算机视觉 / CV（4）
 - [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) — [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md)
 - [`BIT-DataLab/Edit-Banana`](https://github.com/BIT-DataLab/Edit-Banana) — [BIT-DataLab-Edit-Banana-深度调研.md](BIT-DataLab-Edit-Banana-深度调研.md)
@@ -764,7 +769,7 @@
 - [`w4po/ExplorerTabUtility`](https://github.com/w4po/ExplorerTabUtility) — [w4po-ExplorerTabUtility-深度调研.md](w4po-ExplorerTabUtility-深度调研.md)
 - [`perplexityai/bumblebee`](https://github.com/perplexityai/bumblebee) — [perplexityai-bumblebee-深度调研.md](perplexityai-bumblebee-深度调研.md)
 - [`UstadMobile/Meshrabiya`](https://github.com/UstadMobile/Meshrabiya) — [UstadMobile-Meshrabiya-深度调研.md](UstadMobile-Meshrabiya-深度调研.md)
-### 学习资料 / 方法论（18）
+### 学习资料 / 方法论（19）
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
 - [`bojieli/ai-agent-book`](https://github.com/bojieli/ai-agent-book) — [bojieli-ai-agent-book-深度调研.md](bojieli-ai-agent-book-深度调研.md)
@@ -786,6 +791,7 @@
 - [`easychen/opc-methodology`](https://github.com/easychen/opc-methodology) — [easychen-opc-methodology-深度调研.md](easychen-opc-methodology-深度调研.md)
 
 - [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
+- [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) — [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md)
 ### 其他（118）
 - [`nordicsemi/Android-nRF-Mesh-Library`](https://github.com/nordicsemi/Android-nRF-Mesh-Library) — [nordicsemi-Android-nRF-Mesh-Library-深度调研.md](nordicsemi-Android-nRF-Mesh-Library-深度调研.md)
 - [`osmdroid/osmdroid`](https://github.com/osmdroid/osmdroid) — [osmdroid-osmdroid-深度调研.md](osmdroid-osmdroid-深度调研.md)
