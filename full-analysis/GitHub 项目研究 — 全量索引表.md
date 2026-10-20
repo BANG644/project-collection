@@ -544,7 +544,8 @@
 | 524 | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) | 面向 coding agent 的上下文压缩代理/插件——模型驱动可逆分层压缩，100K 窗口省 5× token、撑数月级会话 | 1,519 | 2026-10-17 | [ranxianglei-billion-context-深度调研.md](ranxianglei-billion-context-深度调研.md) |
 | 525 | [`MadsLorentsen/ai-job-search`](https://github.com/MadsLorentsen/ai-job-search) | 本地优先的 Claude Code 求职流水线框架——/setup 建档案、/scrape 抓职位、/apply 用「起草-评审」双 Agent 生成 LaTeX 简历与求职信并做 ATS 文本层校验 | 52,454 | 2026-10-19 | [MadsLorentsen-ai-job-search-深度调研.md](MadsLorentsen-ai-job-search-深度调研.md) |
 | 526 | [`Kruk2/jasna`](https://github.com/Kruk2/jasna) | 免费 GPU 视频/图片马赛克修复工具——NVDEC 解码→rfdetr-v6 检测→BasicVSR++/LTX 修复→NVENC 编码，含 GUI/CLI 与 Segment Editor | 2,332 | 2026-10-19 | [Kruk2-jasna-深度调研.md](Kruk2-jasna-深度调研.md) |
-| 527 | [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) | 免费 LLM 学习路线图（基础/科学家/工程师三轨）+ 大量 Colab notebook 启动台，mlabonne 出品 | 83,925 | 2026-10-19 | [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md) |
+| 527 | [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course)
+| 528 | [`vllm-project/vllm`](https://github.com/vllm-project/vllm) | 高吞吐、显存高效的 LLM 推理与服务引擎——PagedAttention + 连续批处理 + 前缀缓存 + 投机解码，OpenAI 兼容 API，200+ 模型架构，Apache-2.0 | 94,373 | 2026-10-21 | [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md) | | 免费 LLM 学习路线图（基础/科学家/工程师三轨）+ 大量 Colab notebook 启动台，mlabonne 出品 | 83,925 | 2026-10-19 | [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
@@ -563,7 +564,8 @@
 - [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md)
 - [`ifixai-ai/iFixAi`](https://github.com/ifixai-ai/iFixAi) — [ifixai-ai-iFixAi-深度调研.md](ifixai-ai-iFixAi-深度调研.md)
 - [`MadsLorentsen/ai-job-search`](https://github.com/MadsLorentsen/ai-job-search) — [MadsLorentsen-ai-job-search-深度调研.md](MadsLorentsen-ai-job-search-深度调研.md)
-### LLM / 推理框架（13）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+### LLM / 推理框架（14）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+- [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
 - [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp) — [ggml-org-llama.cpp-深度调研.md](ggml-org-llama.cpp-深度调研.md)
