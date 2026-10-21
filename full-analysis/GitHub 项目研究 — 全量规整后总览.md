@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 528                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 531                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -390,7 +390,8 @@ github-project-research/
 - [`RICHQAQ/PasteMD`](https://github.com/RICHQAQ/PasteMD) — [RICHQAQ-PasteMD-深度调研.md](RICHQAQ-PasteMD-深度调研.md)
 - [`RanFeng/clipsketch-ai`](https://github.com/RanFeng/clipsketch-ai) — [RanFeng-clipsketch-ai-深度调研.md](RanFeng-clipsketch-ai-深度调研.md)
 - [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) — [ranxianglei-billion-context-深度调研.md](ranxianglei-billion-context-深度调研.md)
-### S（32 个）
+### S（33 个）
+- [`strelov1/freehire`](https://github.com/strelov1/freehire) — [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md)
 - [`sansan0/TrendRadar`](https://github.com/sansan0/TrendRadar) — [sansan0-TrendRadar-深度调研.md](sansan0-TrendRadar-深度调研.md)
 - [`santifer/career-ops`](https://github.com/santifer/career-ops) — [santifer-career-ops-深度调研.md](santifer-career-ops-深度调研.md)
 - [`sapientinc/HRM-Text`](https://github.com/sapientinc/HRM-Text) — [sapientinc-HRM-Text-深度调研.md](sapientinc-HRM-Text-深度调研.md)
@@ -423,7 +424,8 @@ github-project-research/
 - [`Salomondiei08/oh-my-hermes`](https://github.com/Salomondiei08/oh-my-hermes) — [Salomondiei08-oh-my-hermes-深度调研.md](Salomondiei08-oh-my-hermes-深度调研.md)
 - [`SenhorH/tab-labeler`](https://github.com/SenhorH/tab-labeler) — [SenhorH-tab-labeler-深度调研.md](SenhorH-tab-labeler-深度调研.md)
 - [`storytold/artcraft`](https://github.com/storytold/artcraft) — [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md)
-### T（29 个）
+### T（30 个）
+- [`twentyhq/twenty`](https://github.com/twentyhq/twenty) — [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md)
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`Tarquinen/opencode-dynamic-context-pruning`](https://github.com/Tarquinen/opencode-dynamic-context-pruning) — [Tarquinen-opencode-dynamic-context-pruning-深度调研.md](Tarquinen-opencode-dynamic-context-pruning-深度调研.md)
 - [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi) — [tashfeenahmed-freellmapi-深度调研.md](tashfeenahmed-freellmapi-深度调研.md)
@@ -482,7 +484,8 @@ github-project-research/
 - [`VoltAgent/awesome-openclaw-skills`](https://github.com/VoltAgent/awesome-openclaw-skills) — [VoltAgent-awesome-openclaw-skills-深度调研.md](VoltAgent-awesome-openclaw-skills-深度调研.md)
 
 - [`vxcontrol/pentagi`](https://github.com/vxcontrol/pentagi) — [vxcontrol-pentagi-深度调研.md](vxcontrol-pentagi-深度调研.md)
-### W（7 个）
+### W（8 个）
+- [`wshobson/agents`](https://github.com/wshobson/agents) — [wshobson-agents-深度调研.md](wshobson-agents-深度调研.md)
 - [`w4po/ExplorerTabUtility`](https://github.com/w4po/ExplorerTabUtility) — [w4po-ExplorerTabUtility-深度调研.md](w4po-ExplorerTabUtility-深度调研.md)
 - [`wechatsync/Wechatsync`](https://github.com/wechatsync/Wechatsync) — [wechatsync-Wechatsync-深度调研.md](wechatsync-Wechatsync-深度调研.md)
 - [`withastro/flue`](https://github.com/withastro/flue) — [withastro-flue-深度调研.md](withastro-flue-深度调研.md)
@@ -548,7 +551,8 @@ github-project-research/
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
 - [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
-### AI 编码 / Skill 技能（57）
+### AI 编码 / Skill 技能（58）
+- [`wshobson/agents`](https://github.com/wshobson/agents) — [wshobson-agents-深度调研.md](wshobson-agents-深度调研.md)
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
 - [`alibaba/open-code-review`](https://github.com/alibaba/open-code-review) — [alibaba-open-code-review-深度调研.md](alibaba-open-code-review-深度调研.md)
@@ -761,7 +765,9 @@ github-project-research/
 
 - [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
 - [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) — [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md)
-### 其他（118）
+### 其他（120）
+- [`twentyhq/twenty`](https://github.com/twentyhq/twenty) — [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md)
+- [`strelov1/freehire`](https://github.com/strelov1/freehire) — [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md)
 - [`nordicsemi/Android-nRF-Mesh-Library`](https://github.com/nordicsemi/Android-nRF-Mesh-Library) — [nordicsemi-Android-nRF-Mesh-Library-深度调研.md](nordicsemi-Android-nRF-Mesh-Library-深度调研.md)
 - [`osmdroid/osmdroid`](https://github.com/osmdroid/osmdroid) — [osmdroid-osmdroid-深度调研.md](osmdroid-osmdroid-深度调研.md)
 - [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)

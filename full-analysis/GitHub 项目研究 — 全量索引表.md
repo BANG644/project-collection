@@ -544,8 +544,11 @@
 | 524 | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) | 面向 coding agent 的上下文压缩代理/插件——模型驱动可逆分层压缩，100K 窗口省 5× token、撑数月级会话 | 1,519 | 2026-10-17 | [ranxianglei-billion-context-深度调研.md](ranxianglei-billion-context-深度调研.md) |
 | 525 | [`MadsLorentsen/ai-job-search`](https://github.com/MadsLorentsen/ai-job-search) | 本地优先的 Claude Code 求职流水线框架——/setup 建档案、/scrape 抓职位、/apply 用「起草-评审」双 Agent 生成 LaTeX 简历与求职信并做 ATS 文本层校验 | 52,454 | 2026-10-19 | [MadsLorentsen-ai-job-search-深度调研.md](MadsLorentsen-ai-job-search-深度调研.md) |
 | 526 | [`Kruk2/jasna`](https://github.com/Kruk2/jasna) | 免费 GPU 视频/图片马赛克修复工具——NVDEC 解码→rfdetr-v6 检测→BasicVSR++/LTX 修复→NVENC 编码，含 GUI/CLI 与 Segment Editor | 2,332 | 2026-10-19 | [Kruk2-jasna-深度调研.md](Kruk2-jasna-深度调研.md) |
-| 527 | [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course)
-| 528 | [`vllm-project/vllm`](https://github.com/vllm-project/vllm) | 高吞吐、显存高效的 LLM 推理与服务引擎——PagedAttention + 连续批处理 + 前缀缓存 + 投机解码，OpenAI 兼容 API，200+ 模型架构，Apache-2.0 | 94,373 | 2026-10-21 | [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md) | | 免费 LLM 学习路线图（基础/科学家/工程师三轨）+ 大量 Colab notebook 启动台，mlabonne 出品 | 83,925 | 2026-10-19 | [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md) |
+| 527 | [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) | 免费 LLM 学习路线图（基础/科学家/工程师三轨）+ 大量 Colab notebook 启动台，mlabonne 出品 | 83,925 | 2026-10-19 | [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md) |
+| 528 | [`vllm-project/vllm`](https://github.com/vllm-project/vllm) | 高吞吐、显存高效的 LLM 推理与服务引擎——PagedAttention + 连续批处理 + 前缀缓存 + 投机解码，OpenAI 兼容 API，200+ 模型架构，Apache-2.0 | 94,373 | 2026-10-21 | [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md) |
+| 529 | [`wshobson/agents`](https://github.com/wshobson/agents) | 跨 7 个 AI 编码 harness 的 agent/skill/command 插件市场与适配框架——单一 Markdown 源经 adapter 生成 Claude Code/Codex/Cursor/OpenCode/Antigravity/Copilot/Pi 产物 | 41,442 | 2026-10-22 | [wshobson-agents-深度调研.md](wshobson-agents-深度调研.md) |
+| 530 | [`twentyhq/twenty`](https://github.com/twentyhq/twenty) | #1 开源 CRM「为 AI 设计」——元数据驱动（objects/fields/views 即代码）+ Nx monorepo（NestJS+React）+ 内置 AI agents/agent-skills，可 self-host | 59,012 | 2026-10-22 | [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md) |
+| 531 | [`strelov1/freehire`](https://github.com/strelov1/freehire) | 自托管开源求职搜索引擎——直接从 124 ATS + 97 Telegram + 公司官网抓取 3.3M+ 实时职位，单一 schema 去重 + Meilisearch 分面检索 + 确定性 CV↔职位评分 + 内置 agent | 2,253 | 2026-10-22 | [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
@@ -578,7 +581,8 @@
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
 - [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
-### AI 编码 / Skill 技能（58）
+### AI 编码 / Skill 技能（59）
+- [`wshobson/agents`](https://github.com/wshobson/agents) — [wshobson-agents-深度调研.md](wshobson-agents-深度调研.md)
 - [`android/skills`](https://github.com/android/skills) — [android-skills-深度调研.md](android-skills-深度调研.md)
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`1jehuang/jcode`](https://github.com/1jehuang/jcode) — [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md)
@@ -794,7 +798,9 @@
 
 - [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
 - [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) — [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md)
-### 其他（118）
+### 其他（120）
+- [`twentyhq/twenty`](https://github.com/twentyhq/twenty) — [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md)
+- [`strelov1/freehire`](https://github.com/strelov1/freehire) — [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md)
 - [`nordicsemi/Android-nRF-Mesh-Library`](https://github.com/nordicsemi/Android-nRF-Mesh-Library) — [nordicsemi-Android-nRF-Mesh-Library-深度调研.md](nordicsemi-Android-nRF-Mesh-Library-深度调研.md)
 - [`osmdroid/osmdroid`](https://github.com/osmdroid/osmdroid) — [osmdroid-osmdroid-深度调研.md](osmdroid-osmdroid-深度调研.md)
 - [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)
