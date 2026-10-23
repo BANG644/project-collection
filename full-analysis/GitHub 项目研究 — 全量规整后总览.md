@@ -301,7 +301,7 @@ github-project-research/
 - [`mvschwarz/openrig`](https://github.com/mvschwarz/openrig) — [mvschwarz-openrig-深度调研.md](mvschwarz-openrig-深度调研.md)
 - [`MadsLorentsen/ai-job-search`](https://github.com/MadsLorentsen/ai-job-search) — [MadsLorentsen-ai-job-search-深度调研.md](MadsLorentsen-ai-job-search-深度调研.md)
 - [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) — [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md)
-### N（18 个）
+### N（19 个）
 - [`n8n-io/n8n`](https://github.com/n8n-io/n8n) — [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md)
 - [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram) — [nagisanzenin-engram-深度调研.md](nagisanzenin-engram-深度调研.md)
 - [`NanmiCoder/MediaCrawler`](https://github.com/NanmiCoder/MediaCrawler) — [NanmiCoder-MediaCrawler-深度调研.md](NanmiCoder-MediaCrawler-深度调研.md)
@@ -320,7 +320,8 @@ github-project-research/
 - [`nvm-windows/nvm`](https://github.com/nvm-windows/nvm) — [nvm-windows-nvm-深度调研.md](nvm-windows-nvm-深度调研.md)
 - [`nordicsemi/Android-nRF-Mesh-Library`](https://github.com/nordicsemi/Android-nRF-Mesh-Library) — [nordicsemi-Android-nRF-Mesh-Library-深度调研.md](nordicsemi-Android-nRF-Mesh-Library-深度调研.md)
 - [`ntdevlabs/tiny11builder`](https://github.com/ntdevlabs/tiny11builder) — [ntdevlabs-tiny11builder-深度调研.md](ntdevlabs-tiny11builder-深度调研.md)
-### O（26 个）
+- [`NVIDIA/OpenShell`](https://github.com/NVIDIA/OpenShell) — [NVIDIA-OpenShell-深度调研.md](NVIDIA-OpenShell-深度调研.md)
+### O（27 个）
 - [`obra/superpowers`](https://github.com/obra/superpowers) — [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md)
 - [`ocornut/imgui`](https://github.com/ocornut/imgui) — [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md)
 - [`odysseus-dev/odysseus`](https://github.com/odysseus-dev/odysseus) — [odysseus-dev-odysseus-深度调研.md](odysseus-dev-odysseus-深度调研.md)
@@ -348,6 +349,7 @@ github-project-research/
 
 - [`osmdroid/osmdroid`](https://github.com/osmdroid/osmdroid) — [osmdroid-osmdroid-深度调研.md](osmdroid-osmdroid-深度调研.md)
 - [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md)
+- [`OpenBMB/VoxCPM`](https://github.com/OpenBMB/VoxCPM) — [OpenBMB-VoxCPM-深度调研.md](OpenBMB-VoxCPM-深度调研.md)
 ### P（19 个）
 - [`p-e-w/heretic`](https://github.com/p-e-w/heretic) — [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md)
 - [`Panniantong/Agent-Reach`](https://github.com/Panniantong/Agent-Reach) — [Panniantong-Agent-Reach-深度调研.md](Panniantong-Agent-Reach-深度调研.md)
@@ -702,7 +704,7 @@ github-project-research/
 - [`HisMax/RedInk`](https://github.com/HisMax/RedInk) — [HisMax-RedInk-深度调研.md](HisMax-RedInk-深度调研.md)
 - [`mem0ai/mem0-chrome-extension`](https://github.com/mem0ai/mem0-chrome-extension) — [mem0ai-mem0-chrome-extension-深度调研.md](mem0ai-mem0-chrome-extension-深度调研.md)
 - [`bilawalsidhu/gods-eye-view`](https://github.com/bilawalsidhu/gods-eye-view) — [bilawalsidhu-gods-eye-view-深度调研.md](bilawalsidhu-gods-eye-view-深度调研.md)
-### 视频 / 音频 / 多媒体（30）
+### 视频 / 音频 / 多媒体（31）
 - [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
@@ -710,6 +712,7 @@ github-project-research/
 - [`RanFeng/clipsketch-ai`](https://github.com/RanFeng/clipsketch-ai) — [RanFeng-clipsketch-ai-深度调研.md](RanFeng-clipsketch-ai-深度调研.md)
 - [`storytold/artcraft`](https://github.com/storytold/artcraft) — [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md)
 - [`Kruk2/jasna`](https://github.com/Kruk2/jasna) — [Kruk2-jasna-深度调研.md](Kruk2-jasna-深度调研.md)
+- [`OpenBMB/VoxCPM`](https://github.com/OpenBMB/VoxCPM) — [OpenBMB-VoxCPM-深度调研.md](OpenBMB-VoxCPM-深度调研.md)
 ### 计算机视觉 / CV（4）
 - [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) — [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md)
 - [`BIT-DataLab/Edit-Banana`](https://github.com/BIT-DataLab/Edit-Banana) — [BIT-DataLab-Edit-Banana-深度调研.md](BIT-DataLab-Edit-Banana-深度调研.md)
@@ -913,7 +916,7 @@ github-project-research/
 - [`morluto/rea`](https://github.com/morluto/rea) — [morluto-rea-深度调研.md](morluto-rea-深度调研.md)
 - [`boykopovar/AnyPS5`](https://github.com/boykopovar/AnyPS5) — [boykopovar-AnyPS5-深度调研.md](boykopovar-AnyPS5-深度调研.md)
 - [`vxcontrol/pentagi`](https://github.com/vxcontrol/pentagi) — [vxcontrol-pentagi-深度调研.md](vxcontrol-pentagi-深度调研.md)
-### AI Agent / LLM 基础设施（6）
+### AI Agent / LLM 基础设施（7）
 - [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md)
 - [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
 - [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi) — [tashfeenahmed-freellmapi-深度调研.md](tashfeenahmed-freellmapi-深度调研.md)
@@ -937,3 +940,5 @@ github-project-research/
 
 - [`cloudflare/cloudflare-os`](https://github.com/cloudflare/cloudflare-os) — [cloudflare-cloudflare-os-深度调研.md](cloudflare-cloudflare-os-深度调研.md)
 - [`corsairdev/corsair`](https://github.com/corsairdev/corsair) — [corsairdev-corsair-深度调研.md](corsairdev-corsair-深度调研.md)
+
+- [`NVIDIA/OpenShell`](https://github.com/NVIDIA/OpenShell) — [NVIDIA-OpenShell-深度调研.md](NVIDIA-OpenShell-深度调研.md)

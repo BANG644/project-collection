@@ -549,6 +549,8 @@
 | 529 | [`wshobson/agents`](https://github.com/wshobson/agents) | 跨 7 个 AI 编码 harness 的 agent/skill/command 插件市场与适配框架——单一 Markdown 源经 adapter 生成 Claude Code/Codex/Cursor/OpenCode/Antigravity/Copilot/Pi 产物 | 41,442 | 2026-10-22 | [wshobson-agents-深度调研.md](wshobson-agents-深度调研.md) |
 | 530 | [`twentyhq/twenty`](https://github.com/twentyhq/twenty) | #1 开源 CRM「为 AI 设计」——元数据驱动（objects/fields/views 即代码）+ Nx monorepo（NestJS+React）+ 内置 AI agents/agent-skills，可 self-host | 59,012 | 2026-10-22 | [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md) |
 | 531 | [`strelov1/freehire`](https://github.com/strelov1/freehire) | 自托管开源求职搜索引擎——直接从 124 ATS + 97 Telegram + 公司官网抓取 3.3M+ 实时职位，单一 schema 去重 + Meilisearch 分面检索 + 确定性 CV↔职位评分 + 内置 agent | 2,253 | 2026-10-22 | [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md) |
+| 532 | [`NVIDIA/OpenShell`](https://github.com/NVIDIA/OpenShell) | NVIDIA 出品、内核级隔离 + Z3 形式化验证的自主 AI Agent 安全私有运行时——让 agent 碰真实文件/API/凭据却不泄露数据密钥，Apache-2.0 | 18,624 | 2026-10-24 | [NVIDIA-OpenShell-深度调研.md](NVIDIA-OpenShell-深度调研.md) |
+| 533 | [`OpenBMB/VoxCPM`](https://github.com/OpenBMB/VoxCPM) | OpenBMB 开源无分词器 TTS——端到端扩散自回归直接生成连续语音，2B/30 语/48kHz/语音设计+可控克隆，Apache-2.0 可商用 | 40,157 | 2026-10-24 | [OpenBMB-VoxCPM-深度调研.md](OpenBMB-VoxCPM-深度调研.md) |
 
 ## 🏷️ 按技术领域分类
 
@@ -734,7 +736,7 @@
 - [`HisMax/RedInk`](https://github.com/HisMax/RedInk) — [HisMax-RedInk-深度调研.md](HisMax-RedInk-深度调研.md)
 - [`mem0ai/mem0-chrome-extension`](https://github.com/mem0ai/mem0-chrome-extension) — [mem0ai-mem0-chrome-extension-深度调研.md](mem0ai-mem0-chrome-extension-深度调研.md)
 - [`bilawalsidhu/gods-eye-view`](https://github.com/bilawalsidhu/gods-eye-view) — [bilawalsidhu-gods-eye-view-深度调研.md](bilawalsidhu-gods-eye-view-深度调研.md)
-### 视频 / 音频 / 多媒体（30）
+### 视频 / 音频 / 多媒体（31）
 - [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
@@ -742,6 +744,7 @@
 - [`RanFeng/clipsketch-ai`](https://github.com/RanFeng/clipsketch-ai) — [RanFeng-clipsketch-ai-深度调研.md](RanFeng-clipsketch-ai-深度调研.md)
 - [`storytold/artcraft`](https://github.com/storytold/artcraft) — [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md)
 - [`Kruk2/jasna`](https://github.com/Kruk2/jasna) — [Kruk2-jasna-深度调研.md](Kruk2-jasna-深度调研.md)
+- [`OpenBMB/VoxCPM`](https://github.com/OpenBMB/VoxCPM) — [OpenBMB-VoxCPM-深度调研.md](OpenBMB-VoxCPM-深度调研.md)
 ### 计算机视觉 / CV（4）
 - [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) — [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md)
 - [`BIT-DataLab/Edit-Banana`](https://github.com/BIT-DataLab/Edit-Banana) — [BIT-DataLab-Edit-Banana-深度调研.md](BIT-DataLab-Edit-Banana-深度调研.md)
@@ -941,7 +944,7 @@
 - [`morluto/rea`](https://github.com/morluto/rea) — [morluto-rea-深度调研.md](morluto-rea-深度调研.md)
 - [`boykopovar/AnyPS5`](https://github.com/boykopovar/AnyPS5) — [boykopovar-AnyPS5-深度调研.md](boykopovar-AnyPS5-深度调研.md)
 - [`vxcontrol/pentagi`](https://github.com/vxcontrol/pentagi) — [vxcontrol-pentagi-深度调研.md](vxcontrol-pentagi-深度调研.md)
-### AI Agent / LLM 基础设施（7）
+### AI Agent / LLM 基础设施（8）
 - [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) — [ranxianglei-billion-context-深度调研.md](ranxianglei-billion-context-深度调研.md)
 - [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md)
 - [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
@@ -950,6 +953,7 @@
 
 - [`cloudflare/cloudflare-os`](https://github.com/cloudflare/cloudflare-os) — [cloudflare-cloudflare-os-深度调研.md](cloudflare-cloudflare-os-深度调研.md)
 - [`corsairdev/corsair`](https://github.com/corsairdev/corsair) — [corsairdev-corsair-深度调研.md](corsairdev-corsair-深度调研.md)
+- [`NVIDIA/OpenShell`](https://github.com/NVIDIA/OpenShell) — [NVIDIA-OpenShell-深度调研.md](NVIDIA-OpenShell-深度调研.md)
 ## 📝 维护规则
 
 1. 新增调研报告后，必须在本表追加索引行（owner/repo 列点击跳转 GitHub；报告文件列点击打开本地报告）。
