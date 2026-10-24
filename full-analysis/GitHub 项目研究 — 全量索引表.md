@@ -552,9 +552,13 @@
 | 532 | [`NVIDIA/OpenShell`](https://github.com/NVIDIA/OpenShell) | NVIDIA 出品、内核级隔离 + Z3 形式化验证的自主 AI Agent 安全私有运行时——让 agent 碰真实文件/API/凭据却不泄露数据密钥，Apache-2.0 | 18,624 | 2026-10-24 | [NVIDIA-OpenShell-深度调研.md](NVIDIA-OpenShell-深度调研.md) |
 | 533 | [`OpenBMB/VoxCPM`](https://github.com/OpenBMB/VoxCPM) | OpenBMB 开源无分词器 TTS——端到端扩散自回归直接生成连续语音，2B/30 语/48kHz/语音设计+可控克隆，Apache-2.0 可商用 | 40,157 | 2026-10-24 | [OpenBMB-VoxCPM-深度调研.md](OpenBMB-VoxCPM-深度调研.md) |
 
+| 534 | [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) | Google 官方开源终端 AI Agent——代码理解/生成、Shell 自动化、MCP+A2A 扩展、多模型认证，Apache-2.0（2026-06 起官方主推 Antigravity CLI） | 107,885 | 2026-10-25 | [google-gemini-gemini-cli-深度调研.md](google-gemini-gemini-cli-深度调研.md) |
+| 535 | [`pollen-robotics/microduck`](https://github.com/pollen-robotics/microduck) | Pollen Robotics 开源双足小鸭机器人「大脑」——Rust 守护进程 50Hz 控制 15 舵机跑 RL 步态，签名更新+自动回滚，Apache-2.0 | 10,847 | 2026-10-25 | [pollen-robotics-microduck-深度调研.md](pollen-robotics-microduck-深度调研.md) |
+| 536 | [`makecindy/cindy`](https://github.com/makecindy/cindy) | 开箱即用的开源 AI Agent 客户端——统一 Claude Code/Codex 多 harness+多模型，记忆/技能跨 harness 连续，Orca 多 agent 编排，Apache-2.0 | 3,978 | 2026-10-25 | [makecindy-cindy-深度调研.md](makecindy-cindy-深度调研.md) |
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（122）
+### AI Agent / 助手框架（123）
+- [`makecindy/cindy`](https://github.com/makecindy/cindy) — [makecindy-cindy-深度调研.md](makecindy-cindy-深度调研.md)
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
 - [`TurixAI/TuriX-CUA`](https://github.com/TurixAI/TuriX-CUA) — [TurixAI-TuriX-CUA-深度调研.md](TurixAI-TuriX-CUA-深度调研.md)
@@ -583,7 +587,8 @@
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
 - [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
-### AI 编码 / Skill 技能（59）
+### AI 编码 / Skill 技能（60）
+- [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) — [google-gemini-gemini-cli-深度调研.md](google-gemini-gemini-cli-深度调研.md)
 - [`wshobson/agents`](https://github.com/wshobson/agents) — [wshobson-agents-深度调研.md](wshobson-agents-深度调研.md)
 - [`android/skills`](https://github.com/android/skills) — [android-skills-深度调研.md](android-skills-深度调研.md)
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
@@ -801,7 +806,8 @@
 
 - [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
 - [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) — [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md)
-### 其他（120）
+### 其他（121）
+- [`pollen-robotics/microduck`](https://github.com/pollen-robotics/microduck) — [pollen-robotics-microduck-深度调研.md](pollen-robotics-microduck-深度调研.md)
 - [`twentyhq/twenty`](https://github.com/twentyhq/twenty) — [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md)
 - [`strelov1/freehire`](https://github.com/strelov1/freehire) — [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md)
 - [`nordicsemi/Android-nRF-Mesh-Library`](https://github.com/nordicsemi/Android-nRF-Mesh-Library) — [nordicsemi-Android-nRF-Mesh-Library-深度调研.md](nordicsemi-Android-nRF-Mesh-Library-深度调研.md)
