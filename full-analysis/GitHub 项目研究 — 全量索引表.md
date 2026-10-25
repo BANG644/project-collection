@@ -555,9 +555,14 @@
 | 534 | [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) | Google 官方开源终端 AI Agent——代码理解/生成、Shell 自动化、MCP+A2A 扩展、多模型认证，Apache-2.0（2026-06 起官方主推 Antigravity CLI） | 107,885 | 2026-10-25 | [google-gemini-gemini-cli-深度调研.md](google-gemini-gemini-cli-深度调研.md) |
 | 535 | [`pollen-robotics/microduck`](https://github.com/pollen-robotics/microduck) | Pollen Robotics 开源双足小鸭机器人「大脑」——Rust 守护进程 50Hz 控制 15 舵机跑 RL 步态，签名更新+自动回滚，Apache-2.0 | 10,847 | 2026-10-25 | [pollen-robotics-microduck-深度调研.md](pollen-robotics-microduck-深度调研.md) |
 | 536 | [`makecindy/cindy`](https://github.com/makecindy/cindy) | 开箱即用的开源 AI Agent 客户端——统一 Claude Code/Codex 多 harness+多模型，记忆/技能跨 harness 连续，Orca 多 agent 编排，Apache-2.0 | 3,978 | 2026-10-25 | [makecindy-cindy-深度调研.md](makecindy-cindy-深度调研.md) |
+| 537 | [`coollabsio/coolify`](https://github.com/coollabsio/coolify) | 开源可自托管 PaaS（Heroku/Netlify/Vercel 替代）——Laravel 12 + Inertia/Svelte5 + 内置 MCP，360+ 一键服务 | 64,149 | 2026-10-26 | [coollabsio-coolify-深度调研.md](coollabsio-coolify-深度调研.md) |
+| 538 | [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) | Claude Code 免费 SEO 审计插件——26 子技能+19 子代理并行，可证伪结论 + GEO/AI 引述优化 | 20,607 | 2026-10-26 | [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md) |
+| 539 | [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) | JetBrains 孵化器 agentic IDE——薄主机封装 pi 编码代理，git worktree 隔离 + 活的 spec 图 | 1,299 | 2026-10-26 | [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md) |
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（123）
+### AI Agent / 助手框架（124）
+- [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
+
 - [`makecindy/cindy`](https://github.com/makecindy/cindy) — [makecindy-cindy-深度调研.md](makecindy-cindy-深度调研.md)
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) — [ashishpatel26-500-AI-Agents-Projects-深度调研.md](ashishpatel26-500-AI-Agents-Projects-深度调研.md)
@@ -587,7 +592,9 @@
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
 - [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
-### AI 编码 / Skill 技能（60）
+### AI 编码 / Skill 技能（61）
+- [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
+
 - [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) — [google-gemini-gemini-cli-深度调研.md](google-gemini-gemini-cli-深度调研.md)
 - [`wshobson/agents`](https://github.com/wshobson/agents) — [wshobson-agents-深度调研.md](wshobson-agents-深度调研.md)
 - [`android/skills`](https://github.com/android/skills) — [android-skills-深度调研.md](android-skills-深度调研.md)
@@ -669,7 +676,9 @@
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
 - [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
-### 开发工具 / CLI（53）
+### 开发工具 / CLI（54）
+- [`coollabsio/coolify`](https://github.com/coollabsio/coolify) — [coollabsio-coolify-深度调研.md](coollabsio-coolify-深度调研.md)
+
 - [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
 - [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
 - [`popstas/telegram-download-chat`](https://github.com/popstas/telegram-download-chat) — [popstas-telegram-download-chat-深度调研.md](popstas-telegram-download-chat-深度调研.md)
