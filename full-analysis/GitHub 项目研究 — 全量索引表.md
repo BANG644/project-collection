@@ -558,9 +558,12 @@
 | 537 | [`coollabsio/coolify`](https://github.com/coollabsio/coolify) | 开源可自托管 PaaS（Heroku/Netlify/Vercel 替代）——Laravel 12 + Inertia/Svelte5 + 内置 MCP，360+ 一键服务 | 64,149 | 2026-10-26 | [coollabsio-coolify-深度调研.md](coollabsio-coolify-深度调研.md) |
 | 538 | [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) | Claude Code 免费 SEO 审计插件——26 子技能+19 子代理并行，可证伪结论 + GEO/AI 引述优化 | 20,607 | 2026-10-26 | [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md) |
 | 539 | [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) | JetBrains 孵化器 agentic IDE——薄主机封装 pi 编码代理，git worktree 隔离 + 活的 spec 图 | 1,299 | 2026-10-26 | [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md) |
+| 540 | [`nightly-labs/openbot`](https://github.com/nightly-labs/openbot) | 本地优先桌面工作台——把 Codex/Claude/Grok/OpenCode/Gemini/Cursor/Cline 变常驻 agent 同事，ACP 接入+崩溃安全队列+内嵌浏览器 | 1,336 | 2026-10-27 | [nightly-labs-openbot-深度调研.md](nightly-labs-openbot-深度调研.md) |
+| 541 | [`gitroomhq/postiz-app`](https://github.com/gitroomhq/postiz-app) | 开源可自托管社媒调度平台——16+ 平台，AGPL-3.0，原生 MCP/CLI/多 harness agent 接入 | 38,284 | 2026-10-27 | [gitroomhq-postiz-app-深度调研.md](gitroomhq-postiz-app-深度调研.md) |
+| 542 | [`alchaincyf/huashu-design`](https://github.com/alchaincyf/huashu-design) | HTML-native 设计 Skill——一句话出网页/App 原型/可编辑 PPTX/动画，强制三方向门反 AI slop | 26,656 | 2026-10-27 | [alchaincyf-huashu-design-深度调研.md](alchaincyf-huashu-design-深度调研.md) |
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（124）
+### AI Agent / 助手框架（125）
 - [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
 
 - [`makecindy/cindy`](https://github.com/makecindy/cindy) — [makecindy-cindy-深度调研.md](makecindy-cindy-深度调研.md)
@@ -578,6 +581,7 @@
 - [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md)
 - [`ifixai-ai/iFixAi`](https://github.com/ifixai-ai/iFixAi) — [ifixai-ai-iFixAi-深度调研.md](ifixai-ai-iFixAi-深度调研.md)
 - [`MadsLorentsen/ai-job-search`](https://github.com/MadsLorentsen/ai-job-search) — [MadsLorentsen-ai-job-search-深度调研.md](MadsLorentsen-ai-job-search-深度调研.md)
+- [`nightly-labs/openbot`](https://github.com/nightly-labs/openbot) — [nightly-labs-openbot-深度调研.md](nightly-labs-openbot-深度调研.md)
 ### LLM / 推理框架（14）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
@@ -592,7 +596,7 @@
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
 - [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
-### AI 编码 / Skill 技能（61）
+### AI 编码 / Skill 技能（62）
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
 
 - [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) — [google-gemini-gemini-cli-深度调研.md](google-gemini-gemini-cli-深度调研.md)
@@ -655,6 +659,7 @@
 - [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) — [ayghri-i-have-adhd-深度调研.md](ayghri-i-have-adhd-深度调研.md)
 - [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) — [anthropics-knowledge-work-plugins-深度调研.md](anthropics-knowledge-work-plugins-深度调研.md)
 - [`mksglu/context-mode`](https://github.com/mksglu/context-mode) — [mksglu-context-mode-深度调研.md](mksglu-context-mode-深度调研.md)
+- [`alchaincyf/huashu-design`](https://github.com/alchaincyf/huashu-design) — [alchaincyf-huashu-design-深度调研.md](alchaincyf-huashu-design-深度调研.md)
 ### RAG / 知识库 / 记忆（21）- [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
 - [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory) — [akitaonrails-ai-memory-深度调研.md](akitaonrails-ai-memory-深度调研.md)
@@ -815,7 +820,7 @@
 
 - [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
 - [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) — [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md)
-### 其他（121）
+### 其他（122）
 - [`pollen-robotics/microduck`](https://github.com/pollen-robotics/microduck) — [pollen-robotics-microduck-深度调研.md](pollen-robotics-microduck-深度调研.md)
 - [`twentyhq/twenty`](https://github.com/twentyhq/twenty) — [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md)
 - [`strelov1/freehire`](https://github.com/strelov1/freehire) — [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md)
@@ -938,6 +943,7 @@
 - [`earthtojake/text-to-cad`](https://github.com/earthtojake/text-to-cad) — [earthtojake-text-to-cad-深度调研.md](earthtojake-text-to-cad-深度调研.md)
 - [`DuarteSantos8/openGym`](https://github.com/DuarteSantos8/openGym) — [DuarteSantos8-openGym-深度调研.md](DuarteSantos8-openGym-深度调研.md)
 - [`ntdevlabs/tiny11builder`](https://github.com/ntdevlabs/tiny11builder) — [ntdevlabs-tiny11builder-深度调研.md](ntdevlabs-tiny11builder-深度调研.md)
+- [`gitroomhq/postiz-app`](https://github.com/gitroomhq/postiz-app) — [gitroomhq-postiz-app-深度调研.md](gitroomhq-postiz-app-深度调研.md)
 ### 机器学习 / 科学计算（9）- [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
 - [`google-deepmind/weathernext`](https://github.com/google-deepmind/weathernext) — [google-deepmind-weathernext-深度调研.md](google-deepmind-weathernext-深度调研.md)
 - [`huggingface/transformers`](https://github.com/huggingface/transformers) — [huggingface-transformers-深度调研.md](huggingface-transformers-深度调研.md)
