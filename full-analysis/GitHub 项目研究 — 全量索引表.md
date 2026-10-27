@@ -33,7 +33,7 @@
 | 14 | [`ace-trump-tech/DeltaForce-OBS-Locker`](https://github.com/ace-trump-tech/DeltaForce-OBS-Locker) | — | — | — | [ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md](ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md) |
 | 15 | [`ace-trump-tech/MindPaw`](https://github.com/ace-trump-tech/MindPaw) | 情感交互 AI 宠物硬件——PAD 情感模型 + Big Five 人格调制 EMA + int8 量化 MLP 手势识别 + Affective Prompt 闭环，ESP8266 无 FPU 定点推理（C++，无 LICENSE） | 2,392 | 2026-08-17 | [ace-trump-tech-MindPaw-深度调研.md](ace-trump-tech-MindPaw-深度调研.md) |
 | 16 | [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) | 把完整软件生命周期编码成 Agent 技能（24 技能 + 反合理化 + 三层 eval） | 76,686 | 2026-07-11 | [addyosmani-agent-skills-深度调研.md](addyosmani-agent-skills-深度调研.md) |
-| 17 | [`affaan-m/ECC`](https://github.com/affaan-m/ECC) | Agent Harness 性能优化系统——六大组件柱+跨 7 个 Harness 适配层+持续学习系统+商业化开源并行 | 226,635 | 2026-07-07 | [affaan-m-ECC-深度调研.md](affaan-m-ECC-深度调研.md) |
+| 17 | [`affaan-m/ECC`](https://github.com/affaan-m/ECC) | Agent Harness 性能优化系统——六大组件柱+跨 7 个 Harness 适配层+持续学习系统+商业化开源并行 | 290,665 | 2026-10-28 | [affaan-m-ECC-深度调研.md](affaan-m-ECC-深度调研.md) |
 | 18 | [`agent-substrate/substrate`](https://github.com/agent-substrate/substrate) | Google 开源的大规模 Agent 部署运行时（Go/K8s）——Actor/Worker 重度多路复用、亚秒级快照 suspend/resume、gVisor/microVM 沙箱、Request Parking，框架无关，Apache-2.0 | 1,571 | 2026-08-22 | [agent-substrate-substrate-深度调研.md](agent-substrate-substrate-深度调研.md) |
 | 19 | [`agentskills/agentskills`](https://github.com/agentskills/agentskills) | Agent Skills 开放标准——Anthropic+OpenAI 联合背书，39+ 产品支持，跨平台 SKILL.md 规范，三层渐进式暴露 | 21,954 | 2026-07-04 | [agentskills-agentskills-深度调研.md](agentskills-agentskills-深度调研.md) |
 | 20 | [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) | 面向 Claude Code 的 local-first 知识系统，把源材料变成链接的、有出处的 Obsidian 页面（来源/主张账本 + 15+ Agent Skills + 可恢复事务） | 11,741 | 2026-08-25 | [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md) |
@@ -179,7 +179,7 @@
 | 160 | [`hicccc77/WeFlow`](https://github.com/hicccc77/WeFlow) | WeFlow — 本地微信实时聊天记录查看/分析/导出 + 年度报告（仓库已 DMCA 剥离） | 13,265 | 2026-07-27 | [hicccc77-WeFlow-深度调研.md](hicccc77-WeFlow-深度调研.md) |
 | 161 | [`hiyouga/LlamaFactory`](https://github.com/hiyouga/LlamaFactory) | 统一高效 LLM/VLM 微调框架，100+模型+LoRA/QLoRA/DPO/PPO 全范式覆盖，ACL 2024 | 72,535 | 2026-06-27 | [hiyouga-LlamaFactory-深度调研.md](hiyouga-LlamaFactory-深度调研.md) |
 | 162 | [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) | 重新定义软件与 AI Agent 交互方式——HARNESS.md 方法论 + CLI-Hub 托管平台，让任意软件零改代码成为 Agent 原生 | 44,666 | 2026-07-04 | [HKUDS-CLI-Anything-深度调研.md](HKUDS-CLI-Anything-深度调研.md) |
-| 163 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | HKUDS 开源终身个性化辅导空间——单 agent loop 多能力 + 三层可审计记忆 | 26,781 | 2026-07-17 | [HKUDS-DeepTutor-深度调研.md](HKUDS-DeepTutor-深度调研.md) |
+| 163 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | HKUDS 开源终身个性化辅导空间——单 agent loop 多能力 + 三层可审计记忆 | 45,598 | 2026-10-28 | [HKUDS-DeepTutor-深度调研.md](HKUDS-DeepTutor-深度调研.md) |
 | 164 | [`HKUDS/Vibe-Trading`](https://github.com/HKUDS/Vibe-Trading) | 香港大学数据科学实验室开源——信号→风控→执行三层 AI 交易 Agent，模板方法+策略模式混合，Lookahead 哨兵检测未来数据泄露 | 15,718 | 2026-07-01 | [HKUDS-Vibe-Trading-深度调研.md](HKUDS-Vibe-Trading-深度调研.md) |
 | 165 | [`holaboss-ai/holaOS`](https://github.com/holaboss-ai/holaOS) | 开源一体化 AI Agent 工作区——任意 Agent 同本地优先工作区共享记忆/工具，HolaApps 真实 UI 并排，100+ 集成+MCP，Modified Apache 2.0 | 6,447 | 2026-08-14 | [holaboss-ai-holaOS-深度调研.md](holaboss-ai-holaOS-深度调研.md) |
 | 166 | [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | Hugging Face 官方免费 AI Agent 课程——框架无关教学+smolagents/LangGraph/LlamaIndex 三框架覆盖+认证排行榜 | 29,678 | 2026-06-30 | [huggingface-agents-course-深度调研.md](huggingface-agents-course-深度调研.md) |
@@ -275,11 +275,11 @@
 | 256 | [`NoopApp/noop`](https://github.com/NoopApp/noop) | — | — | — | [NoopApp-noop-深度调研.md](NoopApp-noop-深度调研.md) |
 | 257 | [`Normation/rudder`](https://github.com/Normation/rudder) | 基础设施配置管理与安全自动化平台 | 706 | 2026-08-29 | [Normation-rudder-深度调研.md](Normation-rudder-深度调研.md) |
 | 258 | [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | Nous Research 自我进化型 AI Agent 框架——闭环学习+12消息平台+6部署后端+五层记忆，205k⭐ | 205,068 | 2026-06-29 | [NousResearch-hermes-agent-深度调研.md](NousResearch-hermes-agent-深度调研.md) |
-| 259 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) | Together AI 反 AI 味设计技能——57 道 slop 门 + 6 轴自批判 + 结构多样，拒绝模板味 | 4,963 | 2026-07-14 | [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md) |
+| 259 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark) | Together AI 反 AI 味设计技能——57 道 slop 门 + 6 轴自批判 + 结构多样，拒绝模板味 | 38,636 | 2026-10-28 | [Nutlope-hallmark-深度调研.md](Nutlope-hallmark-深度调研.md) |
 | 260 | [`NVIDIA/cosmos`](https://github.com/NVIDIA/cosmos) | NVIDIA 开源的全模态世界模型平台——MoT 双塔架构统一视觉推理、世界生成与动作预测，为 Physical AI 提供基础模型 | 10,733 | 2026-07-01 | [NVIDIA-cosmos-深度调研.md](NVIDIA-cosmos-深度调研.md) |
 | 261 | [`NVIDIA/SkillSpector`](https://github.com/NVIDIA/SkillSpector) | SkillSpector — AI Agent Skills 安全扫描器（LangGraph 编排 + 静态/LLM 两阶段） | 14,164 | 2026-08-05 | [NVIDIA-SkillSpector-深度调研.md](NVIDIA-SkillSpector-深度调研.md) |
 | 262 | [`nvm-sh/nvm`](https://github.com/nvm-sh/nvm) | 符合 POSIX 标准的纯 bash Node 版本管理器——目录平铺+PATH 前缀切换+.nvmrc 约定，零依赖零侵入，MIT | 94,454 | 2026-08-12 | [nvm-sh-nvm-深度调研.md](nvm-sh-nvm-深度调研.md) |
-| 263 | [`obra/superpowers`](https://github.com/obra/superpowers) | Agent 技能框架 & 软件开发方法论——子 Agent 驱动开发 + worktree 隔离，可放手长跑 | 251,668 | 2026-07-11 | [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md) |
+| 263 | [`obra/superpowers`](https://github.com/obra/superpowers) | Agent 技能框架 & 软件开发方法论——子 Agent 驱动开发 + worktree 隔离，可放手长跑 | 306,248 | 2026-10-28 | [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md) |
 | 264 | [`ocornut/imgui`](https://github.com/ocornut/imgui) | bloat-free 即时模式 C++ GUI 库——输出顶点缓冲，游戏/工具开发标配 | 75,169 | 2026-07-28 | [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md) |
 | 265 | [`odysseus-dev/odysseus`](https://github.com/odysseus-dev/odysseus) | 自托管 AI 工作空间操作系统——chat/agents/研究/文档/邮件/笔记/日历/本地模型九域合一，AGPL-3.0 + 硬件感知 Cookbook | 82,883 | 2026-07-16 | [odysseus-dev-odysseus-深度调研.md](odysseus-dev-odysseus-深度调研.md) |
 | 266 | [`ogulcancelik/herdr`](https://github.com/ogulcancelik/herdr) | 终端原生 AI Agent 多路复用器，状态感知侧边栏+Socket 编排 API+Rust 单二进制 | 9,535 | 2026-07-02 | [ogulcancelik-herdr-深度调研.md](ogulcancelik-herdr-深度调研.md) |
@@ -305,7 +305,7 @@
 | 286 | [`Panniantong/Agent-Reach`](https://github.com/Panniantong/Agent-Reach) | 零 API 费用的 AI Agent 互联网能力脚手架——安装即弃架构，支持 Twitter/B站/小红书等 15+ 平台，4 个月 45K ⭐ | 45,550 | 2026-06-30 | [Panniantong-Agent-Reach-深度调研.md](Panniantong-Agent-Reach-深度调研.md) |
 | 287 | [`paperclipai/paperclip`](https://github.com/paperclipai/paperclip) | OpenClaw Agent 编排控制平面（Node server + React UI）——org charts/预算硬停/governance/heartbeats 治理，monorepo 含 mcp-server/plugins/skills-catalog/teams-catalog，MIT | 76,352 | 2026-08-11 | [paperclipai-paperclip-深度调研.md](paperclipai-paperclip-深度调研.md) |
 | 288 | [`pascalorg/editor`](https://github.com/pascalorg/editor) | 浏览器原生开源 3D 建筑编辑器——R3F+WebGPU，自然语言草模 + 扁平字典数据模型 + npm 引擎可嵌 | 19,452 | 2026-07-30 | [pascalorg-editor-深度调研.md](pascalorg-editor-深度调研.md) |
-| 289 | [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) | — | — | — | [pbakaus-impeccable-深度调研.md](pbakaus-impeccable-深度调研.md) |
+| 289 | [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) | pbakaus 的「设计语言」——确定性反模式检测引擎 + CLI + 浏览器扩展 + 15+ harness 适配层，让 AI 前端告别 AI 味 | 90,291 | 2026-10-28 | [pbakaus-impeccable-深度调研.md](pbakaus-impeccable-深度调研.md) |
 | 290 | [`penpot/penpot`](https://github.com/penpot/penpot) | Penpot — 开源设计平台（MCP Server 打通设计⇄代码） | 58,180 | 2026-08-07 | [penpot-penpot-深度调研.md](penpot-penpot-深度调研.md) |
 | 291 | [`permissionlesstech/bitchat`](https://github.com/permissionlesstech/bitchat) | 去中心化 P2P 加密通讯——蓝牙 mesh + Nostr 双传输，无服务器无账号 | 32,017 | 2026-07-28 | [permissionlesstech-bitchat-深度调研.md](permissionlesstech-bitchat-深度调研.md) |
 | 292 | [`phuryn/pm-skills`](https://github.com/phuryn/pm-skills) | PM 技能市场——100+ 个 Agent Skills、命令和插件，覆盖从发现到策略、执行、发布、增长的 PM 全流程。二、核心分析PM-Skills 是一个 | 17,514 | 2026-06-14 | [phuryn-pm-skills-深度调研.md](phuryn-pm-skills-深度调研.md) |

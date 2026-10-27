@@ -1,8 +1,9 @@
 # affaan-m/ECC 深度调研报告
 
 > **项目定位**: The agent harness performance optimization system — 智能体调度性能优化系统
-> **仓库**: github.com/affaan-m/ECC | **Star**: 226,635 | **Fork**: 34,657 | **License**: MIT
-> **主语言**: JavaScript | **版本**: v2.0.0 | **贡献者**: 230+
+> **仓库**: github.com/affaan-m/ECC | **Star**: 290,665 | **Fork**: 43,059 | **License**: MIT
+> **主语言**: JavaScript | **版本**: v2.2.3（2026-10-01）| **Open Issues**: 259 | **贡献者**: 230+
+> **🔥 2026-10 趋势更新（刷新日 2026-10-28）**：本仓库于 2026-10-28 再登 GitHub Trending 日榜（当日 +1,183）。相比首次调研（2026-07-07，226,635⭐），星标增长约 **28%** 至 290,665⭐，版本由 v2.0.0 推进到 v2.2.3，最后 push 2026-10-26。正文对六大组件（Agents/Skills/Commands/Hooks/Rules/Scripts）与跨 7 harness 适配层的拆解仍有效；v2.2.3 的 Agent/Skill 数量较 v2.0.0 基线（277 Skills / 67 Agents）有扩充，本次仅刷新元数据，未重数组件规模。
 
 ---
 
