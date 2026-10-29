@@ -561,9 +561,12 @@
 | 540 | [`nightly-labs/openbot`](https://github.com/nightly-labs/openbot) | 本地优先桌面工作台——把 Codex/Claude/Grok/OpenCode/Gemini/Cursor/Cline 变常驻 agent 同事，ACP 接入+崩溃安全队列+内嵌浏览器 | 1,336 | 2026-10-27 | [nightly-labs-openbot-深度调研.md](nightly-labs-openbot-深度调研.md) |
 | 541 | [`gitroomhq/postiz-app`](https://github.com/gitroomhq/postiz-app) | 开源可自托管社媒调度平台——16+ 平台，AGPL-3.0，原生 MCP/CLI/多 harness agent 接入 | 38,284 | 2026-10-27 | [gitroomhq-postiz-app-深度调研.md](gitroomhq-postiz-app-深度调研.md) |
 | 542 | [`alchaincyf/huashu-design`](https://github.com/alchaincyf/huashu-design) | HTML-native 设计 Skill——一句话出网页/App 原型/可编辑 PPTX/动画，强制三方向门反 AI slop | 26,656 | 2026-10-27 | [alchaincyf-huashu-design-深度调研.md](alchaincyf-huashu-design-深度调研.md) |
+| 543 | [`FoundationAgents/MetaGPT`](https://github.com/FoundationAgents/MetaGPT) | 多智能体框架——把软件公司 SOP 编码为 LLM 角色协作（PM→架构→工程→QA），ICLR oral，MIT | 71,079 | 2026-10-30 | [FoundationAgents-MetaGPT-深度调研.md](FoundationAgents-MetaGPT-深度调研.md) |
+| 544 | [`CopilotKit/OpenBot`](https://github.com/CopilotKit/OpenBot) | 自托管「AI 同事」平台——AG-UI 协议接入任意 agent，网关 fail-closed+CEL 策略+审计+可接管，MIT | 7,993 | 2026-10-30 | [CopilotKit-OpenBot-深度调研.md](CopilotKit-OpenBot-深度调研.md) |
+| 545 | [`img2threejs/img2threejs`](https://github.com/img2threejs/img2threejs) | 把参考图重建成代码化、质量门控、动画就绪的 Three.js 模型——纯标准库脚本流水线，token 高效，Apache-2.0 | 19,788 | 2026-10-30 | [img2threejs-img2threejs-深度调研.md](img2threejs-img2threejs-深度调研.md) |
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（125）
+### AI Agent / 助手框架（127）
 - [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
 
 - [`makecindy/cindy`](https://github.com/makecindy/cindy) — [makecindy-cindy-深度调研.md](makecindy-cindy-深度调研.md)
@@ -582,6 +585,10 @@
 - [`ifixai-ai/iFixAi`](https://github.com/ifixai-ai/iFixAi) — [ifixai-ai-iFixAi-深度调研.md](ifixai-ai-iFixAi-深度调研.md)
 - [`MadsLorentsen/ai-job-search`](https://github.com/MadsLorentsen/ai-job-search) — [MadsLorentsen-ai-job-search-深度调研.md](MadsLorentsen-ai-job-search-深度调研.md)
 - [`nightly-labs/openbot`](https://github.com/nightly-labs/openbot) — [nightly-labs-openbot-深度调研.md](nightly-labs-openbot-深度调研.md)
+
+- [`FoundationAgents/MetaGPT`](https://github.com/FoundationAgents/MetaGPT) — [FoundationAgents-MetaGPT-深度调研.md](FoundationAgents-MetaGPT-深度调研.md)
+- [`CopilotKit/OpenBot`](https://github.com/CopilotKit/OpenBot) — [CopilotKit-OpenBot-深度调研.md](CopilotKit-OpenBot-深度调研.md)
+
 ### LLM / 推理框架（14）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
@@ -745,7 +752,7 @@
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
 - [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) — [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md)
-### 前端 / 设计 / UI（33）
+### 前端 / 设计 / UI（34）
 - [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
 - [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)
 - [`a2ui-project/a2ui`](https://github.com/a2ui-project/a2ui) — [a2ui-project-a2ui-深度调研.md](a2ui-project-a2ui-深度调研.md)
@@ -755,6 +762,9 @@
 - [`HisMax/RedInk`](https://github.com/HisMax/RedInk) — [HisMax-RedInk-深度调研.md](HisMax-RedInk-深度调研.md)
 - [`mem0ai/mem0-chrome-extension`](https://github.com/mem0ai/mem0-chrome-extension) — [mem0ai-mem0-chrome-extension-深度调研.md](mem0ai-mem0-chrome-extension-深度调研.md)
 - [`bilawalsidhu/gods-eye-view`](https://github.com/bilawalsidhu/gods-eye-view) — [bilawalsidhu-gods-eye-view-深度调研.md](bilawalsidhu-gods-eye-view-深度调研.md)
+
+- [`img2threejs/img2threejs`](https://github.com/img2threejs/img2threejs) — [img2threejs-img2threejs-深度调研.md](img2threejs-img2threejs-深度调研.md)
+
 ### 视频 / 音频 / 多媒体（31）
 - [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
