@@ -985,6 +985,12 @@
 - [`cloudflare/cloudflare-os`](https://github.com/cloudflare/cloudflare-os) — [cloudflare-cloudflare-os-深度调研.md](cloudflare-cloudflare-os-深度调研.md)
 - [`corsairdev/corsair`](https://github.com/corsairdev/corsair) — [corsairdev-corsair-深度调研.md](corsairdev-corsair-深度调研.md)
 - [`NVIDIA/OpenShell`](https://github.com/NVIDIA/OpenShell) — [NVIDIA-OpenShell-深度调研.md](NVIDIA-OpenShell-深度调研.md)
+| 546 | [`wheresryan22/anatomy`](https://github.com/wheresryan22/anatomy) | Agent Skill：把技术概念建成可交互等距 SVG/WebGL 机器图解，零依赖 + 几何审计 | 22,960 | 2026-10-31 | [wheresryan22-anatomy-深度调研.md](wheresryan22-anatomy-深度调研.md) |
+| 547 | [`lightpanda-io/browser`](https://github.com/lightpanda-io/browser) | 从零用 Zig 写的无头浏览器（非 Chromium），面向 AI 自动化，比无头 Chrome 轻 16× / 快 9× | 38,178 | 2026-10-31 | [lightpanda-io-browser-深度调研.md](lightpanda-io-browser-深度调研.md) |
+| 548 | [`macro-inc/macro`](https://github.com/macro-inc/macro) | Rust+SolidJS 一体化团队工作空间，邮件/消息/文档/任务/CRM/Agents 双向图关联 + 团队 AI 记忆 | 5,801 | 2026-10-31 | [macro-inc-macro-深度调研.md](macro-inc-macro-深度调研.md) |
+| 549 | [`mikubaka88/CCFA-Skills`](https://github.com/mikubaka88/CCFA-Skills) | 17 个接力式 skill 家族，把 CCF-A 论文 idea→投稿串成连贯研究故事线 | 3,352 | 2026-10-31 | [mikubaka88-CCFA-Skills-深度调研.md](mikubaka88-CCFA-Skills-深度调研.md) |
+| 550 | [`expo/skills`](https://github.com/expo/skills) | Expo 官方 Agent Skills 集合，封装 Expo/EAS/RN 正确用法，双分发通道 + 内建评测 | 3,844 | 2026-10-31 | [expo-skills-深度调研.md](expo-skills-深度调研.md) |
+
 ## 📝 维护规则
 
 1. 新增调研报告后，必须在本表追加索引行（owner/repo 列点击跳转 GitHub；报告文件列点击打开本地报告）。
