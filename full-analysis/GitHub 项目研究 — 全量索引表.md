@@ -990,6 +990,9 @@
 | 548 | [`macro-inc/macro`](https://github.com/macro-inc/macro) | Rust+SolidJS 一体化团队工作空间，邮件/消息/文档/任务/CRM/Agents 双向图关联 + 团队 AI 记忆 | 5,801 | 2026-10-31 | [macro-inc-macro-深度调研.md](macro-inc-macro-深度调研.md) |
 | 549 | [`mikubaka88/CCFA-Skills`](https://github.com/mikubaka88/CCFA-Skills) | 17 个接力式 skill 家族，把 CCF-A 论文 idea→投稿串成连贯研究故事线 | 3,352 | 2026-10-31 | [mikubaka88-CCFA-Skills-深度调研.md](mikubaka88-CCFA-Skills-深度调研.md) |
 | 550 | [`expo/skills`](https://github.com/expo/skills) | Expo 官方 Agent Skills 集合，封装 Expo/EAS/RN 正确用法，双分发通道 + 内建评测 | 3,844 | 2026-10-31 | [expo-skills-深度调研.md](expo-skills-深度调研.md) |
+| 551 | [`Donchitos/Claude-Code-Game-Studios`](https://github.com/Donchitos/Claude-Code-Game-Studios) | 把单个 Claude Code 会话变成结构化游戏开发工作室：49 Agent / 74 Skill / 15 Hook / 14 路径规则 + 可量化流程档位 | 31,005 | 2026-11-01 | [Donchitos-Claude-Code-Game-Studios-深度调研.md](Donchitos-Claude-Code-Game-Studios-深度调研.md) |
+| 552 | [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) | 开源本地优先的多 Agent 桌面应用：Commander 调度 16 内置专家 + Claude Code/Codex/OpenCode 等 CLI Agent | 6,034 | 2026-11-01 | [Orkas-AI-Orkas-深度调研.md](Orkas-AI-Orkas-深度调研.md) |
+| 553 | [`vorssaint/vorssaint-utils`](https://github.com/vorssaint/vorssaint-utils) | 一个 macOS 菜单栏图标聚合一打付费工具，按应用音量/系统监控/窗口管理/剪贴板/录屏，只装你用的 | 31,775 | 2026-11-01 | [vorssaint-vorssaint-utils-深度调研.md](vorssaint-vorssaint-utils-深度调研.md) |
 
 ## 📝 维护规则
 

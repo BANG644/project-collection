@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 550                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 553                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -136,7 +136,8 @@ github-project-research/
 
 - [`CopilotKit/OpenBot`](https://github.com/CopilotKit/OpenBot) — [CopilotKit-OpenBot-深度调研.md](CopilotKit-OpenBot-深度调研.md)
 
-### D（24）
+### D（25）
+- [`Donchitos/Claude-Code-Game-Studios`](https://github.com/Donchitos/Claude-Code-Game-Studios) — [Donchitos-Claude-Code-Game-Studios-深度调研.md](Donchitos-Claude-Code-Game-Studios-深度调研.md)
 - [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`DayuanJiang/next-ai-draw-io`](https://github.com/DayuanJiang/next-ai-draw-io) — [DayuanJiang-next-ai-draw-io-深度调研.md](DayuanJiang-next-ai-draw-io-深度调研.md)
 - [`DuarteSantos8/openGym`](https://github.com/DuarteSantos8/openGym) — [DuarteSantos8-openGym-深度调研.md](DuarteSantos8-openGym-深度调研.md)
@@ -341,7 +342,8 @@ github-project-research/
 - [`ntdevlabs/tiny11builder`](https://github.com/ntdevlabs/tiny11builder) — [ntdevlabs-tiny11builder-深度调研.md](ntdevlabs-tiny11builder-深度调研.md)
 - [`NVIDIA/OpenShell`](https://github.com/NVIDIA/OpenShell) — [NVIDIA-OpenShell-深度调研.md](NVIDIA-OpenShell-深度调研.md)
 - [`nightly-labs/openbot`](https://github.com/nightly-labs/openbot) — [nightly-labs-openbot-深度调研.md](nightly-labs-openbot-深度调研.md)
-### O（27 个）
+### O（28 个）
+- [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) — [Orkas-AI-Orkas-深度调研.md](Orkas-AI-Orkas-深度调研.md)
 - [`obra/superpowers`](https://github.com/obra/superpowers) — [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md)
 - [`ocornut/imgui`](https://github.com/ocornut/imgui) — [ocornut-imgui-深度调研.md](ocornut-imgui-深度调研.md)
 - [`odysseus-dev/odysseus`](https://github.com/odysseus-dev/odysseus) — [odysseus-dev-odysseus-深度调研.md](odysseus-dev-odysseus-深度调研.md)
@@ -485,7 +487,8 @@ github-project-research/
 - [`usestrix/strix`](https://github.com/usestrix/strix) — [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md)
 - [`UstadMobile/Meshrabiya`](https://github.com/UstadMobile/Meshrabiya) — [UstadMobile-Meshrabiya-深度调研.md](UstadMobile-Meshrabiya-深度调研.md)
 
-### V（19 个）
+### V（20 个）
+- [`vorssaint/vorssaint-utils`](https://github.com/vorssaint/vorssaint-utils) — [vorssaint-vorssaint-utils-深度调研.md](vorssaint-vorssaint-utils-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) — [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md)
 - [`vercel-labs/agent-browser`](https://github.com/vercel-labs/agent-browser) — [vercel-labs-agent-browser-深度调研.md](vercel-labs-agent-browser-深度调研.md)
@@ -544,7 +547,8 @@ github-project-research/
 - [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（126）
+### AI Agent / 助手框架（127）
+- [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) — [Orkas-AI-Orkas-深度调研.md](Orkas-AI-Orkas-深度调研.md)
 - [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
 
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
@@ -581,7 +585,8 @@ github-project-research/
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
 - [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
-### AI 编码 / Skill 技能（63）
+### AI 编码 / Skill 技能（64）
+- [`Donchitos/Claude-Code-Game-Studios`](https://github.com/Donchitos/Claude-Code-Game-Studios) — [Donchitos-Claude-Code-Game-Studios-深度调研.md](Donchitos-Claude-Code-Game-Studios-深度调研.md)
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
 
 - [`wshobson/agents`](https://github.com/wshobson/agents) — [wshobson-agents-深度调研.md](wshobson-agents-深度调研.md)
@@ -808,7 +813,8 @@ github-project-research/
 
 - [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
 - [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) — [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md)
-### 其他（122）
+### 其他（123）
+- [`vorssaint/vorssaint-utils`](https://github.com/vorssaint/vorssaint-utils) — [vorssaint-vorssaint-utils-深度调研.md](vorssaint-vorssaint-utils-深度调研.md)
 - [`twentyhq/twenty`](https://github.com/twentyhq/twenty) — [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md)
 - [`strelov1/freehire`](https://github.com/strelov1/freehire) — [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md)
 - [`nordicsemi/Android-nRF-Mesh-Library`](https://github.com/nordicsemi/Android-nRF-Mesh-Library) — [nordicsemi-Android-nRF-Mesh-Library-深度调研.md](nordicsemi-Android-nRF-Mesh-Library-深度调研.md)
