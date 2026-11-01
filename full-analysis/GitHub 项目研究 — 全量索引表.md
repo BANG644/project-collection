@@ -589,7 +589,7 @@
 - [`FoundationAgents/MetaGPT`](https://github.com/FoundationAgents/MetaGPT) — [FoundationAgents-MetaGPT-深度调研.md](FoundationAgents-MetaGPT-深度调研.md)
 - [`CopilotKit/OpenBot`](https://github.com/CopilotKit/OpenBot) — [CopilotKit-OpenBot-深度调研.md](CopilotKit-OpenBot-深度调研.md)
 
-### LLM / 推理框架（14）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+### LLM / 推理框架（15）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
@@ -603,6 +603,7 @@
 - [`lyogavin/airllm`](https://github.com/lyogavin/airllm) — [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md)
 - [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
+- [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 ### AI 编码 / Skill 技能（62）
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
 
@@ -765,7 +766,7 @@
 
 - [`img2threejs/img2threejs`](https://github.com/img2threejs/img2threejs) — [img2threejs-img2threejs-深度调研.md](img2threejs-img2threejs-深度调研.md)
 
-### 视频 / 音频 / 多媒体（31）
+### 视频 / 音频 / 多媒体（33）
 - [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
@@ -774,12 +775,15 @@
 - [`storytold/artcraft`](https://github.com/storytold/artcraft) — [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md)
 - [`Kruk2/jasna`](https://github.com/Kruk2/jasna) — [Kruk2-jasna-深度调研.md](Kruk2-jasna-深度调研.md)
 - [`OpenBMB/VoxCPM`](https://github.com/OpenBMB/VoxCPM) — [OpenBMB-VoxCPM-深度调研.md](OpenBMB-VoxCPM-深度调研.md)
-### 计算机视觉 / CV（4）
+- [`cjpais/Handy`](https://github.com/cjpais/Handy) — [cjpais-Handy-深度调研.md](cjpais-Handy-深度调研.md)
+- [`anomalyco/hex`](https://github.com/anomalyco/hex) — [anomalyco-hex-深度调研.md](anomalyco-hex-深度调研.md)
+### 计算机视觉 / CV（5）
 - [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) — [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md)
 - [`BIT-DataLab/Edit-Banana`](https://github.com/BIT-DataLab/Edit-Banana) — [BIT-DataLab-Edit-Banana-深度调研.md](BIT-DataLab-Edit-Banana-深度调研.md)
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 - [`Allenk/GeminiWatermarkTool`](https://github.com/Allenk/GeminiWatermarkTool) — [Allenk-GeminiWatermarkTool-深度调研.md](Allenk-GeminiWatermarkTool-深度调研.md)
-### 安全 / 运维 / 系统工具（25）
+- [`kornia/kornia`](https://github.com/kornia/kornia) — [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md)
+### 安全 / 运维 / 系统工具（26）
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
 - [`basecamp/omarchy`](https://github.com/basecamp/omarchy) — [basecamp-omarchy-深度调研.md](basecamp-omarchy-深度调研.md)
@@ -807,6 +811,7 @@
 - [`w4po/ExplorerTabUtility`](https://github.com/w4po/ExplorerTabUtility) — [w4po-ExplorerTabUtility-深度调研.md](w4po-ExplorerTabUtility-深度调研.md)
 - [`perplexityai/bumblebee`](https://github.com/perplexityai/bumblebee) — [perplexityai-bumblebee-深度调研.md](perplexityai-bumblebee-深度调研.md)
 - [`UstadMobile/Meshrabiya`](https://github.com/UstadMobile/Meshrabiya) — [UstadMobile-Meshrabiya-深度调研.md](UstadMobile-Meshrabiya-深度调研.md)
+- [`beenuar/AiSOC`](https://github.com/beenuar/AiSOC) — [beenuar-AiSOC-深度调研.md](beenuar-AiSOC-深度调研.md)
 ### 学习资料 / 方法论（19）
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
@@ -993,6 +998,11 @@
 | 551 | [`Donchitos/Claude-Code-Game-Studios`](https://github.com/Donchitos/Claude-Code-Game-Studios) | 把单个 Claude Code 会话变成结构化游戏开发工作室：49 Agent / 74 Skill / 15 Hook / 14 路径规则 + 可量化流程档位 | 31,005 | 2026-11-01 | [Donchitos-Claude-Code-Game-Studios-深度调研.md](Donchitos-Claude-Code-Game-Studios-深度调研.md) |
 | 552 | [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) | 开源本地优先的多 Agent 桌面应用：Commander 调度 16 内置专家 + Claude Code/Codex/OpenCode 等 CLI Agent | 6,034 | 2026-11-01 | [Orkas-AI-Orkas-深度调研.md](Orkas-AI-Orkas-深度调研.md) |
 | 553 | [`vorssaint/vorssaint-utils`](https://github.com/vorssaint/vorssaint-utils) | 一个 macOS 菜单栏图标聚合一打付费工具，按应用音量/系统监控/窗口管理/剪贴板/录屏，只装你用的 | 31,775 | 2026-11-01 | [vorssaint-vorssaint-utils-深度调研.md](vorssaint-vorssaint-utils-深度调研.md) |
+| 554 | [`cjpais/Handy`](https://github.com/cjpais/Handy) | 离线语音转文字桌面应用（Tauri/Rust + 本地 Whisper/Parakeet，按住说话、松手粘贴） | 36,367 | 2026-11-02 | [cjpais-Handy-深度调研.md](cjpais-Handy-深度调研.md) |
+| 555 | [`beenuar/AiSOC`](https://github.com/beenuar/AiSOC) | 开源 AI SOC——自动调查编排 + Investigation Ledger 防幻觉 + 规则重放验证 | 6,078 | 2026-11-02 | [beenuar-AiSOC-深度调研.md](beenuar-AiSOC-深度调研.md) |
+| 556 | [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) | MoE 推理引擎——q⋆ CPU-GPU 协同调度 + ShadowRadix 分层 KV 缓存 | 15,284 | 2026-11-02 | [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md) |
+| 557 | [`anomalyco/hex`](https://github.com/anomalyco/hex) | 纯本地跨平台语音听写（Tauri/Rust，按住快捷键说话、松手粘贴，零云回传） | 3,024 | 2026-11-02 | [anomalyco-hex-深度调研.md](anomalyco-hex-深度调研.md) |
+| 558 | [`kornia/kornia`](https://github.com/kornia/kornia) | 可微计算机视觉库（PyTorch 原生，warp_perspective 等可微算子，训练/几何一体） | 11,718 | 2026-11-02 | [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md) |
 
 ## 📝 维护规则
 
