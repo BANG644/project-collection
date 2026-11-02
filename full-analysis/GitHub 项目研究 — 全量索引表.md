@@ -1003,6 +1003,9 @@
 | 556 | [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) | MoE 推理引擎——q⋆ CPU-GPU 协同调度 + ShadowRadix 分层 KV 缓存 | 15,284 | 2026-11-02 | [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md) |
 | 557 | [`anomalyco/hex`](https://github.com/anomalyco/hex) | 纯本地跨平台语音听写（Tauri/Rust，按住快捷键说话、松手粘贴，零云回传） | 3,024 | 2026-11-02 | [anomalyco-hex-深度调研.md](anomalyco-hex-深度调研.md) |
 | 558 | [`kornia/kornia`](https://github.com/kornia/kornia) | 可微计算机视觉库（PyTorch 原生，warp_perspective 等可微算子，训练/几何一体） | 11,718 | 2026-11-02 | [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md) |
+| 559 | [`karpathy/nanochat`](https://github.com/karpathy/nanochat) | 极简全栈 ChatGPT 克隆训练/推理教学套件（tokenizer→预训练→SFT→RL→推理→WebUI，约 $100 训出可聊模型，MIT） | 59,761 | 2026-11-03 | [karpathy-nanochat-深度调研.md](karpathy-nanochat-深度调研.md) |
+| 560 | [`D4Vinci/Scrapling`](https://github.com/D4Vinci/Scrapling) | 现代 Python 爬虫一体框架（快速 HTTP/隐身浏览器/自适应解析/并发爬虫 + MCP/Agent Skill） | 92,593 | 2026-11-03 | [D4Vinci-Scrapling-深度调研.md](D4Vinci-Scrapling-深度调研.md) |
+| 561 | [`max-sixty/worktrunk`](https://github.com/max-sixty/worktrunk) | Rust CLI 的 Git worktree 管理器，专为并行 AI Agent 工作流设计（分支寻址/hooks/COW 缓存） | 9,940 | 2026-11-03 | [max-sixty-worktrunk-深度调研.md](max-sixty-worktrunk-深度调研.md) |
 
 ## 📝 维护规则
 
