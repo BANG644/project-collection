@@ -152,7 +152,7 @@ github-project-research/
 - [`EpicGames/raddebugger`](https://github.com/EpicGames/raddebugger) — [EpicGames-raddebugger-深度调研.md](EpicGames-raddebugger-深度调研.md)
 - [`expo/skills`](https://github.com/expo/skills) — [expo-skills-深度调研.md](expo-skills-深度调研.md)
 
-### F（12 个）
+### F（13 个）
 - [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
 - [`facebook/astryx`](https://github.com/facebook/astryx) — [facebook-astryx-深度调研.md](facebook-astryx-深度调研.md)
 - [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) — [farion1231-cc-switch-深度调研.md](farion1231-cc-switch-深度调研.md)
@@ -167,6 +167,7 @@ github-project-research/
 - [`FoundationAgents/MetaGPT`](https://github.com/FoundationAgents/MetaGPT) — [FoundationAgents-MetaGPT-深度调研.md](FoundationAgents-MetaGPT-深度调研.md)
 
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
+- [`floci-io/floci`](https://github.com/floci-io/floci) — [floci-io-floci-深度调研.md](floci-io-floci-深度调研.md)
 ### G（32 个）
 - [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)
 - [`garrytan/gbrain`](https://github.com/garrytan/gbrain) — [garrytan-gbrain-深度调研.md](garrytan-gbrain-深度调研.md)
@@ -488,14 +489,16 @@ github-project-research/
 - [`TanixLu/pyfuze`](https://github.com/TanixLu/pyfuze) — [TanixLu-pyfuze-深度调研.md](TanixLu-pyfuze-深度调研.md)
 - [`Turbo1123/roubao`](https://github.com/Turbo1123/roubao) — [Turbo1123-roubao-深度调研.md](Turbo1123-roubao-深度调研.md)
 - [`tester-army/e2e`](https://github.com/tester-army/e2e) — [tester-army-e2e-深度调研.md](tester-army-e2e-深度调研.md)
-### U（5 个）
+### U（6 个）
 - [`Unclecheng-li/VulnClaw`](https://github.com/Unclecheng-li/VulnClaw) — [Unclecheng-li-VulnClaw-深度调研.md](Unclecheng-li-VulnClaw-深度调研.md)
 - [`unclecode/crawl4ai`](https://github.com/unclecode/crawl4ai) — [unclecode-crawl4ai-深度调研.md](unclecode-crawl4ai-深度调研.md)
 - [`unslothai/unsloth`](https://github.com/unslothai/unsloth) — [unslothai-unsloth-深度调研.md](unslothai-unsloth-深度调研.md)
 - [`usestrix/strix`](https://github.com/usestrix/strix) — [usestrix-strix-深度调研.md](usestrix-strix-深度调研.md)
 - [`UstadMobile/Meshrabiya`](https://github.com/UstadMobile/Meshrabiya) — [UstadMobile-Meshrabiya-深度调研.md](UstadMobile-Meshrabiya-深度调研.md)
 
-### V（20 个）
+- [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) — [Usagi-org-ai-goofish-monitor-深度调研.md](Usagi-org-ai-goofish-monitor-深度调研.md)
+
+### V（21 个）
 - [`vorssaint/vorssaint-utils`](https://github.com/vorssaint/vorssaint-utils) — [vorssaint-vorssaint-utils-深度调研.md](vorssaint-vorssaint-utils-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`VAST-AI-Research/TripoSplat`](https://github.com/VAST-AI-Research/TripoSplat) — [VAST-AI-Research-TripoSplat-深度调研.md](VAST-AI-Research-TripoSplat-深度调研.md)
@@ -517,6 +520,7 @@ github-project-research/
 - [`VoltAgent/awesome-openclaw-skills`](https://github.com/VoltAgent/awesome-openclaw-skills) — [VoltAgent-awesome-openclaw-skills-深度调研.md](VoltAgent-awesome-openclaw-skills-深度调研.md)
 
 - [`vxcontrol/pentagi`](https://github.com/vxcontrol/pentagi) — [vxcontrol-pentagi-深度调研.md](vxcontrol-pentagi-深度调研.md)
+- [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) — [vercel-labs-agent-desktop-深度调研.md](vercel-labs-agent-desktop-深度调研.md)
 ### W（9 个）
 - [`wshobson/agents`](https://github.com/wshobson/agents) — [wshobson-agents-深度调研.md](wshobson-agents-深度调研.md)
 - [`w4po/ExplorerTabUtility`](https://github.com/w4po/ExplorerTabUtility) — [w4po-ExplorerTabUtility-深度调研.md](w4po-ExplorerTabUtility-深度调研.md)
@@ -555,7 +559,9 @@ github-project-research/
 - [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（127）
+### AI Agent / 助手框架（129）
+- [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) — [vercel-labs-agent-desktop-深度调研.md](vercel-labs-agent-desktop-深度调研.md)
+- [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) — [Usagi-org-ai-goofish-monitor-深度调研.md](Usagi-org-ai-goofish-monitor-深度调研.md)
 - [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) — [Orkas-AI-Orkas-深度调研.md](Orkas-AI-Orkas-深度调研.md)
 - [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
 
@@ -682,7 +688,8 @@ github-project-research/
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
 
 - [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
-### 开发工具 / CLI（57）
+### 开发工具 / CLI（58）
+- [`floci-io/floci`](https://github.com/floci-io/floci) — [floci-io-floci-深度调研.md](floci-io-floci-深度调研.md)
 - [`coollabsio/coolify`](https://github.com/coollabsio/coolify) — [coollabsio-coolify-深度调研.md](coollabsio-coolify-深度调研.md)
 
 - [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)

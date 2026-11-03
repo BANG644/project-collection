@@ -1006,6 +1006,9 @@
 | 559 | [`karpathy/nanochat`](https://github.com/karpathy/nanochat) | 极简全栈 ChatGPT 克隆训练/推理教学套件（tokenizer→预训练→SFT→RL→推理→WebUI，约 $100 训出可聊模型，MIT） | 59,761 | 2026-11-03 | [karpathy-nanochat-深度调研.md](karpathy-nanochat-深度调研.md) |
 | 560 | [`D4Vinci/Scrapling`](https://github.com/D4Vinci/Scrapling) | 现代 Python 爬虫一体框架（快速 HTTP/隐身浏览器/自适应解析/并发爬虫 + MCP/Agent Skill） | 92,593 | 2026-11-03 | [D4Vinci-Scrapling-深度调研.md](D4Vinci-Scrapling-深度调研.md) |
 | 561 | [`max-sixty/worktrunk`](https://github.com/max-sixty/worktrunk) | Rust CLI 的 Git worktree 管理器，专为并行 AI Agent 工作流设计（分支寻址/hooks/COW 缓存） | 9,940 | 2026-11-03 | [max-sixty-worktrunk-深度调研.md](max-sixty-worktrunk-深度调研.md) |
+| 562 | [`floci-io/floci`](https://github.com/floci-io/floci) | 免费、无鉴权、本地优先的 AWS 云服务模拟器（LocalStack 平替，Quarkus Native + 真实容器执行） | 28,552 | 2026-11-04 | [floci-io-floci-深度调研.md](floci-io-floci-深度调研.md) |
+| 563 | [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) | 让 AI Agent 通过 OS 无障碍树「看见并操作」桌面应用的计算机使用 CLI（Rust，非截图，ref 契约） | 12,289 | 2026-11-04 | [vercel-labs-agent-desktop-深度调研.md](vercel-labs-agent-desktop-深度调研.md) |
+| 564 | [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) | 基于 Playwright + 多模态 AI 的闲鱼多任务实时监控系统（画像优先判断，FastAPI+SQLite） | 16,302 | 2026-11-04 | [Usagi-org-ai-goofish-monitor-深度调研.md](Usagi-org-ai-goofish-monitor-深度调研.md) |
 
 ## 📝 维护规则
 
