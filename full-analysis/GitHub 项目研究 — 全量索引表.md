@@ -589,7 +589,7 @@
 - [`FoundationAgents/MetaGPT`](https://github.com/FoundationAgents/MetaGPT) — [FoundationAgents-MetaGPT-深度调研.md](FoundationAgents-MetaGPT-深度调研.md)
 - [`CopilotKit/OpenBot`](https://github.com/CopilotKit/OpenBot) — [CopilotKit-OpenBot-深度调研.md](CopilotKit-OpenBot-深度调研.md)
 
-### LLM / 推理框架（15）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+### LLM / 推理框架（16）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
@@ -604,7 +604,8 @@
 - [`microsoft/BitNet`](https://github.com/microsoft/BitNet) — [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md)
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
-### AI 编码 / Skill 技能（62）
+- [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
+### AI 编码 / Skill 技能（63）
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
 
 - [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) — [google-gemini-gemini-cli-深度调研.md](google-gemini-gemini-cli-深度调研.md)
@@ -668,6 +669,7 @@
 - [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) — [anthropics-knowledge-work-plugins-深度调研.md](anthropics-knowledge-work-plugins-深度调研.md)
 - [`mksglu/context-mode`](https://github.com/mksglu/context-mode) — [mksglu-context-mode-深度调研.md](mksglu-context-mode-深度调研.md)
 - [`alchaincyf/huashu-design`](https://github.com/alchaincyf/huashu-design) — [alchaincyf-huashu-design-深度调研.md](alchaincyf-huashu-design-深度调研.md)
+- [`The-PR-Agent/pr-agent`](https://github.com/The-PR-Agent/pr-agent) — [The-PR-Agent-pr-agent-深度调研.md](The-PR-Agent-pr-agent-深度调研.md)
 ### RAG / 知识库 / 记忆（21）- [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
 - [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory) — [akitaonrails-ai-memory-深度调研.md](akitaonrails-ai-memory-深度调研.md)
@@ -980,7 +982,7 @@
 - [`morluto/rea`](https://github.com/morluto/rea) — [morluto-rea-深度调研.md](morluto-rea-深度调研.md)
 - [`boykopovar/AnyPS5`](https://github.com/boykopovar/AnyPS5) — [boykopovar-AnyPS5-深度调研.md](boykopovar-AnyPS5-深度调研.md)
 - [`vxcontrol/pentagi`](https://github.com/vxcontrol/pentagi) — [vxcontrol-pentagi-深度调研.md](vxcontrol-pentagi-深度调研.md)
-### AI Agent / LLM 基础设施（8）
+### AI Agent / LLM 基础设施（9）
 - [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) — [ranxianglei-billion-context-深度调研.md](ranxianglei-billion-context-深度调研.md)
 - [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — [BerriAI-litellm-深度调研.md](BerriAI-litellm-深度调研.md)
 - [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
@@ -1009,6 +1011,11 @@
 | 562 | [`floci-io/floci`](https://github.com/floci-io/floci) | 免费、无鉴权、本地优先的 AWS 云服务模拟器（LocalStack 平替，Quarkus Native + 真实容器执行） | 28,552 | 2026-11-04 | [floci-io-floci-深度调研.md](floci-io-floci-深度调研.md) |
 | 563 | [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) | 让 AI Agent 通过 OS 无障碍树「看见并操作」桌面应用的计算机使用 CLI（Rust，非截图，ref 契约） | 12,289 | 2026-11-04 | [vercel-labs-agent-desktop-深度调研.md](vercel-labs-agent-desktop-深度调研.md) |
 | 564 | [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) | 基于 Playwright + 多模态 AI 的闲鱼多任务实时监控系统（画像优先判断，FastAPI+SQLite） | 16,302 | 2026-11-04 | [Usagi-org-ai-goofish-monitor-深度调研.md](Usagi-org-ai-goofish-monitor-深度调研.md) |
+| 565 | [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) | NVIDIA 开源的企业数据语义上下文层——把元数据编译成 ontology，经只读 MCP/CLI/API 交给 agent，为 Text-to-SQL 加「认证定义」防错（Apache-2.0，Python） | 4,514 | 2026-11-05 | [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md) |
+| 566 | [`The-PR-Agent/pr-agent`](https://github.com/The-PR-Agent/pr-agent) | 开源 AI PR 审查 agent 鼻祖（Qodo 社区维护遗产项目）：每 PR 自动 review/改进/描述，支持 GitHub/GitLab/Bitbucket/Azure（MIT，Python） | 14,654 | 2026-11-05 | [The-PR-Agent-pr-agent-深度调研.md](The-PR-Agent-pr-agent-深度调研.md) |
+| 567 | [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) | 176KB 纯 C99 推理引擎，单 CPU+8GB 内存跑通真实 2.78T 参数 Kimi K3（专家 1.45TB 流式读盘，内存仅作调速旋钮，Apache-2.0） | 10,161 | 2026-11-05 | [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md) |
+
+- [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) — [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md)
 
 ## 📝 维护规则
 
@@ -1030,3 +1037,6 @@
 - [`HKUDS/Paper2Slides`](https://github.com/HKUDS/Paper2Slides) — [HKUDS-Paper2Slides-深度调研.md](HKUDS-Paper2Slides-深度调研.md)
 - [`firecrawl/cli`](https://github.com/firecrawl/cli) — [firecrawl-cli-深度调研.md](firecrawl-cli-深度调研.md)
 - [`CursorTouch/Windows-MCP`](https://github.com/CursorTouch/Windows-MCP) — [CursorTouch-Windows-MCP-深度调研.md](CursorTouch-Windows-MCP-深度调研.md)
+- [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) — [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md)
+- [`The-PR-Agent/pr-agent`](https://github.com/The-PR-Agent/pr-agent) — [The-PR-Agent-pr-agent-深度调研.md](The-PR-Agent-pr-agent-深度调研.md)
+- [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
