@@ -255,7 +255,7 @@ github-project-research/
 - [`Kruk2/jasna`](https://github.com/Kruk2/jasna) — [Kruk2-jasna-深度调研.md](Kruk2-jasna-深度调研.md)
 - [`kornia/kornia`](https://github.com/kornia/kornia) — [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md)
 - [`karpathy/nanochat`](https://github.com/karpathy/nanochat) — [karpathy-nanochat-深度调研.md](karpathy-nanochat-深度调研.md)
-### L（28 个）- [`LadybirdBrowser/ladybird`](https://github.com/LadybirdBrowser/ladybird) — [LadybirdBrowser-ladybird-深度调研.md](LadybirdBrowser-ladybird-深度调研.md)
+### L（29 个）- [`LadybirdBrowser/ladybird`](https://github.com/LadybirdBrowser/ladybird) — [LadybirdBrowser-ladybird-深度调研.md](LadybirdBrowser-ladybird-深度调研.md)
 - [`langbot-app/LangBot`](https://github.com/langbot-app/LangBot) — [langbot-app-LangBot-深度调研.md](langbot-app-LangBot-深度调研.md)
 - [`langchain-ai/openwiki`](https://github.com/langchain-ai/openwiki) — [langchain-ai-openwiki-深度调研.md](langchain-ai-openwiki-深度调研.md)
 - [`langgenius/dify`](https://github.com/langgenius/dify) — [langgenius-dify-深度调研.md](langgenius-dify-深度调研.md)
@@ -284,6 +284,8 @@ github-project-research/
 - [`leanprover/lean4`](https://github.com/leanprover/lean4) — [leanprover-lean4-深度调研.md](leanprover-lean4-深度调研.md)
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`lightpanda-io/browser`](https://github.com/lightpanda-io/browser) — [lightpanda-io-browser-深度调研.md](lightpanda-io-browser-深度调研.md)
+- [`lz4/lz4`](https://github.com/lz4/lz4) — [lz4-lz4-深度调研.md](lz4-lz4-深度调研.md)
+
 ### M（46 个）
 - [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)
 - [`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search) — [MadsLorentzen-ai-job-search-深度调研.md](MadsLorentzen-ai-job-search-深度调研.md)
@@ -425,7 +427,7 @@ github-project-research/
 - [`RICHQAQ/PasteMD`](https://github.com/RICHQAQ/PasteMD) — [RICHQAQ-PasteMD-深度调研.md](RICHQAQ-PasteMD-深度调研.md)
 - [`RanFeng/clipsketch-ai`](https://github.com/RanFeng/clipsketch-ai) — [RanFeng-clipsketch-ai-深度调研.md](RanFeng-clipsketch-ai-深度调研.md)
 - [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) — [ranxianglei-billion-context-深度调研.md](ranxianglei-billion-context-深度调研.md)
-### S（33 个）
+### S（34 个）
 - [`strelov1/freehire`](https://github.com/strelov1/freehire) — [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md)
 - [`sansan0/TrendRadar`](https://github.com/sansan0/TrendRadar) — [sansan0-TrendRadar-深度调研.md](sansan0-TrendRadar-深度调研.md)
 - [`santifer/career-ops`](https://github.com/santifer/career-ops) — [santifer-career-ops-深度调研.md](santifer-career-ops-深度调研.md)
@@ -459,6 +461,8 @@ github-project-research/
 - [`Salomondiei08/oh-my-hermes`](https://github.com/Salomondiei08/oh-my-hermes) — [Salomondiei08-oh-my-hermes-深度调研.md](Salomondiei08-oh-my-hermes-深度调研.md)
 - [`SenhorH/tab-labeler`](https://github.com/SenhorH/tab-labeler) — [SenhorH-tab-labeler-深度调研.md](SenhorH-tab-labeler-深度调研.md)
 - [`storytold/artcraft`](https://github.com/storytold/artcraft) — [storytold-artcraft-深度调研.md](storytold-artcraft-深度调研.md)
+- [`scenario-labs/skills`](https://github.com/scenario-labs/skills) — [scenario-labs-skills-深度调研.md](scenario-labs-skills-深度调研.md)
+
 ### T（31 个）
 - [`twentyhq/twenty`](https://github.com/twentyhq/twenty) — [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md)
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
@@ -605,7 +609,7 @@ github-project-research/
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`The-PR-Agent/pr-agent`](https://github.com/The-PR-Agent/pr-agent) — [The-PR-Agent-pr-agent-深度调研.md](The-PR-Agent-pr-agent-深度调研.md)
-### AI 编码 / Skill 技能（65）
+### AI 编码 / Skill 技能（66）
 - [`Donchitos/Claude-Code-Game-Studios`](https://github.com/Donchitos/Claude-Code-Game-Studios) — [Donchitos-Claude-Code-Game-Studios-深度调研.md](Donchitos-Claude-Code-Game-Studios-深度调研.md)
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
 
@@ -671,6 +675,8 @@ github-project-research/
 - [`expo/skills`](https://github.com/expo/skills) — [expo-skills-深度调研.md](expo-skills-深度调研.md)
 - [`mikubaka88/CCFA-Skills`](https://github.com/mikubaka88/CCFA-Skills) — [mikubaka88-CCFA-Skills-深度调研.md](mikubaka88-CCFA-Skills-深度调研.md)
 - [`wheresryan22/anatomy`](https://github.com/wheresryan22/anatomy) — [wheresryan22-anatomy-深度调研.md](wheresryan22-anatomy-深度调研.md)
+- [`scenario-labs/skills`](https://github.com/scenario-labs/skills) — [scenario-labs-skills-深度调研.md](scenario-labs-skills-深度调研.md)
+
 ### RAG / 知识库 / 记忆（21）- [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
 - [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory) — [akitaonrails-ai-memory-深度调研.md](akitaonrails-ai-memory-深度调研.md)
@@ -693,7 +699,7 @@ github-project-research/
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
 
 - [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
-### 开发工具 / CLI（58）
+### 开发工具 / CLI（59）
 - [`floci-io/floci`](https://github.com/floci-io/floci) — [floci-io-floci-深度调研.md](floci-io-floci-深度调研.md)
 - [`coollabsio/coolify`](https://github.com/coollabsio/coolify) — [coollabsio-coolify-深度调研.md](coollabsio-coolify-深度调研.md)
 
@@ -754,6 +760,8 @@ github-project-research/
 - [`lightpanda-io/browser`](https://github.com/lightpanda-io/browser) — [lightpanda-io-browser-深度调研.md](lightpanda-io-browser-深度调研.md)
 - [`D4Vinci/Scrapling`](https://github.com/D4Vinci/Scrapling) — [D4Vinci-Scrapling-深度调研.md](D4Vinci-Scrapling-深度调研.md)
 - [`max-sixty/worktrunk`](https://github.com/max-sixty/worktrunk) — [max-sixty-worktrunk-深度调研.md](max-sixty-worktrunk-深度调研.md)
+- [`lz4/lz4`](https://github.com/lz4/lz4) — [lz4-lz4-深度调研.md](lz4-lz4-深度调研.md)
+
 ### 文档 / 文档工具（3）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)

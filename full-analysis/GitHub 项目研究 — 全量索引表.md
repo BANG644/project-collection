@@ -605,7 +605,7 @@
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
-### AI 编码 / Skill 技能（63）
+### AI 编码 / Skill 技能（64）
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
 
 - [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) — [google-gemini-gemini-cli-深度调研.md](google-gemini-gemini-cli-深度调研.md)
@@ -670,6 +670,8 @@
 - [`mksglu/context-mode`](https://github.com/mksglu/context-mode) — [mksglu-context-mode-深度调研.md](mksglu-context-mode-深度调研.md)
 - [`alchaincyf/huashu-design`](https://github.com/alchaincyf/huashu-design) — [alchaincyf-huashu-design-深度调研.md](alchaincyf-huashu-design-深度调研.md)
 - [`The-PR-Agent/pr-agent`](https://github.com/The-PR-Agent/pr-agent) — [The-PR-Agent-pr-agent-深度调研.md](The-PR-Agent-pr-agent-深度调研.md)
+- [`scenario-labs/skills`](https://github.com/scenario-labs/skills) — [scenario-labs-skills-深度调研.md](scenario-labs-skills-深度调研.md)
+
 ### RAG / 知识库 / 记忆（21）- [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
 - [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory) — [akitaonrails-ai-memory-深度调研.md](akitaonrails-ai-memory-深度调研.md)
@@ -691,7 +693,7 @@
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
 - [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
-### 开发工具 / CLI（54）
+### 开发工具 / CLI（55）
 - [`coollabsio/coolify`](https://github.com/coollabsio/coolify) — [coollabsio-coolify-深度调研.md](coollabsio-coolify-深度调研.md)
 
 - [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
@@ -751,6 +753,8 @@
 - [`EpicGames/raddebugger`](https://github.com/EpicGames/raddebugger) — [EpicGames-raddebugger-深度调研.md](EpicGames-raddebugger-深度调研.md)
 - [`Lakr233/vphone-cli`](https://github.com/Lakr233/vphone-cli) — [Lakr233-vphone-cli-深度调研.md](Lakr233-vphone-cli-深度调研.md)
 - [`majd/ipatool`](https://github.com/majd/ipatool) — [majd-ipatool-深度调研.md](majd-ipatool-深度调研.md)
+- [`lz4/lz4`](https://github.com/lz4/lz4) — [lz4-lz4-深度调研.md](lz4-lz4-深度调研.md)
+
 ### 文档 / 文档工具（3）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
@@ -1014,6 +1018,8 @@
 | 565 | [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) | NVIDIA 开源的企业数据语义上下文层——把元数据编译成 ontology，经只读 MCP/CLI/API 交给 agent，为 Text-to-SQL 加「认证定义」防错（Apache-2.0，Python） | 4,514 | 2026-11-05 | [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md) |
 | 566 | [`The-PR-Agent/pr-agent`](https://github.com/The-PR-Agent/pr-agent) | 开源 AI PR 审查 agent 鼻祖（Qodo 社区维护遗产项目）：每 PR 自动 review/改进/描述，支持 GitHub/GitLab/Bitbucket/Azure（MIT，Python） | 14,654 | 2026-11-05 | [The-PR-Agent-pr-agent-深度调研.md](The-PR-Agent-pr-agent-深度调研.md) |
 | 567 | [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) | 176KB 纯 C99 推理引擎，单 CPU+8GB 内存跑通真实 2.78T 参数 Kimi K3（专家 1.45TB 流式读盘，内存仅作调速旋钮，Apache-2.0） | 10,161 | 2026-11-05 | [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md) |
+| 568 | [`lz4/lz4`](https://github.com/lz4/lz4) | LZ4 无损压缩算法官方参考实现——极速压缩/解压（C 库+CLI，解码仅 memcpy 级，被 Linux 内核/ZFS/MongoDB/Spark 等广泛采用），2-clause BSD | 12,322 | 2026-11-06 | [lz4-lz4-深度调研.md](lz4-lz4-深度调研.md) |
+| 569 | [`scenario-labs/skills`](https://github.com/scenario-labs/skills) | Scenario 出品的生产级 AI 媒体生成 Agent Skills 集合——经 Scenario MCP 出图/视频/音频/3D 并保证角色与品牌一致性，MIT | 2,931 | 2026-11-06 | [scenario-labs-skills-深度调研.md](scenario-labs-skills-深度调研.md) |
 
 - [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) — [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md)
 
