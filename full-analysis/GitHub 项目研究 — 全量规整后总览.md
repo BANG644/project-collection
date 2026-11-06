@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 561                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 572                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -333,7 +333,7 @@ github-project-research/
 - [`macro-inc/macro`](https://github.com/macro-inc/macro) — [macro-inc-macro-深度调研.md](macro-inc-macro-深度调研.md)
 - [`mikubaka88/CCFA-Skills`](https://github.com/mikubaka88/CCFA-Skills) — [mikubaka88-CCFA-Skills-深度调研.md](mikubaka88-CCFA-Skills-深度调研.md)
 - [`max-sixty/worktrunk`](https://github.com/max-sixty/worktrunk) — [max-sixty-worktrunk-深度调研.md](max-sixty-worktrunk-深度调研.md)
-### N（21 个）
+### N（22 个）
 - [`n8n-io/n8n`](https://github.com/n8n-io/n8n) — [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md)
 - [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram) — [nagisanzenin-engram-深度调研.md](nagisanzenin-engram-深度调研.md)
 - [`NanmiCoder/MediaCrawler`](https://github.com/NanmiCoder/MediaCrawler) — [NanmiCoder-MediaCrawler-深度调研.md](NanmiCoder-MediaCrawler-深度调研.md)
@@ -355,6 +355,7 @@ github-project-research/
 - [`NVIDIA/OpenShell`](https://github.com/NVIDIA/OpenShell) — [NVIDIA-OpenShell-深度调研.md](NVIDIA-OpenShell-深度调研.md)
 - [`nightly-labs/openbot`](https://github.com/nightly-labs/openbot) — [nightly-labs-openbot-深度调研.md](nightly-labs-openbot-深度调研.md)
 - [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) — [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md)
+- [`nushell/nushell`](https://github.com/nushell/nushell) — [nushell-nushell-深度调研.md](nushell-nushell-深度调研.md)
 ### O（28 个）
 - [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) — [Orkas-AI-Orkas-深度调研.md](Orkas-AI-Orkas-深度调研.md)
 - [`obra/superpowers`](https://github.com/obra/superpowers) — [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md)
@@ -404,7 +405,7 @@ github-project-research/
 - [`PrimeIntellect-ai/prime-agent`](https://github.com/PrimeIntellect-ai/prime-agent) — [PrimeIntellect-ai-prime-agent-深度调研.md](PrimeIntellect-ai-prime-agent-深度调研.md)
 - [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) — [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md)
 - [`popstas/telegram-download-chat`](https://github.com/popstas/telegram-download-chat) — [popstas-telegram-download-chat-深度调研.md](popstas-telegram-download-chat-深度调研.md)
-### R（21 个）
+### R（22 个）
 - [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) — [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md)
 - [`raiyanyahya/recall`](https://github.com/raiyanyahya/recall) — [raiyanyahya-recall-深度调研.md](raiyanyahya-recall-深度调研.md)
 - [`ramensoftware/windhawk`](https://github.com/ramensoftware/windhawk) — [ramensoftware-windhawk-深度调研.md](ramensoftware-windhawk-深度调研.md)
@@ -427,6 +428,7 @@ github-project-research/
 - [`RICHQAQ/PasteMD`](https://github.com/RICHQAQ/PasteMD) — [RICHQAQ-PasteMD-深度调研.md](RICHQAQ-PasteMD-深度调研.md)
 - [`RanFeng/clipsketch-ai`](https://github.com/RanFeng/clipsketch-ai) — [RanFeng-clipsketch-ai-深度调研.md](RanFeng-clipsketch-ai-深度调研.md)
 - [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) — [ranxianglei-billion-context-深度调研.md](ranxianglei-billion-context-深度调研.md)
+- [`astral-sh/ruff`](https://github.com/astral-sh/ruff) — [astral-sh-ruff-深度调研.md](astral-sh-ruff-深度调研.md)
 ### S（34 个）
 - [`strelov1/freehire`](https://github.com/strelov1/freehire) — [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md)
 - [`sansan0/TrendRadar`](https://github.com/sansan0/TrendRadar) — [sansan0-TrendRadar-深度调研.md](sansan0-TrendRadar-深度调研.md)
@@ -556,7 +558,7 @@ github-project-research/
 - [`yzfly/Awesome-MCP-ZH`](https://github.com/yzfly/Awesome-MCP-ZH) — [yzfly-Awesome-MCP-ZH-深度调研.md](yzfly-Awesome-MCP-ZH-深度调研.md)
 
 - [`yikart/AiToEarn`](https://github.com/yikart/AiToEarn) — [yikart-AiToEarn-深度调研.md](yikart-AiToEarn-深度调研.md)
-### Z（6 个）
+### Z（7 个）
 - [`Zackriya-Solutions/meetily`](https://github.com/Zackriya-Solutions/meetily) — [Zackriya-Solutions-meetily-深度调研.md](Zackriya-Solutions-meetily-深度调研.md)
 - [`zai-org/GLM-5`](https://github.com/zai-org/GLM-5) — [zai-org-GLM-5-深度调研.md](zai-org-GLM-5-深度调研.md)
 - [`zai-org/Open-AutoGLM`](https://github.com/zai-org/Open-AutoGLM) — [zai-org-Open-AutoGLM-深度调研.md](zai-org-Open-AutoGLM-深度调研.md)
@@ -564,6 +566,7 @@ github-project-research/
 - [`ZhuLinsen/daily_stock_analysis`](https://github.com/ZhuLinsen/daily_stock_analysis) — [ZhuLinsen-daily_stock_analysis-深度调研.md](ZhuLinsen-daily_stock_analysis-深度调研.md)
 
 - [`zhinianboke/xianyu-auto-reply`](https://github.com/zhinianboke/xianyu-auto-reply) — [zhinianboke-xianyu-auto-reply-深度调研.md](zhinianboke-xianyu-auto-reply-深度调研.md)
+- [`zed-industries/zed`](https://github.com/zed-industries/zed) — [zed-industries-zed-深度调研.md](zed-industries-zed-深度调研.md)
 ## 🏷️ 按技术领域分类
 
 ### AI Agent / 助手框架（129）
@@ -699,7 +702,7 @@ github-project-research/
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
 
 - [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
-### 开发工具 / CLI（59）
+### 开发工具 / CLI（62）
 - [`floci-io/floci`](https://github.com/floci-io/floci) — [floci-io-floci-深度调研.md](floci-io-floci-深度调研.md)
 - [`coollabsio/coolify`](https://github.com/coollabsio/coolify) — [coollabsio-coolify-深度调研.md](coollabsio-coolify-深度调研.md)
 
@@ -762,6 +765,9 @@ github-project-research/
 - [`max-sixty/worktrunk`](https://github.com/max-sixty/worktrunk) — [max-sixty-worktrunk-深度调研.md](max-sixty-worktrunk-深度调研.md)
 - [`lz4/lz4`](https://github.com/lz4/lz4) — [lz4-lz4-深度调研.md](lz4-lz4-深度调研.md)
 
+- [`zed-industries/zed`](https://github.com/zed-industries/zed) — [zed-industries-zed-深度调研.md](zed-industries-zed-深度调研.md)
+- [`astral-sh/ruff`](https://github.com/astral-sh/ruff) — [astral-sh-ruff-深度调研.md](astral-sh-ruff-深度调研.md)
+- [`nushell/nushell`](https://github.com/nushell/nushell) — [nushell-nushell-深度调研.md](nushell-nushell-深度调研.md)
 ### 文档 / 文档工具（3）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)

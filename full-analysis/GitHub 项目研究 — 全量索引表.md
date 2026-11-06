@@ -693,7 +693,7 @@
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
 - [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
-### 开发工具 / CLI（55）
+### 开发工具 / CLI（58）
 - [`coollabsio/coolify`](https://github.com/coollabsio/coolify) — [coollabsio-coolify-深度调研.md](coollabsio-coolify-深度调研.md)
 
 - [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
@@ -755,6 +755,9 @@
 - [`majd/ipatool`](https://github.com/majd/ipatool) — [majd-ipatool-深度调研.md](majd-ipatool-深度调研.md)
 - [`lz4/lz4`](https://github.com/lz4/lz4) — [lz4-lz4-深度调研.md](lz4-lz4-深度调研.md)
 
+- [`zed-industries/zed`](https://github.com/zed-industries/zed) — [zed-industries-zed-深度调研.md](zed-industries-zed-深度调研.md)
+- [`astral-sh/ruff`](https://github.com/astral-sh/ruff) — [astral-sh-ruff-深度调研.md](astral-sh-ruff-深度调研.md)
+- [`nushell/nushell`](https://github.com/nushell/nushell) — [nushell-nushell-深度调研.md](nushell-nushell-深度调研.md)
 ### 文档 / 文档工具（3）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
@@ -1020,6 +1023,9 @@
 | 567 | [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) | 176KB 纯 C99 推理引擎，单 CPU+8GB 内存跑通真实 2.78T 参数 Kimi K3（专家 1.45TB 流式读盘，内存仅作调速旋钮，Apache-2.0） | 10,161 | 2026-11-05 | [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md) |
 | 568 | [`lz4/lz4`](https://github.com/lz4/lz4) | LZ4 无损压缩算法官方参考实现——极速压缩/解压（C 库+CLI，解码仅 memcpy 级，被 Linux 内核/ZFS/MongoDB/Spark 等广泛采用），2-clause BSD | 12,322 | 2026-11-06 | [lz4-lz4-深度调研.md](lz4-lz4-深度调研.md) |
 | 569 | [`scenario-labs/skills`](https://github.com/scenario-labs/skills) | Scenario 出品的生产级 AI 媒体生成 Agent Skills 集合——经 Scenario MCP 出图/视频/音频/3D 并保证角色与品牌一致性，MIT | 2,931 | 2026-11-06 | [scenario-labs-skills-深度调研.md](scenario-labs-skills-深度调研.md) |
+| 570 | [`zed-industries/zed`](https://github.com/zed-industries/zed) | 由 Atom/Tree-sitter 原班团队打造的高性能多人协作代码编辑器——自研 GPUI(Rust) retained-mode UI + CRDT 协作 + 内建 AI Agent，GPL-3.0 | 93,374 | 2026-11-07 | [zed-industries-zed-深度调研.md](zed-industries-zed-深度调研.md) |
+| 571 | [`astral-sh/ruff`](https://github.com/astral-sh/ruff) | Astral 出品极速 Python linter+formatter——Rust 单二进制，10-100x 快于 Flake8/Black，自研解析器+规则命名空间注册表，MIT | 50,572 | 2026-11-07 | [astral-sh-ruff-深度调研.md](astral-sh-ruff-深度调研.md) |
+| 572 | [`nushell/nushell`](https://github.com/nushell/nushell) | 「A new type of shell」——管道流动结构化 Value 而非文本，IR 求值引擎 + Span 溯源 + 可插拔命令注册，MIT | 40,877 | 2026-11-07 | [nushell-nushell-深度调研.md](nushell-nushell-深度调研.md) |
 
 - [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) — [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md)
 
