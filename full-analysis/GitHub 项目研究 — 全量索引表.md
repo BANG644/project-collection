@@ -566,7 +566,7 @@
 | 545 | [`img2threejs/img2threejs`](https://github.com/img2threejs/img2threejs) | 把参考图重建成代码化、质量门控、动画就绪的 Three.js 模型——纯标准库脚本流水线，token 高效，Apache-2.0 | 19,788 | 2026-10-30 | [img2threejs-img2threejs-深度调研.md](img2threejs-img2threejs-深度调研.md) |
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（127）
+### AI Agent / 助手框架（128）
 - [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
 
 - [`makecindy/cindy`](https://github.com/makecindy/cindy) — [makecindy-cindy-深度调研.md](makecindy-cindy-深度调研.md)
@@ -589,6 +589,7 @@
 - [`FoundationAgents/MetaGPT`](https://github.com/FoundationAgents/MetaGPT) — [FoundationAgents-MetaGPT-深度调研.md](FoundationAgents-MetaGPT-深度调研.md)
 - [`CopilotKit/OpenBot`](https://github.com/CopilotKit/OpenBot) — [CopilotKit-OpenBot-深度调研.md](CopilotKit-OpenBot-深度调研.md)
 
+- [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) — [milind-soni-OpenMausBot-深度调研.md](milind-soni-OpenMausBot-深度调研.md)
 ### LLM / 推理框架（16）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
@@ -605,7 +606,7 @@
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
-### AI 编码 / Skill 技能（64）
+### AI 编码 / Skill 技能（65）
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
 
 - [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) — [google-gemini-gemini-cli-深度调研.md](google-gemini-gemini-cli-深度调研.md)
@@ -672,6 +673,7 @@
 - [`The-PR-Agent/pr-agent`](https://github.com/The-PR-Agent/pr-agent) — [The-PR-Agent-pr-agent-深度调研.md](The-PR-Agent-pr-agent-深度调研.md)
 - [`scenario-labs/skills`](https://github.com/scenario-labs/skills) — [scenario-labs-skills-深度调研.md](scenario-labs-skills-深度调研.md)
 
+- [`jakubkrehel/skills`](https://github.com/jakubkrehel/skills) — [jakubkrehel-skills-深度调研.md](jakubkrehel-skills-深度调研.md)
 ### RAG / 知识库 / 记忆（21）- [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
 - [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory) — [akitaonrails-ai-memory-深度调研.md](akitaonrails-ai-memory-深度调研.md)
@@ -762,7 +764,7 @@
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
 - [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) — [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md)
-### 前端 / 设计 / UI（34）
+### 前端 / 设计 / UI（35）
 - [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
 - [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)
 - [`a2ui-project/a2ui`](https://github.com/a2ui-project/a2ui) — [a2ui-project-a2ui-深度调研.md](a2ui-project-a2ui-深度调研.md)
@@ -775,6 +777,7 @@
 
 - [`img2threejs/img2threejs`](https://github.com/img2threejs/img2threejs) — [img2threejs-img2threejs-深度调研.md](img2threejs-img2threejs-深度调研.md)
 
+- [`meta/astryx`](https://github.com/meta/astryx) — [meta-astryx-深度调研.md](meta-astryx-深度调研.md)
 ### 视频 / 音频 / 多媒体（33）
 - [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
@@ -792,7 +795,7 @@
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 - [`Allenk/GeminiWatermarkTool`](https://github.com/Allenk/GeminiWatermarkTool) — [Allenk-GeminiWatermarkTool-深度调研.md](Allenk-GeminiWatermarkTool-深度调研.md)
 - [`kornia/kornia`](https://github.com/kornia/kornia) — [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md)
-### 安全 / 运维 / 系统工具（26）
+### 安全 / 运维 / 系统工具（27）
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
 - [`basecamp/omarchy`](https://github.com/basecamp/omarchy) — [basecamp-omarchy-深度调研.md](basecamp-omarchy-深度调研.md)
@@ -821,6 +824,7 @@
 - [`perplexityai/bumblebee`](https://github.com/perplexityai/bumblebee) — [perplexityai-bumblebee-深度调研.md](perplexityai-bumblebee-深度调研.md)
 - [`UstadMobile/Meshrabiya`](https://github.com/UstadMobile/Meshrabiya) — [UstadMobile-Meshrabiya-深度调研.md](UstadMobile-Meshrabiya-深度调研.md)
 - [`beenuar/AiSOC`](https://github.com/beenuar/AiSOC) — [beenuar-AiSOC-深度调研.md](beenuar-AiSOC-深度调研.md)
+- [`sherlock-project/sherlock`](https://github.com/sherlock-project/sherlock) — [sherlock-project-sherlock-深度调研.md](sherlock-project-sherlock-深度调研.md)
 ### 学习资料 / 方法论（19）
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
@@ -1026,6 +1030,10 @@
 | 570 | [`zed-industries/zed`](https://github.com/zed-industries/zed) | 由 Atom/Tree-sitter 原班团队打造的高性能多人协作代码编辑器——自研 GPUI(Rust) retained-mode UI + CRDT 协作 + 内建 AI Agent，GPL-3.0 | 93,374 | 2026-11-07 | [zed-industries-zed-深度调研.md](zed-industries-zed-深度调研.md) |
 | 571 | [`astral-sh/ruff`](https://github.com/astral-sh/ruff) | Astral 出品极速 Python linter+formatter——Rust 单二进制，10-100x 快于 Flake8/Black，自研解析器+规则命名空间注册表，MIT | 50,572 | 2026-11-07 | [astral-sh-ruff-深度调研.md](astral-sh-ruff-深度调研.md) |
 | 572 | [`nushell/nushell`](https://github.com/nushell/nushell) | 「A new type of shell」——管道流动结构化 Value 而非文本，IR 求值引擎 + Span 溯源 + 可插拔命令注册，MIT | 40,877 | 2026-11-07 | [nushell-nushell-深度调研.md](nushell-nushell-深度调研.md) |
+| 573 | [`meta/astryx`](https://github.com/meta/astryx) | Meta 八年沉淀并开源的设计系统——React19+StyleX，150+ 无障碍组件、品牌级主题、agent-ready，MIT | 14,332 | 2026-11-08 | [meta-astryx-深度调研.md](meta-astryx-深度调研.md) |
+| 574 | [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) | Grok Bot 等闭源产品的开源替代——多 agent 团队 + 隔离 Local VM + 权限经纪，Apache-2.0 | 16,760 | 2026-11-08 | [milind-soni-OpenMausBot-深度调研.md](milind-soni-OpenMausBot-深度调研.md) |
+| 575 | [`jakubkrehel/skills`](https://github.com/jakubkrehel/skills) | 面向「构建优秀界面」的 agent skills 集合（marketplace interfaces）——原则+验证+报告，MIT | 11,457 | 2026-11-08 | [jakubkrehel-skills-深度调研.md](jakubkrehel-skills-深度调研.md) |
+| 576 | [`sherlock-project/sherlock`](https://github.com/sherlock-project/sherlock) | 跨 400+ 社交网络按用户名追溯账号的 OSINT 利器——数据驱动、异步并发，MIT | 100,128 | 2026-11-08 | [sherlock-project-sherlock-深度调研.md](sherlock-project-sherlock-深度调研.md) |
 
 - [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) — [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md)
 
