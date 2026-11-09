@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 576                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 580                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -202,7 +202,8 @@ github-project-research/
 - [`gsd-build/get-shit-done`](https://github.com/gsd-build/get-shit-done) — [gsd-build-get-shit-done-深度调研.md](gsd-build-get-shit-done-深度调研.md)
 - [`GBSOSS/skill-from-masters`](https://github.com/GBSOSS/skill-from-masters) — [GBSOSS-skill-from-masters-深度调研.md](GBSOSS-skill-from-masters-深度调研.md)
 - [`gitroomhq/postiz-app`](https://github.com/gitroomhq/postiz-app) — [gitroomhq-postiz-app-深度调研.md](gitroomhq-postiz-app-深度调研.md)
-### H（22）
+### H（23）
+- [`homeassistant-ai/ha-mcp`](https://github.com/homeassistant-ai/ha-mcp) — [homeassistant-ai-ha-mcp-深度调研.md](homeassistant-ai-ha-mcp-深度调研.md)
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
 - [`HisMax/RedInk`](https://github.com/HisMax/RedInk) — [HisMax-RedInk-深度调研.md](HisMax-RedInk-深度调研.md)
@@ -576,7 +577,8 @@ github-project-research/
 - [`zed-industries/zed`](https://github.com/zed-industries/zed) — [zed-industries-zed-深度调研.md](zed-industries-zed-深度调研.md)
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（130）
+### AI Agent / 助手框架（131）
+- [`homeassistant-ai/ha-mcp`](https://github.com/homeassistant-ai/ha-mcp) — [homeassistant-ai-ha-mcp-深度调研.md](homeassistant-ai-ha-mcp-深度调研.md)
 - [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) — [vercel-labs-agent-desktop-深度调研.md](vercel-labs-agent-desktop-深度调研.md)
 - [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) — [Usagi-org-ai-goofish-monitor-深度调研.md](Usagi-org-ai-goofish-monitor-深度调研.md)
 - [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) — [Orkas-AI-Orkas-深度调研.md](Orkas-AI-Orkas-深度调研.md)

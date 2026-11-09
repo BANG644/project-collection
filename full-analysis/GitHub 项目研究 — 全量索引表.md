@@ -13,10 +13,6 @@
 
 | # | owner/repo | 一句话定位 | Stars | 调研日期 | 报告文件 |
 |---|-----------|-----------|-------|---------|---------|
-
-
-
-
 | 1 | [`0xNyk/council-of-high-intelligence`](https://github.com/0xNyk/council-of-high-intelligence) | 18 AI 历史名人群组辩论系统——跨 6+LLM 提供商的结构化决策辩论，7 步仪式化协议+防假共识加权投票 | 1,823 | 2026-06-30 | [0xNyk-council-of-high-intelligence-深度调研.md](0xNyk-council-of-high-intelligence-深度调研.md) |
 | 2 | [`1jehuang/jcode`](https://github.com/1jehuang/jcode) | 最轻量 Rust 编码 Agent Harness——27.8MB 内存 + Ambient 常驻多会话 + 生产级 Loop 模块化 | 10,207 | 2026-07-22 | [1jehuang-jcode-深度调研.md](1jehuang-jcode-深度调研.md) |
 | 3 | [`1Panel-dev/1Panel`](https://github.com/1Panel-dev/1Panel) | — | 35,830 | 2026-06-10 | [1Panel-dev-1Panel-深度调研.md](1Panel-dev-1Panel-深度调研.md) |
@@ -529,7 +525,6 @@
 | 510 | [`lyogavin/airllm`](https://github.com/lyogavin/airllm) | 逐层流式卸载，让 70B+ 大模型在单张 4GB 显卡上推理（无需量化/蒸馏/剪枝），并支持小显存训练 | 36,312 | 2026-10-12 | [lyogavin-airllm-深度调研.md](lyogavin-airllm-深度调研.md) |
 | 511 | [`bilawalsidhu/gods-eye-view`](https://github.com/bilawalsidhu/gods-eye-view) | 浏览器内「上帝视角」实时空间情报地球——融合公开航班/船舶/卫星/摄像头等真实信号，支持语音 AI 操控 | 51,281 | 2026-10-12 | [bilawalsidhu-gods-eye-view-深度调研.md](bilawalsidhu-gods-eye-view-深度调研.md) |
 | 512 | [`mvschwarz/openrig`](https://github.com/mvschwarz/openrig) | 本地 tmux 把 Claude Code/Codex/Pi 等 agent 编排成持久化多 agent 团队的开源 harness（YAML 拓扑 + TUI/MCP） | 6,911 | 2026-10-12 | [mvschwarz-openrig-深度调研.md](mvschwarz-openrig-深度调研.md) |
-
 | 513 | [microsoft/BitNet](https://github.com/microsoft/BitNet) | 微软官方 1-bit（BitNet b1.58 三值）大模型推理框架 bitnet.cpp——CPU/GPU 无损极速本地/边缘推理 | 40,830 | 2026-10-13 | [microsoft-BitNet-深度调研.md](microsoft-BitNet-深度调研.md) |
 | 514 | [open-webui/open-webui](https://github.com/open-webui/open-webui) | 自托管、可完全离线的 AI 平台——provider 无关的聊天/Agents/RAG/工具一体化界面（FastAPI+Svelte） | 154,772 | 2026-10-13 | [open-webui-open-webui-深度调研.md](open-webui-open-webui-深度调研.md) |
 | 515 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 完全本地运行的开源 ElevenLabs 替代品——语音克隆/声音设计/视频配音/听写/转写/有声书，覆盖 646 语言，多引擎+Agent MCP | 62,600 | 2026-10-14 | [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md) |
@@ -551,7 +546,6 @@
 | 531 | [`strelov1/freehire`](https://github.com/strelov1/freehire) | 自托管开源求职搜索引擎——直接从 124 ATS + 97 Telegram + 公司官网抓取 3.3M+ 实时职位，单一 schema 去重 + Meilisearch 分面检索 + 确定性 CV↔职位评分 + 内置 agent | 2,253 | 2026-10-22 | [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md) |
 | 532 | [`NVIDIA/OpenShell`](https://github.com/NVIDIA/OpenShell) | NVIDIA 出品、内核级隔离 + Z3 形式化验证的自主 AI Agent 安全私有运行时——让 agent 碰真实文件/API/凭据却不泄露数据密钥，Apache-2.0 | 18,624 | 2026-10-24 | [NVIDIA-OpenShell-深度调研.md](NVIDIA-OpenShell-深度调研.md) |
 | 533 | [`OpenBMB/VoxCPM`](https://github.com/OpenBMB/VoxCPM) | OpenBMB 开源无分词器 TTS——端到端扩散自回归直接生成连续语音，2B/30 语/48kHz/语音设计+可控克隆，Apache-2.0 可商用 | 40,157 | 2026-10-24 | [OpenBMB-VoxCPM-深度调研.md](OpenBMB-VoxCPM-深度调研.md) |
-
 | 534 | [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) | Google 官方开源终端 AI Agent——代码理解/生成、Shell 自动化、MCP+A2A 扩展、多模型认证，Apache-2.0（2026-06 起官方主推 Antigravity CLI） | 107,885 | 2026-10-25 | [google-gemini-gemini-cli-深度调研.md](google-gemini-gemini-cli-深度调研.md) |
 | 535 | [`pollen-robotics/microduck`](https://github.com/pollen-robotics/microduck) | Pollen Robotics 开源双足小鸭机器人「大脑」——Rust 守护进程 50Hz 控制 15 舵机跑 RL 步态，签名更新+自动回滚，Apache-2.0 | 10,847 | 2026-10-25 | [pollen-robotics-microduck-深度调研.md](pollen-robotics-microduck-深度调研.md) |
 | 536 | [`makecindy/cindy`](https://github.com/makecindy/cindy) | 开箱即用的开源 AI Agent 客户端——统一 Claude Code/Codex 多 harness+多模型，记忆/技能跨 harness 连续，Orca 多 agent 编排，Apache-2.0 | 3,978 | 2026-10-25 | [makecindy-cindy-深度调研.md](makecindy-cindy-深度调研.md) |
@@ -564,9 +558,51 @@
 | 543 | [`FoundationAgents/MetaGPT`](https://github.com/FoundationAgents/MetaGPT) | 多智能体框架——把软件公司 SOP 编码为 LLM 角色协作（PM→架构→工程→QA），ICLR oral，MIT | 71,079 | 2026-10-30 | [FoundationAgents-MetaGPT-深度调研.md](FoundationAgents-MetaGPT-深度调研.md) |
 | 544 | [`CopilotKit/OpenBot`](https://github.com/CopilotKit/OpenBot) | 自托管「AI 同事」平台——AG-UI 协议接入任意 agent，网关 fail-closed+CEL 策略+审计+可接管，MIT | 7,993 | 2026-10-30 | [CopilotKit-OpenBot-深度调研.md](CopilotKit-OpenBot-深度调研.md) |
 | 545 | [`img2threejs/img2threejs`](https://github.com/img2threejs/img2threejs) | 把参考图重建成代码化、质量门控、动画就绪的 Three.js 模型——纯标准库脚本流水线，token 高效，Apache-2.0 | 19,788 | 2026-10-30 | [img2threejs-img2threejs-深度调研.md](img2threejs-img2threejs-深度调研.md) |
+| 546 | [`wheresryan22/anatomy`](https://github.com/wheresryan22/anatomy) | Agent Skill：把技术概念建成可交互等距 SVG/WebGL 机器图解，零依赖 + 几何审计 | 22,960 | 2026-10-31 | [wheresryan22-anatomy-深度调研.md](wheresryan22-anatomy-深度调研.md) |
+| 547 | [`lightpanda-io/browser`](https://github.com/lightpanda-io/browser) | 从零用 Zig 写的无头浏览器（非 Chromium），面向 AI 自动化，比无头 Chrome 轻 16× / 快 9× | 38,178 | 2026-10-31 | [lightpanda-io-browser-深度调研.md](lightpanda-io-browser-深度调研.md) |
+| 548 | [`macro-inc/macro`](https://github.com/macro-inc/macro) | Rust+SolidJS 一体化团队工作空间，邮件/消息/文档/任务/CRM/Agents 双向图关联 + 团队 AI 记忆 | 5,801 | 2026-10-31 | [macro-inc-macro-深度调研.md](macro-inc-macro-深度调研.md) |
+| 549 | [`mikubaka88/CCFA-Skills`](https://github.com/mikubaka88/CCFA-Skills) | 17 个接力式 skill 家族，把 CCF-A 论文 idea→投稿串成连贯研究故事线 | 3,352 | 2026-10-31 | [mikubaka88-CCFA-Skills-深度调研.md](mikubaka88-CCFA-Skills-深度调研.md) |
+| 550 | [`expo/skills`](https://github.com/expo/skills) | Expo 官方 Agent Skills 集合，封装 Expo/EAS/RN 正确用法，双分发通道 + 内建评测 | 3,844 | 2026-10-31 | [expo-skills-深度调研.md](expo-skills-深度调研.md) |
+| 551 | [`Donchitos/Claude-Code-Game-Studios`](https://github.com/Donchitos/Claude-Code-Game-Studios) | 把单个 Claude Code 会话变成结构化游戏开发工作室：49 Agent / 74 Skill / 15 Hook / 14 路径规则 + 可量化流程档位 | 31,005 | 2026-11-01 | [Donchitos-Claude-Code-Game-Studios-深度调研.md](Donchitos-Claude-Code-Game-Studios-深度调研.md) |
+| 552 | [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) | 开源本地优先的多 Agent 桌面应用：Commander 调度 16 内置专家 + Claude Code/Codex/OpenCode 等 CLI Agent | 6,034 | 2026-11-01 | [Orkas-AI-Orkas-深度调研.md](Orkas-AI-Orkas-深度调研.md) |
+| 553 | [`vorssaint/vorssaint-utils`](https://github.com/vorssaint/vorssaint-utils) | 一个 macOS 菜单栏图标聚合一打付费工具，按应用音量/系统监控/窗口管理/剪贴板/录屏，只装你用的 | 31,775 | 2026-11-01 | [vorssaint-vorssaint-utils-深度调研.md](vorssaint-vorssaint-utils-深度调研.md) |
+| 554 | [`cjpais/Handy`](https://github.com/cjpais/Handy) | 离线语音转文字桌面应用（Tauri/Rust + 本地 Whisper/Parakeet，按住说话、松手粘贴） | 36,367 | 2026-11-02 | [cjpais-Handy-深度调研.md](cjpais-Handy-深度调研.md) |
+| 555 | [`beenuar/AiSOC`](https://github.com/beenuar/AiSOC) | 开源 AI SOC——自动调查编排 + Investigation Ledger 防幻觉 + 规则重放验证 | 6,078 | 2026-11-02 | [beenuar-AiSOC-深度调研.md](beenuar-AiSOC-深度调研.md) |
+| 556 | [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) | MoE 推理引擎——q⋆ CPU-GPU 协同调度 + ShadowRadix 分层 KV 缓存 | 15,284 | 2026-11-02 | [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md) |
+| 557 | [`anomalyco/hex`](https://github.com/anomalyco/hex) | 纯本地跨平台语音听写（Tauri/Rust，按住快捷键说话、松手粘贴，零云回传） | 3,024 | 2026-11-02 | [anomalyco-hex-深度调研.md](anomalyco-hex-深度调研.md) |
+| 558 | [`kornia/kornia`](https://github.com/kornia/kornia) | 可微计算机视觉库（PyTorch 原生，warp_perspective 等可微算子，训练/几何一体） | 11,718 | 2026-11-02 | [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md) |
+| 559 | [`karpathy/nanochat`](https://github.com/karpathy/nanochat) | 极简全栈 ChatGPT 克隆训练/推理教学套件（tokenizer→预训练→SFT→RL→推理→WebUI，约 $100 训出可聊模型，MIT） | 59,761 | 2026-11-03 | [karpathy-nanochat-深度调研.md](karpathy-nanochat-深度调研.md) |
+| 560 | [`D4Vinci/Scrapling`](https://github.com/D4Vinci/Scrapling) | 现代 Python 爬虫一体框架（快速 HTTP/隐身浏览器/自适应解析/并发爬虫 + MCP/Agent Skill） | 92,593 | 2026-11-03 | [D4Vinci-Scrapling-深度调研.md](D4Vinci-Scrapling-深度调研.md) |
+| 561 | [`max-sixty/worktrunk`](https://github.com/max-sixty/worktrunk) | Rust CLI 的 Git worktree 管理器，专为并行 AI Agent 工作流设计（分支寻址/hooks/COW 缓存） | 9,940 | 2026-11-03 | [max-sixty-worktrunk-深度调研.md](max-sixty-worktrunk-深度调研.md) |
+| 562 | [`floci-io/floci`](https://github.com/floci-io/floci) | 免费、无鉴权、本地优先的 AWS 云服务模拟器（LocalStack 平替，Quarkus Native + 真实容器执行） | 28,552 | 2026-11-04 | [floci-io-floci-深度调研.md](floci-io-floci-深度调研.md) |
+| 563 | [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) | 让 AI Agent 通过 OS 无障碍树「看见并操作」桌面应用的计算机使用 CLI（Rust，非截图，ref 契约） | 12,289 | 2026-11-04 | [vercel-labs-agent-desktop-深度调研.md](vercel-labs-agent-desktop-深度调研.md) |
+| 564 | [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) | 基于 Playwright + 多模态 AI 的闲鱼多任务实时监控系统（画像优先判断，FastAPI+SQLite） | 16,302 | 2026-11-04 | [Usagi-org-ai-goofish-monitor-深度调研.md](Usagi-org-ai-goofish-monitor-深度调研.md) |
+| 565 | [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) | NVIDIA 开源的企业数据语义上下文层——把元数据编译成 ontology，经只读 MCP/CLI/API 交给 agent，为 Text-to-SQL 加「认证定义」防错（Apache-2.0，Python） | 4,514 | 2026-11-05 | [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md) |
+| 566 | [`The-PR-Agent/pr-agent`](https://github.com/The-PR-Agent/pr-agent) | 开源 AI PR 审查 agent 鼻祖（Qodo 社区维护遗产项目）：每 PR 自动 review/改进/描述，支持 GitHub/GitLab/Bitbucket/Azure（MIT，Python） | 14,654 | 2026-11-05 | [The-PR-Agent-pr-agent-深度调研.md](The-PR-Agent-pr-agent-深度调研.md) |
+| 567 | [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) | 176KB 纯 C99 推理引擎，单 CPU+8GB 内存跑通真实 2.78T 参数 Kimi K3（专家 1.45TB 流式读盘，内存仅作调速旋钮，Apache-2.0） | 10,161 | 2026-11-05 | [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md) |
+| 568 | [`lz4/lz4`](https://github.com/lz4/lz4) | LZ4 无损压缩算法官方参考实现——极速压缩/解压（C 库+CLI，解码仅 memcpy 级，被 Linux 内核/ZFS/MongoDB/Spark 等广泛采用），2-clause BSD | 12,322 | 2026-11-06 | [lz4-lz4-深度调研.md](lz4-lz4-深度调研.md) |
+| 569 | [`scenario-labs/skills`](https://github.com/scenario-labs/skills) | Scenario 出品的生产级 AI 媒体生成 Agent Skills 集合——经 Scenario MCP 出图/视频/音频/3D 并保证角色与品牌一致性，MIT | 2,931 | 2026-11-06 | [scenario-labs-skills-深度调研.md](scenario-labs-skills-深度调研.md) |
+| 570 | [`zed-industries/zed`](https://github.com/zed-industries/zed) | 由 Atom/Tree-sitter 原班团队打造的高性能多人协作代码编辑器——自研 GPUI(Rust) retained-mode UI + CRDT 协作 + 内建 AI Agent，GPL-3.0 | 93,374 | 2026-11-07 | [zed-industries-zed-深度调研.md](zed-industries-zed-深度调研.md) |
+| 571 | [`astral-sh/ruff`](https://github.com/astral-sh/ruff) | Astral 出品极速 Python linter+formatter——Rust 单二进制，10-100x 快于 Flake8/Black，自研解析器+规则命名空间注册表，MIT | 50,572 | 2026-11-07 | [astral-sh-ruff-深度调研.md](astral-sh-ruff-深度调研.md) |
+| 572 | [`nushell/nushell`](https://github.com/nushell/nushell) | 「A new type of shell」——管道流动结构化 Value 而非文本，IR 求值引擎 + Span 溯源 + 可插拔命令注册，MIT | 40,877 | 2026-11-07 | [nushell-nushell-深度调研.md](nushell-nushell-深度调研.md) |
+| 573 | [`meta/astryx`](https://github.com/meta/astryx) | Meta 八年沉淀并开源的设计系统——React19+StyleX，150+ 无障碍组件、品牌级主题、agent-ready，MIT | 14,332 | 2026-11-08 | [meta-astryx-深度调研.md](meta-astryx-深度调研.md) |
+| 574 | [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) | Grok Bot 等闭源产品的开源替代——多 agent 团队 + 隔离 Local VM + 权限经纪，Apache-2.0 | 16,760 | 2026-11-08 | [milind-soni-OpenMausBot-深度调研.md](milind-soni-OpenMausBot-深度调研.md) |
+| 575 | [`jakubkrehel/skills`](https://github.com/jakubkrehel/skills) | 面向「构建优秀界面」的 agent skills 集合（marketplace interfaces）——原则+验证+报告，MIT | 11,457 | 2026-11-08 | [jakubkrehel-skills-深度调研.md](jakubkrehel-skills-深度调研.md) |
+| 576 | [`sherlock-project/sherlock`](https://github.com/sherlock-project/sherlock) | 跨 400+ 社交网络按用户名追溯账号的 OSINT 利器——数据驱动、异步并发，MIT | 100,128 | 2026-11-08 | [sherlock-project-sherlock-深度调研.md](sherlock-project-sherlock-深度调研.md) |
+| 577 | [`OpenMontageInc/OpenMontage`](https://github.com/OpenMontageInc/OpenMontage) | 世界首个开源 agentic 视频生产系统——把编码助手变成视频工作室：13 管线/100+工具/700+技能，AGPL-3.0 | 78,597 | 2026-11-09 | [openmontageinc-openmontage-深度调研.md](openmontageinc-openmontage-深度调研.md) |
+| 578 | [`Yuan1z0825/nature-skills`](https://github.com/Yuan1z0825/nature-skills) | 面向 AI 学者的可复用科研技能集合——23+ 技能覆盖检索/精读/写作/绘图/引用/审稿回复，Apache-2.0 | 52,759 | 2026-11-09 | [yuan1z0825-nature-skills-深度调研.md](yuan1z0825-nature-skills-深度调研.md) |
+| 579 | [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) | NVIDIA Kubernetes Engine——在自有 GPU 裸金属上跑托管 K8s 的管理平面，CAPI 原生 + TPM/SPIRE 节点证明，Apache-2.0 | 776 | 2026-11-09 | [dsx-ai-factory-nvke-深度调研.md](dsx-ai-factory-nvke-深度调研.md) |
+| 580 | [`homeassistant-ai/ha-mcp`](https://github.com/homeassistant-ai/ha-mcp) | Home Assistant 社区 MCP 服务器——87 工具配置/构建/调试全家桶，进程内部署+工具安全策略+Agent Skills，MIT | 5,792 | 2026-11-10 | [homeassistant-ai-ha-mcp-深度调研.md](homeassistant-ai-ha-mcp-深度调研.md) |
+
+
+
+
+
+
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（128）
+### AI Agent / 助手框架（129）
+- [`homeassistant-ai/ha-mcp`](https://github.com/homeassistant-ai/ha-mcp) — [homeassistant-ai-ha-mcp-深度调研.md](homeassistant-ai-ha-mcp-深度调研.md)
 - [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
 
 - [`makecindy/cindy`](https://github.com/makecindy/cindy) — [makecindy-cindy-深度调研.md](makecindy-cindy-深度调研.md)
@@ -1006,40 +1042,6 @@
 - [`cloudflare/cloudflare-os`](https://github.com/cloudflare/cloudflare-os) — [cloudflare-cloudflare-os-深度调研.md](cloudflare-cloudflare-os-深度调研.md)
 - [`corsairdev/corsair`](https://github.com/corsairdev/corsair) — [corsairdev-corsair-深度调研.md](corsairdev-corsair-深度调研.md)
 - [`NVIDIA/OpenShell`](https://github.com/NVIDIA/OpenShell) — [NVIDIA-OpenShell-深度调研.md](NVIDIA-OpenShell-深度调研.md)
-| 546 | [`wheresryan22/anatomy`](https://github.com/wheresryan22/anatomy) | Agent Skill：把技术概念建成可交互等距 SVG/WebGL 机器图解，零依赖 + 几何审计 | 22,960 | 2026-10-31 | [wheresryan22-anatomy-深度调研.md](wheresryan22-anatomy-深度调研.md) |
-| 547 | [`lightpanda-io/browser`](https://github.com/lightpanda-io/browser) | 从零用 Zig 写的无头浏览器（非 Chromium），面向 AI 自动化，比无头 Chrome 轻 16× / 快 9× | 38,178 | 2026-10-31 | [lightpanda-io-browser-深度调研.md](lightpanda-io-browser-深度调研.md) |
-| 548 | [`macro-inc/macro`](https://github.com/macro-inc/macro) | Rust+SolidJS 一体化团队工作空间，邮件/消息/文档/任务/CRM/Agents 双向图关联 + 团队 AI 记忆 | 5,801 | 2026-10-31 | [macro-inc-macro-深度调研.md](macro-inc-macro-深度调研.md) |
-| 549 | [`mikubaka88/CCFA-Skills`](https://github.com/mikubaka88/CCFA-Skills) | 17 个接力式 skill 家族，把 CCF-A 论文 idea→投稿串成连贯研究故事线 | 3,352 | 2026-10-31 | [mikubaka88-CCFA-Skills-深度调研.md](mikubaka88-CCFA-Skills-深度调研.md) |
-| 550 | [`expo/skills`](https://github.com/expo/skills) | Expo 官方 Agent Skills 集合，封装 Expo/EAS/RN 正确用法，双分发通道 + 内建评测 | 3,844 | 2026-10-31 | [expo-skills-深度调研.md](expo-skills-深度调研.md) |
-| 551 | [`Donchitos/Claude-Code-Game-Studios`](https://github.com/Donchitos/Claude-Code-Game-Studios) | 把单个 Claude Code 会话变成结构化游戏开发工作室：49 Agent / 74 Skill / 15 Hook / 14 路径规则 + 可量化流程档位 | 31,005 | 2026-11-01 | [Donchitos-Claude-Code-Game-Studios-深度调研.md](Donchitos-Claude-Code-Game-Studios-深度调研.md) |
-| 552 | [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) | 开源本地优先的多 Agent 桌面应用：Commander 调度 16 内置专家 + Claude Code/Codex/OpenCode 等 CLI Agent | 6,034 | 2026-11-01 | [Orkas-AI-Orkas-深度调研.md](Orkas-AI-Orkas-深度调研.md) |
-| 553 | [`vorssaint/vorssaint-utils`](https://github.com/vorssaint/vorssaint-utils) | 一个 macOS 菜单栏图标聚合一打付费工具，按应用音量/系统监控/窗口管理/剪贴板/录屏，只装你用的 | 31,775 | 2026-11-01 | [vorssaint-vorssaint-utils-深度调研.md](vorssaint-vorssaint-utils-深度调研.md) |
-| 554 | [`cjpais/Handy`](https://github.com/cjpais/Handy) | 离线语音转文字桌面应用（Tauri/Rust + 本地 Whisper/Parakeet，按住说话、松手粘贴） | 36,367 | 2026-11-02 | [cjpais-Handy-深度调研.md](cjpais-Handy-深度调研.md) |
-| 555 | [`beenuar/AiSOC`](https://github.com/beenuar/AiSOC) | 开源 AI SOC——自动调查编排 + Investigation Ledger 防幻觉 + 规则重放验证 | 6,078 | 2026-11-02 | [beenuar-AiSOC-深度调研.md](beenuar-AiSOC-深度调研.md) |
-| 556 | [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) | MoE 推理引擎——q⋆ CPU-GPU 协同调度 + ShadowRadix 分层 KV 缓存 | 15,284 | 2026-11-02 | [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md) |
-| 557 | [`anomalyco/hex`](https://github.com/anomalyco/hex) | 纯本地跨平台语音听写（Tauri/Rust，按住快捷键说话、松手粘贴，零云回传） | 3,024 | 2026-11-02 | [anomalyco-hex-深度调研.md](anomalyco-hex-深度调研.md) |
-| 558 | [`kornia/kornia`](https://github.com/kornia/kornia) | 可微计算机视觉库（PyTorch 原生，warp_perspective 等可微算子，训练/几何一体） | 11,718 | 2026-11-02 | [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md) |
-| 559 | [`karpathy/nanochat`](https://github.com/karpathy/nanochat) | 极简全栈 ChatGPT 克隆训练/推理教学套件（tokenizer→预训练→SFT→RL→推理→WebUI，约 $100 训出可聊模型，MIT） | 59,761 | 2026-11-03 | [karpathy-nanochat-深度调研.md](karpathy-nanochat-深度调研.md) |
-| 560 | [`D4Vinci/Scrapling`](https://github.com/D4Vinci/Scrapling) | 现代 Python 爬虫一体框架（快速 HTTP/隐身浏览器/自适应解析/并发爬虫 + MCP/Agent Skill） | 92,593 | 2026-11-03 | [D4Vinci-Scrapling-深度调研.md](D4Vinci-Scrapling-深度调研.md) |
-| 561 | [`max-sixty/worktrunk`](https://github.com/max-sixty/worktrunk) | Rust CLI 的 Git worktree 管理器，专为并行 AI Agent 工作流设计（分支寻址/hooks/COW 缓存） | 9,940 | 2026-11-03 | [max-sixty-worktrunk-深度调研.md](max-sixty-worktrunk-深度调研.md) |
-| 562 | [`floci-io/floci`](https://github.com/floci-io/floci) | 免费、无鉴权、本地优先的 AWS 云服务模拟器（LocalStack 平替，Quarkus Native + 真实容器执行） | 28,552 | 2026-11-04 | [floci-io-floci-深度调研.md](floci-io-floci-深度调研.md) |
-| 563 | [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) | 让 AI Agent 通过 OS 无障碍树「看见并操作」桌面应用的计算机使用 CLI（Rust，非截图，ref 契约） | 12,289 | 2026-11-04 | [vercel-labs-agent-desktop-深度调研.md](vercel-labs-agent-desktop-深度调研.md) |
-| 564 | [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) | 基于 Playwright + 多模态 AI 的闲鱼多任务实时监控系统（画像优先判断，FastAPI+SQLite） | 16,302 | 2026-11-04 | [Usagi-org-ai-goofish-monitor-深度调研.md](Usagi-org-ai-goofish-monitor-深度调研.md) |
-| 565 | [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) | NVIDIA 开源的企业数据语义上下文层——把元数据编译成 ontology，经只读 MCP/CLI/API 交给 agent，为 Text-to-SQL 加「认证定义」防错（Apache-2.0，Python） | 4,514 | 2026-11-05 | [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md) |
-| 566 | [`The-PR-Agent/pr-agent`](https://github.com/The-PR-Agent/pr-agent) | 开源 AI PR 审查 agent 鼻祖（Qodo 社区维护遗产项目）：每 PR 自动 review/改进/描述，支持 GitHub/GitLab/Bitbucket/Azure（MIT，Python） | 14,654 | 2026-11-05 | [The-PR-Agent-pr-agent-深度调研.md](The-PR-Agent-pr-agent-深度调研.md) |
-| 567 | [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) | 176KB 纯 C99 推理引擎，单 CPU+8GB 内存跑通真实 2.78T 参数 Kimi K3（专家 1.45TB 流式读盘，内存仅作调速旋钮，Apache-2.0） | 10,161 | 2026-11-05 | [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md) |
-| 568 | [`lz4/lz4`](https://github.com/lz4/lz4) | LZ4 无损压缩算法官方参考实现——极速压缩/解压（C 库+CLI，解码仅 memcpy 级，被 Linux 内核/ZFS/MongoDB/Spark 等广泛采用），2-clause BSD | 12,322 | 2026-11-06 | [lz4-lz4-深度调研.md](lz4-lz4-深度调研.md) |
-| 569 | [`scenario-labs/skills`](https://github.com/scenario-labs/skills) | Scenario 出品的生产级 AI 媒体生成 Agent Skills 集合——经 Scenario MCP 出图/视频/音频/3D 并保证角色与品牌一致性，MIT | 2,931 | 2026-11-06 | [scenario-labs-skills-深度调研.md](scenario-labs-skills-深度调研.md) |
-| 570 | [`zed-industries/zed`](https://github.com/zed-industries/zed) | 由 Atom/Tree-sitter 原班团队打造的高性能多人协作代码编辑器——自研 GPUI(Rust) retained-mode UI + CRDT 协作 + 内建 AI Agent，GPL-3.0 | 93,374 | 2026-11-07 | [zed-industries-zed-深度调研.md](zed-industries-zed-深度调研.md) |
-| 571 | [`astral-sh/ruff`](https://github.com/astral-sh/ruff) | Astral 出品极速 Python linter+formatter——Rust 单二进制，10-100x 快于 Flake8/Black，自研解析器+规则命名空间注册表，MIT | 50,572 | 2026-11-07 | [astral-sh-ruff-深度调研.md](astral-sh-ruff-深度调研.md) |
-| 572 | [`nushell/nushell`](https://github.com/nushell/nushell) | 「A new type of shell」——管道流动结构化 Value 而非文本，IR 求值引擎 + Span 溯源 + 可插拔命令注册，MIT | 40,877 | 2026-11-07 | [nushell-nushell-深度调研.md](nushell-nushell-深度调研.md) |
-| 573 | [`meta/astryx`](https://github.com/meta/astryx) | Meta 八年沉淀并开源的设计系统——React19+StyleX，150+ 无障碍组件、品牌级主题、agent-ready，MIT | 14,332 | 2026-11-08 | [meta-astryx-深度调研.md](meta-astryx-深度调研.md) |
-| 574 | [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) | Grok Bot 等闭源产品的开源替代——多 agent 团队 + 隔离 Local VM + 权限经纪，Apache-2.0 | 16,760 | 2026-11-08 | [milind-soni-OpenMausBot-深度调研.md](milind-soni-OpenMausBot-深度调研.md) |
-| 575 | [`jakubkrehel/skills`](https://github.com/jakubkrehel/skills) | 面向「构建优秀界面」的 agent skills 集合（marketplace interfaces）——原则+验证+报告，MIT | 11,457 | 2026-11-08 | [jakubkrehel-skills-深度调研.md](jakubkrehel-skills-深度调研.md) |
-| 576 | [`sherlock-project/sherlock`](https://github.com/sherlock-project/sherlock) | 跨 400+ 社交网络按用户名追溯账号的 OSINT 利器——数据驱动、异步并发，MIT | 100,128 | 2026-11-08 | [sherlock-project-sherlock-深度调研.md](sherlock-project-sherlock-深度调研.md) |
-| 577 | [`OpenMontageInc/OpenMontage`](https://github.com/OpenMontageInc/OpenMontage) | 世界首个开源 agentic 视频生产系统——把编码助手变成视频工作室：13 管线/100+工具/700+技能，AGPL-3.0 | 78,597 | 2026-11-09 | [openmontageinc-openmontage-深度调研.md](openmontageinc-openmontage-深度调研.md) |
-| 578 | [`Yuan1z0825/nature-skills`](https://github.com/Yuan1z0825/nature-skills) | 面向 AI 学者的可复用科研技能集合——23+ 技能覆盖检索/精读/写作/绘图/引用/审稿回复，Apache-2.0 | 52,759 | 2026-11-09 | [yuan1z0825-nature-skills-深度调研.md](yuan1z0825-nature-skills-深度调研.md) |
-| 579 | [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) | NVIDIA Kubernetes Engine——在自有 GPU 裸金属上跑托管 K8s 的管理平面，CAPI 原生 + TPM/SPIRE 节点证明，Apache-2.0 | 776 | 2026-11-09 | [dsx-ai-factory-nvke-深度调研.md](dsx-ai-factory-nvke-深度调研.md) |
 
 - [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) — [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md)
 
