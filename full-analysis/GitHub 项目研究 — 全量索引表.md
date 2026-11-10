@@ -593,6 +593,8 @@
 | 578 | [`Yuan1z0825/nature-skills`](https://github.com/Yuan1z0825/nature-skills) | 面向 AI 学者的可复用科研技能集合——23+ 技能覆盖检索/精读/写作/绘图/引用/审稿回复，Apache-2.0 | 52,759 | 2026-11-09 | [yuan1z0825-nature-skills-深度调研.md](yuan1z0825-nature-skills-深度调研.md) |
 | 579 | [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) | NVIDIA Kubernetes Engine——在自有 GPU 裸金属上跑托管 K8s 的管理平面，CAPI 原生 + TPM/SPIRE 节点证明，Apache-2.0 | 776 | 2026-11-09 | [dsx-ai-factory-nvke-深度调研.md](dsx-ai-factory-nvke-深度调研.md) |
 | 580 | [`homeassistant-ai/ha-mcp`](https://github.com/homeassistant-ai/ha-mcp) | Home Assistant 社区 MCP 服务器——87 工具配置/构建/调试全家桶，进程内部署+工具安全策略+Agent Skills，MIT | 5,792 | 2026-11-10 | [homeassistant-ai-ha-mcp-深度调研.md](homeassistant-ai-ha-mcp-深度调研.md) |
+| 581 | [`tokio-rs/topcoat`](https://github.com/tokio-rs/topcoat) | Tokio 团队出品的全栈 Rust Web 框架——服务端渲染、零 WASM/零客户端构建，靠把类型安全 Rust 表达式子集编译成 JS 实现响应式；view! 宏 + Expr<T> 双态结构 + #[shard] 服务端重渲染 | 6,708 | 2026-11-11 | [tokio-rs-topcoat-深度调研.md](tokio-rs-topcoat-深度调研.md) |
+| 582 | [`google-deepmind/mujoco`](https://github.com/google-deepmind/mujoco) | DeepMind 通用物理引擎（Multi-Joint dynamics with Contact）——广义坐标+解析接触、CRB/RNE 平滑动力学、软接触分岛求解、MJD 解析微分驱动 MJX 可微物理，机器人/RL 接触力学金标准 | 17,274 | 2026-11-11 | [google-deepmind-mujoco-深度调研.md](google-deepmind-mujoco-深度调研.md) |
 
 
 
@@ -802,7 +804,8 @@
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
 - [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) — [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md)
-### 前端 / 设计 / UI（35）
+### 前端 / 设计 / UI（36）
+- [`tokio-rs/topcoat`](https://github.com/tokio-rs/topcoat) — [tokio-rs-topcoat-深度调研.md](tokio-rs-topcoat-深度调研.md)
 - [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
 - [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)
 - [`a2ui-project/a2ui`](https://github.com/a2ui-project/a2ui) — [a2ui-project-a2ui-深度调研.md](a2ui-project-a2ui-深度调研.md)
@@ -1011,7 +1014,8 @@
 - [`DuarteSantos8/openGym`](https://github.com/DuarteSantos8/openGym) — [DuarteSantos8-openGym-深度调研.md](DuarteSantos8-openGym-深度调研.md)
 - [`ntdevlabs/tiny11builder`](https://github.com/ntdevlabs/tiny11builder) — [ntdevlabs-tiny11builder-深度调研.md](ntdevlabs-tiny11builder-深度调研.md)
 - [`gitroomhq/postiz-app`](https://github.com/gitroomhq/postiz-app) — [gitroomhq-postiz-app-深度调研.md](gitroomhq-postiz-app-深度调研.md)
-### 机器学习 / 科学计算（9）- [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
+### 机器学习 / 科学计算（10）- [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
+- [`google-deepmind/mujoco`](https://github.com/google-deepmind/mujoco) — [google-deepmind-mujoco-深度调研.md](google-deepmind-mujoco-深度调研.md)
 - [`google-deepmind/weathernext`](https://github.com/google-deepmind/weathernext) — [google-deepmind-weathernext-深度调研.md](google-deepmind-weathernext-深度调研.md)
 - [`huggingface/transformers`](https://github.com/huggingface/transformers) — [huggingface-transformers-深度调研.md](huggingface-transformers-深度调研.md)
 - [`K-Dense-AI/scientific-agent-skills`](https://github.com/K-Dense-AI/scientific-agent-skills) — [K-Dense-AI-scientific-agent-skills-深度调研.md](K-Dense-AI-scientific-agent-skills-深度调研.md)

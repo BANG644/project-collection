@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 580                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 582                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -289,7 +289,8 @@ github-project-research/
 - [`lightpanda-io/browser`](https://github.com/lightpanda-io/browser) — [lightpanda-io-browser-深度调研.md](lightpanda-io-browser-深度调研.md)
 - [`lz4/lz4`](https://github.com/lz4/lz4) — [lz4-lz4-深度调研.md](lz4-lz4-深度调研.md)
 
-### M（48 个）
+### M（49 个）
+- [`google-deepmind/mujoco`](https://github.com/google-deepmind/mujoco) — [google-deepmind-mujoco-深度调研.md](google-deepmind-mujoco-深度调研.md)
 - [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)
 - [`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search) — [MadsLorentzen-ai-job-search-深度调研.md](MadsLorentzen-ai-job-search-深度调研.md)
 - [`mahlernim/google-timeline-visualizer`](https://github.com/mahlernim/google-timeline-visualizer) — [mahlernim-google-timeline-visualizer-深度调研.md](mahlernim-google-timeline-visualizer-深度调研.md)
@@ -472,7 +473,8 @@ github-project-research/
 - [`scenario-labs/skills`](https://github.com/scenario-labs/skills) — [scenario-labs-skills-深度调研.md](scenario-labs-skills-深度调研.md)
 
 - [`sherlock-project/sherlock`](https://github.com/sherlock-project/sherlock) — [sherlock-project-sherlock-深度调研.md](sherlock-project-sherlock-深度调研.md)
-### T（31 个）
+### T（32 个）
+- [`tokio-rs/topcoat`](https://github.com/tokio-rs/topcoat) — [tokio-rs-topcoat-深度调研.md](tokio-rs-topcoat-深度调研.md)
 - [`twentyhq/twenty`](https://github.com/twentyhq/twenty) — [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md)
 - [`twostraws/SwiftUI-Agent-Skill`](https://github.com/twostraws/SwiftUI-Agent-Skill) — [twostraws-SwiftUI-Agent-Skill-深度调研.md](twostraws-SwiftUI-Agent-Skill-深度调研.md)
 - [`Tarquinen/opencode-dynamic-context-pruning`](https://github.com/Tarquinen/opencode-dynamic-context-pruning) — [Tarquinen-opencode-dynamic-context-pruning-深度调研.md](Tarquinen-opencode-dynamic-context-pruning-深度调研.md)
@@ -786,7 +788,8 @@ github-project-research/
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
 - [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) — [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md)
 
-### 前端 / 设计 / UI（35）
+### 前端 / 设计 / UI（36）
+- [`tokio-rs/topcoat`](https://github.com/tokio-rs/topcoat) — [tokio-rs-topcoat-深度调研.md](tokio-rs-topcoat-深度调研.md)
 - [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
 - [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)
 - [`a2ui-project/a2ui`](https://github.com/a2ui-project/a2ui) — [a2ui-project-a2ui-深度调研.md](a2ui-project-a2ui-深度调研.md)
@@ -995,7 +998,8 @@ github-project-research/
 - [`ntdevlabs/tiny11builder`](https://github.com/ntdevlabs/tiny11builder) — [ntdevlabs-tiny11builder-深度调研.md](ntdevlabs-tiny11builder-深度调研.md)
 - [`gitroomhq/postiz-app`](https://github.com/gitroomhq/postiz-app) — [gitroomhq-postiz-app-深度调研.md](gitroomhq-postiz-app-深度调研.md)
 - [`macro-inc/macro`](https://github.com/macro-inc/macro) — [macro-inc-macro-深度调研.md](macro-inc-macro-深度调研.md)
-### 机器学习 / 科学计算（10）- [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
+### 机器学习 / 科学计算（11）- [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
+- [`google-deepmind/mujoco`](https://github.com/google-deepmind/mujoco) — [google-deepmind-mujoco-深度调研.md](google-deepmind-mujoco-深度调研.md)
 - [`google-deepmind/weathernext`](https://github.com/google-deepmind/weathernext) — [google-deepmind-weathernext-深度调研.md](google-deepmind-weathernext-深度调研.md)
 - [`huggingface/transformers`](https://github.com/huggingface/transformers) — [huggingface-transformers-深度调研.md](huggingface-transformers-深度调研.md)
 - [`K-Dense-AI/scientific-agent-skills`](https://github.com/K-Dense-AI/scientific-agent-skills) — [K-Dense-AI-scientific-agent-skills-深度调研.md](K-Dense-AI-scientific-agent-skills-深度调研.md)
