@@ -595,6 +595,9 @@
 | 580 | [`homeassistant-ai/ha-mcp`](https://github.com/homeassistant-ai/ha-mcp) | Home Assistant 社区 MCP 服务器——87 工具配置/构建/调试全家桶，进程内部署+工具安全策略+Agent Skills，MIT | 5,792 | 2026-11-10 | [homeassistant-ai-ha-mcp-深度调研.md](homeassistant-ai-ha-mcp-深度调研.md) |
 | 581 | [`tokio-rs/topcoat`](https://github.com/tokio-rs/topcoat) | Tokio 团队出品的全栈 Rust Web 框架——服务端渲染、零 WASM/零客户端构建，靠把类型安全 Rust 表达式子集编译成 JS 实现响应式；view! 宏 + Expr<T> 双态结构 + #[shard] 服务端重渲染 | 6,708 | 2026-11-11 | [tokio-rs-topcoat-深度调研.md](tokio-rs-topcoat-深度调研.md) |
 | 582 | [`google-deepmind/mujoco`](https://github.com/google-deepmind/mujoco) | DeepMind 通用物理引擎（Multi-Joint dynamics with Contact）——广义坐标+解析接触、CRB/RNE 平滑动力学、软接触分岛求解、MJD 解析微分驱动 MJX 可微物理，机器人/RL 接触力学金标准 | 17,274 | 2026-11-11 | [google-deepmind-mujoco-深度调研.md](google-deepmind-mujoco-深度调研.md) |
+| 583 | [`nexu-io/openmotion`](https://github.com/nexu-io/openmotion) | OpenMotion——面向 Opus 5.5 / 本地 Agent 的开源全栈视频工作台：逆向拆解任意参考视频、用 HTML/CSS/JS 重建可编辑工程并本地渲染成片（Codex/Claude Code 插件，BYOA+BYOK，Local-first） | 9,515 | 2026-11-12 | [nexu-io-openmotion-深度调研.md](nexu-io-openmotion-深度调研.md) |
+| 584 | [`openai/codex-security`](https://github.com/openai/codex-security) | OpenAI 出品的 Codex Security CLI/TS SDK——做「发现→验证→修复→跟踪」漏洞闭环，定位为传统 SAST 的语义层补充，支持 15+ 厂商扫描结果归一化与多供应商后端 | 11,583 | 2026-11-12 | [openai-codex-security-深度调研.md](openai-codex-security-深度调研.md) |
+| 585 | [`shadcn/improve`](https://github.com/shadcn/improve) | shadcn/improve——一个「架构师 Agent Skill」：用最强（最贵）模型只读审计代码库并产出自包含实现计划，把执行交给更便宜的模型或人类（计划即产品，贵模型思考/便宜模型干活） | 10,687 | 2026-11-12 | [shadcn-improve-深度调研.md](shadcn-improve-深度调研.md) |
 
 
 
@@ -644,7 +647,8 @@
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
-### AI 编码 / Skill 技能（66）
+### AI 编码 / Skill 技能（67）
+- [`shadcn/improve`](https://github.com/shadcn/improve) — [shadcn-improve-深度调研.md](shadcn-improve-深度调研.md)
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
 
 - [`google-gemini/gemini-cli`](https://github.com/google-gemini/gemini-cli) — [google-gemini-gemini-cli-深度调研.md](google-gemini-gemini-cli-深度调研.md)
@@ -819,7 +823,8 @@
 - [`img2threejs/img2threejs`](https://github.com/img2threejs/img2threejs) — [img2threejs-img2threejs-深度调研.md](img2threejs-img2threejs-深度调研.md)
 
 - [`meta/astryx`](https://github.com/meta/astryx) — [meta-astryx-深度调研.md](meta-astryx-深度调研.md)
-### 视频 / 音频 / 多媒体（34）
+### 视频 / 音频 / 多媒体（35）
+- [`nexu-io/openmotion`](https://github.com/nexu-io/openmotion) — [nexu-io-openmotion-深度调研.md](nexu-io-openmotion-深度调研.md)
 - [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
 - [`HKUDS/ViMax`](https://github.com/HKUDS/ViMax) — [HKUDS-ViMax-深度调研.md](HKUDS-ViMax-深度调研.md)
@@ -837,7 +842,8 @@
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 - [`Allenk/GeminiWatermarkTool`](https://github.com/Allenk/GeminiWatermarkTool) — [Allenk-GeminiWatermarkTool-深度调研.md](Allenk-GeminiWatermarkTool-深度调研.md)
 - [`kornia/kornia`](https://github.com/kornia/kornia) — [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md)
-### 安全 / 运维 / 系统工具（27）
+### 安全 / 运维 / 系统工具（28）
+- [`openai/codex-security`](https://github.com/openai/codex-security) — [openai-codex-security-深度调研.md](openai-codex-security-深度调研.md)
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
 - [`basecamp/omarchy`](https://github.com/basecamp/omarchy) — [basecamp-omarchy-深度调研.md](basecamp-omarchy-深度调研.md)
