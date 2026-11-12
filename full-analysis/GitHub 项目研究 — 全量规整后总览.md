@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 585                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 588                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -58,7 +58,8 @@ github-project-research/
 - [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) — [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md)
 - [`666ghj/MiroFish`](https://github.com/666ghj/MiroFish) — [666ghj-MiroFish-深度调研.md](666ghj-MiroFish-深度调研.md)
 
-### A（63）
+### A（64）
+- [`ashhart/TensorFold`](https://github.com/ashhart/TensorFold) — [ashhart-TensorFold-深度调研.md](ashhart-TensorFold-深度调研.md)
 - [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
 - [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
 - [`Anionex/banana-slides`](https://github.com/Anionex/banana-slides) — [Anionex-banana-slides-深度调研.md](Anionex-banana-slides-深度调研.md)
@@ -170,7 +171,8 @@ github-project-research/
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`floci-io/floci`](https://github.com/floci-io/floci) — [floci-io-floci-深度调研.md](floci-io-floci-深度调研.md)
 - [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
-### G（32 个）
+### G（33 个）
+- [`GoogleChrome/modern-web-guidance-src`](https://github.com/GoogleChrome/modern-web-guidance-src) — [GoogleChrome-modern-web-guidance-src-深度调研.md](GoogleChrome-modern-web-guidance-src-深度调研.md)
 - [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)
 - [`garrytan/gbrain`](https://github.com/garrytan/gbrain) — [garrytan-gbrain-深度调研.md](garrytan-gbrain-深度调研.md)
 - [`garrytan/gstack`](https://github.com/garrytan/gstack) — [garrytan-gstack-深度调研.md](garrytan-gstack-深度调研.md)
@@ -414,6 +416,8 @@ github-project-research/
 - [`PrimeIntellect-ai/prime-agent`](https://github.com/PrimeIntellect-ai/prime-agent) — [PrimeIntellect-ai-prime-agent-深度调研.md](PrimeIntellect-ai-prime-agent-深度调研.md)
 - [`public-clis/twitter-cli`](https://github.com/public-clis/twitter-cli) — [public-clis-twitter-cli-深度调研.md](public-clis-twitter-cli-深度调研.md)
 - [`popstas/telegram-download-chat`](https://github.com/popstas/telegram-download-chat) — [popstas-telegram-download-chat-深度调研.md](popstas-telegram-download-chat-深度调研.md)
+### Q（1 个）
+- [`QwenLM/qwen-code`](https://github.com/QwenLM/qwen-code) — [QwenLM-qwen-code-深度调研.md](QwenLM-qwen-code-深度调研.md)
 ### R（22 个）
 - [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) — [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md)
 - [`raiyanyahya/recall`](https://github.com/raiyanyahya/recall) — [raiyanyahya-recall-深度调研.md](raiyanyahya-recall-深度调研.md)
@@ -610,7 +614,8 @@ github-project-research/
 
 - [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
 - [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) — [milind-soni-OpenMausBot-深度调研.md](milind-soni-OpenMausBot-深度调研.md)
-### LLM / 推理框架（16）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+### LLM / 推理框架（17）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+- [`ashhart/TensorFold`](https://github.com/ashhart/TensorFold) — [ashhart-TensorFold-深度调研.md](ashhart-TensorFold-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
@@ -627,7 +632,8 @@ github-project-research/
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`The-PR-Agent/pr-agent`](https://github.com/The-PR-Agent/pr-agent) — [The-PR-Agent-pr-agent-深度调研.md](The-PR-Agent-pr-agent-深度调研.md)
-### AI 编码 / Skill 技能（69）
+### AI 编码 / Skill 技能（70）
+- [`QwenLM/qwen-code`](https://github.com/QwenLM/qwen-code) — [QwenLM-qwen-code-深度调研.md](QwenLM-qwen-code-深度调研.md)
 - [`shadcn/improve`](https://github.com/shadcn/improve) — [shadcn-improve-深度调研.md](shadcn-improve-深度调研.md)
 - [`Donchitos/Claude-Code-Game-Studios`](https://github.com/Donchitos/Claude-Code-Game-Studios) — [Donchitos-Claude-Code-Game-Studios-深度调研.md](Donchitos-Claude-Code-Game-Studios-深度调研.md)
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
@@ -792,7 +798,8 @@ github-project-research/
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
 - [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) — [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md)
 
-### 前端 / 设计 / UI（36）
+### 前端 / 设计 / UI（37）
+- [`GoogleChrome/modern-web-guidance-src`](https://github.com/GoogleChrome/modern-web-guidance-src) — [GoogleChrome-modern-web-guidance-src-深度调研.md](GoogleChrome-modern-web-guidance-src-深度调研.md)
 - [`tokio-rs/topcoat`](https://github.com/tokio-rs/topcoat) — [tokio-rs-topcoat-深度调研.md](tokio-rs-topcoat-深度调研.md)
 - [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
 - [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)

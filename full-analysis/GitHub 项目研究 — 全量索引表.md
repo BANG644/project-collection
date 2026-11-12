@@ -247,6 +247,9 @@
 | 232 | [`microsoft/markitdown`](https://github.com/microsoft/markitdown) | AI 生态的"文件标准输入层"——将 PDF/Office/图片等一切文件格式统一转换为 Markdown，LangChain/AutoGen 默认集成 | 161,159 | 2026-06-30 | [microsoft-markitdown-深度调研.md](microsoft-markitdown-深度调研.md) |
 | 233 | [`microsoft/PowerToys`](https://github.com/microsoft/PowerToys) | — | — | — | [microsoft-PowerToys-深度调研.md](microsoft-PowerToys-深度调研.md) |
 | 234 | [`microsoft/SkillOpt`](https://github.com/microsoft/SkillOpt) | — | 585 | 2026-05-08 | [microsoft-SkillOpt-深度调研.md](microsoft-SkillOpt-深度调研.md) |
+| 586 | [`QwenLM/qwen-code`](https://github.com/QwenLM/qwen-code) | Qwen 团队开源终端 AI 编码 Agent——多协议（OpenAI/Anthropic/Gemini/Qwen + Ollama/vLLM），开箱即用的 Auto-Memory/Auto-Skills/SubAgents/Agent Teams/MCP，1.0 Preview 合并 Qoder harness | 29,707 | 2026-11-13 | [QwenLM-qwen-code-深度调研.md](QwenLM-qwen-code-深度调研.md) |
+| 587 | [`ashhart/TensorFold`](https://github.com/ashhart/TensorFold) | Zig 实现的 LLM 推理引擎——直接读 checkpoint（safetensors/gguf）并在 Apple Silicon(Metal)/NVIDIA(CUDA)/Vulkan 上跑内核，无 Python/MLX 依赖，兼容 OpenAI/Anthropic API | 1,894 | 2026-11-13 | [ashhart-TensorFold-深度调研.md](ashhart-TensorFold-深度调研.md) |
+| 588 | [`GoogleChrome/modern-web-guidance-src`](https://github.com/GoogleChrome/modern-web-guidance-src) | Chrome/Edge/Firefox/MDN 联合维护的「现代 Web 平台最佳实践」技能源——CLI(install/search/retrieve/legacy-scan)把专家策展的 Web 指南注入编码 Agent 上下文，token 高效 | 2,629 | 2026-11-13 | [GoogleChrome-modern-web-guidance-src-深度调研.md](GoogleChrome-modern-web-guidance-src-深度调研.md) |
 | 235 | [`microsoft/TypeScript`](https://github.com/microsoft/TypeScript) | JavaScript 超集类型语言——7.0 用 Go 重写编译器（Project Corsa/tsgo）获 8–12× 提速且语义零变化，双轨过渡 | 110,501 | 2026-08-23 | [microsoft-TypeScript-深度调研.md](microsoft-TypeScript-深度调研.md) |
 | 236 | [`microsoft/VibeVoice`](https://github.com/microsoft/VibeVoice) | 微软开源前沿语音 AI——7.5Hz 连续 tokenizer + next-token diffusion，TTS 长序列合成 + ASR 60min 单遍识别 + VibeASR.cpp 边缘 CPU 实时 | 51,182 | 2026-07-30 | [microsoft-VibeVoice-深度调研.md](microsoft-VibeVoice-深度调研.md) |
 | 237 | [`MiroMindAI/MiroThinker`](https://github.com/MiroMindAI/MiroThinker) | 深度研究 Agent——interactive scaling + 近因上下文，BrowseComp SOTA，配套训练数据闭环 | 8,361 | 2026-08-01 | [MiroMindAI-MiroThinker-深度调研.md](MiroMindAI-MiroThinker-深度调研.md) |
@@ -631,7 +634,8 @@
 - [`CopilotKit/OpenBot`](https://github.com/CopilotKit/OpenBot) — [CopilotKit-OpenBot-深度调研.md](CopilotKit-OpenBot-深度调研.md)
 
 - [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) — [milind-soni-OpenMausBot-深度调研.md](milind-soni-OpenMausBot-深度调研.md)
-### LLM / 推理框架（16）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+### LLM / 推理框架（17）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+- [`ashhart/TensorFold`](https://github.com/ashhart/TensorFold) — [ashhart-TensorFold-深度调研.md](ashhart-TensorFold-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
 - [`deepseek-ai/DeepSpec`](https://github.com/deepseek-ai/DeepSpec) — [deepseek-ai-DeepSpec-深度调研.md](deepseek-ai-DeepSpec-深度调研.md)
@@ -647,7 +651,8 @@
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
-### AI 编码 / Skill 技能（67）
+### AI 编码 / Skill 技能（68）
+- [`QwenLM/qwen-code`](https://github.com/QwenLM/qwen-code) — [QwenLM-qwen-code-深度调研.md](QwenLM-qwen-code-深度调研.md)
 - [`shadcn/improve`](https://github.com/shadcn/improve) — [shadcn-improve-深度调研.md](shadcn-improve-深度调研.md)
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
 
@@ -808,7 +813,8 @@
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
 - [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) — [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md)
-### 前端 / 设计 / UI（36）
+### 前端 / 设计 / UI（37）
+- [`GoogleChrome/modern-web-guidance-src`](https://github.com/GoogleChrome/modern-web-guidance-src) — [GoogleChrome-modern-web-guidance-src-深度调研.md](GoogleChrome-modern-web-guidance-src-深度调研.md)
 - [`tokio-rs/topcoat`](https://github.com/tokio-rs/topcoat) — [tokio-rs-topcoat-深度调研.md](tokio-rs-topcoat-深度调研.md)
 - [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
 - [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)
