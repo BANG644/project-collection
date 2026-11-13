@@ -601,6 +601,11 @@
 | 583 | [`nexu-io/openmotion`](https://github.com/nexu-io/openmotion) | OpenMotion——面向 Opus 5.5 / 本地 Agent 的开源全栈视频工作台：逆向拆解任意参考视频、用 HTML/CSS/JS 重建可编辑工程并本地渲染成片（Codex/Claude Code 插件，BYOA+BYOK，Local-first） | 9,515 | 2026-11-12 | [nexu-io-openmotion-深度调研.md](nexu-io-openmotion-深度调研.md) |
 | 584 | [`openai/codex-security`](https://github.com/openai/codex-security) | OpenAI 出品的 Codex Security CLI/TS SDK——做「发现→验证→修复→跟踪」漏洞闭环，定位为传统 SAST 的语义层补充，支持 15+ 厂商扫描结果归一化与多供应商后端 | 11,583 | 2026-11-12 | [openai-codex-security-深度调研.md](openai-codex-security-深度调研.md) |
 | 585 | [`shadcn/improve`](https://github.com/shadcn/improve) | shadcn/improve——一个「架构师 Agent Skill」：用最强（最贵）模型只读审计代码库并产出自包含实现计划，把执行交给更便宜的模型或人类（计划即产品，贵模型思考/便宜模型干活） | 10,687 | 2026-11-12 | [shadcn-improve-深度调研.md](shadcn-improve-深度调研.md) |
+| 589 | [`google/elephant-goldfish-model`](https://github.com/google/elephant-goldfish-model) | Google 开源「大象起草+金鱼零上下文评审」Agent 设计/评审插件——五阶段强制评审+反谄媚硬约束，Claude Code/Codex/Antigravity 原生支持，Apache-2.0 | 18,526 | 2026-11-14 | [google-elephant-goldfish-model-深度调研.md](google-elephant-goldfish-model-深度调研.md) |
+| 590 | [`block/buzz`](https://github.com/block/buzz) | Block 开源人类与 AI Agent 共建工作区——单 Nostr relay 上人/agent 同身份模型同签名事件日志，agent 带自己密钥可审计，ACP↔MCP 桥接 Claude Code/Codex/Goose，Apache-2.0 | 37,252 | 2026-11-14 | [block-buzz-深度调研.md](block-buzz-深度调研.md) |
+| 591 | [`tailscale/tailcat`](https://github.com/tailscale/tailcat) | Tailscale 刨掉控制面的 netcat 式点对点加密隧道——复用 WG+NAT 穿透+DERP，无账号/无 tailnet，ephemeral 密钥适合 agent/CI 临时访问，BSD-3 | 9,352 | 2026-11-14 | [tailscale-tailcat-深度调研.md](tailscale-tailcat-深度调研.md) |
+| 592 | [`backnotprop/plannotator`](https://github.com/backnotprop/plannotator) | 本地优先浏览器评审层——插进 10+ 编码 Agent，agent 产出方案/HTML/PR 即开可标注界面，Inbox 多 Agent 收件箱精准回传反馈，零遥测 MIT/Apache-2.0 | 10,371 | 2026-11-14 | [backnotprop-plannotator-深度调研.md](backnotprop-plannotator-深度调研.md) |
+| 593 | [`tradermonty/claude-trading-skills`](https://github.com/tradermonty/claude-trading-skills) | 面向个人投资者的 Claude Skills 交易纪律工具箱——结构化市场复盘/风险管理/交易规划/日记，人类决策闸+无付费 API 起步，MIT，工程纪律罕见 | 4,054 | 2026-11-14 | [tradermonty-claude-trading-skills-深度调研.md](tradermonty-claude-trading-skills-深度调研.md) |
 
 
 
@@ -609,7 +614,7 @@
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（129）
+### AI Agent / 助手框架（130）
 - [`homeassistant-ai/ha-mcp`](https://github.com/homeassistant-ai/ha-mcp) — [homeassistant-ai-ha-mcp-深度调研.md](homeassistant-ai-ha-mcp-深度调研.md)
 - [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
 
@@ -634,6 +639,7 @@
 - [`CopilotKit/OpenBot`](https://github.com/CopilotKit/OpenBot) — [CopilotKit-OpenBot-深度调研.md](CopilotKit-OpenBot-深度调研.md)
 
 - [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) — [milind-soni-OpenMausBot-深度调研.md](milind-soni-OpenMausBot-深度调研.md)
+- [`block/buzz`](https://github.com/block/buzz) — [block-buzz-深度调研.md](block-buzz-深度调研.md)
 ### LLM / 推理框架（17）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`ashhart/TensorFold`](https://github.com/ashhart/TensorFold) — [ashhart-TensorFold-深度调研.md](ashhart-TensorFold-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
@@ -651,7 +657,7 @@
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
-### AI 编码 / Skill 技能（68）
+### AI 编码 / Skill 技能（71）
 - [`QwenLM/qwen-code`](https://github.com/QwenLM/qwen-code) — [QwenLM-qwen-code-深度调研.md](QwenLM-qwen-code-深度调研.md)
 - [`shadcn/improve`](https://github.com/shadcn/improve) — [shadcn-improve-深度调研.md](shadcn-improve-深度调研.md)
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
@@ -722,6 +728,9 @@
 
 - [`jakubkrehel/skills`](https://github.com/jakubkrehel/skills) — [jakubkrehel-skills-深度调研.md](jakubkrehel-skills-深度调研.md)
 - [`Yuan1z0825/nature-skills`](https://github.com/Yuan1z0825/nature-skills) — [yuan1z0825-nature-skills-深度调研.md](yuan1z0825-nature-skills-深度调研.md)
+- [`google/elephant-goldfish-model`](https://github.com/google/elephant-goldfish-model) — [google-elephant-goldfish-model-深度调研.md](google-elephant-goldfish-model-深度调研.md)
+- [`backnotprop/plannotator`](https://github.com/backnotprop/plannotator) — [backnotprop-plannotator-深度调研.md](backnotprop-plannotator-深度调研.md)
+- [`tradermonty/claude-trading-skills`](https://github.com/tradermonty/claude-trading-skills) — [tradermonty-claude-trading-skills-深度调研.md](tradermonty-claude-trading-skills-深度调研.md)
 ### RAG / 知识库 / 记忆（21）- [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
 - [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory) — [akitaonrails-ai-memory-深度调研.md](akitaonrails-ai-memory-深度调研.md)
@@ -743,7 +752,7 @@
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
 - [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
-### 开发工具 / CLI（59）
+### 开发工具 / CLI（60）
 - [`coollabsio/coolify`](https://github.com/coollabsio/coolify) — [coollabsio-coolify-深度调研.md](coollabsio-coolify-深度调研.md)
 
 - [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
@@ -809,6 +818,7 @@
 - [`astral-sh/ruff`](https://github.com/astral-sh/ruff) — [astral-sh-ruff-深度调研.md](astral-sh-ruff-深度调研.md)
 - [`nushell/nushell`](https://github.com/nushell/nushell) — [nushell-nushell-深度调研.md](nushell-nushell-深度调研.md)
 - [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) — [dsx-ai-factory-nvke-深度调研.md](dsx-ai-factory-nvke-深度调研.md)
+- [`tailscale/tailcat`](https://github.com/tailscale/tailcat) — [tailscale-tailcat-深度调研.md](tailscale-tailcat-深度调研.md)
 ### 文档 / 文档工具（3）
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
