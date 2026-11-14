@@ -606,6 +606,10 @@
 | 591 | [`tailscale/tailcat`](https://github.com/tailscale/tailcat) | Tailscale 刨掉控制面的 netcat 式点对点加密隧道——复用 WG+NAT 穿透+DERP，无账号/无 tailnet，ephemeral 密钥适合 agent/CI 临时访问，BSD-3 | 9,352 | 2026-11-14 | [tailscale-tailcat-深度调研.md](tailscale-tailcat-深度调研.md) |
 | 592 | [`backnotprop/plannotator`](https://github.com/backnotprop/plannotator) | 本地优先浏览器评审层——插进 10+ 编码 Agent，agent 产出方案/HTML/PR 即开可标注界面，Inbox 多 Agent 收件箱精准回传反馈，零遥测 MIT/Apache-2.0 | 10,371 | 2026-11-14 | [backnotprop-plannotator-深度调研.md](backnotprop-plannotator-深度调研.md) |
 | 593 | [`tradermonty/claude-trading-skills`](https://github.com/tradermonty/claude-trading-skills) | 面向个人投资者的 Claude Skills 交易纪律工具箱——结构化市场复盘/风险管理/交易规划/日记，人类决策闸+无付费 API 起步，MIT，工程纪律罕见 | 4,054 | 2026-11-14 | [tradermonty-claude-trading-skills-深度调研.md](tradermonty-claude-trading-skills-深度调研.md) |
+| 594 | [`ag-ui-protocol/ag-ui`](https://github.com/ag-ui-protocol/ag-ui) | 开源、轻量、事件驱动的 Agent-User 交互协议（CopilotKit 主导）——MCP/A2A/AG-UI 三层栈的用户界面层，~16+ 标准事件类型+多语言 SDK+Google/Microsoft/Amazon/Oracle 1st-party 接入，MIT | 17,279 | 2026-11-15 | [ag-ui-protocol-ag-ui-深度调研.md](ag-ui-protocol-ag-ui-深度调研.md) |
+| 595 | [`Tencent/LoopForge`](https://github.com/Tencent/LoopForge) | 腾讯开源自托管 AI 研发交付平台——SOP 编排 CodeBuddy/Codex/Claude Code 等 10 种 coding-agent CLI，角色分离+Docker 沙箱+人工门禁+运行证据+成本可观测，MIT | 812 | 2026-11-15 | [Tencent-LoopForge-深度调研.md](Tencent-LoopForge-深度调研.md) |
+| 596 | [`dream-num/univer`](https://github.com/dream-num/univer) | Apache-2.0 的 Office SDK——把表格/文档/演示/PDF 的编辑/计算/协同做成可嵌入 Web SDK，Canvas 渲染+微内核插件+统一 Facade API，Agent 原生（AI SDK 商业），原 Luckysheet 团队 | 24,375 | 2026-11-15 | [dream-num-univer-深度调研.md](dream-num-univer-深度调研.md) |
+| 597 | [`martin-olivier/airgorah`](https://github.com/martin-olivier/airgorah) | Rust+GTK4 的 WiFi 安全审计工具（仅 Linux）——捕获流量/Deauth/抓握手包与 PMKID/破解，libwifi+radiotap+nix 底层，普通 GUI+polkit 特权 agent 分离，MIT | 5,703 | 2026-11-15 | [martin-olivier-airgorah-深度调研.md](martin-olivier-airgorah-深度调研.md) |
 
 
 
@@ -614,7 +618,7 @@
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（130）
+### AI Agent / 助手框架（131）
 - [`homeassistant-ai/ha-mcp`](https://github.com/homeassistant-ai/ha-mcp) — [homeassistant-ai-ha-mcp-深度调研.md](homeassistant-ai-ha-mcp-深度调研.md)
 - [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
 
@@ -640,6 +644,7 @@
 
 - [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) — [milind-soni-OpenMausBot-深度调研.md](milind-soni-OpenMausBot-深度调研.md)
 - [`block/buzz`](https://github.com/block/buzz) — [block-buzz-深度调研.md](block-buzz-深度调研.md)
+- [`ag-ui-protocol/ag-ui`](https://github.com/ag-ui-protocol/ag-ui) — [ag-ui-protocol-ag-ui-深度调研.md](ag-ui-protocol-ag-ui-深度调研.md)
 ### LLM / 推理框架（17）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
 - [`ashhart/TensorFold`](https://github.com/ashhart/TensorFold) — [ashhart-TensorFold-深度调研.md](ashhart-TensorFold-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
@@ -657,7 +662,7 @@
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
-### AI 编码 / Skill 技能（71）
+### AI 编码 / Skill 技能（72）
 - [`QwenLM/qwen-code`](https://github.com/QwenLM/qwen-code) — [QwenLM-qwen-code-深度调研.md](QwenLM-qwen-code-深度调研.md)
 - [`shadcn/improve`](https://github.com/shadcn/improve) — [shadcn-improve-深度调研.md](shadcn-improve-深度调研.md)
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
@@ -731,6 +736,7 @@
 - [`google/elephant-goldfish-model`](https://github.com/google/elephant-goldfish-model) — [google-elephant-goldfish-model-深度调研.md](google-elephant-goldfish-model-深度调研.md)
 - [`backnotprop/plannotator`](https://github.com/backnotprop/plannotator) — [backnotprop-plannotator-深度调研.md](backnotprop-plannotator-深度调研.md)
 - [`tradermonty/claude-trading-skills`](https://github.com/tradermonty/claude-trading-skills) — [tradermonty-claude-trading-skills-深度调研.md](tradermonty-claude-trading-skills-深度调研.md)
+- [`Tencent/LoopForge`](https://github.com/Tencent/LoopForge) — [Tencent-LoopForge-深度调研.md](Tencent-LoopForge-深度调研.md)
 ### RAG / 知识库 / 记忆（21）- [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) — [1Panel-dev-MaxKB-深度调研.md](1Panel-dev-MaxKB-深度调研.md)
 - [`AgriciDaniel/claude-obsidian`](https://github.com/AgriciDaniel/claude-obsidian) — [AgriciDaniel-claude-obsidian-深度调研.md](AgriciDaniel-claude-obsidian-深度调研.md)
 - [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory) — [akitaonrails-ai-memory-深度调研.md](akitaonrails-ai-memory-深度调研.md)
@@ -823,7 +829,7 @@
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
 - [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) — [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md)
-### 前端 / 设计 / UI（37）
+### 前端 / 设计 / UI（38）
 - [`GoogleChrome/modern-web-guidance-src`](https://github.com/GoogleChrome/modern-web-guidance-src) — [GoogleChrome-modern-web-guidance-src-深度调研.md](GoogleChrome-modern-web-guidance-src-深度调研.md)
 - [`tokio-rs/topcoat`](https://github.com/tokio-rs/topcoat) — [tokio-rs-topcoat-深度调研.md](tokio-rs-topcoat-深度调研.md)
 - [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
@@ -839,6 +845,7 @@
 - [`img2threejs/img2threejs`](https://github.com/img2threejs/img2threejs) — [img2threejs-img2threejs-深度调研.md](img2threejs-img2threejs-深度调研.md)
 
 - [`meta/astryx`](https://github.com/meta/astryx) — [meta-astryx-深度调研.md](meta-astryx-深度调研.md)
+- [`dream-num/univer`](https://github.com/dream-num/univer) — [dream-num-univer-深度调研.md](dream-num-univer-深度调研.md)
 ### 视频 / 音频 / 多媒体（35）
 - [`nexu-io/openmotion`](https://github.com/nexu-io/openmotion) — [nexu-io-openmotion-深度调研.md](nexu-io-openmotion-深度调研.md)
 - [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
@@ -858,7 +865,7 @@
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 - [`Allenk/GeminiWatermarkTool`](https://github.com/Allenk/GeminiWatermarkTool) — [Allenk-GeminiWatermarkTool-深度调研.md](Allenk-GeminiWatermarkTool-深度调研.md)
 - [`kornia/kornia`](https://github.com/kornia/kornia) — [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md)
-### 安全 / 运维 / 系统工具（28）
+### 安全 / 运维 / 系统工具（29）
 - [`openai/codex-security`](https://github.com/openai/codex-security) — [openai-codex-security-深度调研.md](openai-codex-security-深度调研.md)
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
@@ -889,6 +896,7 @@
 - [`UstadMobile/Meshrabiya`](https://github.com/UstadMobile/Meshrabiya) — [UstadMobile-Meshrabiya-深度调研.md](UstadMobile-Meshrabiya-深度调研.md)
 - [`beenuar/AiSOC`](https://github.com/beenuar/AiSOC) — [beenuar-AiSOC-深度调研.md](beenuar-AiSOC-深度调研.md)
 - [`sherlock-project/sherlock`](https://github.com/sherlock-project/sherlock) — [sherlock-project-sherlock-深度调研.md](sherlock-project-sherlock-深度调研.md)
+- [`martin-olivier/airgorah`](https://github.com/martin-olivier/airgorah) — [martin-olivier-airgorah-深度调研.md](martin-olivier-airgorah-深度调研.md)
 ### 学习资料 / 方法论（19）
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
