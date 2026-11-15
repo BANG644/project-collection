@@ -610,6 +610,9 @@
 | 595 | [`Tencent/LoopForge`](https://github.com/Tencent/LoopForge) | 腾讯开源自托管 AI 研发交付平台——SOP 编排 CodeBuddy/Codex/Claude Code 等 10 种 coding-agent CLI，角色分离+Docker 沙箱+人工门禁+运行证据+成本可观测，MIT | 812 | 2026-11-15 | [Tencent-LoopForge-深度调研.md](Tencent-LoopForge-深度调研.md) |
 | 596 | [`dream-num/univer`](https://github.com/dream-num/univer) | Apache-2.0 的 Office SDK——把表格/文档/演示/PDF 的编辑/计算/协同做成可嵌入 Web SDK，Canvas 渲染+微内核插件+统一 Facade API，Agent 原生（AI SDK 商业），原 Luckysheet 团队 | 24,375 | 2026-11-15 | [dream-num-univer-深度调研.md](dream-num-univer-深度调研.md) |
 | 597 | [`martin-olivier/airgorah`](https://github.com/martin-olivier/airgorah) | Rust+GTK4 的 WiFi 安全审计工具（仅 Linux）——捕获流量/Deauth/抓握手包与 PMKID/破解，libwifi+radiotap+nix 底层，普通 GUI+polkit 特权 agent 分离，MIT | 5,703 | 2026-11-15 | [martin-olivier-airgorah-深度调研.md](martin-olivier-airgorah-深度调研.md) |
+| 598 | [`google-labs-code/stitch-skills`](https://github.com/google-labs-code/stitch-skills) | Google Labs 出品的 Stitch MCP 设计→代码 Agent Skills 集——3 插件 16 技能，用 GATE 关卡 + SWC AST 校验 + 系统级高可靠下载脚本把设计稿稳定转成 React/React Native 工程，跨 6 种 Agent，Apache-2.0 | 9,188 | 2026-11-16 | [google-labs-code-stitch-skills-深度调研.md](google-labs-code-stitch-skills-深度调研.md) |
+| 599 | [`elementalsouls/Claude-BugHunter`](https://github.com/elementalsouls/Claude-BugHunter) | 把编码 Agent 变成有纪律的漏洞赏金/外部红队操作员——83 技能 + 15 命令 + 681 份公开漏洞报告蒸馏（433 份逐条引用），6 阶段工作流 + 7 问提交门禁 + 主动 scope 红线 + 确定性 CLI，MIT/CC BY 4.0 | 6,188 | 2026-11-16 | [elementalsouls-Claude-BugHunter-深度调研.md](elementalsouls-Claude-BugHunter-深度调研.md) |
+| 600 | [`NVIDIA/SkillEvaluator`](https://github.com/NVIDIA/SkillEvaluator) | NVIDIA 开源 Agent Skills 三层评测框架——Tier1 静态安全/质量门禁 + Tier2 embedding 查重 + Tier3 沙箱配对实测 Skill Lift，30+ 验证器 + CI 原生 + 版本可复现，把技能当软件来测，Experimental/Apache-2.0 | 1,508 | 2026-11-16 | [NVIDIA-SkillEvaluator-深度调研.md](NVIDIA-SkillEvaluator-深度调研.md) |
 
 
 
@@ -662,7 +665,9 @@
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
-### AI 编码 / Skill 技能（72）
+### AI 编码 / Skill 技能（74）
+- [`google-labs-code/stitch-skills`](https://github.com/google-labs-code/stitch-skills) — [google-labs-code-stitch-skills-深度调研.md](google-labs-code-stitch-skills-深度调研.md)
+- [`NVIDIA/SkillEvaluator`](https://github.com/NVIDIA/SkillEvaluator) — [NVIDIA-SkillEvaluator-深度调研.md](NVIDIA-SkillEvaluator-深度调研.md)
 - [`QwenLM/qwen-code`](https://github.com/QwenLM/qwen-code) — [QwenLM-qwen-code-深度调研.md](QwenLM-qwen-code-深度调研.md)
 - [`shadcn/improve`](https://github.com/shadcn/improve) — [shadcn-improve-深度调研.md](shadcn-improve-深度调研.md)
 - [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) — [JetBrains-thinkrail-深度调研.md](JetBrains-thinkrail-深度调研.md)
@@ -865,7 +870,8 @@
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 - [`Allenk/GeminiWatermarkTool`](https://github.com/Allenk/GeminiWatermarkTool) — [Allenk-GeminiWatermarkTool-深度调研.md](Allenk-GeminiWatermarkTool-深度调研.md)
 - [`kornia/kornia`](https://github.com/kornia/kornia) — [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md)
-### 安全 / 运维 / 系统工具（29）
+### 安全 / 运维 / 系统工具（30）
+- [`elementalsouls/Claude-BugHunter`](https://github.com/elementalsouls/Claude-BugHunter) — [elementalsouls-Claude-BugHunter-深度调研.md](elementalsouls-Claude-BugHunter-深度调研.md)
 - [`openai/codex-security`](https://github.com/openai/codex-security) — [openai-codex-security-深度调研.md](openai-codex-security-深度调研.md)
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)

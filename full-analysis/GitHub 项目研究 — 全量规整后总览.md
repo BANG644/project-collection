@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 597                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 600                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -151,7 +151,8 @@ github-project-research/
 - [`D4Vinci/Scrapling`](https://github.com/D4Vinci/Scrapling) — [D4Vinci-Scrapling-深度调研.md](D4Vinci-Scrapling-深度调研.md)
 - [`dsx-ai-factory/nvke`](https://github.com/dsx-ai-factory/nvke) — [dsx-ai-factory-nvke-深度调研.md](dsx-ai-factory-nvke-深度调研.md)
 - [`dream-num/univer`](https://github.com/dream-num/univer) — [dream-num-univer-深度调研.md](dream-num-univer-深度调研.md)
-### E（16）
+### E（17）
+- [`elementalsouls/Claude-BugHunter`](https://github.com/elementalsouls/Claude-BugHunter) — [elementalsouls-Claude-BugHunter-深度调研.md](elementalsouls-Claude-BugHunter-深度调研.md)
 - [`EvoMap/evolver`](https://github.com/EvoMap/evolver) — [EvoMap-evolver-深度调研.md](EvoMap-evolver-深度调研.md)
 - [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) — [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md)
 - [`earthtojake/text-to-cad`](https://github.com/earthtojake/text-to-cad) — [earthtojake-text-to-cad-深度调研.md](earthtojake-text-to-cad-深度调研.md)
@@ -175,7 +176,8 @@ github-project-research/
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`floci-io/floci`](https://github.com/floci-io/floci) — [floci-io-floci-深度调研.md](floci-io-floci-深度调研.md)
 - [`FareedKhan-dev/kimi-k3-in-c`](https://github.com/FareedKhan-dev/kimi-k3-in-c) — [FareedKhan-dev-kimi-k3-in-c-深度调研.md](FareedKhan-dev-kimi-k3-in-c-深度调研.md)
-### G（34 个）
+### G（35 个）
+- [`google-labs-code/stitch-skills`](https://github.com/google-labs-code/stitch-skills) — [google-labs-code-stitch-skills-深度调研.md](google-labs-code-stitch-skills-深度调研.md)
 - [`GoogleChrome/modern-web-guidance-src`](https://github.com/GoogleChrome/modern-web-guidance-src) — [GoogleChrome-modern-web-guidance-src-深度调研.md](GoogleChrome-modern-web-guidance-src-深度调研.md)
 - [`GordenSun/GordenPPTSkill`](https://github.com/GordenSun/GordenPPTSkill) — [GordenSun-GordenPPTSkill-深度调研.md](GordenSun-GordenPPTSkill-深度调研.md)
 - [`garrytan/gbrain`](https://github.com/garrytan/gbrain) — [garrytan-gbrain-深度调研.md](garrytan-gbrain-深度调研.md)
@@ -347,7 +349,8 @@ github-project-research/
 - [`meta/astryx`](https://github.com/meta/astryx) — [meta-astryx-深度调研.md](meta-astryx-深度调研.md)
 - [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) — [milind-soni-OpenMausBot-深度调研.md](milind-soni-OpenMausBot-深度调研.md)
 - [`martin-olivier/airgorah`](https://github.com/martin-olivier/airgorah) — [martin-olivier-airgorah-深度调研.md](martin-olivier-airgorah-深度调研.md)
-### N（23 个）
+### N（24 个）
+- [`NVIDIA/SkillEvaluator`](https://github.com/NVIDIA/SkillEvaluator) — [NVIDIA-SkillEvaluator-深度调研.md](NVIDIA-SkillEvaluator-深度调研.md)
 - [`nexu-io/openmotion`](https://github.com/nexu-io/openmotion) — [nexu-io-openmotion-深度调研.md](nexu-io-openmotion-深度调研.md)
 - [`n8n-io/n8n`](https://github.com/n8n-io/n8n) — [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md)
 - [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram) — [nagisanzenin-engram-深度调研.md](nagisanzenin-engram-深度调研.md)
@@ -643,7 +646,9 @@ github-project-research/
 - [`lightseekorg/tokenspeed`](https://github.com/lightseekorg/tokenspeed) — [lightseekorg-tokenspeed-深度调研.md](lightseekorg-tokenspeed-深度调研.md)
 - [`FlashML-org/FreeToken`](https://github.com/FlashML-org/FreeToken) — [FlashML-org-FreeToken-深度调研.md](FlashML-org-FreeToken-深度调研.md)
 - [`The-PR-Agent/pr-agent`](https://github.com/The-PR-Agent/pr-agent) — [The-PR-Agent-pr-agent-深度调研.md](The-PR-Agent-pr-agent-深度调研.md)
-### AI 编码 / Skill 技能（74）
+### AI 编码 / Skill 技能（76）
+- [`google-labs-code/stitch-skills`](https://github.com/google-labs-code/stitch-skills) — [google-labs-code-stitch-skills-深度调研.md](google-labs-code-stitch-skills-深度调研.md)
+- [`NVIDIA/SkillEvaluator`](https://github.com/NVIDIA/SkillEvaluator) — [NVIDIA-SkillEvaluator-深度调研.md](NVIDIA-SkillEvaluator-深度调研.md)
 - [`QwenLM/qwen-code`](https://github.com/QwenLM/qwen-code) — [QwenLM-qwen-code-深度调研.md](QwenLM-qwen-code-深度调研.md)
 - [`shadcn/improve`](https://github.com/shadcn/improve) — [shadcn-improve-深度调研.md](shadcn-improve-深度调研.md)
 - [`Donchitos/Claude-Code-Game-Studios`](https://github.com/Donchitos/Claude-Code-Game-Studios) — [Donchitos-Claude-Code-Game-Studios-深度调研.md](Donchitos-Claude-Code-Game-Studios-深度调研.md)
@@ -851,7 +856,8 @@ github-project-research/
 - [`Allenk/GeminiWatermarkTool`](https://github.com/Allenk/GeminiWatermarkTool) — [Allenk-GeminiWatermarkTool-深度调研.md](Allenk-GeminiWatermarkTool-深度调研.md)
 
 - [`kornia/kornia`](https://github.com/kornia/kornia) — [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md)
-### 安全 / 运维 / 系统工具（29）
+### 安全 / 运维 / 系统工具（30）
+- [`elementalsouls/Claude-BugHunter`](https://github.com/elementalsouls/Claude-BugHunter) — [elementalsouls-Claude-BugHunter-深度调研.md](elementalsouls-Claude-BugHunter-深度调研.md)
 - [`openai/codex-security`](https://github.com/openai/codex-security) — [openai-codex-security-深度调研.md](openai-codex-security-深度调研.md)
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
 - [`BartoszCichecki/LenovoLegionToolkit`](https://github.com/BartoszCichecki/LenovoLegionToolkit) — [BartoszCichecki-LenovoLegionToolkit-深度调研.md](BartoszCichecki-LenovoLegionToolkit-深度调研.md)
