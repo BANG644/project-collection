@@ -616,7 +616,9 @@
 | 601 | [`google-research/paper-orchestra`](https://github.com/google-research/paper-orchestra) | Google Cloud AI Research 多 Agent 自动写论文流水线——大纲/文献/绘图/章节/精修 5 Agent 分工，引用经 Semantic Scholar + 模糊匹配核验杜绝幻觉，AgentReview 模拟评审单调性闸门（79-81% 胜率），配套 PaperWritingBench，Apache-2.0 | 1,314 | 2026-11-17 | [google-research-paper-orchestra-深度调研.md](google-research-paper-orchestra-深度调研.md) |
 | 602 | [`kajisho5/ffmpeg-skill`](https://github.com/kajisho5/ffmpeg-skill) | 给编码 Agent 的本地视频编辑器——42 个类型化 FFmpeg 工具 + SPEC 自产执行契约（inputSchema 从 argparse 实时派生、CI 防漂移）+ 强制「探测→无损编辑→自检→验证」工作流 + MCP server，无云无 key 纯 stdlib，MIT | 6,485 | 2026-11-17 | [kajisho5-ffmpeg-skill-深度调研.md](kajisho5-ffmpeg-skill-深度调研.md) |
 | 603 | [`getarcaneapp/arcane`](https://github.com/getarcaneapp/arcane) | Go+SvelteKit 现代 Docker 管理平台——50+ 领域 DDD + Uber Fx DI，容器/镜像/卷/网络全生命周期 + GitOps + 远程 Agent + OIDC/LDAP/Passkey/RBAC，文件状态最轻量，BSD-3 免费 Portainer 替代，v3 刚发布 | 8,588 | 2026-11-17 | [getarcaneapp-arcane-深度调研.md](getarcaneapp-arcane-深度调研.md) |
-
+| 604 | [`astral-sh/uv`](https://github.com/astral-sh/uv) | Rust 写的七合一 Python 包/项目管理单二进制——PubGrub 求解器 + 全局内容寻址缓存 + 硬链接复用，比 pip 冷快约 2 倍/热快 5–50 倍，universal lockfile，已被 OpenAI 收购并入 Codex，Apache-2.0/MIT | 92,180 | 2026-11-19 | [astral-sh-uv-深度调研.md](astral-sh-uv-深度调研.md) |
+| 605 | [`appwrite/appwrite`](https://github.com/appwrite/appwrite) | 可自托管的开源 Backend-as-a-Service——PHP 8.5/Swoole 6 混合单体-微服务，Auth/数据库/存储/函数/实时/消息全家桶，2026 转向「Agent 云」，代码归属红线 + monorepo 工具链是亮点，BSD-3 的 Firebase 替代 | 58,181 | 2026-11-19 | [appwrite-appwrite-深度调研.md](appwrite-appwrite-深度调研.md) |
+| 606 | [`openvinotoolkit/openvino`](https://github.com/openvinotoolkit/openvino) | Intel 开源 AI 推理工具套件——Frontend(7+框架/GGUF)→Core(统一IR+优化)→Plugin(CPU/iGPU/NPU/AUTO) 三层解耦，Intel CPU 上推理最快(实测比 PyTorch 快 3 倍)，GPU 场景逊于 TensorRT，Apache-2.0 | 11,283 | 2026-11-19 | [openvinotoolkit-openvino-深度调研.md](openvinotoolkit-openvino-深度调研.md) |
 
 
 
@@ -652,7 +654,8 @@
 - [`block/buzz`](https://github.com/block/buzz) — [block-buzz-深度调研.md](block-buzz-深度调研.md)
 - [`ag-ui-protocol/ag-ui`](https://github.com/ag-ui-protocol/ag-ui) — [ag-ui-protocol-ag-ui-深度调研.md](ag-ui-protocol-ag-ui-深度调研.md)
 - [`google-research/paper-orchestra`](https://github.com/google-research/paper-orchestra) — [google-research-paper-orchestra-深度调研.md](google-research-paper-orchestra-深度调研.md)
-### LLM / 推理框架（17）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+### LLM / 推理框架（18）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+- [`openvinotoolkit/openvino`](https://github.com/openvinotoolkit/openvino) — [openvinotoolkit-openvino-深度调研.md](openvinotoolkit-openvino-深度调研.md)
 - [`ashhart/TensorFold`](https://github.com/ashhart/TensorFold) — [ashhart-TensorFold-深度调研.md](ashhart-TensorFold-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
@@ -767,7 +770,8 @@
 - [`vitali87/code-graph-rag`](https://github.com/vitali87/code-graph-rag) — [vitali87-code-graph-rag-深度调研.md](vitali87-code-graph-rag-深度调研.md)
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
 - [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
-### 开发工具 / CLI（60）
+### 开发工具 / CLI（61）
+- [`astral-sh/uv`](https://github.com/astral-sh/uv) — [astral-sh-uv-深度调研.md](astral-sh-uv-深度调研.md)
 - [`coollabsio/coolify`](https://github.com/coollabsio/coolify) — [coollabsio-coolify-深度调研.md](coollabsio-coolify-深度调研.md)
 
 - [`xtool-org/xtool`](https://github.com/xtool-org/xtool) — [xtool-org-xtool-深度调研.md](xtool-org-xtool-深度调研.md)
@@ -932,7 +936,8 @@
 
 - [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
 - [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) — [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md)
-### 其他（122）
+### 其他（123）
+- [`appwrite/appwrite`](https://github.com/appwrite/appwrite) — [appwrite-appwrite-深度调研.md](appwrite-appwrite-深度调研.md)
 - [`pollen-robotics/microduck`](https://github.com/pollen-robotics/microduck) — [pollen-robotics-microduck-深度调研.md](pollen-robotics-microduck-深度调研.md)
 - [`twentyhq/twenty`](https://github.com/twentyhq/twenty) — [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md)
 - [`strelov1/freehire`](https://github.com/strelov1/freehire) — [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md)

@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 603                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 606                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -58,7 +58,9 @@ github-project-research/
 - [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) — [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md)
 - [`666ghj/MiroFish`](https://github.com/666ghj/MiroFish) — [666ghj-MiroFish-深度调研.md](666ghj-MiroFish-深度调研.md)
 
-### A（66）
+### A（68）
+- [`appwrite/appwrite`](https://github.com/appwrite/appwrite) — [appwrite-appwrite-深度调研.md](appwrite-appwrite-深度调研.md)
+- [`astral-sh/uv`](https://github.com/astral-sh/uv) — [astral-sh-uv-深度调研.md](astral-sh-uv-深度调研.md)
 - [`ashhart/TensorFold`](https://github.com/ashhart/TensorFold) — [ashhart-TensorFold-深度调研.md](ashhart-TensorFold-深度调研.md)
 - [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
 - [`apple-aiml-research/ml-sharp`](https://github.com/apple-aiml-research/ml-sharp) — [apple-aiml-research-ml-sharp-深度调研.md](apple-aiml-research-ml-sharp-深度调研.md)
@@ -377,7 +379,8 @@ github-project-research/
 - [`nightly-labs/openbot`](https://github.com/nightly-labs/openbot) — [nightly-labs-openbot-深度调研.md](nightly-labs-openbot-深度调研.md)
 - [`NVIDIA/auto-ontology`](https://github.com/NVIDIA/auto-ontology) — [NVIDIA-auto-ontology-深度调研.md](NVIDIA-auto-ontology-深度调研.md)
 - [`nushell/nushell`](https://github.com/nushell/nushell) — [nushell-nushell-深度调研.md](nushell-nushell-深度调研.md)
-### O（30 个）
+### O（31 个）
+- [`openvinotoolkit/openvino`](https://github.com/openvinotoolkit/openvino) — [openvinotoolkit-openvino-深度调研.md](openvinotoolkit-openvino-深度调研.md)
 - [`openai/codex-security`](https://github.com/openai/codex-security) — [openai-codex-security-深度调研.md](openai-codex-security-深度调研.md)
 - [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) — [Orkas-AI-Orkas-深度调研.md](Orkas-AI-Orkas-深度调研.md)
 - [`obra/superpowers`](https://github.com/obra/superpowers) — [obra-superpowers-深度调研.md](obra-superpowers-深度调研.md)
@@ -632,7 +635,8 @@ github-project-research/
 - [`block/buzz`](https://github.com/block/buzz) — [block-buzz-深度调研.md](block-buzz-深度调研.md)
 - [`ag-ui-protocol/ag-ui`](https://github.com/ag-ui-protocol/ag-ui) — [ag-ui-protocol-ag-ui-深度调研.md](ag-ui-protocol-ag-ui-深度调研.md)
 - [`google-research/paper-orchestra`](https://github.com/google-research/paper-orchestra) — [google-research-paper-orchestra-深度调研.md](google-research-paper-orchestra-深度调研.md)
-### LLM / 推理框架（17）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+### LLM / 推理框架（18）- [`AlexsJones/llmfit`](https://github.com/AlexsJones/llmfit) — [AlexsJones-llmfit-深度调研.md](AlexsJones-llmfit-深度调研.md)
+- [`openvinotoolkit/openvino`](https://github.com/openvinotoolkit/openvino) — [openvinotoolkit-openvino-深度调研.md](openvinotoolkit-openvino-深度调研.md)
 - [`ashhart/TensorFold`](https://github.com/ashhart/TensorFold) — [ashhart-TensorFold-深度调研.md](ashhart-TensorFold-深度调研.md)
 - [`vllm-project/vllm`](https://github.com/vllm-project/vllm) — [vllm-project-vllm-深度调研.md](vllm-project-vllm-深度调研.md)
 - [`cactus-compute/needle`](https://github.com/cactus-compute/needle) — [cactus-compute-needle-深度调研.md](cactus-compute-needle-深度调研.md)
@@ -750,7 +754,8 @@ github-project-research/
 - [`volcengine/OpenViking`](https://github.com/volcengine/OpenViking) — [volcengine-OpenViking-深度调研.md](volcengine-OpenViking-深度调研.md)
 
 - [`xerj-org/xerj`](https://github.com/xerj-org/xerj) — [xerj-org-xerj-深度调研.md](xerj-org-xerj-深度调研.md)
-### 开发工具 / CLI（64）
+### 开发工具 / CLI（65）
+- [`astral-sh/uv`](https://github.com/astral-sh/uv) — [astral-sh-uv-深度调研.md](astral-sh-uv-深度调研.md)
 - [`floci-io/floci`](https://github.com/floci-io/floci) — [floci-io-floci-深度调研.md](floci-io-floci-深度调研.md)
 - [`coollabsio/coolify`](https://github.com/coollabsio/coolify) — [coollabsio-coolify-深度调研.md](coollabsio-coolify-深度调研.md)
 
@@ -916,7 +921,8 @@ github-project-research/
 
 - [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills) — [Imbad0202-academic-research-skills-深度调研.md](Imbad0202-academic-research-skills-深度调研.md)
 - [`mlabonne/llm-course`](https://github.com/mlabonne/llm-course) — [mlabonne-llm-course-深度调研.md](mlabonne-llm-course-深度调研.md)
-### 其他（123）
+### 其他（124）
+- [`appwrite/appwrite`](https://github.com/appwrite/appwrite) — [appwrite-appwrite-深度调研.md](appwrite-appwrite-深度调研.md)
 - [`vorssaint/vorssaint-utils`](https://github.com/vorssaint/vorssaint-utils) — [vorssaint-vorssaint-utils-深度调研.md](vorssaint-vorssaint-utils-深度调研.md)
 - [`twentyhq/twenty`](https://github.com/twentyhq/twenty) — [twentyhq-twenty-深度调研.md](twentyhq-twenty-深度调研.md)
 - [`strelov1/freehire`](https://github.com/strelov1/freehire) — [strelov1-freehire-深度调研.md](strelov1-freehire-深度调研.md)
