@@ -619,6 +619,9 @@
 | 604 | [`astral-sh/uv`](https://github.com/astral-sh/uv) | Rust 写的七合一 Python 包/项目管理单二进制——PubGrub 求解器 + 全局内容寻址缓存 + 硬链接复用，比 pip 冷快约 2 倍/热快 5–50 倍，universal lockfile，已被 OpenAI 收购并入 Codex，Apache-2.0/MIT | 92,180 | 2026-11-19 | [astral-sh-uv-深度调研.md](astral-sh-uv-深度调研.md) |
 | 605 | [`appwrite/appwrite`](https://github.com/appwrite/appwrite) | 可自托管的开源 Backend-as-a-Service——PHP 8.5/Swoole 6 混合单体-微服务，Auth/数据库/存储/函数/实时/消息全家桶，2026 转向「Agent 云」，代码归属红线 + monorepo 工具链是亮点，BSD-3 的 Firebase 替代 | 58,181 | 2026-11-19 | [appwrite-appwrite-深度调研.md](appwrite-appwrite-深度调研.md) |
 | 606 | [`openvinotoolkit/openvino`](https://github.com/openvinotoolkit/openvino) | Intel 开源 AI 推理工具套件——Frontend(7+框架/GGUF)→Core(统一IR+优化)→Plugin(CPU/iGPU/NPU/AUTO) 三层解耦，Intel CPU 上推理最快(实测比 PyTorch 快 3 倍)，GPU 场景逊于 TensorRT，Apache-2.0 | 11,283 | 2026-11-19 | [openvinotoolkit-openvino-深度调研.md](openvinotoolkit-openvino-深度调研.md) |
+| 607 | [`Tracer-Cloud/opensre`](https://github.com/Tracer-Cloud/opensre) | 自托管 CI/CD 可靠性 Agent——读失败日志追根因、区分 CI 自身故障与代码故障并把修复推到 PR 分支供 review；四层 importlinter 强制架构 + Capability Registrar + 上下文预算工程化，Apache-2.0 Public Alpha | 13,032 | 2026-11-20 | [Tracer-Cloud-opensre-深度调研.md](Tracer-Cloud-opensre-深度调研.md) |
+| 608 | [`toeverything/AFFiNE`](https://github.com/toeverything/AFFiNE) | 本地优先、可自托管的知识操作系统——Notion 文档/数据库与 Miro 无限画布超融合；自研 BlockSuite 编辑器内核 + yjs/y-octo CRDT + Rust OctoBase，MIT 编辑器/source-available 后端双许可 | 75,010 | 2026-11-20 | [toeverything-AFFiNE-深度调研.md](toeverything-AFFiNE-深度调研.md) |
+| 609 | [`zhouxiaoka/autoclip`](https://github.com/zhouxiaoka/autoclip) | 本地优先的开源 AI 视频切片工具——6 步流水线把播客/访谈切成抖音/小红书/TikTok/Reels/Shorts 平台短片；桌面/Docker/CLI/MCP 四形态共用一条链路，字幕驱动分析 + 本地渲染，MIT | 11,121 | 2026-11-20 | [zhouxiaoka-autoclip-深度调研.md](zhouxiaoka-autoclip-深度调研.md) |
 
 
 
@@ -842,7 +845,7 @@
 - [`jgm/pandoc`](https://github.com/jgm/pandoc) — [jgm-pandoc-深度调研.md](jgm-pandoc-深度调研.md)
 - [`kvcache-ai/AgentENV`](https://github.com/kvcache-ai/AgentENV) — [kvcache-ai-AgentENV-深度调研.md](kvcache-ai-AgentENV-深度调研.md)
 - [`elapouya/python-docx-template`](https://github.com/elapouya/python-docx-template) — [elapouya-python-docx-template-深度调研.md](elapouya-python-docx-template-深度调研.md)
-### 前端 / 设计 / UI（38）
+### 前端 / 设计 / UI（39）
 - [`GoogleChrome/modern-web-guidance-src`](https://github.com/GoogleChrome/modern-web-guidance-src) — [GoogleChrome-modern-web-guidance-src-深度调研.md](GoogleChrome-modern-web-guidance-src-深度调研.md)
 - [`tokio-rs/topcoat`](https://github.com/tokio-rs/topcoat) — [tokio-rs-topcoat-深度调研.md](tokio-rs-topcoat-深度调研.md)
 - [`frappe/studio`](https://github.com/frappe/studio) — [frappe-studio-深度调研.md](frappe-studio-深度调研.md)
@@ -859,7 +862,8 @@
 
 - [`meta/astryx`](https://github.com/meta/astryx) — [meta-astryx-深度调研.md](meta-astryx-深度调研.md)
 - [`dream-num/univer`](https://github.com/dream-num/univer) — [dream-num-univer-深度调研.md](dream-num-univer-深度调研.md)
-### 视频 / 音频 / 多媒体（36）
+- [`toeverything/AFFiNE`](https://github.com/toeverything/AFFiNE) — [toeverything-AFFiNE-深度调研.md](toeverything-AFFiNE-深度调研.md)
+### 视频 / 音频 / 多媒体（37）
 - [`nexu-io/openmotion`](https://github.com/nexu-io/openmotion) — [nexu-io-openmotion-深度调研.md](nexu-io-openmotion-深度调研.md)
 - [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) — [debpalash-VoiceStudio-深度调研.md](debpalash-VoiceStudio-深度调研.md)
 - [`hanshuaikang/AI-Media2Doc`](https://github.com/hanshuaikang/AI-Media2Doc) — [hanshuaikang-AI-Media2Doc-深度调研.md](hanshuaikang-AI-Media2Doc-深度调研.md)
@@ -873,13 +877,14 @@
 - [`anomalyco/hex`](https://github.com/anomalyco/hex) — [anomalyco-hex-深度调研.md](anomalyco-hex-深度调研.md)
 - [`OpenMontageInc/OpenMontage`](https://github.com/OpenMontageInc/OpenMontage) — [openmontageinc-openmontage-深度调研.md](openmontageinc-openmontage-深度调研.md)
 - [`kajisho5/ffmpeg-skill`](https://github.com/kajisho5/ffmpeg-skill) — [kajisho5-ffmpeg-skill-深度调研.md](kajisho5-ffmpeg-skill-深度调研.md)
+- [`zhouxiaoka/autoclip`](https://github.com/zhouxiaoka/autoclip) — [zhouxiaoka-autoclip-深度调研.md](zhouxiaoka-autoclip-深度调研.md)
 ### 计算机视觉 / CV（5）
 - [`Robbyant/lingbot-map`](https://github.com/Robbyant/lingbot-map) — [Robbyant-lingbot-map-深度调研.md](Robbyant-lingbot-map-深度调研.md)
 - [`BIT-DataLab/Edit-Banana`](https://github.com/BIT-DataLab/Edit-Banana) — [BIT-DataLab-Edit-Banana-深度调研.md](BIT-DataLab-Edit-Banana-深度调研.md)
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 - [`Allenk/GeminiWatermarkTool`](https://github.com/Allenk/GeminiWatermarkTool) — [Allenk-GeminiWatermarkTool-深度调研.md](Allenk-GeminiWatermarkTool-深度调研.md)
 - [`kornia/kornia`](https://github.com/kornia/kornia) — [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md)
-### 安全 / 运维 / 系统工具（31）
+### 安全 / 运维 / 系统工具（32）
 - [`elementalsouls/Claude-BugHunter`](https://github.com/elementalsouls/Claude-BugHunter) — [elementalsouls-Claude-BugHunter-深度调研.md](elementalsouls-Claude-BugHunter-深度调研.md)
 - [`openai/codex-security`](https://github.com/openai/codex-security) — [openai-codex-security-深度调研.md](openai-codex-security-深度调研.md)
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
@@ -913,6 +918,7 @@
 - [`sherlock-project/sherlock`](https://github.com/sherlock-project/sherlock) — [sherlock-project-sherlock-深度调研.md](sherlock-project-sherlock-深度调研.md)
 - [`martin-olivier/airgorah`](https://github.com/martin-olivier/airgorah) — [martin-olivier-airgorah-深度调研.md](martin-olivier-airgorah-深度调研.md)
 - [`getarcaneapp/arcane`](https://github.com/getarcaneapp/arcane) — [getarcaneapp-arcane-深度调研.md](getarcaneapp-arcane-深度调研.md)
+- [`Tracer-Cloud/opensre`](https://github.com/Tracer-Cloud/opensre) — [Tracer-Cloud-opensre-深度调研.md](Tracer-Cloud-opensre-深度调研.md)
 ### 学习资料 / 方法论（19）
 - [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) — [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md)
 - [`awesome/selfhosted`](https://github.com/awesome/selfhosted) — [awesome-selfhosted-深度调研.md](awesome-selfhosted-深度调研.md)
