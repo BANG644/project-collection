@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 609                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 610                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -304,7 +304,8 @@ github-project-research/
 - [`lightpanda-io/browser`](https://github.com/lightpanda-io/browser) — [lightpanda-io-browser-深度调研.md](lightpanda-io-browser-深度调研.md)
 - [`lz4/lz4`](https://github.com/lz4/lz4) — [lz4-lz4-深度调研.md](lz4-lz4-深度调研.md)
 
-### M（50 个）
+### M（51 个）
+- [`mjmirza/app-store-compliance`](https://github.com/mjmirza/app-store-compliance) — [mjmirza-app-store-compliance-深度调研.md](mjmirza-app-store-compliance-深度调研.md)
 - [`google-deepmind/mujoco`](https://github.com/google-deepmind/mujoco) — [google-deepmind-mujoco-深度调研.md](google-deepmind-mujoco-深度调研.md)
 - [`meshtastic/meshtastic`](https://github.com/meshtastic/meshtastic) — [meshtastic-meshtastic-深度调研.md](meshtastic-meshtastic-深度调研.md)
 - [`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search) — [MadsLorentzen-ai-job-search-深度调研.md](MadsLorentzen-ai-job-search-深度调研.md)
@@ -871,7 +872,8 @@ github-project-research/
 - [`Allenk/GeminiWatermarkTool`](https://github.com/Allenk/GeminiWatermarkTool) — [Allenk-GeminiWatermarkTool-深度调研.md](Allenk-GeminiWatermarkTool-深度调研.md)
 
 - [`kornia/kornia`](https://github.com/kornia/kornia) — [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md)
-### 安全 / 运维 / 系统工具（32）
+### 安全 / 运维 / 系统工具（33）
+- [`mjmirza/app-store-compliance`](https://github.com/mjmirza/app-store-compliance) — [mjmirza-app-store-compliance-深度调研.md](mjmirza-app-store-compliance-深度调研.md)
 - [`elementalsouls/Claude-BugHunter`](https://github.com/elementalsouls/Claude-BugHunter) — [elementalsouls-Claude-BugHunter-深度调研.md](elementalsouls-Claude-BugHunter-深度调研.md)
 - [`openai/codex-security`](https://github.com/openai/codex-security) — [openai-codex-security-深度调研.md](openai-codex-security-深度调研.md)
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)

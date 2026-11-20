@@ -622,6 +622,7 @@
 | 607 | [`Tracer-Cloud/opensre`](https://github.com/Tracer-Cloud/opensre) | 自托管 CI/CD 可靠性 Agent——读失败日志追根因、区分 CI 自身故障与代码故障并把修复推到 PR 分支供 review；四层 importlinter 强制架构 + Capability Registrar + 上下文预算工程化，Apache-2.0 Public Alpha | 13,032 | 2026-11-20 | [Tracer-Cloud-opensre-深度调研.md](Tracer-Cloud-opensre-深度调研.md) |
 | 608 | [`toeverything/AFFiNE`](https://github.com/toeverything/AFFiNE) | 本地优先、可自托管的知识操作系统——Notion 文档/数据库与 Miro 无限画布超融合；自研 BlockSuite 编辑器内核 + yjs/y-octo CRDT + Rust OctoBase，MIT 编辑器/source-available 后端双许可 | 75,010 | 2026-11-20 | [toeverything-AFFiNE-深度调研.md](toeverything-AFFiNE-深度调研.md) |
 | 609 | [`zhouxiaoka/autoclip`](https://github.com/zhouxiaoka/autoclip) | 本地优先的开源 AI 视频切片工具——6 步流水线把播客/访谈切成抖音/小红书/TikTok/Reels/Shorts 平台短片；桌面/Docker/CLI/MCP 四形态共用一条链路，字幕驱动分析 + 本地渲染，MIT | 11,121 | 2026-11-20 | [zhouxiaoka-autoclip-深度调研.md](zhouxiaoka-autoclip-深度调研.md) |
+| 610 | [`mjmirza/app-store-compliance`](https://github.com/mjmirza/app-store-compliance) | 应用商店合规工程——123 条结构化拒审模式 + 128KB 预提交 guard（13 种 AI 编码工具 PreToolUse hook，命中 critical 即阻断 fastlane/eas submit）+ 107 条带法律出处的全球监管截止库 + 反伪造引用验证；把「审核员拒你」变成「agent 不让你提交」，OpenRoots ORA 2.3 | 2,594 | 2026-11-21 | [mjmirza-app-store-compliance-深度调研.md](mjmirza-app-store-compliance-深度调研.md) |
 
 
 
@@ -884,7 +885,8 @@
 - [`roboflow/supervision`](https://github.com/roboflow/supervision) — [roboflow-supervision-深度调研.md](roboflow-supervision-深度调研.md)
 - [`Allenk/GeminiWatermarkTool`](https://github.com/Allenk/GeminiWatermarkTool) — [Allenk-GeminiWatermarkTool-深度调研.md](Allenk-GeminiWatermarkTool-深度调研.md)
 - [`kornia/kornia`](https://github.com/kornia/kornia) — [kornia-kornia-深度调研.md](kornia-kornia-深度调研.md)
-### 安全 / 运维 / 系统工具（32）
+### 安全 / 运维 / 系统工具（33）
+- [`mjmirza/app-store-compliance`](https://github.com/mjmirza/app-store-compliance) — [mjmirza-app-store-compliance-深度调研.md](mjmirza-app-store-compliance-深度调研.md)
 - [`elementalsouls/Claude-BugHunter`](https://github.com/elementalsouls/Claude-BugHunter) — [elementalsouls-Claude-BugHunter-深度调研.md](elementalsouls-Claude-BugHunter-深度调研.md)
 - [`openai/codex-security`](https://github.com/openai/codex-security) — [openai-codex-security-深度调研.md](openai-codex-security-深度调研.md)
 - [`amnezia-vpn/amnezia-client`](https://github.com/amnezia-vpn/amnezia-client) — [amnezia-vpn-amnezia-client-深度调研.md](amnezia-vpn-amnezia-client-深度调研.md)
