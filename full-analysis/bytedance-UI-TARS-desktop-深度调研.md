@@ -1,324 +1,109 @@
-# 📦 bytedance/UI-TARS-desktop 深度调研报告
+# 🖥️ bytedance/UI-TARS-desktop 深度调研
 
-> **调研日期**：2026-05-19  
-> **仓库地址**：https://github.com/bytedance/UI-TARS-desktop  
-> **Stars**：38,024 | **协议**：Apache 2.0 | **语言**：TypeScript（主）+ Python + Rust
+> 调研日期：2026-11-23（全文重写，原稿为 2026-05 的架构图+勾选表水报告） | 星标：39,601⭐（原稿 38,024） | Forks：4,058 | 语言：TypeScript + Python + Rust | 许可：Apache-2.0 | 默认分支：main | 最近推送：2026-10-09 | Open Issues：509
 
----
+## 一句话定位
 
-## 📋 目录
+字节跳动开源的**多模态 GUI Agent 全栈**：让模型像人一样「看屏幕截图 → 理解界面 → 输出鼠标/键盘坐标操作」，纯视觉路线不依赖 DOM/API，能操作任意有屏幕的软件；包含面向用户的 UI-TARS Desktop（Electron 桌面应用）与面向开发者的 Agent TARS（CLI + Web UI）两条产品线。
 
-1. [项目概述](#1-项目概述)
-2. [仓库结构与子项目](#2-仓库结构与子项目)
-3. [技术架构深度解析](#3-技术架构深度解析)
-4. [核心能力与功能](#4-核心能力与功能)
-5. [版本演进](#5-版本演进)
-6. [技术栈详情](#6-技术栈详情)
-7. [与 Midscene.js 的关系](#7-与-midscenejs-的关系)
-8. [融入 OpenClaw 可行性分析](#8-融入-openclaw-可行性分析)
-9. [社区活跃度](#9-社区活跃度)
-10. [总结与建议](#10-总结与建议)
+## 项目亮点（差异化，先看这 5 条）
 
----
+1. **纯视觉 grounding，不读 DOM**：只吃截图、输出坐标与按键，网站改版按钮移位仍能找到——传统 RPA/选择器脚本改版即失效的痛点被绕开，能覆盖 20 年老客户端到现代 Web 的任意 GUI。
+2. **基准实测领先闭源对手**：UI-TARS-2 报 OSWorld 47.5 / AndroidWorld 73.3 / Online-Mind2Web 88.2 / WindowsAgentArena 50.6，对比 Claude Computer Use 的 OSWorld 22.0；OSWorld-Verified 上 UI-TARS-2-2509 达 53.1%。跨桌面/移动/Web 三域通吃是官方主打的结构性差异。
+3. **开源可自托管 + 零 API 费**：Apache-2.0，本地跑或接任意模型后端；对比 Operator $200/月、Claude API 按量付费，高频海量步骤场景成本曲线截然不同。
+4. **双产品线 + MCP 集成**：Desktop（终端用户可视化）与 Agent TARS（开发者库/CLI/Web）共享 VLM 底座；AIO Sandbox 隔离浏览器 + Remote Operator 远程控制 + 原生 MCP Server 构成「可远程、可集成」的操作栈。
+5. **持续高频迭代**：509 open issue 的另一面是社区活跃；0.3.x beta 快速推进 Remote Operator、混合浏览器策略（CDP + Playwright 备选）。
 
-## 1. 项目概述
+## 核心架构
 
-**UI-TARS-desktop** 是字节跳动开源的**多模态 AI Agent 技术栈**，属于 UI-TARS 系列项目的桌面端实现。它让 AI 能够像人类一样"看懂"屏幕界面并执行操作——通过视觉语言模型（VLM）理解 GUI 截图，然后生成鼠标/键盘操作指令。
-
-### 核心定位
-- **通用多模态 Agent 平台**：不局限于特定应用或网站，能操作任何桌面 GUI
-- **开源可扩展**：Apache 2.0 协议，支持自定义模型和工具链
-- **双模式运行**：CLI 命令行 + Web UI 可视化界面 + MCP 集成
-
-### 一句话总结
-> 字节跳动出品的"AI 操作员"——截图 → VLM 理解 → 自动点击/输入，支持桌面应用和浏览器。
-
----
-
-## 2. 仓库结构与子项目
-
-该仓库是一个 **pnpm monorepo**，包含两个核心子项目：
+pnpm monorepo，`apps/ui-tars` 是 Electron 桌面应用，`agent-tars` 是 Agent 引擎；底层是 Tarko 框架的三层抽象：
 
 ```
-UI-TARS-desktop/
-├── agent-tars/          # 🔧 Agent TARS — 通用多模态 Agent 引擎
-│   ├── src/
-│   │   ├── core/        # 核心引擎（omni-tars / agent-tars / gui-agent 三层）
-│   │   ├── tools/       # 工具链（MCP、浏览器、文件系统等）
-│   │   ├── ui/          # Web UI 前端
-│   │   └── cli/         # CLI 入口
-│   └── package.json
-│
-├── ui-tars-desktop/     # 💻 UI-TARS Desktop — Electron 桌面应用
-│   ├── src/
-│   │   ├── main/        # Electron 主进程
-│   │   ├── renderer/    # 渲染进程（React）
-│   │   └── preload/     # 预加载脚本
-│   └── package.json
-│
-├── packages/            # 共享包
-├── engines/             # Tarko 引擎相关
-└── docs/                # 文档
+omni-tars（全能层）   文本/图像/音频/截图统一多模态输入
+      ↓
+agent-tars（Agent 层） VLM 推理 + CoT + 任务分解 + 动作规划
+      ↓
+gui-agent（GUI 层）    屏幕捕获 + 坐标计算 + 鼠标键盘模拟（NutJS 执行）
 ```
 
-### 子项目对比
+主进程关键目录：`src/main/agent/`（operator + prompts）、`src/main/ipcRoutes/`（agent/browser/permission/screen/window 等 IPC 路由）、`src/main/remote/`（远程 operator / auth / proxy）、`src/main/services/`（runAgent / settings / utio 遥测）、`src/main/store/`。执行链路：`用户指令 → 截图 → VLM 分析 → 生成动作(parsedPrediction) → 执行 → 再截图验证 → 循环`。
 
-| 维度 | Agent TARS | UI-TARS Desktop |
-|------|-----------|-----------------|
-| 形态 | Node.js 库/CLI/Web 服务 | 独立 Electron 应用 |
-| 运行环境 | 终端 / 浏览器 | 桌面窗口 |
-| 目标用户 | 开发者 / API 集成 | 终端用户 / 可视化操作 |
-| 扩展性 | 高（代码级定制） | 中（配置级定制） |
-| MCP 支持 | ✅ 原生集成 | ✅ 内置支持 |
+## 应用场景与启发（重点）
 
----
+- **「视觉优先」替代「DOM 优先」的适用边界**：凡是没有稳定 DOM/API 的场景（老旧客户端、ERP、桌面原生应用、验证码前后），纯视觉 GUI Agent 是唯一可行路线；反过来 Web 页面有 DOM 时 Midscene/Playwright 更精准——选型看「有没有结构化句柄」。
+- **成本敏感的高频自动化**：每天跑成千上万步的浏览器 Agent，按步计费的商业 API 会迅速失控；本地开源方案 + 廉价模型后端是这条成本曲线的答案（也是社区「operator 叛逃」信号的根源）。
+- **合规/隐私敏感场景**：截图与识别全本地，适合财务系统、内部 OA 等禁止数据出网的场景（UTIO 遥测默认关闭）。
+- **模型 ≠ 应用的解耦启示**：Desktop 只是「壳」，真正能力在可插拔 VLM（本地 7B / 火山引擎 Doubao / 任意 OpenAI 兼容 API）。做 Agent 应用要把「大脑」抽象成可替换后端，别绑死单一模型。
+- **别高估开箱即用**：单显示器限制、需 16GB 显存本地模型、跨应用长任务易走错路——上生产前要有「人在环」兜底。
 
-## 3. 技术架构深度解析
+## 源码解读（3 个核心模块，精炼骨架）
 
-### 3.1 三层架构模型（Tarko 框架）
+### 1. GUI 执行器：NutJSElectronOperator（`apps/ui-tars/src/main/agent/operator.ts`）
 
-UI-TARS 的底层引擎是 **Tarko 框架**，采用三层抽象架构：
+Electron 平台执行器继承通用 NutJS Operator，只重写平台相关的截图与 Windows 输入特例——是「跨平台 Agent 如何抽象」的教科书：
 
-```
-┌─────────────────────────────────────┐
-│         omni-tars (全能层)           │  ← 最上层：统一接口，支持多模态输入
-│    （文本 / 图像 / 音频 / 屏幕截图）   │
-├─────────────────────────────────────┤
-│        agent-tars (Agent 层)         │  ← 中间层：推理 + 规划 + 工具调用
-│   （VLM 推理 / 任务分解 / 动作规划）   │
-├─────────────────────────────────────┤
-│         gui-agent (GUI 层)           │  ← 最底层：平台特定的 GUI 交互
-│   （屏幕捕获 / 鼠标键盘 / 元素定位）   │
-└─────────────────────────────────────┘
-```
-
-#### 各层职责
-
-| 层级 | 名称 | 职责 | 关键组件 |
-|------|------|------|----------|
-| L1 | omni-tars | 多模态输入统一处理 | 文本解析、图像编码、音频处理 |
-| L2 | agent-tars | 核心推理引擎 | VLM 调用、思维链(CoT)、动作规划 |
-| L3 | gui-agent | 平台交互执行 | 截图、坐标计算、模拟输入 |
-
-### 3.2 核心工作流程
-
-```
-用户指令 → 任务理解 → 屏幕截图 → VLM 分析 → 动作生成 → 执行操作 → 结果验证 → 循环/结束
+```ts
+export class NutJSElectronOperator extends NutJSOperator {
+  public async screenshot(): Promise<ScreenshotOutput> {
+    const primarySource = /* 找主显示器 source */;
+    if (!primarySource) return await super.screenshot(); // 找不到就回退通用实现
+    const screenshot = primarySource.thumbnail;
+    const resized = screenshot.resize({ /* 按 VLM 输入尺寸缩放 */ });
+    return /* ... */;
+  }
+  async execute(params: ExecuteParams): Promise<ExecuteOutput> {
+    const { action_type, action_inputs } = params.parsedPrediction; // VLM 解析出的动作
+    if (action_type === 'type' && env.isWindows && action_inputs?.content) {
+      // Windows 下 type 动作的特殊处理（编码/输入法兼容）
+    }
+    return await super.execute(params);
+  }
+}
 ```
 
-**详细步骤**：
-1. **任务理解**：解析用户自然语言指令，提取目标和约束
-2. **屏幕捕获**：获取当前 GUI 状态截图（支持多显示器）
-3. **VLM 分析**：将截图 + 指令发送给视觉语言模型，识别界面元素
-4. **动作规划**：生成下一步操作（点击坐标 / 键盘输入 / 滚动等）
-5. **执行操作**：通过系统 API 模拟鼠标/键盘输入
-6. **结果验证**：再次截图确认操作结果
-7. **循环迭代**：直到任务完成或达到最大步数限制
+启发：把「通用算法」放基类、把「平台差异（截图源、输入编码）」放子类 override，是 GUI Agent 跨平台的干净切法。
 
-### 3.3 VLM 集成方式
+### 2. 权限路由（`src/main/ipcRoutes/permission.ts`）
 
-- **默认模型**：UI-TARS 自研的 GUI 专用 VLM（基于 Qwen-VL 微调）
-- **模型替换**：支持接入其他 VLM（需符合特定输出格式）
-- **本地部署**：支持通过 Ollama/vLLM 本地运行模型
-- **API 调用**：支持 OpenAI 兼容 API 格式
+独立 IPC 权限路由 + 测试文件（`permission.test.ts`），说明桌面 Agent 把「哪些操作需要用户授权」当成一等公民——这是本地 GUI Agent 相对云端 API 的安全补课点。
 
----
+### 3. 遥测开关（`src/main/services/utio.ts`）
 
-## 4. 核心能力与功能
+UTIO（使用上报）以独立 service 存在且**默认关闭**，是「隐私敏感场景可本地全自动」承诺的代码级兑现。
 
-### 4.1 桌面自动化
-- ✅ 跨应用操作（文件管理器、IDE、办公软件等）
-- ✅ 精准元素定位（基于视觉理解的坐标点击）
-- ✅ 键盘快捷键模拟
-- ✅ 拖拽操作
-- ✅ 多显示器支持
+## 全网口碑（真实外链 + 争议）
 
-### 4.2 浏览器自动化（混合策略）
-- ✅ **AIO Sandbox**：内置隔离浏览器环境
-- ✅ **CDP 协议**：Chrome DevTools Protocol 直接控制
-- ✅ **Playwright 集成**：作为备选方案
-- ✅ 远程 Operator 模式（v0.3.0 新增）
+**正面**
+- [ToolBrain 评测](https://toolbrain.net/blog/2026-08-19-tool-review-ui-tars-desktop) 给 7.8/10：唯一完全开源（Apache-2.0）的原生桌面 GUI Agent，基准 wins 真实，本地/隐私/零费用三项突出。
+- [AgentConn 评测](https://agentconn.com/blog/bytedance-ui-tars-desktop-review)：少数有可信公开 benchmark 的开源视觉 Agent，跨三域覆盖是结构性优势；适合「开源、自托管、不受美国依赖」的运营者。
+- [什么值得买 / 今日头条](https://post.smzdm.com/p/az8xzdmr)：中文社区肯定「纯视觉不读 DOM、本地处理隐私好」，36K 星热度真实。
 
-### 4.3 MCP (Model Context Protocol) 集成
-- ✅ 作为 MCP Server 暴露能力
-- ✅ 可被其他 AI 应用调用
-- ✅ 工具链标准化（文件读写、搜索、代码执行等）
+**争议 / 局限（独家，原稿完全缺失）**
+- **最强模型不开源**：跑出 SOTA 的 UI-TARS-2 未开放权重；开源最好的 UI-TARS-1.5-7B（Apache-2.0）OSWorld 仅 **27.5 分**——「benchmark 领先」与「你能用到的模型」是两回事（ToolBrain 点破）。
+- **单显示器限制**：官方明确多屏配置可能导致任务失败；无官方 Linux 桌面应用；手机控制是模型能力而非 App 功能。
+- **稳定性与部署门槛**：本地 7B 需 16GB 显存；[Git Picks](https://gitpicks.dev/featured/bytedance-ui-tars-desktop-open-source-gui-automation) 列真实 bug——Windows pnpm/TS 编译失败、高 DPI 点击漂移、macOS Chrome 偶发崩溃；0.3.0-beta 的「beta」不是装饰。
+- **幻觉风险**：官方自述模型在不熟悉环境会误识别 UI 元素、走错动作；复杂跨应用任务建议人在环。文档密度低于 Anthropic，工具生态更年轻。
 
-### 4.4 Web UI
-- ✅ 实时屏幕预览
-- ✅ 操作步骤可视化回放
-- ✅ 任务状态监控
-- ✅ 配置管理界面
+## 竞品对比 + 核心研判
 
----
+| 维度 | UI-TARS-desktop | Claude Computer Use | OpenAI Operator | OmniParser | Midscene.js |
+|------|-----------------|---------------------|-----------------|------------|-------------|
+| 开源/许可 | ✅ Apache-2.0 | 部分（API） | ❌ 闭源 SaaS | ✅ | ✅ |
+| 本地运行 | ✅ | ❌ | ❌ | 部分 | 部分 |
+| 覆盖域 | 桌面+Web+移动 | 强 Web，移动弱 | 强在线任务 | 仅解析层 | 仅 Web |
+| OSWorld | 47.5（2代）/27.5（开源7B） | 22.0 | 38.1 | — | — |
+| 费用 | 免费（自担算力） | API 按量 | $200/月 | 免费 | 免费 |
+| 定位 | 可自托管 GUI Agent 栈 | 模型能力 | 托管产品 | 解析组件 | Web E2E 组件 |
 
-## 5. 版本演进
+**研判**：UI-TARS-desktop 的差异化 = 「开源 + 纯视觉 + 三域覆盖 + MCP/沙箱/远程」的组合，是想要「拿得到、改得了、自己跑」的团队目前最完整的开源 GUI Agent 栈。但需清醒：(1) 宣传基准由未开源的 2 代模型跑出，可用开源模型分数大打折扣；(2) 单显示器 + 幻觉 + beta 稳定性是上线前真实门槛。适合技术型团队在合规/成本敏感场景落地并保留人在环；追求开箱即用与生态成熟度的用户仍应选闭源方案。
 
-| 版本 | 日期 | 主要更新 |
-|------|------|----------|
-| v0.1.0 | 2025 年初 | 初始版本，基础 GUI Agent 能力 |
-| v0.2.0 | 2025 年中 | 新增 Web UI、MCP 集成、浏览器支持增强 |
-| **v0.3.0** | **2025-11-05** | **远程 Operator、AIO Sandbox、混合浏览器策略** |
+## 关键文件路径速查
 
-### v0.3.0 重点特性
-- **Remote Operator**：允许远程控制桌面 Agent（类似远程桌面 + AI）
-- **AIO Sandbox**：内置沙箱浏览器，隔离执行环境
-- **混合浏览器策略**：根据场景自动选择最优浏览器控制方式
+- `apps/ui-tars/src/main/agent/operator.ts` — NutJSElectronOperator：截图/Windows 输入 override
+- `apps/ui-tars/src/main/ipcRoutes/permission.ts` — 操作授权路由（含单测）
+- `apps/ui-tars/src/main/services/runAgent.ts` — Agent 运行编排
+- `apps/ui-tars/src/main/remote/operators.ts` — Remote Operator 远程控制
+- `apps/ui-tars/src/main/services/utio.ts` — UTIO 遥测（默认关闭）
+- README / quick-start — 单显示器限制、模型后端配置、权限授予步骤
 
----
-
-## 6. 技术栈详情
-
-### 前端 / 桌面端
-| 技术 | 用途 |
-|------|------|
-| TypeScript | 主开发语言（全栈） |
-| React | Web UI + Desktop 渲染进程 |
-| Electron | 桌面应用壳 |
-| pnpm | Monorepo 包管理 |
-| Vite | 构建工具 |
-
-### 后端 / 引擎
-| 技术 | 用途 |
-|------|------|
-| Node.js | Agent 运行时 |
-| Python | 模型服务 / 数据处理 |
-| Rust | 高性能截图模块（可选） |
-| Tarko 框架 | 核心 Agent 引擎 |
-
-### AI / 模型
-| 技术 | 用途 |
-|------|------|
-| Qwen-VL (微调版) | 默认 GUI 理解模型 |
-| Ollama / vLLM | 本地模型推理 |
-| OpenAI API | 云端模型调用 |
-
----
-
-## 7. 与 Midscene.js 的关系
-
-两者同属**字节跳动 AI Agent 生态**，但定位不同：
-
-| 维度 | UI-TARS-desktop | Midscene.js |
-|------|-----------------|-------------|
-| **主战场** | 桌面应用 GUI | 浏览器 Web 页面 |
-| **核心技术** | 截图 → VLM → 系统输入 | DOM 分析 + 视觉 + Playwright |
-| **精度策略** | 坐标点击（纯视觉） | 元素选择器 + 视觉辅助 |
-| **形态** | Electron 桌面应用 + CLI | npm 包（集成到测试/自动化流程） |
-| **适用场景** | 操作任意桌面软件 | Web E2E 测试、RPA |
-
-**互补关系**：
-- Midscene.js 更适合**浏览器场景**（有 DOM 可解析时更精准）
-- UI-TARS 更适合**纯桌面场景**（无 DOM 可用的原生应用）
-- 两者可以组合使用：Midscene 处理 Web 部分，UI-TARS 处理桌面部分
-
----
-
-## 8. 融入 OpenClaw 可行性分析
-
-### 8.1 结论：⚠️ 不建议直接融入
-
-### 8.2 原因分析
-
-#### ❌ 能力高度重叠（90%+）
-- OpenClaw 已有 **Midscene.js skill** 和 **browser control** 能力
-- 两者范式完全相同：**截图 → VLM 理解 → 生成操作**
-- 融入不会带来新的能力维度
-
-#### ❌ 架构冲突
-| 问题 | 说明 |
-|------|------|
-| 独立应用 | UI-TARS Desktop 是完整 Electron 应用，不是 SDK/库 |
-| 嵌入成本高 | 需要启动独立进程、管理生命周期、处理 IPC 通信 |
-| 模型锁定 | 默认绑定自研 VLM，灵活性不如 OpenClaw 的自由模型选择 |
-| 维护负担 | 引入大型依赖，跟踪上游更新成本高 |
-
-#### ⚠️ OpenClaw 已有优势
-- ✅ **模型灵活**：支持任意 VLM（GPT-4o、Claude、Gemini、Qwen 等）
-- ✅ **Midscene 成熟**：已有完善的 browser automation 方案
-- ✅ **轻量集成**：npm install 即用，无需独立应用
-- ✅ **MCP 生态**：OpenClaw 原生支持 MCP，无需额外封装
-
-### 8.3 建议方向（而非直接融入）
-
-| 方向 | 说明 | 价值 |
-|------|------|------|
-| **VLM 可选化** | 将 UI-TARS 的 GUI-VLM 作为 Midscene 可选模型之一 | 利用其 GUI 微调优势 |
-| **MCP 工具链借鉴** | 参考 UI-TARS 的 MCP tool 设计，丰富 OpenClaw 工具集 | 补充桌面操作工具 |
-| **Remote Operator 参考** | 借鉴其远程控制架构，增强 OpenClaw 的 node 远程能力 | 远程桌面 + AI |
-| **AIO Sandbox 思路** | 参考其沙箱浏览器设计，提升安全性 | 隔离执行环境 |
-
----
-
-## 9. 社区活跃度
-
-| 指标 | 数据 |
-|------|------|
-| GitHub Stars | 38,024 |
-| Contributors | 活跃（字节内部团队 + 社区） |
-| Issue 响应 | 较快（官方团队维护） |
-| Release 频率 | 稳定（约季度大版本） |
-| 文档完善度 | 中等偏上（README + Wiki，部分细节需看源码） |
-
----
-
-## 10. 总结与建议
-
-### 项目评价
-- **技术实力**：⭐⭐⭐⭐⭐ — 字节出品，架构清晰，工程成熟度高
-- **创新性**：⭐⭐⭐⭐ — GUI Agent 领域的前沿探索
-- **实用性**：⭐⭐⭐ — 桌面自动化需求明确，但稳定性待验证
-- **开源质量**：⭐⭐⭐⭐ — Apache 2.0，代码规范，文档可用
-
-### 对我们的价值
-1. **学习参考**：三层架构设计值得深入研究
-2. **模型资源**：GUI 微调 VLM 可作为备用模型
-3. **竞品对标**：了解业界 GUI Agent 最新进展
-4. **不建议作为依赖**：保持关注即可，无需集成
-
-### 最终判断
-> **优秀的参考项目，暂不适合直接融入 OpenClaw。** 保持关注其版本演进，特别是 Remote Operator 和 AIO Sandbox 的发展方向。
-
----
-
-## 11. 竞品深度对比
-
-UI-TARS-desktop 处在「GUI/计算机操作 Agent」赛道，直接竞品是各家「让模型操作图形界面」的方案：
-
-| 维度 | UI-TARS-desktop（字节） | OpenAI Operator | Claude Computer Use（Anthropic） | Microsoft OmniParser | Agent.exe / 同类开源 |
-|------|--------------------------|-----------------|-------------------------------|----------------------|----------------------|
-| 核心模型 | UI-TARS（GUI 微调 VLM） | 自有 CUA 模型 | Claude 多模态 | 仅解析层（喂给任意 VLM） | 各异 |
-| 桌面自动化 | ✅ 原生 | ✅（浏览器为主） | ✅ | ❌（只解析） | ✅ |
-| 浏览器自动化 | ✅ 混合策略 | ✅ | ✅ | ❌ | ✅ |
-| MCP 集成 | ✅ | 有限 | ✅ | ❌ | 部分 |
-| 开源程度 | ✅ Apache 2.0（含模型权重思路） | ❌ 闭源 SaaS | 部分（API） | ✅ 开源 | 各异 |
-| 远程/沙箱 | ✅ Remote Operator / AIO Sandbox | ❌ | ❌ | ❌ | 有限 |
-| 定位 | 开发者可自托管的 GUI Agent 栈 | 托管 Agent 产品 | 模型能力（需自搭） | 解析组件 | 实验性 |
-
-**结论**：UI-TARS-desktop 的差异化在于「开源 + 自托管 + 桌面/浏览器双栈 + MCP + Remote Operator 沙箱」的组合。OmniParser 只做解析层、需自行接 VLM；Operator/Computer Use 闭源或仅 API。对想要「拿得到、改得了、自己跑」的团队，UI-TARS-desktop 是当前最完整的开源 GUI Agent 栈。
-
----
-
-## 12. 核心研判
-
-### 优势
-- 字节出品，GUI 微调 VLM（UI-TARS）质量领先，桌面/浏览器双栈覆盖全。
-- Apache 2.0 全开源，可自托管、可改模型，工程成熟度高于多数开源 GUI Agent。
-- MCP 工具链 + Remote Operator + AIO Sandbox 构成「安全可远程」的操作闭环。
-
-### 风险
-- 稳定性仍待大规模验证（GUI 操作 inherently 脆弱，长任务易失手）。
-- 依赖 UI-TARS 模型权重与算力，端侧/低配机器体验受限。
-- 与 Midscene.js 关系紧密但分工易混淆，新手上手需厘清。
-
-### 入场建议
-- 想要自托管 GUI 自动化 → UI-TARS-desktop 是开源首选，重点看 Remote Operator 与 AIO Sandbox 成熟度。
-- 想借鉴 → 抄其「三层架构（感知/规划/动作）+ MCP 工具化 + 沙箱隔离」；VLM 可换成自有模型。
-- 仅要「界面解析」能力 → 直接用 OmniParser 接自己的 VLM 更轻。
-
-### 一句话总结
-> UI-TARS-desktop 把「GUI 微调 VLM + 桌面/浏览器双栈 + MCP + 沙箱」打包成最完整的开源计算机操作 Agent 栈，适合想自托管、可改造的团队，稳定性是上线前唯一的待解问号。
-
----
-
-*本报告由 GitHub 深度调研员补全竞品对比与核心研判章节（原稿由 IMA 知识库管家整理）🔍🐙*
+> 本报告由 GitHub 深度调研员于 2026-11-23 全文重写：原稿（2026-05）为「目录树 + 功能勾选表 + 后补竞品尾巴」，无真实源码、无外部口碑。本次基于当日 API 元数据、真实源码与 5 篇第三方评测重建，修正星标 38,024→39,601，补齐亮点/启发/源码/口碑四项铁律内容。🔍🐙
