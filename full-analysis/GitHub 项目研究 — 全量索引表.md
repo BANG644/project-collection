@@ -188,7 +188,7 @@
 | 173 | [`infiniflow/ragflow`](https://github.com/infiniflow/ragflow) | 领先开源 RAG 引擎——deepdoc 深度文档理解+模板化可解释分块+自研向量库 Infinity，融合 Agent 工作流，Apache-2.0 | 87,476 | 2026-08-13 | [infiniflow-ragflow-深度调研.md](infiniflow-ragflow-深度调研.md) |
 | 174 | [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) | 简历评分 Agent 管线——PDF→分节 JSON→GitHub 交叉验证→公平评分+证据引用，InterviewStreet 开源 | 3,970 | 2026-07-01 | [interviewstreet-hiring-agent-深度调研.md](interviewstreet-hiring-agent-深度调研.md) |
 | 175 | [`iOfficeAI/OfficeCLI`](https://github.com/iOfficeAI/OfficeCLI) | 首个为 AI Agent 设计的全功能 Office 套件——单二进制操作 Word/Excel/PPT，含 HTML 渲染引擎实现 render→look→fix 闭环 | 14,303 | 2026-07-11 | [iOfficeAI-OfficeCLI-深度调研.md](iOfficeAI-OfficeCLI-深度调研.md) |
-| 176 | [`jackwener/OpenCLI`](https://github.com/jackwener/OpenCLI) | — | — | 2026-06-19 | [jackwener-OpenCLI-深度调研.md](jackwener-OpenCLI-深度调研.md) |
+| 176 | [`jackwener/OpenCLI`](https://github.com/jackwener/OpenCLI) | 确定性CLI+登录态浏览器自动化：网站转稳定命令，Agent复用真实Chrome会话 | 31,241 | 2026-11-24 | [jackwener-OpenCLI-深度调研.md](jackwener-OpenCLI-深度调研.md) |
 | 177 | [`jamiepine/voicebox`](https://github.com/jamiepine/voicebox) | Voicebox — 本地优先开源 AI 语音工作室（ElevenLabs+WisprFlow 合体，7 TTS 引擎 + Agent 语音 I/O via MCP） | 44,039 | 2026-07-21 | [jamiepine-voicebox-深度调研.md](jamiepine-voicebox-深度调研.md) |
 | 178 | [`Jane-xiaoer/xiaoer-videolab`](https://github.com/Jane-xiaoer/xiaoer-videolab) | 深度调研报告： | 464 | 2026-06-18 | [Jane-xiaoer-xiaoer-videolab-深度调研.md](Jane-xiaoer-xiaoer-videolab-深度调研.md) |
 | 179 | [`JCodesMore/ai-website-cloner-template`](https://github.com/JCodesMore/ai-website-cloner-template) | 面向 AI 编程助手的网站逆向工程模板，AGENTS.md 单一源 + 9 平台 skill 自动同步 + foreman/worktree 多 agent 派发 | 21,607 | 2026-06-27 | [JCodesMore-ai-website-cloner-template-深度调研.md](JCodesMore-ai-website-cloner-template-深度调研.md) |
@@ -240,7 +240,7 @@
 | 225 | [`megadose/holehe`](https://github.com/megadose/holehe) | OSINT 邮箱侦查工具——借「忘记密码」等接口被动判断某邮箱是否在 120+ 站点注册、不告警，Trio 异步、GPL-3.0 | 12,332 | 2026-08-14 | [megadose-holehe-深度调研.md](megadose-holehe-深度调研.md) |
 | 226 | [`mem0ai/mem0`](https://github.com/mem0ai/mem0) | AI Agent 记忆层，三层记忆架构+16 LLM+24 向量库+三信号融合检索 | 59,522 | 2026-06-27 | [mem0ai-mem0-深度调研.md](mem0ai-mem0-深度调研.md) |
 | 227 | [`MemTensor/MemOS`](https://github.com/MemTensor/MemOS) | AI 记忆操作系统——textual/activation/parametric 三类记忆 + L1→Skills 结晶化 | 10,587 | 2026-08-05 | [MemTensor-MemOS-深度调研.md](MemTensor-MemOS-深度调研.md) |
-| 228 | [`Michaelliv/pi-dynamic-workflows`](https://github.com/Michaelliv/pi-dynamic-workflows) | — | — | 2026-06-19 | [Michaelliv-pi-dynamic-workflows-深度调研.md](Michaelliv-pi-dynamic-workflows-深度调研.md) |
+| 228 | [`Michaelliv/pi-dynamic-workflows`](https://github.com/Michaelliv/pi-dynamic-workflows) | Pi动态工作流原语：JS脚本fan-out多子Agent，vm沙箱保确定性 | 1,240 | 2026-11-24 | [Michaelliv-pi-dynamic-workflows-深度调研.md](Michaelliv-pi-dynamic-workflows-深度调研.md) |
 | 229 | [`microsoft/agent-lightning`](https://github.com/microsoft/agent-lightning) | 微软 AI Agent 强化学习训练框架——基于 verl+Ray+torch 把 agent 行为 RL 化（rollout→reward→PPO 迭代） | 17,935 | 2026-09-01 | [microsoft-agent-lightning-深度调研.md](microsoft-agent-lightning-深度调研.md) |
 | 230 | [`microsoft/AI-For-Beginners`](https://github.com/microsoft/AI-For-Beginners) | 微软官方 12 周 24 课 AI 入门课程，PyTorch+TF 双框架，50+ 语言翻译 MIT 许可 | 50,336 | 2026-07-02 | [microsoft-AI-For-Beginners-深度调研.md](microsoft-AI-For-Beginners-深度调研.md) |
 | 231 | [`microsoft/graphrag`](https://github.com/microsoft/graphrag) | — | 33,787 | 2026-06-16 | [microsoft-graphrag-深度调研.md](microsoft-graphrag-深度调研.md) |
@@ -298,7 +298,7 @@
 | 280 | [`opencv/opencv`](https://github.com/opencv/opencv) | 开源计算机视觉库。行业标准级项目。二、核心分析OpenCV 5.0.0 (2026-06-06)刚刚发布！这是 OpenCV 诞生 14 年后的第五个主版本。见 | 89,034 | 2026-06-14 | [opencv-opencv-深度调研.md](opencv-opencv-深度调研.md) |
 | 281 | [`opendatalab/MinerU`](https://github.com/opendatalab/MinerU) | 高精度开源 PDF 文档解析引擎，3 后端+109 语言+10+国产 GPU | 70,000 | 2026-06-27 | [opendatalab-MinerU-深度调研.md](opendatalab-MinerU-深度调研.md) |
 | 282 | [`openinterpreter/openinterpreter`](https://github.com/openinterpreter/openinterpreter) | 面向开源模型的轻量级 Rust 编码 Agent，Harness Emulation 核心创新 | 64,146 | 2026-06-28 | [openinterpreter-openinterpreter-深度调研.md](openinterpreter-openinterpreter-深度调研.md) |
-| 283 | [`OthmanAdi/planning-with-files`](https://github.com/OthmanAdi/planning-with-files) | — | — | 2026-06-19 | [OthmanAdi-planning-with-files-深度调研.md](OthmanAdi-planning-with-files-深度调研.md) |
+| 283 | [`OthmanAdi/planning-with-files`](https://github.com/OthmanAdi/planning-with-files) | Agent磁盘化三文件计划：抗上下文腐化+确定性完成门禁，跨60+Agent | 28,207 | 2026-11-24 | [OthmanAdi-planning-with-files-深度调研.md](OthmanAdi-planning-with-files-深度调研.md) |
 | 284 | [`OtterMind/Chat2DB`](https://github.com/OtterMind/Chat2DB) | 开源 AI 数据库客户端——Spring Boot+React，BYO 模型 text2sql，AES-256-GCM 本地加密 | 26,261 | 2026-07-26 | [OtterMind-Chat2DB-深度调研.md](OtterMind-Chat2DB-深度调研.md) |
 | 285 | [`p-e-w/heretic`](https://github.com/p-e-w/heretic) | 用 abliteration（方向性消融）把对齐模型变成「异端」——rank-1 LoRA 增量 + Optuna TPE 多目标优化拒答率/KL，AGPL-3.0，+150/日 | 29,063 | 2026-08-31 | [p-e-w-heretic-深度调研.md](p-e-w-heretic-深度调研.md) |
 | 286 | [`Panniantong/Agent-Reach`](https://github.com/Panniantong/Agent-Reach) | 零 API 费用的 AI Agent 互联网能力脚手架——安装即弃架构，支持 Twitter/B站/小红书等 15+ 平台，4 个月 45K ⭐ | 45,550 | 2026-06-30 | [Panniantong-Agent-Reach-深度调研.md](Panniantong-Agent-Reach-深度调研.md) |
@@ -396,7 +396,7 @@
 | 378 | [`VoltAgent/awesome-design-md`](https://github.com/VoltAgent/awesome-design-md) | 精选 73 个真实品牌 DESIGN.md 合集，让 AI agent 生成视觉一致的 UI（基于 Google Stitch 规范） | 114,423 | 2026-09-07 | [VoltAgent-awesome-design-md-深度调研.md](VoltAgent-awesome-design-md-深度调研.md) |
 | 379 | [`vorpus/performativeUI`](https://github.com/vorpus/performativeUI) | — | — | 2026-06-07 | [vorpus-performativeUI-深度调研.md](vorpus-performativeUI-深度调研.md) |
 | 380 | [`withastro/flue`](https://github.com/withastro/flue) | Astro 团队 TS Agent Harness 框架——沙箱+持久化执行+SKILL.md 原生导入 | 7,243 | 2026-07-12 | [withastro-flue-深度调研.md](withastro-flue-深度调研.md) |
-| 381 | [`withkynam/vibecode-pro-max-kit`](https://github.com/withkynam/vibecode-pro-max-kit) | — | — | 2026-06-19 | [withkynam-vibecode-pro-max-kit-深度调研.md](withkynam-vibecode-pro-max-kit-深度调研.md) |
+| 381 | [`withkynam/vibecode-pro-max-kit`](https://github.com/withkynam/vibecode-pro-max-kit) | RIPER-5七阶段编码harness：权限锁+双质量循环+15 Agent无人值守 | 1,173 | 2026-11-24 | [withkynam-vibecode-pro-max-kit-深度调研.md](withkynam-vibecode-pro-max-kit-深度调研.md) |
 | 382 | [`wonderwhy-er/DesktopCommanderMCP`](https://github.com/wonderwhy-er/DesktopCommanderMCP) | Claude MCP 全能终端控制服务器——终端/文件/Office/搜索/远程控制/Docker 隔离，MCP 生态最全工具集 | 6,354 | 2026-07-09 | [wonderwhy-er-DesktopCommanderMCP-深度调研.md](wonderwhy-er-DesktopCommanderMCP-深度调研.md) |
 | 383 | [`WUBING2023/PaperSpine`](https://github.com/WUBING2023/PaperSpine) | PaperSpine | — | 2026-05-17 | [WUBING2023-PaperSpine-深度调研.md](WUBING2023-PaperSpine-深度调研.md) |
 | 384 | [`wuji-labs/nopua`](https://github.com/wuji-labs/nopua) | 用"尊重/关怀/爱"替代恐惧驱动的 AI 行为引导 Skill，有开放基准实证（信任>恐惧，+104% 隐藏 bug） | 1,388 | 2026-09-07 | [wuji-labs-nopua-深度调研.md](wuji-labs-nopua-深度调研.md) |
