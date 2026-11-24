@@ -22,7 +22,7 @@
 | 7 | [`521xueweihan/HelloGitHub`](https://github.com/521xueweihan/HelloGitHub) | — | — | — | [521xueweihan-HelloGitHub-深度调研.md](521xueweihan-HelloGitHub-深度调研.md) |
 | 8 | [`666ghj/BettaFish`](https://github.com/666ghj/BettaFish) | 纯 Python 零框架多 Agent 舆情分析助手（日志文件消息总线） | 41,920 | 2026-08-03 | [666ghj-BettaFish-深度调研.md](666ghj-BettaFish-深度调研.md) |
 | 9 | [`666ghj/MiroFish`](https://github.com/666ghj/MiroFish) | 多智能体社会模拟预测引擎——用真实世界种子信息构建高保真平行数字世界，在沙箱里「预演未来」 | 70,409 | 2026-08-08 | [666ghj-MiroFish-深度调研.md](666ghj-MiroFish-深度调研.md) |
-| 10 | [`aaif-goose/goose`](https://github.com/aaif-goose/goose) | — | — | — | [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md) |
+| 10 | [`aaif-goose/goose`](https://github.com/aaif-goose/goose) | 可组合 Agent 运行时 oi-kit + 成品 Agent（桌面/CLI/ACP）——状态机外置步骤 + 审批 Operation + 0.8 上下文压缩 + 进程内 llama.cpp/MLX，AAIF 治理，Apache-2.0 | 56,934 | 2026-11-25 | [aaif-goose-goose-深度调研.md](aaif-goose-goose-深度调研.md) |
 | 11 | [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) | — | — | 2026-06-19 | [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md) |
 | 12 | [`abi/screenshot-to-code`](https://github.com/abi/screenshot-to-code) | 把截图/设计稿/录屏转成可运行前端代码（HTML+Tailwind/React/Vue）的 AI 工具——多模型择优 + 无头自渲染视觉自检 + MIT 可自托管 | 75,957 | 2026-08-30 | [abi-screenshot-to-code-深度调研.md](abi-screenshot-to-code-深度调研.md) |
 | 13 | [`accomplish-ai/coworker`](https://github.com/accomplish-ai/coworker) | Coworker — 本地优先开源 AI 同事（daemon+桌面+Web 三进程，MCP 能力层） | 10,938 | 2026-08-05 | [accomplish-ai-coworker-深度调研.md](accomplish-ai-coworker-深度调研.md) |
@@ -132,7 +132,7 @@
 | 117 | [`earendil-works/pi`](https://github.com/earendil-works/pi) | 可自定义终端 AI Coding Agent——libGDX 创始人打造，4 层抽象+20+LLM 提供商+树状 Session+TUI 框架（补完源码解读+核心研判） | 72,113 | 2026-07-18 | [earendil-works-pi-深度调研.md](earendil-works-pi-深度调研.md) |
 | 118 | [`easychen/lean-side-bussiness`](https://github.com/easychen/lean-side-bussiness) | — | — | — | [easychen-lean-side-bussiness-深度调研.md](easychen-lean-side-bussiness-深度调研.md) |
 | 119 | [`easychen/opc-methodologyStar`](https://github.com/easychen/opc-methodologyStar) | — | — | 2026-06-14 | [easychen-opc-methodologyStar-深度调研.md](easychen-opc-methodologyStar-深度调研.md) |
-| 120 | [`elder-plinius/CL4R1T4S`](https://github.com/elder-plinius/CL4R1T4S) | — | — | — | [elder-plinius-CL4R1T4S-深度调研.md](elder-plinius-CL4R1T4S-深度调研.md) |
+| 120 | [`elder-plinius/CL4R1T4S`](https://github.com/elder-plinius/CL4R1T4S) | 系统提示词声称泄露档案库——26 厂商目录/82 条目，README 自带三重 prompt injection 样本；只宜作提示安全语料，AGPL-3.0 | 53,796 | 2026-11-25 | [elder-plinius-CL4R1T4S-深度调研.md](elder-plinius-CL4R1T4S-深度调研.md) |
 | 121 | [`embabel/embabel-agent`](https://github.com/embabel/embabel-agent) | JVM 上的 agentic flow 框架——GOAP 真规划+OODA 动态 replan+强类型领域模型，注解/DSL 双编排，Spring 生态，Apache-2.0 | 4,195 | 2026-08-13 | [embabel-embabel-agent-深度调研.md](embabel-embabel-agent-深度调研.md) |
 | 122 | [`evershopcommerce/evershop`](https://github.com/evershopcommerce/evershop) | — | — | 2026-06-19 | [evershopcommerce-evershop-深度调研.md](evershopcommerce-evershop-深度调研.md) |
 | 123 | [`every-app/open-seo`](https://github.com/every-app/open-seo) | Semrush/Ahrefs 开源替代——自托管 SEO 平台+MCP 服务器+7 个 Agent Skills+Pay-as-you-go | 3,337 | 2026-06-28 | [every-app-open-seo-深度调研.md](every-app-open-seo-深度调研.md) |
@@ -357,7 +357,7 @@
 | 339 | [`sveltejs/svelte`](https://github.com/sveltejs/svelte) | "编译器即框架"的前端革命者——Svelte 5 用 Runes 重新定义响应式系统，无虚拟 DOM、编译时优化、最小化 bundle | 87,585 | 2026-06-30 | [sveltejs-svelte-深度调研.md](sveltejs-svelte-深度调研.md) |
 | 340 | [`sybil-solutions/codex-shim`](https://github.com/sybil-solutions/codex-shim) | — | — | 2026-06-19 | [sybil-solutions-codex-shim-深度调研.md](sybil-solutions-codex-shim-深度调研.md) |
 | 341 | [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi) | 把 34 家 LLM 免费额度聚合成一个 OpenAI 兼容 /v1 端点的本地优先路由器——6 策略智能选路 + 自动故障转移 + AES-256-GCM 加密密钥，MIT | 22,155 | 2026-08-30 | [tashfeenahmed-freellmapi-深度调研.md](tashfeenahmed-freellmapi-深度调研.md) |
-| 342 | [`tastyeffectco/sandboxd`](https://github.com/tastyeffectco/sandboxd) | — | — | — | [tastyeffectco-sandboxd-深度调研.md](tastyeffectco-sandboxd-深度调研.md) |
+| 342 | [`tastyeffectco/sandboxd`](https://github.com/tastyeffectco/sandboxd) | 自托管 AI 应用工厂引擎——Go 控制面+Docker+Traefik+SQLite，凭证代理不进沙箱、任务可回滚、空闲休眠唤醒；0.x 非 VM 隔离，MIT | 1,002 | 2026-11-25 | [tastyeffectco-sandboxd-深度调研.md](tastyeffectco-sandboxd-深度调研.md) |
 | 343 | [`TauricResearch/TradingAgents`](https://github.com/TauricResearch/TradingAgents) | 多 Agent LLM 金融交易框架——分析师→多空辩论→交易员→风控→基金经理五层决策链，LangGraph 编排 + 可插拔数据源 | 96,335 | 2026-08-09 | [TauricResearch-TradingAgents-深度调研.md](TauricResearch-TradingAgents-深度调研.md) |
 | 344 | [`Tencent/AI-Infra-Guard`](https://github.com/Tencent/AI-Infra-Guard) | 腾讯朱雀实验室开源 AI 红队平台——ClawScan/Agent Scan/MCP·Skills 扫描/AI Infra 2000+CVE/Jailbreak 评估，Apache-2.0 | 4,878 | 2026-08-21 | [Tencent-AI-Infra-Guard-深度调研.md](Tencent-AI-Infra-Guard-深度调研.md) |
 | 345 | [`Tencent/WeKnora`](https://github.com/Tencent/WeKnora) | 腾讯开源 RAG+ReAct Agent+自动 Wiki 一体化企业知识框架（微信对话开放平台底层） | 19,206 | 2026-08-01 | [Tencent-WeKnora-深度调研.md](Tencent-WeKnora-深度调研.md) |
