@@ -26,7 +26,7 @@
 | 11 | [`abhigyanpatwari/GitNexus`](https://github.com/abhigyanpatwari/GitNexus) | — | — | 2026-06-19 | [abhigyanpatwari-GitNexus-深度调研.md](abhigyanpatwari-GitNexus-深度调研.md) |
 | 12 | [`abi/screenshot-to-code`](https://github.com/abi/screenshot-to-code) | 把截图/设计稿/录屏转成可运行前端代码（HTML+Tailwind/React/Vue）的 AI 工具——多模型择优 + 无头自渲染视觉自检 + MIT 可自托管 | 75,957 | 2026-08-30 | [abi-screenshot-to-code-深度调研.md](abi-screenshot-to-code-深度调研.md) |
 | 13 | [`accomplish-ai/coworker`](https://github.com/accomplish-ai/coworker) | Coworker — 本地优先开源 AI 同事（daemon+桌面+Web 三进程，MCP 能力层） | 10,938 | 2026-08-05 | [accomplish-ai-coworker-深度调研.md](accomplish-ai-coworker-深度调研.md) |
-| 14 | [`ace-trump-tech/DeltaForce-OBS-Locker`](https://github.com/ace-trump-tech/DeltaForce-OBS-Locker) | — | — | — | [ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md](ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md) |
+| 14 | [`ace-trump-tech/DeltaForce-OBS-Locker`](https://github.com/ace-trump-tech/DeltaForce-OBS-Locker) | ⚠️ 安全风险样本：打着 OBS 锁头/自瞄旗号的引流钓鱼仓——源码全 Fake*/pass 空壳，base64 自白「全是骗你的，只想让你装暗区突围」，提权启动不明 exe，Issue 现「空壳吗」质疑，无 LICENSE | 1,798 | 2026-11-26 | [ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md](ace-trump-tech-DeltaForce-OBS-Locker-深度调研.md) |
 | 15 | [`ace-trump-tech/MindPaw`](https://github.com/ace-trump-tech/MindPaw) | 情感交互 AI 宠物硬件——PAD 情感模型 + Big Five 人格调制 EMA + int8 量化 MLP 手势识别 + Affective Prompt 闭环，ESP8266 无 FPU 定点推理（C++，无 LICENSE） | 2,392 | 2026-08-17 | [ace-trump-tech-MindPaw-深度调研.md](ace-trump-tech-MindPaw-深度调研.md) |
 | 16 | [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) | 把完整软件生命周期编码成 Agent 技能（24 技能 + 反合理化 + 三层 eval） | 76,686 | 2026-07-11 | [addyosmani-agent-skills-深度调研.md](addyosmani-agent-skills-深度调研.md) |
 | 17 | [`affaan-m/ECC`](https://github.com/affaan-m/ECC) | Agent Harness 性能优化系统——六大组件柱+跨 7 个 Harness 适配层+持续学习系统+商业化开源并行 | 290,665 | 2026-10-28 | [affaan-m-ECC-深度调研.md](affaan-m-ECC-深度调研.md) |
@@ -623,6 +623,7 @@
 | 608 | [`toeverything/AFFiNE`](https://github.com/toeverything/AFFiNE) | 本地优先、可自托管的知识操作系统——Notion 文档/数据库与 Miro 无限画布超融合；自研 BlockSuite 编辑器内核 + yjs/y-octo CRDT + Rust OctoBase，MIT 编辑器/source-available 后端双许可 | 75,010 | 2026-11-20 | [toeverything-AFFiNE-深度调研.md](toeverything-AFFiNE-深度调研.md) |
 | 609 | [`zhouxiaoka/autoclip`](https://github.com/zhouxiaoka/autoclip) | 本地优先的开源 AI 视频切片工具——6 步流水线把播客/访谈切成抖音/小红书/TikTok/Reels/Shorts 平台短片；桌面/Docker/CLI/MCP 四形态共用一条链路，字幕驱动分析 + 本地渲染，MIT | 11,121 | 2026-11-20 | [zhouxiaoka-autoclip-深度调研.md](zhouxiaoka-autoclip-深度调研.md) |
 | 610 | [`mjmirza/app-store-compliance`](https://github.com/mjmirza/app-store-compliance) | 应用商店合规工程——123 条结构化拒审模式 + 128KB 预提交 guard（13 种 AI 编码工具 PreToolUse hook，命中 critical 即阻断 fastlane/eas submit）+ 107 条带法律出处的全球监管截止库 + 反伪造引用验证；把「审核员拒你」变成「agent 不让你提交」，OpenRoots ORA 2.3 | 2,594 | 2026-11-21 | [mjmirza-app-store-compliance-深度调研.md](mjmirza-app-store-compliance-深度调研.md) |
+| 611 | [`n8n-io/nod`](https://github.com/n8n-io/nod) | n8n Labs 开源本地优先个人 Agent——自带隔离 Linux 沙箱 + 独立 Chromium 浏览器跨 Gmail/Slack/Notion 与真实网站跑腿；审批门禁在服务端用专用决策模型端点（choice/predicate/noul/refusal + 概率阈值）而非提示词，untrusted 边界标记防注入，Vault 隔离密钥，ports/providers/server 三层 + composition 单一装配点，研究预览期，Apache-2.0 | 3,501 | 2026-11-26 | [n8n-io-nod-深度调研.md](n8n-io-nod-深度调研.md) |
 
 
 
@@ -630,7 +631,8 @@
 
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（132）
+### AI Agent / 助手框架（133）
+- [`n8n-io/nod`](https://github.com/n8n-io/nod) — [n8n-io-nod-深度调研.md](n8n-io-nod-深度调研.md)
 - [`homeassistant-ai/ha-mcp`](https://github.com/homeassistant-ai/ha-mcp) — [homeassistant-ai-ha-mcp-深度调研.md](homeassistant-ai-ha-mcp-深度调研.md)
 - [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo) — [AgriciDaniel-claude-seo-深度调研.md](AgriciDaniel-claude-seo-深度调研.md)
 

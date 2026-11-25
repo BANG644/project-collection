@@ -17,7 +17,7 @@ github-project-research/
 │   ├── GitHub 项目研究 — 全量规整后总览.md                  # 🎯 本文件（权威总览）
 │   ├── GitHub 项目研究 — 全量索引表.md                    # 📋 全量项目表格索引
 │   ├── GitHub 项目研究 — 元目录.md                        # 📖 元目录说明（AI 入口）
-│   └── owner-repo-深度调研.md × 610                      # 规范化命名的调研报告
+│   └── owner-repo-深度调研.md × 611                      # 规范化命名的调研报告
 ├── README.md                                               # 仓库 README（人类读者视角）
 └── .gitignore
 ```
@@ -356,7 +356,8 @@ github-project-research/
 - [`meta/astryx`](https://github.com/meta/astryx) — [meta-astryx-深度调研.md](meta-astryx-深度调研.md)
 - [`milind-soni/OpenMausBot`](https://github.com/milind-soni/OpenMausBot) — [milind-soni-OpenMausBot-深度调研.md](milind-soni-OpenMausBot-深度调研.md)
 - [`martin-olivier/airgorah`](https://github.com/martin-olivier/airgorah) — [martin-olivier-airgorah-深度调研.md](martin-olivier-airgorah-深度调研.md)
-### N（24 个）
+### N（25 个）
+- [`n8n-io/nod`](https://github.com/n8n-io/nod) — [n8n-io-nod-深度调研.md](n8n-io-nod-深度调研.md)
 - [`NVIDIA/SkillEvaluator`](https://github.com/NVIDIA/SkillEvaluator) — [NVIDIA-SkillEvaluator-深度调研.md](NVIDIA-SkillEvaluator-深度调研.md)
 - [`nexu-io/openmotion`](https://github.com/nexu-io/openmotion) — [nexu-io-openmotion-深度调研.md](nexu-io-openmotion-深度调研.md)
 - [`n8n-io/n8n`](https://github.com/n8n-io/n8n) — [n8n-io-n8n-深度调研.md](n8n-io-n8n-深度调研.md)
@@ -608,7 +609,8 @@ github-project-research/
 - [`zhouxiaoka/autoclip`](https://github.com/zhouxiaoka/autoclip) — [zhouxiaoka-autoclip-深度调研.md](zhouxiaoka-autoclip-深度调研.md)
 ## 🏷️ 按技术领域分类
 
-### AI Agent / 助手框架（134）
+### AI Agent / 助手框架（135）
+- [`n8n-io/nod`](https://github.com/n8n-io/nod) — [n8n-io-nod-深度调研.md](n8n-io-nod-深度调研.md)
 - [`homeassistant-ai/ha-mcp`](https://github.com/homeassistant-ai/ha-mcp) — [homeassistant-ai-ha-mcp-深度调研.md](homeassistant-ai-ha-mcp-深度调研.md)
 - [`vercel-labs/agent-desktop`](https://github.com/vercel-labs/agent-desktop) — [vercel-labs-agent-desktop-深度调研.md](vercel-labs-agent-desktop-深度调研.md)
 - [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) — [Usagi-org-ai-goofish-monitor-深度调研.md](Usagi-org-ai-goofish-monitor-深度调研.md)
